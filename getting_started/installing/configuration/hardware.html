@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>配置外设 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/getting_started/installing/configuration/hardware.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="配置目录" href="directories.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Blender入门</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../about/index.html">关于Blender</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">安装Blender</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">配置Blender</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">配置外设</a></li>
+<li class="toctree-l4"><a class="reference internal" href="directories.html">配置目录</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../help.html">帮助系统</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Blender入门</a> &raquo;</li>
+        
+          <li><a href="../index.html">安装Blender</a> &raquo;</li>
+        
+          <li><a href="index.html">配置Blender</a> &raquo;</li>
+        
+      <li>配置外设</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/getting_started/installing/configuration/hardware.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configuring-peripherals">
+<h1>配置外设<a class="headerlink" href="#configuring-peripherals" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="displays">
+<h2>显示器<a class="headerlink" href="#displays" title="Permalink to this headline">¶</a></h2>
+<p>Todo add.</p>
+<div class="section" id="multi-monitor-setup">
+<h3>多显示器设置<a class="headerlink" href="#multi-monitor-setup" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id1">
+<img alt="../../../_images/getting-started_installing_configuration_hardware_multi-monitor.jpg" src="../../../_images/getting-started_installing_configuration_hardware_multi-monitor.jpg" />
+<p class="caption"><span class="caption-text">这是Blender多显示器支持的一个例子。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="input-devices">
+<h2>输入设备<a class="headerlink" href="#input-devices" title="Permalink to this headline">¶</a></h2>
+<p>Blender支持各种类型的输入设备:</p>
+<ul class="simple">
+<li><p>键盘 (推荐: 有数字键区的键盘，最好是英文布局)</p></li>
+<li><p>鼠标 (推荐: 带滚轮的三键鼠标)</p></li>
+<li><p>NDOF 设备 (也称作 <em>3D鼠标</em>)</p></li>
+<li><p>绘图板</p></li>
+</ul>
+<div class="section" id="mice">
+<h3>鼠标<a class="headerlink" href="#mice" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="mouse-button-emulation">
+<h4>鼠标按键模拟<a class="headerlink" href="#mouse-button-emulation" title="Permalink to this headline">¶</a></h4>
+<p>如果没有三键鼠标，你需要在 <a class="reference internal" href="../../../preferences/input.html"><span class="doc">用户设置</span></a> 勾选模拟三键鼠标的选项。</p>
+<p>下面的表格列出了组合键的模拟用法:</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><th class="stub"><p>三键鼠标</p></th>
+<td><p><kbd class="kbd docutils literal notranslate">LMB</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">MMB</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">RMB</kbd></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>两键鼠标</p></th>
+<td><p><kbd class="kbd docutils literal notranslate">LMB</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Alt-LMB</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">RMB</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="keyboards">
+<h3>键盘<a class="headerlink" href="#keyboards" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="numpad-emulation">
+<h4>数字键盘模拟<a class="headerlink" href="#numpad-emulation" title="Permalink to this headline">¶</a></h4>
+<p>如果你的键盘没有数字键区，你可能得开启模拟选项(使用上方的数字键代替，不过，这样就不能使用快捷键切换图层了)。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>更多关于 <em>数字键区模拟</em> 见 <a class="reference internal" href="../../../preferences/input.html"><span class="doc">用户设置</span></a>。</p>
+</div>
+</div>
+<div class="section" id="non-english-keyboards">
+<h4>非英文键盘<a class="headerlink" href="#non-english-keyboards" title="Permalink to this headline">¶</a></h4>
+<p>如果你用的是非英文布局的键盘，你可能还得切换为UK或US布局才能使用Blender工作。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>还可以在 <a class="reference internal" href="../../../preferences/input.html"><span class="doc">用户设置</span></a> 修改默认的键位映射和默认快捷键，不过，本手册会假定你用的是默认键位映射。</p>
+</div>
+</div>
+</div>
+<div class="section" id="graphic-tablets">
+<span id="hardware-tablet"></span><h3>绘图板<a class="headerlink" href="#graphic-tablets" title="Permalink to this headline">¶</a></h3>
+<p>因为数位板有笔这个元素，所以使用它可以用更为传统的方式控制鼠标指针，这对习惯用笔工作的艺术工作者来说是个利好消息，而且数位板还能提供压感等参数。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>如果你用数位板代替鼠标工作的时候，发现数位板的压感不正常，你可以试着先把指针放置在Blender界面中，再把数位板的线头拔出来吹吹灰插回去，这也许能管用。</p>
+</div>
+</div>
+<div class="section" id="d-mice">
+<span id="hardware-3d-mice"></span><h3>3D 鼠标<a class="headerlink" href="#d-mice" title="Permalink to this headline">¶</a></h3>
+<p>3D鼠标或者 <abbr title="N-Degrees of Freedom">NDOF</abbr> 设备是用于在Blender中浏览视图的硬件。目前仅支持3Dconnexion的硬件。这些硬件可以浏览场景， 也可以使用 <a class="reference internal" href="../../../editors/3dview/navigate/walk_fly.html#dview-walk-fly"><span class="std std-ref">行走/飞行模式</span></a>。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>更多的外设配置信息请看 <a class="reference internal" href="../../../preferences/input.html"><span class="doc">输入设置</span></a>。</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="directories.html" class="btn btn-neutral float-right" title="配置目录" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

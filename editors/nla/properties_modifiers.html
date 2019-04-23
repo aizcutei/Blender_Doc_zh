@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>属性 &amp; 修改器 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/nla/properties_modifiers.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="文本编辑器" href="../text_editor.html" />
+    <link rel="prev" title="片段" href="strips.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#general">常规</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#animation">动画</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../timeline.html">时间轴编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">NLA编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tracks.html">轨道</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strips.html">片段</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">属性 &amp; 修改器</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="index.html">NLA编辑器</a> &raquo;</li>
+        
+      <li>属性 &amp; 修改器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/editors/nla/properties_modifiers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="properties-modifiers">
+<h1>属性 &amp; 修改器<a class="headerlink" href="#properties-modifiers" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="properties">
+<h2>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<p>片段属性可以通过NLA属性区域进行访问。</p>
+<div class="section" id="animation-data">
+<h3>动画数据<a class="headerlink" href="#animation-data" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性栏 ‣ 动画 ‣ 动画数据</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-center" id="id1">
+<img alt="../../_images/editors_nla_properties-modifiers_animation-data-panel.png" src="../../_images/editors_nla_properties-modifiers_animation-data-panel.png" />
+<p class="caption"><span class="caption-text">动画数据面板。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>动作</dt><dd><p>A <a class="reference internal" href="../../interface/controls/templates/data_block.html#ui-data-block"><span class="std std-ref">数据块</span></a> 菜单，允许你编辑动作轨道中显示的动作。另请参阅动作编辑器 <a class="reference internal" href="../dope_sheet/action.html#dopesheet-action-action"><span class="std std-ref">Action</span></a>.</p>
+</dd>
+<dt>外推动作</dt><dd><p>采取动作超过片段范围的程度。</p>
+<dl class="simple">
+<dt>保持</dt><dd><p>影响片段的两侧。</p>
+</dd>
+<dt>保持前进</dt><dd><p>只影响剪辑后的区域。</p>
+</dd>
+<dt>无</dt><dd><p>都不是。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl id="nla-blend-modes">
+<dt>混合动作</dt><dd><p>Affects how the property values directly produced by the strip are combined with
+the result of evaluating the stack below. The bottom-most strip is blended on top of
+the default values of the properties.</p>
+<dl>
+<dt>替换</dt><dd><p>The top strip is linearly blended in with the accumulated result according to influence,
+completely overwriting it if influence is set to 100%.</p>
+</dd>
+<dt>相乘，相减，相加</dt><dd><p>The result of the strip is multiplied, subtracted, or added to the accumulated results,
+and then blended in according to influence.</p>
+<p><span class="math notranslate nohighlight">\(result = mix(previous, previous (+-*) value, influence)\)</span></p>
+</dd>
+<dt>Combine</dt><dd><p>Depending on the type of each property, one of the following methods is automatically chosen:</p>
+<dl>
+<dt>Axis/Angle Rotation</dt><dd><p><span class="math notranslate nohighlight">\(result = previous + value * influence\)</span></p>
+<p>This results in averaging the axis and adding the amount of rotation.</p>
+</dd>
+<dt>Quaternion Rotation</dt><dd><p>Quaternion math is applied to all four channels of the property at once:</p>
+<p><span class="math notranslate nohighlight">\(result = {previous} \times {value} ^ {influence}\)</span></p>
+</dd>
+<dt>Proportional (Scale)</dt><dd><p><span class="math notranslate nohighlight">\(result = previous * (value / default) ^ {influence}\)</span></p>
+</dd>
+<dt>Others</dt><dd><p><span class="math notranslate nohighlight">\(result = previous + (value - default) * {influence}\)</span></p>
+</dd>
+</dl>
+<p>This allows layering actions that can also be used as a standalone.
+Properties keyframed at their default values remain at default.</p>
+</dd>
+</dl>
+</dd>
+<dt>动作影响</dt><dd><p>Amount the active Action contributes to the result of the NLA stack.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="active-track">
+<h3>活动的轨道<a class="headerlink" href="#active-track" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性栏 ‣ 动画 ‣ 活动轨</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>名称</dt><dd><p>片段当前所属的轨道的名称。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="active-strip">
+<h3>激活片段<a class="headerlink" href="#active-strip" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/editors_nla_properties-modifiers_active-strip-panel.png" src="../../_images/editors_nla_properties-modifiers_active-strip-panel.png" />
+<p class="caption"><span class="caption-text">Active Strip panel.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>片段本身的选项。</p>
+<dl class="simple">
+<dt>名称</dt><dd><p>重命名片段。</p>
+</dd>
+<dt>类型</dt><dd><p>根据三种类型的片段，要么是“动作剪辑”，“过渡”，要么是“复合”。</p>
+</dd>
+<dt>片段范围</dt><dd><p>片段本身的边界。请注意，这将延长动作的持续时间，它不会导致动作中用更多或更少的关键帧进行播放（请参阅下面的选项）。</p>
+</dd>
+<dt>外插模式</dt><dd><p>请参阅上面的 <em>外推动作</em> 。</p>
+</dd>
+<dt>混合</dt><dd><p>请参阅上面的 <em>混合动作</em> 。</p>
+</dd>
+<dt>自动混入 / 混出</dt><dd><p>从片段重叠处开始创建斜坡。第一片段是完全控制，并且在重叠时间段结束时它线性地斜升，给第二片段完全控制。</p>
+</dd>
+<dt>淡入</dt><dd><p>设置表示该片段何时具有完全影响的帧。</p>
+</dd>
+<dt>淡出</dt><dd><p>设置该片段完全影响最后一帧。</p>
+</dd>
+<dt>禁用(静音)</dt><dd><p>禁用（静音）单个片段（如禁用上面轨道）。导致轨道轮廓显示虚线。</p>
+</dd>
+<dt>反向</dt><dd><p>导致此片段完全向后播放。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="action-clip">
+<h3>动作剪辑<a class="headerlink" href="#action-clip" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性栏 ‣动画 ‣ 活动片段</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-center" id="id3">
+<img alt="../../_images/editors_nla_properties-modifiers_action-clip-panel.png" src="../../_images/editors_nla_properties-modifiers_action-clip-panel.png" />
+<p class="caption"><span class="caption-text">动作剪辑面板。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>这表示片段的“物体数据”。很像物体的变换值。</p>
+<dl>
+<dt>动作</dt><dd><p>包含在片段中的动作的引用。可以更改为用另一个动作替换当前片段的值。</p>
+</dd>
+<dt>动作范围</dt><dd><p>多少动作要使用。</p>
+<p>注意：如果选择高于或低于动作的实际关键帧计数的值，则将查阅F曲线外推。可以在曲线编辑器中更改 <span class="menuselection">通道 ‣ 外插模式</span>。</p>
+</dd>
+<dt>同步长度</dt><dd><p>导致上面的“开始”和“结束”帧被重置为动作的第一帧和最后一帧。</p>
+</dd>
+<dt>同步动作长度“现在”</dt><dd><p>导致上面的“开始”和“结束”帧被重置为动作的第一帧和最后一帧。</p>
+</dd>
+<dt>回放设定</dt><dd><dl class="simple">
+<dt>缩放</dt><dd><p>拉伸片段，增加 <em>Strip Extents：End Frame</em> 的另一种方法，如上所述。</p>
+</dd>
+<dt>重复</dt><dd><p>还扩展了片段，但通过从第一个关键帧循环并前进。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="evaluation">
+<h3>解算<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性栏 ‣ 动画 ‣ 解算</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-center" id="id4">
+<img alt="../../_images/editors_nla_properties-modifiers_evaluation-panel.png" src="../../_images/editors_nla_properties-modifiers_evaluation-panel.png" />
+<p class="caption"><span class="caption-text">解算面板。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>这决定了片段的影响程度以及经过的时间。</p>
+<dl>
+<dt>动画影响力</dt><dd><p>允许改变这个片段的影响程度作为关键帧的值。如果不影响动画，则在重叠期间，片段会线性褪色。</p>
+<p>这些可以在 <em>NLA控制曲线</em> 下的摄影表或曲线编辑器中找到，并且看起来像组通道。他们出现在该频道的所有通道/ 函数曲线之前。</p>
+</dd>
+<dt>动画的片段</dt><dd><p>与 <em>动画影响力</em> 相同，但带 <em>片段时间</em> 。</p>
+</dd>
+<dt>循环片段时长</dt><dd><p>在动作开始和结束之间循环动画时间。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="modifiers">
+<h2>修改器<a class="headerlink" href="#modifiers" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性栏 ‣ 修改器 ‣ 修改器</span></p>
+</dd>
+</dl>
+</div>
+<p>就像在图形和视频编辑中的对应部分一样，修改器可以为片段叠加不同的效果组合。</p>
+<p>见 <a class="reference internal" href="../graph_editor/fcurves/modifiers.html"><span class="doc">函数曲线修改器</span></a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../text_editor.html" class="btn btn-neutral float-right" title="文本编辑器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="strips.html" class="btn btn-neutral float-left" title="片段" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

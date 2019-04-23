@@ -1,0 +1,416 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/node_editor/introduction.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="导航" href="navigate.html" />
+    <link rel="prev" title="节点编辑器" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../3dview/index.html">3D视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">节点编辑器</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="navigate.html">导航</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nodes/index.html">节点</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="index.html">节点编辑器</a> &raquo;</li>
+        
+      <li>简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/editors/node_editor/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/editors_node-editor_introduction_example.jpg"><img alt="../../_images/editors_node-editor_introduction_example.jpg" src="../../_images/editors_node-editor_introduction_example.jpg" style="width: 620px;" /></a>
+<p class="caption"><span class="caption-text">节点编辑器。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p><em>节点编辑器</em> 用于处理基于节点的工作流程。可以使用节点编辑器标题栏中的按钮来更改节点树类型。但是，在这里我们只会给出 <em>节点编辑器</em> 的概述。在下面的列表中，它显示了不同类型的节点树的列表以及每个节点树的文档链接。</p>
+<table class="colwidths-given valign docutils align-center" id="node-tree-types">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 30%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>图标</p></th>
+<th class="head"><p>名称</p></th>
+<th class="head"><p>文档</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="figure align-center">
+<img alt="../../_images/editors_node-editor_introduction_icons-material.png" src="../../_images/editors_node-editor_introduction_icons-material.png" />
+</div>
+</td>
+<td><p>材质节点</p></td>
+<td><p><a class="reference internal" href="../../render/cycles/nodes/index.html"><span class="doc">Cycles</span></a> and
+<a class="reference internal" href="../../render/eevee/materials/nodes/index.html"><span class="doc">Eevee</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><div class="figure align-center">
+<img alt="../../_images/editors_node-editor_introduction_icons-render-layers.png" src="../../_images/editors_node-editor_introduction_icons-render-layers.png" />
+</div>
+</td>
+<td><p>合成节点</p></td>
+<td><p>文档可以在 <a class="reference internal" href="../../compositing/index.html"><span class="doc">合成</span></a> 部分中找到。</p></td>
+</tr>
+<tr class="row-even"><td><div class="figure align-center">
+<img alt="../../_images/editors_node-editor_introduction_icons-texture.png" src="../../_images/editors_node-editor_introduction_icons-texture.png" />
+</div>
+</td>
+<td><p>纹理节点</p></td>
+<td><p>纹理节点位于 <a class="reference internal" href="../uv_image/uv/textures/nodes/introduction.html"><span class="doc">UV/图像编辑器</span></a> 文档中。</p></td>
+</tr>
+</tbody>
+</table>
+<p>选择要使用的节点后，必须使用 <em>使用节点</em> 按钮启用节点。</p>
+<div class="section" id="interface">
+<h2>界面<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="header">
+<h3>标题栏<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h3>
+<p><em>标题栏</em> 包含各种菜单，按钮和选项，和部分基于当前节点树的类型。</p>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/editors_node-editor_introduction_header.png" src="../../_images/editors_node-editor_introduction_header.png" />
+<p class="caption"><span class="caption-text">常用节点标题栏选项。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>视图</dt><dd><p>此菜单更改编辑器的视图样式。</p>
+</dd>
+<dt>选择</dt><dd><p>该菜单允许你选择一个或多个节点组。</p>
+</dd>
+<dt>添加</dt><dd><p>该菜单允许你添加节点。</p>
+</dd>
+<dt>节点</dt><dd><p>用选定的节点来做事，类似于顶点。</p>
+</dd>
+<dt>材质，合成或纹理按钮</dt><dd><p>节点分为三类，查看列表见 <a class="reference internal" href="#node-tree-types"><span class="std std-ref">节点树类型</span></a>。</p>
+</dd>
+<dt>使用节点</dt><dd><p>告诉渲染引擎在计算材质颜色或渲染最终图像时使用节点图。如果不是，则节点图被忽略，完成材质选项卡或场景的基本渲染。</p>
+</dd>
+<dt>使用图钉</dt><dd><p>启用后，编辑器将保留材质或纹理，即使用户选择了不同的物体。然后可以独立于3D视图中的物体选择来编辑节点树。</p>
+</dd>
+<dt>转到父按钮</dt><dd><p>此按钮允许你转到父节点树例如离开一个小组。</p>
+</dd>
+</dl>
+<div class="section" id="auto-offset">
+<span id="editors-nodes-usage-auto-offset"></span><h4>自动偏移<a class="headerlink" href="#auto-offset" title="Permalink to this headline">¶</a></h4>
+<p>将具有至少一个输入和一个输出接口的节点放置到两个节点之间的现有连接上时，<em>自动偏移</em> 将根据方向设置自动移动左侧或右侧节点，为新节点腾出空间。 <em>自动偏移</em> 是一项功能，可帮助在不中断用户工作流的情况下交互式组织节点布局。</p>
+<div class="figure align-center">
+<img alt="../../_images/editors_node-editor_introduction_auto-offset.png" src="../../_images/editors_node-editor_introduction_auto-offset.png" />
+</div>
+<p>默认是启用自动偏移的，但可以从节点编辑器标题栏中禁用。</p>
+<p>通过按下 <kbd class="kbd docutils literal notranslate">T</kbd>，你可以在移动节点时切换偏移方向。</p>
+<p>可以使用用户设置的编辑部分中的 <em>自动偏移间距</em> 设置更改偏移间距。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>示例视频：</p>
+<p><a class="reference external" href="https://vimeo.com/135125839">自动偏移。 Blender节点编辑器的工作流程增强</a>.</p>
+</div>
+</div>
+<div class="section" id="further-menus">
+<h4>其他菜单<a class="headerlink" href="#further-menus" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>吸附</dt><dd><p>在节点编辑器中切换节点的吸附模式。</p>
+</dd>
+<dt>吸附节点元素选择器</dt><dd><p>该选择器为吸附提供以下节点元素：</p>
+<dl class="field-list simple">
+<dt class="field-odd">栅格</dt>
+<dd class="field-odd"><p>（默认）吸附到节点编辑器的栅格。</p>
+</dd>
+<dt class="field-even">节点X</dt>
+<dd class="field-even"><p>吸附到左/右节点边界。</p>
+</dd>
+<dt class="field-odd">节点 Y</dt>
+<dd class="field-odd"><p>吸附到顶部/底部节点边界。</p>
+</dd>
+<dt class="field-even">节点 X / Y</dt>
+<dd class="field-even"><p>吸附到任何节点边界。</p>
+</dd>
+</dl>
+</dd>
+<dt>吸附目标</dt><dd><p>吸附目标的哪一部分。</p>
+<dl class="field-list simple">
+<dt class="field-odd">邻近</dt>
+<dd class="field-odd"><p>吸附最近点到目标。</p>
+</dd>
+<dt class="field-even">中心</dt>
+<dd class="field-even"><p>吸附中心到目标。</p>
+</dd>
+<dt class="field-odd">质心</dt>
+<dd class="field-odd"><p>吸附质心到目标。</p>
+</dd>
+<dt class="field-even">活动项</dt>
+<dd class="field-even"><p>吸附活动项到目标上。</p>
+</dd>
+</dl>
+</dd>
+<dt>复制节点</dt><dd><p>该按钮允许你将选定的节点复制到剪贴板。</p>
+</dd>
+<dt>粘贴节点</dt><dd><p>此按钮允许你将剪贴板中的节点粘贴到活动节点树中。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="tool-shelf">
+<h3>工具架<a class="headerlink" href="#tool-shelf" title="Permalink to this headline">¶</a></h3>
+<p><em>工具栏</em> 是一个上下文相关区域，本地包含蜡笔的工具和添加节点的按钮。工具架使用标签进行组织。</p>
+</div>
+<div class="section" id="properties-region">
+<h3>属性区域<a class="headerlink" href="#properties-region" title="Permalink to this headline">¶</a></h3>
+<p><em>属性栏</em> 包含当前选定节点的属性以及节点编辑器特定设置。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="navigate.html" class="btn btn-neutral float-right" title="导航" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="节点编辑器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

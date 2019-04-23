@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BAM资产管理器 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/pipeline/bam.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Alembic" href="alembic.html" />
+    <link rel="prev" title="管线" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">管线</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">BAM资产管理器</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installing-bam">安装BAM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bam-pack">bam pack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples">示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#bam-remap">bam remap</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#subcommands">子命令</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alembic.html">Alembic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collada.html">Collada</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">管线</a> &raquo;</li>
+        
+      <li>BAM资产管理器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pipeline/bam.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bam-asset-manager">
+<h1>BAM资产管理器<a class="headerlink" href="#bam-asset-manager" title="Permalink to this headline">¶</a></h1>
+<p>Refactoring linked blend-files is a common practice in a production environment.
+While some basic operations can be accomplished within Blender,
+sometimes it is more practical to perform them on the command line or via a script.
+During the production of Cosmos Laundromat (Gooseberry Open Movie Project)
+the <em>BAM Asset Manager</em> (BAM) was developed. The original scope of BAM included
+client-server asset management tools going beyond Blender,
+but it was later refocused on core utilities to perform two operations:</p>
+<ol class="arabic simple">
+<li><p>Blender文档打包</p></li>
+<li><p>依赖关系的自动映射</p></li>
+</ol>
+<p>下面重点介绍如何使用BAM。</p>
+<div class="figure align-center" id="id1">
+<img alt="../_images/pipeline_bam_chart.png" src="../_images/pipeline_bam_chart.png" />
+<p class="caption"><span class="caption-text">资产管理器。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="installing-bam">
+<h2>安装BAM<a class="headerlink" href="#installing-bam" title="Permalink to this headline">¶</a></h2>
+<p>BAM是一个独立的Python安装包，不需要特殊的设置即可在任何系统中运行，唯一的要求是Python 3（以及pip，即Python安装包管理器，以便更容易的安装BAM）。</p>
+<p>在Windows，Linux及macOS中安装Python 3和pip的方法各不相同，可查看在线文档来了解针对具体平台的相关事项。</p>
+<p>安装好Python 3和pip以后，可通过命令行来安装BAM，指令如下：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip3 install blender-bam
+</pre></div>
+</div>
+<p>安装成功后，就可以使用 <cite>bam</cite> 指令了。输入此指令并回车后，会列出所有可用的子命令。</p>
+</div>
+<div class="section" id="bam-pack">
+<h2>bam pack<a class="headerlink" href="#bam-pack" title="Permalink to this headline">¶</a></h2>
+<p>此命令用来把 <code class="docutils literal notranslate"><span class="pre">.blend</span></code> 文档和所有相关的依赖文件打包为一个 <code class="docutils literal notranslate"><span class="pre">.zip</span></code> 文档以便于重新分发。:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bam</span> <span class="n">pack</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">o</span> <span class="n">FILE</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">m</span> <span class="n">MODE</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">e</span> <span class="n">PATTERNS</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">a</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">q</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">c</span> <span class="n">LEVEL</span><span class="p">]</span>
+             <span class="n">paths</span> <span class="p">[</span><span class="n">paths</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>可以像这样把blend文档打包，并创建一个同名zip压缩文件。</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>bam pack /path/to/scene.blend
+</pre></div>
+</div>
+<p>也可以指定一个明确的输出目录。这个例子显示了如何把blend文件最大程度的压缩以供在线下载。</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>bam pack /path/to/scene.blend --output my_scene.zip --compress<span class="o">=</span>best
+</pre></div>
+</div>
+<p>此指令提供了几种适用于不同工作流程的选项（如最终分发，部分提取，渲染等等）。</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">-o</span></code>, <code class="docutils literal notranslate"><span class="pre">--output</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;FILE&gt;</span></code></dt><dd><p>输出文档，或在多重输入时输出目录。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-m</span></code>, <code class="docutils literal notranslate"><span class="pre">--mode</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;MODE&gt;</span></code></dt><dd><p>输出文档，或在多重输入时输出目录。可选项为： <code class="docutils literal notranslate"><span class="pre">ZIP</span></code>, <code class="docutils literal notranslate"><span class="pre">FILE</span></code>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-e</span></code>, <code class="docutils literal notranslate"><span class="pre">--exclude</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;PATTERN(S)&gt;</span></code></dt><dd><p>打包时有选择性的排除一些文件。</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">--exclude=&quot;*.png&quot;</span></code></dt><dd><p>采用Unix shell方式的通配符（不区分大小写）。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--exclude=&quot;*.txt;*.avi;*.wav&quot;</span></code></dt><dd><p>可以使用多重类型，以“;”为分隔符。</p>
+</dd>
+</dl>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-a</span></code>, <code class="docutils literal notranslate"><span class="pre">--all-deps</span></code></dt><dd><p>采用所有的依赖关系（未使用的非直接的依赖关系也包括在内）。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-q</span></code>, <code class="docutils literal notranslate"><span class="pre">--quiet</span></code></dt><dd><p>不作状态输出。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">--compress</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;LEVEL&gt;</span></code></dt><dd><p>结果文档的压缩等级。可选项为：<code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">fast</span></code>, <code class="docutils literal notranslate"><span class="pre">best</span></code>, <code class="docutils literal notranslate"><span class="pre">store</span></code>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--repo</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;DIR</span> <span class="pre">PATH&gt;</span></code></dt><dd><p>为压缩所选文件指定根路径。这样可以不进行重映射即创建一个作品树结构的稀疏拷贝。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--warn-external</span></code></dt><dd><p>报告外部库的错误（丢失路径）。</p>
+</dd>
+</dl>
+<div class="section" id="examples">
+<h3>示例<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>考虑下列目录布局，其中 <em>01_01_A.lighting.blend</em> 文档带有关联库。</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>~/agent327/
+└─ lib/
+   ├─ chars/
+   |  ├─ agent.blend  -------------&gt;|
+   |  ├─ boris.blend  -------------&gt;|
+   |  └─ barber.blend               |
+   └─ scenes/                       |
+      ├─ 01-opening                 |
+      ├─ 01_01_A.lighting.blend  &lt;--|  &lt; BAM pack this file
+      └─ 01_01_A.anim.blend  ------&gt;|
+</pre></div>
+</div>
+<p>运行 <code class="docutils literal notranslate"><span class="pre">bam</span> <span class="pre">pack</span> <span class="pre">/scenes/01-opening/01_01_A.lighting.blend</span></code> 命令后，会得到 <em>01_01_A.lighting.zip</em> 文档，此文档内部结构如下所示。</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>~/01_01_A.lighting
+   ├─ 01_01_A.lighting.blend
+   └─ __/
+      ├─ 01_01_A.anim.blend
+      └─ __/
+         └─ lib/
+            └─ chars/
+               ├─ agent.blend
+               └─ boris.blend
+</pre></div>
+</div>
+<p>请注意此输出结果中所有路径是如何以 <em>01_01_A.lighting.blend</em> 为根重映射的。如果运行 <code class="docutils literal notranslate"><span class="pre">bam</span> <span class="pre">pack</span> <span class="pre">/scenes/01-opening/01_01_A.lighting.blend</span> <span class="pre">--repo</span> <span class="pre">~/agent327</span></code> 命令，输出结果就会不同了。</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>~/01_01_A.lighting
+   ├─ lib/
+   |  └─ chars/
+   |     ├─ agent.blend
+   |     └─ boris.blend
+   └─ scenes
+      └─ 01-opening/
+         ├─ 01_01_A.lighting.blend  &lt; The BAM packed file
+         └─ 01_01_A.anim.blend
+</pre></div>
+</div>
+<p>此处未进行重映射，仅仅简单地提取出所有文档而没有给出相对于 <em>01_01_A.lighting.blend</em> 的直接或间接的依赖关系。这实际上是原始作品树结构的稀疏拷贝。</p>
+</div>
+</div>
+<div class="section" id="bam-remap">
+<h2>bam remap<a class="headerlink" href="#bam-remap" title="Permalink to this headline">¶</a></h2>
+<p>重映射blend文档的路径：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bam</span> <span class="n">remap</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">{</span><span class="n">start</span><span class="p">,</span><span class="n">finish</span><span class="p">,</span><span class="n">reset</span><span class="p">}</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>此命令有三个步骤：</p>
+<ol class="arabic simple">
+<li><p>首先运行 <code class="docutils literal notranslate"><span class="pre">bam</span> <span class="pre">remap</span> <span class="pre">start</span> <span class="pre">.</span></code> 来（递归地）储存项目的当前状态。</p></li>
+<li><p>然后在文件系统中重新安置文档（重命名，更改放置位置）。</p></li>
+<li><p>最后运行 <code class="docutils literal notranslate"><span class="pre">bam</span> <span class="pre">remap</span> <span class="pre">finish</span></code> 来应用修改，并更新 <code class="docutils literal notranslate"><span class="pre">.blend</span></code> 文档内部路径。</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /my/project
+
+bam remap start .
+mv photos textures
+mv barbershop_v14_library.blend barberhop_libraray.blend
+bam remap finish
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在当前目录下重映射创建一个名为 <code class="docutils literal notranslate"><span class="pre">bam_remap.data</span></code> 的文档。可以把整个项目重新放置到新的地方，但在执行 <code class="docutils literal notranslate"><span class="pre">finish</span></code> 的时候此文档必须是在当前目录内。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>此命令依赖文档的独占内容，故一旦开始重映射后要注意不要修改文档。</p>
+</div>
+<div class="section" id="subcommands">
+<h3>子命令<a class="headerlink" href="#subcommands" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="remap-start">
+<h4>remap start<a class="headerlink" href="#remap-start" title="Permalink to this headline">¶</a></h4>
+<p>开始重映射blend文档：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bam</span> <span class="n">remap</span> <span class="n">start</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">j</span><span class="p">]</span> <span class="p">[</span><span class="n">paths</span> <span class="p">[</span><span class="n">paths</span> <span class="o">...</span><span class="p">]]</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">-j</span></code>, <code class="docutils literal notranslate"><span class="pre">--json</span></code></dt><dd><p>生成JSON输出。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="remap-finish">
+<h4>remap finish<a class="headerlink" href="#remap-finish" title="Permalink to this headline">¶</a></h4>
+<p>结束重映射blend文档：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bam</span> <span class="n">remap</span> <span class="n">finish</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">r</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">d</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">j</span><span class="p">]</span> <span class="p">[</span><span class="n">paths</span> <span class="p">[</span><span class="n">paths</span> <span class="o">...</span><span class="p">]]</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">-r</span></code>, <code class="docutils literal notranslate"><span class="pre">--force-relative</span></code></dt><dd><p>所有重映射路径采用相对路径（即使源文档采用绝对路径也改为采用相对路径）。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-d</span></code>, <code class="docutils literal notranslate"><span class="pre">--dry-run</span></code></dt><dd><p>如同路径正在运行一样打印输出结果。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-j</span></code>, <code class="docutils literal notranslate"><span class="pre">--json</span></code></dt><dd><p>生成JSON输出。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="remap-reset">
+<h4>remap reset<a class="headerlink" href="#remap-reset" title="Permalink to this headline">¶</a></h4>
+<p>取消路径重映射：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bam</span> <span class="n">remap</span> <span class="n">reset</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">j</span><span class="p">]</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">-j</span></code>, <code class="docutils literal notranslate"><span class="pre">--json</span></code></dt><dd><p>生成JSON输出。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="alembic.html" class="btn btn-neutral float-right" title="Alembic" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="管线" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

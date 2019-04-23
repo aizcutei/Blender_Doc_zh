@@ -1,0 +1,416 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>骨架修改器 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/armature.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="铸型修改器" href="cast.html" />
+    <link rel="prev" title="线框修改器" href="../generate/wireframe.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#generate">生成</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#deform">形变</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">骨架修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cast.html">铸型修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corrective_smooth.html">矫正平滑修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curve.html">曲线函数修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="displace.html">置换修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hooks.html">钩挂修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="laplacian_smooth.html">拉普拉斯平滑修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="laplacian_deform.html">拉普拉斯变形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lattice.html">晶格修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_deform.html">网格变形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shrinkwrap.html">缩裹修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="simple_deform.html">简单变形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="smooth.html">平滑修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="surface_deform.html">表面变形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="warp.html">弯绕修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wave.html">波浪修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#simulate">模拟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../index.html">修改器</a> &raquo;</li>
+        
+      <li>骨架修改器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/modeling/modifiers/deform/armature.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="armature-modifier">
+<span id="bpy-types-armaturemodifier"></span><h1>骨架修改器<a class="headerlink" href="#armature-modifier" title="Permalink to this headline">¶</a></h1>
+<p>骨架修改器是用来构建骨架系统的，为了让有姿势的角色的和其他需要摆姿势的物体动起来。</p>
+<p>物体加上了骨架系统之后，可以精确地发生形变，使得几何模型不用手工就能动起来。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>骨架使用的更多细节,参见 <a class="reference internal" href="../../../rigging/armatures/index.html"><span class="doc">骨架</span></a>.</p>
+</div>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id1">
+<img alt="../../../_images/modeling_modifiers_deform_armature_panel.png" src="../../../_images/modeling_modifiers_deform_armature_panel.png" />
+<p class="caption"><span class="caption-text">骨架修改器</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>物体</dt><dd><p>使用该修改器的骨架物体的名字</p>
+</dd>
+<dt>维持体积</dt><dd><p>在形变过程中使用四元数来维持物体的体积。很多情况下使用会有较好的效果。</p>
+<p>不用 <em>保持体积</em>，在关节处的旋转倾向于缩小相邻的几何体，从重置位置到180度几乎达到零。使用 <em>保持体积</em>，几何体不再缩小，但有一个“间隙”，从重置位置不连续地达到180度。</p>
+</dd>
+</dl>
+<table class="docutils align-center" id="id2">
+<caption><span class="caption-text">四元数选项效果的例子。请注意，棱角球使用骨骼封套权重进行变形.</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_deform_armature_preserve-volume-1.png"><img alt="../../../_images/modeling_modifiers_deform_armature_preserve-volume-1.png" src="../../../_images/modeling_modifiers_deform_armature_preserve-volume-1.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">初始状态.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_deform_armature_preserve-volume-2.png"><img alt="../../../_images/modeling_modifiers_deform_armature_preserve-volume-2.png" src="../../../_images/modeling_modifiers_deform_armature_preserve-volume-2.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">100° 旋转, 关闭维持体积.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_deform_armature_preserve-volume-3.png"><img alt="../../../_images/modeling_modifiers_deform_armature_preserve-volume-3.png" src="../../../_images/modeling_modifiers_deform_armature_preserve-volume-3.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">180° 旋转, 关闭维持体积.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_deform_armature_preserve-volume-4.png"><img alt="../../../_images/modeling_modifiers_deform_armature_preserve-volume-4.png" src="../../../_images/modeling_modifiers_deform_armature_preserve-volume-4.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">100° 旋转, 开启维持体积.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_deform_armature_preserve-volume-5.png"><img alt="../../../_images/modeling_modifiers_deform_armature_preserve-volume-5.png" src="../../../_images/modeling_modifiers_deform_armature_preserve-volume-5.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">179.9° 旋转, 开启维持体积.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_deform_armature_preserve-volume-6.png"><img alt="../../../_images/modeling_modifiers_deform_armature_preserve-volume-6.png" src="../../../_images/modeling_modifiers_deform_armature_preserve-volume-6.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">180.1° 旋转, 开启维持体积.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>顶点组</dt><dd><p>物体顶点组的名字，与其他骨架的顶点组进行混合时，其权重会用来决定该骨架修改器结果的影响力。</p>
+<p>在同一个物体上，多项修改器（Multi Modifier）已启用，并且使用至少两个这样的修改器才有意义。</p>
+<dl class="simple">
+<dt>反转</dt><dd><p>反转上面设置中顶点组影响力（例如，反转该组的权重）。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="bind-to">
+<h3>绑定到<a class="headerlink" href="#bind-to" title="Permalink to this headline">¶</a></h3>
+<p>绑定骨架到网格的方法.</p>
+<dl>
+<dt>顶点组</dt><dd><p>只针对网格和晶格 -- 启用时, 给定名字的骨骼灰调整属于同一名字的 <a class="reference internal" href="../../meshes/properties/vertex_groups/index.html"><span class="doc">顶点组</span></a> 的顶点. 例如, 叫 &quot;forearm&quot;的骨骼, 只作用于 &quot;forearm&quot; 顶点组的顶点.</p>
+<p>骨骼对给定顶点的影响是由该顶点在相关组中的权重来控制的。一种比 <em>骨骼封套</em> 精确得多的方法，但一般也要设置更长的时间。</p>
+</dd>
+<dt>骨骼封套</dt><dd><p>启用时, 骨骼会调整顶点或其附近的点, 由每个骨骼的封套半径和距离决定, 开启/关闭 骨骼 <a class="reference internal" href="../../../rigging/armatures/bones/properties/deform.html#armature-bones-envelope"><span class="std std-ref">封套</span></a> 定义了变形 (即骨骼调整其相邻的顶点).</p>
+</dd>
+</dl>
+<table class="docutils align-center" id="id9">
+<caption><span class="caption-text">顶点组表皮方法的例子.</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id10">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_deform_armature_vertex-groups-skinning-1.png"><img alt="../../../_images/modeling_modifiers_deform_armature_vertex-groups-skinning-1.png" src="../../../_images/modeling_modifiers_deform_armature_vertex-groups-skinning-1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">手臂顶点组的权重.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_deform_armature_vertex-groups-skinning-2.png"><img alt="../../../_images/modeling_modifiers_deform_armature_vertex-groups-skinning-2.png" src="../../../_images/modeling_modifiers_deform_armature_vertex-groups-skinning-2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">前臂顶点组的权重.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="figure align-center" id="id12">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_deform_armature_vertex-groups-skinning-3.png"><img alt="../../../_images/modeling_modifiers_deform_armature_vertex-groups-skinning-3.png" src="../../../_images/modeling_modifiers_deform_armature_vertex-groups-skinning-3.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">摆骨骼姿势的结果.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id13">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_deform_armature_vertex-groups-skinning-4.png"><img alt="../../../_images/modeling_modifiers_deform_armature_vertex-groups-skinning-4.png" src="../../../_images/modeling_modifiers_deform_armature_vertex-groups-skinning-4.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">同一个姿势,但使用骨骼封套方法而不是顶点组.</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="multi-modifier">
+<h3>多重修改器<a class="headerlink" href="#multi-modifier" title="Permalink to this headline">¶</a></h3>
+<p>使用相同的数据作为前一个修改器（通常也是骨架修改器）的输入。这样的话，你可以对“没变形”的数据，使用几个骨架对同一个物体发生形变。（也就是说，这样避免了用第二个骨架修改器在第一个骨架修改器的结果上发生形变）</p>
+<p>用顶点组的权重作为“混合指导”，骨架修改器的结果最终混在了一起。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>在主控物体是骨架时使用父子快捷键（<kbd class="kbd docutils literal notranslate">Ctrl-P</kbd>），骨骼修改器可以快速添加到物体上。</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cast.html" class="btn btn-neutral float-right" title="铸型修改器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../generate/wireframe.html" class="btn btn-neutral float-left" title="线框修改器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

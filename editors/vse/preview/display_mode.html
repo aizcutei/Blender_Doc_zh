@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>显示模式 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/vse/preview/display_mode.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="属性" href="properties.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../3dview/index.html">3D视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">视频序列编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sequencer/index.html">序列编辑器</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">预览</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../index.html">视频序列编辑器</a> &raquo;</li>
+        
+          <li><a href="index.html">预览</a> &raquo;</li>
+        
+      <li>显示模式</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/editors/vse/preview/display_mode.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="display-mode">
+<h1>显示模式<a class="headerlink" href="#display-mode" title="Permalink to this headline">¶</a></h1>
+<p>有很多不同的显示模式，每一个有独特属性。</p>
+<div class="section" id="image-preview">
+<h2>图像预览<a class="headerlink" href="#image-preview" title="Permalink to this headline">¶</a></h2>
+<p>图像预览显示了保存时候视频应该是什么样子。这是增加和移动他们，剪切打组（生成复合片段）和制作特效时候主要的工作模式。</p>
+</div>
+<div class="section" id="luma-waveform">
+<h2>亮度波形<a class="headerlink" href="#luma-waveform" title="Permalink to this headline">¶</a></h2>
+<p>选中的通道会显示明度和亮度比对图。</p>
+<p>亮度波形能让你评估视频信号波亮度质量，你能通过观察亮度波形取代常用的导出到其他控制器显示的方式。</p>
+<p>显示的块是每一个亮度值。线是画在每个的头上。如果线穿过（就像很多扫描线）点变亮。如果你插入示波器到电视机的视频输出亮度,你可以更容易理解。基本上是相似的。</p>
+<p>该模式下，纵轴表示亮度：底部为0，顶部为1；横轴是该帧图像横轴的映射。显示的曲线数量与该帧扫描线一样，一条曲线对应一行扫描线所有像素点的亮度。并且，该模式下像素点的颜色表示该列亮度相同的像素点数量，亦即，通过该点的曲线数量(黑色/透明，表示对应亮度像素点，白色/不透明表示至少对应3个像素点)。</p>
+<dl class="simple">
+<dt>分离颜色</dt><dd><p>分离图像RGB通道。</p>
+</dd>
+</dl>
+<p>这模式优势：</p>
+<ul class="simple">
+<li><p>如果波形图没充满画布你可能需要明度对比度调节器，直到充满画面（自动调节）。</p></li>
+<li><p>更多的曲线调节或者色彩平衡会让那你操作更精准。</p></li>
+<li><p>如果你想整体调整，因为可以完全扭曲修剪顶部或者底部，你可以评估。</p></li>
+</ul>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<img alt="../../../_images/editors_vse_preview_display-mode_luma-waveform-example-1.png" src="../../../_images/editors_vse_preview_display-mode_luma-waveform-example-1.png" />
+<p class="caption"><span class="caption-text">各水平线在 Luma 波形匹配图片制服颜色线。请注意 '灰色 20%' 一个像素宽度线 （里面的黄色地带） 由一个灰色的线 Luma 波形。这两条线，画&quot;X&quot;是从两个线性肤色深浅 （白色--黑色和黑-白-&gt;）。最后，断的线匹配复杂音调灯罩底部的图片。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id2">
+<img alt="../../../_images/editors_vse_preview_display-mode_luma-waveform-example-2.png" src="../../../_images/editors_vse_preview_display-mode_luma-waveform-example-2.png" />
+<p class="caption"><span class="caption-text">曲线是相当明显的。我们发现天空亮度80-100%，大海亮度 40%左右,山区亮度 10-20%，阳光的部分 40%左右。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>请注意，图片（第一次绿色框架顶部）都只 50px 高，来限制 <em>亮度波形</em> 曲线中显示的数量</p>
+</div>
+<p>这显示用于检查适当的对比度和亮度在通道中的所有帧。当点在影片中有不这样的，它看起来像闪光灯出去或额外的光突然亮了。如果两条都呈现或在不同光照但应该是连续的条件下的拍摄就可以发生了。</p>
+</div>
+<div class="section" id="chroma-vectorscope">
+<h2>色度矢量<a class="headerlink" href="#chroma-vectorscope" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id3">
+<img alt="../../../_images/editors_vse_preview_display-mode_example.jpg" src="../../../_images/editors_vse_preview_display-mode_example.jpg" />
+<p class="caption"><span class="caption-text">示例图像。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id4">
+<img alt="../../../_images/editors_vse_preview_display-mode_vectorscope.png" src="../../../_images/editors_vse_preview_display-mode_vectorscope.png" />
+<p class="caption"><span class="caption-text">色度矢量示例。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>使用此模式直观观察颜色分布和饱和度的质量，您还可以查看一个 U/V 的散点图。</p>
+<p>图片将转换为 YUV 格式。U 和 V 值表示颜色的角度。像素的图片，一个点绘制的显示是在U值和 V 值的位置。如果几个像素碰巧有相同 U/V 值的像素在此处变得越来越亮。</p>
+<p>为了帮助您了解是什么颜色的意义，极端位置 （红色、 洋红色、 蓝色、 青色、 绿色、 黄色） 画了标记和红十字烙下了印记。</p>
+<p>除此之外，选择的通道的显示还包括六边形中图片的颜色空间。六边形的每个点是一个基础颜色：红色、 洋红色、 蓝色、 青色、 绿色、 黄色。黑色在中间，所有的点饱和度都是按比例接近外面的。这示例正好显示了图片有很多红色（50%饱和度）一点点蓝没有绿。</p>
+<p>总是要记住激活最终结果的的附加控制器。颜色校准是一种感觉取决于你的期望。</p>
+<p>用这个显示检查很多的饱和度。过度饱和的图片在欧普艺术和电脑显示上很好在大屏幕的电视机上很糟糕。用 <kbd class="kbd docutils literal notranslate">Alt-A</kbd> 取消视频。这显示会更新每一个框架的新的/修正对比图。就像观看图片预览，去看长啥样。观察色度矢量啦看颜色的使用。</p>
+<p>这模式优势：</p>
+<ul class="simple">
+<li><p>如果图片很压抑缺饱和度，你或许会想看U/V-图。你最有可能看到所有的像素在原点堆积。如果增加饱和度，在滤色面板用 <em>饱和度</em> 滑块或者任何调节器改变颜色。如果你扭曲调节颜色，在U/V图你可以看到。</p></li>
+<li><p>如果你手动匹配颜色，基本上能匹配你看到的不同通道显示器的角度。</p></li>
+</ul>
+</div>
+<div class="section" id="histogram">
+<h2>直方图<a class="headerlink" href="#histogram" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id5">
+<img alt="../../../_images/editors_vse_preview_display-mode_example.jpg" src="../../../_images/editors_vse_preview_display-mode_example.jpg" />
+<p class="caption"><span class="caption-text">示例图像。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id6">
+<img alt="../../../_images/editors_vse_preview_display-mode_histogram.png" src="../../../_images/editors_vse_preview_display-mode_histogram.png" />
+<p class="caption"><span class="caption-text">直方图预览示例。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>这模式显示了图像现在显示的图片中的颜色分布信息。X轴是像素值0-1（或者0-255），y轴表示调性范围内像素数量。显著显示了。深色图在图片左边有更多的信息。</p>
+<p>用这个平衡图片调性。平衡的图应该有很好很平滑的颜色数值分布。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="properties.html" class="btn btn-neutral float-right" title="属性" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

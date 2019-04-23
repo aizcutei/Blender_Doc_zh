@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>大纲视图 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/outliner.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="属性编辑器" href="properties_editor.html" />
+    <link rel="prev" title="屏幕录制" href="info/screen_capture.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#general">常规</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#scripting">脚本</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#data">数据</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">大纲视图</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tree-view">树视图</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#header">标题栏</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="properties_editor.html">属性编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_browser/index.html">文件浏览器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">编辑器</a> &raquo;</li>
+        
+      <li>大纲视图</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/editors/outliner.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="outliner">
+<span id="bpy-ops-outliner"></span><span id="bpy-types-spaceoutliner"></span><h1>大纲视图<a class="headerlink" href="#outliner" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center" id="id1">
+<img alt="../_images/editors_outliner_interface.png" src="../_images/editors_outliner_interface.png" />
+<p class="caption"><span class="caption-text">大纲视图编辑器。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p><em>大纲视图</em> 是一个组织blend文件中数据(也就是场景数据，还有用户设置)的列表。</p>
+<p class="rubric">用法</p>
+<ul class="simple">
+<li><p>查看场景中的数据。</p></li>
+<li><p>选择或取消选择场景中的物体。</p></li>
+<li><p>隐藏或显示场景中的物体。</p></li>
+<li><p>启用或禁用选择 (以使物体在 3D 视图中 &quot;不可选择&quot; )。</p></li>
+<li><p>禁用 / 启用是否渲染物体。</p></li>
+<li><p>从场景中删除对象。</p></li>
+<li><p>取消数据链接（相当于在数据块的名称后面点 <em>X</em> 按钮）。</p></li>
+<li><p>简单选择那些渲染层需要渲染。</p></li>
+<li><p>简单选择那些渲染层需要渲染。（比如你可以选择只渲染 <em>高光</em> 通道）</p></li>
+</ul>
+<div class="section" id="tree-view">
+<h2>树视图<a class="headerlink" href="#tree-view" title="Permalink to this headline">¶</a></h2>
+<p><em>大纲视图</em> 中的每一行都显示一个数据块。你可以单击名称左侧的加号来展开当前数据块，并查看其中包含的其他数据块。</p>
+<p>你可以在 <em>大纲视图</em> 选择数据块 ,但是这并不一定会选择场景中的数据块。要选择场景中的数据块，你必须激活它.</p>
+<div class="section" id="selecting-and-activating">
+<h3>选择和激活<a class="headerlink" href="#selecting-and-activating" title="Permalink to this headline">¶</a></h3>
+<p>单一选择不需要任何预先选择：只需在名称/图标区域 <em>内</em> 直接使用 <kbd class="kbd docutils literal notranslate">LMB</kbd> （和/或 <kbd class="kbd docutils literal notranslate">RMB</kbd> -- 上下文菜单，见下文）。</p>
+<p>当以这种方式选择列表中的物体时，它将被选中并成为所有其他3D视图中的活动对象。</p>
+<div class="section" id="activating-a-data-block">
+<h4>激活（活动）数据块<a class="headerlink" href="#activating-a-data-block" title="Permalink to this headline">¶</a></h4>
+<p>要 <em>激活</em> 当前数据块在当前数据块图标上,按下 <kbd class="kbd docutils literal notranslate">LMB</kbd> ， 当前激活的数据块将自动切换到相关模式。 例如，激活立方体的网格数据将选择立方体并进入 <em>编辑模式</em> 而激活立方体的物体数据将选择立方体并进入 <em>物体模式</em> （见右图）。</p>
+</div>
+<div class="section" id="selecting-a-group-of-data-blocks">
+<h4>选择一组数据块<a class="headerlink" href="#selecting-a-group-of-data-blocks" title="Permalink to this headline">¶</a></h4>
+<p>当你想选择/取消选择一大堆数据块时这个命令很有用。为此，你可以根据自己的喜好使用选择以下快捷方式：</p>
+<ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">RMB</kbd> 或 <kbd class="kbd docutils literal notranslate">LMB</kbd>,</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Shift-RMB</kbd> 或 <kbd class="kbd docutils literal notranslate">Shift-LMB</kbd>,</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">RMB</kbd> 并拖动或 <kbd class="kbd docutils literal notranslate">LMB</kbd> 并拖动,</p></li>
+</ul>
+<p>所有 <em>外部</em> 名称/图标区域。这些预先选定的线条有较亮（浅）的颜色。然后，您可以在名称/图标区域 <em>上</em> 使用 <kbd class="kbd docutils literal notranslate">RMB</kbd> 选择它们，这会弹出一个上下文菜单（参见下文）。  <kbd class="kbd docutils literal notranslate">A</kbd> 选择/取消选择所有未打开的项目。</p>
+<div class="figure align-center" id="id2">
+<img alt="../_images/editors_outliner_column-icons.png" src="../_images/editors_outliner_column-icons.png" />
+<p class="caption"><span class="caption-text">选择一个数据块。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="context-menu">
+<h4>上下文菜单<a class="headerlink" href="#context-menu" title="Permalink to this headline">¶</a></h4>
+<p>在图标或名称上点击 <kbd class="kbd docutils literal notranslate">RMB</kbd> 显示数据块的上下文菜单。根据选择数据块的类型，你将拥有以下全部或部分选项：</p>
+<dl class="simple">
+<dt>选择，取消选择</dt><dd><p>此功能尚未实行。</p>
+</dd>
+<dt>取消链接</dt><dd><p>将数据块与其“自身”（例如网格中的材质）断开链接。</p>
+</dd>
+<dt>转为本地项</dt><dd><p>创建此数据块的“本地”副本。</p>
+</dd>
+<dt>使其独立化</dt><dd><p>此功能尚未实行。</p>
+</dd>
+<dt>删除</dt><dd><p>删除选定的数据块。</p>
+</dd>
+<dt>删除层级</dt><dd><p>删除物体及其所有子物体。</p>
+</dd>
+<dt>重新映射用户</dt><dd><p>将数据块的用户重新映射到另一个（具有相同类型的程序） - 意味着你可以用另一种材质或纹理替换所有用途。</p>
+</dd>
+<dt>添加假用户，清除假用户</dt><dd><p>添加一个“虚拟”（假）用户，以便即使没有用户，所选数据块也总是被保存。假用户可以通过 <em>清除假用户</em> 删除。</p>
+</dd>
+<dt>重命名 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd></dt><dd><p>重命名选定的数据块。</p>
+</dd>
+<dt>选择链接</dt><dd><p>选择链接的数据，请参阅 <a class="reference internal" href="3dview/object/selecting/tools.html#bpy-ops-object-select-linked"><span class="std std-ref">选择关联项</span></a> 获取更多信息。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>部分物体类型根本没有上下文菜单!</p>
+</div>
+</div>
+</div>
+<div class="section" id="object-level-restrictions">
+<h3>对象级别限制<a class="headerlink" href="#object-level-restrictions" title="Permalink to this headline">¶</a></h3>
+<p><em>大纲视图</em> 编辑器右侧的以下三个切换选项可用于物体，修改器和约束。当按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 时，它的所有子物体也会受到影响。</p>
+<dl class="simple">
+<dt>物体显示与隐藏 ( 眼睛图标)</dt><dd><p>在3D视图中切换物体的可见性（显示或隐藏）。<kbd class="kbd docutils literal notranslate">V</kbd> 将为 <em>大纲视图</em> 中选定的任何物体切换此属性。</p>
+</dd>
+<dt>可选性 (鼠标光标图标)</dt><dd><p>如果您在场景中放置了某些东西，并且不希望在处理别的东西时意外选择它，这非常有用。<kbd class="kbd docutils literal notranslate">S</kbd> 将为 <em>大纲视图</em> 中选定的任何物体切换此属性。</p>
+</dd>
+<dt>渲染（相机图标）</dt><dd><p>这将仍然保持物体在场景中可见，但渲染器将忽略它。 <kbd class="kbd docutils literal notranslate">R</kbd>  将在 <em>大纲视图</em> 中选择的任何物体切换此属性。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="header">
+<h2>标题栏<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="view-menu">
+<h3>视图菜单<a class="headerlink" href="#view-menu" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>按字母顺序排序</dt><dd><p>按字母顺序排序输入。</p>
+</dd>
+<dt>显示限制列</dt><dd><p>切换三个 <a class="reference internal" href="#object-level-restrictions">Object-level Restrictions</a> 。</p>
+</dd>
+<dt>显示激活项</dt><dd><p>将树视图置于选定的物体中心  <kbd class="kbd docutils literal notranslate">Period</kbd> 。</p>
+</dd>
+<dt>显示/隐藏一个级别</dt><dd><p>在树中向下展开一层 <kbd class="kbd docutils literal notranslate">NumpadPlus</kbd> 和 <kbd class="kbd docutils literal notranslate">NumpadMinus</kbd> 以折叠一层。</p>
+</dd>
+<dt>显示层级</dt><dd><p>按下 <kbd class="kbd docutils literal notranslate">Home</kbd> 展开或折叠大纲视图内所有物体。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="display-mode">
+<h3>显示模式<a class="headerlink" href="#display-mode" title="Permalink to this headline">¶</a></h3>
+<p>编辑器标题具有一个选择菜单，可让你过滤大纲视图应显示的内容。它有助于缩小物体列表的范围，以便你可以快速轻松地找到所需的东西。</p>
+<dl>
+<dt>所有场景</dt><dd><p>显示 <em>大纲视图</em> 可以显示的 <em>所有</em> 的内容（在所有场景，所有层等）。</p>
+</dd>
+<dt>当前场景</dt><dd><p>显示当前场景中的所有内容。</p>
+</dd>
+<dt>可见层</dt><dd><p>显示当前场景中可见（当前选定）图层上的所有内容。使用 <a class="reference internal" href="3dview/object/properties/relations/layers.html"><span class="doc">layer</span></a>  按钮在3D视图中使图层上的物体可见。</p>
+</dd>
+<dt>选中项</dt><dd><p>列出3D视图中当前选定的对象。请参阅  <a class="reference internal" href="3dview/object/selecting/index.html"><span class="doc">selecting in the 3D View</span></a> 以获取更多信息。</p>
+</dd>
+<dt>活动项</dt><dd><p>仅列出活动（通常是最后选定的）物体。</p>
+</dd>
+<dt>相同类型</dt><dd><p>仅列出当前场景中与3D视图中所选类型相同的那些物体。</p>
+</dd>
+<dt>组</dt><dd><p>列出仅显示  <a class="reference internal" href="3dview/object/properties/relations/groups.html"><span class="doc">Groups</span></a> 与成员。</p>
+</dd>
+<dt>序列</dt><dd><p>列出 <a class="reference internal" href="vse/index.html"><span class="doc">Sequencer</span></a> 使用的 <a class="reference internal" href="../data_system/data_blocks.html"><span class="doc">data-block</span></a> 。</p>
+</dd>
+<dt>Blender 文件</dt><dd><p>列出当前blend文件中的所有数据。</p>
+</dd>
+<dt>数据块</dt><dd><p>列出每个  <a class="reference internal" href="../data_system/data_blocks.html"><span class="doc">data-block</span></a>  以及它们可能具有的任何属性。</p>
+</dd>
+<dt>用户设置</dt><dd><p>列出可以在 <a class="reference internal" href="../preferences/index.html"><span class="doc">User Preferences</span></a>  中找到的选项以及其他一些设置。</p>
+</dd>
+<dt>孤立的数据</dt><dd><p>列出未被用到的 并且/或在重新载入后会丢失的 <a class="reference internal" href="../data_system/data_blocks.html"><span class="doc">数据块</span></a>，包括仅有一个伪用户的数据块。通过单击大纲编辑器右侧的复选框添加/移除伪用户。</p>
+<dl class="simple">
+<dt>Purge All</dt><dd><p>删除文件中所有未被使用的数据块(无法撤销)。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="searching">
+<h3>搜索<a class="headerlink" href="#searching" title="Permalink to this headline">¶</a></h3>
+<p>您可以通过使用 <em>大纲视图</em> 标题栏中的搜索字段搜索数据块的视图，使用 <em>搜索</em> 菜单可以切换以下选项：</p>
+<ul class="simple">
+<li><p>区分大小写的匹配</p></li>
+<li><p>完全匹配</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="example">
+<h2>示例<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id3">
+<img alt="../_images/editors_outliner_example.png" src="../_images/editors_outliner_example.png" />
+<p class="caption"><span class="caption-text">大纲视图具有不同类型的数据。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="properties_editor.html" class="btn btn-neutral float-right" title="属性编辑器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="info/screen_capture.html" class="btn btn-neutral float-left" title="屏幕录制" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

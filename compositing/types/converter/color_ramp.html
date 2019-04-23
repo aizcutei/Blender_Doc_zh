@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>颜色渐变节点 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/compositing/types/converter/color_ramp.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="合并/分离节点" href="combine_separate.html" />
+    <link rel="prev" title="Alpha上叠节点" href="alpha_convert.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">合成</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../properties.html">属性</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#node-types">节点类型</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../input/index.html">输入类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../output/index.html">输出类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color/index.html">颜色类节点</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">转换器类节点</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="alpha_convert.html">Alpha上叠节点</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">颜色渐变节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="combine_separate.html">合并/分离节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="id_mask.html">ID遮罩节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="math.html">运算节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rgb_to_bw.html">RGB -&gt; BW节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="set_alpha.html">设置Alpha节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="switch_view.html">Switch View节点</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../filter/index.html">滤镜节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/index.html">矢量类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matte/index.html">遮片类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distort/index.html">畸变类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../groups.html">节点组</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layout/index.html">布局类节点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">合成</a> &raquo;</li>
+        
+          <li><a href="index.html">转换器类节点</a> &raquo;</li>
+        
+      <li>颜色渐变节点</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/compositing/types/converter/color_ramp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="color-ramp-node">
+<h1>颜色渐变节点<a class="headerlink" href="#color-ramp-node" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id1">
+<img alt="../../../_images/compositing_types_converter_color-ramp_node.png" src="../../../_images/compositing_types_converter_color-ramp_node.png" />
+<p class="caption"><span class="caption-text">颜色渐变节点。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>颜色渐变节点使用渐变的方式进行颜色值的匹配。</p>
+<div class="section" id="inputs">
+<h2>输入<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>系数</dt><dd><p>系数输入连接端口用于颜色渐变的索引（即需要此节点处理的输入素材图片）。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="properties">
+<h2>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>颜色渐变</dt><dd><p>渐变条控制项功能参见 <a class="reference internal" href="../../../interface/controls/templates/color_ramp.html#ui-color-ramp-widget"><span class="std std-ref">颜色渐变部件</span></a>。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="outputs">
+<h2>输出<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>图像</dt><dd><p>标准化图像输出。</p>
+</dd>
+<dt>Alpha通道</dt><dd><p>标准化遮罩输出。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="examples">
+<h2>范例<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creating-an-alpha-mask">
+<h3>Alpha遮罩<a class="headerlink" href="#creating-an-alpha-mask" title="Permalink to this headline">¶</a></h3>
+<p>一个很重要却经常被忽视的用途是利用颜色渐变节点的特点来创建Alpha遮罩，将遮罩放在图片上，就像个遮片，可以允许背景中显示的部分透过遮罩显示。下面是应用颜色渐变节点的范例：</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/compositing_types_converter_color-ramp_create-alpha-mask.png"><img alt="../../../_images/compositing_types_converter_color-ramp_create-alpha-mask.png" src="../../../_images/compositing_types_converter_color-ramp_create-alpha-mask.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">使用颜色渐变节点来创建alpha遮罩。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>在上面的节点图中，旋转旋涡的灰度图，本身不带有alpha通道，将此图片连接到颜色渐变节点的 <em>系数</em> 输入端口上。（专业上来说，首先应该把图像颜色值通过RGB -&gt; BW 节点进行转换，恰好我们这个例子使用的就是BW格式图像，所以这步省略了。备注：BW是包含各种像素信息的一种黑白图形文件格式)。</p>
+<p>现在讲渐变节点的颜色条左侧设置为清晰的透明色，右侧是红色。在预览器节点可查看效果，颜色渐变节点输出的遮罩透明部分显示为黑色。黑色是零值，对应颜色条左侧的位置，刚才将其设置为透明了，颜色渐变图像是红色的部分是不透明的，图像为白色（1.0）。</p>
+<p>我们可以看出图像遮罩输出实际上是覆盖在另一张图像上面使其遮挡不显示的部分，使需要的部分显示出来。</p>
+</div>
+<div class="section" id="colorizing-an-image">
+<h3>彩色化图像<a class="headerlink" href="#colorizing-an-image" title="Permalink to this headline">¶</a></h3>
+<p>颜色渐变节点真正强大的地方是可以添加多种颜色到颜色条上。下面这个范例是将单调的黑白色图像转化为彩色动感的旋涡！</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../_images/compositing_types_converter_color-ramp_colorizing-image.png"><img alt="../../../_images/compositing_types_converter_color-ramp_colorizing-image.png" src="../../../_images/compositing_types_converter_color-ramp_colorizing-image.png" style="width: 600px;" /></a>
+</div>
+<p>这个范例中，颜色条上有三种输入色，蓝色，黄色和红色，是完全不透明色（Alpha值为1）。当图像是黑色，颜色渐变用当前选择的蓝色代替。当灰度部分，颜色渐变节点用可见光谱中相应的颜色来体现（浅蓝色，黄色到淡红色）。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="combine_separate.html" class="btn btn-neutral float-right" title="合并/分离节点" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="alpha_convert.html" class="btn btn-neutral float-left" title="Alpha上叠节点" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

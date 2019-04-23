@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>隐藏和遮罩 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/sculpt_paint/painting/weight_paint/hide_mask.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="雕刻" href="../../sculpting/index.html" />
+    <link rel="prev" title="选项" href="options.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">绘制与雕刻</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../brush.html">笔刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texture_tex_mask.html">纹理和纹理遮罩</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stroke_curve.html">笔触和曲线</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#modes">模式</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">绘制</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#paint-modes">绘制模式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../sculpting/index.html">雕刻</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">绘制与雕刻</a> &raquo;</li>
+        
+          <li><a href="../index.html">绘制</a> &raquo;</li>
+        
+          <li><a href="index.html">权重绘制</a> &raquo;</li>
+        
+      <li>隐藏和遮罩</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/sculpt_paint/painting/weight_paint/hide_mask.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hiding-masking">
+<h1>隐藏和遮罩<a class="headerlink" href="#hiding-masking" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="selection-masking">
+<h2>选择遮罩<a class="headerlink" href="#selection-masking" title="Permalink to this headline">¶</a></h2>
+<p>如果网格复杂，在权重绘制模式中的所有顶点上绘制有时并不容易。假设你只想绘制网格的一个小区域，并保持其余部分不变。这时候最好是使用 <em>选择遮罩</em> 。启用此模式后，笔刷将只在选定的顶点或面上绘制。该选项可从3D视图的标题栏中查看（请参阅由黄色框架包围的图标）：</p>
+<div class="figure align-center" id="id1">
+<img alt="../../../_images/sculpt-paint_painting_weight-paint_hide-mask_select.png" src="../../../_images/sculpt-paint_painting_weight-paint_hide-mask_select.png" />
+<p class="caption"><span class="caption-text">你可以选择 <em>面选择遮罩</em> （左图标）和 <em>顶点选择遮罩</em> （右图标）。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p><em>选择</em> 模式比默认 <em>权重绘制模式</em> 有一些优点：</p>
+<ul class="simple">
+<li><p>即使修改器是激活状态，绘制的对象仍是原始网格。</p></li>
+<li><p>你可以选择面限制绘制到选择面的顶点。</p></li>
+<li><p>选择工具包括：</p></li>
+</ul>
+<div class="section" id="details-about-selecting">
+<h3>关于选择的细节<a class="headerlink" href="#details-about-selecting" title="Permalink to this headline">¶</a></h3>
+<p>支持以下标准选择操作：</p>
+<ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">RMB</kbd> - 选择单面。使用 <kbd class="kbd docutils literal notranslate">Shift-RMB</kbd> 选择多个面。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">A</kbd> - 选择或取消选择所有的面。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">B</kbd> - 框选。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">C</kbd> - 刷选。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">L</kbd> - 拾取关联项(光标方）。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl-L</kbd> - 选择关联项。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl-I</kbd> - 反转选择 <em>反转</em> 。</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>选择形变组</p>
+<p>当你正在做变形骨骼（带有骨架）的权重绘制时，可以通过选择相应的骨骼来选择形变组。但是，选择遮罩处于活动状态时，此顶点组选择模式将被禁用！</p>
+</div>
+</div>
+<div class="section" id="vertex-selection-masking">
+<h3>顶点选择遮罩<a class="headerlink" href="#vertex-selection-masking" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id2">
+<img alt="../../../_images/sculpt-paint_painting_weight-paint_hide-mask_vertex-select.png" src="../../../_images/sculpt-paint_painting_weight-paint_hide-mask_vertex-select.png" />
+<p class="caption"><span class="caption-text">顶点选择遮罩。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>在此模式下，你可以选择一个或多个顶点，然后仅在选择的顶点上进行绘制。所有未选择的顶点都受到保护而免受无意的更改。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>这个选项也可以用 <kbd class="kbd docutils literal notranslate">V</kbd> 切换。</p>
+</div>
+</div>
+<div class="section" id="face-selection-masking">
+<h3>面选择遮罩<a class="headerlink" href="#face-selection-masking" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id3">
+<img alt="../../../_images/sculpt-paint_painting_weight-paint_hide-mask_face-select.png" src="../../../_images/sculpt-paint_painting_weight-paint_hide-mask_face-select.png" />
+<p class="caption"><span class="caption-text">面选择遮罩。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p><em>面选择遮罩</em> 允许你选择面部并将权重绘制工具限制在这些面部，这与顶点选择遮罩非常相似。</p>
+</div>
+<div class="section" id="hide-unhide-faces">
+<h3>隐藏/显示面<a class="headerlink" href="#hide-unhide-faces" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id4">
+<img alt="../../../_images/sculpt-paint_painting_weight-paint_hide-mask_face-select-hidden.png" src="../../../_images/sculpt-paint_painting_weight-paint_hide-mask_face-select-hidden.png" />
+<p class="caption"><span class="caption-text">隐藏面。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>You also can hide selected faces as in Edit Mode with the keyboard Shortcut <kbd class="kbd docutils literal notranslate">H</kbd>,
+then paint on the remaining visible faces and finally unhide the hidden faces again by using
+<kbd class="kbd docutils literal notranslate">Alt-H</kbd>.</p>
+</div>
+<div class="section" id="hide-unhide-vertices">
+<h3>隐藏/显示 顶点<a class="headerlink" href="#hide-unhide-vertices" title="Permalink to this headline">¶</a></h3>
+<p>你不能直接在顶点遮罩选择模式中隐藏选定的面。但是，你可以使用一个技巧：</p>
+<ol class="arabic simple">
+<li><p>首先转到面选择遮罩模式。</p></li>
+<li><p>选择要隐藏的区域，然后隐藏面（如上所述）。</p></li>
+<li><p>切换回顶点选择遮罩模式。</p></li>
+</ol>
+<p>现在属于隐藏面的顶点将保持隐藏状态。</p>
+</div>
+<div class="section" id="the-clipping-border">
+<h3>裁剪区域<a class="headerlink" href="#the-clipping-border" title="Permalink to this headline">¶</a></h3>
+<p>要进一步限制绘制区域，你可以使用 <em>裁剪区域</em> 。按 <kbd class="kbd docutils literal notranslate">Alt-B</kbd> 和 <kbd class="kbd docutils literal notranslate">LMB</kbd> - 拖动一个矩形区域。选定的区域将被“切出”。 3D视图的其余部分被隐藏。</p>
+<div class="figure align-center" id="id5">
+<img alt="../../../_images/sculpt-paint_painting_weight-paint_hide-mask_border-select.png" src="../../../_images/sculpt-paint_painting_weight-paint_hide-mask_border-select.png" />
+<p class="caption"><span class="caption-text">裁剪区域用于为绘制局部选择的部分。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>通过再次按下 <kbd class="kbd docutils literal notranslate">Alt-B</kbd> ，可以使整个网格再次可见。</p>
+<p>所有使用该视图的权重绘制工具都尊从这个裁剪，包括边框选择，权重渐变，当然还有笔刷笔触。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../sculpting/index.html" class="btn btn-neutral float-right" title="雕刻" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="options.html" class="btn btn-neutral float-left" title="选项" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>曲线引导 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/force_fields/types/curve_guide.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="群簇" href="boid.html" />
+    <link rel="prev" title="纹理" href="texture.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity.html">重力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baking.html">烘焙物理模拟</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#physics-types">物理类型</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">力场</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#types">类型</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../collision.html">碰撞</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cloth/index.html">布料模拟</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../fluid/index.html">流体模拟</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../particles/index.html">Particles System</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">物理</a> &raquo;</li>
+        
+          <li><a href="../index.html">力场</a> &raquo;</li>
+        
+      <li>曲线引导</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/physics/force_fields/types/curve_guide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="curve-guide">
+<h1>曲线引导<a class="headerlink" href="#curve-guide" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">物理 ‣ 力场</span></p>
+</dd>
+<dt class="field-even">类型</dt>
+<dd class="field-even"><p>曲线引导</p>
+</dd>
+</dl>
+</div>
+<p>所述 <em>曲线引导</em> 用于迫使粒子跟随由定义的某个路径 <a class="reference internal" href="../../../modeling/curves/index.html"><span class="doc">Curve Object</span></a>.。典型的情况是移动静脉内的红细胞，或使动物中的颗粒流动。您还可以使用 <em>曲线引导</em> 来塑造某些发丝。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>您还可以使用 <a class="reference internal" href="../../particles/mode.html"><span class="doc">粒子编辑模式</span></a> 来定义路径。</p>
+</div>
+<p>由于您可以将曲线动画化为Softbody或任何其他通常的方式，您可以构建非常复杂的动画，同时保持很好的控制并将模拟时间保持在最低限度。</p>
+<p><em>曲线引导</em> 选项对粒子不起作用。相反，您必须将Angular Velocity （粒子系统选项卡）设置为 <em>Spin</em> 并保持旋转不变（即不要打开 <em>Dynamic</em> ）。</p>
+<p><em>曲线引导</em> 影响同一层上的所有粒子，独立于其与曲线的距离。如果你有一个层次上的几个指南，他们的领域会相互叠加（你在物理课程中学到的方式）。但是您可以通过更改最小距离来限制其影响半径（见下文）。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>曲线引导不影响 <a class="reference internal" href="../../soft_body/index.html"><span class="doc">Softbodies</span></a>.</p>
+</div>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id1">
+<img alt="../../../_images/physics_force-fields_types_curve-guide_panel.png" src="../../../_images/physics_force-fields_types_curve-guide_panel.png" />
+<p class="caption"><span class="caption-text">用于曲线引导力场的UI。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>最小距离</dt><dd><p>The distance from the curve, up to where the force field is effective with full strength.
+If you have a falloff of 0, this parameter will have no effect,
+because the field is effective with full strength up to <em>Max Distance</em> (or the infinity).
+<em>Min Distance</em> is shown with a circle at the endpoints of the curve in the 3D View.</p>
+</dd>
+<dt>自由</dt><dd><p>颗粒寿命的分数，不用于曲线。</p>
+</dd>
+<dt>衰减力度</dt><dd><p>此设置控制最小距离和最大距离之间的向导强度。1 的退出意味着线性进展。</p>
+</dd>
+</dl>
+<div class="section" id="path">
+<h3>路径<a class="headerlink" href="#path" title="Permalink to this headline">¶</a></h3>
+<p>颗粒在其寿命期间遵循 <em>曲线引导</em> ，速度取决于其寿命和路径的长度。</p>
+<dl class="simple">
+<dt>增加</dt><dd><p>如果使用Additive，颗粒的速度也会根据下降来评估。</p>
+</dd>
+<dt>权重</dt><dd><p>使用曲线权重来影响沿曲线的粒子影响。</p>
+</dd>
+<dt>使用最大值</dt><dd><p>最大影响半径。由曲线对象周围的附加圆圈显示。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="clumping">
+<h3>簇集<a class="headerlink" href="#clumping" title="Permalink to this headline">¶</a></h3>
+<p>其他设置控制沿曲线的力场的形式。</p>
+<dl class="simple">
+<dt>簇集数量</dt><dd><p>颗粒在曲线（1）的末端聚集在一起，或者它们分开（-1）。</p>
+</dd>
+<dt>形状</dt><dd><p>定义颗粒聚集在一起的形式。+0.99：颗粒在曲线末端相遇。0：沿曲线的线性进展。-0.99：曲线开始时颗粒相交。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="kink">
+<h3>扭结<a class="headerlink" href="#kink" title="Permalink to this headline">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is broken in the current version, see T46776.</p>
+</div>
+<p>改变粒子可以采取的形状。</p>
+<dl class="simple">
+<dt>类型</dt><dd><dl class="simple">
+<dt>卷曲</dt><dd><p>影响的半径取决于曲线与发射器的距离。</p>
+</dd>
+<dt>径向</dt><dd><p>三维立场。</p>
+</dd>
+<dt>波浪</dt><dd><p>一个二维的驻波。</p>
+</dd>
+<dt>编织</dt><dd><p>编织。</p>
+</dd>
+<dt>滚动</dt><dd><p>一维立场。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>描述生成的形状并不容易，因此请看下面的例子。</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/physics_force-fields_types_curve-guide_kink.jpg"><img alt="../../../_images/physics_force-fields_types_curve-guide_kink.jpg" src="../../../_images/physics_force-fields_types_curve-guide_kink.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">曲线指南的扭结选项。从左到右：径向，波浪，辫子，卷。 <a class="reference external" href="https://vimeo.com/1866538">动画</a>.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>轴向</dt><dd><p>Which axis to use for the offset.</p>
+</dd>
+<dt>频率</dt><dd><p>偏移的频率。</p>
+</dd>
+<dt>振幅</dt><dd><p>偏移的幅度。</p>
+</dd>
+<dt>形状</dt><dd><p>将偏移调整到开始/结束。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>范例<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://player.vimeo.com/video/182780872" style="border: 0; height: 345px; width: 560px">
+</iframe><div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../_images/physics_force-fields_types_curve-guide_example.png"><img alt="../../../_images/physics_force-fields_types_curve-guide_example.png" src="../../../_images/physics_force-fields_types_curve-guide_example.png" style="width: 560px;" /></a>
+<p class="caption"><span class="caption-text">曲线引导力场。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="boid.html" class="btn btn-neutral float-right" title="群簇" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="texture.html" class="btn btn-neutral float-left" title="纹理" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

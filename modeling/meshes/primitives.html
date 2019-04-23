@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>基本体 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/primitives.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="选择" href="selecting/index.html" />
+    <link rel="prev" title="结构" href="structure.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html">结构</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">基本体</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#common-options">通用选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plane">平面</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cube">立方体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#circle">圆环</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#uv-sphere">经纬球</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#icosphere">棱角球</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cylinder">柱体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cone">锥体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#torus">环体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grid">栅格</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#monkey">猴头</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mesh_display.html">网格显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mesh_analysis.html">网格分析</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="index.html">网格</a> &raquo;</li>
+        
+      <li>基本体</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modeling/meshes/primitives.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="primitives">
+<span id="bpy-ops-mesh-primitive-add"></span><h1>基本体<a class="headerlink" href="#primitives" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>物体模式和编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 创建 ‣ 添加网格/基本体</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">添加 ‣ 网格</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Shift-A</kbd></p>
+</dd>
+</dl>
+</div>
+<p>网格是3D场景中使用的常见物体类型。Blender配有一些 “基本” 网格形状，用户可以之为起点开始建模。编辑模式下，可以在3D游标位置添加基本体。</p>
+<div class="figure align-center" id="id1">
+<img alt="../../_images/modeling_meshes_primitives_all.png" src="../../_images/modeling_meshes_primitives_all.png" />
+<p class="caption"><span class="caption-text">Blender标准基本体。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>平面基本体的注意事项</p>
+<p>可以通过将一个或多个顶点移出其平面（适用于 <em>面</em>，<em>圆</em> 和 <em>栅格</em>）来形成三维网格。实际上，圆甚至常常被用作创建复杂的网格的起点。</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>为了加速建模，最好的方法是想象哪个类型的基本体更适合你的模型。如果制作长方体，最好的方法是从基础立方体开始，等等。</p>
+</div>
+<div class="section" id="common-options">
+<h2>通用选项<a class="headerlink" href="#common-options" title="Permalink to this headline">¶</a></h2>
+<p>这些通用选项位于 <em>工具栏</em> 中的操作面板，当创建物体时显示。超过一个基本体的用到的选项有：</p>
+<dl class="simple">
+<dt>生成UV</dt><dd><p>生成新几何体的默认UV展开。生成的UV位于第一个UV层(需要时添加)。</p>
+</dd>
+<dt>半径/尺寸，对齐到平面，位移，旋转</dt><dd><p>请参见 <a class="reference internal" href="../../editors/3dview/object/types.html#object-common-options"><span class="std std-ref">通用物体选项</span></a>。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="plane">
+<h2>平面<a class="headerlink" href="#plane" title="Permalink to this headline">¶</a></h2>
+<p>标准平面是单个四边面，由四个顶点，四个边和一个面组成。就像躺在桌子上的一张纸；它不是三维物体，因为它是平的，没有厚度。可以用平面创建的对象包括地板，桌面或镜子。</p>
+</div>
+<div class="section" id="cube">
+<h2>立方体<a class="headerlink" href="#cube" title="Permalink to this headline">¶</a></h2>
+<p>标准立方体包含八个顶点，十二条边和六个面，并且是三维对象。可以通过立方体创建的对象包括骰子，盒子或板条箱。</p>
+</div>
+<div class="section" id="circle">
+<h2>圆环<a class="headerlink" href="#circle" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>顶点</dt><dd><p>定义圆或多边形的顶点数。</p>
+</dd>
+<dt>填充类型</dt><dd><p>设置圆环的填充方式。</p>
+<dl class="simple">
+<dt>三角扇片</dt><dd><p>填充共用顶点的三角面。</p>
+</dd>
+<dt>多边形(N-gon)</dt><dd><p>使用 <a class="reference internal" href="../../glossary/index.html#term-n-gon"><span class="xref std std-term">多边面(N-gon)</span></a> 填充。</p>
+</dd>
+<dt>无</dt><dd><p>无填充。仅创建顶点构成的圆环。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="uv-sphere">
+<h2>经纬球<a class="headerlink" href="#uv-sphere" title="Permalink to this headline">¶</a></h2>
+<p>标准的经纬球体由四边面、顶部和底部的三角扇面组成。它可以用于纹理。</p>
+<dl>
+<dt>段数</dt><dd><p>垂直段数。像地球的经线一样，连接两极。</p>
+</dd>
+<dt>环</dt><dd><p>水平段数。这些就像地球的纬线。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>环指的是面循环，而不是循环边，循环边会少一圈。</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="icosphere">
+<h2>棱角球<a class="headerlink" href="#icosphere" title="Permalink to this headline">¶</a></h2>
+<p>棱角球是由三角面组成的多边形球体。棱角球通常用于实现比经纬球更多的各向同性顶点布局。</p>
+<dl class="simple">
+<dt>细分</dt><dd><p>细分级数。级数为1时，棱角球是一个二十面体，20个等边三角面组成的实体。细分级数每增加1级，三角面被细分为4个三角面1次。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>即使细分级数不高，细分后的棱角球的顶点数也可能变得很高(10次细分创建5,242,880个三角形面)。添加如此密集的网格可能导致程序崩溃。</p>
+</div>
+</div>
+<div class="section" id="cylinder">
+<h2>柱体<a class="headerlink" href="#cylinder" title="Permalink to this headline">¶</a></h2>
+<p>可以由柱体创建的物体包括手柄和杆。</p>
+<dl class="simple">
+<dt>顶点</dt><dd><p>用于定义柱体或棱柱体的面与面之间的纵向边数。</p>
+</dd>
+<dt>深度</dt><dd><p>设置柱体的初始高度。</p>
+</dd>
+<dt>封盖类型</dt><dd><p>与上文的圆环类似。当设置为无时，创建的物体将是一个管子。可以用管子创建的物体包括管道或饮料杯（柱体和管之间的基本区别在于前者具有封闭端）。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="cone">
+<h2>锥体<a class="headerlink" href="#cone" title="Permalink to this headline">¶</a></h2>
+<p>可以由锥体创建的物体包括鞋钉或尖头帽。</p>
+<dl class="simple">
+<dt>顶点</dt><dd><p>圆环或尖端之间的纵向边数，用于定义锥体或金字塔。</p>
+</dd>
+<dt>半径1</dt><dd><p>设置锥体圆形底面的半径。</p>
+</dd>
+<dt>半径2</dt><dd><p>设定圆锥尖端的半径，用于创建圆台锥体。值为0用于生成标准锥形。</p>
+</dd>
+<dt>深度</dt><dd><p>设置圆锥的初始高度。</p>
+</dd>
+<dt>底盖类型</dt><dd><p>与上文的圆环类似。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="torus">
+<h2>环体<a class="headerlink" href="#torus" title="Permalink to this headline">¶</a></h2>
+<p>圆绕轴线旋转而形成的环形基本体。可以通过两种方法定义整体尺寸。</p>
+<dl class="simple">
+<dt>操作项预设</dt><dd><p>环体预设，用于重用。这些预设作为脚本存储在预设目录中。</p>
+</dd>
+<dt>主环段数</dt><dd><p>环体主环的段数。如果将圆环视作围绕轴的 “旋转” 操作结果，这表示旋转的步数。</p>
+</dd>
+<dt>小环段数</dt><dd><p>环体小环的段数。这是每个圆形段的顶点数。</p>
+</dd>
+</dl>
+<div class="section" id="torus-dimensions">
+<h3>环体尺寸<a class="headerlink" href="#torus-dimensions" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>添加模式</dt><dd><p>改变定义环体的方式。</p>
+<p>主环/小环，外径/内径</p>
+<dl class="simple">
+<dt>主环半径</dt><dd><p>从原点到横截面中心点的半径。</p>
+</dd>
+<dt>小环半径</dt><dd><p>环体的横截面半径。</p>
+</dd>
+<dt>外径</dt><dd><p>如果沿着主轴观察，这半径是从中心到外边缘。</p>
+</dd>
+<dt>内径</dt><dd><p>如果沿着主轴观察，这是中心孔的半径。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="grid">
+<h2>栅格<a class="headerlink" href="#grid" title="Permalink to this headline">¶</a></h2>
+<p>常规的四边面网格，细分过的平面。可以通过网格创建出的示例对象包括地貌和有机表面。</p>
+<dl class="simple">
+<dt>X向细分</dt><dd><p>X轴方向上的段数。</p>
+</dd>
+<dt>Y向细分</dt><dd><p>Y轴方向上的段数。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="monkey">
+<h2>猴头<a class="headerlink" href="#monkey" title="Permalink to this headline">¶</a></h2>
+<p>这是来自老的NaN到社区的礼物，被视为程序员的玩笑或“复活节彩蛋”。一旦你按 <em>猴头</em> 按钮，就会创建一个猴子的头。猴子的名字是“Suzanne”，是Blender的吉祥物。 Suzanne作为标准测试网格非常有用，就像 <a class="reference external" href="https://en.wikipedia.org/wiki/Utah_teapot">犹他茶壶</a> 或者 <a class="reference external" href="https://en.wikipedia.org/wiki/Stanford_Bunny">斯坦福兔子</a>。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>插件</p>
+<p>除了基本的几何基本体之外，Blender还提供了许多脚本生成的网格作为预安装的插件。这些插件可以在 <a class="reference internal" href="../../preferences/addons.html"><span class="doc">用户设置</span></a> 中启用。(使用 <em>添加网格</em> 过滤）。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="selecting/index.html" class="btn btn-neutral float-right" title="选择" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="structure.html" class="btn btn-neutral float-left" title="结构" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

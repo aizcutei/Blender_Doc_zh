@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Web3D &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/io_web3d.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="管线" href="../pipeline/index.html" />
+    <link rel="prev" title="UV 布局" href="io_uv_layout.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#import-export">导入 / 导出</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="io_3ds.html">Autodesk 3DS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_bvh.html">Biovision层次结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_dae.html">Collada</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_fbx.html">Autodesk FBX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_gltf2.html">glTF 2.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_obj.html">OBJ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_ply.html">PLY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_stl.html">STL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_svg.html">SVG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_uv_layout.html">UV 布局</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Web3D</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#usage">用法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties">属性</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">插件</a> &raquo;</li>
+        
+      <li>Web3D</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/addons/io_web3d.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="web3d">
+<h1>Web3D<a class="headerlink" href="#web3d" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">名称</dt>
+<dd class="field-odd"><p>Web3D X3D/VRML2 格式</p>
+</dd>
+<dt class="field-even">位置</dt>
+<dd class="field-even"><p><span class="menuselection">File ‣ Import/Export ‣ X3D Extensible 3D (.x3d/.wrl)</span></p>
+</dd>
+<dt class="field-odd">版本</dt>
+<dd class="field-odd"><p>1.2.0</p>
+</dd>
+<dt class="field-even">Blender</dt>
+<dd class="field-even"><p>2.76</p>
+</dd>
+<dt class="field-odd">类别</dt>
+<dd class="field-odd"><p>导入 - 导出</p>
+</dd>
+<dt class="field-even">作者</dt>
+<dd class="field-even"><p>Campbell Barton, Bart, Bastien Montagne, Seva Alekseyev</p>
+</dd>
+</dl>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>TODO.</p>
+</div>
+<div class="section" id="properties">
+<h2>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="import">
+<h3>导入<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>向前 / 上轴</dt><dd><p>由于许多应用程序使用不同的轴向表示“向上”，该设置用于向前与向上的轴向转换 - 通过将这些轴映射到不同的轴，你可以在应用程序默认的向上和向前轴向之间转换。</p>
+<p>Blender使用Y向前轴，Z向上轴（因为沿+Y方向看是前视图）。例如，应用程序使用Y作为向上轴，在这种情况下，需要Z向前，Y向上。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="export">
+<h3>导出<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>向前 / 上轴</dt><dd><p>由于许多应用程序使用不同的轴向表示“向上”，该设置用于向前与向上的轴向转换 - 通过将这些轴映射到不同的轴，你可以在应用程序默认的向上和向前轴向之间转换。</p>
+<p>Blender使用Y轴向前，Z轴向上（因为沿+Y方向看是前视图）。例如，应用程序使用Y轴向上很常见，在这种情况下，需要Z向前，Y向上。</p>
+</dd>
+<dt>仅导出选中的物体</dt><dd><p>TODO.</p>
+</dd>
+<dt>应用修改器</dt><dd><p>TODO.</p>
+</dd>
+<dt>三角形</dt><dd><p>TODO.</p>
+</dd>
+<dt>法线</dt><dd><p>TODO.</p>
+</dd>
+<dt>压缩工程</dt><dd><p>TODO.</p>
+</dd>
+<dt>层级</dt><dd><p>TODO.</p>
+</dd>
+<dt>命名修饰</dt><dd><p>TODO.</p>
+</dd>
+<dt>H3D 扩展名</dt><dd><p>TODO.</p>
+</dd>
+<dt>缩放/比例</dt><dd><p>TODO.</p>
+</dd>
+<dt>路径模式</dt><dd><p>当引用导出文件中的路径时，你可能需要对所使用的方法进行一些控制，因为绝对路径可能只适用于你自己的系统。另一方面，相对路径更具可移植性，但这意味着在本地文件系统上移动时必须保持文件分组。在某些情况下，路径无关紧要，因为目标应用程序无论如何都会搜索一组预定义路径，因此你也可以选择去除路径。</p>
+<dl class="field-list simple">
+<dt class="field-odd">自动</dt>
+<dd class="field-odd"><p>在导出位置的子目录中使用文件的相对路径，对于该目录之外的任何目录都是绝对路径的。</p>
+</dd>
+<dt class="field-even">绝对</dt>
+<dd class="field-even"><p>使用完整路径。</p>
+</dd>
+<dt class="field-odd">相对</dt>
+<dd class="field-odd"><p>在每种情况下使用相对路径（除了在Windows上的不同驱动器上）。</p>
+</dd>
+<dt class="field-even">匹配</dt>
+<dd class="field-even"><p>根据Blender中使用的路径使用相对/绝对路径。</p>
+</dd>
+<dt class="field-odd">片段路径</dt>
+<dd class="field-odd"><p>只写入文件名并忽略路径组件。</p>
+</dd>
+<dt class="field-even">复制</dt>
+<dd class="field-even"><p>在导出时复制文件并使用相对路径引用它。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../pipeline/index.html" class="btn btn-neutral float-right" title="管线" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="io_uv_layout.html" class="btn btn-neutral float-left" title="UV 布局" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

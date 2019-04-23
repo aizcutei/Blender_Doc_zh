@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>数据块菜单 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/controls/templates/data_block.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="列表视图 &amp; 预设" href="list_presets.html" />
+    <link rel="prev" title="吸管工具" href="../buttons/eye_dropper.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">用户界面</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../splash.html">启动画面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#window-system">窗口系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#keymap">键位映射</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#interface-controls">界面控件</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#buttons-and-controls">按钮与控件</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#extended-controls">扩展控件</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">数据块菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="list_presets.html">列表视图 &amp; 预设</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_picker.html">拾色器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_ramp.html">颜色渐变部件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curve.html">曲线部件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="operator_search.html">操作搜索</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../common_shortcuts.html">通用快捷键</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#tools">工具</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">用户界面</a> &raquo;</li>
+        
+      <li>数据块菜单</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/interface/controls/templates/data_block.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-block-menu">
+<span id="ui-data-block"></span><h1>数据块菜单<a class="headerlink" href="#data-block-menu" title="Permalink to this headline">¶</a></h1>
+<p>一组用于关联 <a class="reference internal" href="../../../data_system/data_blocks.html"><span class="doc">数据块</span></a> 的菜单按钮。编辑被关联的数据块之后，会同步更新到所有 <a class="reference internal" href="../../../glossary/index.html#term-data-user"><span class="xref std std-term">数据用户</span></a> 。</p>
+<div class="figure align-right" id="id1">
+<img alt="../../../_images/interface_controls_templates_data-block_data-block.png" src="../../../_images/interface_controls_templates_data-block_data-block.png" />
+<p class="caption"><span class="caption-text">带有搜索框的数据块菜单。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>类型</dt><dd><p>显示图标以指示数据块类型，单击打开后弹出下拉菜单。数据块可以使用拖拽操作，如将材质拖拽到3D视图某一物体上方或者直接拖拽到 <a class="reference internal" href="#ui-data-id"><span class="std std-ref">数据ID</span></a> 框。</p>
+<dl class="simple">
+<dt>列表</dt><dd><p>当前文件或关联进来的可用数据块列表。菜单选项左侧会显示预览图标，下侧的搜索框用于根据名称搜索选项。</p>
+</dd>
+</dl>
+</dd>
+<dt>名称</dt><dd><p>显示关联的数据块的内部名称，同时可作为常规文本框进行编辑。如果该名称已存在，Blender会自动添加后缀如 &quot;.001&quot; 。</p>
+</dd>
+<dt>用户数</dt><dd><p>显示该数据的 <a class="reference internal" href="../../../glossary/index.html#term-data-user"><span class="xref std std-term">数据用户</span></a> 数量。单击使之独立成为单用户副本，仅与当前活动物体/物体数据关联。</p>
+</dd>
+<dt>伪用户 <code class="docutils literal notranslate"><span class="pre">F</span></code></dt><dd><p>即使该数据块没有 <a class="reference internal" href="../../../glossary/index.html#term-real-user"><span class="xref std std-term">真实用户</span></a> ，也会随blend文件一起保存。</p>
+</dd>
+<dt>新建/添加 <code class="docutils literal notranslate"><span class="pre">+</span></code></dt><dd><p>新建数据块，或者复制当前数据块并应用。</p>
+</dd>
+<dt>打开文件</dt><dd><p>打开 <a class="reference internal" href="../../../editors/file_browser/introduction.html"><span class="doc">文件浏览器</span></a> 。</p>
+</dd>
+<dt>解包文件</dt><dd><p>将当前文件打包的文件 <a class="reference internal" href="../../../data_system/introduction.html#pack-unpack-data"><span class="std std-ref">解包</span></a> 为外部文件。</p>
+</dd>
+<dt>取消关联数据块 <code class="docutils literal notranslate"><span class="pre">X</span></code></dt><dd><p>清除关联， <kbd class="kbd docutils literal notranslate">Shift-LMB</kbd> 重置用户数为0，将数据从文件中彻底删除。</p>
+</dd>
+</dl>
+<p>有时需用到一 <a class="reference internal" href="list_presets.html#ui-list-view"><span class="std std-ref">列</span></a> 数据块 (如对一个物体使用多个材质)。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../../../data_system/data_blocks.html"><span class="doc">数据系统章节</span></a> 有关于数据块更深入的介绍。</p>
+</div>
+<div class="section" id="preview">
+<h2>预览<a class="headerlink" href="#preview" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id2">
+<img alt="../../../_images/interface_controls_templates_data-block_preview.png" src="../../../_images/interface_controls_templates_data-block_preview.png" />
+<p class="caption"><span class="caption-text">带有预览的数据块菜单。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>位于工具栏，预览图更大的数据块菜单。(如绘制用笔刷选择菜单)</p>
+</div>
+<div class="section" id="data-id">
+<span id="ui-data-id"></span><h2>数据ID<a class="headerlink" href="#data-id" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id3">
+<img alt="../../../_images/interface_controls_templates_data-block_data-id.png" src="../../../_images/interface_controls_templates_data-block_data-id.png" />
+<p class="caption"><span class="caption-text">数据ID框。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>数据ID是左侧带有图标的文本框，单击显示灰色下拉菜单。数据ID是物体独一无二的名称，用于引用数据块，也因此Blender不允许两个同一类型的物体有相同ID(相同名称)。如果数据ID已被使用，Blender会自动追加名称后缀以避免冲突(比如 &quot;Cube.001&quot;)。</p>
+<p>显示数据ID的菜单包含以下元素:</p>
+<dl class="simple">
+<dt>类型</dt><dd><p>左侧的图标指示接受的数据了类型。</p>
+</dd>
+<dt>名称</dt><dd><p>文本框带匹配搜索功能。使用 <kbd class="kbd docutils literal notranslate">Tab</kbd> 自动补全为匹配的名称。如果存在多个匹配项，需继续输入。如果用户输入非法名称，则该值不会变化。</p>
+</dd>
+<dt>列表</dt><dd><p>用于直接选择数据块。</p>
+</dd>
+<dt>吸管</dt><dd><p>一些数据ID框右侧带有 <a class="reference internal" href="../buttons/eye_dropper.html"><span class="doc">吸管工具</span></a> 。</p>
+</dd>
+<dt>删除 <code class="docutils literal notranslate"><span class="pre">X</span></code></dt><dd><p>单击右侧的 <code class="docutils literal notranslate"><span class="pre">X</span></code> 按钮删除引用对象。</p>
+</dd>
+</dl>
+<div class="section" id="sub-ids">
+<h3>子ID<a class="headerlink" href="#sub-ids" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<img alt="../../../_images/interface_controls_templates_data-block_subids.png" src="../../../_images/interface_controls_templates_data-block_subids.png" />
+</div>
+<p>下拉菜单会列出相关类型的ID，用以根据物体类型选择属性或子物体。</p>
+<dl>
+<dt>顶点组</dt><dd><p>如果 <em>名称</em> 文本框内物体为网格或晶格，会显示一个文本框用于选择顶点组。</p>
+</dd>
+<dt>骨骼</dt><dd><p>如果 <em>名称</em> 文本框内物体为骨架，会显示一个文本框用于输入 <em>骨骼</em> 名称，指定单个骨骼。</p>
+<dl>
+<dt>头/尾</dt><dd><p>选定骨骼后，会显示数值输入框，用于选择指向头端或尾端。滑块用于指定该点沿骨骼轴向插值位置。0表示指向骨骼头/根部，1表示指向尾/尖端。</p>
+<dl class="simple">
+<dt>使用软骨骼形状</dt><dd><p>如该骨骼为 <a class="reference internal" href="../../../rigging/armatures/bones/properties/bendy_bones.html"><span class="doc">软骨骼</span></a> ，单击此按钮，使该点使用头尾之间B样条曲线曲率。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="list_presets.html" class="btn btn-neutral float-right" title="列表视图 &amp; 预设" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../buttons/eye_dropper.html" class="btn btn-neutral float-left" title="吸管工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

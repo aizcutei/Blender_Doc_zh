@@ -1,0 +1,554 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Geometry &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/freestyle/parameter_editor/line_style/modifiers/geometry.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="Python脚本模式" href="../../../python.html" />
+    <link rel="prev" title="属性" href="properties.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../lighting/index.html">灯光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../eevee/index.html">Eevee 渲染器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cycles/index.html">Cycles渲染引擎</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../output/index.html">渲染输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">Freestyle</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../core.html">核心选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../view_map.html">View maps</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">Parameter Editor</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../line_set.html">Line Set</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">Line Style &amp; Modifiers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../python.html">Python脚本模式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../line.html">Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../export_svg.html">Freestyle SVG Exporter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../workflows/index.html">工作流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../opengl.html">OpenGL渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../audio/index.html">音频渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Freestyle</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Parameter Editor</a> &raquo;</li>
+        
+          <li><a href="../index.html">Line Style &amp; Modifiers</a> &raquo;</li>
+        
+          <li><a href="index.html">Modifiers</a> &raquo;</li>
+        
+      <li>Geometry</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../_sources/render/freestyle/parameter_editor/line_style/modifiers/geometry.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geometry">
+<h1>Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h1>
+<p>These modifiers have no mix nor influence settings,
+as they always completely apply to the strokes' geometry (like object modifiers do). They take
+the resulting two-dimensional strokes from the Freestyle line set and displace or deform them
+in various ways.</p>
+<p>As with other modifier stacks in Blender, they are applied from top to bottom.</p>
+<div class="section" id="d-offset">
+<span id="bpy-types-linestylegeometrymodifier-2doffset"></span><h2>2D Offset<a class="headerlink" href="#d-offset" title="Permalink to this headline">¶</a></h2>
+<p>The <em>2D Offset</em> modifier adds some two-dimensional offsets to the stroke backbone geometry.
+It has two sets of independent options/effects:</p>
+<div class="figure align-center">
+<img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_2d-offset.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_2d-offset.png" />
+</div>
+<dl class="simple">
+<dt>Start and End</dt><dd><p>These two options add the given amount of offset to the start (or end) point of the stroke, along the (2D)
+normal at those points. The effect is blended over the whole stroke, if you for example,
+set only <em>Start</em> to 50, the start of the stroke is offset 50 pixels along its normal,
+the middle of the stroke, 25 pixels along its own normal, and the end point is not moved.</p>
+</dd>
+<dt>X and Y</dt><dd><p>These two options simply add a constant horizontal and/or vertical offset to the whole stroke.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="d-transform">
+<span id="bpy-types-linestylegeometrymodifier-2dtransform"></span><h2>2D Transform<a class="headerlink" href="#d-transform" title="Permalink to this headline">¶</a></h2>
+<p>The <em>2D Transform</em> modifier applies two-dimensional scaling and/or rotation to
+the stroke backbone geometry. Scale is applied before rotation.</p>
+<p>The center (pivot point) of these 2D transformations can be:</p>
+<div class="figure align-center">
+<img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_2d-transform.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_2d-transform.png" />
+</div>
+<dl>
+<dt>Stroke Center</dt><dd><p>The median point of the stroke.</p>
+</dd>
+<dt>Stroke Start</dt><dd><p>The beginning point of the stroke.</p>
+</dd>
+<dt>Stroke End</dt><dd><p>The end point of the stroke.</p>
+</dd>
+<dt>Stroke Point Parameter</dt><dd><p>The <em>Stroke Point Parameter</em> factor controls where along the stroke the pivot point is
+(start point if set to 0.0; end point if set to 1.0).</p>
+</dd>
+<dt>Absolute 2D Point</dt><dd><p>The <em>Pivot X</em> and <em>Pivot Y</em> allows you to define the position of the pivot point in the final
+render (from the bottom left corner).</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Currently, you have to take into account the <em>real</em> render size,
+i.e. resolution <strong>and</strong> resolution percentage.</p>
+</div>
+</dd>
+<dt>Scale X and Scale Y</dt><dd><p>The scaling factors, in their respective axes.</p>
+</dd>
+<dt>Rotation Angle</dt><dd><p>The rotation angle.</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_2d-transform-example.png"><img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_2d-transform-example.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_2d-transform-example.png" style="width: 430px;" /></a>
+<p class="caption"><span class="caption-text">2D Transform modifier
+<a class="reference external" href="https://wiki.blender.org/wiki/File:Toycar_Three_Contours.zip">File:Toycar_Three_Contours.zip</a>.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="backbone-stretcher">
+<span id="bpy-types-linestylegeometrymodifier-backbonestretcher"></span><h2>Backbone Stretcher<a class="headerlink" href="#backbone-stretcher" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center">
+<img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_backbone-stretcher.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_backbone-stretcher.png" />
+</div>
+<p>The <em>Backbone Stretcher</em> modifier stretches (adds some length to)
+the beginning and end of the stroke.</p>
+<dl class="simple">
+<dt>Backbone Length</dt><dd><p>Length to add to the strokes' ends.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="bezier-curve">
+<span id="bpy-types-linestylegeometrymodifier-beziercurve"></span><h2>Bézier Curve<a class="headerlink" href="#bezier-curve" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center">
+<img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_bezier-curve.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_bezier-curve.png" />
+</div>
+<p>The <em>Bézier Curve</em> modifier replaces the stroke by a Bézier approximation of it.</p>
+<dl class="simple">
+<dt>Error</dt><dd><p>The maximum distance allowed between the new Bézier curve and the original stroke.</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_bezier-curve-example.png"><img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_bezier-curve-example.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_bezier-curve-example.png" style="width: 430px;" /></a>
+<p class="caption"><span class="caption-text">Bézier Curve modifier demo by T.K.
+<a class="reference external" href="https://wiki.blender.org/wiki/File:toycar_bezier.zip">File:toycar_bezier.zip</a>.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="blueprint">
+<span id="bpy-types-linestylegeometrymodifier-blueprint"></span><h2>Blueprint<a class="headerlink" href="#blueprint" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Blueprint</em> modifier produces blueprint-like strokes using either circular,
+elliptical, or square contours. A blueprint here refers to those lines drawn at the beginning
+of free-hand drawing to capture the silhouette of objects with a simple shape such as circles,
+ellipses and squares.</p>
+<div class="figure align-center">
+<img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_blueprint.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_blueprint.png" />
+</div>
+<dl class="simple">
+<dt>Shape</dt><dd><p>Which base shapes to use for this blueprint: <em>Circles</em>, <em>Ellipses</em> or <em>Squares</em>.</p>
+</dd>
+<dt>Rounds</dt><dd><p>How many rounds are generated, as if the pen draws the same stroke several times
+(i.e. how many times the process is repeated).</p>
+</dd>
+<dt>Random Radius and Random Center</dt><dd><p>For the <em>Circles</em> and <em>Ellipses</em> shapes.
+Adds some randomness to each round in the relevant aspect.
+Using more than one round with no randomness would be meaningless, as they would draw over each other exactly.</p>
+</dd>
+<dt>Backbone Length and Random Backbone</dt><dd><p>For the <em>Squares</em> shapes.
+The first adds some extra length to each edge of the generated squares (also affected by the second parameter).
+The second adds some randomness to the squares.</p>
+</dd>
+</dl>
+<p>Note that the <em>Min 2D Length</em> feature from the <em>Strokes</em> settings is quite
+handy here, to avoid the noise generated by small strokes...</p>
+</div>
+<div class="section" id="guiding-lines">
+<span id="bpy-types-linestylegeometrymodifier-guidinglines"></span><h2>Guiding Lines<a class="headerlink" href="#guiding-lines" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Guiding Lines</em> modifier replaces a stroke by a straight line connecting both of
+its ends.</p>
+<div class="figure align-center">
+<img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_guiding-lines.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_guiding-lines.png" />
+</div>
+<dl class="simple">
+<dt>Offset</dt><dd><p>Offset the start and end points along the original stroke, before generating the new straight one.</p>
+</dd>
+</dl>
+<p>This modifier will produce reasonable results when strokes are short enough,
+because shorter strokes are more likely to be well approximated by straight lines. Therefore,
+it is recommended to use this modifier together with one of the splitting options
+(by 2D angle or by 2D length) from the <em>Strokes</em> panel.</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_guiding-lines-example.png"><img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_guiding-lines-example.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_guiding-lines-example.png" style="width: 430px;" /></a>
+<p class="caption"><span class="caption-text">Guiding Lines modifier Demo by T.K.
+<a class="reference external" href="https://wiki.blender.org/wiki/File:Toycar_Guiding_Line.zip">File:Toycar_Guiding_Line.zip</a>.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="perlin-noise-1d">
+<span id="bpy-types-linestylegeometrymodifier-perlinnoise1d"></span><h2>Perlin Noise 1D<a class="headerlink" href="#perlin-noise-1d" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Perlin Noise 1D</em> modifier adds one-dimensional Perlin noise to the stroke.
+The curvilinear abscissa (value between 0 and 1 determined by a point's position
+relative to the first and last point of a stroke) is used as the input to
+the noise function to generate noisy displacements.</p>
+<p>This means that this modifier will give an identical result for two strokes
+with the same length and sampling interval.</p>
+<div class="figure align-center">
+<img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_perlin-noise-1d.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_perlin-noise-1d.png" />
+</div>
+<dl class="simple">
+<dt>Frequency</dt><dd><p>How dense the noise is (kind of a scale factor along the stroke).</p>
+</dd>
+<dt>Amplitude</dt><dd><p>How much the noise distorts the stroke in the <em>Angle</em> direction.</p>
+</dd>
+<dt>Seed</dt><dd><p>The seed of the random generator (the same seed over a stroke will always give the same result).</p>
+</dd>
+<dt>Octaves</dt><dd><p>The &quot;level of detail&quot; of the noise.</p>
+</dd>
+<dt>Angle</dt><dd><p>In which direction the noise is applied (0.0 is fully horizontal).</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="perlin-noise-2d">
+<span id="bpy-types-linestylegeometrymodifier-perlinnoise2d"></span><h2>Perlin Noise 2D<a class="headerlink" href="#perlin-noise-2d" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center">
+<img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_perlin-noise-2d.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_perlin-noise-2d.png" />
+</div>
+<p>The <em>Perlin Noise 2D</em> modifier adds one-dimensional Perlin noise to the stroke. The modifier generates noisy
+displacements using 2D coordinates of stroke vertices as the input of the noise generator.</p>
+<p>Its settings are exactly the same as the <em>Perlin Noise 1D</em> modifier.</p>
+</div>
+<div class="section" id="polygonization">
+<span id="bpy-types-linestylegeometrymodifier-polygonalization"></span><h2>Polygonization<a class="headerlink" href="#polygonization" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center">
+<img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_polygonization.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_polygonization.png" />
+</div>
+<p>The <em>Polygonization</em> modifier simplifies strokes as much as possible
+(in other words, it transforms smooth strokes into jagged polylines).</p>
+<dl class="simple">
+<dt>Error</dt><dd><p>The maximum distance allowed between the new simplified stroke and the original one
+(the larger this value is, the more jagged/approximated the resulting polylines are).</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="sampling">
+<span id="bpy-types-linestylegeometrymodifier-sampling"></span><h2>Sampling<a class="headerlink" href="#sampling" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Sampling</em> modifier changes the definition, precision of the stroke,
+for the following modifiers.</p>
+<div class="figure align-center">
+<img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_sampling.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_sampling.png" />
+</div>
+<dl class="simple">
+<dt>Sampling</dt><dd><p>The smaller this value, the more precise are the strokes.
+Be careful; too small values will require a huge amount of time and memory during render!</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="simplification">
+<span id="bpy-types-linestylegeometrymodifier-simplification"></span><h2>Simplification<a class="headerlink" href="#simplification" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Simplification</em> modifier merges stroke vertices that lie close to one another,
+like the <em>Decimate</em> modifier for meshes.</p>
+<div class="figure align-center">
+<img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_simplification.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_simplification.png" />
+</div>
+<dl class="simple">
+<dt>Tolerance</dt><dd><p>Measure for how close points have to be to each other to be merged.
+A higher tolerance means more vertices are merged.</p>
+</dd>
+</dl>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_simplification-example.png"><img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_simplification-example.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_simplification-example.png" style="width: 600px;" /></a>
+</div>
+</div>
+<div class="section" id="sinus-displacement">
+<span id="bpy-types-linestylegeometrymodifier-sinusdisplacement"></span><h2>Sinus Displacement<a class="headerlink" href="#sinus-displacement" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Sinus Displacement</em> modifier adds a sinusoidal displacement to the stroke.</p>
+<div class="figure align-center">
+<img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_sinus-displacement.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_sinus-displacement.png" />
+</div>
+<dl class="simple">
+<dt>Wavelength</dt><dd><p>How wide the undulations are along the stroke.</p>
+</dd>
+<dt>Amplitude</dt><dd><p>How high the undulations are across the stroke.</p>
+</dd>
+<dt>Phase</dt><dd><p>Allows &quot;offsetting&quot; (&quot;moving&quot;) the undulations along the stroke.</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_sinus-displacement-example.png"><img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_sinus-displacement-example.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_sinus-displacement-example.png" style="width: 430px;" /></a>
+<p class="caption"><span class="caption-text">Sinus Displacement modifier demo by T.K.
+<a class="reference external" href="https://wiki.blender.org/wiki/File:Toycar_Sinus.zip">File:Toycar_Sinus.zip</a>.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="spatial-noise">
+<span id="bpy-types-linestylegeometrymodifier-spatialnoise"></span><h2>Spatial Noise<a class="headerlink" href="#spatial-noise" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Spatial Noise</em> modifier adds some spatial noise to the stroke.
+Spatial noise displacements are added in the normal direction
+(i.e. the direction perpendicular to the tangent line) evaluated at each stroke vertex.</p>
+<div class="figure align-center">
+<img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_spatial-noise.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_spatial-noise.png" />
+</div>
+<dl class="simple">
+<dt>Amplitude</dt><dd><p>How much the noise distorts the stroke.</p>
+</dd>
+<dt>Scale</dt><dd><p>How wide the noise is along the stroke.</p>
+</dd>
+<dt>Octaves</dt><dd><p>The level of detail of the noise.</p>
+</dd>
+<dt>Smooth</dt><dd><p>When enabled, apply some smoothing over the generated noise.</p>
+</dd>
+<dt>Pure Random</dt><dd><p>When disabled, the next generated random value depends on the previous one;
+otherwise they are completely independent. Disabling this setting gives a more &quot;consistent&quot; noise along a stroke.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="tip-remover">
+<span id="bpy-types-linestylegeometrymodifier-tipremover"></span><h2>Tip Remover<a class="headerlink" href="#tip-remover" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Tip Remover</em> modifier removes a piece of the stroke at its beginning and end.</p>
+<div class="figure align-center">
+<img alt="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_tip-remover.png" src="../../../../../_images/render_freestyle_parameter-editor_line-style_modifiers_geometry_tip-remover.png" />
+</div>
+<dl class="simple">
+<dt>Tip Length</dt><dd><p>Length of stroke to remove at both of its tips.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../../python.html" class="btn btn-neutral float-right" title="Python脚本模式" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="properties.html" class="btn btn-neutral float-left" title="属性" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

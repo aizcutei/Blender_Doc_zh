@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/lighting/introduction.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="灯光面板" href="lamp_panel.html" />
+    <link rel="prev" title="灯光" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">灯光</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#viewing-restrictions">查看限制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#global-influences">全局影响</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lighting-settings">灯光设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lighting-in-the-workflow">照明工作流</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#overriding-materials-to-reset-lighting">覆盖材质以重置照明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lamp_panel.html">灯光面板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#lamp-types">灯光类型</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee 渲染器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles渲染引擎</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">工作流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../audio/index.html">音频渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="index.html">灯光</a> &raquo;</li>
+        
+      <li>简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/render/lighting/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>灯光在渲染中是一个非常重要的主题, 和建模，材质，纹理一样重要. 最准确的模型和纹理场景没有一个适当的灯光方案都将会产生糟糕的结果,相反一个简单的模型设置合适的灯光将会产生很逼真的效果。</p>
+<div class="section" id="viewing-restrictions">
+<h2>查看限制<a class="headerlink" href="#viewing-restrictions" title="Permalink to this headline">¶</a></h2>
+<p>物体的颜色和场景的灯光受以下的影响:</p>
+<ul class="simple">
+<li><p>你能够看到不同的颜色(部分色盲的人是很常见的)。</p></li>
+<li><p>你正在查看图像的媒介 (例如LCD显示器面板与打印纸)。</p></li>
+<li><p>图像的品质(例如一个JPEG 0.4压缩比到 1.0压缩比).</p></li>
+<li><p>查看图像的环境(例如一个 CRT 显示器在一个暗的房间或一个阳光充足的房间的显示).</p></li>
+<li><p>你的大脑的感知颜色和强度相对于周围的物体和世界背景颜色，可以使用Blender 的合成节点（ <a class="reference internal" href="../../compositing/introduction.html"><span class="doc">Composite Nodes</span></a>）的色彩处理技术来改变。</p></li>
+</ul>
+</div>
+<div class="section" id="global-influences">
+<h2>全局影响<a class="headerlink" href="#global-influences" title="Permalink to this headline">¶</a></h2>
+<p>在 Blender, 以下的控制要素会影响光照效果:</p>
+<ul class="simple">
+<li><p>世界环境光（ <a class="reference internal" href="../cycles/world.html"><span class="doc">ambient light</span></a>）的颜色。</p></li>
+<li><p>使用AO（ <a class="reference internal" href="../cycles/world.html#render-cycles-integrator-world-ao"><span class="std std-ref">Ambient Occlusion</span></a> ）作为一种计算环境光投射到物体上的一种方法。</p></li>
+<li><p>物体上的材质（ <a class="reference internal" href="../cycles/materials/index.html"><span class="doc">material</span></a> ）环境光颜色的程度。</p></li>
+<li><p>采用间接照明( <a class="reference internal" href="../eevee/indirect_lighting.html"><span class="doc">Indirect lighting</span></a> )，其中一个物体的颜色辐射到另一个物体上。</p></li>
+<li><p>你场景中的灯光 （ <a class="reference internal" href="lamp_panel.html"><span class="doc">lamps</span></a> ）</p></li>
+</ul>
+<p>光在现实世界的反弹物理特性是由AO（Ambient Occlusion）模拟的（世界设置）, 缓冲阴影buffer shadows (这是物体投射的近似阴影), 光线追踪（ray tracing ） (追踪来自光源的光子路径). 此外，在Blender可以使用间接照明( <a class="reference internal" href="../eevee/indirect_lighting.html"><span class="doc">Indirect lighting</span></a> )。光线追踪，AO，间接照明是计算机密集型的过程。Blender使用其内部的扫描线渲染器可以执行得更快，这是确实一个很好的扫描线渲染器。这种渲染引擎的速度要快得多，因为它并不试图模拟光的真实行为，假设许多简化的假设。</p>
+</div>
+<div class="section" id="lighting-settings">
+<h2>灯光设置<a class="headerlink" href="#lighting-settings" title="Permalink to this headline">¶</a></h2>
+<p>只有在考虑了上述全局影响之后，才开始在场景中添加灯光。下面是你掌控的主要内容：</p>
+<ul class="simple">
+<li><p>灯光的类型（<em>阳光</em>，<em>点光</em>，<em>半球光</em>  等）。</p></li>
+<li><p>灯光的颜色。</p></li>
+<li><p>灯光的位置和方向。</p></li>
+<li><p>灯光的设置，包括亮度（energy） 和衰减（falloff）。</p></li>
+</ul>
+<p>然后你将返回到材质着色器 看其是怎么影响灯光。</p>
+<p>这一章试图解决以上所述问题，包括灯光设备如何协同工作一起照亮场景的。在这章我们将分析Blender中的不同灯光类型和它们和它们的行为；我们将讨论他们的长处和短处。我们也讨论灯光设备。包括最流行的3点打光法。</p>
+</div>
+<div class="section" id="lighting-in-the-workflow">
+<h2>照明工作流<a class="headerlink" href="#lighting-in-the-workflow" title="Permalink to this headline">¶</a></h2>
+<p>在本用户手册中，我们将照明置于材质之前; 你应该在指定给你网格材质前设置灯光。因为材质着色器对光有反应，没有适当的灯光 ，材质着色器将看起来是不正确的，坏的照明引起你的不快，你将最终会一直忙在着色器。在这部分的例子球，立方体或者背景将不使用任何的材质。</p>
+</div>
+<div class="section" id="overriding-materials-to-reset-lighting">
+<h2>覆盖材质以重置照明<a class="headerlink" href="#overriding-materials-to-reset-lighting" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id1">
+<img alt="../../_images/render_blender-render_lighting_introduction_material-field.png" src="../../_images/render_blender-render_lighting_introduction_material-field.png" />
+<p class="caption"><span class="caption-text">渲染层面板中的材质字段。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>如果你已经开始指定材质，正在处理灯光照明，我们建议你创建一个默认的，通用的灰色的物质——没有 <em>顶点的颜色</em>，没有 <em>面纹理</em> 没有 <em>阴影</em>，只是普通的中灰色RGB值为（0.8,0.8，0.8）。命名叫 “Gray”。</p>
+<p>接下来到 <em>Render Layer</em> 选项卡. 在 <em>Layer</em> 面板, 在 <em>Material</em> 区域选择你新建的 “Gray” 材质。这将覆盖你以前创建的任何材质，并用这个材质颜色渲染。使用这个材质你现在可以校正灯光。你只需清空这个材质就可以返回到原始材质。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lamp_panel.html" class="btn btn-neutral float-right" title="灯光面板" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="灯光" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

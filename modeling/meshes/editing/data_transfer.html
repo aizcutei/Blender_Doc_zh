@@ -1,0 +1,496 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>数据传递 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/data_transfer.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="网格选项" href="mesh_options.html" />
+    <link rel="prev" title="其他编辑工具" href="misc.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting/index.html">选择</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/index.html">基础</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vertices.html">顶点工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edges.html">边工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="faces.html">面工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transform/index.html">变形</a></li>
+<li class="toctree-l4"><a class="reference internal" href="duplicating/index.html">复制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subdividing/index.html">细分</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cleanup.html">清理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="misc.html">其他编辑工具</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">数据传递</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_options.html">网格选项</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_display.html">网格显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">网格分析</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../index.html">网格</a> &raquo;</li>
+        
+          <li><a href="index.html">编辑</a> &raquo;</li>
+        
+      <li>数据传递</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/modeling/meshes/editing/data_transfer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-transfer">
+<h1>数据传递<a class="headerlink" href="#data-transfer" title="Permalink to this headline">¶</a></h1>
+<p><em>数据传递</em> 工具可以在网格之间传递几种类型的数据。数据类型包括顶点组、UV映射、顶点颜色、自定义法向...</p>
+<p>传递是通过在源网格与目标网格元素(顶点、边等)之间建立映射实现的，这可以是一一映射，或者通过插值实现的多对一映射。</p>
+<div class="section" id="data">
+<span id="bpy-ops-object-data-transfer"></span><h2>数据<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 编辑 ‣ 数据传递</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">物体 ‣ 传递网格数据</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Shift-Ctrl-T</kbd></p>
+</dd>
+</dl>
+</div>
+<p>将活动网格的数据层传递给选中网格。</p>
+<dl>
+<dt>冻结操作项</dt><dd><p>防止在调整设置时重新运行操作。在操作庞杂几何结构时，用于一次编辑多个设置。</p>
+</dd>
+<dt>数据类型</dt><dd><p>传递的数据类型。</p>
+<div class="figure align-center" id="id1">
+<img alt="../../../_images/modeling_meshes_editing_data-transfer_menu.png" src="../../../_images/modeling_meshes_editing_data-transfer_menu.png" />
+<p class="caption"><span class="caption-text">数据类型。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</dd>
+<dt>创建数据</dt><dd><p>如有必要，为目标网格创建数据层。</p>
+</dd>
+<dt>点映射</dt><dd><p>映射源顶点至目标顶点的方法。由于该选项会随选择映射的 <em>数据类型</em> 发生变化，所以将在 <a class="reference internal" href="#vertex-mapping">点映射</a> 详述。</p>
+</dd>
+</dl>
+<div class="section" id="vertex-mapping">
+<h3>点映射<a class="headerlink" href="#vertex-mapping" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="topology">
+<h4>拓扑<a class="headerlink" href="#topology" title="Permalink to this headline">¶</a></h4>
+<p>最简单的选项，需两个网格有相同数量的对应几何元素，按次序(编号)匹配这些元素。使用情境如相同网格的副本，但存在不同变形。</p>
+</div>
+<div class="section" id="one-to-one-mappings">
+<h4>一一映射<a class="headerlink" href="#one-to-one-mappings" title="Permalink to this headline">¶</a></h4>
+<p>这些映射总是仅为一个来源元素选择一个目标元素，通常是依据距离最短原则。</p>
+<dl>
+<dt>顶点</dt><dd><dl class="simple">
+<dt>最近的顶点</dt><dd><p>使用源网格最近的顶点数据。</p>
+</dd>
+<dt>最近的边顶点</dt><dd><p>使用源网格最近边的顶点数据。</p>
+</dd>
+<dt>最近的面顶点</dt><dd><p>使用源网格最近面的顶点数据。</p>
+</dd>
+</dl>
+</dd>
+<dt>边</dt><dd><dl class="simple">
+<dt>最近的顶点</dt><dd><p>使用源网格中距离目标边最近的顶点所在边的数据。</p>
+</dd>
+<dt>最近的边</dt><dd><p>用源网格中距离目标边最近的边线数据(使用边线的中点计算)。</p>
+</dd>
+<dt>最近的面边</dt><dd><p>用源网格中距离目标边最近的面的边线数据(使用边线的中点计算)。</p>
+</dd>
+</dl>
+</dd>
+<dt>面拐</dt><dd><p>面拐不是真实的元素，类似连在特定表面的拆分顶点。因此会同时匹配顶点(位置)和面(法向...)数据。</p>
+<dl class="simple">
+<dt>最近的拐角和最匹配的法向</dt><dd><p>从最近的源拐点中，选取与目标拐点 <em>拆分</em> 法向最相近的源拐点数据。</p>
+</dd>
+<dt>最近的拐角和最匹配的面法向</dt><dd><p>从最近的源拐点中，选取与目标拐点 <em>面</em> 法向最相近的源拐点数据。</p>
+</dd>
+<dt>最近面的最近拐角</dt><dd><p>使用最近来源面的最近拐点数据。</p>
+</dd>
+</dl>
+</dd>
+<dt>面</dt><dd><dl class="simple">
+<dt>最近的面</dt><dd><p>使用最近的来源面数据。</p>
+</dd>
+<dt>最匹配法向：</dt><dd><p>使用与目标法向最匹配的来源面数据。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="interpolated-mappings">
+<h4>插值映射<a class="headerlink" href="#interpolated-mappings" title="Permalink to this headline">¶</a></h4>
+<p>对每一个目标元素使用多个来源数据，传递时对这些数据进行插值。</p>
+<dl>
+<dt>顶点</dt><dd><dl class="simple">
+<dt>最近边插值</dt><dd><p>使用最近来源边的最近点数据，对来源边的两个顶点数据插值。</p>
+</dd>
+<dt>最近面插值</dt><dd><p>使用最近来源面的最近点数据，对来源面的顶点数据插值。</p>
+</dd>
+<dt>投影面插值</dt><dd><p>使用目标顶点沿自身法向投影到来源面的点数据，对该来源面的顶点数据插值。</p>
+</dd>
+</dl>
+</dd>
+<dt>边</dt><dd><dl class="simple">
+<dt>投影边插值</dt><dd><p>这是一个采样的过程。沿目标边(对边的两个顶点都进行插值)发射多条射线，如果足以击中来源边，则将所有被击中的来源边数据插值到目标。</p>
+</dd>
+</dl>
+</dd>
+<dt>面拐</dt><dd><p>面拐不是真实的元素，类似连在特定表面的拆分顶点。因此会同时匹配顶点(位置)和面(法向...)数据。</p>
+<dl class="simple">
+<dt>最近面插值</dt><dd><p>使用最近的来源面的最近点数据，对来源面的所有拐角插值。</p>
+</dd>
+<dt>投影面插值</dt><dd><p>使用目标拐角沿自身法向投影到来源面的点数据，对该来源面的拐角数据插值。</p>
+</dd>
+</dl>
+</dd>
+<dt>面</dt><dd><dl class="simple">
+<dt>投影面插值</dt><dd><p>这是一个采样的过程。从目标面(沿其自身法向)发射多条射线，如果足以击中来源面，则将所有被击中的来源面数据插值到目标。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="further-options">
+<h3>其他选项<a class="headerlink" href="#further-options" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>自动变换</dt><dd><p>自动计算变换，以获得源网格与目标网格之间最可能的匹配。</p>
+<p>用于在两个形状相似，但经过不同变换的网格之间匹配与传递数据。注意：只有相同网格的副本之间才能获得最佳结果。否则，如果可以让两个网格在3D空间中“视觉上” 匹配(并使用 <em>物体变换</em>)，也可以获得较好的结果。</p>
+</dd>
+<dt>物体变换</dt><dd><p>在全局空间计算源网格与目标网格的变换。</p>
+</dd>
+<dt>仅相邻几何</dt><dd><p>来源元素与目标元素之间的距离必须小于指定距离。</p>
+<dl class="simple">
+<dt>最大距离</dt><dd><p>来源元素与目标元素允许的最大距离(对非拓扑映射)。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>光线半径</dt><dd><p>光线的宽度。用于光线投射至顶点或边。</p>
+</dd>
+<dt>混合模式</dt><dd><p>如何使用来源数值影响目标元素。</p>
+<dl class="simple">
+<dt>全部</dt><dd><p>替换全部目标数据 (注意还是要用到 <em>混合系数</em>)。</p>
+</dd>
+<dt>高于阈值</dt><dd><p>仅替换高于阈值 <em>混合系数</em> 的目标值。如何解读阈值取决于数据类型，注意对于布尔值，该选项充当逻辑 “与”。</p>
+</dd>
+<dt>低于阈值</dt><dd><p>仅替换低于阈值 <em>混合系数</em> 的目标值。如何解读阈值取决于数据类型，注意对于布尔值，该选项充当逻辑 “或”。</p>
+</dd>
+<dt>混合、相加、相减、相乘</dt><dd><p>使用混合系数控制来源或目标值的混合方式，仅适用于少数类型(顶点组、顶点颜色)。</p>
+</dd>
+</dl>
+</dd>
+<dt>混合系数</dt><dd><p>传递的数据与现有数据的混合系数(不支持所有数据类型)。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="data-layout">
+<span id="bpy-ops-object-datalayout-transfer"></span><h2>数据布局<a class="headerlink" href="#data-layout" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 编辑 ‣ 数据布局</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">物体 ‣ 传递网格数据布局t</span></p>
+</dd>
+</dl>
+</div>
+<p>将活动网格的数据层传递给选中网格。</p>
+<dl>
+<dt>数据类型</dt><dd><p>传递的数据类型。</p>
+<div class="figure align-center" id="id2">
+<img alt="../../../_images/modeling_meshes_editing_data-transfer_menu.png" src="../../../_images/modeling_meshes_editing_data-transfer_menu.png" />
+<p class="caption"><span class="caption-text">数据类型。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</dd>
+<dt>完全匹配</dt><dd><p>如必要，会从目标层删去一些数据层，以使其完全匹配来源层。</p>
+</dd>
+<dt>选择来源层</dt><dd><p>选择需要传递的层，以防多层类型。</p>
+<dl class="simple">
+<dt>活动层</dt><dd><p>仅传递活动数据层。</p>
+</dd>
+<dt>全部层</dt><dd><p>传递全部数据层。</p>
+</dd>
+</dl>
+</dd>
+<dt>匹配的目标层</dt><dd><p>如何匹配来源层与目标层。</p>
+<dl class="simple">
+<dt>按名称</dt><dd><p>按名称匹配受影响的目标数据层。</p>
+</dd>
+<dt>按排序</dt><dd><p>按顺序(编号)匹配受影响的目标数据层。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../../modifiers/modify/data_transfer.html"><span class="doc">数据传递修改器</span></a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mesh_options.html" class="btn btn-neutral float-right" title="网格选项" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="misc.html" class="btn btn-neutral float-left" title="其他编辑工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

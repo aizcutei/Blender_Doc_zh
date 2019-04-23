@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>层 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/3dview/grease_pencil/drawing/layers.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="颜色" href="colors.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../startup_scene.html">启动场景</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../modes.html">物体模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../navigate/index.html">视图浏览</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d_cursor.html">3D游标</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../object/index.html">物体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ruler_protractor.html">3D量尺 &amp; 量角器</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">蜡笔</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../../index.html">3D视图</a> &raquo;</li>
+        
+          <li><a href="../index.html">蜡笔</a> &raquo;</li>
+        
+          <li><a href="index.html">绘制笔触</a> &raquo;</li>
+        
+      <li>层</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/editors/3dview/grease_pencil/drawing/layers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="layers">
+<h1>层<a class="headerlink" href="#layers" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">属性区块 ‣ 蜡笔图层</span></p>
+</dd>
+</dl>
+</div>
+<p>蜡笔草图是以层的形式管理的，很像GIMP或者Photoshop<sup>®</sup> 里面的图层。蜡笔层和Blender里面的其他层系统没有关联。</p>
+<p>层的主要用途是有目的地分类管理草图(比如，&quot;布局(blocking)笔记&quot;，&quot;导演&quot;对布局(blocking)的&quot;注释&quot;或者&quot;引导线&quot;)。由于上述因素，同一图层里的所有笔画(不论修改前后)是受该层的颜色，透明度以及笔画粗细设置影响。</p>
+<p>属性区块(<kbd class="kbd docutils literal notranslate">N</kbd>)的 <em>蜡笔图层</em> 面板用于管理蜡笔图层。</p>
+<div class="figure align-center" id="id1">
+<img alt="../../../../_images/interface_grease-pencil_drawing_layers_list.png" src="../../../../_images/interface_grease-pencil_drawing_layers_list.png" />
+<p class="caption"><span class="caption-text">蜡笔面板。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="grease-pencil-data">
+<h2>蜡笔数据<a class="headerlink" href="#grease-pencil-data" title="Permalink to this headline">¶</a></h2>
+<p>下列控件用于添加、删除或者调整图层在列表中的位置。</p>
+<dl>
+<dt>绘制源</dt><dd><dl class="simple">
+<dt>场景</dt><dd><p>蜡笔数据从属于当前场景，除非活动物体已经有蜡笔数据(即旧文件)。</p>
+</dd>
+<dt>物体</dt><dd><p>蜡笔数据从属于活动物体。2.73之前的插件要用到该选项。</p>
+</dd>
+</dl>
+</dd>
+<dt>蜡笔</dt><dd><p>选择用于存储图层的蜡笔数据块，关于该控件参考 <a class="reference internal" href="../../../../interface/controls/templates/data_block.html#ui-data-block"><span class="std std-ref">数据块菜单</span></a>。</p>
+</dd>
+<dt>活动层</dt><dd><p>从属于场景或物体的图层 <a class="reference internal" href="../../../../interface/controls/templates/list_presets.html#ui-list-view"><span class="std std-ref">列表视图</span></a>。</p>
+<dl class="simple">
+<dt>父级(骨骼图标)</dt><dd><p>指示已为该图层设置父级。</p>
+</dd>
+<dt>锁 (挂锁图标)</dt><dd><p>锁定当前图层，不允许编辑。</p>
+</dd>
+<dt>隐藏 (眼睛图标) <kbd class="kbd docutils literal notranslate">H</kbd></dt><dd><p>在绘制区域隐藏当前图层。</p>
+</dd>
+<dt>解锁颜色 (带箭头的调色盘图标)</dt><dd><p>解除颜色锁定，恢复被锁定颜色的编辑。</p>
+</dd>
+<dt>隔离 (挂锁图标) <kbd class="kbd docutils literal notranslate">NumpadAsterix</kbd></dt><dd><p>限制只能修改活动图层。</p>
+</dd>
+<dt>隔离 (可见) (眼睛图标)</dt><dd><p><em>隔离</em> 活动图层，并隐藏其他图层。</p>
+</dd>
+<dt>特殊菜单</dt><dd><dl class="simple">
+<dt>复制层</dt><dd><p>创建当前图层副本。</p>
+</dd>
+<dt>显示全部 <kbd class="kbd docutils literal notranslate">Alt-H</kbd></dt><dd><p>显示所有隐藏图层。</p>
+</dd>
+<dt>隐藏其他 <kbd class="kbd docutils literal notranslate">Shift-H</kbd></dt><dd><p>隐藏所有非选中图层。</p>
+</dd>
+<dt>全部锁定/解锁</dt><dd><p>锁定/解锁所有图层，用于防止不必要的修改。</p>
+</dd>
+<dt>Merge Down</dt><dd><p>合并当前图层与下方图层。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>默认情况下，大多数操作仅作用于列表中高亮显示的 <em>活动</em> 层。</p>
+</div>
+</div>
+<div class="section" id="appearance-settings">
+<h2>外观设置<a class="headerlink" href="#appearance-settings" title="Permalink to this headline">¶</a></h2>
+<p>这些设置用于修改活动层的外观。</p>
+<dl>
+<dt>不透明度</dt><dd><p>图层的透明度。</p>
+</dd>
+<dt>透视效果</dt><dd><p>使场景中位于物体后方的线条可见。</p>
+</dd>
+<dt>显示控制点</dt><dd><p>绘制组成笔画的控制点。</p>
+</dd>
+<dt>Tint</dt><dd><dl class="simple">
+<dt>颜色</dt><dd><p>用于染色的颜色。</p>
+</dd>
+<dt>系数</dt><dd><p>图层 <em>染色颜色</em> 混合比例。</p>
+</dd>
+</dl>
+</dd>
+<dt>宽度修改</dt><dd><p>要对活动图层中所有笔画应用的宽度修改数值(类似修改器)。</p>
+<dl class="simple">
+<dt>应用 (手掌与蓝色曲线图标)</dt><dd><p>按下应用按钮后，应用宽度修改，并将宽度修改值归零。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="animation">
+<h2>动画<a class="headerlink" href="#animation" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>父级</dt><dd><p>选择 <a class="reference internal" href="../../../../glossary/index.html#term-parenting"><span class="xref std std-term">父级</span></a> 物体 <a class="reference internal" href="../../../../interface/controls/templates/data_block.html#ui-data-id"><span class="std std-ref">数据ID</span></a>。图层中笔画跟随父级变换。</p>
+<dl>
+<dt>类型</dt><dd><p><a class="reference internal" href="../../object/properties/relations/parents.html"><span class="doc">父级关系</span></a> 类型。</p>
+<p>物体、骨架、骨骼</p>
+</dd>
+</dl>
+</dd>
+<dt>锁定帧</dt><dd><p>锁定当前笔画所在帧。</p>
+</dd>
+<dt>删除帧</dt><dd><p>从活动蜡笔图层删除活动帧。</p>
+</dd>
+</dl>
+<div class="section" id="onion-skinning">
+<span id="grease-pencil-onion"></span><h3>洋葱皮<a class="headerlink" href="#onion-skinning" title="Permalink to this headline">¶</a></h3>
+<p>洋葱皮或者叫鬼影，通过较淡的轨迹显示相邻帧，帮助动画制作人员。</p>
+<div class="figure align-center" id="id2">
+<img alt="../../../../_images/interface_grease-pencil_drawing_layers_onion.png" src="../../../../_images/interface_grease-pencil_drawing_layers_onion.png" />
+<p class="caption"><span class="caption-text">蜡笔洋葱皮。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>洋葱皮</dt><dd><p>复选框用于启用洋葱皮。</p>
+</dd>
+<dt>一直显示(相机图标)</dt><dd><p>启用后，在拖动时间轴和/或者播放动画时使用OpenGL渲染显示鬼影。下面是两个相当方便的用例:</p>
+<ul class="simple">
+<li><p>创建五毛运动模糊特效，特别是前/后值可动画的情况下。</p></li>
+<li><p>如果已在启用洋葱皮情况下制作一个动画镜头，如果不显示鬼影的话，最终的姿态会看起来很诡异(因为你已经在创作的时候将鬼影考虑在内了)。</p></li>
+</ul>
+</dd>
+<dt>使用自定义颜色 (调色盘图标)</dt><dd><p>切换使用 <em>前显帧数</em> 和 <em>后显帧数</em> 修改鬼影帧颜色。</p>
+</dd>
+<dt>前显帧数/后显帧数</dt><dd><dl class="simple">
+<dt>颜色</dt><dd><p>当前帧前/后帧笔画显示的颜色。</p>
+</dd>
+<dt>前显/后显 范围</dt><dd><p>显示前/后帧的最大数量。 0 仅显示上一/下一草图。 -1 不显示前/后帧。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="colors.html" class="btn btn-neutral float-right" title="颜色" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

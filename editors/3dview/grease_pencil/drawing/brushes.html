@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>笔刷 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/3dview/grease_pencil/drawing/brushes.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="笔触编辑模式" href="../stroke_edit.html" />
+    <link rel="prev" title="颜色" href="colors.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../startup_scene.html">启动场景</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../modes.html">物体模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../navigate/index.html">视图浏览</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d_cursor.html">3D游标</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../object/index.html">物体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ruler_protractor.html">3D量尺 &amp; 量角器</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">蜡笔</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../../index.html">3D视图</a> &raquo;</li>
+        
+          <li><a href="../index.html">蜡笔</a> &raquo;</li>
+        
+          <li><a href="index.html">绘制笔触</a> &raquo;</li>
+        
+      <li>笔刷</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/editors/3dview/grease_pencil/drawing/brushes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="brushes">
+<span id="bpy-types-gpencilbrush"></span><h1>笔刷<a class="headerlink" href="#brushes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="drawing-brushes">
+<h2>绘制笔刷<a class="headerlink" href="#drawing-brushes" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>笔触编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 蜡笔 ‣ 绘制笔刷</span></p>
+</dd>
+</dl>
+</div>
+<dl>
+<dt>笔刷</dt><dd><p>预设笔刷 <a class="reference internal" href="../../../../interface/controls/templates/list_presets.html#ui-list-view"><span class="std std-ref">列表视图</span></a> 。使用 <kbd class="kbd docutils literal notranslate">1</kbd> 到 <kbd class="kbd docutils literal notranslate">0</kbd> 切换笔刷，选中列表中对应位置的笔刷。</p>
+</dd>
+<dt>厚度</dt><dd><p>全压力笔画像素宽度，相对于视窗为恒值，亦即不受缩放影响。实际宽度取决于压力强度。</p>
+</dd>
+<dt>敏感度</dt><dd><p>厚度对绘图笔压力的敏感度，可使用右侧的小按钮禁用压感。</p>
+</dd>
+<dt>强度/力度</dt><dd><p>与敏感度类似，不过影响的是颜色的alpha值。该参数用于得到类似褪色或者水彩的效果。</p>
+</dd>
+<dt>随机性</dt><dd><p><em>敏感度</em> 和 <em>强度/力度</em> 的随机系数，可以使用其左侧的波浪线图标启用。</p>
+</dd>
+<dt>抖动</dt><dd><p>为笔触指定随机抖动值。</p>
+</dd>
+<dt>角度</dt><dd><p>定义笔画宽度为100%的角度，笔画粗细随方向发生改变。</p>
+<dl class="simple">
+<dt>系数</dt><dd><p>设置笔画角度对宽度的影响系数。</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><em>角度</em> 和 <em>角度系数</em> 参数用于创建如同宽度随绘制角度改变的马克笔笔刷。这样线条看起来更加自然。</p>
+</div>
+</dd>
+</dl>
+<div class="figure align-center" id="id1">
+<img alt="../../../../_images/interface_grease-pencil_drawing_brushes_presets.png" src="../../../../_images/interface_grease-pencil_drawing_brushes_presets.png" />
+<p class="caption"><span class="caption-text">预设笔刷。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="stroke-quality">
+<h3>笔画质量<a class="headerlink" href="#stroke-quality" title="Permalink to this headline">¶</a></h3>
+<p>这些都是单笔刷设置，笔画绘制结束后(将2D/屏幕空间坐标转换为3D/数据空间坐标)会应用这些设置。由于是单笔刷设置，用于可以对不同类型的笔刷应用不同的属性。例如：最终的 “完美” 笔刷使用更高的平滑和/或细分，而初始化的 “布局” 笔刷使用较低的平滑和/或细分。</p>
+<dl>
+<dt>平滑</dt><dd><p>指定笔刷的平滑程度(使用与 “Smooth”相同方法)，用于消除锯齿边和抖动。</p>
+<dl class="simple">
+<dt>迭代</dt><dd><p>指定对笔刷应用的平滑次数。每执行一轮平滑，平滑强度减半。也就是说，第一轮的平滑系数为100%，接下来就是50%，20%，以此类推。该设置用于提高重度细分笔画的质量，多次平滑可以降低 “分面”瑕疵。</p>
+</dd>
+</dl>
+</dd>
+<dt>细分步数</dt><dd><p>指定对笔刷应用的细分次数。每细分一次笔画，笔画的每一对相邻控制点之间都会新增一个控制点。主要用于使笔画看上去不那么 &quot;棱角分明&quot; (特别是快速绘制的大笔画)，在应用平滑前细分笔画。</p>
+<dl class="simple">
+<dt>随机性</dt><dd><p>细分后新增笔画的随机程度。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="brush-curves">
+<h2>笔刷曲线<a class="headerlink" href="#brush-curves" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>笔触编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 蜡笔 ‣ 笔刷曲线</span></p>
+</dd>
+</dl>
+</div>
+<p>该面板用于调整使用绘图板时的参数，设置个人偏好。可供编辑的曲线如下：</p>
+<ul class="simple">
+<li><p>敏感度</p></li>
+<li><p>强度/力度</p></li>
+<li><p>抖动</p></li>
+</ul>
+<p>更多内容参考 <a class="reference internal" href="../../../../interface/controls/templates/curve.html#ui-curve-widget"><span class="std std-ref">曲线部件</span></a>。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../stroke_edit.html" class="btn btn-neutral float-right" title="笔触编辑模式" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="colors.html" class="btn btn-neutral float-left" title="颜色" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

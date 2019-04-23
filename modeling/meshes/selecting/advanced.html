@@ -1,0 +1,648 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>进阶选择 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/selecting/advanced.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="边和面" href="edges_faces.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../primitives.html">基本体</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">选择</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">进阶选择</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edges_faces.html">边和面</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../editing/index.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_display.html">网格显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">网格分析</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../index.html">网格</a> &raquo;</li>
+        
+          <li><a href="index.html">选择</a> &raquo;</li>
+        
+      <li>进阶选择</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/modeling/meshes/selecting/advanced.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="advanced">
+<h1>进阶选择<a class="headerlink" href="#advanced" title="Permalink to this headline">¶</a></h1>
+<p>编辑模式下的选择菜单还有一些其他的选择工具：</p>
+<dl class="simple">
+<dt>锐边</dt><dd><p>此工具选择两个面夹角大于设定角度值的交线。角度值越大，选中的边越锐利。</p>
+</dd>
+<dt>相连的平展面 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-Alt-F</kbd></dt><dd><p>基于面之间的夹角阈值，选择与之相连的面。这在选择平坦面时很管用。</p>
+</dd>
+<dt>镜像</dt><dd><p>选择指定坐标轴镜像方向上的对应网格元素。</p>
+</dd>
+<dt>活动项的同侧</dt><dd><p>选择在某一轴向上，位于活动顶点同一侧的所有网格中的顶点。仅适用于顶点选择模式。</p>
+</dd>
+<dt>关联项</dt><dd><p>选择所有和当前选中项有关联的部分(参考 <a class="reference internal" href="#select-linked">选择关联项</a>)。</p>
+</dd>
+</dl>
+<div class="section" id="checker-deselect">
+<h2>间隔式弃选<a class="headerlink" href="#checker-deselect" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 间隔式弃选</span></p>
+</dd>
+</dl>
+</div>
+<p>该工具对已选元素应用交替选择模式，仅适用于已选网格元素多余一个的情形。</p>
+<p>改变当前选中项，从活动选中项开始，每第N个元素(定点、边或面，取决于激活的选中模式)保持选中。</p>
+<p>在选中项包含多个孤岛的情形下，该工具仅影响活动元素(如果有的话)所在孤岛，或者在内部存储顺序中第一个元素所在的孤岛(如果没有活动元素的话)。</p>
+<dl class="simple">
+<dt>按指定间隔选择</dt><dd><p>每N个元素保留一个选中。</p>
+</dd>
+<dt>跳过</dt><dd><p>弃选时跳过的步数。</p>
+</dd>
+<dt>偏移量</dt><dd><p>弃选起始点偏移量。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="select-all-by-traits">
+<h2>按特征选择<a class="headerlink" href="#select-all-by-traits" title="Permalink to this headline">¶</a></h2>
+<dl id="mesh-select-non-manifold">
+<dt>非流形点/线 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-Alt-M</kbd></dt><dd><p>选择一个网格的 <a class="reference internal" href="../../../glossary/index.html#term-non-manifold"><span class="xref std std-term">非流形</span></a> 几何体。该选项只在点和边选择模式下编辑网格时管用。操作面板有以下几个选择选项：</p>
+<dl class="simple">
+<dt>扩展选择</dt><dd><p>在当前选中项基础上加选。</p>
+</dd>
+<dt>线框</dt><dd><p>选择所有不属于任何面的边。</p>
+</dd>
+<dt>边界</dt><dd><p>选择边界和洞上的边。</p>
+</dd>
+<dt>多面</dt><dd><p>选择属于三个及以上面的边。</p>
+</dd>
+<dt>非连续性的</dt><dd><p>选择属于两个法线方向相反的面的共用边。</p>
+</dd>
+<dt>顶点</dt><dd><p>选择属于 <em>线框</em> 和 <em>多面</em> 边上的顶点，独立顶点，还有属于非相邻面的顶点。</p>
+</dd>
+</dl>
+</dd>
+<dt>内侧面</dt><dd><p>选择被两个以上的面共用的所有边线。</p>
+</dd>
+<dt>按侧选面</dt><dd><p>选择包含指定边数的面。</p>
+</dd>
+<dt>松散几何元素</dt><dd><p>选择没有形成面的所有顶点和边。</p>
+</dd>
+<dt>未归组顶点</dt><dd><p>选择所有不属于 <a class="reference internal" href="../properties/vertex_groups/index.html"><span class="doc">顶点组</span></a> 的顶点。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="select-linked">
+<h2>选择关联项<a class="headerlink" href="#select-linked" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 关联项</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Ctrl-L</kbd></p>
+</dd>
+</dl>
+</div>
+<p>选择和现有的元素相互联系的几何体。当一个网格有断开，重叠的部分，但是想将它独立出来的时候非常有用，其他方式就很单调乏味。</p>
+<p>为了更多的控制操作，你可以使用操作面板的划界，因此选择受制于缝合边，锐边，材质或者UV。</p>
+<p>使用 <em>拾取关联</em> 你可以直接选取游标下相联系的几何体，使用 <kbd class="kbd docutils literal notranslate">L</kbd> 捷径选择或者 <kbd class="kbd docutils literal notranslate">Shift-L</kbd> 去取消选择关联项。</p>
+<p>这以不同的方式工作，因为它使用光标下的几何体而不是现有的选择。</p>
+</div>
+<div class="section" id="select-similar">
+<h2>选择相似<a class="headerlink" href="#select-similar" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 相似</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-G</kbd></p>
+</dd>
+</dl>
+</div>
+<p>激活工具后，根据设置的阈值，选择与选中元素有某类相似属性的几何元素。不同选择模式下的工具选项有所不同:</p>
+<dl class="simple">
+<dt>点选择模式：</dt><dd><dl class="simple">
+<dt>法线</dt><dd><p>选择所有和现在当前被选择的点法线方向相同的点。</p>
+</dd>
+<dt>相邻面数量</dt><dd><p>选择所有和它们有着同样数量相关联面的所有顶点。</p>
+</dd>
+<dt>顶点组</dt><dd><p>选择 <a class="reference internal" href="../properties/vertex_groups/index.html"><span class="doc">顶点组</span></a> 的所有顶点。</p>
+</dd>
+<dt>连接边数量</dt><dd><p>选择所有和它们有着同样数量相关联边的所有顶点。</p>
+</dd>
+<dt>面区域</dt><dd><p>基于拓扑结构选择匹配网格特性的多个相似区域。</p>
+</dd>
+</dl>
+</dd>
+<dt>边选择模式：</dt><dd><dl class="simple">
+<dt>长度</dt><dd><p>选择所有和被选择的边有着相同长度的边。</p>
+</dd>
+<dt>方向</dt><dd><p>选择所有和被选择的边有着相同方向（角度）的边。</p>
+</dd>
+<dt>一条边周围面的数量</dt><dd><p>选择属于相同数量面的所有边。</p>
+</dd>
+<dt>面的顶角</dt><dd><p>选择两个面之间组成相同角度的所有边，就和已经选中的边一样。</p>
+</dd>
+<dt>折痕</dt><dd><p>选择所有与选中项拥有相似 <a class="reference internal" href="../editing/edges.html#modeling-edges-crease-subdivision"><span class="std std-ref">折痕</span></a> 值的边。</p>
+</dd>
+<dt>倒角</dt><dd><p>选择所有和现被选中的边有同样的 <em>倒角权重</em> 的边。</p>
+</dd>
+<dt>缝合边</dt><dd><p>选择所有和现被选中边有着同样 <em>缝合边</em> 状态的边。<em>缝合边</em> 是一个真/假的设定，用在 <a class="reference internal" href="../../../editors/uv_image/index.html#editors-uv-image-index"><span class="std std-ref">UV贴图</span></a>.</p>
+</dd>
+<dt>锐度</dt><dd><p>选择所有和现被选中边有着同样 <em>锐利</em> 状态的边。 <em>锐利</em> 是一个真/假的设定（一种标志），用在 <a class="reference internal" href="../../modifiers/generate/edge_split.html"><span class="doc">拆边修改器</span></a>。</p>
+</dd>
+</dl>
+</dd>
+<dt>面选择模式：</dt><dd><dl class="simple">
+<dt>材质</dt><dd><p>选取所有和已经选择的面有相同材质的所有面。</p>
+</dd>
+<dt>图像</dt><dd><p>选择所有和已经选中的面使用同样的UV贴图的面 (参考 <a class="reference internal" href="../../../editors/uv_image/index.html#editors-uv-image-index"><span class="std std-ref">UV贴图</span></a> 页面).</p>
+</dd>
+<dt>区域</dt><dd><p>选取所有和已经选择的面有相同区域的所有面。</p>
+</dd>
+<dt>多边形面数</dt><dd><p>选择所有有着相同数量边的面。</p>
+</dd>
+<dt>周长</dt><dd><p>选择所有有着相同周长的面(增加边的长度值)。</p>
+</dd>
+<dt>法线</dt><dd><p>选择和已经被选中的面有着相似法线的所有面。这是一种选择有着相同方向（角度）的面的方法。</p>
+</dd>
+<dt>共面</dt><dd><p>选择所有和被选择的面基本在同一个平面的面。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="more-less">
+<h2>增多/减少<a class="headerlink" href="#more-less" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>增多 <kbd class="kbd docutils literal notranslate">Ctrl-NumpadPlus</kbd></dt><dd><p>拓展选择类型中相邻元素的选择范围。</p>
+</dd>
+<dt>减少 <kbd class="kbd docutils literal notranslate">Ctrl-NumpadMinus</kbd></dt><dd><p>缩小选择类型中相邻元素的选择范围。</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>下一个活动范围 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-NumpadPlus</kbd></dt><dd><p>这个选项过去是用来选择基于附近拓扑结构的下一个点/边/面。</p>
+</dd>
+<dt>上一个活动范围 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-NumpadMinus</kbd></dt><dd><p>选择移除最近一次选择的元素后的此前的元素。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="select-loops">
+<h2>选择循环<a class="headerlink" href="#select-loops" title="Permalink to this headline">¶</a></h2>
+<p>你可以轻松地选择循环的元素：</p>
+<div class="section" id="edge-loops">
+<h3>循环边<a class="headerlink" href="#edge-loops" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式 --&gt; 点或者边的选择模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 边循环</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Alt-RMB</kbd></p>
+</dd>
+</dl>
+</div>
+<p>当选择一条边的时候按住 <kbd class="kbd docutils literal notranslate">Alt</kbd> 选择在一条线从头到尾相联系的循环边，在鼠标下穿过这条边。按住 <kbd class="kbd docutils literal notranslate">Shift-Alt</kbd> 时候添加当前的选择。</p>
+<p>循环边的选择基于当前被选择的边，使用 <span class="menuselection">Select ‣ Edge Loop</span>，或者在 <em>边专有项</em> 菜单 <em>边循环选择</em> 选项中 <kbd class="kbd docutils literal notranslate">Ctrl-E</kbd>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>顶点</em> 模式</p>
+<p>在 <em>顶点</em> 选择模式下，你可以选择循环边，通过使用相同的快捷键，并且点击 <em>边</em> (不是顶点).</p>
+</div>
+<div class="figure align-center" id="id1">
+<img alt="../../../_images/modeling_meshes_selecting_advanced_edge-loops.png" src="../../../_images/modeling_meshes_selecting_advanced_edge-loops.png" />
+<p class="caption"><span class="caption-text">纵向和横向的循环边。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>左边的圆球展示了纵向选择的一条边。注意这个环不是闭合的。这是因为算法在极点处选中顶点并终止，这是因为极点上的顶点连接到超过4条边。</p>
+</div>
+<div class="section" id="face-loops">
+<h3>循环面<a class="headerlink" href="#face-loops" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式 --&gt; 面或者点的选择模式</p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Alt-RMB</kbd></p>
+</dd>
+</dl>
+</div>
+<p>在面的选择模式下，当选择一条 <em>边</em> 时按住 <kbd class="kbd docutils literal notranslate">Alt</kbd> 去选择一个这条边上相联系的从头到尾的面循环，穿过和这条边垂直的方向。</p>
+<p>在点选择模式下，可以同样的使用 <kbd class="kbd docutils literal notranslate">Ctrl-Alt</kbd> 完成选择一条边的任务，它隐式地选择面循环。</p>
+<div class="figure align-center" id="id2">
+<img alt="../../../_images/modeling_meshes_selecting_advanced_face-loops.png" src="../../../_images/modeling_meshes_selecting_advanced_face-loops.png" />
+<p class="caption"><span class="caption-text">面循环选择。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>这个面循环是在一条边上按住 <kbd class="kbd docutils literal notranslate">Alt-RMB</kbd> 被选中的，在 <em>面</em> 选择模式下。这个循环从被选中的边垂直延伸。</p>
+<div class="figure align-center" id="id3">
+<img alt="../../../_images/modeling_meshes_selecting_advanced_face-loops-vertex.png" src="../../../_images/modeling_meshes_selecting_advanced_face-loops-vertex.png" />
+<p class="caption"><span class="caption-text"><kbd class="kbd docutils literal notranslate">Alt</kbd> 与 <kbd class="kbd docutils literal notranslate">Ctrl-Alt</kbd> 在点选择模式下.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>一个面循环可以在 <em>点</em> 选择模式被选中。从技术上来讲 <kbd class="kbd docutils literal notranslate">Ctrl-Alt-RMB</kbd> 会选择 <em>并排边</em> ,然而，在 <em>点*选择模式下，选择一个并排边</em> 含蓄地选择了一个 <em>面循环</em> ，这是当选择了面对应的另外对应的边隐式地选择了整个面。</p>
+</div>
+<div class="section" id="edge-boundary">
+<h3>边缘边界<a class="headerlink" href="#edge-boundary" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式 --&gt; 点或者边的选择模式</p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Alt-RMB</kbd></p>
+</dd>
+</dl>
+</div>
+<p>边缘边界下的循环选择。为了拓展所有边界的选择并且当前边界已经选中再一次使用 <kbd class="kbd docutils literal notranslate">Alt-RMB</kbd> .</p>
+</div>
+<div class="section" id="edge-ring">
+<h3>并排边<a class="headerlink" href="#edge-ring" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 并排边</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Ctrl-Alt-RMB</kbd></p>
+</dd>
+</dl>
+</div>
+<p>在 <em>边</em> 选择模式下，当选中一条边(或者两个顶点时)保持选择一系列没有相互联系的边按下 <kbd class="kbd docutils literal notranslate">Ctrl-Alt</kbd> ，但是彼此相反的两侧依然保持 <a class="reference internal" href="../structure.html"><span class="doc">面循环</span></a>.</p>
+<p>与边循环一样，你也可以基于当前选择使用 <span class="menuselection">选择 ‣ 并排边</span>, 或者在 <em>边专有项</em> 菜单 <kbd class="kbd docutils literal notranslate">Ctrl-E</kbd> 中使用 <em>并排边</em>。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>顶点</em> 模式</p>
+<p>在 <em>点</em> 选择模式下，你可以在 <em>点击边</em> (而不是顶点）时使用相同的快捷键，但这将直接选择相应的面循环。</p>
+</div>
+<div class="figure align-center" id="id4">
+<span id="fig-mesh-select-advanced-loop-ring"></span><img alt="../../../_images/modeling_meshes_selecting_advanced_edge-ring.png" src="../../../_images/modeling_meshes_selecting_advanced_edge-ring.png" />
+<p class="caption"><span class="caption-text">选定的边循环和选定的并排边。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>看图. <a class="reference internal" href="#fig-mesh-select-advanced-loop-ring"><span class="std std-ref">选定的边循环和选定的并排边。</span></a> 点击同样的边，但是两组不同的 &quot;边组&quot; 被选中是基于不同的工具。一个是计算过程中基于边的，另一个是基于面的。</p>
+</div>
+</div>
+<div class="section" id="shortest-path">
+<h2>最短路径<a class="headerlink" href="#shortest-path" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 最短路径</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Ctrl-RMB</kbd></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-center" id="id5">
+<img alt="../../../_images/modeling_meshes_selecting_advanced_shortest-path.png" src="../../../_images/modeling_meshes_selecting_advanced_shortest-path.png" />
+<p class="caption"><span class="caption-text">选择一个面或者点的路径 <kbd class="kbd docutils literal notranslate">Ctrl-RMB</kbd>.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>从已经选中的顶点/边/面开始的最短路径中的几何体都会被选择。</p>
+<dl>
+<dt>面步进</dt><dd><p>支持点和面的对角路径，并且能选择并排边。</p>
+</dd>
+<dt>拓扑距离</dt><dd><p>仅考虑路径边的数量，而非路径边的总长度。</p>
+</dd>
+<dt>填充区域 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-RMB</kbd></dt><dd><p>选择最短路径中已经选中的地方到点击处的区域。</p>
+</dd>
+<dt>间隔式弃选选项</dt><dd><p>用于在路径中快速交替选择元素。</p>
+<dl class="simple">
+<dt>按指定间隔选择</dt><dd><p>每隔N个元素保持弃选状态。</p>
+</dd>
+<dt>跳过</dt><dd><p>每次弃选的连续元素数量。</p>
+</dd>
+<dt>偏移量</dt><dd><p>弃选起始点偏移量。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="loop-inner-region">
+<h2>循环线内侧区域<a class="headerlink" href="#loop-inner-region" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式 --&gt; 边选择模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 选择循环线内侧区域</span></p>
+</dd>
+</dl>
+</div>
+<p><em>选择循环线内侧区域</em> 是选择一个闭合环里的内部区域。虽然可以在 <em>点</em> 和 <em>面</em> 选择模式中使用这个操作,但是结果可能无法预料。应该注意的是如果所选的环并不是闭合的，那么网格中所有相关联的边都会被认为在闭合环区域里。</p>
+<div class="figure align-center" id="id6">
+<img alt="../../../_images/modeling_meshes_selecting_advanced_inner-region1.png" src="../../../_images/modeling_meshes_selecting_advanced_inner-region1.png" />
+<p class="caption"><span class="caption-text">循环区域。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id7">
+<img alt="../../../_images/modeling_meshes_selecting_advanced_inner-region2.png" src="../../../_images/modeling_meshes_selecting_advanced_inner-region2.png" />
+<p class="caption"><span class="caption-text">如你所见，这个工具可以处理多个循环区域。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id8">
+<img alt="../../../_images/modeling_meshes_selecting_advanced_inner-region3.png" src="../../../_images/modeling_meshes_selecting_advanced_inner-region3.png" />
+<p class="caption"><span class="caption-text">这个工具处理“洞”也是很棒的。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="boundary-loop">
+<h2>区域轮廓线<a class="headerlink" href="#boundary-loop" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式 --&gt; 边选择模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 选择区域轮廓线</span></p>
+</dd>
+</dl>
+</div>
+<p><em>选择区域轮廓线</em> 是和 <em>选择循环线内侧区域</em> 相对应的，基于当前所选的所有区域，它只选择这些区域的边界（轮廓）。它可以在任何选择模式下操作，但是 <em>面</em> 模式下操作会转成 <em>边</em> 选择模式。</p>
+<p>所有这一切都更容易用示例说明：</p>
+<div class="figure align-center" id="id9">
+<img alt="../../../_images/modeling_meshes_selecting_advanced_boundary-loop.png" src="../../../_images/modeling_meshes_selecting_advanced_boundary-loop.png" />
+<p class="caption"><span class="caption-text">与选择区域轮廓线相反，直接强制进入边选择模式。</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="edges_faces.html" class="btn btn-neutral float-right" title="边和面" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

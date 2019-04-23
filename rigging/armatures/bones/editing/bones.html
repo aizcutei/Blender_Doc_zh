@@ -1,0 +1,800 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>编辑骨骼 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/rigging/armatures/bones/editing/bones.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="命名" href="naming.html" />
+    <link rel="prev" title="变换" href="transform.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../constraints/index.html">约束</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">骨架</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">骨骼</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../structure.html">结构</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../selecting.html">选择</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">编辑</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../properties/index.html">属性</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../skinning/index.html">蒙皮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../posing/index.html">姿态</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lattice.html">Lattice 晶格</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">绑定</a> &raquo;</li>
+        
+          <li><a href="../../index.html">骨架</a> &raquo;</li>
+        
+          <li><a href="../index.html">骨骼</a> &raquo;</li>
+        
+          <li><a href="index.html">编辑</a> &raquo;</li>
+        
+      <li>编辑骨骼</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/rigging/armatures/bones/editing/bones.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editing-bones">
+<h1>编辑骨骼<a class="headerlink" href="#editing-bones" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="add-menu">
+<h2>添加菜单<a class="headerlink" href="#add-menu" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">添加</span></p>
+</dd>
+<dt class="field-odd">Hotkey</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-A</kbd></p>
+</dd>
+</dl>
+</div>
+<p>在 3D 视图, 使用 <kbd class="kbd docutils literal notranslate">Shift-A</kbd> 快捷键命令添加一个新的骨骼到你的骨架。</p>
+<p>这个骨骼具有：</p>
+<ul class="simple">
+<li><p>一个Blender单位长度。</p></li>
+<li><p>朝向全局Z轴的方向。</p></li>
+<li><p>它的根部位于3D 游标位置。</p></li>
+<li><p>与其它骨架的骨骼没有任何关系。</p></li>
+</ul>
+</div>
+<div class="section" id="extrude">
+<h2>Extrude  挤出<a class="headerlink" href="#extrude" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">Armature ‣ Extrude</span></p>
+</dd>
+<dt class="field-odd">Hotkey</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">E</kbd>, <kbd class="kbd docutils literal notranslate">Shift-E</kbd></p>
+</dd>
+</dl>
+</div>
+<p>当你按下 <kbd class="kbd docutils literal notranslate">E</kbd> 键，对于选定的每一个尾端（显式或隐式），一个新的骨骼将被创建。这个骨骼将是前面骨骼尾端的子骨骼，并连接到它。像往常一样，一旦挤压完成，仅仅只有新的骨骼尾端被选中，在grab（移动）模式，你可以将它放置在你喜欢的位置。参见图挤出实例（ <a class="reference internal" href="#fig-rig-bones-extrusion"><span class="std std-ref">Extrusion example. 挤出实例。</span></a>）。</p>
+<span id="fig-rig-bones-extrusion"></span><table class="docutils align-center" id="extrusion-example">
+<caption><span class="caption-text">Extrusion example. 挤出实例。</span><a class="headerlink" href="#extrusion-example" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_extrusion-1.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_extrusion-1.png" src="../../../../_images/rigging_armatures_bones_editing_bones_extrusion-1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">选择了三个尾端的骨架。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_extrusion-2.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_extrusion-2.png" src="../../../../_images/rigging_armatures_bones_editing_bones_extrusion-2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">三个挤出的骨骼。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>你也可以使用旋转/缩放挤出，如网格那样，分别的按 <kbd class="kbd docutils literal notranslate">E R</kbd> 和 <kbd class="kbd docutils literal notranslate">E S</kbd> -- 以及沿一个全局或局部轴锁定( <a class="reference internal" href="../../../../editors/3dview/object/editing/transform/control/precision/axis_locking.html"><span class="doc">locked</span></a>)的挤压。</p>
+<span id="fig-rig-bone-mirror"></span><table class="docutils align-center" id="mirror-extrusion-example">
+<caption><span class="caption-text">Mirror extrusion example. 镜像挤出示例。</span><a class="headerlink" href="#mirror-extrusion-example" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_mirror-extrusion-1.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_mirror-extrusion-1.png" src="../../../../_images/rigging_armatures_bones_editing_bones_mirror-extrusion-1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">单个选定的骨骼的尾端。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_mirror-extrusion-2.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_mirror-extrusion-2.png" src="../../../../_images/rigging_armatures_bones_editing_bones_mirror-extrusion-2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">两个镜像挤出的骨骼。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>骨骼可以通过按 <kbd class="kbd docutils literal notranslate">Shift-E</kbd> 键调出一个“镜像挤出（mirror extruding）“工具，默认是和标准骨骼挤出一样。但如果你激活了X-Axis mirror选项（T工具架上）（见 see <a class="reference internal" href="#x-axis-mirror">X-Axis Mirror</a>)，每一个挤压的尾端会产生2个有一样名字新的骨骼，除了 &quot;_L&quot;/ &quot;_R&quot;  后缀的不同（见下页 <a class="reference internal" href="naming.html#armature-editing-naming-conventions"><span class="std std-ref">next page</span></a> ），&quot;_L&quot; 骨骼和单一的默认挤出的骨骼行为那样-你可以使用完全一样的方法移动/旋转/缩放它。&quot;_R &quot;骨骼是它的一个镜像副本（沿着骨架的局部X轴），见图 <a class="reference internal" href="#fig-rig-bone-mirror"><span class="std std-ref">Mirror extrusion example. 镜像挤出示例。</span></a>。</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>取消挤压命令将使新创建的骨骼重新回到源位置，（创建零长度的骨头，就是骨骼还在）。当退出编辑模式时这些骨骼才将被移除，然而这会引起混乱和不会像你想要的那样保持它们。如果你认识到这个问题立刻使用undo命令撤消挤压动作。</p>
+</div>
+<p>你应该知道，你不能像在网格编辑那样只是按X键来解决这个问题，因为挤出是选择了新创建的骨骼尾端，并如下文所述删除命令忽略骨头的关节。要删除这些挤压骨头不用undo，你必须移动的骨骼尾端，然后选择骨骼并删除 （<a class="reference internal" href="#delete-selected-bone-s">Delete Selected Bone(s)</a>） 他们。</p>
+<div class="section" id="mouse-clicks">
+<h3>Mouse Clicks 鼠标点击<a class="headerlink" href="#mouse-clicks" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">Hotkey</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd></p>
+</dd>
+</dl>
+</div>
+<p>如果你选择了至少一根骨骼，按下 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd>-点击添加一根新骨骼。</p>
+<p>关于新的骨骼尾端：</p>
+<p><kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd>-单击后，它成为骨架的活动元素，正好就在单击的位置，但是 (与网格编辑一样) 它将位于与视图平行且穿过3D游标的平面。</p>
+<p>新骨骼的首端和父骨骼的位置取决于激活的元素：</p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_mouse-clicks-1.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_mouse-clicks-1.png" src="../../../../_images/rigging_armatures_bones_editing_bones_mouse-clicks-1.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">激活元素是骨骼时按住Ctrl-点击。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>如果激活元素是一根 <em>骨骼</em>:</p>
+<ul class="simple">
+<li><p>新的骨骼首端是位于激活（既选择的骨骼）骨骼的尾端。</p></li>
+<li><p>新的骨骼是父物体并连接到激活骨骼(检查图中的大纲图. <a class="reference internal" href="#fig-rig-bone-active-tip"><span class="std std-ref">激活的元素是尾端时按住Ctrl-点击。</span></a>)。</p></li>
+</ul>
+<div class="figure align-center" id="id6">
+<span id="fig-rig-bone-active-tip"></span><a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_mouse-clicks-2.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_mouse-clicks-2.png" src="../../../../_images/rigging_armatures_bones_editing_bones_mouse-clicks-2.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">激活的元素是尾端时按住Ctrl-点击。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>如果激活的元素是 <em>尾端</em> :</p>
+<ul class="simple">
+<li><p>新骨骼的首端是位于激活的尾端上。</p></li>
+<li><p>新的骨骼是父物体并连接到骨骼本身激活的尖端上(检查图中的大纲图. <a class="reference internal" href="#fig-rig-bone-active-tip"><span class="std std-ref">激活的元素是尾端时按住Ctrl-点击。</span></a>)。</p></li>
+</ul>
+<div class="figure align-center" id="id7">
+<span id="fig-rig-bone-disconnected-tip"></span><a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_mouse-clicks-3.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_mouse-clicks-3.png" src="../../../../_images/rigging_armatures_bones_editing_bones_mouse-clicks-3.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">当激活的元素是分离的首端时按住Ctrl-点击。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>如果激活的元素是 <em>分离的首端</em>:</p>
+<ul class="simple">
+<li><p>新骨骼的首端将位于激活的首端。</p></li>
+<li><p>新的骨骼是 <strong>没有</strong> 父对象到骨骼本身的激活首端 (检查图中的大纲图. <a class="reference internal" href="#fig-rig-bone-disconnected-tip"><span class="std std-ref">当激活的元素是分离的首端时按住Ctrl-点击。</span></a>)。</p></li>
+</ul>
+<p>因此，新骨骼将 <strong>不会</strong> 连接到任何骨骼上。</p>
+<div class="figure align-center" id="id8">
+<span id="fig-rig-bone-connected-root"></span><a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_mouse-clicks-4.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_mouse-clicks-4.png" src="../../../../_images/rigging_armatures_bones_editing_bones_mouse-clicks-4.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">当激活的元素是链接的首端时按住Ctrl-点击。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>如果激活的元素是 <em>连接的首端</em>:</p>
+<ul class="simple">
+<li><p>新骨骼的首端将位于激活的首端。</p></li>
+<li><p>新骨骼的父节点 <strong>是</strong> 连接到骨骼本身的激活首端(检查图中的大纲图. <a class="reference internal" href="#fig-rig-bone-connected-root"><span class="std std-ref">当激活的元素是链接的首端时按住Ctrl-点击。</span></a>)。</p></li>
+</ul>
+<p>这是很明显的。因为如果激活的元素是连接到首端，然后激活元素也是父骨骼的尾端，所以这和第二种情况是一样的。</p>
+<p>新骨骼的尾端变成了激活元素，如果你重复按住 <kbd class="kbd docutils literal notranslate">Ctrl-RMB</kbd> 几次，将连续添加几个骨骼到同样的链的尾端。</p>
+</div>
+</div>
+<div class="section" id="fill-between-joints">
+<h2>Fill between Joints 在关节之间填充<a class="headerlink" href="#fill-between-joints" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">Armature ‣ Fill Between Joints</span></p>
+</dd>
+<dt class="field-odd">Hotkey</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">F</kbd></p>
+</dd>
+</dl>
+</div>
+<p>这个工具的主要用途是在选定的关节之间通过按住 <kbd class="kbd docutils literal notranslate">F</kbd> 键创建一个骨骼，类似于在网格编辑中你可以创建“边/面”。</p>
+<p>如果你有一个首端和一个尾端被选择，新的骨骼：</p>
+<ul class="simple">
+<li><p>将有一个首端位于选择的尾端上。</p></li>
+<li><p>将有一个尾端位于选择的首端上。</p></li>
+<li><p>父对象是链接到选择骨骼自身的尖端。</p></li>
+</ul>
+<table class="docutils align-center" id="id9">
+<caption><span class="caption-text">填充一个尾端和首端。</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id10">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-1.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-1.png" src="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">激活左边的尾端。</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-2.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-2.png" src="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">激活右边的尾端。</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>如果你有两个尾端被选择，新的骨骼：</p>
+<ul class="simple">
+<li><p>将有首端位于靠近3D游标的选择的尾端。</p></li>
+<li><p>尾端位于其它选择的尾端。</p></li>
+<li><p>父对象是连接到骨骼本身的尾端，作为新骨骼的首端。</p></li>
+</ul>
+<table class="docutils align-center" id="id12">
+<caption><span class="caption-text">尾端之间填充。</span><a class="headerlink" href="#id12" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id13">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-3.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-3.png" src="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-3.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">3D游标在左边。</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id14">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-4.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-4.png" src="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-4.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">3D游标在右边。</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>如果你有两个根部被选择，由于Blender不是实时的更新界面的你将面临一个小问题。</p>
+<p>当按下 <kbd class="kbd docutils literal notranslate">F</kbd> 键，与以前的情况类似，你会看到一个新骨骼：</p>
+<ul class="simple">
+<li><p>新骨骼首端位于靠近3D光标选择的首端。</p></li>
+<li><p>尾端位于其它一个选择骨骼的首端。</p></li>
+<li><p>父对象是连接到骨骼本身的尾端，作为新骨骼的首端。</p></li>
+</ul>
+<p>如果你试图移动新骨骼，Blender将更新界面，你将看到新的骨骼首端移动到父骨骼的尾端。</p>
+<table class="docutils align-center" id="id15">
+<caption><span class="caption-text">首端之间填充。</span><a class="headerlink" href="#id15" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id16">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-5.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-5.png" src="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-5.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">UI更新前（3D 游标在左边）。</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id17">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-6.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-6.png" src="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-6.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">UI更新后，正确的视图。</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>用仅仅选择一个骨骼的关节点击 <kbd class="kbd docutils literal notranslate">F</kbd> ，将创建一根从选择的关节到3D游标位置的一根骨骼，它没有任何的父骨骼。</p>
+<table class="docutils align-center" id="id18">
+<caption><span class="caption-text">选定关节填充。</span><a class="headerlink" href="#id18" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id19">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-7.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-7.png" src="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-7.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">选定一个尾端填充。</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id20">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-8.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-8.png" src="../../../../_images/rigging_armatures_bones_editing_bones_fill-joints-8.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">选定一个首端填充。</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>你将得到一个错误当：</p>
+<ul class="simple">
+<li><p>试图填充同一个骨骼的两个关节。</p></li>
+<li><p>试图填充两个以上的骨骼关节。</p></li>
+</ul>
+</div>
+<div class="section" id="duplicate">
+<h2>复制<a class="headerlink" href="#duplicate" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">骨架 ‣ 复制</span></p>
+</dd>
+<dt class="field-odd">Hotkey</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-D</kbd></p>
+</dd>
+</dl>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>这个工具仅仅工作在选定的骨骼；选择关节时无效。</p>
+</div>
+<p>和网格编辑一样，按下 <kbd class="kbd docutils literal notranslate">Shift-D</kbd> 可以复制选中的骨骼。复制得到的副本会成为选中元素，并开启拖拽模式，移动鼠标放置到任意位置。</p>
+<p>如果你选择的是骨骼链的一部分，通过复制得到的是选择链部分的副本，所以副本是和原始骨骼是完全一样的。</p>
+<p>一个骨骼的副本是和原始骨骼的父对象是一样的，即使不选择复制骨骼首端。但是，如果一个骨骼是父对象 <strong>和</strong> 连接到一个没有选择的骨骼，它的副本将是父对象但 <strong>没有</strong> 连接到没有选择的骨骼（见图 <a class="reference internal" href="#fig-rig-bone-duplication"><span class="std std-ref">复制示例。</span></a>)。</p>
+<span id="fig-rig-bone-duplication"></span><table class="docutils align-center" id="id21">
+<caption><span class="caption-text">复制示例。</span><a class="headerlink" href="#id21" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id22">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_duplication-1.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_duplication-1.png" src="../../../../_images/rigging_armatures_bones_editing_bones_duplication-1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">一个选择了三个骨骼和一个单一的骨骼首端的骨架。</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id23">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_duplication-2.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_duplication-2.png" src="../../../../_images/rigging_armatures_bones_editing_bones_duplication-2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">三个骨骼的副本。请注意，选择的链条被保存在副本中，并且Bone.006为父，但没有连接到Bone.001，如由黑色虚线。同样，Bone.007为父，但没有连接到Bone.003。</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="split">
+<h2>Split 拆分<a class="headerlink" href="#split" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">Armature ‣ Split</span></p>
+</dd>
+<dt class="field-odd">Hotkey</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Y</kbd></p>
+</dd>
+</dl>
+</div>
+<p>Disconnects the selection and clears the parent at the start and end.
+ToDo &lt;2.8 add.</p>
+</div>
+<div class="section" id="delete-selected-bone-s">
+<h2>Delete Selected Bone(s)  删除所选骨骼。( )<a class="headerlink" href="#delete-selected-bone-s" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">Armature ‣ Delete Selected Bone(s)</span></p>
+</dd>
+<dt class="field-odd">Hotkey</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">X</kbd></p>
+</dd>
+</dl>
+</div>
+<p>此工具删除选定的骨骼，所选的 <em>关节</em> 被忽略。</p>
+<p>如果你在一条骨骼链删除了一个骨骼，它的子骨骼对象将自动连接到它自己的父骨骼对象作为父对象，但 <strong>没有</strong> 连接，以避免整个骨架变形。</p>
+<table class="docutils align-center" id="id24">
+<caption><span class="caption-text">删除示例。</span><a class="headerlink" href="#id24" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id25">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_deletion-1.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_deletion-1.png" src="../../../../_images/rigging_armatures_bones_editing_bones_deletion-1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">删除前面一个骨架选择的两个骨骼。</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id26">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_deletion-2.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_deletion-2.png" src="../../../../_images/rigging_armatures_bones_editing_bones_deletion-2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">两个骨骼被删除。注意Bone.002,以前链接的Bone.001已经被删除，它现在的父对象是Bone骨骼。</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dissolve">
+<h2>Dissolve 溶解<a class="headerlink" href="#dissolve" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p>none</p>
+</dd>
+<dt class="field-odd">Hotkey</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Ctrl-X</kbd></p>
+</dd>
+</dl>
+</div>
+<p>ToDo 2.76.</p>
+</div>
+<div class="section" id="merge-bones">
+<h2>Merge Bones 合并骨骼<a class="headerlink" href="#merge-bones" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">Armature ‣ Merge Bones</span></p>
+</dd>
+<dt class="field-odd">Hotkey</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Alt-M</kbd></p>
+</dd>
+</dl>
+</div>
+<p>只要它们形成链，就可以合并几个选定的骨骼。由所选骨骼形成的每个子链将产生一个骨骼，其首端将是首端骨骼的首端，并且其尾端将是尾端骨骼的尾端。</p>
+<p>点击确认 <span class="menuselection">Merge Selected Bones ‣ Within Chains</span>.</p>
+<p>如果另一个（未选择的）链起源于合并的骨骼链内部，它将是合并骨骼的父级。如果他们被连接，它将连接到新的骨骼。</p>
+<p>这有一个很微妙的地方（见图  <a class="reference internal" href="#fig-rig-bone-merge"><span class="std std-ref">合并示例。</span></a> ):即使已经连接（在未合并链的首端骨骼没有根球），骨骼没有视觉上的连接-这就好像你编辑一个骨骼一样，不同的是取决于你编辑那一根链的骨骼（比较下面的两个图像的例子来理解这个更好）。</p>
+<span id="fig-rig-bone-merge"></span><table class="docutils align-center" id="id27">
+<caption><span class="caption-text">合并示例。</span><a class="headerlink" href="#id27" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id28">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_merge-1.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_merge-1.png" src="../../../../_images/rigging_armatures_bones_editing_bones_merge-1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">在合并前，一个选择了一个链和一个单一的骨骼的骨架。</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id29">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_merge-2.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_merge-2.png" src="../../../../_images/rigging_armatures_bones_editing_bones_merge-2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">骨骼Bone, Bone.001 和 Bone.002被合并到Bone.006,然而Bone.005没有被修改。注意Bone.003,链接到Bone.006但尚未“真正”连接。</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="figure align-center" id="id30">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_merge-3.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_merge-3.png" src="../../../../_images/rigging_armatures_bones_editing_bones_merge-3.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Bone.004被旋转，因此Bone.006的尾端被移动到Bone.003的首端。</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id31">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_merge-4.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_merge-4.png" src="../../../../_images/rigging_armatures_bones_editing_bones_merge-4.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Bone.006的尾端发生移动，因此Bone.003的尾端被移动到Bone.006的顶端。</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="subdivide">
+<h2>Subdivide 细分<a class="headerlink" href="#subdivide" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">Armature ‣ Subdivide</span>, <span class="menuselection">Specials ‣ Subdivide</span></p>
+</dd>
+</dl>
+</div>
+<p>你可以在一个骨骼通过细分得到两个或更多的骨骼。这个工具将会细分所有选定的骨骼，并保留现有的关系：从一个细分中创建的骨头，总是形成一个连接链的骨头。</p>
+<p>在Subdivide Multi Operator面板中从每个选定的骨骼创建任意数量的骨骼。</p>
+<dl class="simple">
+<dt>Number of Cuts 切割数量</dt><dd><p>指定切割次数。 在网格编辑中， 如果你设置 <em>n</em> 切割, 对于每个选定的骨骼你将得到 <em>n</em> + 1骨骼。</p>
+</dd>
+</dl>
+<table class="docutils align-center" id="subdivision-example">
+<caption><span class="caption-text">Subdivision example. 细分的示例。</span><a class="headerlink" href="#subdivision-example" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id32">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_subdivision-1.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_subdivision-1.png" src="../../../../_images/rigging_armatures_bones_editing_bones_subdivision-1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">骨架上一个细分前的骨骼。</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id33">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_editing_bones_subdivision-2.png"><img alt="../../../../_images/rigging_armatures_bones_editing_bones_subdivision-2.png" src="../../../../_images/rigging_armatures_bones_editing_bones_subdivision-2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">选择的骨骼切割2次的骨骼，得到三个子骨骼。</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="locking-bones">
+<h2>Locking Bones锁定骨骼<a class="headerlink" href="#locking-bones" title="Permalink to this headline">¶</a></h2>
+<p>在编辑模式你可以有几种方法避免骨骼产生变换：</p>
+<ul class="simple">
+<li><p>激活Transform Properties面板（N）的 <em>Bones（骨骼）</em> 标签的Lock选项，可以锁定所有骨骼;</p></li>
+<li><p>按 <kbd class="kbd docutils literal notranslate">Shift-W</kbd> <span class="menuselection">开启骨骼设置 ‣ 锁定</span></p></li>
+<li><p>选择 <span class="menuselection">骨架 ‣ 骨骼设定 ‣ 锁定</span>。</p></li>
+</ul>
+<p><em>如果一个锁定骨骼的首端接到一个没有锁定骨骼的尾端，则不会被锁定</em>，换言之，你可以随意移动它们。这意味着相链的骨骼链，当你锁定其中一个骨骼时，你其实只是仅仅锁定了它的尾端。对于没有相连的骨骼，锁定是对骨骼两端关节都是有效的。</p>
+</div>
+<div class="section" id="x-axis-mirror">
+<h2>X-Axis Mirror X 轴镜像<a class="headerlink" href="#x-axis-mirror" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">Tool Shelf ‣ Options ‣ Armature Options ‣ X-Axis Mirror</span></p>
+</dd>
+</dl>
+</div>
+<p>此选项可启用沿X轴的编辑操作的自动镜像。当在  <em>Edit模式</em> 时选择骨架，另一个非常有用的工具是  <em>X-Axis MirrorX 轴镜像</em>  编辑选项 <span class="menuselection">Tool panel ‣ Armature Options</span>, 当你有一对名字一样只是&quot;侧边后缀&quot;不同的骨骼（如&quot;.R&quot;/&quot;.L, or &quot;_right右/&quot;_left左&quot;…)，一旦开启这个选项，每当你变换一个骨骼时（移动/旋转/缩放, …), ，它的“另一面”也会通过骨架的局部沿X轴对称相应改变。这个绑定常常用在至少有一个对称的物体（动物，人等），这个方法可以很容易就节省了你一半的时间！</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="naming.html#armature-editing-naming-bones"><span class="std std-ref">naming bones</span></a>.</p>
+</div>
+</div>
+<div class="section" id="separate-bones">
+<h2>Separate Bones 分离骨骼<a class="headerlink" href="#separate-bones" title="Permalink to this headline">¶</a></h2>
+<p>你可以像网格那样，分离骨骼为一个新的骨骼物体通过 <span class="menuselection">Armature ‣ Separate</span>,  <kbd class="kbd docutils literal notranslate">Ctrl-Alt-P</kbd>  当然， <em>对象模式</em>，你可以将所有选择的骨架合并为一个骨架物体通过 :<cite>Object --&gt; Join Objects</cite>, <kbd class="kbd docutils literal notranslate">Ctrl-J</kbd>。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="naming.html" class="btn btn-neutral float-right" title="命名" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="transform.html" class="btn btn-neutral float-left" title="变换" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

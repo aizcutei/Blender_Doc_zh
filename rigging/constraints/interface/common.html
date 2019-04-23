@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Common 常见 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/rigging/constraints/interface/common.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="堆栈" href="stack.html" />
+    <link rel="prev" title="Header 标题栏" href="header.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">约束</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#interface">界面</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="adding_removing.html">Adding/Removing a Constraint 添加/移除约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="header.html">Header 标题栏</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Common 常见</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stack.html">堆栈</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#motion-tracking">运动追踪</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#transform">变换</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#tracking">追踪</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#relationship">关系</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../armatures/index.html">骨架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lattice.html">Lattice 晶格</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">绑定</a> &raquo;</li>
+        
+          <li><a href="../index.html">约束</a> &raquo;</li>
+        
+      <li>Common 常见</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/rigging/constraints/interface/common.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="common">
+<h1>Common 常见<a class="headerlink" href="#common" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="target">
+<span id="rigging-constraints-interface-common-target"></span><h2>Target 目标<a class="headerlink" href="#target" title="Permalink to this headline">¶</a></h2>
+<p>Target（目标） <a class="reference internal" href="../../../interface/controls/templates/data_block.html#ui-data-id"><span class="std std-ref">数据ID</span></a> 字段允许您链接约束到您选择的目标对象。此链接提供数据给约束，以便它可以开始运作（起作用）。例如，复制位置（Copy Location）约束需要位置数据功能。在目标字段中，输入和复制位置约束将开始使用从目标对象的位置数据。</p>
+<div class="figure align-center" id="id1">
+<img alt="../../../_images/rigging_constraints_interface_common_target.png" src="../../../_images/rigging_constraints_interface_common_target.png" />
+<p class="caption"><span class="caption-text">约束的Targe（目标）字段必须填充目标才会起作用.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>默认情况下，目标将使用物体原点（ <a class="reference internal" href="../../../glossary/index.html#term-object-origin"><span class="xref std std-term">Object Origin</span></a> ）作为目标点。</p>
+<p>如果Target（目标）字段链接到一个 <a class="reference internal" href="../../../glossary/index.html#term-mesh"><span class="xref std std-term">网格</span></a> 或 <a class="reference internal" href="../../../glossary/index.html#term-lattice"><span class="xref std std-term">晶格</span></a> 物体，会出现一个 <a class="reference internal" href="../../../glossary/index.html#term-vertex-group"><span class="xref std std-term">Vertex Group</span></a> 字段。输入顶点组的名称，约束将指向该顶点组的中点，而不是物体中心。</p>
+<div class="figure align-center">
+<img alt="../../../_images/rigging_constraints_interface_common_target-vertex-group.png" src="../../../_images/rigging_constraints_interface_common_target-vertex-group.png" />
+</div>
+<p>如果目标字段是链接到一个 <a class="reference internal" href="../../../glossary/index.html#term-armature"><span class="xref std std-term">骨架</span></a>,  <a class="reference internal" href="../../../glossary/index.html#term-bone"><span class="xref std std-term">骨骼</span></a> 字段将出现一个 <a class="reference internal" href="../../../glossary/index.html#term-head"><span class="xref std std-term">头</span></a> 或 <a class="reference internal" href="../../../glossary/index.html#term-tail"><span class="xref std std-term">尾端</span></a> 滑块。输入一个骨骼的名称，约束将目标骨骼为对象中心，而不是整个骨架为对象中心。滑动滑块，约束将在目标头部、尾部或中间某个位置。</p>
+<div class="figure align-center">
+<img alt="../../../_images/rigging_constraints_interface_common_target-bone.png" src="../../../_images/rigging_constraints_interface_common_target-bone.png" />
+</div>
+</div>
+<div class="section" id="space">
+<h2>Space 空间<a class="headerlink" href="#space" title="Permalink to this headline">¶</a></h2>
+<p>约束需要参考框架起作用。此参考框架称为约束的&quot;空间&quot;。选择一个空间相对于另一个空间将改变这个参照系，并大大改变约束的行为。</p>
+<p>若要了解为何更改空间会改变约束的行为，请尝试考虑用两个空物体。请确保他们显示为箭头，以便您可以看到每个空物体的局部坐标轴。请确保一个空物体稍大于另一个空物体，以便他们两个总是可见的甚至一个直接在另一个顶部都彼此可见。然后将一个约束添加另一个空物体作为目标和用许多不同的方式彻底通过移动、 旋转和缩放的目标进行试验。</p>
+<div class="figure align-center" id="id2">
+<img alt="../../../_images/rigging_constraints_interface_common_space.png" src="../../../_images/rigging_constraints_interface_common_space.png" />
+<p class="caption"><span class="caption-text">此约束在其目标空间和其自身空间设置为World Space（世界空间）作参考框架。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="target-space-owner-space">
+<h3>Target Space &amp; Owner Space目标空间 &amp;自身空间<a class="headerlink" href="#target-space-owner-space" title="Permalink to this headline">¶</a></h3>
+<p>用来计算约束物体的目标的空间称为Target Space（目标空间）。用来计算受约束物体的空间（拥有该约束的物体）称为 owner space（自身空间）。悬停在空间下拉框菜单（或盒子）中，以了解它是否影响目标的空间或自身的空间。</p>
+<p>当约束使用目标时和/或/也不是一个自身空间将没有，一个或两个选择器。复制位置（ Copy Location ）约束在示例中使用这两个目标 <strong>和</strong> 自身空间。</p>
+<p>当约束使用目标和自身空间时，目标和自身可以任意的空间类型组合。</p>
+</div>
+<div class="section" id="space-types">
+<h3>Space Types空间类型<a class="headerlink" href="#space-types" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>World Space世界空间</dt><dd><p>在这个空间类型世界是物体的（或骨）参照系。位置是相对于世界的原点。旋转和缩放是面向世界的轴。变换物体，对象的父级和约束堆栈中的任何其他约束都被考虑在内。</p>
+</dd>
+<dt>Local Space局部空间</dt><dd><p>在这个空间类型中，物体（或骨）的父级是参照系。位置是相对于父级的原点。旋转和缩放是面向父级的轴。只有变换考虑物体自身。变换对于物体的父级，和在约束堆栈中的任何其他约束都没有考虑在内。</p>
+</dd>
+<dt>Local With Parent (bones only) 局部父对象（仅骨骼)</dt><dd><p>骨骼属性是计算它自身局部空间，包括变换决定一个可能的父关系（即由于骨骼链上的变换）。</p>
+</dd>
+<dt>Pose Space (bones only) 构成空间（骨骼)</dt><dd><p>骨骼属性是计算它自身局部空间，包括变换决定一个可能的父关系（即由于骨骼链上的变换）。因此，如果骨架物体有空变换， <em>姿势空间</em> 和 <em>世界空间</em> 将具有相同的效果。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="influence">
+<span id="bpy-types-constraint-influence"></span><span id="rigging-constraints-influence"></span><h2>Influence影响<a class="headerlink" href="#influence" title="Permalink to this headline">¶</a></h2>
+<p>影响滑块确定多少约束将影响约束物体（目标）。</p>
+<div class="figure align-center">
+<img alt="../../../_images/rigging_constraints_interface_common_influence.png" src="../../../_images/rigging_constraints_interface_common_influence.png" />
+</div>
+<p>Influence（影响）为0.0将没有任何效果。Influence（影响）为1.0产生完全的影响。</p>
+<p>值 在0.0 和 1.0之间，会产生部分影响，但要小心。这些局部的效果是很难控制，特别是 <a class="reference internal" href="stack.html"><span class="doc">约束堆栈</span></a> 变得复杂时。</p>
+<p>影响值是可以动画的，允许约束被关闭，或打开部分所需的影响。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="stack.html" class="btn btn-neutral float-right" title="堆栈" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="header.html" class="btn btn-neutral float-left" title="Header 标题栏" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

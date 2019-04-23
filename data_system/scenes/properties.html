@@ -1,0 +1,557 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>场景属性 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/data_system/scenes/properties.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="文件" href="../files/index.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">数据系统</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_blocks.html">数据块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom_properties.html">自定义属性</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">场景</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">场景属性</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#scene">场景</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#units">单位</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keying-sets">插帧集</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#color-management">色彩管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#audio">音频</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gravity">重力</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rigid-body-world">刚体世界</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simplify">简化</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../files/index.html">文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linked_libraries.html">关联库</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">数据系统</a> &raquo;</li>
+        
+          <li><a href="index.html">场景</a> &raquo;</li>
+        
+      <li>场景属性</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/data_system/scenes/properties.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="scene-properties">
+<h1>场景属性<a class="headerlink" href="#scene-properties" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="scene">
+<span id="bpy-types-scene-active-clip"></span><span id="bpy-types-scene-background-set"></span><span id="bpy-types-scene-camera"></span><h2>场景<a class="headerlink" href="#scene" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性编辑器 ‣ 场景 ‣ 场景</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>摄像机</dt><dd><p>用于选择相机作为活动相机。还可以在3D视图使用 <kbd class="kbd docutils literal notranslate">Ctrl-0</kbd> 设置活动相机。</p>
+</dd>
+</dl>
+<dl id="scene-background-set">
+<dt>背景</dt><dd><p>可使用一个场景作为背景，当用于想专注于动画的前景，又不想背景元素碍事时这很有用。</p>
+<p>该场景可以有自己的动画，物理模拟试验等，但如果用户要编辑其中的任何内容，必须从 <em>场景</em> 数据块菜单中选择。</p>
+<p>可以使用一个布景作为另一个场景的背景(可以嵌套)。所以用户可以使用现有场景作为新场景的背景，并在其基础上再做补充。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>还可以结合 <a class="reference internal" href="../linked_libraries.html#data-system-linked-libraries-make-link"><span class="std std-ref">关联到场景</span></a> 一起使用，当blend文件包含该环境，可以在很多地方重复使用。</p>
+</div>
+</dd>
+<dt>当前激活的剪辑</dt><dd><p>激活的影片剪辑，用于约束以及视口显示。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="units">
+<span id="bpy-types-unitsettings"></span><span id="data-scenes-props-units"></span><h2>单位<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性编辑器 ‣ 场景 ‣ 单位</span></p>
+</dd>
+</dl>
+</div>
+<dl>
+<dt>长度预设</dt><dd><p>常用单位比例。</p>
+</dd>
+<dt>长度</dt><dd><dl class="simple">
+<dt>无</dt><dd><p>使用 <a class="reference internal" href="../../glossary/index.html#term-blender-units"><span class="xref std std-term">Blender单位</span></a>.</p>
+</dd>
+<dt>公制, 英制</dt><dd><p>长度计量标准单位。</p>
+</dd>
+</dl>
+</dd>
+<dt>角度</dt><dd><p>角度计量标准单位。</p>
+<p>角度，弧度</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>当使用 <em>角度</em> 时，工具提示会显示弧度值。</p>
+</div>
+</dd>
+<dt>单位比例</dt><dd><p>用于 <a class="reference internal" href="../../glossary/index.html#term-blender-units"><span class="xref std std-term">Blender单位</span></a> 与 <em>公制</em>/<em>英制</em> 单位之间转换的比例尺。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>通常用户会设置比例尺为 <em>长度</em> 预设值，这样就无需计算数值转换了。</p>
+</div>
+</dd>
+<dt>分离单位</dt><dd><p>使用 <em>公制</em> 或 <em>英制</em> 时，显示双位单位，如 &quot;2.285m&quot; 会显示为 &quot;2m 28.5cm&quot; 。</p>
+</dd>
+</dl>
+<table class="docutils align-center" id="id1">
+<caption><span class="caption-text">英制单位</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>全称</p></th>
+<th class="head"><p>简写</p></th>
+<th class="head"><p>对应米单位数值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>毫英寸</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">mil</span></code></p></td>
+<td><p>0.0000254</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>英寸</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">in</span></code></p></td>
+<td><p>0.0254</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>英尺</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">'</span></code>, <code class="docutils literal notranslate"><span class="pre">ft</span></code></p></td>
+<td><p>0.3048</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>码</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">yd</span></code></p></td>
+<td><p>0.9144</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>链</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">ch</span></code></p></td>
+<td><p>20.1168</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>浪</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">fur</span></code></p></td>
+<td><p>201.168</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>英里</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">mi</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code></p></td>
+<td><p>1609.344</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-center" id="id2">
+<caption><span class="caption-text">公制单位</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>全称</p></th>
+<th class="head"><p>简写</p></th>
+<th class="head"><p>对应米单位数值</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>微米</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">um</span></code></p></td>
+<td><p>0.000001</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>毫米</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">mm</span></code></p></td>
+<td><p>0.001</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>厘米</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">cm</span></code></p></td>
+<td><p>0.01</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>分米</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">dm</span></code></p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>meter</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">m</span></code></p></td>
+<td><p>1.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>十米</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">dam</span></code></p></td>
+<td><p>10.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>百米</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">hm</span></code></p></td>
+<td><p>100.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>千米</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">km</span></code></p></td>
+<td><p>1000.0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="keying-sets">
+<h2>插帧集<a class="headerlink" href="#keying-sets" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性编辑器 ‣ 场景 ‣ 插帧集</span></p>
+</dd>
+</dl>
+</div>
+<p>见 <a class="reference internal" href="../../animation/keyframes/keying_sets.html"><span class="doc">插帧集</span></a>.</p>
+</div>
+<div class="section" id="color-management">
+<h2>色彩管理<a class="headerlink" href="#color-management" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性编辑器 ‣ 场景 ‣ 色彩管理</span></p>
+</dd>
+</dl>
+</div>
+<p>用于图片在屏幕上如何显示的选项。</p>
+<p>更多信息请参考 <a class="reference internal" href="../../render/post_process/color_management.html#render-post-color-management"><span class="std std-ref">色彩管理设置</span></a>  。</p>
+</div>
+<div class="section" id="audio">
+<span id="bpy-types-scene-audio-volume"></span><span id="bpy-ops-sound-bake-animation"></span><span id="data-scenes-audio"></span><h2>音频<a class="headerlink" href="#audio" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性编辑器 ‣ 场景 ‣ 音频</span></p>
+</dd>
+</dl>
+</div>
+<p>控制全局音频设置的选项。</p>
+<dl class="simple">
+<dt>音量</dt><dd><p>该场景的音量。</p>
+</dd>
+<dt>更新动画缓存</dt><dd><p>更新音频动画缓存。这在你意识到音频存在瑕疵时很有用。</p>
+</dd>
+</dl>
+<div class="section" id="distance-model">
+<h3>间距模型<a class="headerlink" href="#distance-model" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>间距模型</dt><dd><p>Changes how the sound attenuation is calculated based on the distance.
+Most physically correct is the <em>Inverse</em> model,
+but it's also possible to choose a linear and an exponential falloff.
+The clamped modes limit the volume to be lower than 100% (1.0),
+that means if the distance is smaller than the reference distance, the volume is always 100%.
+For an exact description of each option
+see the <a class="reference external" href="https://www.openal.org/documentation/">OpenAL documentation</a>.</p>
+</dd>
+<dt>速率</dt><dd><p>Speed of the sound for the Doppler effect calculations.
+The typical value is 343.3 m/s in air, in water for example this value is around 1560 m/s.</p>
+</dd>
+<dt>多普勒</dt><dd><p>Controls how strong the Doppler effect is.
+You can exaggerate or attenuate the change of pitch, but physically correct is a factor of 1.0.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="format">
+<span id="bpy-types-ffmpegsettings-audio-channels"></span><span id="bpy-types-ffmpegsettings-audio-mixrate"></span><h3>格式<a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h3>
+<p>这些设置与 <a class="reference internal" href="../../render/output/video.html#render-output-video-encoding-panel"><span class="std std-ref">编码面板</span></a> 中的一样，用于修改渲染时的声音输出方式。</p>
+<p>关于如何控制Blender中的声音播放，请参考 <a class="reference internal" href="../../preferences/system.html#prefs-system-sound"><span class="std std-ref">用户设置</span></a> 中的音频设置。</p>
+<dl class="simple">
+<dt>通道</dt><dd><p>设置音频通道数量，可供选择的选项有: <em>单声道</em>, <em>立体声</em>, <em>4声道</em> , <em>5.1声道环绕</em> , <em>7.1声道环绕</em>。</p>
+</dd>
+<dt>Rate</dt><dd><p>设置音频 <a class="reference external" href="https://en.wikipedia.org/wiki/Sampling_(signal_processing)#Sampling_rate">采样率</a>。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="gravity">
+<h2>重力<a class="headerlink" href="#gravity" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性编辑器 ‣ 场景 ‣ 重力</span></p>
+</dd>
+</dl>
+</div>
+<p>控制物理效应中全局重力的选项。</p>
+<p>更多信息参考 <a class="reference internal" href="../../physics/gravity.html"><span class="doc">物理章节</span></a> 。</p>
+</div>
+<div class="section" id="rigid-body-world">
+<h2>刚体世界<a class="headerlink" href="#rigid-body-world" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性编辑器r ‣ 场景 ‣ 刚体世界</span></p>
+</dd>
+</dl>
+</div>
+<p><em>刚体世界</em> 是一组刚体物体，包含适用于模拟中所有刚体的设置。</p>
+<p>更多信息参考 <a class="reference internal" href="../../physics/rigid_body/world.html"><span class="doc">刚体世界</span></a> 。</p>
+</div>
+<div class="section" id="simplify">
+<span id="data-system-scenes-properties-simplify"></span><span id="bpy-types-rendersettings-simplify-subdivision"></span><h2>简化<a class="headerlink" href="#simplify" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性编辑器 ‣ 场景 ‣ 简化</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>细分</dt><dd><p><a class="reference internal" href="../../modeling/modifiers/generate/subsurf.html"><span class="doc">表面细分修改器</span></a> 在 <em>视图</em>/<em>渲染</em> 中的最大细分次数。</p>
+</dd>
+<dt>子粒子</dt><dd><p><em>视图</em>/<em>渲染</em> 中 <a class="reference internal" href="../../physics/particles/emitter/children.html"><span class="doc">子粒子</span></a> 的百分比。</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../../render/cycles/settings/scene/introduction.html#render-cycles-settings-scene-simplify"><span class="std std-ref">Cycles</span></a> 有特定的 <em>简化</em> 设置。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../files/index.html" class="btn btn-neutral float-right" title="文件" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

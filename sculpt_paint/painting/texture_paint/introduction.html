@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/sculpt_paint/painting/texture_paint/introduction.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="工具" href="tools.html" />
+    <link rel="prev" title="纹理绘制" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">绘制与雕刻</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../brush.html">笔刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texture_tex_mask.html">纹理和纹理遮罩</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stroke_curve.html">笔触和曲线</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#modes">模式</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">绘制</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#paint-modes">绘制模式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../sculpting/index.html">雕刻</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">绘制与雕刻</a> &raquo;</li>
+        
+          <li><a href="../index.html">绘制</a> &raquo;</li>
+        
+          <li><a href="index.html">纹理绘制</a> &raquo;</li>
+        
+      <li>简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/sculpt_paint/painting/texture_paint/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>UV纹理是一张用于模型表面着色的图像（图片、图像序列或者影片），它通过一张或者多张纹理UV贴图映射到模型上的。有三种方法来建立UV贴图：</p>
+<ol class="arabic simple">
+<li><p>在UV/图像编辑器中当前选中的UV纹理上绘制平面图像，然后通过UV映射将图像中的颜色映射到模型网格表面。</p></li>
+<li><p>在3D视图中直接在网格模型上绘制，让Blender使用当前选中的UV贴图更新UV纹理。（参见 <a class="reference internal" href="index.html#painting-texture-index"><span class="std std-ref">投影绘制</span></a> ）。</p></li>
+<li><p>使用任意图像编辑软件来创建图像。在UV/图像编辑器中，选中该UV纹理，并加载图像。Blender会使用该纹理的UV将色彩传递到网格的各个面。</p></li>
+</ol>
+<p>Blender有内置的绘画模式叫纹理绘制，它是特别为编辑UV纹理和在UV/图像编辑器窗口或或者3D视图窗口简单快速绘制图像而设计的。由于UV纹理仅仅是一张特殊用途的图像，你也可以用其它任何外部程序来创建，比如GIMP就是一个全功能的图像处理程序，而且它也是开源的。</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/sculpt-paint_painting_texture-paint_introduction_example.png"><img alt="../../../_images/sculpt-paint_painting_texture-paint_introduction_example.png" src="../../../_images/sculpt-paint_painting_texture-paint_introduction_example.png" style="width: 430px;" /></a>
+<p class="caption"><span class="caption-text">在Blender绘制纹理。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>由于一个模型可以有多层UV纹理，可能会有许多图像为网格着色，但是每个UV纹理只有一个图像。</p>
+<p>在3D视图窗口中和UV/图像编辑器窗口中中都可以绘制纹理。在绘制模式下的3D视图，可以直接在模型上绘制 <a class="reference internal" href="index.html#painting-texture-index"><span class="std std-ref">投影至UV</span></a>.</p>
+<div class="section" id="getting-started">
+<h2>入门<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>一旦你将你的模型展开成UV贴图。你就可以开始纹理处理。你不能在没有 <strong>首先</strong> 展开网格的情况下在纹理绘制模式中绘制网格， <strong>和</strong> 执行以下任一步骤：</p>
+<p>参见 : <a class="reference internal" href="../../../editors/uv_image/uv/editing/applying_image.html"><span class="doc">应用图像</span></a>.</p>
+<p>在完成下面两件事中的一件之后，你就可以在纹理绘制模式中修改图像了：</p>
+<div class="figure align-center" id="id2">
+<img alt="../../../_images/sculpt-paint_painting_texture-paint_introduction_paint-mode.png" src="../../../_images/sculpt-paint_painting_texture-paint_introduction_paint-mode.png" />
+<p class="caption"><span class="caption-text">启用绘制模式。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>在3D视图窗口中，在窗口标题栏的模式选择器中选择纹理绘制模式，之后就可以直接在模型上绘制纹理。</p></li>
+<li><p>在UV/图像编辑器窗口，将模式从视图切换到绘制（如右图所示）。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>2次方</p>
+<p>当图像大小设置为2的n次方，比如256×256、512×512、1024x1024等等的时候，在3D视图窗口绘制纹理反应非常快。</p>
+</div>
+<p>一旦启用了纹理绘制，鼠标就会变成笔刷；要使用UV布局（例如，移动坐标），您必须返回到“视图”模式。</p>
+<p>只要你启用纹理绘制或者切换到纹理绘制模式，在工具架面板中，笔刷设置才可用。</p>
+<p>在UV/图像编辑器窗口，画布上绘制的内容会包裹到模型上，UV/图像编辑器里的任何变化都会在3D视图窗口立即显示出来，反之亦然。</p>
+<p>在UV/图像编辑器窗口，笔刷和颜色的全部相关内容可以在属性面板中选取。笔刷的变化在UV/图像编辑器窗口和3D视图窗口的属性面板上都是立即同步反应出来的。尽管如此，修改过的纹理  <strong>不会</strong> 自动保存；你必须通过在UV/图像编辑器窗口点击 <span class="menuselection">Image ‣ Save</span> 来保存改动过的UV图像。</p>
+<div class="section" id="missing-data">
+<h3>丢失数据<a class="headerlink" href="#missing-data" title="Permalink to this headline">¶</a></h3>
+<p>When no UV layers or texture slots can be detected,
+the system will display a warning and a few controls to add the relevant data in the Tool Shelf.
+You will not be able to paint until all missing data have been added.</p>
+<dl class="simple">
+<dt>添加简单的UVs</dt><dd><p><em>添加简单的UV</em> 做一个简单的立方体，然后是一个展开包装操作。但仍然建议手动展开UV。</p>
+</dd>
+<dt>添加纹制槽</dt><dd><p>Add a material (if missing) and/or a texture slot. (Todo 2.72)</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="texture-preview">
+<h2>纹理预览<a class="headerlink" href="#texture-preview" title="Permalink to this headline">¶</a></h2>
+<p>如果纹理已经使用的颜色纹理，凹凸贴图，置换，Alpha透明，等等，在场景中模型的表面（用专业技术人员的话说，通过UV映射，对应的将不同的贴图映射到对应的通道上），就可以在场景中的看到绘制的效果。</p>
+<p>要做到这一点，设置并排区域，3D视图中的一个区域设置为 <em>纹理</em> 阴影选项，在第二个UV /图像编辑器区域加载图像。在3D视图以显示UV映射到加载的图像的物体。在右侧的图像中，被绘制的纹理被映射到“正常”属性，并被称为“凹凸贴图”，其中使用灰度图像使平坦的表面看起来颠簸。有关凹凸贴图的更多信息，请参见纹理贴图输出。</p>
+</div>
+<div class="section" id="saving">
+<h2>保存<a class="headerlink" href="#saving" title="Permalink to this headline">¶</a></h2>
+<p>如果标题栏的图像菜单旁边有一个星号，它代表图像被更改，但是还没有保存。使用 <span class="menuselection">图像 ‣ 保存图像</span> 选项来另存你的成果或者覆盖原文件保存。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>UV纹理</p>
+<p>由于用作UV纹理的图像和其他图像功能不同，你应当把它们放在单独的目录下，区别于其他图像。</p>
+</div>
+<p>保存的图像格式与渲染格式无关。在文件浏览器的标题栏中选择保存UV图像的格式，默认为 <code class="docutils literal notranslate"><span class="pre">PNG</span></code>  ( <code class="docutils literal notranslate"><span class="pre">.png</span></code> ) 。</p>
+<p>如果在文件浏览器的窗口标题栏启用了打包，或者手动使用 <span class="menuselection">图像 ‣ 打包图像</span>，则不需要将图像保存到单独的文件中。</p>
+</div>
+<div class="section" id="using-an-external-image-editor">
+<h2>使用外部图像编辑器<a class="headerlink" href="#using-an-external-image-editor" title="Permalink to this headline">¶</a></h2>
+<p>如果你使用外部软件编辑uv纹理，你必须：</p>
+<ol class="arabic simple">
+<li><p>运行该绘画程序 (GIMP, Photoshop<sup>®</sup> , etc.).</p></li>
+<li><p>载入或创建一个新图像。</p></li>
+<li><p>改变图像。</p></li>
+<li><p>在外部软件中重新保存。</p></li>
+<li><p>返回Blender，在UV/图像编辑器重新载入图像。</p></li>
+</ol>
+<p>如果你的团队成员使用不同的uv纹理制作软件，或者是你想使用一些纹理绘制不具备的特效，或者是你熟悉其他绘画软件的时候，你就需要使用外部软件来处理uv纹理。</p>
+</div>
+<div class="section" id="known-limitations">
+<h2>已知的限制<a class="headerlink" href="#known-limitations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="uv-overlap">
+<h3>UV重叠<a class="headerlink" href="#uv-overlap" title="Permalink to this headline">¶</a></h3>
+<p>通常情况下，重叠的UV是不支持的（比如烘焙贴图）。</p>
+<p>尽管如此，这只是单个笔触多个面上绘制共享纹理的时候会出现的问题。</p>
+</div>
+<div class="section" id="perspective-view-faces-behind-the-view">
+<h3>透视图 &amp;视图背面<a class="headerlink" href="#perspective-view-faces-behind-the-view" title="Permalink to this headline">¶</a></h3>
+<p>透视模式下，当绘制的面的一部分在视图的背面时，这个面绘制不了。为了避免这种情况，可以采用放大或者切换到正交投影视图的方式来绘制。</p>
+</div>
+<div class="section" id="perspective-view-low-poly">
+<h3>透视图&amp;低面多边体<a class="headerlink" href="#perspective-view-low-poly" title="Permalink to this headline">¶</a></h3>
+<p>透视模式下，在法线远离视口（译者注：即法线指向屏幕内侧）的低多边形数物体上绘制时可能会失败，解决办法是在绘制面板中禁用 <em>法线</em> 选项。</p>
+<p>这种典型的情况发生在绘制立方体的侧面的时候（参见 <a class="reference external" href="https://developer.blender.org/T34665">Bug report T34665</a> ）。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tools.html" class="btn btn-neutral float-right" title="工具" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="纹理绘制" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,481 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Options &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/uv_image/uv/textures/types/image/options.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title="Procedural Textures" href="../procedural/index.html" />
+    <link rel="prev" title="Workflow" href="workflow.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../../../3dview/index.html">3D视图</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html">UV/图像编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../navigating.html">视图浏览</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../image/index.html">图像</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html">UV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../display_panel.html">显示面板</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">UV/图像编辑器</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">UV</a> &raquo;</li>
+        
+          <li><a href="../../index.html">纹理</a> &raquo;</li>
+        
+          <li><a href="../index.html">Texture Types</a> &raquo;</li>
+        
+          <li><a href="index.html">Image or Movie</a> &raquo;</li>
+        
+      <li>Options</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../../_sources/editors/uv_image/uv/textures/types/image/options.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="options">
+<h1>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="settings">
+<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<p>In the <em>Settings</em> panel you can define which source file to use.</p>
+<dl class="simple">
+<dt>Image</dt><dd><p>The Image <a class="reference internal" href="../../../../../../interface/controls/templates/data_block.html#ui-data-block"><span class="std std-ref">数据块菜单</span></a>. For the options see <a class="reference internal" href="../../../../image/image_settings.html"><span class="doc">图像设置</span></a>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="alpha">
+<h2>Alpha<a class="headerlink" href="#alpha" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>Alpha</dt><dd><p>Options related to transparency.</p>
+<dl>
+<dt>Use</dt><dd><p>Use the alpha channel information stored in the image.
+Where the alpha value in the image is less than 1.0,
+the object will be partially transparent and things behind it will be visible.
+Works with files like PNG and TGA that can save transparency information.
+The <em>Use Alpha</em> in the <a class="reference internal" href="#settings">Settings</a> panel must be enabled.</p>
+</dd>
+<dt>Calculate</dt><dd><p>Calculate an alpha based on the RGB values of the Image.
+Black (0, 0, 0) is transparent, white (1, 1, 1) opaque.
+Enable this option if the image texture is a mask.
+Note that mask images can use shades of gray that translate to semi-transparency,
+like ghosts, flames, and smoke/fog.</p>
+<table class="docutils align-center" id="id1">
+<caption><span class="caption-text">The image with various alpha and gray-scale values.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../../../../_images/render_blender-render_textures_types_image_options_alpha-use.png"><img alt="../../../../../../_images/render_blender-render_textures_types_image_options_alpha-use.png" src="../../../../../../_images/render_blender-render_textures_types_image_options_alpha-use.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Image with <em>Use</em> alpha. The alpha values of the pixels are evaluated.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../../../../_images/render_blender-render_textures_types_image_options_alpha-calculate.png"><img alt="../../../../../../_images/render_blender-render_textures_types_image_options_alpha-calculate.png" src="../../../../../../_images/render_blender-render_textures_types_image_options_alpha-calculate.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Image with <em>Calculate</em> alpha only, <em>Use Alpha</em> in the <em>Image</em> panel is disabled.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Invert</dt><dd><p>Reverses the alpha value.
+Use this option if the mask image has white where you want it transparent and vice versa.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="mapping">
+<h2>Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id4">
+<img alt="../../../../../../_images/render_blender-render_textures_types_image_options_image-mapping-panel.png" src="../../../../../../_images/render_blender-render_textures_types_image_options_image-mapping-panel.png" />
+<p class="caption"><span class="caption-text">Image Mapping panel.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>In the <em>Mapping</em> panel,
+you can control how the image is mapped or projected onto the 3D model.</p>
+<dl>
+<dt>Flip X/Y Axis</dt><dd><p>Rotates the image 90 degrees counterclockwise when rendered.</p>
+</dd>
+<dt>Extension</dt><dd><dl>
+<dt>Extend</dt><dd><p>Outside the image the colors of the edges are extended.</p>
+</dd>
+<dt>Clip</dt><dd><p>Clip to image size and set exterior pixels as transparent.
+Outside the image, an alpha value of 0.0 is returned.
+This allows you to 'paste' a small logo on a large object.</p>
+</dd>
+<dt>Clip Cube</dt><dd><p>Clips to cubic-shaped area around the images and sets exterior pixels as transparent.
+The same as Clip, but now the 'Z' coordinate is calculated as well.
+An alpha value of 0.0 is returned outside a cube-shaped area around the image.</p>
+</dd>
+<dt>Repeat</dt><dd><p>The image is repeated horizontally and vertically.</p>
+<dl class="simple">
+<dt>Repeat</dt><dd><p>X/Y repetition multiplier.</p>
+</dd>
+<dt>Mirror</dt><dd><p>Mirror on X/Y axes. These buttons allow you to map the texture as a mirror, or automatic flip of the image,
+in the corresponding X and/or Y direction.</p>
+</dd>
+</dl>
+</dd>
+<dt>Checker</dt><dd><p>Checkerboards quickly made.
+You can use the option <em>size</em> on the <em>Mapping</em> panel as well to create the desired number of checkers.</p>
+<dl class="simple">
+<dt>Even/Odd</dt><dd><p>Set even/odd tiles.</p>
+</dd>
+<dt>Distance</dt><dd><p>Governs the distance between the checkers in parts of the texture size.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>Crop Minimum / Crop Maximum</dt><dd><p>The offset and the size of the texture in relation to the texture space.
+Pixels outside this space are ignored.
+Use these to crop, or choose a portion of a larger image to use as the texture.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="sampling">
+<h2>Sampling<a class="headerlink" href="#sampling" title="Permalink to this headline">¶</a></h2>
+<p>In the <em>Sampling</em> panel you can control how the information is retrieved from the image.</p>
+<div class="figure align-center" id="id5">
+<img alt="../../../../../../_images/render_blender-render_textures_types_image_options_image-sampling-panel.png" src="../../../../../../_images/render_blender-render_textures_types_image_options_image-sampling-panel.png" />
+<p class="caption"><span class="caption-text">Image Sampling panel.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>Interpolation</dt><dd><p>This option interpolates the pixels of an image.
+This becomes visible when you enlarge the picture. By default, this option is on.
+Turn this option off to keep the individual pixels visible and if they are correctly anti-aliased.
+This last feature is useful for regular patterns, such as lines and tiles;
+they remain 'sharp' even when enlarged considerably.
+Turn this image off if you are using digital photos to preserve crispness.</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../../../../../../_images/render_blender-render_textures_types_image_options_interpolation-off.png"><img alt="../../../../../../_images/render_blender-render_textures_types_image_options_interpolation-off.png" src="../../../../../../_images/render_blender-render_textures_types_image_options_interpolation-off.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Enlarged Image texture without <em>Interpolation</em>.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../../../../../../_images/render_blender-render_textures_types_image_options_interpolation-on.png"><img alt="../../../../../../_images/render_blender-render_textures_types_image_options_interpolation-on.png" src="../../../../../../_images/render_blender-render_textures_types_image_options_interpolation-on.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Enlarged Image texture with <em>Interpolation</em>.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>MIP Map</dt><dd><p><a class="reference internal" href="../../../../../../glossary/index.html#term-mip-map"><span class="xref std std-term">Mip-maps</span></a> are precalculated, smaller, filtered textures for a certain size.
+A series of pictures is generated, each half the size of the former one.
+This optimizes the filtering process. By default, this option is enabled and speeds up rendering.
+When this option is OFF,
+you generally get a sharper image, but this can significantly increase calculation time if the filter dimension
+(see below) becomes large. Without mip-maps you may get varying pictures from slightly different camera angles,
+when the textures become very small. This would be noticeable in an animation.</p>
+<dl class="simple">
+<dt>MIP Map Gaussian filter</dt><dd><p>Used in conjunction with mip-mapping, it enables the mip-map to be made smaller based on color similarities.
+In game engines, you want your textures, especially your mip-map textures,
+to be as small as possible to increase rendering speed and frame rate.</p>
+</dd>
+</dl>
+</dd>
+<dt>Filter</dt><dd><p>The filter size used in rendering, and also by the options <em>Mip Map</em> and <em>Interpolation</em>.
+If you notice gray lines or outlines around the textured object, particularly where the image is transparent,
+turn this value down from 1.0 to 0.1 or so.</p>
+<dl>
+<dt>Texture Filter Type</dt><dd><p>Texture filter to use for image sampling.
+Just like a <em>pixel</em> represents a <em>pic</em> ture <em>el</em> ement, a <em>texel</em> represents a <em>tex</em> ture <em>el</em> ement.
+When a texture (2D texture space) is mapped onto a 3D model (3D model space),
+different algorithms can be used to compute a value for each pixel based on samples from several texels.</p>
+<dl>
+<dt>Box</dt><dd><p>A fast and simple nearest-neighbor interpolation known as Monte Carlo integration.</p>
+</dd>
+<dt>EWA (Elliptical Weighted Average)</dt><dd><p>One of the most efficient direct
+convolution algorithms developed by Paul Heckbert and Ned Greene in the 1980s.
+For each texel, EWA samples, weights, and accumulates texels within an elliptical
+footprint and then divides the result by the sum of the weights.</p>
+<dl class="simple">
+<dt>Eccentricity</dt><dd><p>Maximum Eccentricity. Higher values give less blur at distant/oblique angles, but is slower.</p>
+</dd>
+</dl>
+</dd>
+<dt>FELINE (Fast Elliptical Lines)</dt><dd><p>Uses several isotropic probes at several points along a line in texture space to produce an anisotropic
+filter to reduce aliasing artifacts without considerably increasing rendering time.</p>
+<dl class="simple">
+<dt>Probes</dt><dd><p>Number of probes to use. An integer between 1 and 256.
+Further reading: McCormack, J; Farkas, KI; Perry, R; Jouppi, NP (1999)
+<a class="reference external" href="http://www.hpl.hp.com/techreports/Compaq-DEC/WRL-99-1.pdf">Simple and Table Feline: Fast Elliptical Lines for Anisotropic Texture Mapping</a>, WRL</p>
+</dd>
+</dl>
+</dd>
+<dt>Area</dt><dd><p>Area filter to use for image sampling.</p>
+<dl class="simple">
+<dt>Eccentricity</dt><dd><p>Maximum Eccentricity. Higher values give less blur at distant/oblique angles, but is slower.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>Filter Size</dt><dd><p>The filter size used by MIP Map and Interpolation.</p>
+</dd>
+<dt>Minimum Filter Size</dt><dd><p>Use Filter Size as a minimal filter value in pixels.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../procedural/index.html" class="btn btn-neutral float-right" title="Procedural Textures" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="workflow.html" class="btn btn-neutral float-left" title="Workflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python错误 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/troubleshooting/python.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="恢复数据" href="recover.html" />
+    <link rel="prev" title="崩溃" href="crash.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">问题排查</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="startup.html">启动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3d_view.html">3D视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html">图形硬件的故障排除</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crash.html">崩溃</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Python错误</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pythonpath">Python路径</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#precompiled-libraries">预编译库</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#platform-specific">平台特定</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ms-windows">MS-Windows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="recover.html">恢复数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#compatibility">兼容性</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">问题排查</a> &raquo;</li>
+        
+      <li>Python错误</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/troubleshooting/python.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-errors">
+<h1>Python错误<a class="headerlink" href="#python-errors" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pythonpath">
+<h2>Python路径<a class="headerlink" href="#pythonpath" title="Permalink to this headline">¶</a></h2>
+<p>如果 &quot;PYTHONPATH&quot; 设置不正确, Blender 将无法加载。</p>
+<p>这对于想要使用自己的Python安装的Python开发人员非常有用，但是，如果设置为不兼容的Python版本，它将完全阻止Blender打开。</p>
+<p>要查看这是否是错误的原因，请暂时取消设置环境变量并重新加载Blender。</p>
+<p>有关详细信息, 请参阅 <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH">Python 文档</a> 。</p>
+</div>
+<div class="section" id="precompiled-libraries">
+<h2>预编译库<a class="headerlink" href="#precompiled-libraries" title="Permalink to this headline">¶</a></h2>
+<p>虽然不是很常见的做法，但是Python插件可以使用他们自己的预编译库进行分发。与常规Python脚本不同，这些脚本在不同平台之间不可移植。</p>
+<p>该库可能与您的Blender安装不兼容（尝试加载为不同版本的Python构建的库，或在64位系统上加载32位库）。</p>
+<p>如果附加组件包含 “.pyd” 或 “.so” 文件，请检查该分发版本是否与您的操作系统兼容。</p>
+</div>
+<div class="section" id="platform-specific">
+<h2>平台特定<a class="headerlink" href="#platform-specific" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ms-windows">
+<h3>MS-Windows<a class="headerlink" href="#ms-windows" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="mixed-python-libraries-dll-s">
+<h4>混合的Python库（DLL）<a class="headerlink" href="#mixed-python-libraries-dll-s" title="Permalink to this headline">¶</a></h4>
+<p>如果Python发生错误，或者您的附加组件在启用错误时失败，例如: <code class="docutils literal notranslate"><span class="pre">...</span> <span class="pre">不是有效的Win32应用程序</span></code> 。</p>
+<div class="figure align-center" id="id1">
+<img alt="../_images/troubleshooting_python_traceback.png" src="../_images/troubleshooting_python_traceback.png" />
+<p class="caption"><span class="caption-text">Python traceback模块 。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>这可能是由于 Python 库中的某些不一致造成的。虽然Blender附带了自己捆绑的 Python 解释器, 但重复的、不兼容的库可能会导致问题。</p>
+<p>要找出哪个Python库导致问题，请检查错误消息。</p>
+<p>他的报告通常在 traceback的底部行附近。有了上面的错误，你会发现问题是在尝试导入  <cite>_socket</cite> 时引起的。这对应于名为 “_socket.py” 或 “_socket.pyd” 的文件。</p>
+<p>为了帮助解决这个问题，可以将以下脚本粘贴到文本编辑器中并运行以检查搜索路径中的重复库。 （输出将显示在 <a class="reference internal" href="../advanced/command_line/introduction.html"><span class="doc">Command Line Window</span></a> 中）。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># Change this based on the library you wish to test</span>
+<span class="n">test_lib</span> <span class="o">=</span> <span class="s2">&quot;_socket.pyd&quot;</span>
+
+<span class="k">def</span> <span class="nf">GetSystemDirectory</span><span class="p">():</span>
+    <span class="kn">from</span> <span class="nn">ctypes</span> <span class="kn">import</span> <span class="n">windll</span><span class="p">,</span> <span class="n">create_string_buffer</span><span class="p">,</span> <span class="n">sizeof</span>
+    <span class="n">GetSystemDirectory</span> <span class="o">=</span> <span class="n">windll</span><span class="o">.</span><span class="n">kernel32</span><span class="o">.</span><span class="n">GetSystemDirectoryA</span>
+    <span class="nb">buffer</span> <span class="o">=</span> <span class="n">create_string_buffer</span><span class="p">(</span><span class="mi">260</span><span class="p">)</span>
+    <span class="n">GetSystemDirectory</span><span class="p">(</span><span class="nb">buffer</span><span class="p">,</span> <span class="n">sizeof</span><span class="p">(</span><span class="nb">buffer</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">fsdecode</span><span class="p">(</span><span class="nb">buffer</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">library_search_paths</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="c1"># Windows search paths</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span>
+        <span class="n">GetSystemDirectory</span><span class="p">(),</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;WINDIR&quot;</span><span class="p">],</span>  <span class="c1"># GetWindowsDirectory</span>
+        <span class="o">*</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;PATH&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">),</span>
+
+        <span class="c1"># regular Python search paths</span>
+        <span class="o">*</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">check_library_duplicate</span><span class="p">(</span><span class="n">libname</span><span class="p">):</span>
+    <span class="n">paths</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">library_search_paths</span><span class="p">()</span>
+             <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">libname</span><span class="p">))]</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Library </span><span class="si">%r</span><span class="s2"> found in </span><span class="si">%d</span><span class="s2"> locations:&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">libname</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">paths</span><span class="p">)))</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;- </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">p</span><span class="p">)</span>
+
+<span class="n">check_library_duplicate</span><span class="p">(</span><span class="n">test_lib</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="recover.html" class="btn btn-neutral float-right" title="恢复数据" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="crash.html" class="btn btn-neutral float-left" title="崩溃" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

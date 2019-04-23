@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/cycles/nodes/introduction.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="开放式着色语言 (OSL)" href="osl.html" />
+    <link rel="prev" title="节点" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lighting/index.html">灯光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../eevee/index.html">Eevee 渲染器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Cycles渲染引擎</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lamps.html">灯光</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../world.html">世界</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">节点</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="osl.html">开放式着色语言 (OSL)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#node-types">节点类型</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../camera.html">Cameras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features.html">渲染功能特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../settings/index.html">Cycles Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gpu_rendering.html">GPU渲染</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../baking.html">渲染烘焙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../optimizations/index.html">Optimizing Renders</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">工作流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opengl.html">OpenGL渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audio/index.html">音频渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="../index.html">Cycles渲染引擎</a> &raquo;</li>
+        
+          <li><a href="index.html">节点</a> &raquo;</li>
+        
+      <li>简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/render/cycles/nodes/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>材质、灯光以及背景都是通过一系列着色器结点进行定义的。这些结点输出值、向量、颜色以及着色器等。</p>
+<div class="section" id="shaders">
+<h2>着色器<a class="headerlink" href="#shaders" title="Permalink to this headline">¶</a></h2>
+<p>在设定结点时，需要了解的一个重要概念就是 <em>shader socket</em> (着色器接口）。所有的表面着色器及体积着色器的输出对象就是着色器，描述了光对于表面及体积内部的作用方式，而不是表面颜色这么简单。</p>
+<p>有几种类型的着色器可以作为结点使用：</p>
+<dl class="simple">
+<dt><abbr title="双向散射分布函数">BSDF</abbr> 着色器</dt><dd><p><abbr title="双向散射分布函数">BSDF</abbr> 着色器 定义物体表面的光的反射、折射与吸收。</p>
+</dd>
+<dt>自发光着色器</dt><dd><p>自发光着色器，定义物体表面或其体积内部的发光。</p>
+</dd>
+<dt>体积着色器</dt><dd><p>体积着色器，定义体积内部的光线散射。</p>
+</dd>
+<dt>背景着色器</dt><dd><p>背景着色器，定义来自环境的发光。</p>
+</dd>
+</dl>
+<p>每种着色器结点都具有颜色输入、输出接口。继而可以使用Mix（混合）与Add（叠加）结点将它们混合或叠加到一起。除此之外不允许其它的操作。输出的结果可被渲染引擎用于计算光的交互作用，判断是直接光照或全局光照。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="types/shaders/index.html"><span class="doc">着色器</span></a></p>
+</div>
+</div>
+<div class="section" id="textures">
+<h2>纹理<a class="headerlink" href="#textures" title="Permalink to this headline">¶</a></h2>
+<p>Cycles中的每种纹理类型都对应了一种结点类型，输入接口包括了纹理坐标和各种参数，而输出接口则是颜色或值。这里不需要纹理数据块，取而代之，可以使用结点组实现对纹理设置方案重复利用。</p>
+<p>对于视窗中的UV贴图及纹理绘制而言，须用到I图像类纹理结点。当将这种结点设为当前选项时，就可以在在纹理显示模式下得以显示，也能够在纹理绘制模式下进行绘制了。</p>
+<p>所有结点的默认纹理坐标类型是Generated（生成）坐标，默认情况下使用UV坐标的图像纹理除外。每个节点都包含一些修改纹理映射和结果颜色的选项，这些可以在纹理属性中编辑。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="types/textures/index.html"><span class="doc">Textures</span></a></p>
+</div>
+</div>
+<div class="section" id="more">
+<h2>扩展选区<a class="headerlink" href="#more" title="Permalink to this headline">¶</a></h2>
+<p>几何数据、纹理坐标、分层着色器结点，以及非物理特性的使用技巧可以在以下链接学习：</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="types/vector/index.html"><span class="doc">Vector Nodes</span></a></p></li>
+<li><p><a class="reference internal" href="types/color/index.html"><span class="doc">Color Nodes</span></a></p></li>
+<li><p><a class="reference internal" href="types/converter/index.html"><span class="doc">转换类节点</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="open-shading-language">
+<h2>开放式着色语言 (OSL)<a class="headerlink" href="#open-shading-language" title="Permalink to this headline">¶</a></h2>
+<p>可以使用开放着色语言编写的自定义节点。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="osl.html"><span class="doc">Open Shading Language</span></a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="osl.html" class="btn btn-neutral float-right" title="开放式着色语言 (OSL)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="节点" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

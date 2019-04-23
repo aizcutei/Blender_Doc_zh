@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/advanced/command_line/introduction.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="命令行参数" href="arguments.html" />
+    <link rel="prev" title="命令行" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">高级应用</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">命令行</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#platform-dependent-instructions">平台相关说明</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#console-window-status-and-error-messages">控制台状态和错误信息</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arguments.html">命令行参数</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../scripting/index.html">脚本与扩展Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../app_templates.html">应用模板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../keymap_editing.html">Keymap Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../limits.html">功能局限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators.html">操作</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">高级应用</a> &raquo;</li>
+        
+          <li><a href="index.html">命令行</a> &raquo;</li>
+        
+      <li>简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/advanced/command_line/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p><em>控制台窗口</em> ，又称作 <em>终端</em> ，是一个操作系统文本窗口，用于显示Blender操作、状态和内部错误相关信息。</p>
+<p>用处:</p>
+<ul class="simple">
+<li><p>用于自动化和批处理，使用不同 <a class="reference internal" href="arguments.html"><span class="doc">参数</span></a> 启动Blender。</p></li>
+<li><p>Python开发时，可以查看 <code class="docutils literal notranslate"><span class="pre">print()</span></code> 命令的输出。</p></li>
+<li><p>如果Blender意外退出，控制台显示的信息也许可以指示原因或者错误。</p></li>
+<li><p>排查错误时， 查看 <code class="docutils literal notranslate"><span class="pre">--debug</span></code> 信息输出。</p></li>
+</ul>
+<div class="section" id="platform-dependent-instructions">
+<h2>平台相关说明<a class="headerlink" href="#platform-dependent-instructions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<p>Linux中的Blender <em>控制台窗口</em> 只有在使用终端手动启动Blender才会出现，Blender会在其启动的 <em>控制台窗口</em> 输出信息。</p>
+<p>根据桌面环境不同，安装Blender后，Blender图标可能出现在桌面或者在菜单新增Blender条目。通常可以编辑该图标，请启动 &quot;在终端启动&quot;。</p>
+<div class="figure align-center" id="id1">
+<img alt="../../_images/advanced_command-line_introduction_kde.png" src="../../_images/advanced_command-line_introduction_kde.png" />
+<p class="caption"><span class="caption-text">配置KDE菜单为从终端启动Blender。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>屏幕截图显示的是从Linux终端启动Blender以及终端上打印的文本结果：</p>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/advanced_command-line_introduction_linux.png" src="../../_images/advanced_command-line_introduction_linux.png" />
+<p class="caption"><span class="caption-text">从Linux终端启动Blender。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="apple-macos">
+<h3>Apple macOS<a class="headerlink" href="#apple-macos" title="Permalink to this headline">¶</a></h3>
+<p>macOS使用 <code class="docutils literal notranslate"><span class="pre">.app</span></code> 扩展名的 &quot;文件&quot; ，称之为 <em>应用</em>. 这些文件实际上在Finder中表现为文件的文件夹。要运行Blender，你需要指定指向文件夹中Blender可执行文件的路径，才能在终端打印输出。你可以从  <span class="menuselection">Applications ‣ Utilities</span> 启动终端， <code class="docutils literal notranslate"><span class="pre">.app</span></code> 文件夹中可执行文件的路径为 <code class="docutils literal notranslate"><span class="pre">./blender.app/Contents/MacOS/blender</span></code> 。</p>
+<p>如果你已经在应用文件夹安装Blender，可以使用下面的命令：</p>
+<pre class="literal-block">/Applications/blender-2.80/blender.app/Contents/MacOS/blender</pre>
+<div class="figure align-center" id="id3">
+<img alt="../../_images/advanced_command-line_introduction_mac.png" src="../../_images/advanced_command-line_introduction_mac.png" />
+<p class="caption"><span class="caption-text">从macOS控制台窗口启动Blender。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="microsoft-windows">
+<h3>Microsoft Windows<a class="headerlink" href="#microsoft-windows" title="Permalink to this headline">¶</a></h3>
+<p>在MS-Windows操作系统中启动Blender后，首先会在桌面新建一个单独的 <em>控制台窗口</em> (称为命令行提示)。Blender主窗口出现后，并且 <em>控制台窗口</em> 会被切换关闭。想要重新显示控制台，使用 <span class="menuselection">窗口 ‣ 切换显示系统控制台</span> 。</p>
+<p>要从命令行启动Blender，需要先打开一个命令行提示符窗口。按下 <kbd class="kbd docutils literal notranslate">WinKey-R</kbd> ，输入 <code class="docutils literal notranslate"><span class="pre">cmd</span></code>，就可以打开命令行提示符窗口。接下来你需要找到Blender执行文件路&quot;径。如果你是使用安装器安装的Blender，路径可能是这个:</p>
+<pre class="literal-block">C:\Program Files\Blender Foundation\Blender\blender.exe</pre>
+<div class="figure align-center" id="id4">
+<img alt="../../_images/advanced_command-line_introduction_windows.png" src="../../_images/advanced_command-line_introduction_windows.png" />
+<p class="caption"><span class="caption-text">Microsoft Windows中的Blender控制台窗口。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>屏幕截图显示的是在 Microsoft Windows 直接启动Blender后，出现的 <em>控制台窗口</em> ，打开文件之后控制台会显示相关信息。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>关闭Blender控制台窗口</p>
+<p>关闭 <em>控制台窗口</em> 会同时关闭Blender，丢失未保存数据。</p>
+<p>在不关闭Blender的情况下关闭控制台，只需再次从菜单运行 <em>切换显示系统控制台</em> (如前所述)。</p>
+</div>
+</div>
+</div>
+<div class="section" id="console-window-status-and-error-messages">
+<h2>控制台状态和错误信息<a class="headerlink" href="#console-window-status-and-error-messages" title="Permalink to this headline">¶</a></h2>
+<p><em>Blender控制台窗口</em> 可以显示很多不同类型的状态和错误消息。一些小事只是告知用户Blender在干什么，但是对Blender的功能没有任何实质影响。其他的消息可以指示一些严重错误，这些错误会妨碍Blender执行特定任务并且可能会让Blender无响应或者彻底关闭。 <em>Blender 控制台窗口</em> 消息也可以Blender内部代码或外部来源的 <a class="reference internal" href="../../preferences/addons.html"><span class="doc">Python 脚本</span></a> 引起。</p>
+<div class="section" id="common-messages">
+<h3>常见信息<a class="headerlink" href="#common-messages" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">found</span> <span class="pre">bundled</span> <span class="pre">python:</span> <span class="pre">(FOLDER)</span></code></p>
+<p>这条消息表示Blender能够找到Blender中内置的Python解释器所需的 <a class="reference internal" href="../scripting/index.html#scripting-index"><span class="std std-ref">Python</span></a> 库 。如果该文件夹丢失或者无法找到，将会发生错误，这条消息也不会出现。</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">malloc</span> <span class="pre">returns</span> <span class="pre">nil()</span></code></p>
+<p>在Blender执行一些需要额外内存(RAM)的操作时，会调用一个叫做malloc(内存不足)的功能，试图为Blender分配所需内存。如果无法满足需求，malloc会返回 nil/null/0 ，表示执行请求失败。如果发生这种情况，Blender无法执行用户请求的操作。这很可能导致Blender操作变慢或者关闭。如果你想避免耗尽内存，可以为你的系统添加更多内存，减少Blender模型中的细节数量，或者关闭其他占用Blender可用内存的程序和服务。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arguments.html" class="btn btn-neutral float-right" title="命令行参数" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="命令行" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

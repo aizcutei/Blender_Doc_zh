@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/cycles/materials/introduction.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="材质面板" href="material_panel.html" />
+    <link rel="prev" title="材质" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lighting/index.html">灯光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../eevee/index.html">Eevee 渲染器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Cycles渲染引擎</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">材质</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="material_panel.html">材质面板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="assigning_a_material.html">指定材质</a></li>
+<li class="toctree-l4"><a class="reference internal" href="preview.html">预览</a></li>
+<li class="toctree-l4"><a class="reference internal" href="surface.html">表面</a></li>
+<li class="toctree-l4"><a class="reference internal" href="volume.html">体积着色器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="displacement.html">置换着色器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="settings.html">材质设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="texture_editing.html">纹理编辑</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lamps.html">灯光</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../world.html">世界</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nodes/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera.html">Cameras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features.html">渲染功能特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../settings/index.html">Cycles Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gpu_rendering.html">GPU渲染</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../baking.html">渲染烘焙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../optimizations/index.html">Optimizing Renders</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">工作流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opengl.html">OpenGL渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audio/index.html">音频渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="../index.html">Cycles渲染引擎</a> &raquo;</li>
+        
+          <li><a href="index.html">材质</a> &raquo;</li>
+        
+      <li>简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/render/cycles/materials/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>材质定义了物体所组成的物质的艺术品质。在最简单的形式中, 你可以使用材质来显示物体所构成的物质, 或用不同的颜色 &quot;绘制&quot; 物体。通常, 该物质由其表面品质 (颜色、光泽、反射率等) 表示, 但也会产生更复杂的效果, 如透明度、衍射和次表面散射。典型的材质可能是黄铜、皮肤、玻璃或亚麻。</p>
+<p>材质还可以包含置换信息来描述材质如何升高和降低材质表面。</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/render_blender-render_materials_introduction_demo.jpg"><img alt="../../../_images/render_blender-render_materials_introduction_demo.jpg" src="../../../_images/render_blender-render_materials_introduction_demo.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">各种基本材质（单材质、多材质、透明、顶点绘制）。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>基本 (无纹理) blender 材质在物体的每个面上都是均匀的 (尽管由于照明效果, 物体的每个面的各种像素可能会出现不同的外观)。但是, 物体的不同面可以使用不同的材质 (请参见 <a class="reference internal" href="assigning_a_material.html#bi-multiple-materials"><span class="std std-ref">多重材质</span></a> )。</p>
+<p>在 blender 中, 材质可以 (可选) 具有关联的纹理。纹理 <em>描述</em>  物质: 例如 <em>抛光</em> 的黄铜, <em>脏</em> 的玻璃或 <em>绣花</em> 的亚麻布。 <a class="reference internal" href="../../../editors/uv_image/uv/textures/index.html"><span class="doc">Textures</span></a> 一章介绍了如何向材质添加纹理。</p>
+<div class="section" id="how-materials-work">
+<h2>材质如何工作<a class="headerlink" href="#how-materials-work" title="Permalink to this headline">¶</a></h2>
+<p>在了解如何有效地使用材质进行设计之前, 你必须了解 blender 的模拟光线和表面在渲染引擎中是如何相互作用的, 以及如何设置材质控制这些相互作用。深入了解引擎将帮助你从中获得最大收益。</p>
+<p>使用Blender创建的渲染图像是将场景投影到称为 <em>视图平面</em> 的假想表面上。视图平面类似于传统相机中的胶片，或者人眼中的视杆和视锥，除了接受模拟光，而不是真正的光外。</p>
+<p>要渲染场景的图像，必须首先确定场景中的光线到视图平面上的每个点。回答这个问题的最佳方法是沿着直线（模拟光线）向后穿过视图平面上的该点和焦点（相机的位置），直到它碰到场景中的可渲染表面，在该点上，我们可以确定哪些光线会击中到该点。</p>
+<p>表面特性和入射光角度告诉我们有多少光线会沿入射视角反射回来  <em>（渲染引擎基本原理）</em> 。</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/render_blender-render_materials_introduction_basic-principle.svg"><img alt="../../../_images/render_blender-render_materials_introduction_basic-principle.svg" src="../../../_images/render_blender-render_materials_introduction_basic-principle.svg" width="480px" /></a>
+<p class="caption"><span class="caption-text">渲染引擎基本原理。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>当光线照射到表面上时，在表面上的任何点发生两种基本类型的现象：漫反射和高光反射。漫反射和高光反射主要通过入射光角度和反射光角度之间的关系来区分。</p>
+<p>在渲染过程中，物体的着色（或颜色）将考虑基础颜色（由漫反射和高光反射现象修改）和光强度。</p>
+<p>使用内部光线跟踪器，可能会发生其他（更高级）现象。在光线跟踪反射中，光线照射的表面点将根据材料的反射速率（混合基色和周围环境）和视角返回其周围环境的颜色。</p>
+<p>另一方面，在光线跟踪折射中，被光线照射的表面点将根据材质的透明度（基础颜色和背景环境的混合及其可选过滤值）和材质的可选折射率返回其背景环境的颜色，这将会扭曲视角。</p>
+<p>当然，光线照射的物体的着色将是在渲染过程中同时混合所有这些现象。物体渲染时的外观取决于许多相关设置：</p>
+<ul class="simple">
+<li><p>世界（环境颜色，辐射，环境遮蔽）</p></li>
+<li><p>灯光</p></li>
+<li><p>材质设置（包括环境、发光和该选项卡中每个面板上的其他设置）</p></li>
+<li><p>纹理及其混合方式</p></li>
+<li><p>材质节点</p></li>
+<li><p>相机</p></li>
+<li><p>视角</p></li>
+<li><p>障碍和透明遮挡</p></li>
+<li><p>来自其他不透明/透明物体的阴影</p></li>
+<li><p>渲染设置</p></li>
+<li><p>物体尺寸（SS设置与尺寸相关）</p></li>
+<li><p>物体形状（折射，菲涅耳效应）</p></li>
+</ul>
+</div>
+<div class="section" id="using-materials">
+<h2>使用材质<a class="headerlink" href="#using-materials" title="Permalink to this headline">¶</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>检查你的渲染</p>
+<p>在设计材质（以及纹理和光照）时，请经常使用所选的渲染引擎/着色器设置检查场景的渲染外观。外观可能与3D面板中纹理显示中显示的外观完全不同。</p>
+</div>
+<p>如上所述，材质设置通常决定物体的表面属性。有几种方法可以在Blender中设置材质。一般来说，这些是不兼容的。必须为场景中的每个特定物体选择要使用的方法：</p>
+<ol class="arabic simple">
+<li><p>首先，你可以在各种材质面板中设置材质 <a class="reference internal" href="settings.html"><span class="doc">属性</span></a>。</p></li>
+<li><p>其次，你可以使用 <a class="reference internal" href="../nodes/index.html"><span class="doc">节点</span></a> ; 可以使用图形节点编辑器。</p></li>
+<li><p>最后，你可以使用各种特殊效果直接设置物体表面的颜色。严格来说，这些根本不是材质，但它们包括在这里因为它们会影响物体的外观。这些包括  <a class="reference internal" href="../../../sculpt_paint/painting/vertex_paint/index.html#painting-vertex-index"><span class="std std-ref">Vertex Painting</span></a>, <a class="reference internal" href="../nodes/types/input/wireframe.html"><span class="doc">Wire Rendering</span></a>, <a class="reference internal" href="volume.html"><span class="doc">Volume Rendering</span></a>。</p></li>
+</ol>
+<p>材质设置的确切效果可能会受到许多系统设置的影响。首先，最重要的是所使用的渲染器：Cycles和Blender渲染器（也称为Blender内部渲染器或BI）需要相当不同的照明级别来获得类似的结果，即使这样，物体的外观也可能会非常不同。此外，材质属性设置可能会受到所使用的纹理方法（单纹理、多纹理或GLSL）的影响。因此，在开始材质设计之前，建议始终选择适当的系统设置。</p>
+<div class="figure align-center">
+<img alt="../../../_images/render_cycles_materials_introduction_shaders.svg" src="../../../_images/render_cycles_materials_introduction_shaders.svg" /></div>
+</div>
+<div class="section" id="surface-shader">
+<h2>表面着色器<a class="headerlink" href="#surface-shader" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="surface.html"><span class="doc">表面着色器</span></a> 定义了网格表面的光线交互状态。</p>
+</div>
+<div class="section" id="volume-shader">
+<h2>体积着色器<a class="headerlink" href="#volume-shader" title="Permalink to this headline">¶</a></h2>
+<p>当表面着色器既不反射也不吸收光线时，光线会进入到物体内部。如果不指定任何的 <a class="reference internal" href="volume.html"><span class="doc">体积着色器</span></a>，它将直接穿透到达网格的另一头。</p>
+<p>如果进行了定义，那么一个体积着色器就会对光线经过物体内部时的作用效果进行说明。光线可能会被散射、吸收或是照亮内部的任意点。</p>
+<p>一个材质可以同时具有表面着色器和体积着色器属性，或是只含其一。同时使用二者时，有助于表现如玻璃、水或冰块等材质。例如，当你需要一部分光在穿过物体被吸收，兼具玻璃着色器和光泽着色器属性的表面的情况。</p>
+</div>
+<div class="section" id="displacement">
+<h2>置换着色器<a class="headerlink" href="#displacement" title="Permalink to this headline">¶</a></h2>
+<p>表面以及内部的形状可以通过 <a class="reference internal" href="displacement.html"><span class="doc">置换</span></a> 改变。用这种方式，贴图可以让网格表面的细节程度得到增强。</p>
+<p>如果设置得当，置换效果可以只调节表面法线即可虚拟呈现效果，也就是传说中的凹凸贴图，又或者实现虚实结合的置换效果。</p>
+</div>
+<div class="section" id="energy-conservation">
+<h2>能量守恒<a class="headerlink" href="#energy-conservation" title="Permalink to this headline">¶</a></h2>
+<p>材质系统是基于物理渲染思想的基础上建立的，将材质的感官形式与所用的渲染算法进行泾渭分明的划分。这样做会比较易于获得逼真的效果以及均衡的光照，不过需要注意几点。</p>
+<p>为了能够让材质在全局光中取得理想的效果， 用户应该遵循物理原则，质能守恒定律。这意味着，物体所反射的光量不能多于入射的光量。这种属性并没有强制限定，但如果色彩值在0.0-1.0之间，并且 <abbr title="双向散射分布函数">BSDF</abbr> 着色器只通过Mix Shader（混合着色器）结点进行混合的话，那么结果就是正确的。</p>
+<p>然而，这种情况则例外：当色彩值高于1.0，或者使用了Add Shader（叠加着色器）结点的时候，你必须谨慎操作，确保材质的效果在各种光照情况下都在预料之内。因为这种情况下会导致在系统中每当光线被反射时都会被多反射一次，使得 <abbr title="双向散射分布函数">BSDF</abbr> 着色器呈现出一种类似于自发光的效果。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="material_panel.html" class="btn btn-neutral float-right" title="材质面板" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="材质" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

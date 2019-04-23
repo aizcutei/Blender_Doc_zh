@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/uv_image/uv/editing/unwrapping/introduction.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="映射类型" href="mapping_types.html" />
+    <link rel="prev" title="展开" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../../3dview/index.html">3D视图</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html">UV/图像编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../navigating.html">视图浏览</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../image/index.html">图像</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html">UV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../display_panel.html">显示面板</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">UV/图像编辑器</a> &raquo;</li>
+        
+          <li><a href="../../index.html">UV</a> &raquo;</li>
+        
+          <li><a href="../index.html">编辑</a> &raquo;</li>
+        
+          <li><a href="index.html">展开</a> &raquo;</li>
+        
+      <li>简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../_sources/editors/uv_image/uv/editing/unwrapping/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>第一步是展开网格。在网格编辑结束，面数足够的情况下，你想要展开UV。如果对已经展开UV的模型添加面或者细分现有面，Blender会自动为你添加这些新的面，不过你得做额外的映射或编辑。这种情况下，可以使用UV贴图来引导修改新增的几何元素。</p>
+<div class="section" id="about-uvs">
+<h2>关于UV<a class="headerlink" href="#about-uvs" title="Permalink to this headline">¶</a></h2>
+<p>UV中的每一点对应网格上的一个顶点。连接UV的线条对应网格上的边。UV上的每个面对应一个网格面。</p>
+<p>网格上的每个面都可以有多个UV纹理。每个UV纹理可以指定一个单独的图像。把一个面展开为UV/图像编辑器的一张UV纹理，网格的每个面都被自动赋予 <em>四个UV坐标:</em> 这些坐标定义了图像或纹理映射至面的方式。它们都是二维坐标，这也是称作UV的原因，与XYZ坐标加以区别。这些坐标可以用于渲染或实时OpenGL显示。</p>
+<p>在Blender中，可以为一个面关联一个独立的图像。UV坐标定义图像如何映射到面。然后图像可以用于渲染或实时显示。在3D视图中选择 <em>面选择</em> 模式，才能指定图像或修改活动网格物体对应的UV坐标。这样一个面可以有多张UV贴图。角色前额的面要用到面部贴图， <em>同时</em> 也用到头皮/头发贴图。</p>
+<p>这些将在下一节详述。</p>
+</div>
+<div class="section" id="getting-started">
+<h2>入门<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../../../_images/editors_uv-image_uv_editing_unwrapping_introduction_screenlayout.png"><img alt="../../../../../_images/editors_uv-image_uv_editing_unwrapping_introduction_screenlayout.png" src="../../../../../_images/editors_uv-image_uv_editing_unwrapping_introduction_screenlayout.png" style="width: 620px;" /></a>
+<p class="caption"><span class="caption-text">UV编辑屏幕布局。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>默认情况下，网格是没有UV的。首先你得映射面，然后才能 <a class="reference internal" href="../layout.html"><span class="doc">编辑它们</span></a>。展开模型的过程是在3D视图编辑器的编辑模式下进行的。该流程会在 <a class="reference internal" href="../../../index.html#editors-uv-image-index"><span class="std std-ref">UV/图像编辑器</span></a> 创建一个或多个UV孤岛。</p>
+<p>开始前，从屏幕顶部的用户设置标题栏选择 <a class="reference internal" href="../../../../../interface/window_system/workspaces.html"><span class="doc">工作空间</span></a> 为 <em>UV Editing</em>。屏幕布局变为左侧UV/图像编辑器 右侧 3D视图。</p>
+<p>进入 <em>编辑模式</em>，因为所有的展开工作都要在编辑模式下。你可以使用顶点、面或边选择模式。</p>
+<div class="section" id="workflow">
+<h3>工作流程<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h3>
+<p>展开的过程是很直接的，不过有大量的选项，这些都会造成展开结果的巨大差异。理解了这些选项背后的含义，可以更高效地展开。</p>
+<p>流程如下：</p>
+<ol class="arabic simple">
+<li><p>如有必要，标记缝合线。</p></li>
+<li><p>选择所有网格元素。</p></li>
+<li><p>从UV展开菜单选择合适的UV映射方法。</p></li>
+<li><p>调整展开设置。</p></li>
+<li><p>添加测试图像，检查畸变。参考 <a class="reference internal" href="../applying_image.html"><span class="doc">应用图像至UV</span></a>。</p></li>
+<li><p>在UV/图像编辑器调整UV。参考 <a class="reference internal" href="../layout.html"><span class="doc">编辑UV</span></a>。</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mapping_types.html" class="btn btn-neutral float-right" title="映射类型" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="展开" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

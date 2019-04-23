@@ -1,0 +1,573 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>螺旋工具 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/duplicating/screw.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="细分" href="../subdividing/index.html" />
+    <link rel="prev" title="旋绕" href="spin.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">选择</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/index.html">基础</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vertices.html">顶点工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../edges.html">边工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../faces.html">面工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../transform/index.html">变形</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">复制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">细分</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cleanup.html">清理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../misc.html">其他编辑工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_transfer.html">数据传递</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mesh_options.html">网格选项</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_display.html">网格显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../../index.html">网格</a> &raquo;</li>
+        
+          <li><a href="../index.html">编辑</a> &raquo;</li>
+        
+          <li><a href="index.html">复制</a> &raquo;</li>
+        
+      <li>螺旋工具</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/modeling/meshes/editing/duplicating/screw.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="screw-tool">
+<span id="bpy-ops-mesh-screw"></span><h1>螺旋工具<a class="headerlink" href="#screw-tool" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 网格工具 ‣ 添加: 螺旋</span></p>
+</dd>
+</dl>
+</div>
+<p><em>螺旋</em> 工具是将重复的 <em>旋绕</em> 与移动结合，生成类似螺纹，或者螺旋形的物体。使用该工具制作螺纹、弹簧或者壳形结构(海贝、木螺钉尖、特殊轮廓等)。</p>
+<p>螺旋工具和 <a class="reference internal" href="../../../modifiers/generate/screw.html"><span class="doc">螺旋修改器</span></a> 的主要差异在于螺旋工具可以自动使用基础轮廓计算角度前进量。它无需其他修改器(比如，将倒角修改器、曲线修改器与螺旋修改器一起使用)就可以调整轴向角度向量，实现更加干净的顶点分布和用法。</p>
+<p>该工具可用于开放或者闭合的轮廓，也可以是带有闭合面的轮廓。用户可以使用整体的一条开放边线作为轮廓，也可以是一个封闭的圆或者半球这样闭合的轮廓。</p>
+<p>图 <a class="reference internal" href="#fig-mesh-screw-wood"><span class="std std-ref">使用螺旋工具制作的木螺丝尖。</span></a> 和图 <a class="reference internal" href="#fig-mesh-screw-spring"><span class="std std-ref">螺旋工具制作的弹簧。</span></a> 可以看到使用 <em>螺旋</em> 工具生成网格的一些例子。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<span id="fig-mesh-screw-wood"></span><img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_example-shell.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_example-shell.png" />
+<p class="caption"><span class="caption-text">使用螺旋工具制作的木螺丝尖。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id2">
+<span id="fig-mesh-screw-spring"></span><img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_example-spring.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_example-spring.png" />
+<p class="caption"><span class="caption-text">螺旋工具制作的弹簧。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>该工具仅可在 <em>编辑模式</em> 下作用于网格， <em>螺旋</em> 工具的按钮位于 <em>网格工具</em> 面板， <span class="menuselection">工具栏 ‣ 网格工具 ‣ 添加: 螺旋</span>。使用该工具前，需要至少创建一个开放轮廓或线条，用作高度向量、角度向量，并给Blender提供一个方向。</p>
+<p><em>螺旋</em> 工具使用开放线条的提供的两个点来创建初始向量，计算为每圈“弯绕”叠加的平移向量的高度和基础角度(见下文范例)。如果该向量是由两个相同(X, Y, Z)坐标的顶点创建的(无法向Blender提供一个用作高度的向量值)，操作等同于常规&quot;弯绕&quot;。</p>
+<p>向量直线准备好之后，就可以添加其他沿该向量挤出的闭合轮廓了(见 <a class="reference internal" href="#limitations">限制</a>)。挤出的方向是根据两个决定因子计算的：全局空间中的视点和全局坐标空间中的游标位置。在按下 <em>螺旋按钮</em> 前，必须先在 <em>编辑模式</em> 选中该轮廓和向量(见 <a class="reference internal" href="#limitations">限制</a>)。选中用作向量的开放轮廓和其余闭合轮廓后，单击 <em>螺旋</em> 按钮。</p>
+</div>
+<div class="section" id="limitations">
+<h2>限制<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<p>该工具对选定的轮廓有严格的限制。用户需要至少选择一段开放的线条或轮廓，以提供挤出的起始向量、角度向量和高度(比如：简单的一条边、一个半圆等)。用户需要确保参考线两端“自由”。如果提供了两段开放线条，Blender无法确定使用哪一根作为起始向量，且会显示错误信息 <code class="docutils literal notranslate"><span class="pre">&quot;你还得另选一串相连的顶点&quot;</span></code>。用户需要选择所有参与 <em>螺旋</em> 操作的轮廓顶点；如果选择的不恰当，Blender也会显示前面相同的错误信息。</p>
+<p>注意：开放的线条同样会被挤出，所以如果它只是用作&quot;引导&quot;螺旋操作，操作结束后需手动删除(使用关联选择 <kbd class="kbd docutils literal notranslate">Ctrl-L</kbd>，选中开放线条的整个挤出结果)。</p>
+<p>如果还有其他的选中项或轮廓错误，信息编辑器和单击操作位置(单击螺旋按钮的位置)会同时显示错误信息： <code class="docutils literal notranslate"><span class="pre">&quot;你还得另选一串相连的顶点&quot;</span></code>，如图 <a class="reference internal" href="#fig-mesh-screw-error-info"><span class="std std-ref">信息编辑器标题栏上的螺旋错误信息。</span></a> 与 图 <a class="reference internal" href="#fig-mesh-screw-error-popup"><span class="std std-ref">选中项错误时，单击螺旋工具时显示的错误信息。</span></a>。</p>
+<div class="figure align-center" id="id3">
+<span id="fig-mesh-screw-error-info"></span><img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_error-msg-info-editor.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_error-msg-info-editor.png" />
+<p class="caption"><span class="caption-text">信息编辑器标题栏上的螺旋错误信息。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id4">
+<span id="fig-mesh-screw-error-popup"></span><img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_error-msg-tool.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_error-msg-tool.png" />
+<p class="caption"><span class="caption-text">选中项错误时，单击螺旋工具时显示的错误信息。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>用户可以同时使用任意数量的轮廓(比如圆、方形等) --要注意的是，并不要求所有轮廓都是共面的，尽管这是最常见的情况。用户还可以使用其他更加复杂的闭合孤岛，不过它们都必须是闭合的轮廓，因为Blender只需要一个开放轮廓来确定移动、高度和角度向量。一些自重叠的闭合网格可能无法获得正确的螺旋结果(比如：半个经纬球没问题，但是多于半个会导致异常结果或错误)，并且包含多个面的闭合轮廓(比如圆锥或半球)会在其端点自动封闭，如同只对部分区域进行挤出一样。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>避免错误的简单方法</p>
+<p>仅使用一个开放轮廓，其他轮廓都是闭合的，避免体轮廓和一些多个面组成的闭合轮廓。</p>
+</div>
+</div>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<p>该工具是交互式和模态化的，并且只能在 <em>编辑模式</em> 使用。</p>
+<p>在网格工具面板单击 <em>螺旋</em> 工具过后，Blender会进入 <em>螺旋</em> 交互模式，网格工具面板下方的操作面板将替换为当前操作，以对下文提到的这些参数进行调整。在3D视图编辑模式下，使用快捷键 <kbd class="kbd docutils literal notranslate">T</kbd>，显示网格工具面板。</p>
+<p>一旦进行了其他操作后，Blender将退出交互模式，接受其他输入。由于该操作是模态的，所以无法在结束/退出操作或切换为 <em>物体模式</em> 后回到该交互模式。如果想要重新执行该操作，可以在 <em>编辑模式</em> 按下 <kbd class="kbd docutils literal notranslate">Ctrl-Z</kbd> 撤销操作。</p>
+<p>游标在视图中的位置(使用全局坐标系)将决定选中元素挤出和弯绕围绕的轴向(见图 <a class="reference internal" href="#fig-mesh-screw-transform-panel"><span class="std std-ref">属性栏 ‣ 3D游标.</span></a>)。Blender会将游标坐标复制为 <em>螺旋</em> 交互面板上的 <em>中心</em> 值。根据其全局位置，Blender会自动添加一个大小为1的轴向量，赋予轮廓一个螺旋操作的初始方向和挤出方向(见下文范例)。</p>
+<p>3D游标的位置将作为旋转开始的中心。接下来的操作(比如再次执行螺旋操作)会从最后一组选中元素开始。不改变选中元素继续操作的话，会从最后一组顶点继续操作。</p>
+<div class="figure align-center" id="id5">
+<span id="fig-mesh-screw-transform-panel"></span><img alt="../../../../_images/editors_3dview_3d-cursor_panel.png" src="../../../../_images/editors_3dview_3d-cursor_panel.png" />
+<p class="caption"><span class="caption-text"><span class="menuselection">属性栏 ‣ 3D游标</span>.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id6">
+<span id="fig-mesh-screw-interactive-panel"></span><img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_interactive-panel.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_interactive-panel.png" />
+<p class="caption"><span class="caption-text">螺旋工具操作面板 (编辑模式)。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>中心</dt><dd><p>这几个数字按钮用于指定弯绕的中心。执行操作时，将复制当前3D视图中游标的(X, Y, Z)位置(全局坐标)启动操作。可以使用快捷键: kbd:<cite>N</cite> 打开属性面板，输入游标坐标值，指定游标坐标。在交互操作时，可以调整坐标，指定其他位置作为弯绕中心(见图 <a class="reference internal" href="#fig-mesh-screw-interactive-panel"><span class="std std-ref">螺旋工具操作面板 (编辑模式)。</span></a>)。</p>
+</dd>
+<dt>步数</dt><dd><p>该数字按钮用于指定360度一圈所执行的挤出次数。这些步数在360度范围内均匀分配。最小值为3；最大值为256 (见图 <a class="reference internal" href="#fig-mesh-screw-interactive-panel"><span class="std std-ref">螺旋工具操作面板 (编辑模式)。</span></a>)。</p>
+</dd>
+<dt>圈数</dt><dd><p>该数字按钮用于指定旋转的圈数。数字每提高1，就多一圈螺旋。最小值为1；最大值为256 (见图 <a class="reference internal" href="#fig-mesh-screw-interactive-panel"><span class="std std-ref">螺旋工具操作面板 (编辑模式)。</span></a>)。</p>
+</dd>
+<dt>轴向</dt><dd><p>这三个数值框限制输入范围为 (-1.0 to 1.0)。这些值分别对应(-90 to 90)度的角度向量。根据游标和操作对象在视图中的位置，及其全局空间中的轴向和坐标，Blender会得出一个大小为1的轴向量，给轮廓角度向量一个起始方向，给挤出一个起始方向。Blender允许调整轴向向量，用户可以借此翻转螺旋的方向(通过翻转高度的角度向量)，这意味着可以调整操作的顺时针和逆时针方向，同时调整轮廓的角度向量，获得对应的弯曲(见图 <a class="reference internal" href="#fig-mesh-screw-interactive-panel"><span class="std std-ref">螺旋工具操作面板 (编辑模式)。</span></a>)。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="examples">
+<h2>范例<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-spring-example">
+<h3>弹簧<a class="headerlink" href="#the-spring-example" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id7">
+<span id="fig-mesh-screw-circle"></span><img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_circle-moved-x-3bu.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_circle-moved-x-3bu.png" />
+<p class="caption"><span class="caption-text">中心位于X轴 (-3, 0, 0)的圆。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple">
+<li><p>打开Blender，删除默认立方体。</p></li>
+<li><p>快捷键 <kbd class="kbd docutils literal notranslate">Numpad5</kbd> 将视图模式从透视调整为正交。</p></li>
+<li><p>快捷键 <kbd class="kbd docutils literal notranslate">Numpad1</kbd> 将视图模式从 <em>用户正交</em> 调整为 <em>前视正交</em>，这时可以看到X(红)和Z(蓝)向轴线。</p></li>
+<li><p>使用 <kbd class="kbd docutils literal notranslate">Shift-S</kbd> 选择 <em>游标 -&gt; 中心点</em> 或直接在3D游标面板将游标坐标修改为(0, 0, 0)，以防单击将游标移动到了屏幕的其他位置。</p></li>
+<li><p>快捷键 <kbd class="kbd docutils literal notranslate">Shift-A</kbd> <span class="menuselection">‣ 网格 ‣ 圆环</span> 添加一个圆。</p></li>
+<li><p>快捷键 <kbd class="kbd docutils literal notranslate">R X 9 0</kbd> 并 <kbd class="kbd docutils literal notranslate">Return</kbd>，旋转该圆。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl-A</kbd> 并选择 <em>旋转</em>，应用缩放</p></li>
+<li><p>拖拽该圆沿 <em>X轴</em> 向左移动3个单位；可以使用标准变换控件，在使用鼠标拖拽时按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> (在物体上的红色箭头上单击，拖拽的同时按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> ，直至3D视图左下角显示 <code class="docutils literal notranslate"><span class="pre">D.</span> <span class="pre">-3.0000</span> <span class="pre">(3.0000)</span> <span class="pre">全局</span></code> )，或使用快捷键 <kbd class="kbd docutils literal notranslate">G X Minus 3</kbd> 并 <kbd class="kbd docutils literal notranslate">Return</kbd>。还可以使用变换面板，在位置上的X轴坐标中输入 <kbd class="kbd docutils literal notranslate">Minus 3</kbd> 并 <kbd class="kbd docutils literal notranslate">Enter</kbd> (见图 <a class="reference internal" href="#fig-mesh-screw-circle"><span class="std std-ref">中心位于X轴 (-3, 0, 0)的圆。</span></a>)。</p></li>
+<li><p>快捷键 <kbd class="kbd docutils literal notranslate">S . 5</kbd>，然后 <kbd class="kbd docutils literal notranslate">Return</kbd>，缩放圆环。</p></li>
+<li><p>快捷键 <kbd class="kbd docutils literal notranslate">Tab</kbd> 进入 <em>编辑模式</em>。</p></li>
+<li><p>快捷键 <kbd class="kbd docutils literal notranslate">A</kbd>，取消全选所有顶点。</p></li>
+</ol>
+<p>下面是创建高度向量的步骤:</p>
+<div class="figure align-center" id="id8">
+<span id="fig-mesh-screw-profile"></span><img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_spring-profile-ready.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_spring-profile-ready.png" />
+<p class="caption"><span class="caption-text">创建的轮廓和向量。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple">
+<li><p>按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> ，在圆环旁边 <kbd class="kbd docutils literal notranslate">LMB</kbd> 左键单击，大致位置为圆环上方方形的浅灰色网格线上，然后继续按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 不放， <kbd class="kbd docutils literal notranslate">LMB</kbd> 左键在圆环下方的灰色网格线上单击。这样就创建 了两个顶点与一条边，用作高度和角度向量。</p></li>
+<li><p>现在，在变换面板，单击全局坐标系按钮，并修改质心 (X, Y, Z) 坐标为(-2, 0, -1)。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">RMB</kbd> 单击选择另一个顶点，修改坐标为 (-2, 0, 1)。这样就创建一条高度为2个单位的竖直直线。</p></li>
+<li><p>快捷键 <kbd class="kbd docutils literal notranslate">A</kbd> 两次，取消全选，再全选 (见图 <a class="reference internal" href="#fig-mesh-screw-profile"><span class="std std-ref">创建的轮廓和向量。</span></a>)。</p></li>
+<li><p>接着，再将3D游标置于中心点。 (重复步骤2)。</p></li>
+<li><p>这时，保存blend文件，以便在下一次练习中继续使用； <kbd class="kbd docutils literal notranslate">LMB</kbd> 单击信息编辑器标题栏上的 <em>文件</em> 菜单(左上方)，并选择 <em>另存为</em>。我们建议命名为 <em>Screw Spring Example.blend</em>，并单击 <em>另存为</em> 按钮，对其进行命名，比如: &quot;screw spring example.blend&quot;。</p></li>
+<li><p>单击螺旋按钮，调整步数和圈数，一个漂亮的弹簧出来了，下面才是最精彩的部分!</p></li>
+</ol>
+</div>
+<div class="section" id="clockwise-and-counterclockwise-using-the-spring-example">
+<h3>顺时针与逆时针举例<a class="headerlink" href="#clockwise-and-counterclockwise-using-the-spring-example" title="Permalink to this headline">¶</a></h3>
+<p>还是在 <em>螺旋工具</em> 的交互状态，可以看到 <em>螺旋</em> 面板的 <em>Z轴</em> 值为1.000。在该值上 <kbd class="kbd docutils literal notranslate">LMB</kbd> 单击，并重设为-1.000。弹簧的绕线方向一开始是逆时针方向，现在 <em>Z轴</em> 方向翻转了180度。这是因为将传递给Blender的高度的角度向量变成了相反方向(记住 -90 到 90 = 180 度)见图片 <a class="reference internal" href="#fig-mesh-screw-clock"><span class="std std-ref">弹簧方向。</span></a>。</p>
+<span id="fig-mesh-screw-clock"></span><table class="docutils align-center" id="id9">
+<caption><span class="caption-text">弹簧方向。</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id10">
+<img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_spring-counterclockwise.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_spring-counterclockwise.png" />
+<p class="caption"><span class="caption-text">逆时针方向。</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id11">
+<img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_spring-clockwise.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_spring-clockwise.png" />
+<p class="caption"><span class="caption-text">翻转为顺时针方向。</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>还有一点需要注意的是，该向量与用于挤出的高度向量轴向有关，由于这里创建的直线平行于 <em>Z轴</em>，所以该向量实际上只响应挤出轴向的取正与取负变化。Blender会该值在其上下限范围内。该规则同样适用于在其他轴向使用 <em>螺旋</em> 工具；这意味立着如果在顶视图(快捷键 <kbd class="kbd docutils literal notranslate">Numpad7</kbd>) 创建一条平行于其他轴向(比如顶视图下的 <em>Y轴</em>)的直线，高度向量同样会随着正负转换来切换挤出的方向，你需要调整对应轴向来获得顺时针和逆时针的效果。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>向量不平行于Blender轴向</p>
+<p>上面提到的并不适用于存在起始角度(即向量不平行于轴向)时使用螺旋工具，这意味着Blender不需要通过限制数值来稳定挤出的方向，因为向量的倾斜已经足以用于判断方向了，用户可以调整该向量为各种方向。上面的例子中仅有一个平行于Blender轴向的挤出方向，仅改变了轮廓的挤出方向，而没有任何倾斜和/或弯曲效果。</p>
+</div>
+</div>
+<div class="section" id="bending-the-profiles-using-the-spring-example">
+<h3>使用弹簧范例弯曲轮廓<a class="headerlink" href="#bending-the-profiles-using-the-spring-example" title="Permalink to this headline">¶</a></h3>
+<p>依旧使用上面的弹簧为例子，我们修改与挤出轴向无关的轴向来调整角度，这样就可以使用其余两个轴向向量来弯曲这个弹簧，随着起始角度向量值的变化，创建开放和/或闭合的轮廓。这其实就是改变挤出前轮廓的起始角度。这意味着Blender会连接所有随向量倾斜的圆环。下面是两个作用轴向向量弯曲弹簧的例子。见图 <a class="reference internal" href="#fig-mesh-screw-angle"><span class="std std-ref">弯曲后的网格。</span></a>。这两个用 <em>螺旋</em> 工具生成的网格在顶视图下的观察效果。</p>
+<span id="fig-mesh-screw-angle"></span><table class="docutils align-center" id="id12">
+<caption><span class="caption-text">弯曲后的网格。</span><a class="headerlink" href="#id12" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id13">
+<img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_angular-vector-example1.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_angular-vector-example1.png" />
+<p class="caption"><span class="caption-text">轴向量赋予轮廓一个起始角度。</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id14">
+<img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_angular-vector-example2.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_angular-vector-example2.png" />
+<p class="caption"><span class="caption-text">向量朝向挤出方向。</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="creating-perfect-screw-spindles">
+<h3>创建螺杆<a class="headerlink" href="#creating-perfect-screw-spindles" title="Permalink to this headline">¶</a></h3>
+<p>用上面的例子，很容易就可以创建一根完美的螺杆(如同我们在五金店里买到的那种)。完美的螺杆使用相同的高度作为其向量，并且轮廓的首末两点位于一条与挤出轴平行的直线上。要实现这种效果，最简单的办法就是创建一个首末顶点构成(轴向)平行线的轮廓。Blender只会使用首末两点作为其角度向量，而不考虑两者之间的其余顶点，所以螺杆的螺纹(由圈数值决定)才可以完美地互相结合。</p>
+<ol class="arabic simple">
+<li><p>打开Blender，单击信息编辑器标题栏上的 <em>文件</em> 菜单，选择 <em>打开近期文件</em>，选中此次练习保存的文件。一切会恢复到文件保存之前的状态。选择最后保存的blend文件; 在上次练习中，我们将其命名为 <em>Screw Spring Example.blend</em>。</p></li>
+<li><p>快捷键 <kbd class="kbd docutils literal notranslate">A</kbd> 取消全选所有顶点。</p></li>
+<li><p>快捷键 <kbd class="kbd docutils literal notranslate">B</kbd>, 进入框选模式。</p></li>
+<li><p>框选除前面例子中用作挤出高度的两个顶点之外的所有顶点。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">X</kbd> 全部删除。</p></li>
+<li><p>快捷键 <kbd class="kbd docutils literal notranslate">A</kbd> 选择余下的顶点。</p></li>
+<li><p>快捷键 <kbd class="kbd docutils literal notranslate">W</kbd>，选择 <span class="menuselection">专用项 ‣ 细分</span>。</p></li>
+<li><p>现在， <kbd class="kbd docutils literal notranslate">RMB</kbd> 选择中间的顶点。</p></li>
+<li><p>快捷键 <kbd class="kbd docutils literal notranslate">G X Minus 1</kbd> 拖动该顶点，然后回车 <kbd class="kbd docutils literal notranslate">Return</kbd>，见图片 <a class="reference internal" href="#fig-mesh-screw-spindle"><span class="std std-ref">用于完美螺杆的轮廓。</span></a>。</p></li>
+<li><p>这时，保存该文件，以便将其用于下一个螺旋练习； <kbd class="kbd docutils literal notranslate">LMB</kbd> 单击 <em>文件</em> 菜单 -- 位于信息编辑器标题栏(左上方)，选择 <em>另存为</em>。我们建议将其命名为 <em>Screw Hardware Example.blend</em> ，然后单击 <em>另存为</em> 按钮。还可以使用快捷键 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-S</kbd> 打开文件浏览器保存该文件。</p></li>
+<li><p>按下快捷键 <kbd class="kbd docutils literal notranslate">A</kbd> 两次，取消全选，然后再全选所有顶点。</p></li>
+<li><p>现在按下螺旋。</p></li>
+<li><p>随意修改步数和圈数。图 <a class="reference internal" href="#fig-mesh-screw-generated-mesh"><span class="std std-ref">生成的网格。</span></a> - 展示了结果的一种情况。</p></li>
+</ol>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id15">
+<span id="fig-mesh-screw-spindle"></span><img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_perfect-spindle-profile.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_perfect-spindle-profile.png" />
+<p class="caption"><span class="caption-text">用于完美螺杆的轮廓。</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<div class="legend">
+<p>首末顶点形成Blender轴线的平行线。</p>
+</div>
+</div>
+</td>
+<td><div class="figure align-center" id="id16">
+<span id="fig-mesh-screw-generated-mesh"></span><img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_generated-perfect-spindle.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_generated-perfect-spindle.png" />
+<p class="caption"><span class="caption-text">生成的网格。</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+<div class="legend">
+<p>你可以将该技巧用于常规螺丝建模。</p>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>图 <a class="reference internal" href="#fig-mesh-screw-ramp"><span class="std std-ref">楼梯。</span></a> 展示了如何使用其他轮廓的例子，但是首末顶点还是在原来的位置。生成的网格看起来像是中世纪的楼梯!</p>
+<span id="fig-mesh-screw-ramp"></span><table class="docutils align-center" id="id17">
+<caption><span class="caption-text">楼梯。</span><a class="headerlink" href="#id17" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id18">
+<img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_ramp-like-profile.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_ramp-like-profile.png" />
+<p class="caption"><span class="caption-text">首末顶点平行于Blender轴线的轮廓。</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id19">
+<img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_ramp-like-generated.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_ramp-like-generated.png" />
+<p class="caption"><span class="caption-text">左侧的轮廓生成的网格。我们将观察角度稍微倾斜了一些。</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>如你所见，螺纹完美地结合在一起，看起来像是一条自上而下的直线。你还可以修改该例子中顺时针和逆时针的挤出方向，创建右旋和左旋螺纹。这时候，你还可以赋予螺旋另一个尺寸，改变弯绕挤出的中心点，使之更加符合你的需要，或者生成一个完美螺旋，然后将其与圆柱上的顶点合并，对螺帽进行建模等。</p>
+</div>
+<div class="section" id="a-screw-tip">
+<h3>尖头螺丝<a class="headerlink" href="#a-screw-tip" title="Permalink to this headline">¶</a></h3>
+<p>正如前面提到的， <em>螺旋工具</em> 生成干净简单的网格，易于处理；它们简洁，连接有序，并且结果可预测。这是因为Blender不仅考虑了向量的高度，还考虑了起始角度。这意味着Blender可以使用连续的循环来连接挤出后的轮廓。</p>
+<p>在这个例子中，用户可学习如何制作尖头螺丝(比如木头螺钉；在本页展示一个这样的例子)。为了让这个例子尽可能简短，我们会用到上一个例子中的文件。</p>
+<ol class="arabic simple">
+<li><p>打开Blender，单击信息编辑器标题栏上的 <em>文件</em> 菜单，选择 <em>打开近期文件</em>，选中此次练习保存的文件。一切会恢复到文件保存之前的状态。选择最后保存的blend文件; 在上次练习中，我们将其命名为 <em>Screw Hardware Example.blend</em>。</p></li>
+<li><p>拖动上面的顶点，并向左稍微移动一点，但是不要超过中间的顶点。(见图片 <a class="reference internal" href="#fig-mesh-screw-start"><span class="std std-ref">有起始角度的轮廓。</span></a>)。</p></li>
+<li><p>按下快捷键 <kbd class="kbd docutils literal notranslate">A</kbd> 两次，取消全选，然后再全选所有顶点。</p></li>
+<li><p>快捷键 <kbd class="kbd docutils literal notranslate">Shift-S</kbd>，选择 <em>光标 -&gt; 中心点</em></p></li>
+<li><p>按下螺旋。</p></li>
+</ol>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id20">
+<span id="fig-mesh-screw-start"></span><img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_profile-with-vector-angle.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_profile-with-vector-angle.png" />
+<p class="caption"><span class="caption-text">有起始角度的轮廓。</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id21">
+<span id="fig-mesh-screw-start-mesh"></span><img alt="../../../../_images/modeling_meshes_editing_duplicating_screw_generated-with-base-vector-angle.png" src="../../../../_images/modeling_meshes_editing_duplicating_screw_generated-with-base-vector-angle.png" />
+<p class="caption"><span class="caption-text">使用该轮廓生成的网格。</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>正如在图片 <a class="reference internal" href="#fig-mesh-screw-start-mesh"><span class="std std-ref">使用该轮廓生成的网格。</span></a> 中看到的，Blender沿着轮廓的基本角度向量，轮廓的基础角度决定了接下来沿着该角度的挤出是开放还是闭合网格。挤出角度向量由轮廓的首末顶点确定。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../subdividing/index.html" class="btn btn-neutral float-right" title="细分" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="spin.html" class="btn btn-neutral float-left" title="旋绕" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

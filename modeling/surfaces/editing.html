@@ -1,0 +1,626 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>编辑 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/surfaces/editing.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="属性" href="properties.html" />
+    <link rel="prev" title="选择" href="selecting.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">曲面</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selecting.html">选择</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">编辑</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#translation-rotation-scale">移动, 旋转, 缩放</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#advanced-transform-tools">高级变换工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nurbs-control-points-settings">NURBS控制点设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-or-extruding">添加或挤出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#opening-or-closing-a-surface">开放或封闭一个曲面</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#duplication">复制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting-elements">删除元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#joining-or-merging-surfaces">联接或合并曲面</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#subdivision">细分</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spin">旋绕</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#switch-direction">切换方向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-specials-options">其他特殊选项</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">属性</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="index.html">曲面</a> &raquo;</li>
+        
+      <li>编辑</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modeling/surfaces/editing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editing">
+<h1>编辑<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h1>
+<p>曲面编辑相比曲线有更少的工具和选项, 但是有很多共同点. 所以这一页覆盖 (或试图覆盖) 所有项目, 从曲面编辑的基础到更高级的话题, 像重拓扑.</p>
+<div class="section" id="translation-rotation-scale">
+<h2>移动, 旋转, 缩放<a class="headerlink" href="#translation-rotation-scale" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 变换</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">曲面 ‣ 变换 ‣ 拖拽/移动，旋转, 缩放，...</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">G</kbd>, <kbd class="kbd docutils literal notranslate">R</kbd>, <kbd class="kbd docutils literal notranslate">S</kbd></p>
+</dd>
+</dl>
+</div>
+<p>一旦你选中了一个或多个控制点, 你可以拖拽 / 移动 <kbd class="kbd docutils literal notranslate">G</kbd>, 旋转 <kbd class="kbd docutils literal notranslate">R</kbd> 或者缩放 <kbd class="kbd docutils literal notranslate">S</kbd> 它们, 就像很多其它Blender对象那样, 在 <a class="reference internal" href="../../editors/3dview/object/editing/transform/introduction.html"><span class="doc">在3D 空间中操纵</span></a> 一节有描述.</p>
+<p>在 <em>编辑模式</em> 中使用这些基本操纵时, 你还有一个额外的选项: <a class="reference internal" href="../../editors/3dview/object/editing/transform/control/proportional_edit.html"><span class="doc">衰减编辑</span></a>.</p>
+<div class="section" id="transform-panel">
+<h3>变换面板<a class="headerlink" href="#transform-panel" title="Permalink to this headline">¶</a></h3>
+<p>参见 <a class="reference internal" href="../curves/editing/introduction.html#modeling-curves-transform-panel"><span class="std std-ref">变换面板</span></a>.</p>
+</div>
+</div>
+<div class="section" id="advanced-transform-tools">
+<h2>高级变换工具<a class="headerlink" href="#advanced-transform-tools" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 形变:随机化</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">曲面 ‣ 变换</span></p>
+</dd>
+</dl>
+</div>
+<p><em>球形化</em> , <em>切变</em> , <em>弯绕</em> 和 <em>推/拉</em> 变换工具在 <a class="reference internal" href="../meshes/editing/transform/index.html"><span class="doc">网格变换</span></a> 一节有描述. 表面没有特殊的形变工具。</p>
+</div>
+<div class="section" id="nurbs-control-points-settings">
+<h2>NURBS控制点设置<a class="headerlink" href="#nurbs-control-points-settings" title="Permalink to this headline">¶</a></h2>
+<p>我们在 <a class="reference internal" href="structure.html#modeling-surfaces-weight"><span class="std std-ref">以前的页面</span></a> 里看见过带权重的 NURBS 控制点，用来表示对应点对曲面的影响。可以使用 <em>曲线工具</em> 面板上(在右侧的数值框中定义权重后)的 <em>设定权重</em> 按钮设置权重，或在 <em>变换</em> 面板的 <kbd class="kbd docutils literal notranslate">W</kbd> 数值框直接键入数值。</p>
+</div>
+<div class="section" id="adding-or-extruding">
+<h2>添加或挤出<a class="headerlink" href="#adding-or-extruding" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 模型:挤出</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">曲面 ‣ 挤出</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">E</kbd>, <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd></p>
+</dd>
+</dl>
+</div>
+<p>不同于网格和曲线, 你一般不能直接添加新的控制点到一个曲面(使用 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 按键), 因为你只能通过一次添加一整个U或V行延长一个曲面. 唯一的例外是, 当在一个NURBS曲面曲线上, 即一个曲面只在U或者V行只有一个控制点时. 在这种特殊情况下，与 <a class="reference internal" href="../curves/editing/introduction.html#modeling-curves-extrude"><span class="std std-ref">曲线</span></a> 的所有工作完全一样.</p>
+<p>大多数时候, 只有挤出可以用. 像往常一样，一旦工具被激活，挤出立即发生，并且处于 <em>抓起模式</em> 中，准备将新的挤出表面拖到其目的地。</p>
+<p>有两点非常重要：</p>
+<ol class="arabic simple">
+<li><p>曲面是 <em>2D</em> 物体. 所以你不能向任何表面内部挤出（例如“内部”行）。 这没有任何意义！</p></li>
+<li><p>控制抓起必须保持近似方形的, 这意味着你只能挤出一整个行, 而不是任何位置的行的一部分.</p></li>
+</ol>
+<p>总之, 挤出工具只有当且仅当一整个边界行被选中时才能工作, 否则什么都不会发生.</p>
+<p>对于曲线, 你不能在物体的什么地方直接创建一个新的曲面, 什么都不选只按下 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> . 然而，与曲线不同的是，没有“剪切”选项允许将曲面分成几个部分，因此只能通过复制 (<a class="reference internal" href="#duplication">Duplication</a>)现有曲面来创建新曲面 <kbd class="kbd docutils literal notranslate">Shift-D</kbd>, 或添加一个新的, 使用 <em>添加</em> 菜单。</p>
+<div class="section" id="examples">
+<h3>例子<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>图 <a class="reference internal" href="#fig-surface-edit-select-point"><span class="std std-ref">选择控制点。</span></a> 到图 <a class="reference internal" href="#fig-surface-edit-extruding"><span class="std std-ref">挤出。</span></a> 展示了沿着曲面一边挤出的典型例子.</p>
+<p>在图 <a class="reference internal" href="#fig-surface-edit-select-point"><span class="std std-ref">选择控制点。</span></a> 和 <a class="reference internal" href="#fig-surface-edit-select-row"><span class="std std-ref">Shift-R</span></a> 中, 控制点的边界行在选中一个单个控制点时高亮, 然后使用方便的行选择工具 <kbd class="kbd docutils literal notranslate">Shift-R</kbd> 来选择剩下的控制点.</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id2">
+<span id="fig-surface-edit-select-point"></span><img alt="../../_images/modeling_surfaces_editing_selecting-point.png" src="../../_images/modeling_surfaces_editing_selecting-point.png" />
+<p class="caption"><span class="caption-text">选择控制点。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id3">
+<span id="fig-surface-edit-select-row"></span><img alt="../../_images/modeling_surfaces_editing_selecting-row.png" src="../../_images/modeling_surfaces_editing_selecting-row.png" />
+<p class="caption"><span class="caption-text"><kbd class="kbd docutils literal notranslate">Shift-R</kbd></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>边缘接下来使用 <kbd class="kbd docutils literal notranslate">E</kbd> 挤出, 如图 <a class="reference internal" href="#fig-surface-edit-extruding"><span class="std std-ref">挤出。</span></a>. 注意网格是如何聚集在突出显示的边缘旁边的。这是因为新的挤出表面部分也聚集在那里。</p>
+<div class="figure align-center" id="id4">
+<span id="fig-surface-edit-extruding"></span><img alt="../../_images/modeling_surfaces_editing_extruding.png" src="../../_images/modeling_surfaces_editing_extruding.png" />
+<p class="caption"><span class="caption-text">挤出。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>通过将新的部分从该区域移开，表面开始“不再聚集”。</p>
+<p>您可以继续这个挤出或添加新表面部分的过程，直到达到模型的最终形状。</p>
+</div>
+</div>
+<div class="section" id="opening-or-closing-a-surface">
+<h2>开放或封闭一个曲面<a class="headerlink" href="#opening-or-closing-a-surface" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 曲线:切换循环</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">曲面 ‣ 切换循环</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Alt-C</kbd></p>
+</dd>
+</dl>
+</div>
+<p>如同 <a class="reference internal" href="../curves/editing/introduction.html#modeling-curves-toggle-cyclic"><span class="std std-ref">曲线</span></a>, 区别可以关闭(成环)或打开. 但是，由于曲面是2D的，所以可以沿着U和V轴独立控制此属性。</p>
+<p>要沿一个轴切换曲面的循环属性，请使用 <kbd class="kbd docutils literal notranslate">Alt-C</kbd> 并从弹出菜单中选择 <em>U 向循环</em> 或 <em>V 向循环</em>。相应的曲面的外部边缘将联合起来形成&quot;封闭的&quot;曲面。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>内面和外面</p>
+<p>曲面有&quot;内部&quot;和&quot;外部&quot;面，前一个是黑色的，而后者是灰色阴影。（表面似乎没有任何“双面”阴影选项...）。当你闭合一个或两个方向的曲面，你可能会得到一个完全黑色的物体！在这种情况下只要对你的曲面 <a class="reference internal" href="#switch-direction">切换方向</a> ...</p>
+</div>
+</div>
+<div class="section" id="duplication">
+<h2>复制<a class="headerlink" href="#duplication" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 曲线:复制</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">曲面 ‣ 复制</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Shift-D</kbd></p>
+</dd>
+</dl>
+</div>
+<p>类似网格和曲线，这个工具复制选择项。副本被选中并放置在 <em>抓起</em> 模式下，所以您可以将其移动到另一个地方。</p>
+<p>然而，有一些被选的曲面不能复制，在这种情况下，它们将被放置在 <em>抓起</em> 模式中。实际上，只有形成一个 <em>单独</em> 的有效子网格的选择是可复制的; 让我们在实践中看看这一点：</p>
+<ul class="simple">
+<li><p>你可以复制一个单一的控制点。从中可以沿着U轴“挤出”一个“曲面曲线”，然后沿着V轴挤出这个独特的U-行，创建一个真实的新曲面。</p></li>
+<li><p>你可以复制一行的一个连续部分（当然也可以是整行）。这会给你一个新的 * U行*，即使你选择（部分）V行！</p></li>
+<li><p>你可以复制一个子栅格。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>试图一次性复制几个有效的“子网格”（即使是单个点）是行不通的; 你不得不一个接一个地做...</p>
+</div>
+</div>
+<div class="section" id="deleting-elements">
+<h2>删除元素<a class="headerlink" href="#deleting-elements" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 曲线:删除</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">曲面 ‣ 删除</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">X</kbd>, <kbd class="kbd docutils literal notranslate">Delete</kbd></p>
+</dd>
+</dl>
+</div>
+<p>曲面的删除菜单有两个选项:</p>
+<dl>
+<dt>选中项</dt><dd><p>这将删除选定的行，而且不打破表面（即一旦中间的删除, 相邻的行将被直接相连，并入）。选择必须遵守下列规则：</p>
+<ul class="simple">
+<li><p>必须选定整行。</p></li>
+<li><p>只要沿同一轴的行必须被选中（即，你不能同时删除U行和V行）。</p></li>
+</ul>
+<p>另请注意，NURBS的序不能高于给定坐标轴中控制点的数量，所以在删除某些控制点时它可能会减少。当然，当只剩下一行时，曲面变成了“曲面曲线”。 当只剩下一个点的时候，就没有可见的表面了; 当所有点被删除时，表面本身被删除。</p>
+</dd>
+<dt>全部</dt><dd><p>类似于网格和曲线，这将删除物体里的所有东西!</p>
+</dd>
+</dl>
+<div class="section" id="example">
+<h3>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id5">
+<img alt="../../_images/modeling_surfaces_editing_deleting.png" src="../../_images/modeling_surfaces_editing_deleting.png" />
+<p class="caption"><span class="caption-text">删除之前和删除之后.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>在图 <em>前和后(左)</em> 中, 通过最初选择一个控制点并使用 <kbd class="kbd docutils literal notranslate">Shift-R</kbd> 选择一行控制点来选择剩余的控制点。然后使用 <em>删除菜单</em> <kbd class="kbd docutils literal notranslate">X</kbd>,  <em>被选的</em> 控制点行被删除了, 结果是图 <em>前和后(右)</em>.</p>
+</div>
+</div>
+<div class="section" id="joining-or-merging-surfaces">
+<h2>联接或合并曲面<a class="headerlink" href="#joining-or-merging-surfaces" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">曲面 ‣ 创建段</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">F</kbd></p>
+</dd>
+</dl>
+</div>
+<p>就像 <a class="reference internal" href="../curves/editing/introduction.html#modeling-curves-make-segment"><span class="std std-ref">曲线</span></a>, 合并两个表面需要选择来自两个单独表面的单个边（控制点的边界行）。这意味着面必须是同一物体的一部分。例如，在 <em>物体模式</em> 中不能连接两个曲面 - 当然，您可以像使用相同类型的任何对象一样将两个或多个 <em>曲面</em> 物体连接成一个物体 <kbd class="kbd docutils literal notranslate">Ctrl-J</kbd> - 他们只是不会被“连接”或合并成一个单一的物体... 是的，这是一个有点令人困惑!</p>
+<p>这个工具相当于为网格创建边或者面（因此它是快捷方式），所以它只能在 <em>编辑模式</em> 下工作。选择必须只包含相同分辨率的边界行(具有相同数量的控制点)，否则Blender将尝试尽力猜测要合并的内容，或者合并将失败( 或者默默地说，如果选择具有不同点数的行则“分辨率不匹配”，如果你只在一个表面选择点, 则 <code class="docutils literal notranslate"><span class="pre">待合并的选择项太少</span></code>...)。要在同一物体中选择不同曲面的控制点，必须使用框选或圈选。 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">LMB</kbd> 刷选无法奏效。</p>
+<p>因此，为了避免问题，应该始终仅仅选择有相同点数的边界行... 请注意，您可以连接一个曲面的边界U行和另一个曲面的边界U行，Blender会自动“倒置”一个表面的轴线，以使它们正确匹配。</p>
+<p>NURBS曲面通常被用来创建像船体一样的物体，因为它们定义了整个物体的横截面，而且你只需要像上面描述的那样“去皮”就可以得到一个漂亮，光滑和谐的形状。</p>
+<div class="section" id="id1">
+<h3>例子<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>图 <a class="reference internal" href="#fig-surface-edit-join-ready"><span class="std std-ref">准备好要加入.</span></a> 是两个NURBS曲面曲线的例子, <strong>不是</strong> NURBS曲线, 它在 <em>编辑模式</em>, 准备要被连接. Fig. <a class="reference internal" href="#fig-surface-edit-join-complete"><span class="std std-ref">加入完成。</span></a> 是剩下俩个要连接的曲线.</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id6">
+<span id="fig-surface-edit-join-ready"></span><img alt="../../_images/modeling_surfaces_editing_joining-ready.png" src="../../_images/modeling_surfaces_editing_joining-ready.png" />
+<p class="caption"><span class="caption-text">准备好要加入.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id7">
+<span id="fig-surface-edit-join-complete"></span><img alt="../../_images/modeling_surfaces_editing_joining-complete.png" src="../../_images/modeling_surfaces_editing_joining-complete.png" />
+<p class="caption"><span class="caption-text">加入完成。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="subdivision">
+<h2>细分<a class="headerlink" href="#subdivision" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 模型:细分</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">曲面 ‣ 段数 ‣ 细分</span>, <span class="menuselection">专用项 ‣ 细分</span></p>
+</dd>
+</dl>
+</div>
+<p>曲面细分最简单：使用 <em>专用项</em> 菜单中的 <em>细分</em> 条目 <kbd class="kbd docutils literal notranslate">W</kbd>, 或 <em>曲线工具1</em> 面板的 <em>细分</em> 按钮，您将细分一次所有 <em>完全</em> 选定的网格, 通过将每个“四边形”细分为四个较小的四边形。</p>
+<p>如果曲面是一维的(曲面曲线)，它细分起来跟 <a class="reference internal" href="../curves/editing/introduction.html#modeling-curves-subdivision"><span class="std std-ref">曲线</span></a> 没什么两样。</p>
+</div>
+<div class="section" id="spin">
+<h2>旋绕<a class="headerlink" href="#spin" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 模型:旋绕</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">曲面 ‣ 旋绕</span></p>
+</dd>
+</dl>
+</div>
+<p>这个工具是一个有点类似于 <a class="reference internal" href="../meshes/editing/duplicating/spin.html"><span class="doc">网格中的对应操作</span></a>, 只是他的选项和可控项更少（事实上，没有）。</p>
+<p>只有当曲面是一条U向曲线（而不是V向）时，此命令才有效。他通过把U向行当成一个截面来旋转，并且自动调节权重最后得到一个完美的圆形挤出物体，对于管子和圆环也是一样的原理。</p>
+</div>
+<div class="section" id="switch-direction">
+<h2>切换方向<a class="headerlink" href="#switch-direction" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 曲线:切换方向</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">曲面 ‣ 段数 ‣ 切换方向</span>, <span class="menuselection">专用项 ‣ 切换方向</span></p>
+</dd>
+</dl>
+</div>
+<p>该工具将“翻转” 选中元素多于1个的任何曲线的方向（即起点将变成终点，<em>反之亦然</em>）。主要用于使用曲线作为路径，或斜角和锥度选项时...</p>
+</div>
+<div class="section" id="other-specials-options">
+<h2>其他特殊选项<a class="headerlink" href="#other-specials-options" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p>专用项</p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-R</kbd></p>
+</dd>
+</dl>
+</div>
+<p><em>专用</em> 菜单包含与曲线完全相同的附加选项，除了 <em>设置半径</em> 和 <em>平滑半径</em>。</p>
+<div class="section" id="conversion">
+<h3>转换<a class="headerlink" href="#conversion" title="Permalink to this headline">¶</a></h3>
+<p>由于只是NURBS曲面, 所以这里没有&quot;内置&quot;转换。</p>
+<p>然而，有一个&quot;外部的&quot;转换，从曲面到网格，只适用于*物体模式*. 它把 <em>曲面</em> 物体转换成 <em>网格</em>，使用两个方向上的表面分辨率来创建面，边和顶点。</p>
+</div>
+<div class="section" id="misc-editing">
+<h3>杂项<a class="headerlink" href="#misc-editing" title="Permalink to this headline">¶</a></h3>
+<p>你有一些与网格相同的选项, 在 <em>物体模式</em> 里. 你可以 <a class="reference internal" href="../meshes/editing/misc.html#object-separate"><span class="std std-ref">分离</span></a> 一个给定的表面 <kbd class="kbd docutils literal notranslate">P</kbd> ，做出其他选择的物体的一个或三个控制点的 <a class="reference internal" href="../../editors/3dview/object/properties/relations/parents.html#object-parenting"><span class="std std-ref">子物体</span></a> <kbd class="kbd docutils literal notranslate">Ctrl-P</kbd> 或者 <a class="reference internal" href="../modifiers/deform/hooks.html"><span class="doc">添加钩子</span></a> 来控制其他对象的某些点。</p>
+<p>镜像工具依旧有效，运算规则跟 <a class="reference internal" href="../meshes/editing/transform/mirror.html"><span class="doc">网格物体</span></a> 差不多。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="properties.html" class="btn btn-neutral float-right" title="属性" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="selecting.html" class="btn btn-neutral float-left" title="选择" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

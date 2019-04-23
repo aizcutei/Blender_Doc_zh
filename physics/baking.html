@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>烘焙物理模拟 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/baking.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="力场" href="force_fields/index.html" />
+    <link rel="prev" title="重力" href="gravity.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gravity.html">重力</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">烘焙物理模拟</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#baking">Baking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#physics-types">物理类型</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">物理</a> &raquo;</li>
+        
+      <li>烘焙物理模拟</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/physics/baking.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="baking-physics-simulations">
+<span id="bpy-ops-ptcache"></span><span id="bpy-types-pointcache"></span><h1>烘焙物理模拟<a class="headerlink" href="#baking-physics-simulations" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="../glossary/index.html#term-baking"><span class="xref std std-term">烘焙</span></a> 是指存储或缓存计算结果的行为。</p>
+<p>The result of a simulation is automatically cached to memory when the animation is played,
+so that the next time it runs, it can be replayed more quickly by reading the results from the memory.</p>
+<p>If you bake the simulation the cache is protected,
+and you will be unable to change the simulation settings
+until you clear the baked frames by clicking <em>Free Bake</em>.</p>
+<p>通常建议在渲染之前烘焙您的物理模拟。除了不再需要经过耗时的模拟过程之外，烘焙可以帮助防止潜在的错误，并确保模拟的结果每次都保持完全相同。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Blender中大多数物理模拟器使用类似的系统，但并不全部具有完全相同的设置。所有设置都在此处介绍，但单个物理类型可能无法提供所有这些选项。</p>
+</div>
+<div class="figure align-right" id="id1">
+<img alt="../_images/physics_baking_multi-cache-interface.png" src="../_images/physics_baking_multi-cache-interface.png" />
+<p class="caption"><span class="caption-text">两个不同的缓存同时存储。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>缓存列表</dt><dd><p>Blender允许同时存储和管理同一物理对象的多个缓存，可以使用 <a class="reference internal" href="../interface/controls/templates/list_presets.html#ui-list-view"><span class="std std-ref">列表视图</span></a> 来管理这些缓存。</p>
+<p>可以使用 <kbd class="kbd docutils literal notranslate">Plus</kbd> 和 <kbd class="kbd docutils literal notranslate">Minus</kbd> 按钮添加和删​​除缓存。可以通过双击或按下 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 所需的缓存来重命名缓存。</p>
+</dd>
+</dl>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>Disk Cache</dt><dd><p>The cache of a baked simulation will be stored inside the blend-file when you save it.
+When <em>Disk Cache</em> is checked, Blender will save the Cache separately to the drive
+in a folder named <code class="docutils literal notranslate"><span class="pre">blendcache_[filename]</span></code> alongside the blend-file.
+(The blend-file must be saved first.)</p>
+<dl>
+<dt>文件路径</dt><dd><p>当物理对象 <a class="reference internal" href="../data_system/linked_libraries.html"><span class="doc">关联</span></a> 到另一个混合文件时共享磁盘缓存 。</p>
+<p>启用此选项后，对象的关联版本将引用相同的磁盘缓存。否则，对象的关联版本将使用独立的缓存。</p>
+</dd>
+<dt>压缩</dt><dd><p>缓存文件的压缩级别。一些物理缓存可能非常大(比如烟雾)。Blender可以压缩这些缓存，以节省空间。</p>
+<dl class="simple">
+<dt>无</dt><dd><p>不要压缩缓存。</p>
+</dd>
+<dt>低压缩率</dt><dd><p>压缩操作将优化压缩/解压缩文件大小的操作速度。</p>
+</dd>
+<dt>高压缩率</dt><dd><p>压缩操作将带来比 <em>低压缩率</em> 更小的缓存文件，但是需要更多的CPU时间进行压缩/解压缩。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>外部数据</dt><dd><p>使用用户指定的文件路径读写驱动器上的缓存。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The cache name in <em>Caches List</em> and the <em>Index Number</em>
+has to exactly match the external cache files name in order to work.
+The cache files name format is <code class="docutils literal notranslate"><span class="pre">name_frame_index.bphys</span></code>.</p>
+</div>
+<dl class="simple">
+<dt>索引号</dt><dd><p>The index number of cache files. (The last two digits of the files name.)</p>
+</dd>
+<dt>File Path</dt><dd><p>Select the directory path to the cache files.</p>
+</dd>
+</dl>
+</dd>
+<dt>起始</dt><dd><p>模拟开始的帧位置。</p>
+</dd>
+<dt>结束</dt><dd><p>模拟结束的帧位置。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The simulation is only calculated for positive frames
+in between the <em>Start</em> and <em>End</em> frames of the <em>Cache</em> panel, whether you bake or not.
+So if you want a simulation that is longer than the default frame range you have to change the <em>End</em> frame.</p>
+</div>
+</dd>
+<dt>缓存步长</dt><dd><p>存储模拟数据的间隔。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>一些物理系统（例如粒子）允许仅在每个第n帧位置位置储存缓存，从而空出这些帧之间的位置。使用大于1的缓存步长将带来较小的缓存，但结果可能与原始模拟不同。</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="baking">
+<span id="physics-bake"></span><h2>Baking<a class="headerlink" href="#baking" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>烘焙</dt><dd><p>开始烘焙。Blender在大多数烘焙操作中将变得无响应。光标将显示为代表烘焙进度的数字。必须在物体模式下进行烘焙。</p>
+</dd>
+</dl>
+<dl class="simple" id="free-physics-bake">
+<dt>清除烘培</dt><dd><p>将烘焙缓存标记为临时。数据仍然存在，但会随着下一个物体修改和帧更改而被删除。此按钮仅在物理系统烘焙时可用。</p>
+</dd>
+</dl>
+<dl id="calc-physics-bake-to-frame">
+<dt>计算至帧</dt><dd><p>烘焙只能达到当前帧。受限于在缓存设置中设置的结束帧。</p>
+</dd>
+<dt>当前烘培缓存</dt><dd><p>将任何临时缓存的模拟数据存储为烘焙。请注意，播放动画将尝试模拟任何可见的物理模拟。根据物理类型，这些数据可能暂时缓存。通常，当对象或设置被修改时，这样的临时缓存将被清除，但将其转换为烘焙将会“保存”它。</p>
+</dd>
+<dt>烘培所有动力学解算结果</dt><dd><p>烘焙场景中的所有物理系统，甚至不同类型的物理系统。用于烘焙涉及不同物理类型之间相互作用的复杂设置。</p>
+<p>请参阅 <a class="reference internal" href="#physics-bake"><span class="std std-ref">烘培</span></a>。</p>
+</dd>
+<dt>清除所有烘培</dt><dd><p>清除场景中所有物理系统的烘焙，甚至是不同类型的物理系统。</p>
+<p>请参阅 <a class="reference internal" href="#free-physics-bake"><span class="std std-ref">清除烘培</span></a>.</p>
+</dd>
+<dt>全部更新到帧</dt><dd><p>将场景中的所有物理系统烘烤到当前帧。</p>
+<p>请参阅 <a class="reference internal" href="#calc-physics-bake-to-frame"><span class="std std-ref">计算至帧</span></a>。</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="force_fields/index.html" class="btn btn-neutral float-right" title="力场" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gravity.html" class="btn btn-neutral float-left" title="重力" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

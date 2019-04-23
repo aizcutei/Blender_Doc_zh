@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>轴向锁定 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/3dview/object/editing/transform/control/precision/axis_locking.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../../" src="../../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../search.html" />
+    <link rel="next" title="变换控制器" href="../manipulators.html" />
+    <link rel="prev" title="数值输入" href="numeric_input.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../startup_scene.html">启动场景</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../modes.html">物体模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../navigate/index.html">视图浏览</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../3d_cursor.html">3D游标</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../../index.html">物体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../properties/index.html">属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../ruler_protractor.html">3D量尺 &amp; 量角器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../grease_pencil/index.html">蜡笔</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html">3D视图</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">物体</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">编辑</a> &raquo;</li>
+        
+          <li><a href="../../index.html">变换</a> &raquo;</li>
+        
+          <li><a href="../index.html">变换控件</a> &raquo;</li>
+        
+          <li><a href="index.html">精确选择</a> &raquo;</li>
+        
+      <li>轴向锁定</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../../../_sources/editors/3dview/object/editing/transform/control/precision/axis_locking.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="axis-locking">
+<h1>轴向锁定<a class="headerlink" href="#axis-locking" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id2">
+<a class="reference internal image-reference" href="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_z-axis.png"><img alt="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_z-axis.png" src="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_z-axis.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">轴向锁定。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>该选项约束变换到指定的轴。</p>
+<p><a class="reference internal" href="../../introduction.html"><span class="doc">变换 （平移/缩放/旋转）</span></a>  在 <em>物体模式</em> 和 <em>编辑模式</em> （以及 <em>编辑模式</em> 中的挤出）可以被锁定到相对于当前 <a class="reference internal" href="../orientations.html"><span class="doc">变换参照坐标系</span></a> 的特定轴。通过将变换锁定到特定轴，你将变换约束在单个维度。</p>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>锁定的轴将显示为比未锁定的轴更亮的颜色。例如, 在右侧的图像中, Z 轴以浅蓝色绘制, 因为移动被限制到此轴。此示例可通过以下两种方式实现:</p>
+<div class="section" id="hotkey">
+<h3>快捷键<a class="headerlink" href="#hotkey" title="Permalink to this headline">¶</a></h3>
+<p>通过键入 <kbd class="kbd docutils literal notranslate">X</kbd>, <kbd class="kbd docutils literal notranslate">Y</kbd>, <kbd class="kbd docutils literal notranslate">Z</kbd> 可以在变换过程中随时更改运动轴。</p>
+</div>
+<div class="section" id="pointing">
+<h3>Pointing 指针<a class="headerlink" href="#pointing" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id3">
+<img alt="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_scale-mmb.png" src="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_scale-mmb.png" />
+<p class="caption"><span class="caption-text">轴约束。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>按下 <kbd class="kbd docutils literal notranslate">X</kbd>, <kbd class="kbd docutils literal notranslate">Y</kbd>, <kbd class="kbd docutils literal notranslate">Z</kbd> 后， 再按住 <kbd class="kbd docutils literal notranslate">MMB</kbd>  之后可以让你选择一个轴来约束变换。约束变换的视觉选项将可用，在3D视图空间中显示三个轴。虚的白线被用作指针。确定操作的轴将取决于 <kbd class="kbd docutils literal notranslate">MMB</kbd> 释放时的高亮轴。</p>
+<p>当你已经将鼠标移动到所需的方向时，按 <kbd class="kbd docutils literal notranslate">MMB</kbd> 将锁定到所指向的轴。</p>
+</div>
+</div>
+<div class="section" id="axis-locking-types">
+<h2>轴向锁定类型<a class="headerlink" href="#axis-locking-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>轴向锁定<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>物体和编辑模式（平移，旋转，缩放，拉伸）</p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">X</kbd>, <kbd class="kbd docutils literal notranslate">Y</kbd>, <kbd class="kbd docutils literal notranslate">Z</kbd> 或 <kbd class="kbd docutils literal notranslate">MMB</kbd> 后，在所需的方向移动鼠标 。</p>
+</dd>
+</dl>
+</div>
+<p>轴向锁定将变换约束到单个轴（或禁止沿两个轴变换）。物体，面，顶点或其它可选项目只能在一个维度上移动，缩放或旋转。</p>
+</div>
+<div class="section" id="plane-locking">
+<span id="view3d-transform-plane-lock"></span><h3>平面锁定<a class="headerlink" href="#plane-locking" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>物体和编辑模式（平移，缩放）</p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Shift-X</kbd>, <kbd class="kbd docutils literal notranslate">Shift-Y</kbd>, <kbd class="kbd docutils literal notranslate">Shift-Z</kbd> 或 <kbd class="kbd docutils literal notranslate">Shift-MMB</kbd> 后将鼠标移动到所需的方向。</p>
+</dd>
+</dl>
+</div>
+<div class="figure align-right" id="id4">
+<a class="reference internal image-reference" href="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_plane-locking.png"><img alt="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_plane-locking.png" src="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_plane-locking.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">平面锁定。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>平面锁定将变换锁定到 <em>两个</em> 轴向（或禁止沿一个轴的变换），从而创建一个平面，元素可以自由移动或缩放。平面锁定仅影响平移和缩放。</p>
+<p>请注意，对于旋转，轴和平面锁定具有相同的效果，因为旋转始终受限于一个轴。 <em>轨迹球</em> 类型旋转 <kbd class="kbd docutils literal notranslate">R R</kbd> 则根本无法锁定。</p>
+</div>
+<div class="section" id="axis-locking-modes">
+<h3>轴向锁定模式<a class="headerlink" href="#axis-locking-modes" title="Permalink to this headline">¶</a></h3>
+<p>第一次按键约束运动到相应的 <em>全局</em> 轴。第二次按下 <em>相同</em> 键可将运动约束到当前选择的变换方向（除非它设置为 <em>全局</em>，在这种情况下应使用 <em>自身</em> 方向）。最后，第三次按同一个键将删除约束条件。</p>
+<p>可以在3D视图标题栏的 <a class="reference internal" href="../orientations.html"><span class="doc">变换方向参照坐标系</span></a>  选择器中设置方向。</p>
+<p>例如，如果当前变换方向设置为 <em>法线</em>，则按下 <kbd class="kbd docutils literal notranslate">G</kbd> 开始平移，然后按 <kbd class="kbd docutils literal notranslate">Z</kbd> 将锁定在相对于 <em>全局</em> 方向的Z方向的平移，按下 <kbd class="kbd docutils literal notranslate">Z</kbd> 将再次锁定在相对于 <em>法线</em> 方向的Z轴。再次按下 <kbd class="kbd docutils literal notranslate">Z</kbd> 将删除所有约束。当前模式将显示在 <em>3D视图标题栏</em> 的左侧。</p>
+<table class="docutils align-center" id="id5">
+<caption><span class="caption-text">轴向锁定模式。</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_locking-modes-1.png"><img alt="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_locking-modes-1.png" src="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_locking-modes-1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">全局坐标Z轴锁定。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_locking-modes-2.png"><img alt="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_locking-modes-2.png" src="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_locking-modes-2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">局部坐标Z轴锁定。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_locking-modes-3.png"><img alt="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_locking-modes-3.png" src="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_locking-modes-3.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">全局坐标Z轴锁定，并选中顶点</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_locking-modes-4.png"><img alt="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_locking-modes-4.png" src="../../../../../../../_images/editors_3dview_object_editing_transform_control_precision_axis-locking_locking-modes-4.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">局部坐标Z轴锁定，并选中顶点</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>从 <em>轴向锁定模式</em> 图像可以看出，变换的方向也考虑到了选择。</p>
+<p>请注意，使用锁定的轴不妨碍你使用键盘输入 <a class="reference internal" href="numeric_input.html"><span class="doc">数字变换</span></a>  值。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../manipulators.html" class="btn btn-neutral float-right" title="变换控制器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="numeric_input.html" class="btn btn-neutral float-left" title="数值输入" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

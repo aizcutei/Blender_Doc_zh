@@ -1,0 +1,351 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>重影 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/rigging/armatures/properties/ghost.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="结构" href="../structure.html" />
+    <link rel="prev" title="姿势库面板" href="pose_library.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../constraints/index.html">约束</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">骨架</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bones/index.html">骨骼</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">属性</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="skeleton.html">骨架</a></li>
+<li class="toctree-l4"><a class="reference internal" href="display.html">显示面板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bone_groups.html">骨骼组</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pose_library.html">姿势库面板</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">重影</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../skinning/index.html">蒙皮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../posing/index.html">姿态</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../lattice.html">Lattice 晶格</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">绑定</a> &raquo;</li>
+        
+          <li><a href="../index.html">骨架</a> &raquo;</li>
+        
+          <li><a href="index.html">属性</a> &raquo;</li>
+        
+      <li>重影</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/rigging/armatures/properties/ghost.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ghost">
+<h1>重影<a class="headerlink" href="#ghost" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">骨架标签页 ‣ 重影面板</span></p>
+</dd>
+</dl>
+</div>
+<p>重影是将骨骼放置在特定帧时的黑色轮廓线(较深或较浅的不透明色)，只在 <em>姿态模式</em> 显示。</p>
+<p>在传统的卡通创作中，动画师使用描图纸，来查看前几帧。这样可以看到角色的大致动作，而无需回放。Blender为骨架提供了类似的工具： &quot;重影&quot;。</p>
+<table class="docutils align-center" id="id1">
+<caption><span class="caption-text">重影示例。</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center">
+<a class="reference internal image-reference" href="../../../_images/rigging_armatures_properties_ghost_example1.png"><img alt="../../../_images/rigging_armatures_properties_ghost_example1.png" src="../../../_images/rigging_armatures_properties_ghost_example1.png" style="width: 240px;" /></a>
+</div>
+</td>
+<td><div class="figure align-center">
+<a class="reference internal image-reference" href="../../../_images/rigging_armatures_properties_ghost_example2.png"><img alt="../../../_images/rigging_armatures_properties_ghost_example2.png" src="../../../_images/rigging_armatures_properties_ghost_example2.png" style="width: 240px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="options">
+<h2>Options 选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id2">
+<img alt="../../../_images/rigging_armatures_properties_ghost_panel.png" src="../../../_images/rigging_armatures_properties_ghost_panel.png" />
+<p class="caption"><span class="caption-text">重影面板。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>重影设置位于 <em>骨架</em> 标签中。</p>
+<dl class="simple">
+<dt>Type 类型</dt><dd><dl class="simple">
+<dt>Around Current Frame 附近帧上</dt><dd><p>这将在当前帧之前和之后显示给定数量的重影。重影在当前帧被遮罩不透明，在最远的帧处是透明的。</p>
+</dd>
+<dt>In Range 帧区间内</dt><dd><p>这将在给定范围的帧内显示骨架的骨骼的重影。重影从第一帧的透明度到最后一帧不透明。它有四个选择：</p>
+</dd>
+<dt>On Keyframes 关键帧上</dt><dd><p>这与 <em>帧区间内</em> 选项非常相似，但是只有在骨架上的动画中的关键帧（即，一个或多个骨骼的关键帧）中有重影。所以它有与上述相同的选择，除了 <em>步长（Step）</em> 这个（只有关键帧生成重影）。奇怪的是，与 <em>帧区间内</em> 从第一关键帧的不透明度到最后一个关键帧的透明度重影相反。</p>
+</dd>
+</dl>
+</dd>
+<dt>Range 范围</dt><dd><p>这个数字按钮指定 &quot;两边&quot; 重影（即5的值会给你十个重影，当前帧前五个，后面帧五个）。</p>
+</dd>
+<dt>Start, End 起始，结束</dt><dd><p>该数字按钮指定开始/结束帧范围（排他）。请注意，不幸的是，它不能取空值或负值，这意味着你只能看到从第2帧(包含)开始的重影...</p>
+</dd>
+<dt>Step 步长</dt><dd><p>该数字按钮指定您是否为每个帧（默认值为1）有一个重影，或者每两帧，每三帧一个等等。</p>
+</dd>
+</dl>
+<div class="section" id="display">
+<h3>Display 显示<a class="headerlink" href="#display" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Selected Only 仅显示所选骨骼的重影</dt><dd><p>启用后，只能看到所选骨骼的重影(否则，骨骼中的每个骨骼都会有重影...)。</p>
+</dd>
+</dl>
+<p>最后，这些重影在播放动画时也是激活的 <kbd class="kbd docutils literal notranslate">Alt-A</kbd>  - 这只适用于 <em>附近帧上</em> 选项，当然...</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>没有“全局开关”禁用此显示功能。为此，你必须将 <em>Ghost</em> 设置为0（对于 <em>附近帧上</em> 选项），或者 <em>Start</em> 和 <em>End</em> （对于其他两个重影类型）中的相同帧号。</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../structure.html" class="btn btn-neutral float-right" title="结构" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pose_library.html" class="btn btn-neutral float-left" title="姿势库面板" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

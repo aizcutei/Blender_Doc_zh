@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>面副本 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/3dview/object/properties/duplication/duplifaces.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="组副本" href="dupligroup.html" />
+    <link rel="prev" title="顶点副本" href="dupliverts.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../startup_scene.html">启动场景</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../modes.html">物体模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../navigate/index.html">视图浏览</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../3d_cursor.html">3D游标</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html">物体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../properties/index.html">属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ruler_protractor.html">3D量尺 &amp; 量角器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">3D视图</a> &raquo;</li>
+        
+          <li><a href="../../index.html">物体</a> &raquo;</li>
+        
+          <li><a href="../index.html">属性</a> &raquo;</li>
+        
+          <li><a href="index.html">副本</a> &raquo;</li>
+        
+      <li>面副本</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../_sources/editors/3dview/object/properties/duplication/duplifaces.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="duplifaces">
+<span id="bpy-ops-object-make-dupli-face"></span><span id="bpy-types-object-use-dupli-faces"></span><h1>面副本<a class="headerlink" href="#duplifaces" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">物体 ‣ 副本</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">物体 ‣ 生成面副本</span></p>
+</dd>
+</dl>
+</div>
+<p><em>Duplication Faces（面副本）</em> 或 <em>DupliFaces（面副本）</em> 是在父物体的每个面上复制物体的功能。解释这个最好的方法之一是通过一个例子来说明。</p>
+<dl>
+<dt>缩放</dt><dd><p>根据对应面的大小缩放每个实例。</p>
+<dl class="simple">
+<dt>继承缩放</dt><dd><p>缩放 ＊面副本* 物体。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p><em>生成面副本</em> 工具将关联物体转化为面副本实例。该工具在物体在物体所在位置创建由单个面构成的父级物体(复制器)，然后使用 ＊面副本* 将实例放置在创建面的位置。</p>
+<p>可以使用 <span class="menuselection">物体 ‣ 应用 ‣ 副本独立化</span>, <kbd class="kbd docutils literal notranslate">Shift-Ctrl-A</kbd> 从 <em>面副本</em> 实例重新转化为多关联物体。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>示例的blend文件</p>
+<p>在此页面 <a class="reference external" href="https://wiki.blender.org/wiki/File:Manual-2.5-Duplifaces-Example01.blend">这里</a> 下载用于示例的blend文件。</p>
+</div>
+<div class="section" id="basic-usage">
+<h2>基本用法<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
+<p>在这个例子中，我们将使用一个挤压出“北极”的UV球（棱角球）作为我们的基础物体和立方体作为我们的父级网格。要将棱角球作为子级父链接到立方体，在 <em>物体模式</em> 中，首先 <kbd class="kbd docutils literal notranslate">RMB</kbd> 选择球体，然后 <kbd class="kbd docutils literal notranslate">Shift-RMB</kbd> 选择立方体（顺序非常重要），最后 <kbd class="kbd docutils literal notranslate">Ctrl-P</kbd> 。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_object_properties_duplication_duplifaces_cube-before.png"><img alt="../../../../../_images/editors_3dview_object_properties_duplication_duplifaces_cube-before.png" src="../../../../../_images/editors_3dview_object_properties_duplication_duplifaces_cube-before.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">一个立方体和一个球体。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_object_properties_duplication_duplifaces_cube-after.png"><img alt="../../../../../_images/editors_3dview_object_properties_duplication_duplifaces_cube-after.png" src="../../../../../_images/editors_3dview_object_properties_duplication_duplifaces_cube-after.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">面副本应用到立方体。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>接下来，在 <span class="menuselection">物体选项卡 ‣ 副本面板</span> 中，启用 <em>面</em> 。球体的副本复制到立方体的每个面方向。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>继承的属性</p>
+<p>副本子级的位置，方向和缩放与父级的面相匹配。因此，如果有多个物体作为子级是父链接到立方体的，则链接到立方体上的每个物体都将被复制一次。如果立方体被细分，则每个子级副本数量将和立方体上的面数对应。</p>
+</div>
+<p>父物体和原始物体都在3D视图中显示为可编辑的“模板”，但不会最终渲染。</p>
+</div>
+<div class="section" id="scale">
+<h2>缩放<a class="headerlink" href="#scale" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_object_properties_duplication_duplifaces_scale-enabled.png"><img alt="../../../../../_images/editors_3dview_object_properties_duplication_duplifaces_scale-enabled.png" src="../../../../../_images/editors_3dview_object_properties_duplication_duplifaces_scale-enabled.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">缩放启用。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_object_properties_duplication_duplifaces_scale-changed.png"><img alt="../../../../../_images/editors_3dview_object_properties_duplication_duplifaces_scale-changed.png" src="../../../../../_images/editors_3dview_object_properties_duplication_duplifaces_scale-changed.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">立方体顶面缩小了。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>通过为父物体启用 <em>缩放</em>，子物体的比例将根据父物体中每个面的大小进行调整。</p>
+<p>因此，通过重新缩放父物体的面，副本物体的大小将相应地改变。</p>
+</div>
+<div class="section" id="limitations-considerations">
+<h2>限制/注意事项<a class="headerlink" href="#limitations-considerations" title="Permalink to this headline">¶</a></h2>
+<p>副本几何图形相对于面的位置取决于子物体相对于基础物体原点的位置。这可能会导致编辑器中出现一些视觉瑕疵，因为原始物体的几何体与副本项重叠或相交。一种解决方法是将副本网格的原点从面的平面移开。</p>
+<p>如果子级几何体 不对称，那么面部的方向（由其顶点的顺序决定）可能很重要。从2.70开始，Blender没有工具可以调整面顶点的顺序。</p>
+<p>但是，有一个工作流程可以让你控制这个问题。制作一个正方形并启用复制/面，以便在编辑器中看到副本的几何体。如果方向不是你想要的，旋转面部，直到它是你想要的。通常你想在编辑模式下进行旋转，而不是对象模式，但这不是一个硬性规则。</p>
+<p>一旦你的方向正确，复制面部并移动你想要的副本。重复这个过程直到你有足够的面。由于这些面互相碰撞是很常见的，所以几何体将会有很多重复的顶点。使用工具面板中的移除重叠点按钮。</p>
+<p class="rubric">演示视频</p>
+<p>说明这个工作流程的简短视频：</p>
+<iframe src="https://www.youtube.com/embed/diI8xJ9oo_8" style="border: 0; height: 345px; width: 560px">
+</iframe></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="dupligroup.html" class="btn btn-neutral float-right" title="组副本" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dupliverts.html" class="btn btn-neutral float-left" title="顶点副本" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

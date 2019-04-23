@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>置换修改器 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/displace.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="钩挂修改器" href="hooks.html" />
+    <link rel="prev" title="曲线函数修改器" href="curve.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#generate">生成</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#deform">形变</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="armature.html">骨架修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cast.html">铸型修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corrective_smooth.html">矫正平滑修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curve.html">曲线函数修改器</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">置换修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hooks.html">钩挂修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="laplacian_smooth.html">拉普拉斯平滑修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="laplacian_deform.html">拉普拉斯变形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lattice.html">晶格修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_deform.html">网格变形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shrinkwrap.html">缩裹修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="simple_deform.html">简单变形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="smooth.html">平滑修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="surface_deform.html">表面变形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="warp.html">弯绕修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wave.html">波浪修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#simulate">模拟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../index.html">修改器</a> &raquo;</li>
+        
+      <li>置换修改器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/modeling/modifiers/deform/displace.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="displace-modifier">
+<span id="bpy-types-displacemodifier"></span><h1>置换修改器<a class="headerlink" href="#displace-modifier" title="Permalink to this headline">¶</a></h1>
+<p>置换修改器根据纹理（过程纹理或图像纹理都行）对应位置的强度偏移网格顶点的位置。置换可以是沿着局部坐标系一个特定的轴、或沿着顶点的法向量、或者从纹理分离出RGB分量同时用来偏移局部坐标系的XYZ方向(有时候也叫 <em>向量置换</em>)。</p>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id1">
+<img alt="../../../_images/modeling_modifiers_deform_displace_panel.png" src="../../../_images/modeling_modifiers_deform_displace_panel.png" />
+<p class="caption"><span class="caption-text">置换修改器。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>纹理</dt><dd><p>给每个顶点偏移量的纹理的名称。如果该字段为空，修改器默认取值``1.0`` （白色）。</p>
+</dd>
+<dt>方向</dt><dd><p>移位顶点的方向，可以从以下值中选取：</p>
+<dl class="simple">
+<dt>X、Y、Z轴</dt><dd><p>沿轴置换.</p>
+</dd>
+<dt>法线</dt><dd><p>沿顶点法线置换.</p>
+</dd>
+<dt>自定义法线</dt><dd><p>置换沿着(平均) <a class="reference internal" href="../../meshes/editing/normals.html#modeling-meshes-normals-custom"><span class="std std-ref">自定义法线</span></a>, 而不是顶点法线.</p>
+</dd>
+<dt>RGB 到 XYZ</dt><dd><p>使用纹理的RGB分量分别沿着局部坐标系的XYZ轴置换（红色值为X坐标轴方向，绿色值为Y坐标轴方向，蓝色值为Z坐标轴方向）。这有时候也称之为 <em>向量置换</em>。</p>
+</dd>
+</dl>
+</dd>
+<dt>空间</dt><dd><p>根据方向设置为 X,Y,Z还是 XYZ,修改器会沿着自身轴或全局轴.</p>
+</dd>
+<dt>贴图坐标系</dt><dd><p>用来获取每个顶点对应的纹理坐标而使用的纹理坐标系统，可以从以下值中选取：</p>
+<dl>
+<dt>UV</dt><dd><p>从面的UV坐标获取纹理坐标。</p>
+<dl class="simple">
+<dt>UV 贴图</dt><dd><p>从中获取纹理坐标的UV贴图。 如果对象没有UV坐标，则使用 <em>自身</em> 坐标系。 如果此字段为空，但有可用的UV贴图（例如，在将第一个UV贴图添加到网格后），则将使用当前活动的UV贴图覆盖该贴图.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>因为UV坐标是按面指定的，UV纹理坐标系通过第一个用那个顶点的面决定每个顶点的UV坐标；其他用那个顶点的面会被忽略掉。所以如果网格是非连续的UV坐标，用这个选项可能导致人工假象（穿帮）。</p>
+</div>
+</dd>
+<dt>物体</dt><dd><p>从其他物体的坐标系获取纹理坐标系（通过 <em>物体</em> 字段指定的）。</p>
+<dl>
+<dt>物体</dt><dd><p>获取纹理坐标的物体。移动物体会改变纹理映射的坐标。</p>
+<p>注意移动最初的物体 <strong>也</strong> 会导致纹理坐标的更新。所以，如果你需要在保持位移坐标不变的情况下移动修改后的物体，考虑建立从物体到修改的物体的父子关系。</p>
+<p>如果该字段为空，就用 <em>局部</em> 坐标系。</p>
+</dd>
+</dl>
+</dd>
+<dt>全局</dt><dd><p>从全局坐标系获取纹理坐标。</p>
+</dd>
+<dt>自身</dt><dd><p>从物体的自身坐标系获取纹理坐标。</p>
+</dd>
+</dl>
+</dd>
+<dt>顶点组</dt><dd><p>用来控制修改器影响因子的顶点数组的名字。如果留空，修改器会同样影响所有的顶点。</p>
+</dd>
+<dt>中间值</dt><dd><p>该纹理值将被修改器当作没有偏移。低于此值会在所选方向上负向偏移，高于此值会在所选方向上正向偏移。</p>
+<p><em>置换</em> = <em>纹理值</em> - <em>中间值</em></p>
+<p>回忆一下, Blender中 颜色/亮度值通常是在(0.0 到 1.0)之间,而不是 (0 到 255).</p>
+</dd>
+<dt>强度</dt><dd><p>置换的强度。偏移 <em>中间值</em> 之后，置换将被乘以 <em>强度</em> 值得到最终的顶点偏移量.</p>
+<p><em>顶点偏移</em> = <em>置换</em> × <em>强度</em>.</p>
+<p>负强度可用于翻转修改器的效果.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="example">
+<h2>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_deform_displace_example-1.jpg"><img alt="../../../_images/modeling_modifiers_deform_displace_example-1.jpg" src="../../../_images/modeling_modifiers_deform_displace_example-1.jpg" style="width: 680px;" /></a>
+<p class="caption"><span class="caption-text">置换修改器创建的三个不同的物体. <a class="reference external" href="https://en.blender.org/uploads/9/9e/Manual-Modifier-Displace-Example01.blend">样例 blend文件</a>.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_deform_displace_example-2.jpg"><img alt="../../../_images/modeling_modifiers_deform_displace_example-2.jpg" src="../../../_images/modeling_modifiers_deform_displace_example-2.jpg" style="width: 540px;" /></a>
+<p class="caption"><span class="caption-text">置换修改器创建的粘液动画. <a class="reference external" href="https://en.blender.org/uploads/6/62/Manual-Modifier-Displace-Slime01.blend">样例 blend文件</a>.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="hooks.html" class="btn btn-neutral float-right" title="钩挂修改器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="curve.html" class="btn btn-neutral float-left" title="曲线函数修改器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

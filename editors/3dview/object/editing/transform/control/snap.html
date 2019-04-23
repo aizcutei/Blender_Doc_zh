@@ -1,0 +1,507 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>吸附 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/3dview/object/editing/transform/control/snap.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title="轴心点" href="pivot_point/index.html" />
+    <link rel="prev" title="变换坐标系" href="orientations.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../startup_scene.html">启动场景</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modes.html">物体模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../navigate/index.html">视图浏览</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../3d_cursor.html">3D游标</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html">物体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../properties/index.html">属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../ruler_protractor.html">3D量尺 &amp; 量角器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">3D视图</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">物体</a> &raquo;</li>
+        
+          <li><a href="../../index.html">编辑</a> &raquo;</li>
+        
+          <li><a href="../index.html">变换</a> &raquo;</li>
+        
+          <li><a href="index.html">变换控件</a> &raquo;</li>
+        
+      <li>吸附</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../../_sources/editors/3dview/object/editing/transform/control/snap.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="snapping">
+<h1>吸附<a class="headerlink" href="#snapping" title="Permalink to this headline">¶</a></h1>
+<p>在Blender中可以使用两种类型的捕捉操作。第一种类型将你的选择或光标捕捉到给定的点，而在转换（平移，旋转，缩放）期间使用第二种类型，并将你的选择捕捉到场景中的元素。</p>
+<div class="section" id="snap-menu">
+<span id="bpy-ops-view3d-snap"></span><h2>吸附（捕捉）菜单<a class="headerlink" href="#snap-menu" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>物体，编辑和姿势模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">物体/物体类型 ‣ 吸附</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-S</kbd></p>
+</dd>
+</dl>
+</div>
+<p><em>吸附</em> 菜单 (在 <em>物体模式</em> 和 <em>编辑模式</em> 3D标题栏  <span class="menuselection">物体 ‣ 吸附</span> 和 <span class="menuselection">网格 ‣ 吸附</span>). 这个菜单提供了一些选项来移动光标或你的选择到一个定义的点（光标，选择或网格）。</p>
+<dl class="simple">
+<dt>选中项 -&gt; 栅格点</dt><dd><p>将当前选定的物体吸附到最近的网格点。</p>
+</dd>
+<dt>选中项 -&gt; 游标</dt><dd><p>将当前所选物体中的每一个移动到游标位置。</p>
+</dd>
+<dt>选中项 -&gt; 游标 (偏移)</dt><dd><p>将当前选择物体放置在3D光标的位置。如果选择了多个物体，则不会单独移动到游标位置; 而是以3D游标为中心，保持相对距离。</p>
+</dd>
+<dt>选中项 -&gt; 活动项</dt><dd><p>将选择移到活动（激活）物体的原点。</p>
+</dd>
+<dt>游标 -&gt; 选中项</dt><dd><p>将游标置于当前选择的中心，除非参见下文。</p>
+</dd>
+<dt>游标 -&gt; 中心点</dt><dd><p>将游标放置到世界的原点（位置0,0,0）。</p>
+</dd>
+<dt>游标 -&gt; 栅格点</dt><dd><p>将游标放在最近的栅格点上。</p>
+</dd>
+<dt>游标 -&gt; 活动项</dt><dd><p>将光标置于 <em>激活</em> （最后选定的）物体的原点。</p>
+</dd>
+</dl>
+<p><em>游标 -&gt; 选中项</em> 选项也受当前 <a class="reference internal" href="pivot_point/index.html#pivot-point-index"><span class="std std-ref">轴心点</span></a> 的影响。例如:</p>
+<ul class="simple">
+<li><p><em>边界框中心</em> 枢轴点处于活动状态时，<em>游标 -&gt; 选中项</em> 选项会将3D游标捕捉到围绕物体原点的边界框的中心。</p></li>
+<li><p>当选择 <em>质心点</em> 枢轴点时，<em>游标 -&gt; 选中项</em> 会将3D游标捕捉到物体原点的 <a class="reference external" href="https://en.wikipedia.org/wiki/Median">质心</a> 。</p></li>
+</ul>
+</div>
+<div class="section" id="transform-snapping">
+<span id="transform-snap"></span><h2>变换吸附<a class="headerlink" href="#transform-snapping" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>物体，编辑和姿势模式</p>
+</dd>
+<dt class="field-even">标题栏</dt>
+<dd class="field-even"><p><span class="menuselection">吸附</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-Tab</kbd></p>
+</dd>
+</dl>
+</div>
+<p>通过切换3D视图的标题按钮中的磁铁图标（其将变为红色），可以在变换期间将物体和网格元素捕捉到各种类型的场景元素。</p>
+<div class="figure align-center" id="id1">
+<img alt="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_header-magnet-icon.png" src="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_header-magnet-icon.png" />
+<p class="caption"><span class="caption-text">3D视图标题栏中的磁铁图标（启用时为红色）。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="snap-element">
+<span id="transform-snap-element"></span><h3>吸附元素<a class="headerlink" href="#snap-element" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>物体，编辑和姿势模式</p>
+</dd>
+<dt class="field-even">标题栏</dt>
+<dd class="field-even"><p><span class="menuselection">吸附元素</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-Ctrl-Tab</kbd></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-right" id="id2">
+<img alt="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_element-menu.png" src="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_element-menu.png" />
+<p class="caption"><span class="caption-text">吸附元素菜单。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>体积</dt><dd><p>吸附到鼠标光标下方第一个物体的体积内的区域。与其他选项不同，这一个控制变换元素的深度（即当前视图空间中的Z坐标）。通过切换吸附目标菜单右侧的按钮（见下文），在确定体积中心时，目标物体将被视为一个整体。</p>
+</dd>
+<dt>面</dt><dd><p>吸附到网格对象中的面的表面。有用于重心拓扑。</p>
+</dd>
+<dt>边</dt><dd><p>吸附到网格物体的边缘。</p>
+</dd>
+<dt>顶点</dt><dd><p>捕捉到网格物体的顶点。</p>
+</dd>
+<dt>增量</dt><dd><p>捕捉到栅格点。在正交视图中，对齐增量根据缩放级别而变化。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在这种情况下，栅格并不意味着显示可视栅格线。吸附将使用显示的栅格的分辨率，但是所有变换都是相对于初始位置（吸附操作之前）。</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="snap-target">
+<h3>吸附目标<a class="headerlink" href="#snap-target" title="Permalink to this headline">¶</a></h3>
+<p>如果将 <em>顶点</em>，<em>边</em>，<em>面</em> 或 <em>体积</em> 选为吸附元素，则吸附目标选项将变为活动状态。这些决定选择什么部分吸附到目标物体。</p>
+<dl class="simple">
+<dt>活动项</dt><dd><p>将活动元素（编辑模式中的顶点，物体模式中的物体）移动到目标。</p>
+</dd>
+<dt>质心</dt><dd><p>将选择的质心移至目标位置。</p>
+</dd>
+<dt>中心</dt><dd><p>将当前变换中心移动到目标。可以使用选中项 -&gt; 游标 (偏移)进行吸附。</p>
+</dd>
+<dt>邻近</dt><dd><p>将选择的最近点移动到目标。</p>
+</dd>
+</dl>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id3">
+<img alt="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_target-closest.png" src="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_target-closest.png" />
+<p class="caption"><span class="caption-text">邻近。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id4">
+<img alt="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_target-active.png" src="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_target-active.png" />
+<p class="caption"><span class="caption-text">激活。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id5">
+<img alt="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_target-median.png" src="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_target-median.png" />
+<p class="caption"><span class="caption-text">质心。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="additional-snap-options">
+<h3>其他吸附选项<a class="headerlink" href="#additional-snap-options" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id6">
+<img alt="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_options-object-mode.png" src="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_options-object-mode.png" />
+<p class="caption"><span class="caption-text">物体模式。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id7">
+<img alt="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_options-edit-mode.png" src="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_options-edit-mode.png" />
+<p class="caption"><span class="caption-text">编辑模式。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>如上图中黄色突出显示的区域所示，可以使用其他控件来修改吸附行为。这些选项在模式（物体和编辑）以及吸附元素之间有所不同。可用的四个选项是：</p>
+<table class="colwidths-given docutils align-center">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 87%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>图标</p></th>
+<th class="head"><p>细节</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="figure align-center">
+<a class="reference internal image-reference" href="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_option-icon-rotation.png"><img alt="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_option-icon-rotation.png" src="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_option-icon-rotation.png" style="width: 42px;" /></a>
+</div>
+</td>
+<td><p>将旋转与吸附目标对齐。</p></td>
+</tr>
+<tr class="row-odd"><td><div class="figure align-center">
+<a class="reference internal image-reference" href="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_option-icon-project.png"><img alt="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_option-icon-project.png" src="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_option-icon-project.png" style="width: 42px;" /></a>
+</div>
+</td>
+<td><p>投影单个元素到其他物体表面上的。</p></td>
+</tr>
+<tr class="row-even"><td><div class="figure align-center">
+<a class="reference internal image-reference" href="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_option-icon-self.png"><img alt="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_option-icon-self.png" src="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_option-icon-self.png" style="width: 42px;" /></a>
+</div>
+</td>
+<td><p>将元素吸附到自己的网格。</p></td>
+</tr>
+<tr class="row-odd"><td><div class="figure align-center">
+<a class="reference internal image-reference" href="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_option-icon-whole.png"><img alt="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_option-icon-whole.png" src="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_option-icon-whole.png" style="width: 42px;" /></a>
+</div>
+</td>
+<td><p>找到体积中心时，将整个物体视为整体。</p></td>
+</tr>
+<tr class="row-even"><td><div class="figure align-center">
+<a class="reference internal image-reference" href="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_option-icon-absolute.png"><img alt="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_option-icon-absolute.png" src="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_option-icon-absolute.png" style="width: 42px;" /></a>
+</div>
+</td>
+<td><p>吸附到栅格，而不是以相对于当前位置的增量进行吸附。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="multiple-snap-targets">
+<h4>多个吸附目标<a class="headerlink" href="#multiple-snap-targets" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-center" id="id8">
+<img alt="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_target-multiple.png" src="../../../../../../_images/editors_3dview_object_editing_transform_control_snap_target-multiple.png" />
+<p class="caption"><span class="caption-text">多个吸附目标。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>一旦用吸附变换一个选择（不只是当按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd>），您可以按 <kbd class="kbd docutils literal notranslate">A</kbd>  来标记当前的吸附点，然后进行标记尽可能多的其他吸附点，你想和选择物体将被吸附到所有标记点的平均位置。</p>
+<p>多次标记一个点将使它位置上更加平均。</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pivot_point/index.html" class="btn btn-neutral float-right" title="轴心点" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="orientations.html" class="btn btn-neutral float-left" title="变换坐标系" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

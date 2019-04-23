@@ -1,0 +1,503 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>标签页 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/freestyle/parameter_editor/line_style/tabs.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Nodes" href="nodes/index.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lighting/index.html">灯光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../eevee/index.html">Eevee 渲染器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cycles/index.html">Cycles渲染引擎</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output/index.html">渲染输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Freestyle</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core.html">核心选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../view_map.html">View maps</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Parameter Editor</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../line_set.html">Line Set</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Line Style &amp; Modifiers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../python.html">Python脚本模式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../line.html">Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export_svg.html">Freestyle SVG Exporter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../workflows/index.html">工作流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../opengl.html">OpenGL渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../audio/index.html">音频渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Freestyle</a> &raquo;</li>
+        
+          <li><a href="../index.html">Parameter Editor</a> &raquo;</li>
+        
+          <li><a href="index.html">Line Style &amp; Modifiers</a> &raquo;</li>
+        
+      <li>标签页</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/render/freestyle/parameter_editor/line_style/tabs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tabs">
+<h1>标签页<a class="headerlink" href="#tabs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="stroke">
+<h2>笔画<a class="headerlink" href="#stroke" title="Permalink to this headline">¶</a></h2>
+<p>Strokes are the final rendered lines. Yet you can tweak them, for example,
+by removing the ones longer/shorter than some threshold,
+chaining lines into a single stroke or breaking a stroke into several ones based on angles,
+dashed pattern, etc.</p>
+<div class="section" id="chaining">
+<h3>Chaining<a class="headerlink" href="#chaining" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id1">
+<img alt="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_stroke-chaining.png" src="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_stroke-chaining.png" />
+<p class="caption"><span class="caption-text">Chaining.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>By default all retrieved lines from the line set are chained together.
+There are two basic chaining methods:</p>
+<dl class="simple">
+<dt>Plain</dt><dd><p>The default chaining method; it creates simple chains.</p>
+</dd>
+<dt>Sketchy</dt><dd><p>This chaining option allows for generating chains of feature edges with sketchy multiple strokes.
+Basically, it generates <em>Round</em> strokes instead of a single one.
+It is only really useful if you use some random-driven modifiers in the line style!</p>
+</dd>
+<dt>Rounds</dt><dd><p>It specifies the number of rounds in sketchy strokes.</p>
+</dd>
+</dl>
+<p>Chaining can also be turned off to render each line separately,
+which can be useful for line styles which depend on accurate representation of the line set.</p>
+</div>
+<div class="section" id="splitting">
+<h3>Splitting<a class="headerlink" href="#splitting" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id2">
+<img alt="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_stroke-splitting.png" src="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_stroke-splitting.png" />
+<p class="caption"><span class="caption-text">Splitting.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can split up chains of Freestyle lines by checking one of the following:</p>
+<dl>
+<dt>Min, Max 2D Angle</dt><dd><p>Splits chains of feature edges when they make a 2D angle above (or below) a minimum (or maximum) threshold.</p>
+</dd>
+<dt>2D Length</dt><dd><p>Splits chains when they are longer than the given value.</p>
+</dd>
+<dt>Material Boundary</dt><dd><p>Splits chains of feature edges if they cross from one material to another.</p>
+</dd>
+<dt>Split Dash, Gap</dt><dd><p>Splits the chains using the given dashed pattern
+(&quot;D&quot; stands for &quot;dash&quot;, &quot;G&quot; stands for &quot;gap&quot;; see also <a class="reference internal" href="#dashed-line">Dashed Line</a>).</p>
+<p>D1, G1, D2, G2, D3, G3</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="sorting">
+<h3>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id3">
+<img alt="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_stroke-sorting.png" src="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_stroke-sorting.png" />
+<p class="caption"><span class="caption-text">Sorting.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can sort the order of your strokes, allowing the lines to stack in the order given.</p>
+<dl>
+<dt>Sort key</dt><dd><p>A sort key is used to determine the stacking order of lines.</p>
+<dl class="simple">
+<dt>Distance from camera</dt><dd><p>Lines closer to the camera lie on top of further lines.</p>
+</dd>
+<dt>2D length</dt><dd><p>Longer lines lie on top of shorter lines.</p>
+</dd>
+<dt>Projected X, Y</dt><dd><p>Sort by the projected X or Y value in the image coordinate system.</p>
+</dd>
+</dl>
+</dd>
+<dt>Integration Type</dt><dd><p>Use in tandem with the Sort Key to determine the range for sorting.
+Since the distance of a line from the camera may vary over vertices,
+this option computes the sort key for a line from the values computed at
+individual vertices. The value computed for the line is:</p>
+<dl class="simple">
+<dt>Mean</dt><dd><p>The mean of the values obtained for the vertices.</p>
+</dd>
+<dt>Min</dt><dd><p>The minimum of the values obtained for the vertices.</p>
+</dd>
+<dt>Max</dt><dd><p>The maximum of the values obtained for the vertices.</p>
+</dd>
+<dt>First</dt><dd><p>The value obtained for the first vertex.</p>
+</dd>
+<dt>Last</dt><dd><p>The value obtained for the last vertex.</p>
+</dd>
+</dl>
+</dd>
+<dt>Sort Order</dt><dd><p>With the given result you can choose to &quot;Reverse&quot; the sort order.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="selection">
+<h3>Selection<a class="headerlink" href="#selection" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id4">
+<img alt="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_stroke-selection.png" src="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_stroke-selection.png" />
+<p class="caption"><span class="caption-text">Selection.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can also choose to only render selected chains.</p>
+<dl class="simple">
+<dt>Minimal, Maximal 2D Length</dt><dd><p>Chains longer and/or shorter than <em>2D Length</em>.</p>
+</dd>
+<dt>Chain Count</dt><dd><p>Allows the selection of first N chains.</p>
+</dd>
+</dl>
+<div class="section" id="caps">
+<h4>Caps<a class="headerlink" href="#caps" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-center" id="id5">
+<img alt="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_stroke-caps.png" src="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_stroke-caps.png" />
+<p class="caption"><span class="caption-text">Line tip caps.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can choose between three types of line caps:</p>
+<dl class="simple">
+<dt>Butt</dt><dd><p>Flat cap, exactly at the point the line ends.</p>
+</dd>
+<dt>Round</dt><dd><p>A half circle centered on the end point of the line.</p>
+</dd>
+<dt>Square</dt><dd><p>A square centered on the end point of the line
+(hence, like the circle, the drawn end of the line is slightly extended compared to its computed value).</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id6">
+<img alt="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_stroke-caps-example.png" src="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_stroke-caps-example.png" />
+<p class="caption"><span class="caption-text">Line caps example.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="dashed-line">
+<h3>Dashed Line<a class="headerlink" href="#dashed-line" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id7">
+<img alt="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_stroke-dashed-line.png" src="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_stroke-dashed-line.png" />
+<p class="caption"><span class="caption-text">Dashes Line UI.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>By enabling the <em>Dashed Line</em> checkbox,
+you can specify three pairs of dash and gap lengths.
+Dash values define the lengths of dash strokes,
+while gap values specify intervals between two dashes.</p>
+<p>If a zero gap is specified,
+then the corresponding dash is ignored even if it has a non-zero value.</p>
+<p>Dashes are treated as separate strokes, meaning that you can apply line caps,
+as well as color, alpha and thickness modifiers.</p>
+</div>
+</div>
+<div class="section" id="color">
+<h2>Color<a class="headerlink" href="#color" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id8">
+<img alt="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_color.png" src="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_color.png" />
+<p class="caption"><span class="caption-text">Line Style Color UI.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>In this tab you control the color of your strokes.</p>
+<dl class="simple">
+<dt>Base Color</dt><dd><p>The base color for this line style.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="alpha">
+<h2>Alpha<a class="headerlink" href="#alpha" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id9">
+<img alt="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_alpha.png" src="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_alpha.png" />
+<p class="caption"><span class="caption-text">Line Style Alpha UI.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>In this tab you control the alpha (transparency) of your strokes.</p>
+<dl class="simple">
+<dt>Base Transparency</dt><dd><p>The base alpha for this line style.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="thickness">
+<h2>Thickness<a class="headerlink" href="#thickness" title="Permalink to this headline">¶</a></h2>
+<p>In this tab you control the thickness of your strokes.</p>
+<div class="figure align-center">
+<img alt="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_thickness.png" src="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_thickness.png" />
+</div>
+<dl>
+<dt>Base Thickness</dt><dd><p>The base thickness for this line style.</p>
+</dd>
+<dt>Thickness Position</dt><dd><p>Control the position of stroke thickness from the original (backbone) stroke geometry. There are four choices:</p>
+<dl class="simple">
+<dt>Center</dt><dd><p>The thickness is evenly split to the left and right side of the stroke geometry.</p>
+</dd>
+<dt>Inside</dt><dd><p>The strokes are drawn within object boundary.</p>
+</dd>
+<dt>Outside</dt><dd><p>The strokes are drawn outside the object boundary.</p>
+</dd>
+<dt>Relative</dt><dd><p>This allows you to specify the relative position by a number between 0.0 (inside) and 1.0 (outside),
+in the <em>Thickness Ratio</em> number button just below.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>The thickness position options are applied only to strokes of edge types
+<em>Silhouette</em> and <em>Border</em>,
+since these are the only edge types defined in terms of the object boundary.
+Strokes of other edge types are always drawn using the <em>Center</em> option.</p>
+</div>
+<div class="section" id="geometry">
+<h2>Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id10">
+<img alt="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_geometry.png" src="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_geometry.png" />
+<p class="caption"><span class="caption-text">Line Style Geometry Overall UI.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>In this tab you control the geometry of your strokes.
+It contains only the option to add modifiers.</p>
+</div>
+<div class="section" id="texture">
+<h2>Texture<a class="headerlink" href="#texture" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id11">
+<img alt="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_texture.png" src="../../../../_images/render_freestyle_parameter-editor_line-style_tabs_texture.png" />
+<p class="caption"><span class="caption-text">Line Style Texture.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Use Nodes/Textures</dt><dd><p>In Cycles textures are defined by means of
+shader <a class="reference internal" href="nodes/index.html"><span class="doc">nodes</span></a>.</p>
+</dd>
+<dt>Spacing Along Stroke</dt><dd><p>Allows to set the &quot;pace&quot; of textures mapped along the length of strokes.</p>
+</dd>
+<dt>Go to LineStyle Textures</dt><dd><p>The &quot;Go to LineStyle Textures&quot; button is a shortcut to texture settings in the other tab.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="nodes/index.html" class="btn btn-neutral float-right" title="Nodes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

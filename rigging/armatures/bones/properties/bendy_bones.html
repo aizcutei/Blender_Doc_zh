@@ -1,0 +1,451 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>软骨骼 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/rigging/armatures/bones/properties/bendy_bones.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="关系" href="relations.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../constraints/index.html">约束</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">骨架</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">骨骼</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../structure.html">结构</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../selecting.html">选择</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editing/index.html">编辑</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">属性</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../skinning/index.html">蒙皮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../posing/index.html">姿态</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lattice.html">Lattice 晶格</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">绑定</a> &raquo;</li>
+        
+          <li><a href="../../index.html">骨架</a> &raquo;</li>
+        
+          <li><a href="../index.html">骨骼</a> &raquo;</li>
+        
+          <li><a href="index.html">属性</a> &raquo;</li>
+        
+      <li>软骨骼</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/rigging/armatures/bones/properties/bendy_bones.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bendy-bones">
+<h1>软骨骼<a class="headerlink" href="#bendy-bones" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">骨骼 ‣ 软骨骼</span></p>
+</dd>
+</dl>
+</div>
+<p>Bendy Bones（B-Bones）是一种简单的方法取代许多小型刚性骨骼长链的方法。弯曲骨骼的常见用于脊柱模型或面部骨骼。</p>
+<div class="section" id="technical-details">
+<h2>Technical Details 技术细节<a class="headerlink" href="#technical-details" title="Permalink to this headline">¶</a></h2>
+<p>Blender将骨骼看成通过骨骼关节的贝塞尔曲线的一部分. 每个 <em>段数</em> 将弯曲并滚动以遵循这无形贝塞尔曲线代表此的曲线细分点。曲线两端的控制点是骨骼的端点。样条骨（B-bones）的形状可以是受控制使用一系列的属性或间接邻近的骨骼(即第一个子级和父级). 骨骼的两端的特征构成手柄以控制曲率。</p>
+<p>当使用 B-bone 作为约束目标 <a class="reference internal" href="../../../../interface/controls/templates/data_block.html#ui-data-id"><span class="std std-ref">数据ID</span></a> 提供跟随曲线的选项。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>However, if the bone is used as a target rather than to deform geometry,
+only <em>Armature</em> and <em>Copy Transforms</em> constraints will use the full
+transformation including roll and scale.</p>
+</div>
+</div>
+<div class="section" id="display">
+<h2>Display 显示<a class="headerlink" href="#display" title="Permalink to this headline">¶</a></h2>
+<p>只有骨骼可视化模式为 <em>样条骨（B-bones）</em> 才能看到这些段数。</p>
+<p>当显示方式不是 <em>样条骨（B-bones）</em> 时, 骨骼总是显示为刚性棍形，即使骨骼段数仍然存在并且有效。 这意味着即使在例如 <em>八面体</em> 可视化的显示方式，如果链中的一些骨头有几段， 他们仍然会使他们的几何体平滑变形...</p>
+</div>
+<div class="section" id="rest-pose">
+<h2>Rest Pose 重置姿势<a class="headerlink" href="#rest-pose" title="Permalink to this headline">¶</a></h2>
+<p>样条骨（B-bones）的初始形状可以在编辑模式中定义为该骨骼的重置姿势。这对弯曲的面部特征（如弯曲的眉毛或嘴巴）很有用。</p>
+<p>样条骨（B-bones）有两套Bendy Bone（软骨骼、弯曲骨骼）属性 - 一个用于编辑模式（即重置姿势/基础绑定Base Rig），另一个用于姿势模式 - 将它们的值相加，以获得最终的变换。</p>
+</div>
+<div class="section" id="example">
+<h2>Example 示例<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id2">
+<span id="fig-rig-bone-intro-bbone"></span><a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_properties_bendy-bones_b-bones-1.png"><img alt="../../../../_images/rigging_armatures_bones_properties_bendy-bones_b-bones-1.png" src="../../../../_images/rigging_armatures_bones_properties_bendy-bones_b-bones-1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">编辑模式的OLD 样条骨。 ToDo.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_properties_bendy-bones_b-bones-2.png"><img alt="../../../../_images/rigging_armatures_bones_properties_bendy-bones_b-bones-2.png" src="../../../../_images/rigging_armatures_bones_properties_bendy-bones_b-bones-2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">贝塞尔曲线叠加在链上，其手柄放置在骨骼的两端。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="figure align-center" id="id4">
+<span id="fig-rig-bone-intro-same"></span><a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_properties_bendy-bones_b-bones-3.png"><img alt="../../../../_images/rigging_armatures_bones_properties_bendy-bones_b-bones-3.png" src="../../../../_images/rigging_armatures_bones_properties_bendy-bones_b-bones-3.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">相同的骨架在物体模式。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>在图 <a class="reference internal" href="#fig-rig-bone-intro-bbone"><span class="std std-ref">编辑模式的OLD 样条骨。 ToDo.</span></a> 我们连接了三个骨骼，每个骨骼由五段组成。</p>
+<p>看图。 <a class="reference internal" href="#fig-rig-bone-intro-same"><span class="std std-ref">相同的骨架在物体模式。</span></a> ，我们可以看到骨骼的细分如何平滑地“融合”到彼此，即使是产生了滚动。</p>
+<div class="figure align-center" id="id5">
+<img alt="../../../../_images/rigging_armatures_bones_properties_bendy-bones_pose-mode.png" src="../../../../_images/rigging_armatures_bones_properties_bendy-bones_pose-mode.png" />
+<p class="caption"><span class="caption-text">骨骼在姿态模式下，骨骼可视化： Bone.003有一段，Bone.004有四段，Bone.005有十六段。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="options">
+<h2>Options 选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="segments">
+<h3>Segments 段数<a class="headerlink" href="#segments" title="Permalink to this headline">¶</a></h3>
+<p><em>段数（Segments）</em> 数字按钮允许你设置给定的骨骼被细分的段数。段数是在首端和尾端之间插入的小的，刚性的相连的子骨骼。这个设置越高，骨骼越平滑“弯曲”，但姿势计算负担越重...</p>
+</div>
+<div class="section" id="curve-xy-offsets">
+<h3>Curve XY Offsets  曲线XY偏移<a class="headerlink" href="#curve-xy-offsets" title="Permalink to this headline">¶</a></h3>
+<p>在垂直于骨骼的主（Y）轴的平面上施加曲线柄位置的偏移量。结果，手柄从原始位置每个轴向 (XY)进一步移动，使得曲线弯曲。</p>
+</div>
+<div class="section" id="roll">
+<h3>Roll 扭转<a class="headerlink" href="#roll" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Roll In, Out 扭转输入， 扭转输出</dt><dd><p>扭转值 (或围绕骨骼的主Y轴扭转)在每个段内插入起始和终止之间的扭转值。它应用旋转偏移给先前旋转的顶部。</p>
+</dd>
+<dt>Inherit End Roll  继承尾端扭转</dt><dd><p>If enabled, the <em>Roll Out</em> value of the <em>Start Handle</em> bone (connected parent by default)
+will be implicitly added to the <em>Roll In</em> setting of the current bone.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="scale">
+<h3>Scale 缩放<a class="headerlink" href="#scale" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Scale In, Out 缩放输入，缩放输出</dt><dd><p>调整X和Z轴每个段的厚度的比例因子，即长度不受影响。与 <em>Roll（扭转）</em> 类似，只是它是每段内插的扭转。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="easing">
+<h3>Easing<a class="headerlink" href="#easing" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>Ease In, Out</dt><dd><p><em>Ease In/Out</em> 数字按钮,改变“长度” <a class="reference internal" href="../../../../modeling/curves/structure.html#curve-handle-type-auto"><span class="std std-ref">&quot;auto&quot;</span></a> 贝塞尔曲线手柄分别控制骨的“首端手柄”和“尾端手柄”。</p>
+<p>这些值与默认长度成正比，当然这取决于骨骼长度，手柄参考角度等自动变化的过程。</p>
+</dd>
+</dl>
+<table class="docutils align-center" id="ease-in-out">
+<caption><span class="caption-text">Ease In/Out设置示例，具有实例化的贝塞尔曲线。</span><a class="headerlink" href="#ease-in-out" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_properties_bendy-bones_curve-in-out-1.png"><img alt="../../../../_images/rigging_armatures_bones_properties_bendy-bones_curve-in-out-1.png" src="../../../../_images/rigging_armatures_bones_properties_bendy-bones_curve-in-out-1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">看看Bone.004：它有默认的In和Out值（1.0）。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_bones_properties_bendy-bones_curve-in-out-2.png"><img alt="../../../../_images/rigging_armatures_bones_properties_bendy-bones_curve-in-out-2.png" src="../../../../_images/rigging_armatures_bones_properties_bendy-bones_curve-in-out-2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Bone.004，In为2.0，Out为0.0。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="custom-handles">
+<h3>Custom Handles<a class="headerlink" href="#custom-handles" title="Permalink to this headline">¶</a></h3>
+<p>B-Bones can use custom bones as their reference bone handles, instead of only using the connected parent/child bones.</p>
+<dl>
+<dt>Start, End Handle Type</dt><dd><p>Specifies the type of the handle from the following choices:</p>
+<dl class="simple">
+<dt>Automatic</dt><dd><p>The connected parent (or first connected child) of the bone is chosen as the handle.
+Calculations are done according to the <em>Absolute</em> handle type below.</p>
+</dd>
+<dt>Absolute</dt><dd><p>The Bézier handle is controlled by the position of the head (tail) of the handle bone
+relative to the head (tail) of the current bone. If the handle is also a B-Bone,
+additional processing is applied to further smooth the transition, assuming that
+the bones in effect form a chain.</p>
+</dd>
+<dt>Relative  相对</dt><dd><p>The Bézier handle is controlled by the offset of the head (tail) of the handle bone from its rest pose.
+The use of this type is not recommended due to numerical stability issues near zero offset.</p>
+</dd>
+<dt>Tangent</dt><dd><p>The Bézier handle is controlled by the orientation of the handle bone, independent of its location.</p>
+</dd>
+</dl>
+</dd>
+<dt>Custom Handle</dt><dd><p>For types other than <em>Automatic</em>, a bone to use as handle has to be manually selected.
+Switching to a custom handle type without selecting a bone can be used to effectively disable the handle.</p>
+<p>It is valid for two bones to refer to each other as handles -- this correlation is applied
+in connected chains with <em>Automatic</em> handles.</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Keying Set</p>
+<p>“BBone Shape”键控设置包括所有Bendy Bones属性。</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Example 示例<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id8">
+<img alt="../../../../_images/rigging_armatures_bones_properties_bendy-bones_settings-demo.png" src="../../../../_images/rigging_armatures_bones_properties_bendy-bones_settings-demo.png" />
+<p class="caption"><span class="caption-text">Bendy Bones属性的可视化。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<div class="legend">
+<p>左起： 1) Curve X/Y offsets, 2) Scale In/Out, 3) Roll In/Out</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="relations.html" class="btn btn-neutral float-right" title="关系" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

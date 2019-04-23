@@ -1,0 +1,463 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Children &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/particles/emitter/children.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="力场" href="force_field.html" />
+    <link rel="prev" title="显示" href="display.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity.html">重力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baking.html">烘焙物理模拟</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#physics-types">物理类型</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../force_fields/index.html">力场</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../collision.html">碰撞</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cloth/index.html">布料模拟</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../fluid/index.html">流体模拟</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Particles System</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../particle_system_panel.html">粒子系统面板</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hair/index.html">Hair</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../texture_influence.html">Texture Influence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mode.html">粒子编辑模式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">物理</a> &raquo;</li>
+        
+          <li><a href="../index.html">Particles System</a> &raquo;</li>
+        
+          <li><a href="index.html">Emitter</a> &raquo;</li>
+        
+      <li>Children</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/physics/particles/emitter/children.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="children">
+<h1>Children<a class="headerlink" href="#children" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<dl class="field-list simple">
+<dt class="field-odd">Panel</dt>
+<dd class="field-odd"><p><span class="menuselection">Particle System ‣ Children</span></p>
+</dd>
+</dl>
+</div>
+<p><em>Children</em> are <em>Hair</em> and <em>Keyed</em> particles assigned subparticles.
+They make it possible to work primarily with a relatively low amount of Parent particles,
+for whom the physics are calculated. The children are then aligned to their parents.
+Without recalculating the physics the number and visualization of the children can be changed.</p>
+<p>Children can be emitted from particles or from faces (with some different options).
+Emission from <em>Faces</em> has some advantages, especially the distribution is more even on each face
+(which makes it better suitable for fur and the like).
+However, children from particles follow their parents better, e.g.
+if you have a soft body animation and do not want the hair to penetrate the emitting mesh.
+But see also our manual page about <a class="reference internal" href="../hair/index.html"><span class="doc">Hair</span></a>.</p>
+<p>If you turn on children the parents are no longer rendered
+(which makes sense because the shape of the children may be quite different from that of their parents).
+If you want to see the parents additionally turn on the <em>Parents</em> button in the <em>Visualization</em> panel.</p>
+<p>Children carry the same material as their parents and are colored according to the exact
+place from where they are emitted (so all children may have different color or other attributes).</p>
+<p>The possible options depend from the type of particle system,
+and if you work with <em>Children from faces</em> or <em>Children from particles</em>.
+We do not show every possible combination,
+only the settings for a <em>Hair</em> particle system.</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="child-type">
+<h3>Child Type<a class="headerlink" href="#child-type" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="none">
+<h4>None<a class="headerlink" href="#none" title="Permalink to this headline">¶</a></h4>
+<p>No Children are generated.</p>
+</div>
+<div class="section" id="simple">
+<h4>Simple<a class="headerlink" href="#simple" title="Permalink to this headline">¶</a></h4>
+<p>Children are emitted from the parent position.</p>
+<dl class="simple">
+<dt>Size</dt><dd><p>Only for <em>Emitter</em>. A multiplier for children size.</p>
+</dd>
+<dt>Random</dt><dd><p>Random variation to the size of child particles.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="interpolated">
+<h4>Interpolated<a class="headerlink" href="#interpolated" title="Permalink to this headline">¶</a></h4>
+<p>Children are emitted between the <em>Parent</em> particles on the faces of a mesh.
+They interpolate between adjacent parents. This is especially useful for fur,
+because you can achieve an even distribution.
+Some of the children can become virtual parents, which are influencing other particles nearby.</p>
+<dl class="simple">
+<dt>Seed</dt><dd><p>Offset the random number table for child particles, to get a different result.</p>
+</dd>
+<dt>Virtual</dt><dd><p>Relative amount of virtual parents.</p>
+</dd>
+<dt>Long Hair</dt><dd><p>Calculate children that suit long hair well.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="common-options">
+<h4>Common Options<a class="headerlink" href="#common-options" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>Display</dt><dd><p>The number of children in the 3D View.</p>
+</dd>
+<dt>Render</dt><dd><p>The number of children to be rendered.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="effects">
+<h3>Effects<a class="headerlink" href="#effects" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id2">
+<img alt="../../../_images/physics_particles_emitter_children_round-clump.png" src="../../../_images/physics_particles_emitter_children_round-clump.png" />
+<p class="caption"><span class="caption-text">From left to right: Round: 0.0, Round: 1.0, Clump: 1.0, Clump: -1.0, Shape: -0.99.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>Use Clump Curve</dt><dd><p>Use <a class="reference internal" href="../../../interface/controls/templates/curve.html#ui-curve-widget"><span class="std std-ref">曲线部件</span></a> instead of parameters.</p>
+</dd>
+<dt>Clump</dt><dd><p>Clumping amount along child strands.
+The children may meet at their tip (1.0) or start together at their root (-1.0).</p>
+</dd>
+<dt>Shape</dt><dd><p>Form of <em>Clump</em>. Either inverse parabolic (0.99) or exponentially (-0.99).</p>
+</dd>
+<dt>Use Clump Noise</dt><dd><p>Creates random clumps around the parent hair.</p>
+<dl class="simple">
+<dt>Clump Noise Size</dt><dd><p>The size of the clumps.</p>
+</dd>
+</dl>
+</dd>
+<dt>Length</dt><dd><p>Length of child paths.</p>
+</dd>
+<dt>Threshold</dt><dd><p>Amount of particles left untouched by child path length.</p>
+</dd>
+<dt>Radius</dt><dd><p>The radius in which the children are distributed around their parents.
+This is 3D, so children may be emitted higher or lower than their parents.</p>
+</dd>
+<dt>Roundness</dt><dd><p>The roundness of the children around their parents. Either in a sphere (1.0) or in-plane (0.0).</p>
+</dd>
+<dt>Seed</dt><dd><p>Offset in the random number table for child particles, to get a different randomized result.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="roughness">
+<h3>Roughness<a class="headerlink" href="#roughness" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Use Roughness Curve</dt><dd><p>Use <a class="reference internal" href="../../../interface/controls/templates/curve.html#ui-curve-widget"><span class="std std-ref">曲线部件</span></a> instead of parameters.</p>
+</dd>
+<dt>Uniform, Size</dt><dd><p>It is based on children location so it varies the paths in a similar way when the children are near.</p>
+</dd>
+<dt>Endpoint, Shape</dt><dd><p>&quot;Rough End&quot; randomizes path ends (a bit like random negative clumping).
+Shape may be varied from &lt;1 (parabolic) to 10.0 (hyperbolic).</p>
+</dd>
+<dt>Random, Size, Threshold</dt><dd><p>It is based on a random vector so it is not the same for nearby children.
+The threshold can be specified to apply this to only a part of children.
+This is useful for creating a few stray children that will not do what others do.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="kink">
+<h3>Kink<a class="headerlink" href="#kink" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id3">
+<span id="fig-particle-child-kink"></span><img alt="../../../_images/physics_particles_emitter_children_kink.png" src="../../../_images/physics_particles_emitter_children_kink.png" />
+<p class="caption"><span class="caption-text">Child particles with Kink.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<div class="legend">
+<p>From left to right: Curl, Radial, Wave, Braid, Spiral.</p>
+</div>
+</div>
+<p>With <em>Kink</em> you can rotate the children around the parent.
+See Fig. <a class="reference internal" href="#fig-particle-child-kink"><span class="std std-ref">Child particles with Kink.</span></a> above picture for the different types of <em>Kink</em>.</p>
+<dl>
+<dt>Kink</dt><dd><dl>
+<dt>Nothing</dt><dd><p>Deactivated.</p>
+</dd>
+<dt>Curl</dt><dd><p>Children grow in a spiral around the parent hairs.</p>
+</dd>
+<dt>Radial</dt><dd><p>Children form around the parent a wave shape that passes through the parent hair.</p>
+</dd>
+<dt>Wave</dt><dd><p>Children form a wave, all in the same direction.</p>
+</dd>
+<dt>Braid</dt><dd><p>Children braid themselves around the parent hair.</p>
+</dd>
+<dt>Spiral</dt><dd><p>Generates a spiral at the end of each hair.</p>
+<dl class="simple">
+<dt>Radius, Resolution</dt><dd><p>Define the overall size.</p>
+</dd>
+<dt>Shape</dt><dd><p>Makes a the spiral grow in- or outward.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Alignment Limitations</p>
+<p>When hair is pointing straight up (along the chosen spiral axis, default Z), spirals may not show up!
+This is a limitation of the projection method used.
+Giving a slight tilt or random orientation to hairs fixes this.</p>
+</div>
+</dd>
+</dl>
+<div class="section" id="id1">
+<h4>Common Options<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>Amplitude</dt><dd><p>The amplitude of the offset.</p>
+</dd>
+<dt>Clump</dt><dd><p>How much clump effects kink amplitude.</p>
+</dd>
+<dt>Flatness</dt><dd><p>How flat the hairs are.</p>
+</dd>
+<dt>Frequency</dt><dd><p>The frequency of the offset (1/total length). The higher the frequency the more rotations are done.</p>
+</dd>
+<dt>Shape</dt><dd><p>Where the rotation starts (offset of rotation).</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="force_field.html" class="btn btn-neutral float-right" title="力场" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="display.html" class="btn btn-neutral float-left" title="显示" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

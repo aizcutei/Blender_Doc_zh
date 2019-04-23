@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>驱动器面板 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/drivers/drivers_panel.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="工作流程 &amp; 范例" href="workflow_examples.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../actions.html">动作</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">驱动器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">驱动器面板</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#settings">设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="workflow_examples.html">工作流程 &amp; 范例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html">问题排查</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../markers.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shape_keys/index.html">形态键</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motion_paths.html">运动路径</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">动画</a> &raquo;</li>
+        
+          <li><a href="index.html">驱动器</a> &raquo;</li>
+        
+      <li>驱动器面板</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/animation/drivers/drivers_panel.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="drivers-panel">
+<h1>驱动器面板<a class="headerlink" href="#drivers-panel" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器</dt>
+<dd class="field-odd"><p>曲线编辑器</p>
+</dd>
+<dt class="field-even">模式</dt>
+<dd class="field-even"><p>驱动器面板</p>
+</dd>
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性栏 ‣ 驱动器 ‣ 驱动器</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-right" id="id1">
+<img alt="../../_images/animation_drivers_drivers-panel_panel.png" src="../../_images/animation_drivers_drivers-panel_panel.png" />
+<p class="caption"><span class="caption-text">驱动器面板。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>该面板位于 <a class="reference internal" href="../../editors/graph_editor/introduction.html"><span class="doc">曲线编辑器</span></a> 的驱动模式下。</p>
+<p>驱动器面板用于设置 <em>驱动器变量</em> 或者 <em>脚本表达式</em> ，以计算 <em>驱动器值</em>。</p>
+<div class="section" id="settings">
+<h2>设置<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>更新相关性</dt><dd><p>强制更新驱动器值相关性。</p>
+</dd>
+<dt>移除驱动器</dt><dd><p>为该属性移除驱动器。</p>
+</dd>
+<dt>类型</dt><dd><p>有两种脚本类型: 内置 (平均化值, 和值, 最小值和最大值) 与 自定义脚本 (脚本表达式)。</p>
+<dl class="simple">
+<dt>平均化值</dt><dd><p>使用被引用变量的平均值。</p>
+</dd>
+<dt>和值</dt><dd><p>使用被引用变量的和。</p>
+</dd>
+<dt>脚本表达式</dt><dd><p>使用脚本表达式。见 <a class="reference internal" href="#expression">表达式</a>。用户需要输入一个Python表达式，自定义驱动变量的计算方法。</p>
+</dd>
+<dt>最小值</dt><dd><p>使用被引用变量的最小值。</p>
+</dd>
+<dt>最大值</dt><dd><p>使用被引用变量的最大值。</p>
+</dd>
+</dl>
+</dd>
+<dt>显示调试</dt><dd><p>显示 <em>驱动器值</em>。</p>
+</dd>
+<dt>驱动器值</dt><dd><p>驱动脚本的输出值。</p>
+</dd>
+</dl>
+<div class="section" id="expression">
+<h3>表达式<a class="headerlink" href="#expression" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>表达式</dt><dd><p>Here you can add variables, real numbers, math operators, math functions, Python properties, driver functions.
+See Driver Expression below for some examples. For performance optimization it is best to use
+the <a class="reference internal" href="#simple-expressions">Simple Expressions</a> subset as much as possible.</p>
+</dd>
+<dt>Use Self</dt><dd><p>使用 <code class="docutils literal notranslate"><span class="pre">self</span></code> 变量引用自身数据。用于物体、骨骼，避免创建指向自身属性的变量。</p>
+</dd>
+</dl>
+<div class="section" id="simple-expressions">
+<h4>简单表达式<a class="headerlink" href="#simple-expressions" title="Permalink to this headline">¶</a></h4>
+<p>Blender can evaluate a useful subset of Python driver expressions directly,
+which significantly improves performance, especially on multi-core systems.
+To take advantage of this, the driver expression must only use the following features:</p>
+<dl class="simple">
+<dt>变量名称</dt><dd><p>Use only ASCII characters.</p>
+</dd>
+<dt>Literals</dt><dd><p>Floating point and decimal integer.</p>
+</dd>
+<dt>Globals</dt><dd><p><code class="docutils literal notranslate"><span class="pre">frame</span></code></p>
+</dd>
+<dt>Constants</dt><dd><p><code class="docutils literal notranslate"><span class="pre">pi</span></code>, <code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt>Operators</dt><dd><p><code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>,
+<code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>,
+<code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code>, conditional operator/ ternary if</p>
+</dd>
+<dt>Functions</dt><dd><p><code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code>, <code class="docutils literal notranslate"><span class="pre">radians</span></code>, <code class="docutils literal notranslate"><span class="pre">degrees</span></code>,
+<code class="docutils literal notranslate"><span class="pre">abs</span></code>, <code class="docutils literal notranslate"><span class="pre">fabs</span></code>, <code class="docutils literal notranslate"><span class="pre">floor</span></code>, <code class="docutils literal notranslate"><span class="pre">ceil</span></code>, <code class="docutils literal notranslate"><span class="pre">trunc</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>,
+<code class="docutils literal notranslate"><span class="pre">sin</span></code>, <code class="docutils literal notranslate"><span class="pre">cos</span></code>, <code class="docutils literal notranslate"><span class="pre">tan</span></code>, <code class="docutils literal notranslate"><span class="pre">asin</span></code>, <code class="docutils literal notranslate"><span class="pre">acos</span></code>, <code class="docutils literal notranslate"><span class="pre">atan</span></code>, <code class="docutils literal notranslate"><span class="pre">atan2</span></code>,
+<code class="docutils literal notranslate"><span class="pre">exp</span></code>, <code class="docutils literal notranslate"><span class="pre">log</span></code>, <code class="docutils literal notranslate"><span class="pre">sqrt</span></code>, <code class="docutils literal notranslate"><span class="pre">pow</span></code>, <code class="docutils literal notranslate"><span class="pre">fmod</span></code></p>
+</dd>
+</dl>
+<p>Simple expressions are evaluated even when Python script execution is disabled.</p>
+<p>When an expression outside of this subset is used, Blender displays a &quot;Slow Python expression&quot; warning.</p>
+</div>
+</div>
+<div class="section" id="driver-variables">
+<h3>驱动变量<a class="headerlink" href="#driver-variables" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id2">
+<img alt="../../_images/animation_drivers_drivers-panel_transform-channel2.png" src="../../_images/animation_drivers_drivers-panel_transform-channel2.png" />
+<p class="caption"><span class="caption-text">变换通道。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id3">
+<img alt="../../_images/animation_drivers_drivers-panel_distance.png" src="../../_images/animation_drivers_drivers-panel_distance.png" />
+<p class="caption"><span class="caption-text">距离。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>变量直接引用属性，或者引用两个属性获得的变换增量。</p>
+<dl>
+<dt>添加变量</dt><dd><p>添加新的驱动变量。</p>
+</dd>
+<dt>复制/粘贴</dt><dd><p>用于复制当前变量堆，以便稍后将其粘贴到另一个物体的变量堆上。</p>
+</dd>
+<dt>名称</dt><dd><p>用于脚本表达式/函数的变量名。不允许空格或小数点，必须以字母开头。</p>
+</dd>
+<dt>变量类型</dt><dd><p>使用的变量类型。</p>
+<dl>
+<dt>单个属性</dt><dd><p>使用来自RNA属性的值。比如，材质的环境光着色颜色。(见图 <a class="reference internal" href="#fig-setup-single-property"><span class="std std-ref">单个属性设置。</span></a>) 首先选择标识类型，然后选择标识数据块的ID，复制并 <kbd class="kbd docutils literal notranslate">Ctrl-V</kbd> 粘贴RNA属性。请参阅 <a class="reference internal" href="../../data_system/custom_properties.html"><span class="doc">自定义属性</span></a>。</p>
+<dl class="simple">
+<dt>ID类型</dt><dd><p>标识类型。例如：关键帧，图像，物体，材质。</p>
+</dd>
+<dt>ID</dt><dd><p>数据块的ID，如: &quot;Material.001&quot;。</p>
+</dd>
+<dt>RNA路径</dt><dd><p>属性的RNA ID名称，如材质着色的 'ambient' 。</p>
+</dd>
+</dl>
+</dd>
+<dt>形变通道</dt><dd><p>使用物体或骨骼的某一变换通道。</p>
+<dl class="simple">
+<dt>ID</dt><dd><p>物体的ID。如: Cube, Armature, Camera。</p>
+</dd>
+<dt>骨骼</dt><dd><p>骨架中的骨骼ID。如 &quot;Bone&quot;, &quot;Bone.002&quot;, &quot;Arm.r&quot;。该选项仅适用于骨架。</p>
+</dd>
+<dt>类型</dt><dd><p>如, X 位移, X 旋转, X 缩放。</p>
+</dd>
+<dt>空间</dt><dd><p>世界空间、变换空间、自身空间。</p>
+</dd>
+</dl>
+</dd>
+<dt>旋转差值</dt><dd><p>使用两个物体或骨骼的旋转差值。</p>
+</dd>
+<dt>距离</dt><dd><p>使用两个物体或骨骼之间的距离。</p>
+</dd>
+</dl>
+</dd>
+<dt>值</dt><dd><p>显示变量数值。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="example">
+<h2>示例<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id4">
+<span id="fig-setup-single-property"></span><img alt="../../_images/animation_drivers_drivers-panel_single-property.png" src="../../_images/animation_drivers_drivers-panel_single-property.png" />
+<p class="caption"><span class="caption-text">单个属性设置。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../advanced/scripting/index.html#scripting-index"><span class="std std-ref">使用Python扩展Blender</span></a>.</p></li>
+<li><p><a class="reference external" href="https://www.python.org">Python</a> 及其 <a class="reference external" href="https://docs.python.org/">文档</a>.</p></li>
+<li><p><a class="reference external" href="http://functions.wolfram.com/">functions.wolfram.com</a>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="workflow_examples.html" class="btn btn-neutral float-right" title="工作流程 &amp; 范例" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

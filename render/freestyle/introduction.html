@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/freestyle/introduction.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="核心选项" href="core.html" />
+    <link rel="prev" title="Freestyle" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lighting/index.html">灯光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee 渲染器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles渲染引擎</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Freestyle</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-freestyle">什么是FreeStyle？</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-big-picture">整体结构</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#known-limitations">已知的局限性</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="core.html">核心选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="view_map.html">View maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameter_editor/index.html">Parameter Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html">Python脚本模式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="line.html">Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="export_svg.html">Freestyle SVG Exporter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">工作流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../audio/index.html">音频渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="index.html">Freestyle</a> &raquo;</li>
+        
+      <li>简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/render/freestyle/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-freestyle">
+<h2>什么是FreeStyle？<a class="headerlink" href="#what-is-freestyle" title="Permalink to this headline">¶</a></h2>
+<p>FreeStyle是基于边和线的非真实感（non-photorealisitc rendering, NPR）渲染引擎。基于网格和z-depth（深度）信息，FreeStyle可以根据选择的边类型来画线。FreeStyle中有各种各样的线条类型供选择来绘制出有艺术感图片（例如，<code class="docutils literal notranslate"><span class="pre">手绘</span></code>，<code class="docutils literal notranslate"><span class="pre">水彩</span></code>，或者技术用的硬线条）。</p>
+<p>有两种操作模式： <a class="reference internal" href="python.html"><span class="doc">Python 脚本</span></a> 和 <a class="reference internal" href="parameter_editor/index.html"><span class="doc">参数编辑器</span></a> -- 可以画出多种多样的线条风格。在Python中预存了多种线条风格，比如日式的大笔刷，卡通，蓝本，有深度信息的粗线条。参数编辑器模式可以方便地编辑特征（比如虚线），设置线条类型，定义边缘。在这些功能之上，Blender还允许用户编辑线条的风格，从而使用户最大化的控制最后的渲染效果。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<img alt="../../_images/render_freestyle_introduction_example-1.png" src="../../_images/render_freestyle_introduction_example-1.png" />
+<p class="caption"><span class="caption-text">ATV 童车， 作者 Rylan Wright (RONIN). CC BY. (<a class="reference external" href="https://wiki.blender.org/wiki/File:AtvBuggy.zip">File:AtvBuggy.zip</a>)。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id2">
+<img alt="../../_images/render_freestyle_introduction_example-2.png" src="../../_images/render_freestyle_introduction_example-2.png" />
+<p class="caption"><span class="caption-text">作者 mato.sus304. CC BY-SA. (<a class="reference external" href="https://wiki.blender.org/wiki/File:Mato_sus304_cut02.zip">File:Mato_sus304_cut02.zip</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="figure align-center" id="id3">
+<img alt="../../_images/render_freestyle_introduction_example-3.png" src="../../_images/render_freestyle_introduction_example-3.png" />
+<p class="caption"><span class="caption-text"><a class="reference external" href="http://oha-studios.com/">OHA Studio</a> © 中的卡通场景，Mechanimotion Entertainment. (<a class="reference external" href="https://download.blender.org/demo/test/FreeStyle_demo_file.blend.zip">the blend-file</a>).</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id4">
+<img alt="../../_images/render_freestyle_introduction_example-4.png" src="../../_images/render_freestyle_introduction_example-4.png" />
+<p class="caption"><span class="caption-text">Martin M-130 from 1935 的蓝本渲染，作者 LightBWK. CC0. 注意: 此文件很大，主要用于测试Blender的性能，直接导入可能会使Blender崩溃。 (<a class="reference external" href="https://wiki.blender.org/wiki/File:M-130Blueprint.zip">File:M-130Blueprint.zip</a>)</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>想看更过作品可以浏览： <a class="reference external" href="https://wiki.blender.org/wiki/Reference/Release_Notes/2.67/FreeStyle#FreeStyle_Artwork_Showcase">Release Note Artwork Showcase</a>.</p>
+</div>
+<div class="section" id="the-big-picture">
+<h2>整体结构<a class="headerlink" href="#the-big-picture" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>通过勾选 <span class="menuselection">属性编辑器 ‣ 渲染标签页 ‣ FreeStyle</span> 面板标题左侧的复选框，启动FreeStyle。</p></li>
+<li><p>FreeStyle的设置选项可以在 <em>渲染层</em> 中找到。</p></li>
+<li><p>一个渲染层只能有一个viewmap。一个viewmap存储着边缘检测的设置（Crease Angle， Culling toggle，Face Smoothness，Material Boundaries， Sphere Radius，和Kr Derivative Epsilon等高级选项)。</p></li>
+<li><p>一个viewmap可以有多个line set。</p></li>
+<li><p>一个line set控制哪种线条类型和选项将被用于渲染，基于你场景中的线条。</p></li>
+<li><p>每个line set使用一种线条的风格（一个线条风格可以在多个line set中共享）。</p></li>
+<li><p>一个线条风格指定FreeStyle怎样渲染与其关联的line set的color，alpha，thickness，和其它属性。</p></li>
+</ul>
+<div class="figure align-center" id="id5">
+<img alt="../../_images/render_freestyle_introduction_view-map-processes.png" src="../../_images/render_freestyle_introduction_view-map-processes.png" />
+<p class="caption"><span class="caption-text">FreeStyle的viewmap和处理流程框图。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="known-limitations">
+<h2>已知的局限性<a class="headerlink" href="#known-limitations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>高内存占用：所有网格物体在一个渲染层里会一次性全部加载。</p></li>
+<li><p>仅支持面结构的网格物体（faced mesh objects）。以下的网格类型会被忽略：</p>
+<ul>
+<li><p>网格面是透明材质。</p></li>
+<li><p>网格面的材质选项 <em>Cast Only</em> 被勾选。</p></li>
+</ul>
+</li>
+<li><p>透明面（transparent face）被处理为不透明面（opaque face）。</p></li>
+<li><p>面与面相交出无法检测到边缘。</p></li>
+<li><p>FreeStyle不支持图层蒙版。</p></li>
+<li><p>FreeStyle的渲染结果没有深度信息（Z depth）。</p></li>
+<li><p>不支持全景相机。</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="core.html" class="btn btn-neutral float-right" title="核心选项" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Freestyle" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

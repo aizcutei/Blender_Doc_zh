@@ -1,0 +1,579 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>命令行参数 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/advanced/command_line/arguments.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="脚本与扩展Blender" href="../scripting/index.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">高级应用</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">命令行</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">命令行参数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#render-options">渲染选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#format-options">格式选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#animation-playback-options">动画播放选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#window-options">窗口选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#game-engine-specific-options">游戏引擎选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python-options">Python 选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#debug-options">调试选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#misc-options">综合选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#experimental-features">实验特性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-options">其他选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#argument-parsing">参数解析</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#argument-order">参数顺序</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#environment-variables">环境变量</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../scripting/index.html">脚本与扩展Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../app_templates.html">应用模板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../keymap_editing.html">Keymap Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../limits.html">功能局限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators.html">操作</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">高级应用</a> &raquo;</li>
+        
+          <li><a href="index.html">命令行</a> &raquo;</li>
+        
+      <li>命令行参数</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/advanced/command_line/arguments.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="command-line-arguments">
+<h1>命令行参数<a class="headerlink" href="#command-line-arguments" title="Permalink to this headline">¶</a></h1>
+<p>Blender 2.80  命令行用法: Blender [args ...] [file] [args ...]</p>
+<div class="section" id="render-options">
+<h2>渲染选项<a class="headerlink" href="#render-options" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">-b</span></code>, <code class="docutils literal notranslate"><span class="pre">--background</span></code></dt><dd><p>在后台运行渲染（通常用于无需UI的渲染）。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-a</span></code>, <code class="docutils literal notranslate"><span class="pre">--render-anim</span></code></dt><dd><p>渲染从开始到结束帧（包含最后帧）。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-S</span></code>, <code class="docutils literal notranslate"><span class="pre">--scene</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code></dt><dd><p>设置要渲染场景 <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-f</span></code>, <code class="docutils literal notranslate"><span class="pre">--render-frame</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;frame&gt;</span></code></dt><dd><p>渲染某一 <code class="docutils literal notranslate"><span class="pre">&lt;frame&gt;</span></code> 并保存。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">+&lt;frame&gt;</span></code> start frame relative, <code class="docutils literal notranslate"><span class="pre">-&lt;frame&gt;</span></code> end frame relative.</p></li>
+<li><p>还可以使用逗号隔开组成帧列表(无空格)</p></li>
+<li><p>在首末帧之间加 <code class="docutils literal notranslate"><span class="pre">..</span></code> 隔开，表示包含首尾的帧范围。</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-s</span></code>, <code class="docutils literal notranslate"><span class="pre">--frame-start</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;frame&gt;</span></code></dt><dd><p>设置起始帧为 <code class="docutils literal notranslate"><span class="pre">&lt;frame&gt;</span></code>, 支持 +/- 设置相对帧。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-e</span></code>, <code class="docutils literal notranslate"><span class="pre">--frame-end</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;frame&gt;</span></code></dt><dd><p>设置结束帧为 <code class="docutils literal notranslate"><span class="pre">&lt;frame&gt;</span></code>,  支持 +/- 设置相对帧。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-j</span></code>, <code class="docutils literal notranslate"><span class="pre">--frame-jump</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;frames&gt;</span></code></dt><dd><p>设置帧步长。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-o</span></code>, <code class="docutils literal notranslate"><span class="pre">--render-output</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;path&gt;</span></code></dt><dd><p>设置渲染路径和文件名。在路径起始位置使用 <code class="docutils literal notranslate"><span class="pre">//</span></code> 设置渲染路径为当前blend文件的相对路径。</p>
+<p><code class="docutils literal notranslate"><span class="pre">#</span></code> 会被替代为帧序号，不足位补零。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ani_##_test.png</span></code> 变成 <code class="docutils literal notranslate"><span class="pre">ani_01_test.png</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">test-######.png</span></code> 变成 <code class="docutils literal notranslate"><span class="pre">test-000001.png</span></code></p></li>
+</ul>
+<p>如果文件名不包含#, 默认为文件名添加后缀 <code class="docutils literal notranslate"><span class="pre">####</span></code> 。</p>
+<p>那么渲染器保存文件名的时候,就会把帧号添加到文件的结尾,如:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>blender -b foobar.blend -o //render_ -F PNG -x <span class="m">1</span> -a
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">//render_</span></code> 会变成 <code class="docutils literal notranslate"><span class="pre">//render_####</span></code>, 帧会写成 <code class="docutils literal notranslate"><span class="pre">//render_0001.png</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-E</span></code>, <code class="docutils literal notranslate"><span class="pre">--engine</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;engine&gt;</span></code></dt><dd><p>指定渲染引擎, 使用 -E 查看所有可用渲染引擎列表。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--threads</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;threads&gt;</span></code></dt><dd><p>渲染或其他操作使用线程数量，&lt;threads&gt; 填写1-64就是线程，0表示使用CPU全部线程。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="format-options">
+<h2>格式选项<a class="headerlink" href="#format-options" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">-F</span></code>, <code class="docutils literal notranslate"><span class="pre">--render-format</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;format&gt;</span></code></dt><dd><p>设置渲染格式。有效选项有 <code class="docutils literal notranslate"><span class="pre">TGA</span></code> <code class="docutils literal notranslate"><span class="pre">RAWTGA</span></code> <code class="docutils literal notranslate"><span class="pre">JPEG</span></code> <code class="docutils literal notranslate"><span class="pre">IRIS</span></code> <code class="docutils literal notranslate"><span class="pre">IRIZ</span></code> <code class="docutils literal notranslate"><span class="pre">AVIRAW</span></code> <code class="docutils literal notranslate"><span class="pre">AVIJPEG</span></code> <code class="docutils literal notranslate"><span class="pre">PNG</span></code> <code class="docutils literal notranslate"><span class="pre">BMP</span></code></p>
+<p>可以编制到Blender中的格式如下，但并非在所有系统可用： <code class="docutils literal notranslate"><span class="pre">HDR</span></code> <code class="docutils literal notranslate"><span class="pre">TIFF</span></code> <code class="docutils literal notranslate"><span class="pre">EXR</span></code> <code class="docutils literal notranslate"><span class="pre">MULTILAYER</span></code> <code class="docutils literal notranslate"><span class="pre">MPEG</span></code> <code class="docutils literal notranslate"><span class="pre">FRAMESERVER</span></code> <code class="docutils literal notranslate"><span class="pre">CINEON</span></code> <code class="docutils literal notranslate"><span class="pre">DPX</span></code> <code class="docutils literal notranslate"><span class="pre">DDS</span></code> <code class="docutils literal notranslate"><span class="pre">JP2</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-x</span></code>, <code class="docutils literal notranslate"><span class="pre">--use-extension</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;bool&gt;</span></code></dt><dd><p>设置选项，将文件扩展名添加到文件的结尾。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="animation-playback-options">
+<h2>动画播放选项<a class="headerlink" href="#animation-playback-options" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">-a</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;options&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;file(s)&gt;</span></code></dt><dd><p>播放动画 <code class="docutils literal notranslate"><span class="pre">&lt;file(s)&gt;</span></code>，这种方式不能运行于后台.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">-p</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;sx&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;sy&gt;</span></code></dt><dd><p>打开，左下角位于 <code class="docutils literal notranslate"><span class="pre">&lt;sx&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;sy&gt;</span></code> 。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-m</span></code></dt><dd><p>从磁盘读取(不进行缓冲)。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-f</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;fps&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;fps-base&gt;</span></code></dt><dd><p>指定开始播放的FPS。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-j</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;frame&gt;</span></code></dt><dd><p>设置帧步长为 <code class="docutils literal notranslate"><span class="pre">&lt;frame&gt;</span></code> 。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-s</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;frame&gt;</span></code></dt><dd><p>从 <code class="docutils literal notranslate"><span class="pre">&lt;frame&gt;</span></code> 帧开始播放。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-e</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;frame&gt;</span></code></dt><dd><p>播放到 <code class="docutils literal notranslate"><span class="pre">&lt;frame&gt;</span></code> 帧。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="window-options">
+<h2>窗口选项<a class="headerlink" href="#window-options" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">-w</span></code>, <code class="docutils literal notranslate"><span class="pre">--window-border</span></code></dt><dd><p>打开有边框窗口。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-W</span></code>, <code class="docutils literal notranslate"><span class="pre">--window-borderless</span></code></dt><dd><p>强制无边框打开。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--window-geometry</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;sx&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;sy&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;w&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;h&gt;</span></code></dt><dd><p>以左下角位于 <code class="docutils literal notranslate"><span class="pre">&lt;sx&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;sy&gt;</span></code> ，宽度和高度分别为 <code class="docutils literal notranslate"><span class="pre">&lt;w&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;h&gt;</span></code> 打开。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-con</span></code>, <code class="docutils literal notranslate"><span class="pre">--start-console</span></code></dt><dd><p>从控制台打开(忽略 -b选项)，(仅适用Windows)。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--no-native-pixels</span></code></dt><dd><p>对于高分辨显示器(MacBook <code class="docutils literal notranslate"><span class="pre">Retina</span></code>)，不使用本地分辨率。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="game-engine-specific-options">
+<h2>游戏引擎选项<a class="headerlink" href="#game-engine-specific-options" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">-g</span></code> 游戏引擎选项</p>
+<blockquote>
+<div><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">fixedtime</span></code></dt><dd><p>在50Hz帧率运行，不掉帧。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">vertexarrays</span></code></dt><dd><p>渲染时使用顶点阵列(通常更快)。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">nomipmap</span></code></dt><dd><p>无纹理的Mip映射。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">linearmipmap</span></code></dt><dd><p>使用线性纹理Mip映射，而不是最近的(默认)</p>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="python-options">
+<h2>Python 选项<a class="headerlink" href="#python-options" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">-y</span></code>, <code class="docutils literal notranslate"><span class="pre">--enable-autoexec</span></code></dt><dd><p>启用自动执行Python脚本(默认)。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-Y</span></code>, <code class="docutils literal notranslate"><span class="pre">--disable-autoexec</span></code></dt><dd><p>禁用自动执行Python脚本(py驱动与启动脚本)。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--python</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;</span></code></dt><dd><p>运行指定的Python脚本文件。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--python-text</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code></dt><dd><p>运行指定的Python脚本文本块。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--python-expr</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;expression&gt;</span></code></dt><dd><p>将给定表达式作为Python脚本运行。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--python-console</span></code></dt><dd><p>使用交互式控制台运行Blender。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--python-exit-code</span></code></dt><dd><p>设置抛出Python异常时的结束代码( [0..255])，(仅用于从命令行执行的脚本)，0表示禁用。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--addons</span></code></dt><dd><p>逗号分隔的插件列表(无空格)。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="debug-options">
+<h2>调试选项<a class="headerlink" href="#debug-options" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">-d</span></code>, <code class="docutils literal notranslate"><span class="pre">--debug</span></code></dt><dd><p>开启调试。</p>
+<ul class="simple">
+<li><p>启用内存错误侦测</p></li>
+<li><p>禁用鼠标抓取（在某些情况下与调试器进行交互）</p></li>
+<li><p>自动import导入 <code class="docutils literal notranslate"><span class="pre">sys.stdin</span></code> 而不是未导入</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-value</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;value&gt;</span></code></dt><dd><p>在启动时设置调试值 <code class="docutils literal notranslate"><span class="pre">&lt;value&gt;</span></code>  。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-events</span></code></dt><dd><p>启用事件系统的调试消息。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-ffmpeg</span></code></dt><dd><p>启用来自ffmpeg库的调试消息。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-handlers</span></code></dt><dd><p>启用事件处理的调试消息。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-libmv</span></code></dt><dd><p>启用来自libmv库的调试消息。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-cycles</span></code></dt><dd><p>启用来自Cycles的调试消息。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-memory</span></code></dt><dd><p>启用完全保护的内存分配和调试。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-jobs</span></code></dt><dd><p>启用后台任务的时间分析。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-python</span></code></dt><dd><p>启用Python的调试消息。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-depsgraph</span></code></dt><dd><p>启用依赖树的调试消息。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-depsgraph-no-threads</span></code></dt><dd><p>切换依赖图到单线程运算。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-gpumem</span></code></dt><dd><p>启用在状态栏显示GPU内存状态。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-wm</span></code></dt><dd><p>启用窗口管理器的调试消息，同时逐个打印operator调用。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-all</span></code></dt><dd><p>启用全部调试消息。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-io</span></code></dt><dd><p>启用来自I/O ((collada, ...))的调试消息。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-fpe</span></code></dt><dd><p>启用浮点异常。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--disable-crash-handler</span></code></dt><dd><p>禁用崩溃处理程序。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="misc-options">
+<h2>综合选项<a class="headerlink" href="#misc-options" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">--factory-startup</span></code></dt><dd><p>跳过读取用户家目录中的startup.blend。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--env-system-datafiles</span></code></dt><dd><p>设置 <code class="docutils literal notranslate"><span class="pre">BLENDER_SYSTEM_DATAFILES</span></code> 环境变量。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--env-system-scripts</span></code></dt><dd><p>设置 <code class="docutils literal notranslate"><span class="pre">BLENDER_SYSTEM_SCRIPTS</span></code> 环境变量。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--env-system-python</span></code></dt><dd><p>设置 <code class="docutils literal notranslate"><span class="pre">BLENDER_SYSTEM_PYTHON</span></code> 环境变量。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-nojoystick</span></code></dt><dd><p>禁用操纵杆支持。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-noglsl</span></code></dt><dd><p>禁用GLSL着色。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-noaudio</span></code></dt><dd><p>禁用声音系统。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-setaudio</span></code></dt><dd><p>设置声音系统到指定设备: <code class="docutils literal notranslate"><span class="pre">NULL</span></code> <code class="docutils literal notranslate"><span class="pre">SDL</span></code> <code class="docutils literal notranslate"><span class="pre">OPENAL</span></code> <code class="docutils literal notranslate"><span class="pre">JACK</span></code>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-h</span></code>, <code class="docutils literal notranslate"><span class="pre">--help</span></code></dt><dd><p>打印帮助信息，并退出。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-R</span></code></dt><dd><p>注册 .blend 扩展名，然后退出 (仅适用于Windows)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-r</span></code></dt><dd><p>悄悄注册 .blend 扩展名(不弹出提示对话框)，然后退出 (仅适用于Windows)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-v</span></code>, <code class="docutils literal notranslate"><span class="pre">--version</span></code></dt><dd><p>打印Blender版本信息并退出。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--</span></code></dt><dd><p>结束选项处理，传递的参数不变。通过Python的 <code class="docutils literal notranslate"><span class="pre">sys.argv</span></code> 访问。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="experimental-features">
+<h2>实验特性<a class="headerlink" href="#experimental-features" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">--enable-new-depsgraph</span></code></dt><dd><p>使用新的依赖图。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--enable-new-basic-shader-glsl</span></code></dt><dd><p>使用新的GLSL 基础着色器。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="other-options">
+<h2>其他选项<a class="headerlink" href="#other-options" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">/?</span></code></dt><dd><p>打印帮助文本，并退出 (仅适用于Windows)。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-freestyle</span></code></dt><dd><p>启用FreeStyle调试信息。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug-gpu</span></code></dt><dd><p>对OpenGL 4.3+启用GPU调试上下文和信息。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--disable-abort-handler</span></code></dt><dd><p>禁用中止处理程序。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--verbose</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;verbose&gt;</span></code></dt><dd><p>设置日志记录的详细程度.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="argument-parsing">
+<h2>参数解析<a class="headerlink" href="#argument-parsing" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>参数必须用空格隔开,例如：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>blender -ba test.blend
+</pre></div>
+</div>
+<p>...将忽略 <code class="docutils literal notranslate"><span class="pre">a</span></code> 选项。</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>blender -b test.blend -f8
+</pre></div>
+</div>
+<p>...将 <code class="docutils literal notranslate"><span class="pre">8</span></code> ，因为 <code class="docutils literal notranslate"><span class="pre">-f</span></code> 和帧数值之间没有空格。</p>
+</div></blockquote>
+</div>
+<div class="section" id="argument-order">
+<h2>参数顺序<a class="headerlink" href="#argument-order" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>参数是按从左到右的循序执行的，例如:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>blender --background test.blend --render-frame <span class="m">1</span> --render-output <span class="s1">&#39;/tmp&#39;</span>
+</pre></div>
+</div>
+<p>...不会渲染到 <code class="docutils literal notranslate"><span class="pre">/tmp</span></code> ，因为不能在渲染路径(output)之前设置 <code class="docutils literal notranslate"><span class="pre">--render-frame</span> <span class="pre">1</span></code> 参数。</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>blender --background --render-output /tmp test.blend --render-frame <span class="m">1</span>
+</pre></div>
+</div>
+<p>不会渲染到 <code class="docutils literal notranslate"><span class="pre">/tmp</span></code> ，由于加载混合文件会覆盖渲染输出设置。</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>blender --background test.blend --render-output /tmp --render-frame <span class="m">1</span>
+</pre></div>
+</div>
+<p>以上命令行正确，可得到预期结果。</p>
+</div></blockquote>
+</div>
+<div class="section" id="environment-variables">
+<h2>环境变量<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">BLENDER_USER_CONFIG</dt>
+<dd class="field-odd"><p>用户配置文件目录。</p>
+</dd>
+<dt class="field-even">BLENDER_USER_SCRIPTS</dt>
+<dd class="field-even"><p>用户脚本目录。</p>
+</dd>
+<dt class="field-odd">BLENDER_SYSTEM_SCRIPTS</dt>
+<dd class="field-odd"><p>系统脚本目录。</p>
+</dd>
+<dt class="field-even">BLENDER_USER_DATAFILES</dt>
+<dd class="field-even"><p>用户数据文件目录 (icons, translations, ..).</p>
+</dd>
+<dt class="field-odd">BLENDER_SYSTEM_DATAFILES</dt>
+<dd class="field-odd"><p>系统数据文件目录。</p>
+</dd>
+<dt class="field-even">BLENDER_SYSTEM_PYTHON</dt>
+<dd class="field-even"><p>系统Python库目录.</p>
+</dd>
+<dt class="field-odd">TEMP</dt>
+<dd class="field-odd"><p>临时文件目录。</p>
+</dd>
+<dt class="field-even">TMP</dt>
+<dd class="field-even"><p>或 $TMPDIR  临时文件目录.</p>
+</dd>
+<dt class="field-odd">SDL_AUDIODRIVER</dt>
+<dd class="field-odd"><p>LibSDL 音频驱动- alsa, esd, dma.</p>
+</dd>
+<dt class="field-even">PYTHONHOME</dt>
+<dd class="field-even"><p>Python主目录路径, 例如/usr/lib/python。</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../scripting/index.html" class="btn btn-neutral float-right" title="脚本与扩展Blender" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

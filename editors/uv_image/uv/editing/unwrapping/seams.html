@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>缝合线 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/uv_image/uv/editing/unwrapping/seams.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="布局" href="../layout.html" />
+    <link rel="prev" title="映射类型" href="mapping_types.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../../3dview/index.html">3D视图</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html">UV/图像编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../navigating.html">视图浏览</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../image/index.html">图像</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html">UV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../display_panel.html">显示面板</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">UV/图像编辑器</a> &raquo;</li>
+        
+          <li><a href="../../index.html">UV</a> &raquo;</li>
+        
+          <li><a href="../index.html">编辑</a> &raquo;</li>
+        
+          <li><a href="index.html">展开</a> &raquo;</li>
+        
+      <li>缝合线</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../_sources/editors/uv_image/uv/editing/unwrapping/seams.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="seams">
+<h1>缝合线<a class="headerlink" href="#seams" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../../../_images/editors_uv-image_uv_editing_unwrapping_seams_simple.png"><img alt="../../../../../_images/editors_uv-image_uv_editing_unwrapping_seams_simple.png" src="../../../../../_images/editors_uv-image_uv_editing_unwrapping_seams_simple.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">圆柱上的简单缝合线。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>很多情况下，使用块面、柱面、球面投射或最佳匹配可以获得不错的UV布局。然而，对于更加复杂的网格，特别是存在大量凹面的网格，就需要定义 <em>缝合线</em> 来限制和引导前面提到的展开流程了。</p>
+<p>和缝纫一样，缝合线是图像/布拼接的位置。展开时，网格沿缝合线展开。可以把这种方法想象为剥桔子，或者给动物剥皮。在表皮划一些口子，然后剥开。然后拉伸，展平。这些口子跟缝合线是一样的。</p>
+<p>在使用这种方法时，你需要清楚拉伸的程度。缝合线越多，拉伸越少，不过会给贴图流程带来麻烦。最好是在保证最少的拉伸的前提下，尽可能少用缝合线。设法让缝合线藏在不可见的区域。在使用3D绘制的产品中，这就变得不是什么大问题了，因为投影位置可以轻松处理缝合线，二维贴图则相反，匹配不同UV孤岛的边线是很困难的。</p>
+<p>工作流程如下：</p>
+<ol class="arabic simple">
+<li><p>创建缝合线。</p></li>
+<li><p>展开。</p></li>
+<li><p>反复调整缝合线。</p></li>
+<li><p>手动调整UV。</p></li>
+</ol>
+</div>
+<div class="section" id="marking-seams">
+<span id="bpy-ops-uv-mark-seam"></span><h2>标记缝合线<a class="headerlink" href="#marking-seams" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器</dt>
+<dd class="field-odd"><p>3D视图</p>
+</dd>
+<dt class="field-even">模式</dt>
+<dd class="field-even"><p>编辑模式</p>
+</dd>
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">工具栏 ‣ 着色/UV ‣ UV ‣ UV映射: 标记/清除缝合边</span></p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 边 ‣ 标记/清除缝合边</span></p>
+</dd>
+</dl>
+</div>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器</dt>
+<dd class="field-odd"><p>UV/图像</p>
+</dd>
+<dt class="field-even">模式</dt>
+<dd class="field-even"><p>视图模式</p>
+</dd>
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">工具栏 ‣ 工具 ‣ UV工具 ‣ UV展开: 标记/清除缝合边</span></p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">UV ‣ 标记/清除缝合边</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../../../_images/editors_uv-image_uv_editing_unwrapping_seams_suzanne.png"><img alt="../../../../../_images/editors_uv-image_uv_editing_unwrapping_seams_suzanne.png" src="../../../../../_images/editors_uv-image_uv_editing_unwrapping_seams_suzanne.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">标记缝合线的猴头。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>要添加一条边为缝合线，只需选中该边，在 <kbd class="kbd docutils literal notranslate">Ctrl-E</kbd> <em>标记缝合线</em> 即可。要将一条边从缝合线中移除，选中， <kbd class="kbd docutils literal notranslate">Ctrl-E</kbd> 并 <em>清除缝合线</em>。</p>
+<p>在上面的例子里，选择背面的边为缝合线(以隐藏缝合线)，并使用了默认的展开算法。在UV/图像编辑器中，可以看到所有的面都被整齐展开，就像用剪刀裁开缝合线，然后展开布匹一样。</p>
+<p>在标记缝合线是，可以在面选择模式下使用 <span class="menuselection">选择 ‣ 关联项</span> 或 <kbd class="kbd docutils literal notranslate">Ctrl-L</kbd> 来检查。该菜单选项会选择所有与选中边相连的面。如果目标缝合线之外的面被选中，就可以知道你的缝合线不是连续的。不过，只要能够消除所有可能拉伸的区域，不一定需要连续的缝合线。</p>
+<p>就像给猫剥皮有很多种方法一样，决定缝合线位置的方式也很多。一般来说，你应该想象你一只手抓着物体，然后一只手拿着锋利的剪刀，你想把它切开，然后铺在桌面上，并尽可能减少撕扯。可以注意到，我们标记了耳朵的外部边缘为缝合线，以分开耳朵的正面和背面。猴头的眼睛是断开的子网格，所以它们会自动展开。一条缝合线垂直经过后脑勺，头部一分为二被摊开。</p>
+<p>缝合线的另一个用处是限制展开的面。比如，在制作头部贴图时，你不需要为顶部和后脑勺的头皮添加贴图，因为它会被头发盖住。所以可以在发际线位置定义一条缝合线。接着，选择一个前额面，然后在展开前选择相连的面，一直向上宣导发际线缝合线，这样头皮就不会被展开了。</p>
+<p>在展开对称物体时，比如头部或身体，沿对称轴标记缝合线。比如，从前视图中间劈开头部或整个身体。在展开时，可以把两个半边重叠到同一个 <a class="reference internal" href="../../../../../glossary/index.html#term-texture-space"><span class="xref std std-term">纹理空间</span></a>，这样右手和左手可以共用图像像素；左脸匹配右脸，等等。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>不要</strong> 妄想“一次展开可以完美适用于所有场合”。就像我们在后面要讨论的一样，你可以轻易地从网格的不同区域，使用不同方法展开多个UV。</p>
+</div>
+<div class="section" id="mark-seams-from-island">
+<span id="bpy-ops-uv-seams-from-islands"></span><h3>沿孤岛边线生成缝合边<a class="headerlink" href="#mark-seams-from-island" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>视图模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ UV工具: ‣ 展开: 沿孤岛边线生成缝合边</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">UV ‣ 沿孤岛边线生成缝合边</span></p>
+</dd>
+</dl>
+</div>
+<p>将现有UV孤岛边界标记为缝合边，可用在修改已展开网格的UV时。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../layout.html" class="btn btn-neutral float-right" title="布局" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mapping_types.html" class="btn btn-neutral float-left" title="映射类型" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

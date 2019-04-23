@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/force_fields/introduction.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="常力" href="types/force.html" />
+    <link rel="prev" title="力场" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gravity.html">重力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../baking.html">烘焙物理模拟</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#physics-types">物理类型</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">力场</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#types">类型</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../collision.html">碰撞</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cloth/index.html">布料模拟</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fluid/index.html">流体模拟</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../particles/index.html">Particles System</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">物理</a> &raquo;</li>
+        
+          <li><a href="index.html">力场</a> &raquo;</li>
+        
+      <li>简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/physics/force_fields/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>力场提供了一种影响模拟的方式，比如添加额外动作。 <a class="reference internal" href="../particles/index.html"><span class="doc">粒子</span></a>, <a class="reference internal" href="../soft_body/index.html"><span class="doc">软体</span></a>, <a class="reference internal" href="../rigid_body/index.html"><span class="doc">刚体</span></a>, 和 <a class="reference internal" href="../cloth/index.html"><span class="doc">布料物体</span></a> 都可能受到 <em>力场</em> 的影响。力场自动影响所有内容 要从其影响中删除模拟或粒子系统，只需在场权重面板中减小该类型的力场的影响。</p>
+<ul class="simple">
+<li><p>所有类型的物体和粒子都可以生成力场，但只有曲线物体可以承受 <em>曲线指令</em> 力场。</p></li>
+<li><p>力场也可以从粒子生成。 请参阅 <a class="reference internal" href="../particles/emitter/physics/index.html"><span class="doc">粒子物理</span></a>。</p></li>
+<li><p>对象需要共享至少一个公共层才能生效。</p></li>
+</ul>
+<p>您可以将粒子的影响限制在一组对象上（请参阅 <a class="reference internal" href="../particles/emitter/physics/index.html"><span class="doc">Particle Physics</span></a> 页面).</p>
+<div class="section" id="creating-a-force-field">
+<h2>创建力场<a class="headerlink" href="#creating-a-force-field" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">物理 ‣ 力场</span></p>
+</dd>
+</dl>
+</div>
+<p>要创建单个力场，可以选择 <span class="menuselection">增加 ‣ 力场</span> 并选择所需的力场。此方法创建一个空的，附加的力场。</p>
+<table class="docutils align-center" id="id1">
+<caption><span class="caption-text">Examples of Empty with the force field attached.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id2">
+<img alt="../../_images/physics_force-fields_types_vortex_visualzation.png" src="../../_images/physics_force-fields_types_vortex_visualzation.png" />
+<p class="caption"><span class="caption-text">Vortex force field.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id3">
+<img alt="../../_images/physics_force-fields_types_wind_visualzation.png" src="../../_images/physics_force-fields_types_wind_visualzation.png" />
+<p class="caption"><span class="caption-text">风力场</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id4">
+<img alt="../../_images/physics_force-fields_types_force_visualzation.png" src="../../_images/physics_force-fields_types_force_visualzation.png" />
+<p class="caption"><span class="caption-text">Force force field.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>要从现有对象创建一个字段，您必须选择该对象并切换到 <em>物理</em> 选项卡。在 <em>力场</em> 菜单中选择字段类型。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>更改 <em>力场</em> 面板或偏转 <em>碰撞</em> 面板设置后，必须通过 <em>清除烘培</em> 重新计算粒子，软体或布系统，这不是自动完成的。您可以使用 <kbd class="kbd docutils literal notranslate">Ctrl-B</kbd> <span class="menuselection">‣ Free cache selected</span> 来清除所有选定对象的缓存。</p>
+<p>粒子对各种 <em>力场</em> ，软体只对 <em>球面</em> ， <em>风</em> ， <em>涡流</em> (他们在 <em>谐振场</em> 反应，但不是有用的方式）反应。</p>
+</div>
+</div>
+<div class="section" id="common-field-settings">
+<h2>常用力场的设置<a class="headerlink" href="#common-field-settings" title="Permalink to this headline">¶</a></h2>
+<p>大多数力场具有相同的设置，尽管它们的行为截然不同。下面介绍场类型唯一的设置。曲线指南和纹理字段有非常不同的选择。</p>
+<dl>
+<dt>外形</dt><dd><p>Sets the direction which is used to calculate the effector force.
+For force fields from an empty object only <em>Point</em> and <em>Plane</em> shapes are available,
+as for a field from a 3D object there are additional <em>Surface</em> and <em>Every Point</em> options,
+and <em>Curve</em> for a field from a curve.</p>
+<dl class="simple">
+<dt>点</dt><dd><p>指向全方位影响。使用物体原心作为作用点。</p>
+</dd>
+<dt>平面</dt><dd><p>Influence only in the local Z direction.</p>
+</dd>
+<dt>面</dt><dd><p>The force field acts on a 3D object's surface.
+In this case, the Z axis is the surface normal.</p>
+</dd>
+<dt>每个点</dt><dd><p>Uses every vertex in the mesh object as an effector point.</p>
+</dd>
+<dt>Curve</dt><dd><p>The force field acts along a curve object.</p>
+</dd>
+</dl>
+</dd>
+<dt>强度/力度</dt><dd><p>实力的场效应。这可以是正的或负的，以改变力的作用方向。力场的强度用力对象的尺度缩放，允许您放大和缩小场景，保持相同的效果。</p>
+</dd>
+<dt>流</dt><dd><p>If non-zero, the effective force depends on the particle velocity.
+The value defines how quickly the effector force (acceleration)
+will be converted into the constant &quot;air flow&quot; velocity.</p>
+</dd>
+<dt>噪波</dt><dd><p>增加噪音强度的力量。</p>
+</dd>
+<dt>随机种</dt><dd><p>改变随机噪声的种子。</p>
+</dd>
+<dt>效果片段</dt><dd><p>您可以切换力场对粒子位置和旋转的影响。</p>
+</dd>
+<dt>碰撞吸收</dt><dd><p>力被碰撞物体吸收。</p>
+</dd>
+</dl>
+<div class="section" id="falloff">
+<h3>衰减<a class="headerlink" href="#falloff" title="Permalink to this headline">¶</a></h3>
+<p>在这里，您可以指定力场的形状（如果脱落功率大于0）。</p>
+<dl class="simple">
+<dt>衰减类型</dt><dd><dl class="simple">
+<dt>球形</dt><dd><p>衰减在全方位统一，就像一个球体一样。</p>
+</dd>
+<dt>管形</dt><dd><p>脱落导致管状力场。场的径向衰减可以调整，以及场的 <em>最小</em> 和 <em>最大</em> 距离。</p>
+</dd>
+<dt>锥形</dt><dd><p>掉落会导致锥形的力场。附加选项与 <em>管形</em> 选项相同。</p>
+</dd>
+</dl>
+</dd>
+<dt>Z向</dt><dd><p>下降可以设置为仅在正Z轴，负Z轴或两者的方向上应用。</p>
+</dd>
+<dt>Power</dt><dd><p>力场的力量与力场的距离如何变化。如果 <em>r</em> 是距物体中心的距离，则力以 1/ <em>r</em><sup>power`的变化。甲脱落的2改变力场与 1/ *r*:sup:`2</sup>，其是引力的衰减。</p>
+</dd>
+<dt>最大值</dt><dd><p>使力场仅在指定的最大半径内生效（由对象周围的附加圆圈显示）。</p>
+</dd>
+<dt>最小值</dt><dd><p>距离物体中心的距离，直到力场的强度全部有效。如果您的退出 0，此参数什么都不做，因为该字段是有效的全强度到最大距离（或无限远）。由物体周围的一个附加圆圈显示。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="types/force.html" class="btn btn-neutral float-right" title="常力" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="力场" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

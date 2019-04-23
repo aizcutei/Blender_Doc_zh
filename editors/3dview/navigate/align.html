@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>对齐 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/3dview/navigate/align.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="投影" href="projections.html" />
+    <link rel="prev" title="行走/飞行 模式" href="walk_fly.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../startup_scene.html">启动场景</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modes.html">物体模式</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">视图浏览</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d_cursor.html">3D游标</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object/index.html">物体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../properties/index.html">属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ruler_protractor.html">3D量尺 &amp; 量角器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../index.html">3D视图</a> &raquo;</li>
+        
+          <li><a href="index.html">视图浏览</a> &raquo;</li>
+        
+      <li>对齐</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/editors/3dview/navigate/align.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aligning">
+<h1>对齐<a class="headerlink" href="#aligning" title="Permalink to this headline">¶</a></h1>
+<p>这些选项允许您对视图进行对齐和定位。</p>
+<div class="section" id="axes">
+<h2>坐标轴<a class="headerlink" href="#axes" title="Permalink to this headline">¶</a></h2>
+<p>Blender使用一个直角的&quot;笛卡尔坐标&quot; 坐标系， Z 轴朝上， <em>左</em>/ <em>右</em> 对应于沿 X 轴， <em>前</em>/ <em>后</em> 沿 Y 轴,，以及 <em>上</em>/ <em>下</em> 沿Z 轴。</p>
+<p>你可以使用 <em>视图</em> 菜单栏选择3D视图的查看方向, 或者按下快捷键. 如果你按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 同时使用相同的数字键盘快捷键，你可以选择相反的方向。</p>
+<p>这些操作将视图更改为与指定的全局轴对齐：</p>
+<ul class="simple">
+<li><p>顶视图 <kbd class="kbd docutils literal notranslate">Numpad7</kbd></p></li>
+<li><p>底视图 <kbd class="kbd docutils literal notranslate">Ctrl-Numpad7</kbd></p></li>
+<li><p>前视图 <kbd class="kbd docutils literal notranslate">Numpad1</kbd></p></li>
+<li><p>后视图 <kbd class="kbd docutils literal notranslate">Ctrl-Numpad1</kbd></p></li>
+<li><p>右视图 <kbd class="kbd docutils literal notranslate">Numpad3</kbd></p></li>
+<li><p>左视图 <kbd class="kbd docutils literal notranslate">Ctrl-Numpad3</kbd></p></li>
+</ul>
+</div>
+<div class="section" id="align-view-menu">
+<h2>对齐视图菜单<a class="headerlink" href="#align-view-menu" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>将视图对齐到激活对象</dt><dd><p>该菜单项用于调整视图与选择的活动物体、骨骼的指定轴向对齐，或在*编辑模式* 下与选中面的法向对齐。</p>
+<p>按下 <kbd class="kbd docutils literal notranslate">Shift</kbd> 键同时使用数字键盘来设置视图轴向。</p>
+</dd>
+<dt>重置游标并查看全部 <kbd class="kbd docutils literal notranslate">Shift-C</kbd></dt><dd><p>将游标移动到坐标轴原点，并放大或缩小视图以查看场景中所有对象。</p>
+</dd>
+<dt>将活动摄像机对齐到当前视角 <kbd class="kbd docutils literal notranslate">Ctrl-Alt-Numpad0</kbd></dt><dd><p>将摄像机视图设置为激活视图。</p>
+</dd>
+<dt>将活动摄像机对齐到选择的物体</dt><dd><p>将活动相机指向选中物体；基于当前视点方向。</p>
+</dd>
+<dt>查看所选 <kbd class="kbd docutils literal notranslate">NumpadPeriod</kbd></dt><dd><p>将视图聚焦选中物体的中心，缩放直至填满屏幕。</p>
+</dd>
+<dt>视图中心对齐到游标位置 <kbd class="kbd docutils literal notranslate">Alt-Home</kbd></dt><dd><p>视图中心对齐到游标的位置。</p>
+</dd>
+<dt>锁定至活动物体 <kbd class="kbd docutils literal notranslate">Shift-NumpadPeriod</kbd></dt><dd><p>视图对齐最后一个选中的激活物体中心，覆盖其他的视图对齐设置。</p>
+</dd>
+<dt>清除锁定 <kbd class="kbd docutils literal notranslate">Alt-NumpadPeriod</kbd></dt><dd><p>返回 <em>锁定至活动物体</em> 之前的视图状态。</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="projections.html" class="btn btn-neutral float-right" title="投影" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="walk_fly.html" class="btn btn-neutral float-left" title="行走/飞行 模式" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

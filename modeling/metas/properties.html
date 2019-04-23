@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>属性 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/metas/properties.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="文本物体" href="../texts/index.html" />
+    <link rel="prev" title="编辑" href="editing.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">融球</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">属性</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#resolution">分辨率</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#threshold-influence">阈值(影响)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update">更新</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="index.html">融球</a> &raquo;</li>
+        
+      <li>属性</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modeling/metas/properties.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="properties">
+<h1>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>物体或编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">属性编辑器 ‣ 融球</span></p>
+</dd>
+</dl>
+</div>
+<p>所有场景中的元物体都与彼此相互作用. 在 <em>融球</em> 部分的选项适用于所有元物体. 在 <em>编辑模式</em> 中, <em>活动元素</em> 面板在编辑个别融球(元)元素时出现.</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<img alt="../../_images/modeling_metas_properties_metaball-panel.png" src="../../_images/modeling_metas_properties_metaball-panel.png" />
+<p class="caption"><span class="caption-text">全局元物体属性</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id2">
+<img alt="../../_images/modeling_metas_properties_active-element-panel.png" src="../../_images/modeling_metas_properties_active-element-panel.png" />
+<p class="caption"><span class="caption-text">个别元物体属性</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="resolution">
+<h2>分辨率<a class="headerlink" href="#resolution" title="Permalink to this headline">¶</a></h2>
+<p><em>分辨率</em> 控制由元物体生成的网格的分辨率.</p>
+<dl class="simple">
+<dt>视图</dt><dd><p>所生成网格的3D视图的解析度范围从(0.05至1.0)(最平滑的到最粗糙的)。</p>
+</dd>
+<dt>渲染</dt><dd><p>所生成网格的渲染后解析度范围从(0.05至1.0)(最平滑的到最粗糙的)。</p>
+</dd>
+</dl>
+<p>一种看到的底层数学结构的方法是，降低 <em>分辨率</em>，增加 <em>阈值</em> 和设置 <em>刚度</em> (见下文)为*阈值*之上的一小点。图. <a class="reference internal" href="#fig-meta-intro-underlying"><span class="std std-ref">基础结构</span></a> 是一个 <em>元立方体</em> 在上述值设为: <em>分辨率</em> 为 0.410, <em>阈值</em> 为 5.0 以及 <em>刚度</em> 为 5.01(阈值之上一小点)时的情况.</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id3">
+<span id="fig-meta-intro-underlying"></span><img alt="../../_images/modeling_metas_properties_underlying-structure.png" src="../../_images/modeling_metas_properties_underlying-structure.png" />
+<p class="caption"><span class="caption-text">基础结构</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id4">
+<img alt="../../_images/modeling_metas_properties_underlying-structure-shape.png" src="../../_images/modeling_metas_properties_underlying-structure-shape.png" />
+<p class="caption"><span class="caption-text">元立方体形状.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>你可以清楚地看到的基本立方结构，这设置了元立方体为它这种形状。</p>
+</div>
+<div class="section" id="threshold-influence">
+<h2>阈值(影响)<a class="headerlink" href="#threshold-influence" title="Permalink to this headline">¶</a></h2>
+<p><em>阈值</em> 定义了元物体的表面如何影响其他的元物体. 它控制计算其表面时的 <em>场级别</em>.。这个设置是对于一组元物体全局有效的. 随着阈值增加,每一个元物体对其他元物体的影响也随之增加.</p>
+<p>有两种影响的类型:<em>正向*和*负向</em>. 类型可以在*编辑模式*的*活动元素*面板中使用*负向*按钮切换开启或关闭你可以认为对于网格之间,*正向*是吸引,*负向*是排斥. 一个负元物体会推开或排斥正元物体的网格.</p>
+<div class="figure align-center" id="id5">
+<span id="fig-meta-intro-positive"></span><a class="reference internal image-reference" href="../../_images/modeling_metas_editing_family.png"><img alt="../../_images/modeling_metas_editing_family.png" src="../../_images/modeling_metas_editing_family.png" style="width: 450px;" /></a>
+<p class="caption"><span class="caption-text">三个元求之间的正向影响.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p><em>正</em> 影响被定义为吸引,这意味着网格会朝着彼此的*影响环*相交方向延伸. 图. <a class="reference internal" href="#fig-meta-intro-positive"><span class="std std-ref">三个元求之间的正向影响.</span></a> 展示了三个元球的 <em>影响环</em> 由正向影响相交.</p>
+<p>注意网格是如何朝着对方推过去的. 白色区域环展示了绿色的影响环相交情况.</p>
+</div>
+<div class="section" id="update">
+<h2>更新<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h2>
+<p>当变换元物体(抓取/移动,缩放,等)时,你有四个可视化模式,他们唯一*融球*面板的*更新*按钮组里.</p>
+<dl class="simple">
+<dt>总是</dt><dd><p>在变换时完全绘制元物体.</p>
+</dd>
+<dt>一半</dt><dd><p>在变换时,绘制元物体的线型分辨率.</p>
+</dd>
+<dt>快速</dt><dd><p>在变换时,不显示元物体网格.</p>
+</dd>
+<dt>从不</dt><dd><p>永不现实元物体网格(不推荐,由于元物体会只在渲染时可见).</p>
+</dd>
+</dl>
+<p>这应该会有帮助,如果你遇到的困难(元物体是相当密集的计算...)，但对于现代计算机，这不应该发生，除非你使用很多元物体，或非常高的分辨率...</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../texts/index.html" class="btn btn-neutral float-right" title="文本物体" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="editing.html" class="btn btn-neutral float-left" title="编辑" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

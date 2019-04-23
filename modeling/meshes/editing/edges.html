@@ -1,0 +1,715 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>边工具 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/edges.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="面工具" href="faces.html" />
+    <link rel="prev" title="顶点工具" href="vertices.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting/index.html">选择</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/index.html">基础</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vertices.html">顶点工具</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">边工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="faces.html">面工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transform/index.html">变形</a></li>
+<li class="toctree-l4"><a class="reference internal" href="duplicating/index.html">复制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subdividing/index.html">细分</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cleanup.html">清理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="misc.html">其他编辑工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_transfer.html">数据传递</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_options.html">网格选项</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_display.html">网格显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">网格分析</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../index.html">网格</a> &raquo;</li>
+        
+          <li><a href="index.html">编辑</a> &raquo;</li>
+        
+      <li>边工具</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/modeling/meshes/editing/edges.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="edge-tools">
+<h1>边工具<a class="headerlink" href="#edge-tools" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 边</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Ctrl-E</kbd></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="make-edge-face">
+<h2>创建边/面<a class="headerlink" href="#make-edge-face" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 网格工具 ‣ 添加: 创建边/面</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">网格 ‣ 边 ‣ 创建边/面</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">F</kbd></p>
+</dd>
+</dl>
+</div>
+<p>基于选中项，创建一条边或一些面。</p>
+<p>详情参见 <a class="reference internal" href="basics/make_face_edge.html"><span class="doc">创建几何体</span></a> 的方法。</p>
+</div>
+<div class="section" id="set-edge-attributes">
+<h2>设置边属性<a class="headerlink" href="#set-edge-attributes" title="Permalink to this headline">¶</a></h2>
+<p>边有几个不同的属性，用于影响其他特定工具对网格的影响。</p>
+<div class="section" id="mark-seam-and-clear-seam">
+<span id="bpy-ops-mesh-mark-seam"></span><h3>标记缝合线与清除缝合线<a class="headerlink" href="#mark-seam-and-clear-seam" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 边 ‣ 标记缝合线/清除缝合线</span></p>
+</dd>
+</dl>
+</div>
+<p>缝合边是在UV映射中用于拆分UV，创建孤岛的方法。详情参见 <a class="reference internal" href="../../../editors/uv_image/index.html#editors-uv-image-index"><span class="std std-ref">UV贴图章节</span></a>。这两个操作分别用于设置或复原选中边的标记信息。</p>
+</div>
+<div class="section" id="mark-sharp-and-clear-sharp">
+<span id="bpy-ops-mesh-mark-sharp"></span><h3>标记锐边与清除锐边<a class="headerlink" href="#mark-sharp-and-clear-sharp" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 边 ‣ 标记锐边/清除锐边</span></p>
+</dd>
+</dl>
+</div>
+<p><em>锐边</em> 标记用于 <a class="reference internal" href="../../modifiers/generate/edge_split.html"><span class="doc">拆边修改器</span></a>，这是平滑技巧的一部分。与缝合线一样，它也是边的属性值之一，这两个操作分别用于设置或复原选中边的标记信息。</p>
+</div>
+<div class="section" id="adjust-bevel-weight">
+<span id="bpy-ops-transform-edge-bevelweight"></span><span id="modeling-edges-bevel-weight"></span><h3>调整倒角权重<a class="headerlink" href="#adjust-bevel-weight" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 边 ‣ 倒角边权重</span> <span class="menuselection">属性栏 ‣ 变换 ‣ 倒角权重</span></p>
+</dd>
+</dl>
+</div>
+<p>该边属性是一个介于0.0到1.0之间的值，用于 <a class="reference internal" href="../../modifiers/generate/bevel.html"><span class="doc">倒角修改器</span></a> 控制边的倒角强度。调用该菜单，进入交互模式(有些类似变换工具)，通过移动鼠标(或键入数值)来调整选中边的(平均)倒角权重。如果选中边多于1条，该操作调整边线的平均权重。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>顶点同样存在可编辑的倒角权重。</p>
+</div>
+</div>
+<div class="section" id="edge-crease">
+<span id="bpy-ops-transform-edge-crease"></span><span id="modeling-edges-crease-subdivision"></span><h3>边线折痕<a class="headerlink" href="#edge-crease" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 边 ‣ 边线折痕</span> <span class="menuselection">属性栏 ‣ 变换 ‣ 边线折痕</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-E</kbd></p>
+</dd>
+</dl>
+</div>
+<p>该边属性是一个介于0.0到1.0之间的值，用于 <a class="reference internal" href="../../modifiers/generate/subsurf.html"><span class="doc">表面细分修改器</span></a> 控制边的锐度。调用该菜单，进入交互模式(有些类似变换工具)，通过移动鼠标(或键入数值)来调整选中边的(平均)折痕值。输入负值表示相减。要清空折痕值属性，可以输入-1。</p>
+</div>
+</div>
+<div class="section" id="edge-slide">
+<span id="modeling-meshes-editing-edge-slide"></span><span id="bpy-ops-transform-edge-slide"></span><h2>滑动边线<a class="headerlink" href="#edge-slide" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 网格 工具 ‣ 形变: 滑动边线</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">网格 ‣ 边 ‣ 滑动边线</span></p>
+</dd>
+</dl>
+</div>
+<p>横穿相邻面滑动一条或更多边线，对边线的选择有些限制(即选中项 <em>必须</em> 可以定义一个有效的循环，见下文。)</p>
+<dl class="simple">
+<dt>均匀 <kbd class="kbd docutils literal notranslate">E</kbd></dt><dd><p>使循环边与匹配相邻循环边形状。使用 <kbd class="kbd docutils literal notranslate">F</kbd> 可以翻转至与另一侧循环边匹配。使用 <kbd class="kbd docutils literal notranslate">Alt-Wheel</kbd> 调整控制滑动的边线。</p>
+</dd>
+<dt>翻转 <kbd class="kbd docutils literal notranslate">F</kbd></dt><dd><p>当开启均匀模式时，在两个相邻循环边之间切换匹配的循环边。</p>
+</dd>
+<dt>限定 <kbd class="kbd docutils literal notranslate">Alt</kbd> 或 <kbd class="kbd docutils literal notranslate">C</kbd></dt><dd><p>切换是否将滑动限制在相邻循环边之间。</p>
+</dd>
+<dt>系数</dt><dd><p>控制滑动的量。负值与正值分别对应相反的滑移方向。该系数也会在3D视图底部显示。</p>
+</dd>
+<dt>镜像编辑</dt><dd><p>用于传递操作至网格的对称元素(如果X方向存在的话)。</p>
+</dd>
+<dt>校正UV</dt><dd><p>如存在对应的UV坐标，对其进行校正，避免图像畸变。</p>
+</dd>
+</dl>
+<div class="section" id="usage">
+<h3>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<p>该功能默认以选定循环边原始位置和相邻循环边距离长度的百分比移动循环边上的点，而不考虑这些并排边的长度。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_edge-slide-before.png"><img alt="../../../_images/modeling_meshes_editing_edges_edge-slide-before.png" src="../../../_images/modeling_meshes_editing_edges_edge-slide-before.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">选定循环边。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_edge-slide-after.png"><img alt="../../../_images/modeling_meshes_editing_edges_edge-slide-after.png" src="../../../_images/modeling_meshes_editing_edges_edge-slide-after.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">调整位置后的循环边。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="even-mode">
+<h4>均匀模式<a class="headerlink" href="#even-mode" title="Permalink to this headline">¶</a></h4>
+<p><em>均匀</em> 模式使选定的循环边与相邻循环边之一的形状一致，而不是单纯沿着各自的垂直边线移动一个百分比。</p>
+<p>在 <em>均匀</em> 模式下，当前移动操作遵循的边线会标记显示为黄色，匹配一侧的顶点标记为放大的红色。循环边的滑动被限制在该边线的长度范围内。在鼠标移动的过程中，标题栏的长度指示器会显示循环边沿边线长度方向距离的变化。</p>
+<p>使用 <kbd class="kbd docutils literal notranslate">Alt-Wheel</kbd> ，调整滑动操作的控制边线。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_edge-slide-even.png"><img alt="../../../_images/modeling_meshes_editing_edges_edge-slide-even.png" src="../../../_images/modeling_meshes_editing_edges_edge-slide-even.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">开启均匀模式。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_edge-slide-even-flip.png"><img alt="../../../_images/modeling_meshes_editing_edges_edge-slide-even-flip.png" src="../../../_images/modeling_meshes_editing_edges_edge-slide-even-flip.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">均匀模式下开启翻转。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>移动鼠标，使选中的循环边朝起始顶点移动或远离起始点，但是循环边只能在控制边线的长度范围内移动，形状匹配其中一条循环边。</p>
+</div>
+<div class="section" id="limitations-workarounds">
+<h4>局限 &amp; 变通之法<a class="headerlink" href="#limitations-workarounds" title="Permalink to this headline">¶</a></h4>
+<p>可操作的边线类型存在限制，无效的选中项有:</p>
+<dl class="simple">
+<dt>自交叉循环</dt><dd><p>这意味着该工具无法找到匹配选中边的相邻面。比如，选中同一个面的两条边。一个面无法与自身相邻。</p>
+</dd>
+<dt>多条循环边</dt><dd><p>选中的边线并非位于同一个循环边，这意味着其并排边是不同的。可以通过选择一端到另一端或串成&quot;链条&quot;的边线，来避免这类错误。如果选择多条边，要确保是连续的。这会降低循环错误的可能性。</p>
+</dd>
+<dt>边界边线</dt><dd><p>当选中单面物体的一条边，将无法找到循环边，因为仅有一个面。记住，循环边必须是横跨两个以上面的。</p>
+</dd>
+</dl>
+<p>经验法则是，如果选中多条边，这些边必须是首尾相连的，以确保组成连续的链条。这只是 <em>字面上的</em> 通用法则，因为这种情况仍有可能选中无效的循环边，因为其中一些边线可能是属于不同的循环边的。</p>
+</div>
+</div>
+</div>
+<div class="section" id="rotate-edge">
+<span id="bpy-ops-mesh-edge-rotate"></span><span id="modeling-meshes-editing-edges-rotate"></span><h2>旋转边线<a class="headerlink" href="#rotate-edge" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 边 ‣ 顺时针旋转边/逆时针旋转边</span></p>
+</dd>
+</dl>
+</div>
+<p>绕周边顶点，对两个面之间的边线进行顺时针或逆时针旋转，可用于重构网格拓扑结构。</p>
+<p>该工具作用于选中的边线，或选中面的公共边。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_edge-flip-before.png"><img alt="../../../_images/modeling_meshes_editing_edges_edge-flip-before.png" src="../../../_images/modeling_meshes_editing_edges_edge-flip-before.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">选中边线。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_edge-flip-after.png"><img alt="../../../_images/modeling_meshes_editing_edges_edge-flip-after.png" src="../../../_images/modeling_meshes_editing_edges_edge-flip-after.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">顺时针旋转后。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>要基于面旋转一条边，必须选中相邻面的公共边，否则Blender将提示错误信息， <strong>无法找到可用于旋转的选中边</strong>。使用 <em>顺时针旋转边</em> 或 <em>逆时针旋转边</em> 可以得到完全一致的结果。</p>
+</div>
+</div>
+<div class="section" id="edge-split">
+<span id="bpy-ops-mesh-edge-split"></span><h2>拆边<a class="headerlink" href="#edge-split" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 边 ‣ 拆边</span></p>
+</dd>
+</dl>
+</div>
+<p><em>拆边</em> 与 <em>断离</em> 工具类似。当选中一个或多个内部边线，或边界线，然后对其使用 <em>拆边</em>，会创建一个空洞，并复制选中的边线作为空洞的边界。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_edge-split-before.png"><img alt="../../../_images/modeling_meshes_editing_edges_edge-split-before.png" src="../../../_images/modeling_meshes_editing_edges_edge-split-before.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">选中边线。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_edge-split-after.png"><img alt="../../../_images/modeling_meshes_editing_edges_edge-split-after.png" src="../../../_images/modeling_meshes_editing_edges_edge-split-after.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">移开相邻面，显示拆边后的空洞。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="bridge-edge-loops">
+<span id="modeling-meshes-editing-bridge-edge-loops"></span><span id="bpy-ops-mesh-bridge-edge-loops"></span><h2>桥接循环边<a class="headerlink" href="#bridge-edge-loops" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 边 ‣ 桥接循环边</span></p>
+</dd>
+</dl>
+</div>
+<p><em>桥接循环边</em> 使用面连接多组循环边。</p>
+<dl class="simple">
+<dt>连接多个循环</dt><dd><dl class="simple">
+<dt>开放循环</dt><dd><p>桥接后的循环边两端开放。</p>
+</dd>
+<dt>闭合循环</dt><dd><p>尽量连接成为闭合循环(两端合并)。</p>
+</dd>
+<dt>循环对</dt><dd><p>分别连接偶数组循环边。</p>
+</dd>
+</dl>
+</dd>
+<dt>合并</dt><dd><p>合并循环边，而非创建一个新的面。</p>
+</dd>
+<dt>合并系数</dt><dd><p>在何处合并循环边，系数0.5将在中间位置合并。</p>
+</dd>
+<dt>扭曲</dt><dd><p>决定顶点连接的偏移量。</p>
+</dd>
+<dt>切割次数</dt><dd><p>相邻循环边之间插入的循环边数量。</p>
+</dd>
+<dt>插值类型</dt><dd><p>线性，混合路径，混合曲面</p>
+</dd>
+<dt>平滑度</dt><dd><p><em>混合路径</em> 和 <em>混合曲面</em> 的平滑度。</p>
+</dd>
+<dt>轮廓系数</dt><dd><p>中间的新生边收缩/膨胀程度。</p>
+</dd>
+<dt>轮廓形状</dt><dd><p>新生边的形状。各选项的详细描述见 <a class="reference internal" href="../../../editors/3dview/object/editing/transform/control/proportional_edit.html#dview-transform-control-proportional-edit-falloff"><span class="std std-ref">衰减编辑</span></a>。</p>
+</dd>
+</dl>
+<div class="section" id="examples">
+<h3>范例<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>一对简单的闭合循环边。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_bridge-simple-before.png"><img alt="../../../_images/modeling_meshes_editing_edges_bridge-simple-before.png" src="../../../_images/modeling_meshes_editing_edges_bridge-simple-before.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">输入。</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id10">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_bridge-simple-after.png"><img alt="../../../_images/modeling_meshes_editing_edges_bridge-simple-after.png" src="../../../_images/modeling_meshes_editing_edges_bridge-simple-after.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">桥接结果。</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>桥接顶点数量不同的循环边。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_bridge-uneven-before.png"><img alt="../../../_images/modeling_meshes_editing_edges_bridge-uneven-before.png" src="../../../_images/modeling_meshes_editing_edges_bridge-uneven-before.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">输入。</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id12">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_bridge-uneven-after.png"><img alt="../../../_images/modeling_meshes_editing_edges_bridge-uneven-after.png" src="../../../_images/modeling_meshes_editing_edges_bridge-uneven-after.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">桥接结果。</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>使用桥接工具在面上打洞并重新连接。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id13">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_bridge-faces-before.png"><img alt="../../../_images/modeling_meshes_editing_edges_bridge-faces-before.png" src="../../../_images/modeling_meshes_editing_edges_bridge-faces-before.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">输入。</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id14">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_bridge-faces-after.png"><img alt="../../../_images/modeling_meshes_editing_edges_bridge-faces-after.png" src="../../../_images/modeling_meshes_editing_edges_bridge-faces-after.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">桥接结果。</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>桥接工具侦测多组循环边，并一次完成桥接。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id15">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_bridge-multi-before.png"><img alt="../../../_images/modeling_meshes_editing_edges_bridge-multi-before.png" src="../../../_images/modeling_meshes_editing_edges_bridge-multi-before.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">输入。</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id16">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_bridge-multi-after.png"><img alt="../../../_images/modeling_meshes_editing_edges_bridge-multi-after.png" src="../../../_images/modeling_meshes_editing_edges_bridge-multi-after.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">桥接结果。</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>使用细分选项和曲面混合，并映射UV贴图。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id17">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_bridge-advanced-before.png"><img alt="../../../_images/modeling_meshes_editing_edges_bridge-advanced-before.png" src="../../../_images/modeling_meshes_editing_edges_bridge-advanced-before.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">输入。</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id18">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_edges_bridge-advanced-after.png"><img alt="../../../_images/modeling_meshes_editing_edges_bridge-advanced-after.png" src="../../../_images/modeling_meshes_editing_edges_bridge-advanced-after.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">桥接结果。</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="faces.html" class="btn btn-neutral float-right" title="面工具" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vertices.html" class="btn btn-neutral float-left" title="顶点工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

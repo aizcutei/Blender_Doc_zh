@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>选择 &amp; 编辑 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/texts/selecting_editing.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="属性" href="properties.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">融球</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">文本物体</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">选择 &amp; 编辑</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#selecting-cursor">选择和游标</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing">编辑</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">属性</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="index.html">文本物体</a> &raquo;</li>
+        
+      <li>选择 &amp; 编辑</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modeling/texts/selecting_editing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="selecting-editing">
+<h1>选择 &amp; 编辑<a class="headerlink" href="#selecting-editing" title="Permalink to this headline">¶</a></h1>
+<p>在 Blender 中编辑文本与别的物体相当不同, 主要是在两个位置. 首先, 在3D 视图中输入你的文本, 这里有几个快捷键, 例如应用样式 (见 <a class="reference internal" href="properties.html#modeling-text-character"><span class="std std-ref">字符</span></a>) -- 但要注意, 大多数你所知道的 Blender <em>编辑模式</em> 的热键都不适用于文本. 第二个地方时属性编辑器, 特别是 <em>字体</em> 标签.</p>
+<div class="section" id="selecting-cursor">
+<h2>选择和游标<a class="headerlink" href="#selecting-cursor" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/modeling_texts_selecting-editing_cursor.png"><img alt="../../_images/modeling_texts_selecting-editing_cursor.png" src="../../_images/modeling_texts_selecting-editing_cursor.png" style="width: 340px;" /></a>
+<p class="caption"><span class="caption-text">编辑模式中的文本.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>在 <em>编辑模式</em> 中, 你的文本有一个白色的光标, 就像任何文本编辑器那样, 它确定了字符被插入的位置.</p>
+<dl class="simple">
+<dt>下一个/上一个字符</dt><dd><p>你可以移动光标, 通过方向键 <kbd class="kbd docutils literal notranslate">Left</kbd> 或 <kbd class="kbd docutils literal notranslate">Right</kbd>.</p>
+</dd>
+<dt>下一个/上一个词</dt><dd><p>为了在词的边界间移动光标, 使用 <kbd class="kbd docutils literal notranslate">Ctrl-Left</kbd> 或 <kbd class="kbd docutils literal notranslate">Ctrl-Right</kbd>.</p>
+</dd>
+<dt>行首/行尾</dt><dd><p><kbd class="kbd docutils literal notranslate">Home</kbd> 和 <kbd class="kbd docutils literal notranslate">End</kbd> 分别能移动光标到行的开始和结尾.</p>
+</dd>
+<dt>下一行/上一行</dt><dd><p>为了在行间跳转, 使用 <kbd class="kbd docutils literal notranslate">Up</kbd> 或 <kbd class="kbd docutils literal notranslate">Down</kbd>.</p>
+</dd>
+<dt>下一页/上一页</dt><dd><p>为了一次向前或向后跳转10行, 使用 <kbd class="kbd docutils literal notranslate">PageUp</kbd> 或 <kbd class="kbd docutils literal notranslate">PageDown</kbd>.</p>
+</dd>
+</dl>
+<p>在使用方向键的同时按住 <kbd class="kbd docutils literal notranslate">Shift</kbd> 可以选择一部分文本. 你可以用它来指定不同的材质, 正常/粗体/斜体样式, 以及不太多的别的属性.</p>
+</div>
+<div class="section" id="editing">
+<h2>编辑<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h2>
+<p>3D 视图头的菜单提供了几个选项, 在这里没有 <em>专用项</em> 菜单. 你既没有变换也没有镜像等等. 但是, 你可以将和曲线的一样修改器应用到文本上.</p>
+<div class="section" id="basic">
+<h3>基本<a class="headerlink" href="#basic" title="Permalink to this headline">¶</a></h3>
+<p>编辑 <em>文笔</em> 与使用标准文本编辑器相似, 但是不具有全部的功能, 而且还有一些区别:</p>
+<dl class="simple">
+<dt>退出 <em>编辑模式</em></dt><dd><p><kbd class="kbd docutils literal notranslate">Tab</kbd> 不会在文本中插入一个制表符, 而是进入和退出 <em>编辑模式</em>, 就像别的物体类型那样.</p>
+</dd>
+<dt>复制</dt><dd><p>为了将文本复制进缓冲区, 使用 <kbd class="kbd docutils literal notranslate">Ctrl-C</kbd> 或者工具栏中的 <em>复制</em> 按钮.</p>
+</dd>
+<dt>剪切和复制</dt><dd><p>为了剪切和复制文本进缓冲区, 使用 <kbd class="kbd docutils literal notranslate">Ctrl-X</kbd> 或工具栏中的 <em>剪切</em> 按钮.</p>
+</dd>
+<dt>粘贴</dt><dd><p>为了将缓冲区中的文本粘贴出来, 使用 <kbd class="kbd docutils literal notranslate">Ctrl-V</kbd> 或者工具栏中的 <em>粘贴</em> 按钮.</p>
+</dd>
+<dt>删除所有文本</dt><dd><p>为了完全清除或删除所有文本, 使用 <kbd class="kbd docutils literal notranslate">Ctrl-Backspace</kbd>.</p>
+</dd>
+</dl>
+<p>文本缓冲区与桌面剪贴板是同步的. 但是如果它是在 Blender 内部使用, 文本格式也会一起复制. 对于其它的插入文本方式, 见后文的 <a class="reference internal" href="#inserting-text">Inserting Text</a> .</p>
+</div>
+<div class="section" id="special-characters">
+<h3>特殊字符<a class="headerlink" href="#special-characters" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">文本 ‣ 特殊字符</span></p>
+</dd>
+</dl>
+</div>
+<p>如果你需要特殊字符 (例如音标字符, 这种不在你的键盘上的) 你可以将两个其它字符组合起来用以制作很多特殊字符. 为此, 输入主要的字符, 按下 <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, 然后按想要的 &quot;修改器&quot; 来制作特殊字符. 下面给出了一些例子:</p>
+<table class="colwidths-given docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>ã</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">~</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>á</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">'</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>à</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">\</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>å</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">O</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>ë</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">E</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">&quot;</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>ø</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">O</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">/</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="inserting-text">
+<h3>插入文本<a class="headerlink" href="#inserting-text" title="Permalink to this headline">¶</a></h3>
+<p>你可以通过两种方式插入文本: 从内部文本缓冲区 (如上文所述), 或者从文本文件中.</p>
+<p>为了从文本文件中载入文本, 使用 <span class="menuselection">文本 ‣ 粘贴文件</span> 工具. 这会打开一个 <a class="reference internal" href="../../editors/file_browser/index.html"><span class="doc">文件浏览器</span></a> 用来定位一个有效的UTF-8文件. 如其它一样, 要当心文本不要有太多字符, 因为交互响应会变慢.</p>
+</div>
+<div class="section" id="converting-text-objects">
+<h3>转换文本物体<a class="headerlink" href="#converting-text-objects" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="converting-to-text-object">
+<h4>转换成文本物体<a class="headerlink" href="#converting-to-text-object" title="Permalink to this headline">¶</a></h4>
+<p>在文本编辑器标题栏选择 <span class="menuselection">编辑 ‣ 将文本转换为 3D 物体</span>，根据需要选择 <em>一个物体</em> 或 <em>每行生成一个物体</em>，可以将现有的文本数据块转换为物体。</p>
+<p>在编辑3D文本时, 也可以从剪贴板粘贴文本或者在 <em>编辑</em> 菜单里选择从文件粘贴.</p>
+</div>
+<div class="section" id="converting-to-3d-mesh">
+<h4>转换成3D网格<a class="headerlink" href="#converting-to-3d-mesh" title="Permalink to this headline">¶</a></h4>
+<p>It is possible to convert a Text Object to a 3D Mesh object.
+This can be useful so that you may edit the vertices in <em>Edit Mode</em>,
+but you will lose the ability to edit the text itself.</p>
+<p>This can be done, using <a class="reference internal" href="../../editors/3dview/object/editing/introduction.html#object-convert-to"><span class="std std-ref">转换为</span></a> in <em>Object Mode</em>.
+Now you can return to <em>Edit Mode</em> and manually edit the vertices.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The result is usually a bit messy, so it may be useful to use a <em>Limited Dissolve</em> deletion or <em>Remesh</em> Object
+<a class="reference internal" href="../modifiers/index.html"><span class="doc">Modifier</span></a> at a low threshold to clean up your mesh.</p>
+</div>
+</div>
+</div>
+<div class="section" id="assigning-materials">
+<h3>指定材质<a class="headerlink" href="#assigning-materials" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">属性编辑器 ‣ 材质</span></p>
+</dd>
+</dl>
+</div>
+<p>要使不同的字符获得不同的材质，每个字符都必须有一个不同的 <em>材质编号</em> 。</p>
+<p>你可以通过输入的方式制定材质编号，或先选择文本块，再点击材质面板上的 <em>指定</em> 按钮。</p>
+<div class="figure align-center" id="id2">
+<span id="fig-texts-edit-rgb"></span><img alt="../../_images/modeling_texts_selecting-editing_material-index-example.png" src="../../_images/modeling_texts_selecting-editing_material-index-example.png" />
+<p class="caption"><span class="caption-text">红 绿 蓝。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>例如, 为了创建图 <a class="reference internal" href="#fig-texts-edit-rgb"><span class="std std-ref">红 绿 蓝。</span></a> 你需要分别创建三个材质和三个材质索引. 通过选择每个词的字符并点击 <em>指定</em> 按钮, 每个词会被分派一个 <em>材质索引</em>. 图 <a class="reference internal" href="#fig-texts-edit-rgb"><span class="std std-ref">红 绿 蓝。</span></a> 仍然是一个单个的 <em>文本</em> 物体.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="properties.html" class="btn btn-neutral float-right" title="属性" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

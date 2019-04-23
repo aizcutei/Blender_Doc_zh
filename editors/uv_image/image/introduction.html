@@ -1,0 +1,376 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/uv_image/image/introduction.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="图像设置" href="image_settings.html" />
+    <link rel="prev" title="图像" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../3dview/index.html">3D视图</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">UV/图像编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../navigating.html">视图浏览</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">图像</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../uv/index.html">UV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../display_panel.html">显示面板</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../index.html">UV/图像编辑器</a> &raquo;</li>
+        
+          <li><a href="index.html">图像</a> &raquo;</li>
+        
+      <li>简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/editors/uv_image/image/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="header">
+<h2>标题栏<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="image-menu">
+<h3>图像菜单<a class="headerlink" href="#image-menu" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>新建图像</dt><dd><p>新建一个 <a class="reference internal" href="image_settings.html#image-generated"><span class="std std-ref">生成</span></a> 图像。</p>
+</dd>
+<dt>打开图像</dt><dd><p>从文件载入图像。</p>
+</dd>
+<dt>读取渲染层</dt><dd><p>如果需要的话，从缓存中读取所有当前场景的渲染层。由于渲染层无需存储在内存中，这可用于在渲染过程中节约内存。还可以用于从失败的渲染中恢复一些信息。要使该选项起作用，必须先启用 <a class="reference internal" href="../../../render/cycles/settings/scene/render/performance.html#render-properties-save-buffers"><span class="std std-ref">保存缓冲</span></a> 。</p>
+</dd>
+<dt>保存所有图像</dt><dd><p>重新打包 (对外部文件来说是保存) 所有编辑过的图像。</p>
+</dd>
+<dt>替换图像</dt><dd><p>使用选择的图像替换当前图像，并保留UV映射关系。</p>
+</dd>
+<dt>重新载入图像</dt><dd><p>从外部文件重新载入图像。</p>
+</dd>
+<dt>保存图像</dt><dd><p>如果该图像已保存为文件的话，重新保存文件，快捷键 <kbd class="kbd docutils literal notranslate">Alt-S</kbd>。</p>
+</dd>
+<dt>保存为图像</dt><dd><p><kbd class="kbd docutils literal notranslate">F3</kbd> 保存 (渲染) 为单独文件或另存为其他文件名。</p>
+</dd>
+<dt>存为副本</dt><dd><p>使用 <em>存为副本</em> 将保存文件为指定名称，但UV/图像编辑中打开的还是旧的文件。</p>
+</dd>
+<dt>外部编辑</dt><dd><p>使用 <em>外部编辑</em> 工具，Blender会打开 <em>用户设置</em> 中指定的外部图像编辑，将图像加载至其中以供编辑。</p>
+</dd>
+<dt>反转</dt><dd><dl class="simple">
+<dt>反转图像颜色</dt><dd><p>反转图像颜色。</p>
+</dd>
+<dt>反转通道</dt><dd><p>红, 绿, 蓝, Alpha</p>
+</dd>
+</dl>
+</dd>
+<dt>打包</dt><dd><dl class="simple">
+<dt>打包图像</dt><dd><p>将外部图像打包到blend文件中。参考 <a class="reference internal" href="../../../data_system/introduction.html#pack-unpack-data"><span class="std std-ref">打包和解包数据</span></a>。</p>
+</dd>
+<dt>打包为PNG格式</dt><dd><p>将图像以无损PNG打包到blend文件中。该选项以操作面板选项形式存在，或者当Blender内部修改图像且修改未存盘。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>渲染图像需保存至外部或打包。</p>
+</div>
+</div>
+<div class="section" id="controls">
+<h3>控制<a class="headerlink" href="#controls" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>图像</dt><dd><p><a class="reference internal" href="../../../interface/controls/templates/data_block.html#ui-data-block"><span class="std std-ref">数据块菜单</span></a> 用于选择图像。在UV/图像编辑器载入或创建图像后， <em>属性区块</em> 将出现图像面板。见 <a class="reference internal" href="image_settings.html"><span class="doc">图像设置</span></a>。</p>
+<ul class="simple">
+<li><p>渲染结果</p></li>
+<li><p>预览节点</p></li>
+</ul>
+</dd>
+<dt>钉住图像</dt><dd><p>忽略所选，只显示当前图像。</p>
+</dd>
+</dl>
+<div class="section" id="multi-layer">
+<h4>多图层<a class="headerlink" href="#multi-layer" title="Permalink to this headline">¶</a></h4>
+<p>在UV/图像编辑器显示渲染图像时，会出现几个新的菜单选项。</p>
+<dl class="simple">
+<dt>槽</dt><dd><p>在渲染前选择新的槽，可以将连续多次渲染结果保存到渲染缓冲区。如果图像被渲染到了一个槽位，选中该槽即可查看图像。空白槽在UV/图像编辑器显示为空白网格。使用 the <kbd class="kbd docutils literal notranslate">J</kbd> 和 <kbd class="kbd docutils literal notranslate">Alt-J</kbd> 向前和向后循环查看渲染结果。可在 <em>显示面板</em> 的 <em>槽名称</em> 文本框重命名槽。</p>
+</dd>
+<dt>渲染层</dt><dd><p>使用 <a class="reference internal" href="../../../render/post_process/layers.html"><span class="doc">渲染层</span></a> 是，该菜单用于选择显示的图层。</p>
+</dd>
+<dt>渲染通道</dt><dd><p>使用 <a class="reference internal" href="../../../render/cycles/settings/scene/render_layers/passes.html"><span class="doc">渲染通道</span></a> 时，该菜单用于选择显示的通道。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="channels">
+<h4>通道<a class="headerlink" href="#channels" title="Permalink to this headline">¶</a></h4>
+<dl>
+<dt>绘制通道</dt><dd><p>单选按钮用于设置显示的图像通道。</p>
+<dl class="simple">
+<dt>RGBA</dt><dd><p>显示透明像素为棋盘格背景，指代alpha通道。</p>
+</dd>
+<dt>RGB</dt><dd><p>绘制彩色图像，不显示alpha通道。</p>
+</dd>
+<dt>Alpha</dt><dd><p>显示alpha通道为灰阶图像。白色区域为不透明，黑色区域标示alpha为0。</p>
+</dd>
+<dt>Z缓冲</dt><dd><p>显示相机景深，范围为 <a class="reference internal" href="../../../render/cycles/camera.html"><span class="doc">相机设置</span></a> 中指定的裁剪起始距离到结束距离。</p>
+</dd>
+<dt>红, 绿, 蓝</dt><dd><p>显示单通道为灰阶图像。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="section" id="main-view">
+<h2>主视图<a class="headerlink" href="#main-view" title="Permalink to this headline">¶</a></h2>
+<p>在按下 <kbd class="kbd docutils literal notranslate">LMB</kbd> 拖动时，将显示游标下方的颜色、游标位置和RGBA、HSV和亮度 <a class="reference internal" href="../../../glossary/index.html#term-color-space"><span class="xref std std-term">色彩空间</span></a> 表示的颜色值。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="image_settings.html" class="btn btn-neutral float-right" title="图像设置" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="图像" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

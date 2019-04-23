@@ -1,0 +1,417 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>跟踪 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/movie_clip_editor/tracking/clip/editing/track.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="解算" href="solve.html" />
+    <link rel="prev" title="编辑" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../../3dview/index.html">3D视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html">影片剪辑编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html">运动跟踪</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../masking/index.html">遮罩</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../properties/index.html">属性</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">影片剪辑编辑器</a> &raquo;</li>
+        
+          <li><a href="../../index.html">运动跟踪</a> &raquo;</li>
+        
+          <li><a href="../index.html">剪辑视图</a> &raquo;</li>
+        
+          <li><a href="index.html">编辑</a> &raquo;</li>
+        
+      <li>跟踪</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../_sources/editors/movie_clip_editor/tracking/clip/editing/track.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="track">
+<h1>跟踪<a class="headerlink" href="#track" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="clip-panel">
+<h2>剪辑面板<a class="headerlink" href="#clip-panel" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>预读取 <kbd class="kbd docutils literal notranslate">P</kbd></dt><dd><p>用帧填充缓存。适合缓存的许多帧都是从驱动加载的。当你真的需要跟踪某些东西时，这允许尽可能快地填充缓存，但是如果你打开了剪辑编辑器但却没有实际与它交互，这会使CPU和驱动器带宽空闲。</p>
+</dd>
+<dt>重载</dt><dd><p>ToDo &gt;2.61.</p>
+</dd>
+<dt>设置场景帧</dt><dd><p>ToDo &gt;2.61.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="marker-panel">
+<h2>标记面板<a class="headerlink" href="#marker-panel" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>添加标记和移动</dt><dd><p>在鼠标的位置放置一个新的标记（这个按钮在这个情况下，不是很理想，但它只是如何工作），然后它可以移动到所需要的位置.。当它被移动到所需位置， <kbd class="kbd docutils literal notranslate">LMB</kbd> 可以用来完成放置新标记。另外， <kbd class="kbd docutils literal notranslate">Return</kbd> 和 <kbd class="kbd docutils literal notranslate">Spacebar</kbd>  可以用来完成放置标记。但使用 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 速度更快可将标记直接放置在素材（镜头）上。这个快捷方式将标记放置在你点击的地方。这里还有一个特点：在你释放鼠标按钮之前，你可以通过移动鼠标和使用轨迹预览控件来调整标记位置来控制标记的放置方式.，从而调整标记位置。</p>
+</dd>
+<dt>检测功能</dt><dd><p>检测当前帧中的所有可能的特征，并在这些特征宿标记。这个操作者不考虑其它帧，所以可以放置标记上属于运动对象的特征，并且如果相机从这一杆转动远，无标记物将被放置在帧之后相机移开。</p>
+<p>这个操作有几个属性：</p>
+<dl class="simple">
+<dt>放置范围</dt><dd><p>用于控制在何处放置标记。默认情况下，他们将在整个帧中添加，但你也可以用蜡笔勾划出一些有趣的特征区域，并只在轮廓区域内放置标记。这是“内部蜡笔”放置方式的工作原理。您也可以勾勒出不感兴趣区域（如树，人类等）并在这些区域之外放置标记。。这就是“外蜡笔”放置方式的工作原理。</p>
+</dd>
+<dt>边距</dt><dd><p>控制从所创建的标记的图像边界的距离。如果标记放置过于靠近图像边界，它们将无法真正快速跟踪和他们应该被手动删除。降低人工清理的量，可使用该参数。</p>
+</dd>
+<dt>阈值</dt><dd><p>限制放置标记的最小阈值。这个值来自特征检测算法，基本上它意味着：低值意味着很可能这个特征很快就不能跟踪，高值意味着它没有太多这样的跟踪。用这个值可以控制要添加的标记的数量。</p>
+</dd>
+<dt>间距</dt><dd><p>定义放置的标记之间的最小距离。需要防止标记彼此靠得太近（这样的位置会使相机解算器混淆）。</p>
+</dd>
+</dl>
+</dd>
+<dt>删除轨道</dt><dd><p>此功能很直白，就是删除所有选中的轨道。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="tracking-settings-panel">
+<span id="clip-tracking-settings"></span><h2>跟踪设置面板<a class="headerlink" href="#tracking-settings-panel" title="Permalink to this headline">¶</a></h2>
+<p>该面板包含2D跟踪算法的所有设置。</p>
+<dl>
+<dt>追踪预设</dt><dd><p>ToDo 2.63.</p>
+</dd>
+<dt>通道</dt><dd><p>ToDo ~2.63.</p>
+</dd>
+<dt>样式大小，搜索</dt><dd><p>ToDo ~2.63.</p>
+</dd>
+<dt>运动模型</dt><dd><p>定义哪些可能的运动跟踪功能。这个选项应该根据特定功能的哪一个运动来设定，这样会使跟踪更准确。</p>
+<p>仅位置，位置+旋转，位置+缩放，位置+旋转+缩放，仿射</p>
+<dl class="simple">
+<dt>透视</dt><dd><p>通常用于跟踪平面特征，但通常 <em>Affine</em> 有一个足够好的近似值，可能有更稳定的轨迹。</p>
+</dd>
+</dl>
+</dd>
+<dt>样式匹配</dt><dd><p>样式匹配控制跟踪哪些样式；更确切地说，从哪个帧得到跟踪的样式。下面是一个使事情更清楚的例子。</p>
+<p>跟踪算法接收两个图像的搜索区域内和一个点的位置的第一图像中被跟踪。跟踪器试图找到该点从第一图像的第二图像中的位置。</p>
+<p>现在，这就是跟踪序列的方式。第二个图像总是来自于标记位置未知的帧（下一个跟踪帧）。但是，不同的第一个图像（而不是紧接在素材中的第二个图像之前的那个）可以发送到跟踪器。</p>
+<dl class="simple">
+<dt>关键帧</dt><dd><p>从轨道关键帧构成的图像。这种配置防止从原始位置滑动（因为跟踪器返回与原始图案最相对应的位置），但是当特征点由于相机运动而变形时可能导致小的跳跃并导致失败（透视例如转换）。</p>
+</dd>
+<dt>上一帧</dt><dd><p>轨道的关键帧创建每个帧，并使用关键帧图像和下一个图像之间的跟踪。在这种配置中，模式在两个相邻帧之间进行跟踪。它允许处理特征点的大转换情况，但可能导致从原始位置滑动，因此应该控制它。</p>
+</dd>
+</dl>
+</dd>
+<dt>预通道</dt><dd><p>启用双通道跟踪，其中第一遍只是对位置的强力跟踪，第二遍将使用完整运动模型的跟踪来优化第一遍跟踪。</p>
+</dd>
+<dt>规格化</dt><dd><p>意味着模式将被归一化的平均强度跟踪，使他们不变的光照变化。一个有用的例子是标记在物体的阴影中移动的场景。</p>
+</dd>
+<dt>从活动轨道复制</dt><dd><p>仅限追踪器设置-- ToDo 2.64。</p>
+</dd>
+</dl>
+<div class="section" id="extra-settings">
+<h3>额外设置<a class="headerlink" href="#extra-settings" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>使用遮罩</dt><dd><p>ToDo 2.64.</p>
+</dd>
+<dt>关联度</dt><dd><p>现在是所有跟踪设置的单个值，并定义了匹配模式与被视为成功跟踪的参考之间的最小关联。如果跟踪器太容易放弃，请减小此值，或者如果跟踪器在应该尽快放弃时滑动过多，请增加此值。</p>
+</dd>
+<dt>帧数限制</dt><dd><p>控制调用轨道序列运算符时可以跟踪多少帧。因此，每个轨道序列操作将跟踪最大 <em>帧限制</em> 帧。这也有助于注意滑动轨道并纠正它们。</p>
+</dd>
+<dt>边距</dt><dd><p>在轨迹开始过于靠近图像边缘时，可用使用此项设置来禁用轨迹。滑块所控制的是“过近”距离的界定值，单位是像素。</p>
+</dd>
+<dt>速度</dt><dd><p>仅限标记设置 - 可用于控制序列跟踪的速度。此选项不会影响跟踪的质量;它只是有助于控制跟踪是否准确发生。在大多数情况下，跟踪发生得比实时快得多，并且很难注意到一个轨道何时开始滑出位置。在这种情况下 <em>Speed</em> 可以设置为Double或Half以在跟踪两帧之间添加一些延迟，因此可以提前注意到滑落，并且可以取消跟踪过程来调整轨道的位置。</p>
+</dd>
+<dt>权重</dt><dd><p>请参阅跟踪 <a class="reference internal" href="../properties/introduction.html#clip-tracking-weight"><span class="std std-ref">权重</span></a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="track-panel">
+<h2>追踪面板<a class="headerlink" href="#track-panel" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tracks">
+<h3>轨迹<a class="headerlink" href="#tracks" title="Permalink to this headline">¶</a></h3>
+<p>第一排按钮用于执行所选轨道的跟踪（即，按照帧与帧之间的选定特征进行跟踪）。跟踪可能发生（按按钮顺序）：</p>
+<ul class="simple">
+<li><p>向后一帧 <kbd class="kbd docutils literal notranslate">Alt-Left</kbd></p></li>
+<li><p>沿着序列向后 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-T</kbd></p></li>
+<li><p>沿着序列前进 <kbd class="kbd docutils literal notranslate">Ctrl-T</kbd></p></li>
+<li><p>向前一帧 <kbd class="kbd docutils literal notranslate">Alt-Right</kbd></p></li>
+</ul>
+<p>这个操作符依赖于从跟踪设置面板，这将在后面描述的设置。如果序列跟踪算法过程中失败来跟踪一些标记，它们将被禁用，并且还会继续追踪标记的其余部分。如果算法跟踪帧一帧失败时，该标记没有被禁止，并且在下一帧的特征的最可能的位置被使用。</p>
+</div>
+<div class="section" id="clear">
+<h3>清空<a class="headerlink" href="#clear" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>动作</dt><dd><dl class="simple">
+<dt>清除（后/剩余）（左箭头图标） <kbd class="kbd docutils literal notranslate">Alt-T</kbd></dt><dd><p>此项将删除当前帧之前的所有轨迹中的所有被追踪的、设置了关键帧的标记点。</p>
+</dd>
+<dt>清除（前/右）（右箭头图标） <kbd class="kbd docutils literal notranslate">Shift-T</kbd></dt><dd><p>删除所选轨道的当前帧所有的跟踪和关键帧标记。</p>
+</dd>
+<dt>清除（跟踪路径/全部） <kbd class="kbd docutils literal notranslate">Shift-Alt-T</kbd></dt><dd><p>此项将清除所有选中的轨迹中除当前帧之外的所有标记点。</p>
+</dd>
+</dl>
+</dd>
+<dt>清除激活项</dt><dd><p>ToDo &lt;2.67.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="refine">
+<h3>改善<a class="headerlink" href="#refine" title="Permalink to this headline">¶</a></h3>
+<p>此操作将为所有选定的标记运行从上一个关键帧到当前帧的跟踪器。当前标记位置正在考虑初始位置猜测，其可以由跟踪器更新以获得更好的匹配。</p>
+<p>在功能从帧中消失然后再次出现的情况下很有用。在这种情况下的用法如下：</p>
+<ul class="simple">
+<li><p>当特征点重新出现在帧上时，手动在其上放置标记。</p></li>
+<li><p>使用“优化标记”操作（位于“跟踪”面板中）允许跟踪器查找更好的匹配。</p></li>
+</ul>
+<p>根据追踪方向的不同，使用向前或向后优化。它是很容易的：如果跟踪发生前进，请使用“优化向前”，否则使用“向后优化”。</p>
+</div>
+<div class="section" id="merge">
+<h3>合并<a class="headerlink" href="#merge" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>加入轨道 <kbd class="kbd docutils literal notranslate">Ctrl-J</kbd></dt><dd><p>该操作将所有选定的轨道合并为一个。所选轨道在同一帧不应该有公共跟踪或关键帧标记。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="solve.html" class="btn btn-neutral float-right" title="解算" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="编辑" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

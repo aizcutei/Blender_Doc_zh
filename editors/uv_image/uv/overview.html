@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>概述 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/uv_image/uv/overview.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="生成UV" href="generated_uvs.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../3dview/index.html">3D视图</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">UV/图像编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../navigating.html">视图浏览</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../image/index.html">图像</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">UV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../display_panel.html">显示面板</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../index.html">UV/图像编辑器</a> &raquo;</li>
+        
+          <li><a href="index.html">UV</a> &raquo;</li>
+        
+      <li>概述</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/editors/uv_image/uv/overview.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>概述<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p><em>UV</em> 映射是把二维贴图映射到三维物体最灵活的方法。在此过程中，将三维 (X, Y &amp; Z) 网格展开为二维 (X &amp; Y ... 或者也叫做, &quot;U &amp; V&quot;) 图像。图像中的色彩就这样映射到网格上，显示为网格表面的色彩。使用UV贴图可以做出程序化材质和贴图无法做到的真实感，可以做出比顶点绘制更好的细节。</p>
+<div class="section" id="uvs-explained">
+<h2>UV的解释<a class="headerlink" href="#uvs-explained" title="Permalink to this headline">¶</a></h2>
+<p>要理解UV映射，最好的类比是裁开纸板箱。箱子是一个三维(3D)物体，就好比场景里的立方体网格。</p>
+<p>拿一把剪子沿折线裁开盒子，就可以把它平铺到桌面。俯视桌子上的盒子，把左右方向称之为U，上下方向称之为V。图像就这样变成了二维(2D)。我们用U和V来代替常规的X和Y指代“纹理空间坐标”，后者通常(和Z一起)用来表示三维空间(3D)。</p>
+<p>重组盒子之后，UV坐标转换为盒子上的 (X, Y, Z) 坐标。计算机做的其实就是把一张二维图像包裹到一个3D物体表面。</p>
+<p>在UV展开过程中，需要在UV/图像编辑器中准确告诉Blender如何将物体的表面映射到一张平摊的二维图像。这一步你可以放手施为(继续上面的类比，想象一下，把展开的盒子放在桌面，裁成小块，拉伸和/或压缩这些小块，然后就像在桌面上一样已某种方式在图像中进行排列)。</p>
+<div class="section" id="cartography-example">
+<h3>制图学范例<a class="headerlink" href="#cartography-example" title="Permalink to this headline">¶</a></h3>
+<p>制图者(地图制作人员)和这个问题打了上千年交道。一个制图学(地图制作)的例子是做一张全世界的投影地图。在制图学里，我们参考地球(一个球体)表面，然后制作出一张可以折叠到航天飞机仪表盘柜子里的地图。我们用下面几种方法 <em>填充</em> 朝向两极的空间，或者改变地图轮廓：</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/editors_uv-image_uv_overview_projection-mercator.jpg"><img alt="../../../_images/editors_uv-image_uv_overview_projection-mercator.jpg" src="../../../_images/editors_uv-image_uv_overview_projection-mercator.jpg" style="width: 190px;" /></a>
+<p class="caption"><span class="caption-text">墨卡托投影。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/editors_uv-image_uv_overview_projection-mollweide.jpg"><img alt="../../../_images/editors_uv-image_uv_overview_projection-mollweide.jpg" src="../../../_images/editors_uv-image_uv_overview_projection-mollweide.jpg" style="width: 190px;" /></a>
+<p class="caption"><span class="caption-text">摩尔威德投影。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../_images/editors_uv-image_uv_overview_projection-albers.jpg"><img alt="../../../_images/editors_uv-image_uv_overview_projection-albers.jpg" src="../../../_images/editors_uv-image_uv_overview_projection-albers.jpg" style="width: 190px;" /></a>
+<p class="caption"><span class="caption-text">Albers等距投影。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>上面都是球面UV映射方法。上百种常用的投影方法都有其优点和缺点。在计算机中，Blender允许使用我们希望的任意方法。</p>
+<p>在更加复杂的模型里(就像上面的全球地图)引出了一个问题，哪些面不能裁开，但为了摊开而被拉伸。这有助于更简单的UV映射，不过会增加最终映射贴图的变形。(在一张摊开的地图上，靠近两极的国家或州看起来比靠近赤道的小一些)。</p>
+</div>
+<div class="section" id="half-sphere-example">
+<h3>半球范例<a class="headerlink" href="#half-sphere-example" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../../_images/editors_uv-image_uv_overview_3d-uv-space.png"><img alt="../../../_images/editors_uv-image_uv_overview_3d-uv-space.png" src="../../../_images/editors_uv-image_uv_overview_3d-uv-space.png" style="width: 620px;" /></a>
+<p class="caption"><span class="caption-text">3D 空间 (XYZ) VS UV空间。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>不难看出上图中3D空间和UV空间中的标记面形状和大小不一样。这种差异是3D物件(XYZ)转换为2D平面(即UV映射)的&quot;拉伸&quot;(技术上称之为映射)导致的。</p>
+<p>如果一个三维物体存在UV映射，那么物体上的每一个点的三维坐标都有其对应的UV坐标。</p>
+</div>
+</div>
+<div class="section" id="advantages-of-uvs">
+<h2>UV的优势<a class="headerlink" href="#advantages-of-uvs" title="Permalink to this headline">¶</a></h2>
+<p>尽管程序纹理 (前面的章节有介绍)很有用—没有重复而且总是 &quot;适应&quot; 3D物体—但对于更加复杂或者自然的物体就有些够用了。例如，使用程序生成头部的皱纹就无法获得准确的结果。人体头部的皱纹，或者汽车上的划痕并非出现在随机位置，而是取决于模型的形状和用途。手动绘制的图像，或者从真实世界捕捉的图像可以带来更多的可控性和真实感。对于细节如书籍封面、挂毯、地毯、污渍和细节道具，艺术家可以通过UV贴图控制物体表面的每一个像素。</p>
+<p>UV映射描述了贴图的哪一部分关联到模型的哪个多边形。多边形的每一个顶点都被指定对应一个二维坐标，后者定义了图像的哪一部分被映射至物体。这些二维坐标被称为UV(与三维中的XYZ形成对比)。生成UV映射的操作也称之为 &quot;展开&quot; ，因其就像把网格展开到一个二维平面上。</p>
+<p>对于大多数简单的三维模型，Blender提供了简单的自动展开算法。对于更加复杂的三维模型，常规的立方体、柱体或球体映射通常是不够用的。为了获得均匀和精确的投影，可以使用缝合线引导UV映射。这可以用于给任意并且复杂的形状(比如人体头部或者动物)应用贴图。通常这些贴图是使用GIMP、Photoshop或者其他用户喜爱的绘图软件绘制的图像。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>游戏</p>
+<p>UV映射对于游戏引擎，都是必不可少的。这已经是对模型应用贴图的事实标准，几乎游戏里的任何模型都是使用UV映射的。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="generated_uvs.html" class="btn btn-neutral float-right" title="生成UV" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

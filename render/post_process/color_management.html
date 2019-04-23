@@ -1,0 +1,406 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>色彩管理 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/post_process/color_management.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Freestyle" href="../freestyle/index.html" />
+    <link rel="prev" title="后期处理面板" href="panel.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lighting/index.html">灯光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee 渲染器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles渲染引擎</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">后期处理</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="layers.html">渲染层</a></li>
+<li class="toctree-l3"><a class="reference internal" href="panel.html">后期处理面板</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">色彩管理</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#scene-linear-color-space">场景线性色彩空间</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#settings">设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#image-files">图像文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#opencolorio-configuration">OpenColorIO配置</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">工作流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../audio/index.html">音频渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="index.html">后期处理</a> &raquo;</li>
+        
+      <li>色彩管理</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/render/post_process/color_management.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="bpy-types-colormanaged"></span><div class="section" id="color-management">
+<h1>色彩管理<a class="headerlink" href="#color-management" title="Permalink to this headline">¶</a></h1>
+<p>色彩管理是最重要的工具之一，它可以保证图像在渲染、保存、后期处理的过程中保持一致。色彩管理也同样支持用户调整某些参数，例如曝光、伽马或是整体的色彩等级。</p>
+<div class="figure align-right" id="id1">
+<a class="reference internal image-reference" href="../../_images/render_post-process_color-management_different-exposures.jpg"><img alt="../../_images/render_post-process_color-management_different-exposures.jpg" src="../../_images/render_post-process_color-management_different-exposures.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">同一张渲染图像的不同曝光情况</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>在Blender中实现色彩管理， <a class="reference external" href="http://opencolorio.org/">OpenColorIO</a> (OCIO)  库已经集成到Blender。该库提供了更精确的控制，在不同的 <abbr title="Look Up Table, 查找表">LUT</abbr> 通过集成用户的颜色配置文件，来实现用户在其他软件上工作的无缝对接。</p>
+<div class="section" id="scene-linear-color-space">
+<h2>场景线性色彩空间<a class="headerlink" href="#scene-linear-color-space" title="Permalink to this headline">¶</a></h2>
+<p>为了得到正确的效果，需要不同的 <a class="reference internal" href="../../glossary/index.html#term-color-space"><span class="xref std std-term">色彩空间</span></a> 来呈现渲染效果以及存储图像。渲染和合成选择在 <em>线性</em> 色彩空间中操作效果更佳，因为它的处理更贴近自然，而且让计算的指令执行得更精准到位。</p>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/render_post-process_color-management_linear-workflow.svg" src="../../_images/render_post-process_color-management_linear-workflow.svg" /><p class="caption"><span class="caption-text">线性工作流示例</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>线性色彩实际上意味着当我们加倍全局光的数量，那么颜色值也将加倍。换句话说，如果我们有两张图片/渲染图，分别有一或两束光打在上面，然后将这些图像拼接在一起，结果将是一张图像/渲染图拥有双方的光源。因此，根据辐射度来测量线性空间，可以实现图像般逼真的渲染和合成效果。</p>
+<p>然而，这些值并不能直接被人眼或是显示设备所感知，而且图像文件经常存储于不同的色彩空间，因此我们应该留意这些线性色彩空间的正确的转入和转出。</p>
+</div>
+<div class="section" id="settings">
+<span id="render-post-color-management"></span><h2>设置<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">指引</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p>面板:    <span class="menuselection">属性编辑器 ‣ 场景 ‣ 色彩管理</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-center" id="id3">
+<img alt="../../_images/render_post-process_color-management_panel.png" src="../../_images/render_post-process_color-management_panel.png" />
+<p class="caption"><span class="caption-text">色彩管理设置界面</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="display">
+<h3>显示<a class="headerlink" href="#display" title="Permalink to this headline">¶</a></h3>
+<p>为了正确地显示渲染，颜色空间会通过转换到不同的播放设备，此处可以进行设置。
+电脑显示器的工作原理和数字电影投影仪HDTV有所差异，场景属性有如下设置：</p>
+<dl>
+<dt>显示设备</dt><dd><p>正在查看的图像的设备。</p>
+<p>大多数显示器配置为 sRGB色彩空间，所以在电脑上作业时，此选项通常为默认值。除非有另外的显示设备连接到这台电脑去查看图像，又或是将图像文件输出到另一台设备上显示时，则这块的选项需要改变设置。</p>
+<p>Rec709 通常用于高清电视，XYZ 和 DCI P3 是常见的数字投影仪。</p>
+<p>设置为空时，色彩管理不可用。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id4">
+<img alt="../../_images/render_post-process_color-management_linear-display-space.svg" src="../../_images/render_post-process_color-management_linear-display-space.svg" /><p class="caption"><span class="caption-text">从线性空间到显示设备空间的转换。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="render">
+<h3>渲染<a class="headerlink" href="#render" title="Permalink to this headline">¶</a></h3>
+<p>用户可以有一个较为艺术的渲染选择：由于显示设备不能直接播放全波段光谱，并且显示的亮度范围有限，因此我们筛选出有效的颜色去适应全部的设备。此外，渲染也常用于让显示的画面更独特，就像实际在电影中播放的效果一样。</p>
+<p>另一个常见的用例是当你想检查渲染情况，在黑暗的阴影或明亮的亮点可以查看细节，或识别渲染错误。这样的设置只能暂时使用，而不用于最终渲染。</p>
+<dl>
+<dt>视图</dt><dd><p>将图像转换到色彩空间时的效果，在同个显示设备上可以有多种不同的视图。</p>
+<dl class="simple">
+<dt>默认</dt><dd><p>除了显示设备的转换外，没有其他额外的转换</p>
+</dd>
+<dt>Filmic</dt><dd><p>For more photorealistic results and better handling of high dynamic range.
+The contrast can be adjusted by changing the <em>Look</em> option for the Filmic view transform.</p>
+</dd>
+<dt>RRT</dt><dd><p>使用ACES指引的渲染转换方式来模拟电影般的效果。</p>
+</dd>
+<dt>胶片</dt><dd><p>使用一种称为电影仿真技术，使渲染看起来类似于胶片相机的效果。这通常是通过黑色粉状颗粒和降低图像的对比度来实现胶片效果。</p>
+</dd>
+<dt>Raw</dt><dd><p>用于检查图像而不是用于最终输出。RAW给出的图像不作任何色彩空间转换。</p>
+</dd>
+<dt>对数</dt><dd><p>用于检查图像而不是用于最终输出。对数的功效类似于Raw，区别在于对数提供的图像效果更为平缓，没有过于昏暗或者强光的区域。</p>
+</dd>
+<dt>False Color</dt><dd><p>Shows a heat map of image intensities, to visualize the dynamic range.</p>
+</dd>
+</dl>
+</dd>
+<dt>曝光度</dt><dd><p>用于控制色彩空间转换前的图像亮度(in stops)，计算公式为 <span class="math notranslate nohighlight">\(output\_value = render\_value × 2^{(exposure)}\)</span></p>
+</dd>
+<dt>伽玛</dt><dd><p>在色彩空间转换后的额外的图像伽玛校正应用。注意，伽玛校正可应用在绝大部分情况，但除了以下这种：默认的sRGB或Rec709颜色空间转换已经包括了约2.2的伽玛校正（除 <em>Raw</em> 和 <em>Raw</em> 视图）。</p>
+</dd>
+<dt>效果</dt><dd><p>在色彩空间转换之前，可以从一组标准的电影响应数据中选择一种艺术效果，这些数据大致模拟某些类型的影片的效果。</p>
+</dd>
+<dt>使用曲线</dt><dd><p>在色彩空间转换之前调整RGB曲线来控制图像颜色。阅读更多关于使用 <a class="reference internal" href="../../interface/controls/templates/curve.html#ui-curve-widget"><span class="std std-ref">曲线部件</span></a> 。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="sequencer">
+<h3>序列编辑器<a class="headerlink" href="#sequencer" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>色彩空间</dt><dd><p>序列编辑中的色彩显示空间：默认情况下，序列编辑在色彩显示空间中的sRGB空间运行，但它也可以被设置在线性空间中运行，譬如合成节点又或者是另一个色彩空间运行。不同的色彩空间将产生不同的效果，例如颜色校正、交叉渐变等操作效果。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="image-files">
+<h2>图像文件<a class="headerlink" href="#image-files" title="Permalink to this headline">¶</a></h2>
+<p>在加载和保存媒体格式时谨记色彩管理。PNG或JPEG类的文件格式显而易见的需要存储颜色信息，因此会在色彩显示空间存储以备呈现，而不是在线性空间。例如渲染中使用纹理效果，首先需要转换为线性。当用于web上显示时，它们还需要被转换为显示空间。其他的文件格式如OpenEXR等存储在线性色彩空间，是产生的中间文件。</p>
+<p>使用图像文件时，通常色彩空间使用默认设置即可。否则，可以在图像设置中配置图像文件的色彩空间。常见的需要手动设置的一种情况是：使用或者烘烤凹凸贴图或位移图时，例如。这样的贴图实际上不存储颜色信息，只是将数据编译为颜色。在这种情况下，它们应该被标记为 <em>非颜色数据</em> 。</p>
+<p>线性色彩显示空间场景中，图像数据块将始终以浮动缓存的方式在内存中存储，而内存中的字节缓存和驱动器中的文件都存储在指定的色彩显示空间中，设置如下：</p>
+<dl class="simple">
+<dt>色彩空间</dt><dd><p>驱动器上的图像文件的色彩显示空间。取决于文件的格式，比如PNG或JPEG图像通常存储在sRGB，而OpenEXR图像存储在线性色彩显示空间。一些图像，如法线，凹凸或模板贴图不完全包含 '颜色' 信息，这种情况下没有进行色彩显示空间转换。因此对于这些图像，色彩显示空间应设置为 <em>无</em> 。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id5">
+<img alt="../../_images/render_post-process_color-management_image-settings.png" src="../../_images/render_post-process_color-management_image-settings.png" />
+<p class="caption"><span class="caption-text">色彩管理的图像设置。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>默认情况下只有显示和保存时渲染视图需要用到转换。这些渲染结果、查看器图像数据块以及文件被直接保存到渲染动画操作的驱动器上。然而，当加载一个已存储在中间OpenEXR文件的渲染对象，Blander不能自动检测出这是一个渲染（如图像纹理或位移图）。我们需要指定这是一个渲染对象，且希望应用转换操作，则设置这两个：</p>
+<dl class="simple">
+<dt>预览为渲染结果</dt><dd><p>显示图像数据块（不仅是渲染）情况如视图转换，曝光，伽玛，RGB曲线应用。和直接渲染一样，常用于查看在线性OpenEXR文件中渲染完成的帧。</p>
+</dd>
+<dt>另存为渲染图</dt><dd><p>图像的选项免除了用户的操作设置如视图变换，曝光，伽玛，RGB曲线。常用于在显示空间储存线性OpenEXR如PNG或JPEG文件。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="opencolorio-configuration">
+<h2>OpenColorIO配置<a class="headerlink" href="#opencolorio-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Blender中OpenColorIO的标准配置，包含一系列常用的设置，例如显示设备和视图变换。参考用于 Rec. 709色度以及 D65白点的 线性色彩显示空间的 <a class="reference internal" href="../../glossary/index.html#term-color-space"><span class="xref std std-term">色彩空间</span></a>  。</p>
+<p>然而，OpenColorIO也被设计用来提供一致的用户体验，通过 <a class="reference external" href="http://opencolorio.org/CompatibleSoftware.html">多重应用</a> 方式，共享的配置文件即可使用。Blender将使用标准的 OCIO环境变量读取OpenColorIO配置。更多关于如何建立这样一个工作流的信息可以在  <a class="reference external" href="http://opencolorio.org/">OpenColorIO 网站</a> 中查看。</p>
+<p>目前使用的色彩显示空间规则如下：</p>
+<dl class="simple">
+<dt>场景线性色彩显示空间</dt><dd><p>用于渲染、合成以及在内存中存储所有浮点精度图像的色彩空间。</p>
+</dd>
+<dt>默认序列编辑设置</dt><dd><p>如果没有指定 <em>线性场景</em> ，则在序列编辑中使用默认的色彩显示空间。</p>
+</dd>
+<dt>默认字节设置</dt><dd><p>字节精度的图像和文件的默认色彩显示空间，如果没有指定*纹理涂料*，则字节精度图像和文件使用默认的色彩显示空间。</p>
+</dd>
+<dt>默认浮度</dt><dd><p>如果没有指定 <em>线性场景</em> ，浮动精度的图像和文件则使用默认的色彩显示。</p>
+</dd>
+</dl>
+<p>Blender标准配置还包括对 <a class="reference external" href="https://www.oscars.org/science-technology/sci-tech-projects/aces">ACES</a> (<a class="reference external" href="https://github.com/ampas/aces-dev">代码和文档</a>)的支持，虽然我们有不同的线性颜色空间。通过线性ACES色彩空间，可以加载和保存EXR文件，RRT视图变换可用于查看图像的标准显示转换。然而，ACES色域大于709色域，所以最好是使用ACES。OpenColorIO 提供 ACES功能。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../freestyle/index.html" class="btn btn-neutral float-right" title="Freestyle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="panel.html" class="btn btn-neutral float-left" title="后期处理面板" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

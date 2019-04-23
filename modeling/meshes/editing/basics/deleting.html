@@ -1,0 +1,538 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>删除 &amp; 融并 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/basics/deleting.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="创建边/面" href="make_face_edge.html" />
+    <link rel="prev" title="添加几何体" href="adding.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">选择</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">基础</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vertices.html">顶点工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../edges.html">边工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../faces.html">面工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../transform/index.html">变形</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../duplicating/index.html">复制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">细分</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cleanup.html">清理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../misc.html">其他编辑工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_transfer.html">数据传递</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mesh_options.html">网格选项</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_display.html">网格显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../../index.html">网格</a> &raquo;</li>
+        
+          <li><a href="../index.html">编辑</a> &raquo;</li>
+        
+          <li><a href="index.html">基础</a> &raquo;</li>
+        
+      <li>删除 &amp; 融并</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/modeling/meshes/editing/basics/deleting.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="deleting-dissolving">
+<h1>删除 &amp; 融并<a class="headerlink" href="#deleting-dissolving" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 网格工具 ‣ 移除: 删除</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">网格 ‣ 删除</span></p>
+</dd>
+</dl>
+</div>
+<p>这些工具用于删除网格元素。</p>
+<div class="section" id="delete">
+<h2>删除<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">X</kbd>, <kbd class="kbd docutils literal notranslate">Delete</kbd></p>
+</dd>
+</dl>
+</div>
+<p>删除选中的顶点、边或者面。该操作还可以限定删除对象为:</p>
+<dl class="simple">
+<dt>顶点</dt><dd><p>删除选中项中所有顶点，移除相连的所有面或边。</p>
+</dd>
+<dt>边</dt><dd><p>删除选中项中所有边，移除相连的所有面。</p>
+</dd>
+<dt>面</dt><dd><p>删除选中项中所有面。</p>
+</dd>
+<dt>仅边和面</dt><dd><p>限定操作对象为选中的边以及相邻的面。</p>
+</dd>
+<dt>仅面</dt><dd><p>移除面，但保留构成选中面的边线。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="dissolve">
+<h2>融并<a class="headerlink" href="#dissolve" title="Permalink to this headline">¶</a></h2>
+<p>融并操作也可以从删除菜单访问。融并会移除几何元素并填充周边几何体。而删除几何元素可能会留下空洞，需要再次填充。</p>
+<p>删除选中的几何元素，但不生成空洞，将选中项转变为一个多边形。根据选中元素(边、面或顶点)的不同，融并的效果也有所差异。用户可以在需要的地方添加细节，或者在不需要的位置移除细节。</p>
+<div class="section" id="dissolve-vertices">
+<h3>融并顶点<a class="headerlink" href="#dissolve-vertices" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 删除 ‣ 融并顶点</span></p>
+</dd>
+</dl>
+</div>
+<p>移除选中顶点，并合并周围的面。</p>
+<dl class="simple">
+<dt>分离面</dt><dd><p>在融并顶点至周边面时，结果经常是过大、不平整的多边形。勾选分离面选项，限制融并仅使用与选中点相连的面的角点。</p>
+</dd>
+<dt>撕裂边界</dt><dd><p>撕裂面拐角，而非将其合并。</p>
+</dd>
+</dl>
+<div class="section" id="examples">
+<h4>例子<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-center" id="id1">
+<img alt="../../../../_images/modeling_meshes_editing_basics_deleting_dissolve-examples.png" src="../../../../_images/modeling_meshes_editing_basics_deleting_dissolve-examples.png" />
+<p class="caption"><span class="caption-text">1) 原始网格 2) 分离面: 关闭, 撕裂边界: 关闭 3) 分离面: 开启, 撕裂边界: 关闭 4) 分离面: 开启/关闭, 撕裂边界: 开启。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="dissolve-edges">
+<h3>融并边<a class="headerlink" href="#dissolve-edges" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 删除 ‣ 融并边</span></p>
+</dd>
+</dl>
+</div>
+<p>移除面之间的公共边(合并这些面)。</p>
+<p>操作选项与 <a class="reference internal" href="#dissolve-vertices">融并顶点</a> 工具相同。</p>
+</div>
+<div class="section" id="dissolve-faces">
+<span id="modeling-mesh-deleting-dissolve-faces"></span><h3>融并面<a class="headerlink" href="#dissolve-faces" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 删除 ‣ 融并面</span></p>
+</dd>
+</dl>
+</div>
+<p>将存在公共边的面融并为一个面。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>可使用 <kbd class="kbd docutils literal notranslate">F</kbd> 键快速访问该工具,，参见 <a class="reference internal" href="make_face_edge.html#modeling-mesh-make-face-edge-dissolve"><span class="std std-ref">融并现有面</span></a>。</p>
+</div>
+</div>
+<div class="section" id="dissolve-context-sensitive">
+<h3>融并 (上下文敏感)<a class="headerlink" href="#dissolve-context-sensitive" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Ctrl-X</kbd></p>
+</dd>
+</dl>
+</div>
+<p>这是一个方便的快捷操作，根据当前选择模式(顶点、边、面)进行融并。</p>
+</div>
+</div>
+<div class="section" id="limited-dissolve">
+<h2>有限融并<a class="headerlink" href="#limited-dissolve" title="Permalink to this headline">¶</a></h2>
+<p>融并平坦区域中的顶点和边线，简化网格。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_basics_deleting_limited-dissolve-before.png"><img alt="../../../../_images/modeling_meshes_editing_basics_deleting_limited-dissolve-before.png" src="../../../../_images/modeling_meshes_editing_basics_deleting_limited-dissolve-before.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">原始网格。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_basics_deleting_limited-dissolve-after.png"><img alt="../../../../_images/modeling_meshes_editing_basics_deleting_limited-dissolve-after.png" src="../../../../_images/modeling_meshes_editing_basics_deleting_limited-dissolve-after.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">有限融并结果。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="simple">
+<dt>最大角度</dt><dd><p>调节角度阈值，减少平坦面和平直边线细节。</p>
+</dd>
+<dt>所有边界</dt><dd><p>融并位于边界的仅连接两条边的顶点。</p>
+</dd>
+<dt>划界</dt><dd><p>阻止不共用特定属性(比如材质)的面进行合并。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="edge-collapse">
+<h2>边线塌陷<a class="headerlink" href="#edge-collapse" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 删除 ‣ 边线塌陷</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Alt-M</kbd>, <span class="menuselection">塌陷</span></p>
+</dd>
+</dl>
+</div>
+<p>将每条边合并为单个顶点。适用于选中一组并排边，然后塌陷，移除其通过的面循环。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_basics_deleting_collapse-before.png"><img alt="../../../../_images/modeling_meshes_editing_basics_deleting_collapse-before.png" src="../../../../_images/modeling_meshes_editing_basics_deleting_collapse-before.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">选中并排边。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_basics_deleting_collapse-after.png"><img alt="../../../../_images/modeling_meshes_editing_basics_deleting_collapse-after.png" src="../../../../_images/modeling_meshes_editing_basics_deleting_collapse-after.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">塌陷后的并排边。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="edge-loop">
+<h2>循环边<a class="headerlink" href="#edge-loop" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式 (顶点或边选择模式)</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 删除 ‣ 循环边</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">X</kbd> or <kbd class="kbd docutils literal notranslate">Delete</kbd>, <span class="menuselection">循环边</span></p>
+</dd>
+</dl>
+</div>
+<p><em>循环边</em> 用于删除夹在两组循环边之间的选定循环边，将现有的两组面循环转变为一组面循环。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>即使用在类似循环边的一组边， <em>循环边</em> 选项与 <em>边</em> 选项也有很大的差异。删除循环边将周边的面合并到一起，保留网格表面。删除一串边线，在删除边的同时会删除周边的面，在面原本所在的网格留下 空洞。</p>
+</div>
+<div class="section" id="example">
+<h3>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>经纬球面上的选中循环边被删除后，原来的面与四周的边合并。如果选择 <em>移除</em> 菜单 <em>边</em> 选项删除边线，会在球面留下一圈已删除的空白面。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_basics_deleting_edge-loop-before.png"><img alt="../../../../_images/modeling_meshes_editing_basics_deleting_edge-loop-before.png" src="../../../../_images/modeling_meshes_editing_basics_deleting_edge-loop-before.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">选中循环边。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_basics_deleting_edge-loop-after.png"><img alt="../../../../_images/modeling_meshes_editing_basics_deleting_edge-loop-after.png" src="../../../../_images/modeling_meshes_editing_basics_deleting_edge-loop-after.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">删除循环边后。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../vertices.html#vertex-merging"><span class="std std-ref">顶点合并</span></a>。</p></li>
+<li><p><a class="reference internal" href="../faces.html#mesh-faces-tristoquads"><span class="std std-ref">三角面 -&gt; 四边面</span></a>.</p></li>
+<li><p><a class="reference internal" href="../subdividing/subdivide.html#mesh-unsubdivide"><span class="std std-ref">反细分</span></a>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="make_face_edge.html" class="btn btn-neutral float-right" title="创建边/面" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="adding.html" class="btn btn-neutral float-left" title="添加几何体" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

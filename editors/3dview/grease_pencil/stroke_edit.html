@@ -1,0 +1,569 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>笔触编辑模式 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/3dview/grease_pencil/stroke_edit.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="动画草图" href="animating.html" />
+    <link rel="prev" title="笔刷" href="drawing/brushes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../startup_scene.html">启动场景</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modes.html">物体模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../navigate/index.html">视图浏览</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d_cursor.html">3D游标</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object/index.html">物体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../properties/index.html">属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ruler_protractor.html">3D量尺 &amp; 量角器</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">蜡笔</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../index.html">3D视图</a> &raquo;</li>
+        
+          <li><a href="index.html">蜡笔</a> &raquo;</li>
+        
+      <li>笔触编辑模式</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/editors/3dview/grease_pencil/stroke_edit.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="stroke-edit-mode">
+<h1>笔触编辑模式<a class="headerlink" href="#stroke-edit-mode" title="Permalink to this headline">¶</a></h1>
+<p>通过3D视图标题栏上的 <em>模式</em> 选择菜单、蜡笔面板上的 <em>启用编辑</em> 开关 <em>(仅适用于2D编辑器如UV/图像编辑器，节点编辑器等)</em> 或者使用 <kbd class="kbd docutils literal notranslate">D-Tab</kbd> 进入笔触编辑模式。在该模式下，可以使用许多常规编辑工具操作蜡笔笔触控制点。</p>
+<p>用户可以使用工具移动和调整绘制好的蜡笔笔触形状。</p>
+<p>进入工具栏中的蜡笔标签页，找到编辑笔触面板中的工具:</p>
+<div class="figure align-center" id="id1">
+<img alt="../../../_images/interface_grease-pencil_stroke-edit_panel.png" src="../../../_images/interface_grease-pencil_stroke-edit_panel.png" />
+<p class="caption"><span class="caption-text">编辑面板与蜡笔笔触。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="selecting">
+<h2>选择<a class="headerlink" href="#selecting" title="Permalink to this headline">¶</a></h2>
+<p>蜡笔笔触由一系列顶点连接构成。要修改笔触，先要选择笔触上的控制点。用户只能选择活动图层上的笔触控制点。如上图，选中的控制点高亮显示。</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>设置 <em>笔触宽度</em> 为1。</p>
+</div>
+<p>使用鼠标选择端点, 或者使用面板上的选择按钮，详见 <a class="reference internal" href="../../../modeling/meshes/selecting/introduction.html"><span class="doc">基础选择</span></a>。</p>
+<p>与网格编辑类似，可用的选择方法有：</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><th class="stub"><p>全选</p></th>
+<td><p><kbd class="kbd docutils literal notranslate">A</kbd></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>框选</p></th>
+<td><p><kbd class="kbd docutils literal notranslate">B</kbd></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>刷选</p></th>
+<td><p><kbd class="kbd docutils literal notranslate">C</kbd></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>套索选择</p></th>
+<td><p><kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>关联项</p></th>
+<td><p><kbd class="kbd docutils literal notranslate">L</kbd>, <kbd class="kbd docutils literal notranslate">Ctrl-L</kbd></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>扩展选择</p></th>
+<td><p><kbd class="kbd docutils literal notranslate">Ctrl-NumpadPlus</kbd></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>缩减选择</p></th>
+<td><p><kbd class="kbd docutils literal notranslate">Ctrl-NumpadMinus</kbd></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>选择笔画</p></th>
+<td><p><kbd class="kbd docutils literal notranslate">Alt-LMB</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="editing">
+<h2>编辑<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="header">
+<h3>标题栏<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h3>
+<p>一些工具可以直接在3D视图的标题栏找到，如复制/粘贴。</p>
+<dl class="simple">
+<dt>洋葱皮</dt><dd><p>开启 <a class="reference internal" href="drawing/layers.html#grease-pencil-onion"><span class="std std-ref">洋葱皮</span></a>。</p>
+</dd>
+<dt>选中项遮罩, Alpha</dt><dd><p>见 <a class="reference internal" href="#further-options">更多选项</a>。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="menu">
+<h3>菜单<a class="headerlink" href="#menu" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>减细/加粗 <kbd class="kbd docutils literal notranslate">Alt-S</kbd></dt><dd><p>调整选中的笔画端点的压力值。通过移动鼠标或者 <kbd class="kbd docutils literal notranslate">Wheel</kbd> 修改笔画宽度。</p>
+</dd>
+<dt>删除所有活动帧 <kbd class="kbd docutils literal notranslate">D-X</kbd></dt><dd><p>删除活动帧上的所有笔画。可以使用 <kbd class="kbd docutils literal notranslate">D-X</kbd> (任意模式)访问该功能， <kbd class="kbd docutils literal notranslate">Shift-X</kbd> (仅编辑笔触模式)或者 <span class="menuselection">蜡笔 ‣ 删除</span> 菜单亦可。这样可以快速清除一次性涂鸦。</p>
+</dd>
+<dt>移动到层 <kbd class="kbd docutils literal notranslate">M</kbd></dt><dd><p>用于在层与层(包含新建层)之间移动笔画。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="edit-strokes-panel">
+<h3>编辑笔触面板<a class="headerlink" href="#edit-strokes-panel" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式(Modes)</dt>
+<dd class="field-odd"><p>编辑笔触模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 蜡笔 ‣ 编辑笔触</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">蜡笔</span></p>
+</dd>
+</dl>
+</div>
+<dl>
+<dt>复制 <kbd class="kbd docutils literal notranslate">Ctrl-C</kbd></dt><dd><p>复制选中的蜡笔笔画(或者实际上是点和线段)。</p>
+</dd>
+<dt>粘贴 <kbd class="kbd docutils literal notranslate">Ctrl-V</kbd></dt><dd><p>粘贴已复制笔画。</p>
+</dd>
+<dt>粘贴 &amp; 合并</dt><dd><p>粘贴已复制笔画，并合并至活动图层。</p>
+</dd>
+<dt>删除 <kbd class="kbd docutils literal notranslate">X</kbd></dt><dd><dl class="simple">
+<dt>点</dt><dd><p>删除选中点，打断笔画。</p>
+</dd>
+<dt>消融</dt><dd><p>删除后重新连接端点，不打断笔画。</p>
+</dd>
+<dt>笔触</dt><dd><p>删除包含选中点的整个笔画。</p>
+</dd>
+<dt>帧</dt><dd><p>制作 <a class="reference internal" href="drawing/layers.html"><span class="doc">动画草图</span></a> 是删除帧。</p>
+</dd>
+</dl>
+</dd>
+<dt>复制 <kbd class="kbd docutils literal notranslate">Shift-D</kbd></dt><dd><p>在原位置创建选中端点的副本。使用鼠标 平移 ，在新位置使用 <kbd class="kbd docutils literal notranslate">LMB</kbd> 放置， <kbd class="kbd docutils literal notranslate">RMB</kbd> 取消并删除副本。</p>
+</dd>
+<dt>切换循环</dt><dd><p>通过连接/断开首末端点闭合/打开选中笔画。</p>
+</dd>
+<dt>弯曲 <kbd class="kbd docutils literal notranslate">Shift-W</kbd></dt><dd><p>弯曲3D游标和鼠标之间的选中对象。</p>
+</dd>
+<dt>镜像 <kbd class="kbd docutils literal notranslate">Ctrl-M</kbd></dt><dd><p>沿一个或多个轴向镜像选中笔画。</p>
+</dd>
+<dt>切变 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-Alt-S</kbd></dt><dd><p>沿屏幕水平轴向切变选中对象。</p>
+</dd>
+<dt>球形化 <kbd class="kbd docutils literal notranslate">Shift-Alt-S</kbd></dt><dd><p>绕中心点球面移动选中端点。</p>
+</dd>
+<dt>整理笔刷</dt><dd><p>向上/下整理选中笔画在活动层中的绘制顺序。</p>
+<p>Bring Forward, Send Backward, Bring to Front, Send to Back</p>
+</dd>
+<dt>修改为活动颜色</dt><dd><p>设置选中笔画的颜色为活动颜色。</p>
+</dd>
+<dt>细分</dt><dd><p>在两个或更多点之间均匀添加一定数量的新点，调整 切割次数 设置添加的点数。</p>
+</dd>
+<dt>合并笔画</dt><dd><dl class="simple">
+<dt>类型</dt><dd><dl class="simple">
+<dt>合并 <kbd class="kbd docutils literal notranslate">Ctrl-J</kbd></dt><dd><p>合并选中笔画。</p>
+</dd>
+<dt>合并 &amp; 复制 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-J</kbd></dt><dd><p>合并选中笔画为一个新笔画。</p>
+</dd>
+</dl>
+</dd>
+<dt>保留缺口</dt><dd><p>合并后不连接两笔画，保留缺口。</p>
+</dd>
+</dl>
+</dd>
+<dt>反转方向</dt><dd><p>反转笔画的首末端点。</p>
+</dd>
+<dt>显示方向</dt><dd><p>显示笔画绘制方向，大绿点表示起点，小红点表示终点。</p>
+</dd>
+<dt>重投影笔画</dt><dd><dl class="simple">
+<dt>平面</dt><dd><p>重新投影选中笔画至当前视图平面，使所有端点位于同一平面。用于修正意外移动3D游标或者改变视图导致的问题。</p>
+</dd>
+<dt>面</dt><dd><p>投影选中笔画至几何体，而非平面(即平行于视平面)(试验特性)。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="interpolate-panel">
+<h3>插值面板<a class="headerlink" href="#interpolate-panel" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式(Modes)</dt>
+<dd class="field-odd"><p>编辑笔触模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 蜡笔 ‣ 插值</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">蜡笔 ‣ 插值</span></p>
+</dd>
+</dl>
+</div>
+<p>下面的两个操作用于在一对蜡笔关键帧之间进行插值。要使用该操作，当前帧前后必须存在蜡笔关键帧。(另外，注意不能对已经是前后帧插值的当前帧使用该操作)。</p>
+<dl class="simple">
+<dt>插值 <kbd class="kbd docutils literal notranslate">Ctrl-Alt-E</kbd></dt><dd><p>用于根据相邻草图笔画，交互地选择并新增插值草图。等同于骨架的 <em>间断</em> 工具。</p>
+</dd>
+<dt>序列 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-E</kbd></dt><dd><p>为一对蜡笔关键帧之间的所有帧填充关键帧。等同于动画摄影表编辑器中的 <em>采样</em> 工具。</p>
+</dd>
+<dt>移除所有间断帧</dt><dd><p>用于删除生成的 <em>间断</em> 关键帧。</p>
+</dd>
+</dl>
+<div class="section" id="options">
+<h4>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>对全部图层插值</dt><dd><p>勾选后，对所有层插值，而非仅活动层。</p>
+</dd>
+<dt>插值选中笔画</dt><dd><p>勾选后，仅对原始帧的选中笔画进行插值。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="sequence-options">
+<h4>序列选项<a class="headerlink" href="#sequence-options" title="Permalink to this headline">¶</a></h4>
+<p>可以控制 <em>序列插值</em> 对前后帧的混合方式。</p>
+<dl class="simple">
+<dt>线性</dt><dd><p>使用恒定速率进行插值。</p>
+</dd>
+<dt>自定义曲线</dt><dd><p>还可以使用 <a class="reference internal" href="../../../interface/controls/templates/curve.html#ui-curve-widget"><span class="std std-ref">曲线部件</span></a> 自定义曲线对插值进行更加精细的控制。</p>
+</dd>
+<dt>缓冲方程</dt><dd><p>Robert Penner的缓冲方程也可以用于控制插值速度/形状，就像函数曲线或关键帧一样(<a class="reference internal" href="../../graph_editor/fcurves/introduction.html#editors-graph-fcurves-settings-interpolation"><span class="std std-ref">点此查看更多信息</span></a>)。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="sculpt-strokes-panel">
+<span id="bpy-types-gpencilsculptsettings"></span><h3>雕刻笔画面板<a class="headerlink" href="#sculpt-strokes-panel" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式(Modes)</dt>
+<dd class="field-odd"><p>编辑笔触模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 蜡笔 ‣ 蜡笔</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">蜡笔 ‣ 雕刻笔画/笔刷</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">E-LMB</kbd></p>
+</dd>
+</dl>
+</div>
+<p>以笔刷形式，提供了几种编辑蜡笔笔画的工具，用于 <em>绘制</em> 或 <em>雕刻</em> 笔画外观，而无需使用麻烦的 <strong>选择-调整-选择-调整</strong> 编辑模式。</p>
+<p>按住 <kbd class="kbd docutils literal notranslate">E-LMB</kbd> 并拖动进行雕刻。</p>
+<div class="section" id="brushes">
+<h4>笔刷<a class="headerlink" href="#brushes" title="Permalink to this headline">¶</a></h4>
+<p>目前可用的笔刷有：</p>
+<dl>
+<dt>平滑</dt><dd><p>用于有选择地松弛抖动/振动和凸起，整理凌乱的草图。</p>
+<dl class="simple">
+<dt>影响压力</dt><dd><p>使用该选项，对笔画宽度值执行平滑化。</p>
+</dd>
+</dl>
+</dd>
+<dt>厚度</dt><dd><p>厚度笔刷用于提高(添加)或者降低(相减)游标下方笔画的宽度。</p>
+</dd>
+<dt>强度/力度</dt><dd><p>提高/降低 (<kbd class="kbd docutils literal notranslate">Ctrl</kbd>) 笔画的alpha值，用于制作效果如减淡。</p>
+</dd>
+<dt>抓起</dt><dd><p>雕刻动作开始后，抓住笔刷圆范围内的控制点，并进行平移。</p>
+</dd>
+<dt>推</dt><dd><p>推笔刷与抓起笔刷非常类似，同样可以用于平移笔画控制点。然而，与抓起笔刷不同的是，推笔刷不限于仅操作雕刻开始时笔刷下方的端点。笔刷移动时，笔刷下方的端点基于笔刷的移动量发生移动。</p>
+</dd>
+<dt>扭曲</dt><dd><p>用于围绕游标扭曲/旋转端点，产生 <em>旋涡</em> 效果。有助于对笔画端点应用低级别的扭曲效果。 <em>方向</em> 用于控制端点沿顺时针(CW)或逆时针(CCW)方向旋转。</p>
+</dd>
+<dt>夹捏/膨胀</dt><dd><p>用于将端点从光标移开，或者移向光标。</p>
+<dl class="simple">
+<dt>Pinch 夹捏</dt><dd><p>将端点移向光标。</p>
+</dd>
+<dt>膨胀</dt><dd><p>将端点推离光标。</p>
+</dd>
+</dl>
+</dd>
+<dt>随机</dt><dd><p>随机化笔画属性。如开启 <em>位置</em> ，将在屏幕空间随机移动端点，产生抖动/锯齿状线条。</p>
+</dd>
+<dt>克隆</dt><dd><p>用于粘贴已复制端点(活动层的复制/粘贴缓存中)，并放置在鼠标单击位置。</p>
+<p>按住 <kbd class="kbd docutils literal notranslate">LMB</kbd> 并拖动，调整笔画粘贴位置。笔画中心随笔刷/光标移动。 (&quot;印章模式&quot;)。</p>
+<dl class="simple">
+<dt>使用衰减</dt><dd><p>启用 <em>使用衰减</em> 选项，仅影响光标下方的的点，而非对所有新粘贴笔画做相同程度的移动。这样一来，在该模式下操作，该笔刷更接近粘贴和推笔刷 (&quot;图章和涂抹&quot;)。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="common-options">
+<h4>通用选项<a class="headerlink" href="#common-options" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>半径 <kbd class="kbd docutils literal notranslate">Shift-F</kbd>/<kbd class="kbd docutils literal notranslate">Wheel</kbd></dt><dd><p>笔刷尺寸。非雕刻状态下使用 <kbd class="kbd docutils literal notranslate">Shift-F</kbd> 提高/降低笔刷尺寸，或者在雕刻时(亦即放下笔尖，或者按住鼠标时)使用 <kbd class="kbd docutils literal notranslate">Wheel</kbd> 调整。</p>
+</dd>
+<dt>强度/力度 <kbd class="kbd docutils literal notranslate">Ctrl-F</kbd>/<kbd class="kbd docutils literal notranslate">Shift-Wheel</kbd></dt><dd><p>笔刷强度，可以通过手写笔压力调整。(增/减见 <em>半径</em>)。</p>
+</dd>
+<dt>使用衰减</dt><dd><p>启用计算笔刷影响的线性衰减。也就是说，靠近笔刷中心的点(亦即游标下方的端点)比边缘的端点受影响更大。</p>
+</dd>
+<dt>方向 <kbd class="kbd docutils literal notranslate">Ctrl-E-LMB</kbd></dt><dd><p>用于翻转笔刷效果的单选按钮。</p>
+</dd>
+<dt>影响</dt><dd><p>启用对位置、强度(alpha值)和宽度的雕刻，适用于平滑和随机笔刷。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="further-options">
+<h4>更多选项<a class="headerlink" href="#further-options" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>选中项遮罩</dt><dd><p>用于限制笔刷仅操作选中的端点。</p>
+</dd>
+<dt>Alpha <kbd class="kbd docutils literal notranslate">Ctrl-H</kbd></dt><dd><p>被选中点的透明度。可以使用 <kbd class="kbd docutils literal notranslate">Ctrl-H</kbd> 切换可见性(隐藏/显示) 。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="animating.html" class="btn btn-neutral float-right" title="动画草图" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="drawing/brushes.html" class="btn btn-neutral float-left" title="笔刷" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

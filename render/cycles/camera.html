@@ -1,0 +1,761 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Cameras &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/cycles/camera.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="渲染功能特性" href="features.html" />
+    <link rel="prev" title="节点组" href="nodes/types/groups.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lighting/index.html">灯光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee 渲染器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cycles渲染引擎</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lamps.html">灯光</a></li>
+<li class="toctree-l3"><a class="reference internal" href="world.html">世界</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nodes/index.html">节点</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Cameras</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lens">镜头</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#camera">摄像机</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#depth-of-field">景深</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#viewport-display">Viewport Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#safe-areas">Safe Areas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#camera-operations">Camera Operations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="features.html">渲染功能特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="settings/index.html">Cycles Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu_rendering.html">GPU渲染</a></li>
+<li class="toctree-l3"><a class="reference internal" href="baking.html">渲染烘焙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimizations/index.html">Optimizing Renders</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">工作流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../audio/index.html">音频渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="index.html">Cycles渲染引擎</a> &raquo;</li>
+        
+      <li>Cameras</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/render/cycles/camera.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cameras">
+<span id="camera-settings"></span><h1>Cameras<a class="headerlink" href="#cameras" title="Permalink to this headline">¶</a></h1>
+<p>A <em>Camera</em> is an object that provides a means of rendering images from Blender.
+It defines which portion of a scene is visible in the rendered image.
+By default a scene contains one camera. However, a scene can contain more than one camera,
+but only one of them will be used at a time.
+So you will only need to add a new camera if you are making cuts between them.
+See <a class="reference internal" href="../../animation/markers.html#marker-bind-camera"><span class="std std-ref">Animating Cameras</span></a>.</p>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p>Object Mode</p>
+</dd>
+<dt class="field-even">Editor</dt>
+<dd class="field-even"><p><span class="menuselection">Properties ‣  Camera</span></p>
+</dd>
+</dl>
+</div>
+<p>Cameras are invisible in renders, so they do not have any material or texture settings.
+However, they do have <em>Object</em> and <em>Editing</em> setting panels available
+which are displayed when a camera is the selected (active!) object.</p>
+<div class="section" id="lens">
+<span id="camera-lens-type"></span><h2>镜头<a class="headerlink" href="#lens" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">摄像机 ‣ 镜头</span></p>
+</dd>
+</dl>
+</div>
+<p>The camera lens options control the way 3D objects are represented in a 2D image.</p>
+<div class="section" id="type">
+<h3>类型<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="perspective">
+<h4>透视模式<a class="headerlink" href="#perspective" title="Permalink to this headline">¶</a></h4>
+<p>This matches how you view things in the real world.
+Objects in the distance will appear smaller than objects in the foreground,
+and parallel lines (such as the rails on a railroad) will appear to converge as they get farther away.</p>
+<div class="figure align-center" id="id1">
+<img alt="../../_images/render_blender-render_camera_object-data_perspective-perspective-traintracks.jpg" src="../../_images/render_blender-render_camera_object-data_perspective-perspective-traintracks.jpg" />
+<p class="caption"><span class="caption-text">Render of a train track scene with a <em>Perspective</em> camera.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>Focal Length/Field of View</dt><dd><p>The <a class="reference internal" href="../../glossary/index.html#term-focal-length"><span class="xref std std-term">focal length</span></a> controls the amount of zoom, i.e.
+the amount of the scene which is visible all at once.
+Longer focal lengths result in a smaller <abbr title="Field of View">FOV</abbr> (more zoom),
+while short focal lengths allow you to see more of the scene at once
+(larger <abbr title="Field of View">FOV</abbr>, less zoom).</p>
+<dl class="simple">
+<dt>Lens Unit</dt><dd><p>The focal length can be set either in terms of millimeters or the actual <a class="reference internal" href="../../glossary/index.html#term-field-of-view"><span class="xref std std-term">Field of View</span></a> as an angle.</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/render_blender-render_camera_object-data_perspective-perspective-traintracks-telephoto.jpg" src="../../_images/render_blender-render_camera_object-data_perspective-perspective-traintracks-telephoto.jpg" />
+<p class="caption"><span class="caption-text">Render of the same scene as above, but with a focal length of 210mm instead of 35mm.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</dd>
+</dl>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/render_cycles_camera_perspective.svg"><img alt="../../_images/render_cycles_camera_perspective.svg" src="../../_images/render_cycles_camera_perspective.svg" width="340px" /></a>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Dolly Zoom</p>
+<p>While the camera is moving towards an object the <em>Focal Length</em> property can be decreased
+to produce a <em>Dolly Zoom</em> camera effect, or vice versa.</p>
+<p><a class="reference external" href="https://vimeo.com/15837189">This video</a> demos the <em>Dolly Zoom</em> camera effect.</p>
+</div>
+</div>
+<div class="section" id="orthographic">
+<h4>正交模式<a class="headerlink" href="#orthographic" title="Permalink to this headline">¶</a></h4>
+<p>With <em>Orthographic</em> perspective objects always appear at their actual size, regardless of distance.
+This means that parallel lines appear parallel, and do not converge like they do with <em>Perspective</em>.</p>
+<div class="figure align-center" id="id3">
+<img alt="../../_images/render_blender-render_camera_object-data_perspective-orthographic-ortho-example.jpg" src="../../_images/render_blender-render_camera_object-data_perspective-orthographic-ortho-example.jpg" />
+<p class="caption"><span class="caption-text">Render from the same camera angle as the previous examples, but with orthographic perspective.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>Orthographic Scale</dt><dd><p>This controls the apparent size of objects projected on the image.</p>
+<p>Note that this is effectively the only setting which applies to orthographic perspective.
+Since parallel lines do not converge in orthographic mode (no vanishing points),
+the lens shift settings are equivalent to translating the camera in the 3D View.</p>
+</dd>
+</dl>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/render_cycles_camera_orthographic.svg"><img alt="../../_images/render_cycles_camera_orthographic.svg" src="../../_images/render_cycles_camera_orthographic.svg" width="340px" /></a>
+</div>
+</div>
+<div class="section" id="panoramic">
+<span id="cycles-panoramic-camera"></span><h4>全景模式<a class="headerlink" href="#panoramic" title="Permalink to this headline">¶</a></h4>
+<p>Cycles支持方形与鱼眼两种全景类型，需要注意到是，它们都无法在OpenGL渲染时正常显示，只会体现在渲染结果中。</p>
+<div class="section" id="equirectangular">
+<h5>方形<a class="headerlink" href="#equirectangular" title="Permalink to this headline">¶</a></h5>
+<p>Render a panoramic view of the scenes from the camera location and use an equirectangular projection,
+always rendering the full 360° over the X axis and 180° over the Y axis.</p>
+<p>这种投影方法与世界着色器所使用的环境纹理相容，因此可用来渲染环境贴图。若要查看默认映射，需将摄像机物体的旋转设置为(90, 0, -90)，也就是朝向X轴正向。这样便可以让摄像机朝向默认的环境纹理贴图的中央了。</p>
+<dl class="simple">
+<dt>Minimum/Maximum Latitude/Longitude</dt><dd><p>Limits of the vertical and horizontal field of view angles.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="fisheye">
+<h5>鱼眼<a class="headerlink" href="#fisheye" title="Permalink to this headline">¶</a></h5>
+<p>鱼眼镜头属于典型的广角镜头，会产生强烈的扭曲，常用于制作全景图，例如圆顶投影或某些艺术效果等。Fisheye Equisolid（等立体角型鱼眼）镜头可与实现与真实摄像机的最佳匹配效果。它提供了镜头焦距和可视角度的设定，同时会考虑传感器的大小。</p>
+<p>鱼眼镜头属于典型的广角镜头，会产生强烈的扭曲，常用于制作全景图，例如圆顶投影或某些艺术效果等。Fisheye Equisolid（等立体角型鱼眼）镜头可与实现与真实摄像机的最佳匹配效果。它提供了镜头焦距和可视角度的设定，同时会考虑传感器的大小。</p>
+<p>The <em>Fisheye Equidistant</em> lens does not correspond to any real lens model;
+it will give a circular fisheye that does not take any sensor information into account
+but rather uses the whole sensor. This is a good lens for full-dome projections.</p>
+<dl class="simple">
+<dt>镜头</dt><dd><p>镜头的焦距值，单位是毫米。</p>
+</dd>
+<dt>可视角</dt><dd><p>镜头的可视角度值，设定为360或更高的角度值可拍摄到完整的环境。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="mirror-ball">
+<h5>Mirror Ball<a class="headerlink" href="#mirror-ball" title="Permalink to this headline">¶</a></h5>
+<p>Render is if taking a photo of a reflective mirror ball.
+This can be useful in rare cases to compare with a similar photo taken to capture an environment.</p>
+</div>
+</div>
+</div>
+<div class="section" id="shift">
+<h3>Shift<a class="headerlink" href="#shift" title="Permalink to this headline">¶</a></h3>
+<p>The <em>Shift</em> setting allows for the adjustment of <em>vanishing points</em>.
+<em>Vanishing points</em> refer to the positions to which parallel lines converge.
+In this example, the most obvious vanishing point is at the end of the railroad.</p>
+<p>To see how this works, take the following examples:</p>
+<div class="figure align-center" id="id4">
+<img alt="../../_images/render_blender-render_camera_object-data_perspective-perspective-traintracks-lens-shift.jpg" src="../../_images/render_blender-render_camera_object-data_perspective-perspective-traintracks-lens-shift.jpg" />
+<p class="caption"><span class="caption-text">Render of a train track scene with a horizontal lens shift of 0.330.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id5">
+<img alt="../../_images/render_blender-render_camera_object-data_perspective-perspective-traintracks-camera-rotate.jpg" src="../../_images/render_blender-render_camera_object-data_perspective-perspective-traintracks-camera-rotate.jpg" />
+<p class="caption"><span class="caption-text">Render of a train track scene with a rotation of the camera object instead of a lens shift.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Notice how the horizontal lines remain perfectly horizontal when using the lens shift,
+but do get skewed when rotating the camera object.</p>
+<p>Using lens shift is equivalent to rendering an image with a larger
+<abbr title="Field of View">FOV</abbr> and cropping it off-center.</p>
+</div>
+<div class="section" id="clipping">
+<span id="camera-clipping"></span><h3>截断区间<a class="headerlink" href="#clipping" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>截断起始点和截断结束点</dt><dd><p>The interval in which objects are directly visible,
+Any objects outside this range still influence the image indirectly,
+as further light bounces are not clipped.</p>
+</dd>
+</dl>
+<p>For OpenGL display, setting clipping distances to limited values
+is important to ensure sufficient rasterization precision.
+Ray tracing renders do not suffer from this issue so much,
+and as such more extreme values can safely be set.</p>
+<p>When <em>Limits</em> in the <em>Display</em> panel is enabled,
+the clip bounds will be visible as two yellow connected dots on the camera line of sight.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../editors/3dview/properties/panels.html"><span class="doc">3D View clipping</span></a>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="camera">
+<h2>摄像机<a class="headerlink" href="#camera" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id6">
+<img alt="../../_images/render_blender-render_camera_object-data_camera-panel.png" src="../../_images/render_blender-render_camera_object-data_camera-panel.png" />
+<p class="caption"><span class="caption-text">Camera Presets panel.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Camera Presets</dt><dd><p><a class="reference internal" href="../../interface/controls/templates/list_presets.html#ui-presets"><span class="std std-ref">Presets</span></a> to match real cameras.</p>
+</dd>
+</dl>
+<dl class="simple" id="render-camera-sensor-size">
+<dt>Sensor size</dt><dd><p>This setting is an alternative way to control the focal length,
+it is useful to match the camera in Blender to a physical camera &amp; lens combination,
+e.g. for <a class="reference internal" href="../../editors/movie_clip_editor/index.html"><span class="doc">motion tracking</span></a>.</p>
+</dd>
+<dt>Sensor Fit</dt><dd><p>Option to control which dimension (vertical or horizontal) along which field of view angle fits.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="depth-of-field">
+<h2>景深<a class="headerlink" href="#depth-of-field" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">Camera ‣ Depth of Field</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-center">
+<img alt="../../_images/render_cycles_camera_depth-of-field-panel.png" src="../../_images/render_cycles_camera_depth-of-field-panel.png" />
+</div>
+<p>Real-world cameras transmit light through a lens that bends and focuses it onto the sensor.
+Because of this, objects that are a certain distance away are in focus,
+but objects in front and behind that are blurred.</p>
+<p>The area in focus is called the <em>focal point</em> and can be set using either an exact value,
+or by using the distance between the camera and a chosen object:</p>
+<div class="section" id="aperature">
+<h3>Aperature<a class="headerlink" href="#aperature" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>Focus Object</dt><dd><p>Choose an object which will determine the focal point. Linking an object will deactivate the distance parameter.
+Typically this is used to give precise control over the position of the focal point,
+and also allows it to be animated or constrained to another object.</p>
+</dd>
+<dt>Distance</dt><dd><p>Sets the distance to the focal point when no <em>Focus Object</em> is specified.
+If <em>Limits</em> are enabled, a yellow cross is shown on the camera line of sight at this distance.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Hover the mouse over the <em>Distance</em> property and press <kbd class="kbd docutils literal notranslate">E</kbd> to use a special <em>Depth Picker</em>.
+Then click on a point in the 3D View to sample the distance from that point to the camera.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="viewport">
+<h3>Viewport<a class="headerlink" href="#viewport" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>High Quality</dt><dd><p>Enables the High Quality <em>viewport</em> depth of field, giving a more accurate
+representation of <em>depth of field</em>. This allows the viewport depth of field
+to be closely represented to that of the render and render preview depth of field.</p>
+</dd>
+<dt>F-Stop</dt><dd><p>Viewport depth of field aperture measured in F-Stops. Smaller numbers will
+cause more blur in the viewport, OpenGL renders, and Sequencer.</p>
+</dd>
+<dt>Blades</dt><dd><p>The number of polygonal sides to give blurred objects in the viewport.
+The minimum number of blades needed to enable the bokeh effect is 3 (triangle).
+(Only available with High Quality).</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="aperture">
+<h3>Aperture<a class="headerlink" href="#aperture" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Aperture type</dt><dd><p>Use F-Stop or Radius to set the aperture for the render, and render preview.
+F-Stop is the focal ratio, where Radius is the radius of the focal point.</p>
+</dd>
+<dt>Size/Number</dt><dd><p>Aperture radius <em>size</em>, or F-Stop <em>number</em> used for the render, and render preview.
+Using the F-Stop with a low number, or Radius with a large size will result in a strong blur,
+also allowing the use of the <em>bokeh effect</em>.</p>
+</dd>
+<dt>Blades</dt><dd><p>Total number of polygonal blades used to alter the shape of the blurred objects
+in the render, and render preview. As with the viewport, the minimum amount of
+blades to enable the bokeh effect is 3, resulting in a triangular-shaped blur.</p>
+</dd>
+<dt>Rotation</dt><dd><p>Rotate the polygonal blades along the facing axis, and will rotate in a clockwise,
+and counter-clockwise fashion.</p>
+</dd>
+<dt>Ratio</dt><dd><p>Change the amount of distortion to simulate the anamorphic bokeh effect.
+A setting of 1.0 shows no distortion, where a number below 1.0 will cause a horizontal distortion,
+and a higher number will cause a vertical distortion.</p>
+</dd>
+</dl>
+<div class="figure align-center">
+<img alt="../../_images/render_cycles_camera_dof-bokeh.jpg" src="../../_images/render_cycles_camera_dof-bokeh.jpg" />
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Switching between Cameras</p>
+<p>By <a class="reference internal" href="../../animation/markers.html#marker-bind-camera"><span class="std std-ref">binding the camera to markers</span></a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="viewport-display">
+<h2>Viewport Display<a class="headerlink" href="#viewport-display" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id7">
+<img alt="../../_images/render_blender-render_camera_object-data_display-panel.png" src="../../_images/render_blender-render_camera_object-data_display-panel.png" />
+<p class="caption"><span class="caption-text">Camera Display panel.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Limits</dt><dd><p>Shows a line which indicates <em>Start</em> and <em>End Clipping</em> values.</p>
+</dd>
+<dt>Mist</dt><dd><p>Toggles viewing of the mist limits on and off.
+The limits are shown as two connected white dots on the camera line of sight.
+The mist limits and other options are set in the <em>World</em> panel,
+in the <a class="reference internal" href="world.html#render-cycles-integrator-world-mist"><span class="std std-ref">Mist section</span></a>.</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id8">
+<img alt="../../_images/render_blender-render_camera_object-data_display-view.png" src="../../_images/render_blender-render_camera_object-data_display-view.png" />
+<p class="caption"><span class="caption-text">Camera view displaying safe areas, sensor and name.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>Sensor</dt><dd><p>Displays a dotted frame in camera view.</p>
+</dd>
+<dt>Name</dt><dd><p>Toggle name display on and off in camera view.</p>
+</dd>
+<dt>Size</dt><dd><p>Size of the camera visualization in the 3D View. This setting has <strong>no</strong> effect on the render output of a camera.
+The camera visualization can also be scaled using the standard Scale <kbd class="kbd docutils literal notranslate">S</kbd> transform key.</p>
+</dd>
+<dt>Passepartout</dt><dd><p>This option darkens the area outside of the camera's field of view.</p>
+<dl class="simple">
+<dt>Alpha</dt><dd><p>Controls the transparency of the passepartout mask.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="composition-guides">
+<h3>Composition Guides<a class="headerlink" href="#composition-guides" title="Permalink to this headline">¶</a></h3>
+<p><em>Composition Guides</em> are available from the menu, which can help when framing a shot.
+There are eight types of guides available:</p>
+<dl class="simple">
+<dt>Center</dt><dd><p>Adds lines dividing the frame in half vertically and horizontally.</p>
+</dd>
+<dt>Center Diagonal</dt><dd><p>Adds lines connecting opposite corners.</p>
+</dd>
+<dt>Thirds</dt><dd><p>Adds lines dividing the frame in thirds vertically and horizontally.</p>
+</dd>
+<dt>Golden</dt><dd><p>Divides the width and height into Golden proportions (about 0.618 of the size from all sides of the frame).</p>
+</dd>
+<dt>Golden Triangle A</dt><dd><p>Draws a diagonal line from the lower left to upper right corners,
+then adds perpendicular lines that pass through the top left and bottom right corners.</p>
+</dd>
+<dt>Golden Triangle B</dt><dd><p>Same as A, but with the opposite corners.</p>
+</dd>
+<dt>Harmonious Triangle A</dt><dd><p>Draws a diagonal line from the lower left to upper right corners,
+then lines from the top left and bottom right corners to 0.618 the lengths of the opposite side.</p>
+</dd>
+<dt>Harmonious Triangle B</dt><dd><p>Same as A, but with the opposite corners.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="safe-areas">
+<span id="camera-safe-areas"></span><span id="bpy-ops-safe-areas"></span><span id="bpy-types-displaysafeareas"></span><h2>Safe Areas<a class="headerlink" href="#safe-areas" title="Permalink to this headline">¶</a></h2>
+<p>Safe areas are guides used to position elements to ensure that the most important
+parts of the content can be seen across all screens.</p>
+<p>Different screens have varying amounts of <a class="reference internal" href="../../glossary/index.html#term-overscan"><span class="xref std std-term">overscan</span></a> (especially older TV sets).
+That means that not all content will be visible to all viewers,
+since parts of the image surrounding the edges are not shown.
+To work around this problem TV producers defined two areas where content is guaranteed to be shown:
+action safe and title safe.</p>
+<p>Modern LCD/plasma screens with purely digital signals have no <a class="reference internal" href="../../glossary/index.html#term-overscan"><span class="xref std std-term">overscan</span></a>,
+yet safe areas are still considered best practice and may be legally required for broadcast.</p>
+<p>In Blender, safe areas can be set from the Camera and Sequencer views.</p>
+<div class="figure align-center" id="id9">
+<img alt="../../_images/render_blender-render_camera_object-data_safe-areas-panel.png" src="../../_images/render_blender-render_camera_object-data_safe-areas-panel.png" />
+<p class="caption"><span class="caption-text">The Safe areas panel found in the camera properties,
+and the view mode of the Sequencer.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>The Safe Areas can be customized by their outer margin,
+which is a percentage scale of the area between the center and the render size.
+Values are shared between the Video Sequence editor and camera view.</p>
+<div class="section" id="main-safe-areas">
+<h3>Main Safe Areas<a class="headerlink" href="#main-safe-areas" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id10">
+<img alt="../../_images/render_blender-render_camera_object-data_safe-areas-main.png" src="../../_images/render_blender-render_camera_object-data_safe-areas-main.png" />
+<p class="caption"><span class="caption-text">Red line: Action safe. Green line: Title safe.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Title Safe</dt><dd><p>Also known as <em>Graphics Safe</em>.
+Place all important information (graphics or text) inside this area to
+ensure it can be seen by the majority of viewers.</p>
+</dd>
+<dt>Action Safe</dt><dd><p>Make sure any significant action or characters in the shot are inside this area.
+This zone also doubles as a sort of &quot;margin&quot; for the screen which can be used
+to keep elements from piling up against the edges.</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Legal Standards</p>
+<p>Each country sets a legal standard for broadcasting.
+These include, among other things, specific values for safe areas.
+Blender defaults for safe areas follow the EBU (European Union) standard.
+Make sure you are using the correct values when working for broadcast to avoid any trouble.</p>
+</div>
+</div>
+<div class="section" id="center-cuts">
+<h3>Center-Cuts<a class="headerlink" href="#center-cuts" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id11">
+<img alt="../../_images/render_blender-render_camera_object-data_safe-areas-cuts.png" src="../../_images/render_blender-render_camera_object-data_safe-areas-cuts.png" />
+<p class="caption"><span class="caption-text">Cyan line: action center safe. Blue line: title center safe.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<p>Center-cuts are a second set of safe areas to ensure content
+is seen correctly on screens with a different aspect ratio.
+Old TV sets receiving <code class="docutils literal notranslate"><span class="pre">16:9</span></code> or <code class="docutils literal notranslate"><span class="pre">21:9</span></code> video will cut off the sides.
+Position content inside the center-cut areas to make sure the most important elements
+of your composition can still be visible in these screens.</p>
+<p>Blender defaults show a <code class="docutils literal notranslate"><span class="pre">4:3</span></code> (square) ratio inside <code class="docutils literal notranslate"><span class="pre">16:9</span></code> (wide-screen).</p>
+</div>
+</div>
+<div class="section" id="camera-operations">
+<h2>Camera Operations<a class="headerlink" href="#camera-operations" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>todo 2.8: move this to somewhere better</p>
+</div>
+<div class="section" id="changing-the-active-camera">
+<h3>Changing the Active Camera<a class="headerlink" href="#changing-the-active-camera" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p>Object Mode</p>
+</dd>
+<dt class="field-even">Hotkey</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Ctrl-Numpad0</kbd></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-center" id="id12">
+<img alt="../../_images/render_blender-render_camera_introduction_cameras.png" src="../../_images/render_blender-render_camera_introduction_cameras.png" />
+<p class="caption"><span class="caption-text">Active camera (left one).</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<p>The <em>active</em> camera is the camera that is currently being used for rendering and camera view
+<kbd class="kbd docutils literal notranslate">Numpad0</kbd>.</p>
+<p>Select the camera you would like to make active and press <kbd class="kbd docutils literal notranslate">Ctrl-Numpad0</kbd>
+(by doing so, you also switch the view to camera view). In order to render,
+each scene <strong>must</strong> have an active camera.</p>
+<p>The active camera can also be set in the <em>Scene</em> tab of the <em>Properties Editor</em>.</p>
+<p>The camera with the solid triangle on top is the active camera.
+Limit and mist indicators of cameras are drawn darker if the camera is not the active camera for the current scene.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The active camera, as well as the layers, can be specific to a given view,
+or global (locked) to the whole scene.
+See <a class="reference internal" href="../../editors/3dview/properties/panels.html"><span class="doc">Local Camera</span></a>.</p>
+</div>
+</div>
+<div class="section" id="render-border">
+<h3>Render Border<a class="headerlink" href="#render-border" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p>All modes</p>
+</dd>
+<dt class="field-even">Menu</dt>
+<dd class="field-even"><p><span class="menuselection">View ‣ Render Border</span></p>
+</dd>
+<dt class="field-odd">Hotkey</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Ctrl-B</kbd></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-right" id="id13">
+<img alt="../../_images/render_blender-render_camera_introduction_border.png" src="../../_images/render_blender-render_camera_introduction_border.png" />
+<p class="caption"><span class="caption-text">Render Border toggle.</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<p>While in camera view, you can define a subregion to render by drawing out a rectangle within the camera's frame.
+Your renders will now be limited to the part of scene visible within the render border.
+This can be very useful for reducing render times for quick previews on an area of interest.</p>
+<p>The border can be disabled by disabling the <em>Border</em> option in the <em>Dimensions</em> panel
+in the <em>Render</em> tab or by activating the option again.</p>
+<div class="lead docutils container">
+</div>
+<table class="colwidths-given docutils align-center" id="id14">
+<caption><span class="caption-text">Render border and associated render.</span><a class="headerlink" href="#id14" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 60%" />
+<col style="width: 40%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center">
+<img alt="../../_images/render_blender-render_camera_introduction_render-border-1.png" src="../../_images/render_blender-render_camera_introduction_render-border-1.png" />
+</div>
+</td>
+<td><div class="figure align-center">
+<img alt="../../_images/render_blender-render_camera_introduction_render-border-2.png" src="../../_images/render_blender-render_camera_introduction_render-border-2.png" />
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="features.html" class="btn btn-neutral float-right" title="渲染功能特性" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="nodes/types/groups.html" class="btn btn-neutral float-left" title="节点组" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

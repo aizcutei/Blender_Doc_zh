@@ -1,0 +1,533 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>物体数据 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/curves/properties/data.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="几何" href="geometry.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">曲线</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editing/index.html">编辑</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">属性</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">物体数据</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geometry.html">几何</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../curve_display.html">曲线显示</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../index.html">曲线</a> &raquo;</li>
+        
+          <li><a href="index.html">属性</a> &raquo;</li>
+        
+      <li>物体数据</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/modeling/curves/properties/data.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="object-data">
+<h1>物体数据<a class="headerlink" href="#object-data" title="Permalink to this headline">¶</a></h1>
+<p>可以在 <em>属性标题栏</em> 中的 <em>物体数据</em> 选项卡中设置曲线属性 (下图蓝色部分)。</p>
+<div class="figure align-center" id="id1">
+<img alt="../../../_images/modeling_curves_properties_data_header.png" src="../../../_images/modeling_curves_properties_data_header.png" />
+<p class="caption"><span class="caption-text">属性编辑器标题栏。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="shape">
+<h2>形状<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id2">
+<img alt="../../../_images/modeling_curves_properties_data_curves-shape-panel.png" src="../../../_images/modeling_curves_properties_data_curves-shape-panel.png" />
+<p class="caption"><span class="caption-text">曲线形状面板。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>维度</dt><dd><p>新添加的曲线默认维度为3D，这意味着其控制点可置于三维空间中的任意位置。还可以设置曲线为2D，这会将曲线的控制点钳制在其自身x-y轴平面上。</p>
+<p>2D，3D</p>
+</dd>
+<dt>分辨率</dt><dd><p><em>分辨率</em> 属性定义了每对控制点之间参与运算的点的数量。可以通过增减分辨率来提高或降低曲线的平滑度。<em>U向预览</em> 设置项决定3D视图模式中的分辨率，而 <em>U向渲染</em> 设置项则决定了曲线的渲染分辨率。如果 <em>U向渲染</em> 设成0，那么3D视图和渲染均会使用 <em>U向预览</em> 分辨率。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_data_shape-resolution-3.png"><img alt="../../../_images/modeling_curves_properties_data_shape-resolution-3.png" src="../../../_images/modeling_curves_properties_data_shape-resolution-3.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">分辨率为3的曲线。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_data_shape-resolution-12.png"><img alt="../../../_images/modeling_curves_properties_data_shape-resolution-12.png" src="../../../_images/modeling_curves_properties_data_shape-resolution-12.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">分辨率为12的曲线。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>扭曲</dt><dd><p>3D曲线的控制点可以不位于自身XY平面上。这样可以赋予曲线一个扭曲，来影响曲线的法向。可从菜单中选择曲线扭曲的计算方式为 <em>最小值，切向</em> 和 <em>Z向上</em>。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_data_shape-resolution-12.png"><img alt="../../../_images/modeling_curves_properties_data_shape-resolution-12.png" src="../../../_images/modeling_curves_properties_data_shape-resolution-12.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">最小扭曲的曲线。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_data_shape-twisting.png"><img alt="../../../_images/modeling_curves_properties_data_shape-twisting.png" src="../../../_images/modeling_curves_properties_data_shape-twisting.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">切向扭曲的曲线。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>填充</dt><dd><p>填充决定曲线在倒角时的显示方式(详情参见下文倒角)。当设置为 <em>一半</em> (默认)时，曲线显示为半边柱体。</p>
+<dl class="simple">
+<dt>填充形变结果</dt><dd><p>在应用了所有可能导致曲线变形的修改之后填充曲线(即形态键和修改器)。</p>
+</dd>
+</dl>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_data_shape-fill-half.png"><img alt="../../../_images/modeling_curves_properties_data_shape-fill-half.png" src="../../../_images/modeling_curves_properties_data_shape-fill-half.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">填充一半的曲线。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_data_shape-fill-full.png"><img alt="../../../_images/modeling_curves_properties_data_shape-fill-full.png" src="../../../_images/modeling_curves_properties_data_shape-fill-full.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">填充全部的曲线。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl id="curve-shape-path-curve-deform">
+<dt>路径/曲线形变</dt><dd><p>这几个选项主要用于使用曲线作为路径或使用 <a class="reference internal" href="../../modifiers/deform/curve.html"><span class="doc">曲线函数修改器</span></a> 时，用于控制物体如何使用曲线。</p>
+<dl class="simple">
+<dt>半径</dt><dd><p>按照设定的曲线半径来缩放形变物体。</p>
+</dd>
+<dt>拉伸</dt><dd><p><em>拉伸</em> 曲线选项用于使网格物体沿整个曲线上拉伸，或压缩。要获得预期的结果，需要与 <em>边界钳制</em> 一起使用。</p>
+</dd>
+<dt>边界钳制</dt><dd><p>启用该选项后，沿着形变轴向的物体与网格偏移将被忽略，可以搭配 <em>拉伸</em> 选项或者负轴向一起使用。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="path-animation">
+<span id="curve-path-animation"></span><h2>路径动画<a class="headerlink" href="#path-animation" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id9">
+<img alt="../../../_images/modeling_curves_properties_data_path-animation-panel.png" src="../../../_images/modeling_curves_properties_data_path-animation-panel.png" />
+<p class="caption"><span class="caption-text">路径动画面板。</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p><em>路径动画</em> 设置用于确定子物体沿着特定路径的移动方式。</p>
+<dl class="simple">
+<dt>帧数量</dt><dd><p>遍历整条路径所需的帧数量, 定义 <em>估算时刻</em> 设置的最大值。</p>
+</dd>
+<dt>估算时刻</dt><dd><p>物体沿曲线长度'跟随'所在的参数化位置(通过与'路径长度'值相除估算得出位置)。该值默认与全局帧数关联，但可以通过设置关键帧来更好地控制路径动画。</p>
+</dd>
+<dt>跟随</dt><dd><p>使曲线路径的子物体沿路径的弯曲旋转。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>已废弃，但仍可使用。 <a class="reference internal" href="../../../rigging/constraints/relationship/follow_path.html"><span class="doc">跟随路径约束</span></a> 是更加面向未来的方法。</p>
+</div>
+<div class="section" id="example">
+<h3>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>这个例子向你展示如何设置 <em>路径动画</em>.</p>
+<ol class="arabic simple">
+<li><p>添加一个想让它动起来的物体和一个沿着这个物体要运动的方向的路径. 在这个例子里是 <em>猴头</em> 和 <em>贝塞尔曲线</em>.</p></li>
+<li><p>要关联猴头和贝塞尔曲线, 首先选择猴头然后选择曲线(这样曲线是活动物体),按下 <kbd class="kbd docutils literal notranslate">Ctrl-P</kbd> 并选择 <em>跟随路径</em>. 这会自动播放 <em>解算时间</em> 并激活 <em>路径动画</em> 面板中的 <em>跟随</em> 选项.</p></li>
+<li><p>选择猴头并用 <kbd class="kbd docutils literal notranslate">Alt-O</kbd> <em>原点归零</em> 来重置它的偏移.</p></li>
+<li><p>你可以通过(在选中猴头时)改变 <em>附加关联项</em> 下面的 <em>跟踪坐标轴</em> 来改变猴头的坐标系。</p></li>
+</ol>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id10">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_data_path-animation-example-1.png"><img alt="../../../_images/modeling_curves_properties_data_path-animation-example-1.png" src="../../../_images/modeling_curves_properties_data_path-animation-example-1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">猴头会成为贝塞尔曲线的父级.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_data_path-animation-example-2.png"><img alt="../../../_images/modeling_curves_properties_data_path-animation-example-2.png" src="../../../_images/modeling_curves_properties_data_path-animation-example-2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">最终结果.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="active-spline">
+<h2>活动样条线<a class="headerlink" href="#active-spline" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id12">
+<img alt="../../../_images/modeling_curves_properties_data_active-spline-panel-curves.png" src="../../../_images/modeling_curves_properties_data_active-spline-panel-curves.png" />
+<p class="caption"><span class="caption-text">曲线活动样条线面板。</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<p><em>活动样条线</em> 面板在 <em>编辑模式</em> 下可用。</p>
+<dl class="simple">
+<dt>循环</dt><dd><p>闭合曲线。</p>
+</dd>
+<dt>分辨率</dt><dd><p>通过改变细分数来控制每段的平滑度。</p>
+</dd>
+<dt>插值类型</dt><dd><dl class="simple">
+<dt>倾斜</dt><dd><p>改变线段倾斜的计算方式。</p>
+</dd>
+<dt>半径</dt><dd><p>改变倒角曲线半径的计算方式。使用 <kbd class="kbd docutils literal notranslate">Alt-S</kbd> 法向缩放控制点后更容易观察效果。</p>
+</dd>
+<dt>平滑</dt><dd><p>平滑曲线的法向。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="nurbs-curves">
+<h3>NURBS 曲线<a class="headerlink" href="#nurbs-curves" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id13">
+<img alt="../../../_images/modeling_curves_properties_data_active-spline-panel-nurbs.png" src="../../../_images/modeling_curves_properties_data_active-spline-panel-nurbs.png" />
+<p class="caption"><span class="caption-text">NURBS曲线活动样条线面板。</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<dl id="modeling-curve-knot">
+<dt>结</dt><dd><p>NURBS对象的特征之一是 <em>结矢</em>。这是一组数字序列，用于确定控制点对曲线的影响。但你无法直接编辑结矢量，可以通过活动样条线面板的 <em>端点</em> 和 <em>贝塞尔</em> 选项来施以影响。注意，<em>端点</em> 和 <em>贝塞尔</em> 设置仅适用于开放的NURBS曲线。</p>
+<dl>
+<dt>循环</dt><dd><p>闭合NURBS曲线。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id14">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_data_nurbs-default.png"><img alt="../../../_images/modeling_curves_properties_data_nurbs-default.png" src="../../../_images/modeling_curves_properties_data_nurbs-default.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">默认的NURBS曲线。</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id15">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_data_nurbs-cyclic.png"><img alt="../../../_images/modeling_curves_properties_data_nurbs-cyclic.png" src="../../../_images/modeling_curves_properties_data_nurbs-cyclic.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">应用循环的NURBS曲线。</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>贝塞尔</dt><dd><p>使NURBS曲线成环的方法和贝塞尔曲线一样。NURBS 控制点的行为会像贝塞尔曲线的 <em>自由</em> 控制柄那样. 取决于 <em>次序</em> , 一段曲线上的3或4个控制点. 环和终点必须是禁用的,来让这个选项工作.</p>
+</dd>
+<dt>端点</dt><dd><p>使曲线经过两端控制点，使该选项生效必须先禁用循环。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id16">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_data_nurbs-default.png"><img alt="../../../_images/modeling_curves_properties_data_nurbs-default.png" src="../../../_images/modeling_curves_properties_data_nurbs-default.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">默认的NURBS曲线。</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id17">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_data_nurbs-endpoint.png"><img alt="../../../_images/modeling_curves_properties_data_nurbs-endpoint.png" src="../../../_images/modeling_curves_properties_data_nurbs-endpoint.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">启用端点的NURBS曲线。</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl id="modeling-curve-order">
+<dt>阶数</dt><dd><p>NURBS曲线的阶数决定了控制点在曲线上的影响域。阶数越高意味着单个控制点在曲线上影响的相对比例更大。<em>阶数</em> 值的有效范围是2-6，取决于曲线上存在的控制点的数量。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id18">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_data_nurbs-default.png"><img alt="../../../_images/modeling_curves_properties_data_nurbs-default.png" src="../../../_images/modeling_curves_properties_data_nurbs-default.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">4阶NURBS曲线。</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id19">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_data_nurbs-order.png"><img alt="../../../_images/modeling_curves_properties_data_nurbs-order.png" src="../../../_images/modeling_curves_properties_data_nurbs-order.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">2阶NURBS曲线。</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="geometry.html" class="btn btn-neutral float-right" title="几何" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,397 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>镜像 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/transform/mirror.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="法向缩放" href="shrink-fatten.html" />
+    <link rel="prev" title="变形" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">选择</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/index.html">基础</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vertices.html">顶点工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../edges.html">边工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../faces.html">面工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../normals.html">法向</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">变形</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../duplicating/index.html">复制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">细分</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cleanup.html">清理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../misc.html">其他编辑工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_transfer.html">数据传递</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mesh_options.html">网格选项</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_display.html">网格显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../../index.html">网格</a> &raquo;</li>
+        
+          <li><a href="../index.html">编辑</a> &raquo;</li>
+        
+          <li><a href="index.html">变形</a> &raquo;</li>
+        
+      <li>镜像</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/modeling/meshes/editing/transform/mirror.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mirror">
+<h1>镜像<a class="headerlink" href="#mirror" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 镜像 ‣ 选定轴向</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Ctrl-M</kbd></p>
+</dd>
+</dl>
+</div>
+<p>镜像工具沿选定轴向镜像选中元素。</p>
+<p><em>编辑模式</em> 下的镜像工具与 <a class="reference internal" href="../../../../editors/3dview/object/editing/transform/mirror.html"><span class="doc">物体模式下的镜像</span></a> 类似，效果其实与沿选定轴心点和轴向，对顶点、边或面使用-1比例的缩放等同，不过这更加快捷/方便。</p>
+<p>激活该工具后，通过输入 <kbd class="kbd docutils literal notranslate">X</kbd>, <kbd class="kbd docutils literal notranslate">Y</kbd>, 或 <kbd class="kbd docutils literal notranslate">Z</kbd> 选择镜像轴。</p>
+<p>还可以在激活工具后，按住 <kbd class="kbd docutils literal notranslate">MMB</kbd> 并拖动来交互式选择镜像方向。</p>
+<div class="section" id="axis-of-symmetry">
+<h2>对称轴<a class="headerlink" href="#axis-of-symmetry" title="Permalink to this headline">¶</a></h2>
+<p>可以指定镜像轴为坐标系的三个轴向之一。</p>
+<p>如你所见，该操作是无限的和完全自由的：可以将轴心点至于任意位置作为镜像中心点，选择变换坐标系与镜像轴。</p>
+</div>
+<div class="section" id="pivot-point">
+<h2>轴心点<a class="headerlink" href="#pivot-point" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../../../../editors/3dview/object/editing/transform/control/pivot_point/index.html"><span class="doc">轴心点</span></a> 需要预先设置，它将成为对称中心。开启3D操纵件可以直接显示出轴心点的位置。</p>
+<p>在图像 <a class="reference internal" href="#fig-mesh-deform-mirror-center"><span class="std std-ref">沿各自的圆心镜像。</span></a> 中， <em>编辑模式</em> 下选中顶点的轴心点默认为其质心点。这是 <a class="reference internal" href="../../../../editors/3dview/object/editing/transform/control/pivot_point/index.html"><span class="doc">轴心点页面</span></a> 提及的 <em>编辑模式</em> 下的特殊情形之一。</p>
+<span id="fig-mesh-deform-mirror-center"></span><table class="docutils align-center" id="id1">
+<caption><span class="caption-text">沿各自的圆心镜像。</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_mirror_cursor-before.png"><img alt="../../../../_images/modeling_meshes_editing_transform_mirror_cursor-before.png" src="../../../../_images/modeling_meshes_editing_transform_mirror_cursor-before.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">镜像前的网格。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_mirror_individual-after.png"><img alt="../../../../_images/modeling_meshes_editing_transform_mirror_individual-after.png" src="../../../../_images/modeling_meshes_editing_transform_mirror_individual-after.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">沿X轴镜像后的网格。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>在图像 <a class="reference internal" href="#fig-mesh-deform-mirror-cursor"><span class="std std-ref">沿3D游标镜像。</span></a> 中，轴心点为 <em>3D游标</em>，坐标系为 <em>自身</em>，变化轴向为X。</p>
+<span id="fig-mesh-deform-mirror-cursor"></span><table class="docutils align-center" id="d">
+<caption><span class="caption-text">沿3D游标镜像。</span><a class="headerlink" href="#d" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_mirror_cursor-before.png"><img alt="../../../../_images/modeling_meshes_editing_transform_mirror_cursor-before.png" src="../../../../_images/modeling_meshes_editing_transform_mirror_cursor-before.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">镜像前的网格。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_mirror_cursor-after.png"><img alt="../../../../_images/modeling_meshes_editing_transform_mirror_cursor-after.png" src="../../../../_images/modeling_meshes_editing_transform_mirror_cursor-after.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">3D游标作为轴心点，沿X轴镜像后的网格。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="transformation-orientations">
+<h2>变换坐标系<a class="headerlink" href="#transformation-orientations" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../../../../editors/3dview/object/editing/transform/control/orientations.html"><span class="doc">变换坐标系</span></a> 位于标题栏 <em>操纵件</em> 右侧。它决定了镜像时使用的坐标系。</p>
+</div>
+<div class="section" id="mirror-vertex-group">
+<h2>镜像顶点组<a class="headerlink" href="#mirror-vertex-group" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 镜像 ‣ 镜像顶点组</span></p>
+</dd>
+</dl>
+</div>
+<p>该工具仅适用于(沿自身X轴)完美对称的网格。对那些在另一侧没有对应对称顶点的顶点不起作用。</p>
+<dl class="simple">
+<dt>镜像权重</dt><dd><p>勾选该选项，每个选中顶点的会获得其对称元素的组/权重信息。如果对称的两个顶点都被选中，将交换其组/权重信息；如果仅选中其一，未被选中顶点的信息将被复制到选中顶点，选中顶点失去其原有信息。</p>
+</dd>
+<dt>翻转组名称</dt><dd><p>用于使用“对称名称”(名称中包含 &quot;L&quot;, &quot;R&quot;, &quot;right&quot;, &quot;left&quot;)的顶点组中的顶点。所有属于活动组的，或属于活动组对称元素的选中顶点，其所在的组将替换为其对称元素所在组；不过其权重将保留。</p>
+</dd>
+<dt>全部组</dt><dd><p>如果勾选 <em>全部组</em>，所有改组的赋值信息将被替换为其对称元素，同样保留旧的权重。</p>
+</dd>
+<dt>拓扑镜像</dt><dd><p>对非完全对称的网格进行镜像。更多信息见 <a class="reference internal" href="../mesh_options.html#modeling-meshes-editing-topology-mirror"><span class="std std-ref">此页</span></a>。</p>
+</dd>
+</dl>
+<p>虽然可以同时勾选两个选项(<em>镜像权重</em>， <em>翻转组名称</em>)，但如果你清楚自己的需要的话，通常仅需执行其中一个操作。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="shrink-fatten.html" class="btn btn-neutral float-right" title="法向缩放" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="变形" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

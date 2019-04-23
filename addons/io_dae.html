@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Collada &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/io_dae.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Autodesk FBX" href="io_fbx.html" />
+    <link rel="prev" title="Biovision层次结构" href="io_bvh.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#import-export">导入 / 导出</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="io_3ds.html">Autodesk 3DS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_bvh.html">Biovision层次结构</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Collada</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compatibility">Compatibility</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="io_fbx.html">Autodesk FBX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_gltf2.html">glTF 2.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_obj.html">OBJ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_ply.html">PLY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_stl.html">STL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_svg.html">SVG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_uv_layout.html">UV 布局</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_web3d.html">Web3D</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">插件</a> &raquo;</li>
+        
+      <li>Collada</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/addons/io_dae.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="collada">
+<h1>Collada<a class="headerlink" href="#collada" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Name</dt>
+<dd class="field-odd"><p>Collada format</p>
+</dd>
+<dt class="field-even">Location</dt>
+<dd class="field-even"><p><span class="menuselection">File ‣ Import/Export ‣ Collada (.dae)</span></p>
+</dd>
+<dt class="field-odd">Version</dt>
+<dd class="field-odd"><p>OpenCollada 1.6.68</p>
+</dd>
+<dt class="field-even">Blender</dt>
+<dd class="field-even"><p>2.80</p>
+</dd>
+<dt class="field-odd">Category</dt>
+<dd class="field-odd"><p>Import-Export</p>
+</dd>
+<dt class="field-even">Authors</dt>
+<dd class="field-even"><p>Gaia Clary</p>
+</dd>
+</dl>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>This format is mainly use for interchanging character animations between applications
+and is supported by applications such as Cinema4D, Maya, Autodesk 3ds Max, Wings3D and
+engines such as Unity3D, Unreal Engine 3/UDK and Unreal Engine 4.</p>
+<p>The exporter can bake mesh modifiers and animation into the Collada export
+so the final result looks the same as in Blender.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This module is still in development.</p>
+</div>
+</div>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="import">
+<h3>Import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="main">
+<h4>Main<a class="headerlink" href="#main" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>Import Units</dt><dd><p>Use unit information from the Asset node in the Collada file. Use Blender units if not enabled.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="armatures">
+<h4>Armatures<a class="headerlink" href="#armatures" title="Permalink to this headline">¶</a></h4>
+<dl>
+<dt>Fix Leaf Bones</dt><dd><p>Try to find a reasonable location for the bone tails of leaf nodes.</p>
+</dd>
+<dt>Find Bone Chains</dt><dd><p>Find best matching bone chains and make sure that children are connected to their parent.</p>
+</dd>
+<dt>Auto Connect</dt><dd><p>Connect bones to their parent if they are the only child of their parent.</p>
+</dd>
+<dt>Minimum Chain Length</dt><dd><p>Minimum number of bones in a parent/child hierarchy needed to identify it as a chain.
+Used for auto connect and to find bone chains.</p>
+</dd>
+<dt>Keep Bind Info</dt><dd><p>Add two custom properties to each bone containing:</p>
+<ul class="simple">
+<li><p>rest_mat: An array of 16 values representing the rest-pose matrix at time of import.</p></li>
+<li><p>bind_mat: An array of 16 values representing the bind-pose matrix at time of import.</p></li>
+</ul>
+<p>Note that, the <code class="docutils literal notranslate"><span class="pre">bind_mat</span></code> is identical to the <code class="docutils literal notranslate"><span class="pre">rest_mat</span></code> if the armature is imported with its rest pose.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="export">
+<h3>Export<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4>Main<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>Selection Only</dt><dd><p>Only export the selected objects. Otherwise export all objects in the scene.</p>
+</dd>
+<dt>Include Children</dt><dd><p>Include children of selected objects even if not selected.</p>
+</dd>
+<dt>Include Armatures</dt><dd><p>Include armatures for rigged objects even if the armature is not selected.</p>
+</dd>
+<dt>Include Shape Keys</dt><dd><p>Export shape key data (caution, this creates very large output files if many shape keys are defined).</p>
+</dd>
+<dt>Only Selected UV Map</dt><dd><p>Export the active UV map when enabled, otherwise export all UV maps.</p>
+</dd>
+<dt>Copy</dt><dd><p>Copy textures to same folder where the dae-file is exported to, otherwise create links to the image files.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="geometry">
+<h4>Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>Apply Modifiers</dt><dd><p>When enabled, the mesh will be from the output of the modifiers applied to the mesh.</p>
+</dd>
+<dt>Triangulate</dt><dd><p>Triangulate meshes before exporting (use this option when the target engine supports only tris).</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="armature">
+<h4>Armature<a class="headerlink" href="#armature" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>Deform Bones Only</dt><dd><p>Restrict armature to its deform bones.</p>
+</dd>
+<dt>Export to SL/OpenSim</dt><dd><p>Prepare the rig for the <abbr title="Second Life">SL</abbr> target engine (to be specified).</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="animation">
+<h4>Animation<a class="headerlink" href="#animation" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>Include Animations</dt><dd><p>Export Animation data.</p>
+</dd>
+<dt>Export Format</dt><dd><ul class="simple">
+<li><p>Samples: Create sample frames with the specified <em>Sample Rate</em> (see below).</p></li>
+<li><p>Curves: Keep animation curves intact (experimental, does not work with <em>Shear</em>).</p></li>
+</ul>
+</dd>
+<dt>Transformation Type</dt><dd><ul class="simple">
+<li><p>Matrix: Export transformations as baked matrices.</p></li>
+<li><p>TransRotLoc: Export transformations as separate curves for translation, rotation and scale.</p></li>
+</ul>
+</dd>
+<dt>Keep Smooth Curves</dt><dd><p>Also export curve handles (only works when the animated object parent-inverse matrix is unity).</p>
+</dd>
+<dt>Sampling Rate</dt><dd><p>Distance between two sample keyframes (1 means every frame is keyed).</p>
+</dd>
+<dt>Keep Keyframes</dt><dd><p>Make sure that the keyframes are always exported even if they are between two sample frames.</p>
+</dd>
+<dt>All Keyed Curves</dt><dd><p>Also export flat curves (with all key values identical or only one key defined).</p>
+</dd>
+<dt>Include All Actions</dt><dd><p>Export all actions compatible with the selected armatures
+start/end times which are derived from the keyframe range of each action.
+When disabled only the currently assigned action is exported.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="extra">
+<h4>Extra<a class="headerlink" href="#extra" title="Permalink to this headline">¶</a></h4>
+<dl>
+<dt>Use Object Instances</dt><dd><p>Define an object only once and use it as a reference (not supported on all target engines).</p>
+</dd>
+<dt>Use Blender Profile</dt><dd><p>Export extra information to allow a more precise import back into Blender.</p>
+</dd>
+<dt>Sort by Object Name</dt><dd><p>Make sure the exported objects are exported in sort order of their names.</p>
+</dd>
+<dt>Keep Bind Info</dt><dd><p>Each bone can have two custom properties:</p>
+<ul class="simple">
+<li><p>rest_mat: An array of 16 values representing the rest-pose matrix at time of import.</p></li>
+<li><p>bind_mat: An array of 16 values representing the bind-pose matrix at time of import.</p></li>
+</ul>
+<p>If the <code class="docutils literal notranslate"><span class="pre">bind_mat</span></code> is defined then use that matrix as bind matrix of the bone.
+If the <code class="docutils literal notranslate"><span class="pre">rest_mat</span></code> is defined then use that matrix as the rest matrix of the bone.
+This corresponds with the same custom properties from the Collada Importer.
+<code class="docutils literal notranslate"><span class="pre">Bind_mat</span></code> and <code class="docutils literal notranslate"><span class="pre">rest_mat</span></code> are needed when handling rigs that where originally made
+with a bind pose (which Blender does not support).</p>
+</dd>
+<dt>Limit Precision</dt><dd><p>Take care to use at max five digits after the comma. This is good for debugging when you want to compare values.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="section" id="compatibility">
+<h2>Compatibility<a class="headerlink" href="#compatibility" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Import<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>TODO</p>
+</div>
+<div class="section" id="id3">
+<h3>Export<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>TODO</p>
+</div>
+<div class="section" id="missing">
+<h3>Missing<a class="headerlink" href="#missing" title="Permalink to this headline">¶</a></h3>
+<p>TODO</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="io_fbx.html" class="btn btn-neutral float-right" title="Autodesk FBX" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="io_bvh.html" class="btn btn-neutral float-left" title="Biovision层次结构" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

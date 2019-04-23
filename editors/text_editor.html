@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>文本编辑器 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/text_editor.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Python 控制台" href="python_console.html" />
+    <link rel="prev" title="属性 &amp; 修改器" href="nla/properties_modifiers.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#general">常规</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#animation">动画</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#scripting">脚本</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">文本编辑器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#header">标题</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main-view">主视图</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="python_console.html">Python 控制台</a></li>
+<li class="toctree-l3"><a class="reference internal" href="info/index.html">信息编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">编辑器</a> &raquo;</li>
+        
+      <li>文本编辑器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/editors/text_editor.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="text-editor">
+<span id="bpy-ops-text"></span><span id="bpy-types-spacetexteditor"></span><h1>文本编辑器<a class="headerlink" href="#text-editor" title="Permalink to this headline">¶</a></h1>
+<p>Blender有一个窗口类型叫 <em>文本编辑器</em> ，通过 <em>窗口类型</em> 菜单或 <kbd class="kbd docutils literal notranslate">Shift-F11</kbd> 快捷键即可进入该编辑器窗口。</p>
+<div class="section" id="header">
+<h2>标题<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
+<p>新打开的文本窗口是灰色空白的，外加一个简单的标题栏( <a class="reference internal" href="#fig-text-header-plain"><span class="std std-ref">文本标题。</span></a>)。</p>
+<div class="figure align-center" id="id1">
+<span id="fig-text-header-plain"></span><img alt="../_images/editors_text-editor_header.png" src="../_images/editors_text-editor_header.png" />
+<p class="caption"><span class="caption-text">文本标题。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id2">
+<span id="fig-text-header-full"></span><img alt="../_images/editors_text-editor_header-loaded.png" src="../_images/editors_text-editor_header-loaded.png" />
+<p class="caption"><span class="caption-text">已经打开一个文件的文本工具栏。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>编辑器类型</dt><dd><p>标准编辑器选择按钮。</p>
+</dd>
+<dt>菜单</dt><dd><p>编辑器 <a class="reference internal" href="#menus">菜单</a>.</p>
+</dd>
+<dt>文本</dt><dd><p>用于选择文本或创建新文本的数据块菜单。使用之后标题栏将发生变化( <a class="reference internal" href="#fig-text-header-full"><span class="std std-ref">已经打开一个文件的文本工具栏。</span></a>)。</p>
+</dd>
+<dt>显示</dt><dd><p>后面的三个按钮分别用于开启行号显示、文本换行和语法高亮显示。</p>
+<p>行号，文本换行，语法高亮显示</p>
+</dd>
+</dl>
+<dl class="simple" id="editors-text-run-script">
+<dt>运行脚本 / 脚本节点更新</dt><dd><p>执行文本作为Python脚本 <kbd class="kbd docutils literal notranslate">Alt-P</kbd>. 请参阅 <a class="reference internal" href="#script-and-templates">脚本和模板</a>.</p>
+</dd>
+<dt>注册</dt><dd><p>加载时注册当前文本数据块为模块(扩展名必须为 '.py')。更多关于Python模块注册的内容请参考 <a class="reference external" href="https://docs.blender.org/api/2.79/info_overview.html#registration">API文档</a>。</p>
+</dd>
+<dt>标签</dt><dd><p>如果文本保存在内部或外部，并且存在未保存的外部文件更改，则此标签显示。</p>
+</dd>
+</dl>
+<div class="section" id="menus">
+<h3>菜单<a class="headerlink" href="#menus" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>视图</dt><dd><dl class="simple">
+<dt>文件底部</dt><dd><p>将视图和光标移动到文本的末尾。</p>
+</dd>
+<dt>文件顶部</dt><dd><p>将视图和光标移动到文本的开头。</p>
+</dd>
+</dl>
+</dd>
+<dt>文本</dt><dd><dl class="simple">
+<dt>创建文本块</dt><dd><p>创建一个新的内部文本。</p>
+</dd>
+<dt>打开文本块</dt><dd><p>在 <a class="reference internal" href="file_browser/index.html"><span class="doc">文件浏览器</span></a> 中打开一个文本块，快捷键 <kbd class="kbd docutils literal notranslate">Alt-O</kbd>.</p>
+</dd>
+<dt>重载</dt><dd><p>重新打开(重新载入) 当前文本缓存 (会丢失所有未保存修改) <kbd class="kbd docutils literal notranslate">Alt-R</kbd>.</p>
+</dd>
+<dt>保存</dt><dd><p><kbd class="kbd docutils literal notranslate">Alt-S</kbd> - 保存已打开文件。</p>
+</dd>
+<dt>另存为</dt><dd><p>将未保存文本另存到 <a class="reference internal" href="file_browser/index.html"><span class="doc">文件浏览器</span></a> 里，快捷键 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-Alt-S</kbd>.</p>
+</dd>
+<dt>加载为内部文件</dt><dd><p>将文本存储在混合文件中。</p>
+</dd>
+<dt>运行脚本</dt><dd><p>执行文本作为Python脚本 <kbd class="kbd docutils literal notranslate">Alt-P</kbd>. 请参阅 <a class="reference internal" href="#script-and-templates">脚本和模板</a>.</p>
+</dd>
+</dl>
+</dd>
+<dt>编辑</dt><dd><dl class="simple">
+<dt>剪切 <kbd class="kbd docutils literal notranslate">Ctrl-X</kbd></dt><dd><p>剪切选中文本至文本剪贴板。</p>
+</dd>
+<dt>复制 <kbd class="kbd docutils literal notranslate">Ctrl-C</kbd></dt><dd><p>复制选中文本至文本剪贴板。</p>
+</dd>
+<dt>粘贴 <kbd class="kbd docutils literal notranslate">Ctrl-V</kbd></dt><dd><p>粘贴剪贴板文本至文本窗口光标位置。</p>
+</dd>
+<dt>复制行 <kbd class="kbd docutils literal notranslate">Ctrl-D</kbd></dt><dd><p>复制当前行。</p>
+</dd>
+<dt>将行上移</dt><dd><p>与上面交换当前行。</p>
+</dd>
+<dt>将行下移</dt><dd><p>与下面交换当前行。</p>
+</dd>
+<dt>选择</dt><dd><p>选择行，全选。</p>
+</dd>
+<dt>跳转</dt><dd><p>显示跳转弹出窗口，您可以选择跳转到的行号。</p>
+</dd>
+<dt>查找...</dt><dd><p>在“属性”区域中显示“查找”面板。</p>
+</dd>
+<dt>文本自动完成 <kbd class="kbd docutils literal notranslate">Ctrl-Spacebar</kbd></dt><dd><p>显示可选择的Python命令列表，并与文本中已经使用的字符进行匹配。</p>
+</dd>
+<dt>将文本转换为3D 物体</dt><dd><p>一个物体，每行一个物体。</p>
+</dd>
+</dl>
+</dd>
+<dt>格式</dt><dd><dl class="simple">
+<dt>缩进</dt><dd><p>缩进选中行 <kbd class="kbd docutils literal notranslate">Tab</kbd>.</p>
+</dd>
+<dt>取消缩进</dt><dd><p><kbd class="kbd docutils literal notranslate">Tab</kbd> - 缩进选中行。</p>
+</dd>
+<dt>注释</dt><dd><p>将所选行转换为Python注释。</p>
+</dd>
+<dt>取消注释</dt><dd><p>取消所选行的注释。</p>
+</dd>
+<dt>转换空格</dt><dd><p>在标签或空格缩进之间转换。</p>
+</dd>
+</dl>
+</dd>
+<dt>模版</dt><dd><p>请参阅 <a class="reference internal" href="#script-and-templates">脚本和模板</a>.</p>
+<p>Python，开放式着色语言(OSL)</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="script-and-templates">
+<h3>脚本和模板<a class="headerlink" href="#script-and-templates" title="Permalink to this headline">¶</a></h3>
+<p>最方便的按键是 <kbd class="kbd docutils literal notranslate">Alt-P</kbd> ，使用Blender内置的解释器解析缓冲区的内容。在进行之前，需要注意的是，Blender配有一个内置的功能齐全的Python解释器，并具有许多Blender特有的模块，如 <a class="reference internal" href="../advanced/scripting/index.html"><span class="doc">脚本与扩展Blender</span></a> 部分所述。</p>
+<p><em>文本编辑器</em> 如今已经包含一些专用的Python脚本，可以添加一些有用的属性工具，就像一个 class/function/variable浏览器。可以通过 <em>文本</em> --&gt; <em>文本插件</em> 菜单使用该功能。</p>
+</div>
+</div>
+<div class="section" id="main-view">
+<h2>主视图<a class="headerlink" href="#main-view" title="Permalink to this headline">¶</a></h2>
+<p>敲击键盘可以在文本缓存中输入文本。跟平常一样，按下拖动并松开 <kbd class="kbd docutils literal notranslate">LMB</kbd> 用于选择文本。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>文本窗口的其他用途</p>
+<p>在你想要分享你的 <code class="docutils literal notranslate"><span class="pre">.blend</span></code> 文件的时候，文本窗口也很方便。可以在 <em>文本</em> 窗口添加一个 <code class="docutils literal notranslate"><span class="pre">README</span></code> 文本，解释该blend文件的内容。务必保证在保存时该文本是可见的！</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python_console.html" class="btn btn-neutral float-right" title="Python 控制台" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="nla/properties_modifiers.html" class="btn btn-neutral float-left" title="属性 &amp; 修改器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

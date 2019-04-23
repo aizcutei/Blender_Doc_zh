@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>顶点权重邻近修改器 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/modify/weight_proximity.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="阵列修改器" href="../generate/array.html" />
+    <link rel="prev" title="顶点权重混合修改器" href="weight_mix.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#modify">修改</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="data_transfer.html">数据传递修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_cache.html">网格缓存修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_sequence_cache.html">网格序列缓存编辑器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="normal_edit.html">法线编辑修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="uv_project.html">UV 投射修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="uv_warp.html">UV偏移修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="weight_edit.html">顶点权重编辑修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="weight_mix.html">顶点权重混合修改器</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">顶点权重邻近修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#generate">生成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#deform">形变</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#simulate">模拟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../index.html">修改器</a> &raquo;</li>
+        
+      <li>顶点权重邻近修改器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/modeling/modifiers/modify/weight_proximity.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vertex-weight-proximity-modifier">
+<span id="bpy-types-vertexweightproximitymodifier"></span><h1>顶点权重邻近修改器<a class="headerlink" href="#vertex-weight-proximity-modifier" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_modify_weight-proximity_panel.png"><img alt="../../../_images/modeling_modifiers_modify_weight-proximity_panel.png" src="../../../_images/modeling_modifiers_modify_weight-proximity_panel.png" style="width: 387px;" /></a>
+<p class="caption"><span class="caption-text">顶点权重邻近修改器面板.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>此修改器根据物体（或其顶点）与另一个目标物体（或其几何体）之间的距离设置给定顶点组的权重.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>此修改器会在标准（0.0到1.0）范围内隐含地限制权重值。 低于0.0的所有值都将设置为0.0，高于1.0的所有值都将设置为1.0.</p>
+</div>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>顶点组</dt><dd><p>要影响的顶点组.</p>
+</dd>
+<dt>目标物体</dt><dd><p>用于计算距离的物体.</p>
+</dd>
+<dt>邻近模式</dt><dd><dl>
+<dt>物体距离</dt><dd><p>使用修改后的网格物体和目标物体之间的距离作为受影响顶点组中所有顶点的权重.</p>
+</dd>
+<dt>几何体距离</dt><dd><p>使用每个顶点与目标物体或其几何体之间的距离。</p>
+<dl class="simple">
+<dt>顶点</dt><dd><p>这将设置每个顶点的权重，利用其到目标对象的最近顶点的距离.</p>
+</dd>
+<dt>边</dt><dd><p>这将设置每个顶点的权重，利用其到目标对象的最近边的距离.</p>
+</dd>
+<dt>面</dt><dd><p>这将设置每个顶点的权重，利用其到目标对象的最近面的距离.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>如果启用多个，则将使用最短距离。 如果目标物体没有几何体（例如空物体或相机），它将使用物体本身的位置.</p>
+</div>
+</dd>
+</dl>
+</dd>
+<dt>最低</dt><dd><p>映射到0.0权重的距离.</p>
+</dd>
+<dt>最高</dt><dd><p>映射到1.0权重的距离.</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><em>最低</em> 可以设置得比 <em>最高</em> 还大以反转映射.</p>
+</div>
+<dl>
+<dt>衰减类型</dt><dd><p>映射的类型:</p>
+<dl class="simple">
+<dt>线性</dt><dd><p>不映射.</p>
+</dd>
+<dt>自定义曲线</dt><dd><p>可以使用曲线手动定义映射.</p>
+</dd>
+<dt>锐利,平滑,根凸和球状</dt><dd><p>这些是经典的映射函数，从最尖锐到最圆.</p>
+</dd>
+<dt>随机</dt><dd><p>每个顶点使用一个随机值.</p>
+</dd>
+<dt>中值梯级</dt><dd><p>创建二值权重（0.0或1.0），其中0.5为切割值.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="influence-mask-options">
+<h3>影响 / 遮罩选项<a class="headerlink" href="#influence-mask-options" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>全局影响</dt><dd><p>修改器的整体影响（0.0将保持顶点组的权重不变，1.0是标准影响）.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>影响仅作用于权重，将此值设置为0.0并不会阻止向/从顶点组添加/删除顶点.</p>
+</div>
+</dd>
+</dl>
+<div class="section" id="vertex-group-mask">
+<h4>顶点组遮罩<a class="headerlink" href="#vertex-group-mask" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>顶点组遮罩</dt><dd><p>一个额外的顶点组，其权重将与每个顶点的全局影响值相乘。 如果顶点不在遮罩顶点组中，则其权重将不受影响.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="texture-mask">
+<h4>贴图遮罩<a class="headerlink" href="#texture-mask" title="Permalink to this headline">¶</a></h4>
+<dl>
+<dt>贴图遮罩</dt><dd><p>一个额外的纹理，其值将与每个顶点的全局影响值相乘.</p>
+<p>这是一个标准纹理 <a class="reference internal" href="../../../data_system/data_blocks.html"><span class="doc">数据块</span></a> 控制. 设置后，它会显示其他设置项:</p>
+</dd>
+<dt>贴图坐标系</dt><dd><p>纹理映射到网格的方式.</p>
+<dl>
+<dt>自身</dt><dd><p>使用自身顶点坐标系.</p>
+</dd>
+<dt>全局</dt><dd><p>使用全局空间中的顶点坐标.</p>
+</dd>
+<dt>物体</dt><dd><p>使用另一个物体的空间中的顶点坐标.</p>
+<dl class="simple">
+<dt>物体</dt><dd><p>用作 <em>物体</em> 映射的参考的物体.</p>
+</dd>
+</dl>
+</dd>
+<dt>UV</dt><dd><p>使用 UV 映射的坐标.</p>
+<dl class="simple">
+<dt>UV 贴图</dt><dd><p>用于 <em>UV</em> 映射的UV贴图.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>使用通道</dt><dd><p>哪个通道用作权重系数源.</p>
+<dl class="simple">
+<dt>红/绿/蓝/Alpha</dt><dd><p>颜色通道值之一.</p>
+</dd>
+<dt>强度</dt><dd><p>RGB通道的平均值(如果 RGB取(1.0,0.0,0.0)则值为0.33).</p>
+</dd>
+<dt>值</dt><dd><p>RGB通道的最大值(如果 RGB取(1.0,0.0,0.0)则值为1.0).</p>
+</dd>
+<dt>色相</dt><dd><p>使用标准调色盘的色相值（例如，蓝色的色相值高于黄色）.</p>
+</dd>
+<dt>饱和度</dt><dd><p>使用饱和度值(例如,纯红的值为1.0,绿为0.0).</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>除 <em>强度</em> 外，上述所有通道都经过伽马校正.</p>
+</div>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>可以在 <em>权重绘制模式</em> 中查看修改后的重量。 这也意味着如果要查看正在编辑的顶点组的原始权重，则必须禁用 <em>顶点权重邻近修改器</em>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example">
+<h2>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">使用到目标物体的距离.</p>
+<p>在这个例子中，让我们用修改过的顶点组动态控制波浪修改器:</p>
+<ol class="arabic">
+<li><p>添加具有（100×100）X/Y 细分和5BU半径的 <em>栅格</em> 网格.</p></li>
+<li><p>切换到 <em>编辑模式</em> <kbd class="kbd docutils literal notranslate">Tab</kbd>, 然后在 <em>物体数据</em> 属性, <em>顶点组</em> 面板, 添加一个顶点组. 分配所有网格的顶点到其中,并设为1.0权重.</p></li>
+<li><p>返回到 <em>物体模式</em>。 然后，转到 <em>修改器</em> 属性，并添加顶点权重邻近修改器。 将距离模式设置为 <em>物体</em>。 选择顶点组和想要的目标物体.</p>
+<p>您可能需要调整顶点权重邻近修改器生成的权重的线性映射。 为此，请编辑 <em>最小距离</em> 和*最远距离*，使前一个值对应于目标物体与想要具有最低权重的顶点之间的距离，类似地设置后一个值对应最高权重...</p>
+</li>
+<li><p>如果您的灯泡的Z高度为2，则将权重邻近修改器的设置项设置为:最低:2和最高:7（这将停止灯泡下方的波浪）。 如果您希望波浪仅在灯泡下方，请将最低值设置为7，将最高值设置为2.</p></li>
+<li><p>现在添加一个波浪修改器，根据自己的喜好设置它，并使用相同的顶点组来控制它。 示例设置:速度:0.10，高度:1.0，宽度:1.50，窄度:1.50.</p></li>
+<li><p>为目标对象设置动画，使其在网格上移动。 如您所见，波浪只在参考物体周围可见!  请注意，您可以在 <em>波浪</em> 之前插入 <em>顶点权重编辑</em> 修改器，并使用其 <em>自定义曲线</em> 映射来获得更大/更窄的“波浪影响的斜率”.</p></li>
+</ol>
+<iframe src="https://player.vimeo.com/video/30187079" style="border: 0; height: 345px; width: 560px">
+</iframe><p><a class="reference external" href="https://wiki.blender.org/wiki/File:ManModifiersWeightVGroupEx.blend">blend 文件</a>, TEST_1 场景.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../generate/array.html" class="btn btn-neutral float-right" title="阵列修改器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="weight_mix.html" class="btn btn-neutral float-left" title="顶点权重混合修改器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

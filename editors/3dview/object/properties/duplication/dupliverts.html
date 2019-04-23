@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>顶点副本 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/3dview/object/properties/duplication/dupliverts.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="面副本" href="duplifaces.html" />
+    <link rel="prev" title="副本帧" href="dupliframes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../startup_scene.html">启动场景</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../modes.html">物体模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../navigate/index.html">视图浏览</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../3d_cursor.html">3D游标</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html">物体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../properties/index.html">属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ruler_protractor.html">3D量尺 &amp; 量角器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">3D视图</a> &raquo;</li>
+        
+          <li><a href="../../index.html">物体</a> &raquo;</li>
+        
+          <li><a href="../index.html">属性</a> &raquo;</li>
+        
+          <li><a href="index.html">副本</a> &raquo;</li>
+        
+      <li>顶点副本</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../_sources/editors/3dview/object/properties/duplication/dupliverts.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dupliverts">
+<span id="bpy-types-object-use-dupli-vertices"></span><h1>顶点副本<a class="headerlink" href="#dupliverts" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">物体 ‣ 副本</span></p>
+</dd>
+</dl>
+</div>
+<p><em>副本到顶点</em> (或者 <em>顶点副本</em>)用于在父级物体的每个顶点位置复制出一个子物体。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>父级与子级物体的相对 <a class="reference internal" href="../../origin.html"><span class="doc">原心</span></a> 距离决定几何体副本相对父级顶点的偏移量。</p>
+</div>
+<dl>
+<dt>旋转</dt><dd><p>根据父级网格对应的顶点法向旋转所有的副本物体。</p>
+<p>选中基础物体，然后在 <span class="menuselection">物体 ‣ 附加关联项</span> 面板中更改 <span class="menuselection">跟踪坐标轴</span> 调整副本物体的坐标轴对齐方向。</p>
+</dd>
+</dl>
+<p>实际上有两种使用 <em>DupliVerts（顶点副本）</em> 进行建模的方法。它们可以作为一种排列工具，允许模拟物体的几何布局（例如希腊神庙的柱子，花园里的树木，机器人士兵的军队，教室里的桌子）。该物体可以是Blender支持的任何物体类型。第二种方法是用它们从单一部分（例如俱乐部的尖刺，海胆的刺，墙上的瓷砖，花瓣中的花瓣）开始建模物体。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>下载示例的blend文件</p>
+<p>你可以使用此页面上下载示例文件。在 <a class="reference external" href="https://wiki.blender.org/index.php/:File:Manual-2.5-DupliVerts-Examples.blend">这个blend文件</a> 中，第一个例子位于第一层，是一个父级设为圆环的猴头，而第二层则是一个父级设为棱角球的触手。</p>
+</div>
+<div class="section" id="dupliverts-as-an-arranging-tool">
+<h2>DupliVerts（顶点副本）作为一种排列工具<a class="headerlink" href="#dupliverts-as-an-arranging-tool" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setup">
+<h3>建立<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
+<p>你所需要的是一个基本物体（例如 <em>树</em> 或 <em>柱</em>）和一个样式布局网格，它的顶点符合你想要的样式布局。在本节中，我们将在下面的部分使用一个简单的场景。我们将使用位于坐标系原点的猴头作为我们的基础物体，以及位于相同位置的圆环作为父网格。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_monkey-before.png"><img alt="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_monkey-before.png" src="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_monkey-before.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">一个猴头和一个圆环。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_monkey-after.png"><img alt="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_monkey-after.png" src="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_monkey-after.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Dupliverted monkeys （猴头顶点副本）。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>首先，在 <em>物体模式</em> 中，选择基础物体（这里是猴头），并按 <kbd class="kbd docutils literal notranslate">Shift-RMB</kbd> 将圆环添加为选中项（顺序非常重要），然后 <kbd class="kbd docutils literal notranslate">Ctrl-P</kbd> 或 <span class="menuselection">物体 ‣ 父级 ‣ 物体</span> 将基础物体父级设为圆环。现在，这个圆环是猴头的父级。如果移动圆环，猴头会跟着移动。</p>
+<p>只保持圆环选中，在 <span class="menuselection">物体面板 ‣ 副本 ‣ 顶点</span> 中启用 <em>顶点副本</em> ，圆环的每个顶点上都将被放置一个猴头副本。</p>
+<p>中心处的原始猴头和父级网格仍会在3D视图中显示，但最终都不会被渲染。如果你的猴头的位置和旋转比较奇怪的，你可能需要清除它的旋转 <kbd class="kbd docutils literal notranslate">Alt-R</kbd>，缩放 <kbd class="kbd docutils literal notranslate">Alt-S</kbd>，位置 <kbd class="kbd docutils literal notranslate">Alt-G</kbd> 和原点 <kbd class="kbd docutils literal notranslate">Alt-O</kbd>。</p>
+</div>
+<div class="section" id="rearranging">
+<h3>重新排列<a class="headerlink" href="#rearranging" title="Permalink to this headline">¶</a></h3>
+<p>如果现在选择基础物体并在物体或编辑模式修改它，则所有的改变都将影响所有副本物体的形状。你也可以选择父级网格来修改副本的排列; 添加更多的顶点也会添加更多的副本基础物体。</p>
+<p>请注意，在物体模式中对父级网格所做的更改会影响基础物体（副本），但在编辑模式下更改父级网格不会影响基础物体。因此，在物体模式下缩放圆环会放大猴头，而在编辑模式下缩放圆圈只会增加基础物体猴头之间的距离。</p>
+</div>
+<div class="section" id="orientation">
+<h3>方向<a class="headerlink" href="#orientation" title="Permalink to this headline">¶</a></h3>
+<p>可以通过在 <em>Duplication（顶点副本）</em> 面板中启用 <em>旋转</em> 来控制基础物体的方向。这将根据父网格的顶点法线旋转所有的基础物体。</p>
+<p>要更改副本物体的方向，请选择基础物体，然后在 <span class="menuselection">物体 ‣ 附加关联项</span> 面板中更改 <span class="menuselection">跟踪坐标轴</span> 。</p>
+<table class="docutils align-center" id="id3">
+<caption><span class="caption-text">各种方向的输出。</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_orientation.png"><img alt="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_orientation.png" src="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_orientation.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">方向启用，方向+ Y。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_negy.png"><img alt="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_negy.png" src="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_negy.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Y负向。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_posx.png"><img alt="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_posx.png" src="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_posx.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">X正向。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_posz.png"><img alt="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_posz.png" src="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_posz.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Z正向, X向上。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在 <span class="menuselection">物体 ‣ 显示</span> 面板中可以使物体的轴向可见。要显示父网格的顶点法线，请切换到 <em>编辑模式</em>，然后在 <span class="menuselection">属性区域 ‣ 网格显示</span> 面板中启用此可视化，你可以根据需要调整显示的法线大小。</p>
+</div>
+</div>
+</div>
+<div class="section" id="dupliverts-as-a-modeling-tool">
+<h2>DupliVerts（顶点副本）作为建模工具<a class="headerlink" href="#dupliverts-as-a-modeling-tool" title="Permalink to this headline">¶</a></h2>
+<p>可以使用DupliVerts（顶点副本）和一个标准的基础物体创建非常有趣的模型。在这个例子中，一个立方体挤出几次得到一个简单的触手。然后触手物体父级设为棱角球。对父级网格（棱角球）启用副本 <em>旋转</em>，基础物体（触手）的方向适应了父网格的顶点法线方向(此处的触手相对编辑模式下的X轴旋转了-90°)。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id8">
+<img alt="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_tentacle.png" src="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_tentacle.png" />
+<p class="caption"><span class="caption-text">一个简单设置为平滑的触手。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id9">
+<img alt="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_norot.png" src="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_norot.png" />
+<p class="caption"><span class="caption-text">触手重叠在父网格上。</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id10">
+<img alt="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_rot.png" src="../../../../../_images/editors_3dview_object_properties_duplication_dupliverts_rot.png" />
+<p class="caption"><span class="caption-text">启用旋转以对齐副本项。</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>和前面的例子一样，现在可以调整排列的形状和比例。</p>
+<p>要将所有副本转换为真实的物体，只需选择经纬球和 <span class="menuselection">物体 ‣ 应用 ‣ 副本独立化</span> , <kbd class="kbd docutils literal notranslate">Shift-Ctrl-A</kbd> 。为了使经纬球和触手成为一个单一的物体，确保它们都被选中，并进入 <span class="menuselection">物体 ‣ 合并</span>, <kbd class="kbd docutils literal notranslate">Ctrl-J</kbd>。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../../editing/duplication.html"><span class="doc">这里</span></a> 列出了其他复制方法。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="duplifaces.html" class="btn btn-neutral float-right" title="面副本" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dupliframes.html" class="btn btn-neutral float-left" title="副本帧" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

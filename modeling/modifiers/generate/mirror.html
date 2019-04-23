@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>镜像修改器 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/mirror.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="多级精度修改器" href="multiresolution.html" />
+    <link rel="prev" title="遮罩修改器" href="mask.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#generate">生成</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="array.html">阵列修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bevel.html">倒角修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="booleans.html">布尔修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="build.html">建形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="decimate.html">精简修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edge_split.html">拆边修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mask.html">遮罩修改器</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">镜像修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiresolution.html">多级精度修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="remesh.html">重构网格修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="screw.html">螺旋修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="skin.html">蒙皮修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="solidify.html">实体化修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsurf.html">表面细分修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="triangulate.html">三角化修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wireframe.html">线框修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#deform">形变</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#simulate">模拟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../index.html">修改器</a> &raquo;</li>
+        
+      <li>镜像修改器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/modeling/modifiers/generate/mirror.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mirror-modifier">
+<span id="bpy-types-mirrormodifier"></span><h1>镜像修改器<a class="headerlink" href="#mirror-modifier" title="Permalink to this headline">¶</a></h1>
+<p>镜像修改器沿着自身 X，Y和、或Z轴，穿过 <a class="reference internal" href="../../../glossary/index.html#term-object-origin"><span class="xref std std-term">物体原心</span></a> 镜像网格。还可以使用另一个物体作为镜像中心，使用该物体的本地轴向而非自身轴向。</p>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id2">
+<img alt="../../../_images/modeling_modifiers_generate_mirror_panel.png" src="../../../_images/modeling_modifiers_generate_mirror_panel.png" />
+<p class="caption"><span class="caption-text">镜像修改器。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="axis">
+<h3>轴向<a class="headerlink" href="#axis" title="Permalink to this headline">¶</a></h3>
+<p>镜像所沿的X, Y, Z轴，即，该轴垂直于对称的镜像平面。</p>
+<p>为了明白轴是如何应用到镜像的方向上的，如果你想要在X轴上镜像，原始网面的正X值将会在镜像的一侧变成负X值。</p>
+<p>你可以选择多个轴——随之得到更多的镜像。一个轴得到一个镜像，两个轴得到四个镜像，所有的三个轴得到八个镜像。</p>
+</div>
+<div class="section" id="id1">
+<h3>选项<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>合并</dt><dd><p>作为镜像并在同一个位置的顶点（在 <em>合并限度</em> 距离之内），它将与镜像顶点合并。</p>
+</dd>
+<dt>范围限制</dt><dd><p>用户在编辑模式下工作时，阻止顶点穿过镜面。</p>
+<p>如果已启用 <em>裁剪</em> 选项，但顶点超出了镜面且在 <em>合并限制</em> 之外，顶点是不会合并的。但只要顶点是在 <em>合并限制</em> 之内，它们会吸附在一起，且不能穿越镜子到另一边。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>只要启用了 <em>裁剪</em> 选项，镜面上的顶点将无法移离镜面。你必须禁用 <em>裁剪</em> 选项才能沿镜轴移动顶点。</p>
+</div>
+</dd>
+<dt>顶点组</dt><dd><p>当启用该选项时，镜像修改器会尝试镜像现有的顶点组。</p>
+<p>它是一款很不错的功能，且有着很特殊的先决条件：</p>
+<ul class="simple">
+<li><p>镜像的顶点组必须按照常规的左/右模式来命名（即以 “.R”，“.ri​​ght”，“.L”等为后缀）。</p></li>
+<li><p>镜面一边的顶点组必须已经存在（它不会自动创建）。它也必须是完全空的（没有分配顶点给它）。</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="textures">
+<h3>纹理<a class="headerlink" href="#textures" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>翻转UV</dt><dd><p><em>翻转U</em> 和 <em>翻转V</em> 选项用于以图像的中间来镜像UV纹理坐标。</p>
+<p>例如，如果你顶点的UV坐标是(<code class="docutils literal notranslate"><span class="pre">0.3,</span> <span class="pre">0.9</span></code>)，它的镜像副本的UV坐标将会是(<code class="docutils literal notranslate"><span class="pre">0.7,</span> <span class="pre">0.1</span></code>)。</p>
+</dd>
+<dt>UV 偏移</dt><dd><p>镜像得到的UV在U/V轴向上的移动量。</p>
+<p>It's useful for baking (as overlapping UVs can cause artifacts to appear in the baked map),
+so the UVs can be moved outside the image and not used for baking, but still be used for display.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="further-options">
+<h3>更多选项<a class="headerlink" href="#further-options" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>合并限距</dt><dd><p>顶点与其镜像副本在合并到一起前，它们之间的最大距离。换言之，顶点在吸附到镜面上前，可以离镜面有一半的该距离。</p>
+</dd>
+<dt>镜像物体</dt><dd><p>选择物体(通常是空物体)的 <a class="reference internal" href="../../../interface/controls/buttons/eye_dropper.html#ui-eye-dropper"><span class="std std-ref">物体选择器</span></a> ，供镜像过程参考：其中心和轴将沿着平面（一个或多个）作对称。你当然可以修改其位置/旋转属性，以观看动态的镜面效果。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="hints">
+<h2>提示<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-the-mirror-modifier-with-a-subdivision-surface-modifier">
+<h3>镜像修改器与细分表面修改器的配合使用<a class="headerlink" href="#using-the-mirror-modifier-with-a-subdivision-surface-modifier" title="Permalink to this headline">¶</a></h3>
+<p>镜像修改器同 <a class="reference internal" href="subsurf.html"><span class="doc">表面细分</span></a> 修改器一起使用时，其中修改器的顺序很重要。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_generate_mirror_subsurf2.png"><img alt="../../../_images/modeling_modifiers_generate_mirror_subsurf2.png" src="../../../_images/modeling_modifiers_generate_mirror_subsurf2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">表面细分修改器在镜像修改器之前.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_generate_mirror_subsurf1.png"><img alt="../../../_images/modeling_modifiers_generate_mirror_subsurf1.png" src="../../../_images/modeling_modifiers_generate_mirror_subsurf1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">镜像修改器在表面细分修改器之前。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>上面第一张图显示了表面细分修改器置于镜像修改器前的效果；如你所见，网面沿着镜像效果的中心线分割。这是由于表面细分修改器的计算移动顶点远离镜面，远在 <em>合并限度</em> 之外。</p>
+<p>The second image shows the Mirror Modifier placed before the Subdivision Surface Modifier.
+In this order, the mirror calculation is done and the vertices are merged together.
+Only after that does the Subdivision Surface Modifier move any vertices.</p>
+</div>
+<div class="section" id="accurately-positioning-the-mirror-plane">
+<h3>精确定位镜面<a class="headerlink" href="#accurately-positioning-the-mirror-plane" title="Permalink to this headline">¶</a></h3>
+<p>要应用镜像修改器，通常必须将对象的中心移动到要作为镜像轴的边或面上。 边看边试着做，这可能是棘手的。</p>
+<p>完成精准定位的一个好技巧是选择边，然后使用 <kbd class="kbd docutils literal notranslate">Shift-S</kbd> 并选择 <em>移动光标到选择</em> 。这将在边的中心放置3D光标。最后，按下 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-Alt-C</kbd> 唤出 <em>设置原点</em> 菜单，然后选择 <em>移动原点到3D光标</em>。这将移动物体的中心（也就是镜面）到3D光标的位置，镜像操作将是精准的。</p>
+<p>另一种方法是使用一个空物体，作为你移动到正确位置的 <em>镜物体</em>。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="multiresolution.html" class="btn btn-neutral float-right" title="多级精度修改器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mask.html" class="btn btn-neutral float-left" title="遮罩修改器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

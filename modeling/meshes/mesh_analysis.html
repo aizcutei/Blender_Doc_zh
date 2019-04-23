@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>网格分析 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/mesh_analysis.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="曲线" href="../curves/index.html" />
+    <link rel="prev" title="网格显示" href="mesh_display.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mesh_display.html">网格显示</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">网格分析</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overhang">悬垂</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#thickness">厚度</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intersections">交集</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#distortion">畸变</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sharp-edges">锐边</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="index.html">网格</a> &raquo;</li>
+        
+      <li>网格分析</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modeling/meshes/mesh_analysis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mesh-analysis">
+<span id="bpy-types-meshstatvis"></span><h1>网格分析<a class="headerlink" href="#mesh-analysis" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">属性栏 ‣ 网格分析</span></p>
+</dd>
+</dl>
+</div>
+<p>网格分析用于显示网格的属性，可以用在特定的情形。</p>
+<p>网格分析适用于 <em>编辑模式</em> 下 <em>实体</em> 视图着色模式。数值较高的区域显示为红色，数值较低的区域显示为蓝色。超出范围的几何元素显示为灰色。</p>
+<p>目前，这些不同模式的主要用途定位为3D-打印。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>网格分析存在一些已知局限：</p>
+<ul class="simple">
+<li><p>只能与形变类修改器一起使用。</p></li>
+<li><p>对于高精度网格，在编辑时会降低性能。</p></li>
+</ul>
+</div>
+<div class="section" id="overhang">
+<h2>悬垂<a class="headerlink" href="#overhang" title="Permalink to this headline">¶</a></h2>
+<p>挤出型3D 打印机对可打印的悬垂网格有物理限制，该显示模式用于显示悬垂，可调整角度范围和轴向。</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/modeling_meshes_mesh-analysis_overhang.png"><img alt="../../_images/modeling_meshes_mesh-analysis_overhang.png" src="../../_images/modeling_meshes_mesh-analysis_overhang.png" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">悬垂。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="thickness">
+<h2>厚度<a class="headerlink" href="#thickness" title="Permalink to this headline">¶</a></h2>
+<p>打印机存在 <em>壁厚</em> 限制，过薄区域无法打印，使用光线投射和距离范围来测试几何厚度。</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/modeling_meshes_mesh-analysis_thickness.png"><img alt="../../_images/modeling_meshes_mesh-analysis_thickness.png" src="../../_images/modeling_meshes_mesh-analysis_thickness.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">厚度。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="intersections">
+<h2>交集<a class="headerlink" href="#intersections" title="Permalink to this headline">¶</a></h2>
+<p>打印问题的另一个常见原因是曲面之间的交叉，这些位置的模型的内侧/外侧无法被可靠地检测到。</p>
+<p>与其他显示模式不同的是，交集没有变量，只能打开或关闭。</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/modeling_meshes_mesh-analysis_intersections.png"><img alt="../../_images/modeling_meshes_mesh-analysis_intersections.png" src="../../_images/modeling_meshes_mesh-analysis_intersections.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">交叉的面。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="distortion">
+<h2>畸变<a class="headerlink" href="#distortion" title="Permalink to this headline">¶</a></h2>
+<p>当一个畸变的多边形未被三角化时，畸变的几何结构会导致发生问题。</p>
+<p>畸变是通过不平坦来衡量的，面的部分区域指向多个不同的方向。</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/modeling_meshes_mesh-analysis_distortion.png"><img alt="../../_images/modeling_meshes_mesh-analysis_distortion.png" src="../../_images/modeling_meshes_mesh-analysis_distortion.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">畸变的面。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="sharp-edges">
+<h2>锐边<a class="headerlink" href="#sharp-edges" title="Permalink to this headline">¶</a></h2>
+<p>与壁厚相似，锐边会形成太薄而无法打印的形状。</p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/modeling_meshes_mesh-analysis_sharp-edges.png"><img alt="../../_images/modeling_meshes_mesh-analysis_sharp-edges.png" src="../../_images/modeling_meshes_mesh-analysis_sharp-edges.png" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">锐边。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../curves/index.html" class="btn btn-neutral float-right" title="曲线" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mesh_display.html" class="btn btn-neutral float-left" title="网格显示" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

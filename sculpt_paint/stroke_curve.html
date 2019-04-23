@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>笔触和曲线 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/sculpt_paint/stroke_curve.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="绘制" href="painting/index.html" />
+    <link rel="prev" title="纹理和纹理遮罩" href="texture_tex_mask.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">绘制与雕刻</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brush.html">笔刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texture_tex_mask.html">纹理和纹理遮罩</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">笔触和曲线</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#stroke">笔触</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#curve">曲线</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#modes">模式</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">绘制与雕刻</a> &raquo;</li>
+        
+      <li>笔触和曲线</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/sculpt_paint/stroke_curve.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="stroke-curve">
+<h1>笔触和曲线<a class="headerlink" href="#stroke-curve" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="stroke">
+<h2>笔触<a class="headerlink" href="#stroke" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id1">
+<img alt="../_images/sculpt-paint_stroke-curve_stroke-panel.png" src="../_images/sculpt-paint_stroke-curve_stroke-panel.png" />
+<p class="caption"><span class="caption-text">笔触面板。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>笔触模式 <kbd class="kbd docutils literal notranslate">E</kbd></dt><dd><p>选择笔刷的笔触作用到画布的方式。</p>
+<dl>
+<dt>点</dt><dd><p>鼠标每移动一步绘制一次。</p>
+</dd>
+<dt>拖拽点</dt><dd><p>通过在画布拖拽鼠标产生一个笔触数据。</p>
+</dd>
+<dt>间隔</dt><dd><p>创建由连续的点组成的笔触, 通过点 <em>间隔</em> 确定其行距(间距)。</p>
+<dl>
+<dt>间距</dt><dd><p>相对笔刷半径的百分比。</p>
+<p>限制笔刷应用距离为指定间距。</p>
+</dd>
+</dl>
+</dd>
+<dt>喷枪</dt><dd><p>只要按住鼠标不放并持续移动笔刷就能持续产生喷绘效果。而其它模式的笔刷改变位置时仅仅修改颜色。这个选项不适用于 <em>抓取(移动)</em> 雕刻笔刷。</p>
+<dl class="simple">
+<dt>比率</dt><dd><p>喷枪的颜料间隔。</p>
+</dd>
+</dl>
+</dd>
+<dt>锚定</dt><dd><p>在笔刷的位置创建一个笔触区。可以通过拖拽改变笔触区域直径的大小。</p>
+<dl class="simple">
+<dt>边到边</dt><dd><p>笔刷位置和方向由两个点决定, 其中第一次单击是一个点, 而拖动会产生与第一个点相对应的第二个点，两点距离是笔刷直径。</p>
+</dd>
+</dl>
+</dd>
+<dt>直线</dt><dd><p>让你在屏幕区域内通过点击和拖拽画出一条直线。 直线是通过 <em>间隔</em> 分离的，类似于间隔笔触。 按 <kbd class="kbd docutils literal notranslate">Alt</kbd> 可约束直线角度增量为45°。</p>
+</dd>
+<dt>曲线</dt><dd><p>在屏幕上画曲线，曲线笔触同样也使用 <em>间隔</em> 。</p>
+<dl class="simple">
+<dt>绘制曲线</dt><dd><p>通过使用 <a class="reference internal" href="../interface/controls/templates/data_block.html#ui-data-block"><span class="std std-ref">数据块菜单</span></a> 菜单将重复使用的笔触曲线选择并保存起来。</p>
+</dd>
+<dt>添加点 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd></dt><dd><p>你可以用 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 控制额外的曲线控制点。 控制鼠标拖拽在选定前松开鼠标 按键。</p>
+</dd>
+<dt>变换点</dt><dd><p>使用 <kbd class="kbd docutils literal notranslate">LMB</kbd> 拖动控制点和手柄。 要使控制点对称可以用 <kbd class="kbd docutils literal notranslate">Shift-LMB</kbd> 拖动它们。 支持位移、缩放和旋转变换操作。</p>
+</dd>
+<dt>选择</dt><dd><p>可以使用 <kbd class="kbd docutils literal notranslate">RMB</kbd> 单独选择手柄, 也可以通过 <kbd class="kbd docutils literal notranslate">Shift-RMB</kbd> 扩大选择范围，还可以用 <kbd class="kbd docutils literal notranslate">A</kbd> 进行取消或全选。</p>
+</dd>
+<dt>删除顶点 <kbd class="kbd docutils literal notranslate">X</kbd></dt><dd><p>可以用 <kbd class="kbd docutils literal notranslate">X</kbd> 删除曲线顶点。</p>
+</dd>
+<dt>绘制曲线 <kbd class="kbd docutils literal notranslate">Return</kbd></dt><dd><p>用 <kbd class="kbd docutils literal notranslate">Return</kbd> 或绘制曲线按钮确认制作的曲线。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>抖动</dt><dd><p>绘制期间抖动笔刷绘制位置。</p>
+</dd>
+<dt>平滑笔触 <kbd class="kbd docutils literal notranslate">Shift-S</kbd></dt><dd><p>平滑鼠标刷过的路径。</p>
+<dl class="simple">
+<dt>半径</dt><dd><p>设置笔刷持续前跟最后绘制的点之间的最小距离。</p>
+</dd>
+<dt>系数</dt><dd><p>设置笔刷的平滑数量。</p>
+</dd>
+</dl>
+</dd>
+<dt>输入采样</dt><dd><p>相邻的鼠标位置（输入样本）被平均一起计算平滑笔触。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="curve">
+<h2>曲线<a class="headerlink" href="#curve" title="Permalink to this headline">¶</a></h2>
+<p>这曲线允许你控制笔刷 <em>强度</em> 衰减。从笔刷中心点（左边的曲线）朝向它的边界（右边的曲线）衰减。改变曲线的形状笔刷变软或变硬。阅读关于使用 <a class="reference internal" href="../interface/controls/templates/curve.html#ui-curve-widget"><span class="std std-ref">曲线部件</span></a> 的更多信息。</p>
+<div class="figure align-center" id="id2">
+<img alt="../_images/sculpt-paint_stroke-curve_brush-curve.png" src="../_images/sculpt-paint_stroke-curve_brush-curve.png" />
+<p class="caption"><span class="caption-text">笔刷曲线示例。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="painting/index.html" class="btn btn-neutral float-right" title="绘制" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="texture_tex_mask.html" class="btn btn-neutral float-left" title="纹理和纹理遮罩" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

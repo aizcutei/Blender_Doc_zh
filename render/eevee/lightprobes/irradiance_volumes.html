@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>辐射体积 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/eevee/lightprobes/irradiance_volumes.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="立方体反射" href="reflection_cubemaps.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lighting/index.html">灯光</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Eevee 渲染器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../world.html">世界</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lamps.html">灯光</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shadows.html">阴影</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../volumetrics.html">Volumetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../screen_space_effects/index.html">屏幕空间效果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indirect_lighting.html">间接照明缓存</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">光照探头</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">辐射体积</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reflection_cubemaps.html">立方体反射</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reflection_planes.html">反射平面</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../motion_blur.html">运动模糊</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bloom.html">泛光</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../depth_of_field.html">景深</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../limitations.html">限制</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cycles/index.html">Cycles渲染引擎</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">工作流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opengl.html">OpenGL渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audio/index.html">音频渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="../index.html">Eevee 渲染器</a> &raquo;</li>
+        
+          <li><a href="index.html">光照探头</a> &raquo;</li>
+        
+      <li>辐射体积</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/render/eevee/lightprobes/irradiance_volumes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="irradiance-volumes">
+<h1>辐射体积<a class="headerlink" href="#irradiance-volumes" title="Permalink to this headline">¶</a></h1>
+<p>间接光漫射被存在体积阵列中。这些都是通过辐射体积物体定义的。它们用于控制如何在世界里放置阵列，以及其分辨率。</p>
+<p>选中辐射体积时出现的那些圆点就是计算光照的位置。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../indirect_lighting.html"><span class="doc">间接光</span></a>.</p>
+</div>
+<p>如果启用环境光遮蔽，它将被应用至间接光散射。如果同时启用环境光遮蔽与 <em>Bent Normals</em>，将从被遮蔽最少的方向采样，结果更准确。</p>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">物体数据 ‣ 探头</span></p>
+</dd>
+</dl>
+</div>
+<dl>
+<dt>距离</dt><dd><p>探头物体仅影响其邻近表面的光照，其作用区域由距离参数与物体定义。各探头类型间有细微差别。</p>
+<p>对于辐射体积而言，体积内部的影响总是100%。其影响只有在体积外部才会发生衰减，直到距离达到设定的距离参数值(自身空间)。</p>
+</dd>
+<dt>衰减</dt><dd><p>影响距离的百分比，探头的影响沿其线性衰减。</p>
+</dd>
+<dt>强度</dt><dd><p>被记录的光照的强度系数。将该参数值设为1.0之外的傎都不是物理正确的。用于微调或艺术目的。</p>
+</dd>
+<dt>分辨率</dt><dd><p>每个辐射体积探头的空间分辨率是独立的。其自身体积被分成指定尺寸的栅格。每个栅格的小格子都将被计算一次辐射采样。</p>
+</dd>
+<dt>范围限制</dt><dd><p>定义当捕捉屏幕时的近距与远距裁减。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>裁切距离被应用于采样位置，而 <em>非</em> 栅格原点。</p>
+</div>
+</dd>
+<dt>可见性集合</dt><dd><p>有时，限制探头捕捉光照时出现物体很有用。比如，当一个物体距离捕捉点过近时，最好将其剔除。这就是可见性集合的用处。只有在该集合内的物体才会在探头捕捉场景时可见。</p>
+<p>另有一个选项可以反转该行为, 并有效地隐藏此集合中的物体。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>这仅仅是一个过滤选项。如果一个物体在渲染时不可见，它在探头渲染器中也是不可见的。</p>
+</div>
+</dd>
+</dl>
+<div class="section" id="visibility">
+<h2>可见性<a class="headerlink" href="#visibility" title="Permalink to this headline">¶</a></h2>
+<p>为每个栅格点渲染一张差异阴影图。可见性立方体用于减少遮挡物背后的漏光。用户可以调整渲染设置里的尺寸，以及探头属性选项卡里每个栅格的偏差和模糊系数。</p>
+<blockquote>
+<div><dl class="simple">
+<dt>偏差</dt><dd><p>降低自身阴影。</p>
+</dd>
+<dt>出血偏移量</dt><dd><p>提高深度测试结果的 &quot;对比度&quot;。</p>
+</dd>
+<dt>模糊</dt><dd><p>在过滤可见性阴影图时应用的模糊程度。不会增加运行消耗，对烘焙时间影响很小。</p>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="blending">
+<h2>混合<a class="headerlink" href="#blending" title="Permalink to this headline">¶</a></h2>
+<p>来自辐射体积的光照数值会向外衰减，直至体积边界。它们会融入世界光照或者另一个辐射体积光照。</p>
+<p>如果多个辐射体积重叠，体积较小的总是优先。</p>
+<p>如果物体不在任何辐射体积内部，或者间接光没有烘焙，将使用世界漫射光对其进行着色。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul class="simple">
+<li><p>在点亮室内环境时，尽量使栅格与房间尺寸一致。</p></li>
+<li><p>尽量不要在空白区域或者光照差异较小的区域添加过多的分辨率。</p></li>
+<li><p>可以通过在问题区域增加一个小的栅格来解决坏采样。</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="resolution">
+<h2>分辨率<a class="headerlink" href="#resolution" title="Permalink to this headline">¶</a></h2>
+<p>每个辐射体积探头的空间分辨率是独立的。其自身体积被分成指定尺寸的栅格。每个栅格的小格子都将被计算一次辐射采样。</p>
+</div>
+<div class="section" id="viewport-display">
+<h2>视图显示<a class="headerlink" href="#viewport-display" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>影响</dt><dd><p>在3D视图中显示影响边界。靠内的球体是衰减开始的地方。</p>
+</dd>
+<dt>范围限制</dt><dd><p>在3D 视图中显示裁减距离。</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="reflection_cubemaps.html" class="btn btn-neutral float-right" title="立方体反射" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>结构 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/structure.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="基本体" href="primitives.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">结构</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vertices">顶点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edges">边</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#faces">面</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loops">循环</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mesh_display.html">网格显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mesh_analysis.html">网格分析</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="index.html">网格</a> &raquo;</li>
+        
+      <li>结构</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modeling/meshes/structure.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="structure">
+<h1>结构<a class="headerlink" href="#structure" title="Permalink to this headline">¶</a></h1>
+<p>对于一切网格，都是由三个基本结构构成的： <em>顶点</em>，<em>边</em> 和 <em>面</em>。</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/modeling_meshes_structure_example.svg"><img alt="../../_images/modeling_meshes_structure_example.svg" src="../../_images/modeling_meshes_structure_example.svg" width="600px" /></a>
+<p class="caption"><span class="caption-text">网格结构示例。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="vertices">
+<h2>顶点<a class="headerlink" href="#vertices" title="Permalink to this headline">¶</a></h2>
+<p>网格中最基本的部分是3D空间中单独的点或位置。顶点存储在坐标数组中。</p>
+<p>通常在渲染和 <em>物体模式</em> 中不可见。不要将对象的 <a class="reference internal" href="../../editors/3dview/object/origin.html"><span class="doc">原点</span></a> 误认为顶点。它看起来很相似，但它更大，而且不能选中。</p>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/modeling_meshes_structure_cube-example.png" src="../../_images/modeling_meshes_structure_cube-example.png" />
+<p class="caption"><span class="caption-text">顶点被标记为“A”；“B”是原点。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="edges">
+<h2>边<a class="headerlink" href="#edges" title="Permalink to this headline">¶</a></h2>
+<p>边是连接两个顶点之间的直线。当你在线框视图查看网格时边是“线”。这些线条通常不会出现在渲染图像上。它们用于构造面。</p>
+</div>
+<div class="section" id="faces">
+<h2>面<a class="headerlink" href="#faces" title="Permalink to this headline">¶</a></h2>
+<p>面是用于构造物体的真实表面。渲染网格后其实看到的就是这些面。如果某区域不包含面，则在渲染图像中将显示为透明的或不存在的。</p>
+<p>三个(三角面)，四个(四边面)或更多(n边面)顶点之间的区域定义为面，每侧都有一条边，通常缩写为 <em>tris，quads ＆ n-gons</em>。</p>
+<p>三角形总是平坦的，因此易于计算。另一方面，四边形 “利于形变”，因此常用于动画和细分建模。</p>
+<p>尽管可以使用三角形面构建一个立方体，但是在 <em>编辑模式</em> 中会看起来很混乱。</p>
+</div>
+<div class="section" id="loops">
+<h2>循环<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id3">
+<span id="fig-mesh-topo-loop"></span><img alt="../../_images/modeling_meshes_structure_edge-face-loops.png" src="../../_images/modeling_meshes_structure_edge-face-loops.png" />
+<p class="caption"><span class="caption-text">边和面循环。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p><em>边</em> 和 <em>面循环</em> 是形成连续“循环”的一组面或边，如上图 <a class="reference internal" href="#fig-mesh-topo-loop"><span class="std std-ref">边和面循环。</span></a> 所示。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>请注意，循环(2和4)不能围绕整个模型。循环在所谓的极点上中断，因为没有从极点继续循环的路径。极点是连接到三个，五个或更多边的顶点。因此，与一条，两条或四条边连接的顶点不是极点。</p>
+</div>
+<p>在上图中，不在极点中断的循环是闭合的(1和3)。它们开始和结束的顶点是相同的，并将模型分成两个部分。在处理网格的特定连续区域时，循环是一个快捷和强大的工具，这也是活体角色动画的先决条件。有关如何在Blender中使用循环的详细说明，请参阅： <a class="reference internal" href="selecting/advanced.html"><span class="doc">进阶选择</span></a> 。</p>
+<div class="section" id="edge-loops">
+<span id="modeling-mesh-structure-edge-loops"></span><h3>边循环<a class="headerlink" href="#edge-loops" title="Permalink to this headline">¶</a></h3>
+<p>图 <a class="reference internal" href="#fig-mesh-topo-loop"><span class="std std-ref">边和面循环。</span></a> 中1和2为边循环。循环边上的顶点需满足：每个顶点正好有两个不在循环中，且分别位于循环两侧的相邻顶点(极点情形下的首尾端点例外)。</p>
+<p>边循环是一个重要的概念，特别是在生物(细分)建模和角色动画中。正确使用的话，可以使用相对少的顶点构造模型，使其用在细分表面和变形动画时，看起来非常自然。</p>
+<p>以机体建模中的 <a class="reference internal" href="#fig-mesh-topo-loop"><span class="std std-ref">边和面循环。</span></a> 为例：边循环沿着皮肤和底层肌肉的自然轮廓和变形线，并且在角色移动时变形更多的区域(比如肩膀或者膝盖)，边循环更密集。</p>
+<p>有关使用边循环的更多详细信息，请参见： <a class="reference internal" href="selecting/edges_faces.html#modeling-meshes-selecting-edge-loops"><span class="std std-ref">循环边选择</span></a> 。</p>
+</div>
+<div class="section" id="face-loops">
+<h3>面循环<a class="headerlink" href="#face-loops" title="Permalink to this headline">¶</a></h3>
+<p>这些是边循环的逻辑延伸，它们由两个边循环之间的面组成，如图 <a class="reference internal" href="#fig-mesh-topo-loop"><span class="std std-ref">边和面循环。</span></a> 中的循环(3和4)所示。请注意，对于非闭合循环(4)，包含极点的面不包括在面循环中。</p>
+<p>有关使用面循环的更多详细信息，请参见 <a class="reference internal" href="selecting/edges_faces.html#modeling-meshes-selecting-face-loops"><span class="std std-ref">面循环选择</span></a>。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="primitives.html" class="btn btn-neutral float-right" title="基本体" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

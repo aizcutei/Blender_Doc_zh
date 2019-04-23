@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Action Constraint 动作关系约束 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/rigging/constraints/relationship/action.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Armature Constraint" href="armature.html" />
+    <link rel="prev" title="Track To Constraint 标准跟随约束" href="../tracking/track_to.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">约束</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#interface">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#motion-tracking">运动追踪</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#transform">变换</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#tracking">追踪</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#relationship">关系</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Action Constraint  动作关系约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="armature.html">Armature Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="child_of.html">Child Of Constraint 子级约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="floor.html">Floor Constraint 基面约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="follow_path.html">跟随路径约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pivot.html">Pivot Constraint 轴心约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rigid_body_joint.html">Rigid Body Joint Constraint 刚体关节约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shrinkwrap.html">Shrinkwrap Constraint 缩裹约束</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../armatures/index.html">骨架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lattice.html">Lattice 晶格</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">绑定</a> &raquo;</li>
+        
+          <li><a href="../index.html">约束</a> &raquo;</li>
+        
+      <li>Action Constraint  动作关系约束</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/rigging/constraints/relationship/action.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="action-constraint">
+<span id="bpy-types-actionconstraint"></span><h1>Action Constraint  动作关系约束<a class="headerlink" href="#action-constraint" title="Permalink to this headline">¶</a></h1>
+<p><em>动作关系</em> 约束是非常强大的。它允许你使用另一个物体的变换控制 <a class="reference internal" href="../../../editors/dope_sheet/action.html"><span class="doc">动作</span></a> 。</p>
+<p><em>动作关系</em> 约束的基本思想非常类似于 <a class="reference internal" href="../../../animation/drivers/index.html"><span class="doc">驱动</span></a> ，只是前者使用于整个动作（即一堆相同类型的 F 曲线），而后者则控制“自身”的单一F曲线…</p>
+<p>请注意，即使该约束接受 <em>网格</em> 操作类型，但只有 <em>物体</em> ， <em>姿势</em> 和 <em>约束</em> 类型才会真正的工作（起作用），因为约束只能影响物体或骨骼的变换属性，而不能影响网格的形状。还要注意，只有物体变换（位置、旋转、缩放）受动作影响，如果动作包含其他关键帧属性它们将会被忽略的，作为约束不会影响那些属性。</p>
+<p>作为一个例子，让我们假设你已经定义了一个 <em>物体</em> 动作（它可以被指定给任何物体，甚至不指定物体），并通过 <em>行动</em> 约束已映射到你的自身，使目标在（0.0到2.0）范围内沿着它的X轴映射动作内容在其自身（0到100）帧范围内移动。这将意味着当目标的 <em>X</em> 属性为0.0时，自身将如同在链接动作的第0帧中一样;目标的 <em>X</em> 属性为1.0，自身将如同在链接动作的第50帧中一样。</p>
+<div class="section" id="options">
+<h2>Options 选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id1">
+<img alt="../../../_images/rigging_constraints_relationship_action_panel.png" src="../../../_images/rigging_constraints_relationship_action_panel.png" />
+<p class="caption"><span class="caption-text">动作关系面板。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>Target 目标</dt><dd><p><a class="reference internal" href="../../../interface/controls/templates/data_block.html#ui-data-id"><span class="std std-ref">数据ID</span></a> 用于选择约束目标， 当它为无（none）时不起作用（红色状态）。</p>
+</dd>
+<dt>Bone 骨骼</dt><dd><p>当目标是骨架物体时，请使用此字段来选择目标骨骼。</p>
+</dd>
+<dt>Transform Channel 形变通道</dt><dd><p>该选择控件选择从目标使用“动作驱动”的哪个变换属性（沿/围绕它那个轴位置，旋转或缩放）。</p>
+</dd>
+<dt>Target Space 目标空间</dt><dd><p>此约束允许您选择在哪个空间计算其目标的变换属性。</p>
+</dd>
+<dt>To Action 到动作</dt><dd><p>选择要使用的动作的名称。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>尽管它可能不处于红色状态（UI刷新问题），但当该字段不包含有效的动作时，此约束显然不起作用。</p>
+</div>
+</dd>
+<dt>Object Action 物体动作</dt><dd><p>当它启用时 <strong>仅仅</strong> 用于骨骼，此选项将使受约束的骨骼使用链接动作的“物体”部分，而不是“同样命名的姿势”部分。这允许你将物体的动作用应用于骨骼。</p>
+</dd>
+<dt>Target Range Min/Max  目标范围</dt><dd><p>驱动变换属性值的下限和上限。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>不幸的是，我们再次发现约束局限性：</p>
+<ul class="simple">
+<li><p>当使用旋转属性作为&quot;驱动&quot;，这些值&quot;重新映射&quot;到(180.0 到-180.0) 的范围。</p></li>
+<li><p>当使用缩放属性作为&quot;驱动&quot;，这些值被限制为null或正值。</p></li>
+</ul>
+</div>
+</dd>
+<dt>Action Range Start/End 动作范围</dt><dd><p>要映射的动作的开始和结束帧。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>这些值必须严格正数。</p></li>
+<li><p>这两个值默认为0，即禁用映射（即自身只获取在链接动作的第0帧定义的属性...）。</p></li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="notes">
+<h2>Notes 注意<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>当链接的动作影响某些位置属性时，将自身的现有位置添加到此约束的计算结果中就如 <a class="reference internal" href="../transform/copy_location.html"><span class="doc">复制位置约束</span></a> 启用 <em>Offset偏移量</em> 那样】。</p></li>
+<li><p>当链接的动作影响某些缩放属性时，自身的现有缩放乘以此约束的计算结果。</p></li>
+<li><p>当链接动作影响某些旋转属性时，自身的现有旋转将被此约束的计算结果所覆盖。</p></li>
+<li><p>与通常不同的是，你可以有 <em>Start</em> 值高于 <em>End</em> 值，或者 <em>Min</em> 高于 <em>Max</em> 值：这将反转动作的映射（即将“播放”反转...），除非你们两套都显然颠倒了！</p></li>
+<li><p>当使用 <em>约束</em> 动作时，它是约束 <em>通道</em> 名称，用来决定自身的哪些约束应用于该动作。例如，如果你有一个约束通道命名为“trackto_empt1”，其键 <em>影响</em> 或 <em>起始/结束</em> 值（唯一可以键入的）将被映射到的自身的约束命名为“trackto_empt1”那一个。</p></li>
+<li><p>同样，当使用 <em>Pose（姿势）</em> 动作时（这显然当它约束骨骼时才有意义和能够工作！），它是用来确定那一个来自动作的骨骼 <em>channel's names（通道名）</em> 被使用。（例如，如果受约束的骨骼被命名为“手臂（arm）”，它将使用并且仅使用名为“手臂（arm）”的动作的骨骼通道...）。不幸的是，在整个骨架对象上使用 <em>Pose</em> 动作（一次影响动作中的所有关键骨骼）将不起作用...</p></li>
+<li><p>请注意，你可以使用 <a class="reference internal" href="../../armatures/properties/pose_library.html"><span class="doc">姿态库功能</span></a> 创建/编辑 <em>Pose（姿势）</em> 动作数据块…只要记住，在这种情况下，每帧有一个姿势！</p></li>
+</ul>
+<iframe src="https://player.vimeo.com/video/171554048" style="border: 0; height: 345px; width: 560px">
+</iframe></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="armature.html" class="btn btn-neutral float-right" title="Armature Constraint" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../tracking/track_to.html" class="btn btn-neutral float-left" title="Track To Constraint 标准跟随约束" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

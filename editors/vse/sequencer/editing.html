@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>编辑 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/vse/sequencer/editing.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="复合片段" href="meta.html" />
+    <link rel="prev" title="选择" href="selecting.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../3dview/index.html">3D视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">视频序列编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">序列编辑器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../preview/index.html">预览</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../index.html">视频序列编辑器</a> &raquo;</li>
+        
+          <li><a href="index.html">序列编辑器</a> &raquo;</li>
+        
+      <li>编辑</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/editors/vse/sequencer/editing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editing">
+<h1>编辑<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="grab-move">
+<h2>拖拽 / 移动<a class="headerlink" href="#grab-move" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">片段 ‣ 拖拽/移动</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">G</kbd></p>
+</dd>
+</dl>
+</div>
+<p>按住 <kbd class="kbd docutils literal notranslate">RMB</kbd>，然后在时间轴或在通道上移动鼠标拖拽活动片段。按 <kbd class="kbd docutils literal notranslate">G</kbd> 移动所有选中的片段。在时间轴上水平移动鼠标（左/右）更改片段的位置。垂直移动（上/下）以更改通道。</p>
+<p>按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 时拖动吸附到其他片段的起点和终点。鼠标相对于选择的位置影响片段被吸附的位置。如果它更接近选择的开始，则选择的开始帧将被吸附，否则结束帧将被吸附。</p>
+<p>要“波纹编辑” (腾出空间让你拖动) 放置片段时，按住 <kbd class="kbd docutils literal notranslate">Alt</kbd> 。</p>
+<p>您也可以通过以下方式 <kbd class="kbd docutils literal notranslate">X</kbd> 将方向锁定为时间或 <kbd class="kbd docutils literal notranslate">Y</kbd> 更改片段的通道。</p>
+<div class="section" id="start-frame-offset">
+<h3>开始帧偏移<a class="headerlink" href="#start-frame-offset" title="Permalink to this headline">¶</a></h3>
+<p>该片段的 <em>开始帧偏移</em> 可通过 <kbd class="kbd docutils literal notranslate">RMB</kbd> 单击片段左侧箭头上的来选择; 按住它（或者按下 <kbd class="kbd docutils literal notranslate">G</kbd> 抓取它然后左右移动鼠标）会将片段内的起始帧改变为移动的帧数。片段的帧号标签显示片段的起始帧。</p>
+<ul class="simple">
+<li><p>如果你有一个包含20张图像的序列片段，并将向左的箭头向右拖动10帧，则片段将从图像11开始（图像1到10将被跳过）。使用它来裁剪卷起或无用的导入。</p></li>
+<li><p>向左拖动左箭头将创建第一帧的导入（副本）。当你需要在剪辑开始时进行转换帧时，请使用此帧。</p></li>
+</ul>
+</div>
+<div class="section" id="end-frame">
+<h3>结束帧<a class="headerlink" href="#end-frame" title="Permalink to this headline">¶</a></h3>
+<p>可以通过  <kbd class="kbd docutils literal notranslate">RMB</kbd> 点击片段右箭头上来选择片段的*结束帧* ；按住它（或按下 <kbd class="kbd docutils literal notranslate">G</kbd> 抓取），然后移动鼠标更改片段内的结束帧。片段的帧号标签显示片段的结束帧。</p>
+<ul class="simple">
+<li><p>向左拖动向右箭头可缩短剪辑; 尾部的任何原始图像都将被忽略。使用它可以快速剪下roll-down。</p></li>
+<li><p>向右拖动右箭头扩展了剪辑。对于电影和图像序列，将使用更多的动画直到用完。将剪辑扩展到最后会导致Blender制作最后一幅图像的副本。使用此从剪辑中跳出。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>多重选择</p>
+<p>你可以通过  <kbd class="kbd docutils literal notranslate">Shift-RMB</kbd>  点击选择多个（句柄）片段：  当你按 <kbd class="kbd docutils literal notranslate">G</kbd> 时，所选的所有东西都会随着你的鼠标一起移动 - 这意味着，例如，你可以同时移动一个片段，缩短另外两个，并且扩展第四个。</p>
+</div>
+</div>
+</div>
+<div class="section" id="grab-extend-from-frame">
+<h2>从帧抓取/扩展<a class="headerlink" href="#grab-extend-from-frame" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">片段 ‣ Grab/Extend from Frame</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">E</kbd></p>
+</dd>
+</dl>
+</div>
+<p>选择多个片段后，按下 <kbd class="kbd docutils literal notranslate">E</kbd> 可让你交互地延伸片段。这与抓取相似，但对于在当前帧周围延长（或缩短）时间很有用。</p>
+<p>当前帧指示器的“鼠标侧边”的所有选定的片段句柄将一起变换，这样你可以更改当前帧的持续时间。</p>
+</div>
+<div class="section" id="slip-strip-content">
+<h2>滑动片段内容<a class="headerlink" href="#slip-strip-content" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">片段 ‣ Slip Strip Content</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">S</kbd></p>
+</dd>
+</dl>
+</div>
+<p>滑动工具允许你更改片段内容的位置而不移动片段本身。</p>
+</div>
+<div class="section" id="tools">
+<h2>工具<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>擦除片段 <kbd class="kbd docutils literal notranslate">X</kbd>, <kbd class="kbd docutils literal notranslate">Delete</kbd></dt><dd><p>删除选定的片段。</p>
+</dd>
+<dt>复制片段 <kbd class="kbd docutils literal notranslate">Shift-D</kbd></dt><dd><p>复制一个片段以创建未链接的副本; 拖动它到一个时间和通道，然后 <kbd class="kbd docutils literal notranslate">LMB</kbd> 单击放下。</p>
+</dd>
+<dt>清除片段偏移量 <kbd class="kbd docutils literal notranslate">Alt-O</kbd></dt><dd><p>重置（软）开始/结束帧句柄。</p>
+</dd>
+</dl>
+<p>片段菜单包含用于使用片段的其他工具：</p>
+<ul class="simple">
+<li><p>插入/移除间隙</p></li>
+<li><p>逐行扫描影片</p></li>
+<li><p>设置渲染尺寸</p></li>
+<li><p>重新加载片段</p></li>
+<li><p>交换输入</p></li>
+<li><p>锁定片段</p></li>
+<li><p>解锁片段</p></li>
+<li><p>交换片段</p></li>
+</ul>
+</div>
+<div class="section" id="snap-strips">
+<h2>吸附片段<a class="headerlink" href="#snap-strips" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">片段 ‣ 吸附片段</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Shift-S</kbd></p>
+</dd>
+</dl>
+</div>
+<p>将你的光标（垂直绿线）定位到你想要的时间。吸附到当前帧以准确地在帧的开始处开始一个片段。如果时间显示以秒为单位，则可以通过缩放显示来获得秒的小数部分;你可以一直到一个单独的帧。</p>
+</div>
+<div class="section" id="separate-images">
+<h2>分离图像<a class="headerlink" href="#separate-images" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">片段 ‣ 分离图像</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Y</kbd></p>
+</dd>
+</dl>
+</div>
+<p>仅适用于图像序列 - 将片段转换为多个片段，每个帧一条片段。用于幻灯片放映以及其他你希望在非连续图像中引入一组内容的情况。</p>
+<dl class="simple">
+<dt>长度</dt><dd><p>你必须指定你想要的片段的持续时间。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="reassign-inputs">
+<h2>重新指定输入项<a class="headerlink" href="#reassign-inputs" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">片段 ‣ 重新指定输入项</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">R</kbd></p>
+</dd>
+</dl>
+</div>
+<p>This tool can be used to assign (reconnect) effect strips in a different way.
+Just select three arbitrary strips and press <kbd class="kbd docutils literal notranslate">R</kbd>.
+If you don't create a cycle, those will be connected to a new effect chain.</p>
+</div>
+<div class="section" id="cut-soft-at-frame">
+<h2>在当前帧处切割(平滑)<a class="headerlink" href="#cut-soft-at-frame" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">片段 ‣ Cut (soft) at Frame</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">K</kbd></p>
+</dd>
+</dl>
+</div>
+<p>这将在当前帧中将选定的片段切成两半。这将导致两片段使用相同源的片段，适合原始片段的时间和长度。</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>这可以认为是复制当前片段的快速方法，调整起始/结束帧以形成两个不重叠的片段，显示与以前相同的内容。</p>
+</div>
+</div>
+<div class="section" id="cut-hard-at-frame">
+<h2>在当前帧处切割(硬性)<a class="headerlink" href="#cut-hard-at-frame" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">片段 ‣ Cut (hard) at Frame</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Shift-S</kbd></p>
+</dd>
+</dl>
+</div>
+<p>Like <em>Cut (soft) at Frame</em>, it cuts a strip in two distinct strips;
+however you will not be able to drag the endpoints to show the frames past the cut of each resulting strip.</p>
+<p>虽然你可以在 <em>片段输入</em> 面板中调整 <a class="reference internal" href="properties/input.html#sequencer-duration-hard"><span class="std std-ref">范围 (硬性)</span></a> 的数字按钮。</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>这可以被认为是模拟将视频文件分割为两部分的方式，用每个部分替换当前片段。</p>
+</div>
+</div>
+<div class="section" id="mute">
+<h2>禁用<a class="headerlink" href="#mute" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>禁用片段 <kbd class="kbd docutils literal notranslate">H</kbd></dt><dd><p>禁用所选片段。</p>
+</dd>
+<dt>解锁片段 <kbd class="kbd docutils literal notranslate">Alt-H</kbd></dt><dd><p>解锁所有片段。</p>
+</dd>
+<dt>禁用未选中的片段 <kbd class="kbd docutils literal notranslate">Shift-H</kbd></dt><dd><p>你可以禁用除选定的所有片段。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="change">
+<span id="sequencer-edit-change"></span><h2>更改<a class="headerlink" href="#change" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性栏 ‣ 片段输入</span></p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">片段 ‣ Change</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">C</kbd></p>
+</dd>
+</dl>
+</div>
+<p>更改序列操作修改选定片段上的文件路径或特效的输入/类型。</p>
+<dl class="simple">
+<dt>特效</dt><dd><p>切换所选特效片段上的特效。</p>
+</dd>
+<dt>路径/文件</dt><dd><p>更改选定片段中包含的源文件。</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="meta.html" class="btn btn-neutral float-right" title="复合片段" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="selecting.html" class="btn btn-neutral float-left" title="选择" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

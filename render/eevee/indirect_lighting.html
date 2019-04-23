@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>间接照明缓存 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/eevee/indirect_lighting.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="光照探头" href="lightprobes/index.html" />
+    <link rel="prev" title="次表面散射" href="screen_space_effects/subsurface_scattering.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lighting/index.html">灯光</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Eevee 渲染器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="world.html">世界</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lamps.html">灯光</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shadows.html">阴影</a></li>
+<li class="toctree-l3"><a class="reference internal" href="volumetrics.html">Volumetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="screen_space_effects/index.html">屏幕空间效果</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">间接照明缓存</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#light-bounce">光反弹</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#indirect-lighting">间接照明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lightprobes/index.html">光照探头</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motion_blur.html">运动模糊</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bloom.html">泛光</a></li>
+<li class="toctree-l3"><a class="reference internal" href="depth_of_field.html">景深</a></li>
+<li class="toctree-l3"><a class="reference internal" href="limitations.html">限制</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles渲染引擎</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">工作流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../audio/index.html">音频渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="index.html">Eevee 渲染器</a> &raquo;</li>
+        
+      <li>间接照明缓存</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/render/eevee/indirect_lighting.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="indirect-lighting-cache">
+<h1>间接照明缓存<a class="headerlink" href="#indirect-lighting-cache" title="Permalink to this headline">¶</a></h1>
+<p>虽然不完全正确，但在Eevee中，所有不是直接从灯光物体发出的照明都被认为是间接照明。这意味着远方的HDRI照明(或世界)被认为是间接照明。使用Emission（发射）节点的网格物体也被认为是间接照明。</p>
+<p>在Eevee中，间接照明分为两个部分：漫反射和高光反射。两者都有不同的需求和代表性。为了提高效率，间接照明数据根据需要预先计算到静态照明缓存中。</p>
+<p>到目前为止，光缓存是静态的，需要在渲染之前计算。它不能被每帧更新（除非通过脚本）。这个限制正在被解决中，并会在将来的版本中移除。</p>
+<p>只能查看独立照明。这就是为什么Reflection Planes（反光板)不存储在光缓存中的原因。</p>
+<p>烘焙过程中使用的是当前活动视图层中的可见物体和集合。</p>
+<div class="section" id="light-bounce">
+<h2>光反弹<a class="headerlink" href="#light-bounce" title="Permalink to this headline">¶</a></h2>
+<p>为了使光线在大环境中反弹, 光烘焙过程可以运行多次, 同时将以前的烘焙结果注入烘焙。整体烘培时间或多或少会因为反弹次数而倍增。</p>
+<p>光反弹只涉及漫反射照明。</p>
+</div>
+<div class="section" id="indirect-lighting">
+<h2>间接照明<a class="headerlink" href="#indirect-lighting" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">渲染 ‣ 间接光照明</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>自动烘焙</dt><dd><p>启用此选项将在更改探针时触发烘焙。定位探针物体时很有用。</p>
+</dd>
+<dt>漫反射</dt><dd><p>烘焙漫反射辐照度时计算的反弹次数。</p>
+</dd>
+<dt>立方体贴图尺寸</dt><dd><p>立方体反射贴图的尺寸。</p>
+</dd>
+<dt>漫反射遮蔽尺寸</dt><dd><p>每个辐照度样本还存储一个阴影图, 用于最大限度地减少间接光线泄漏。此参数定义此阴影贴图的大小。</p>
+</dd>
+<dt>辐照度平滑</dt><dd><p>平滑辐照度插值，但引入光出血。辐照度能见度项可以使照明不在某些表面上平滑地插值。这减轻插值了权重。</p>
+</dd>
+<dt>钳制光泽</dt><dd><p>钳制像素强度，以减少反射立方体内光泽反射的噪点（0为禁用）。</p>
+</dd>
+<dt>过滤质量</dt><dd><p>在立方体贴图过滤期间增大采样以删除瑕疵。目前只对立方体贴图有效</p>
+</dd>
+<dt>立方体贴图显示</dt><dd><p>在3D视图中直接显示缓存中存在的反射立方体贴图。</p>
+</dd>
+<dt>辐照度显示</dt><dd><p>在3D视图中显示在缓存中存在的辐照度样本。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>缓存数据显示仅在视口中工作, 并且仅在视图在渲染模式下的外观开发模式下使用世界照明。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lightprobes/index.html" class="btn btn-neutral float-right" title="光照探头" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="screen_space_effects/subsurface_scattering.html" class="btn btn-neutral float-left" title="次表面散射" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>材质设置 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/eevee/materials/settings.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="世界" href="../world.html" />
+    <link rel="prev" title="节点支持" href="nodes_support.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lighting/index.html">灯光</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Eevee 渲染器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">材质</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nodes/index.html">节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nodes_support.html">节点支持</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">材质设置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../world.html">世界</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lamps.html">灯光</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shadows.html">阴影</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../volumetrics.html">Volumetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../screen_space_effects/index.html">屏幕空间效果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indirect_lighting.html">间接照明缓存</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lightprobes/index.html">光照探头</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../motion_blur.html">运动模糊</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bloom.html">泛光</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../depth_of_field.html">景深</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../limitations.html">限制</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cycles/index.html">Cycles渲染引擎</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">工作流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opengl.html">OpenGL渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audio/index.html">音频渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="../index.html">Eevee 渲染器</a> &raquo;</li>
+        
+          <li><a href="index.html">材质</a> &raquo;</li>
+        
+      <li>材质设置</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/render/eevee/materials/settings.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="material-settings">
+<h1>材质设置<a class="headerlink" href="#material-settings" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">材质 ‣ 选项</span></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="blend-mode">
+<h2>混合模式<a class="headerlink" href="#blend-mode" title="Permalink to this headline">¶</a></h2>
+<p>在计算一个表面的颜色后，Eevee需要知道如何将它添加到颜色缓冲区。根据混合模式的不同，最终的颜色会有所不同。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>加法、乘法和Alpha混合被认为是“透明”混合模式。这对屏幕空间效果有影响。</p>
+</div>
+<dl class="simple">
+<dt>不透明</dt><dd><p>前一种颜色将被表面颜色覆盖。alpha元素被忽略。这是最快的选择。</p>
+</dd>
+<dt>附加</dt><dd><p>表面颜色将被添加到之前的颜色。alpha值将用于混合表面颜色和中性颜色黑色(0.0, 0.0, 0.0)。</p>
+</dd>
+<dt>乘法</dt><dd><p>前一种颜色将乘以表面颜色。alpha值将用于混合表面颜色和中性白色(1.0, 1.0, 1.0)。</p>
+</dd>
+<dt>Alpha 裁切</dt><dd><p>前面的颜色将被表面颜色覆盖，但只有当alpha值高于裁切阈值时才会如此。</p>
+</dd>
+<dt>Alpha Hashed</dt><dd><p>前一种颜色将被表面颜色覆盖，但前提是alpha值高于随机裁切阈值。这种统计方法是有噪点的，但能够近似alpha混合没有任何排序问题。在渲染设置中增加采样计数将减少产生的噪点。</p>
+</dd>
+<dt>Alpha 混合</dt><dd><p>使用alpha混合将表面颜色覆盖在前一种颜色之上。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="sorting-problem">
+<h2>排序问题<a class="headerlink" href="#sorting-problem" title="Permalink to this headline">¶</a></h2>
+<p>使用透明混合模式写入颜色缓冲区时，颜色混合的顺序很重要，因为它可以更改最终的输出颜色。 截至目前，Eevee不支持每片段（像素）排序或每三角形排序。 只有每个物体排序可用，并且基于物体原点在所有透明表面上自动完成。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>每个物体的排序已经付出了代价，在场景中拥有数千个这样的物体将大大降低性能。</p>
+</div>
+<p>加法和乘法混合分别是顺序无关的。这意味着，如果用其中一种混合模式渲染的表面不与其他透明表面相交，那么该表面的所有三角形都将始终输出预期结果。即使这个表面的三角形彼此相交，这也是可行的。</p>
+<p>然而，这并不适用于Alpha混合，即使是三角形的顺序也很重要。在这种情况下，可以禁用*Show Backside*选项。</p>
+<dl class="simple">
+<dt>显示背面</dt><dd><p>如果启用，将渲染所有透明片段。 如果禁用，则仅渲染最前面的表面碎片。 禁用此选项可确保从任何视角正确显示透明。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="transparent-shadow">
+<h2>透明阴影<a class="headerlink" href="#transparent-shadow" title="Permalink to this headline">¶</a></h2>
+<p>用于这个透明表面的阴影类型。Eevee不支持彩色阴影贴图。</p>
+<p>通过在阴影贴图上使用散列透明阴影和较大的soft（柔化）值，可以生成半透明阴影。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This option does not change the behavior of contact shadows which are traced using the depth buffer.
+If the material is writing to the depth buffer
+(in other words, if the blend mode is set to either <em>Opaque</em>, <em>Alpha Clip</em> or <em>Alpha Hashed</em>),
+contact shadows will be casted by the surface material regardless of the <em>Transparent Shadow</em> type.</p>
+</div>
+<dl class="simple">
+<dt>无</dt><dd><p>表面不会投射任何阴影。</p>
+</dd>
+<dt>不透明</dt><dd><p>表面将投射阴影，如不透明的表面。</p>
+</dd>
+<dt>裁切</dt><dd><p>表面会像不透明的表面一样投射阴影，但只在alpha值高于裁切阈值的区域。</p>
+</dd>
+<dt>Hashed</dt><dd><p>表面会像一个不透明的表面一样投射阴影，但只在alpha值高于随机阈值的区域。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="screen-space-refraction">
+<h2>屏幕空间折射<a class="headerlink" href="#screen-space-refraction" title="Permalink to this headline">¶</a></h2>
+<p>启用屏幕空间折射在表面上的折射意味着折射BSDFs将对深度缓冲区进行光线跟踪，以找到最准确的折射颜色。如果表面覆盖了大量的像素，这就会有很大的性能成本。</p>
+<p>屏幕空间反射与屏幕空间折射不兼容。它将在使用它的表面上禁用。使用屏幕空间折射的表面不会出现在屏幕空间反射中。</p>
+<p>如果禁用此选项或屏幕空间折射光线追踪失败，折射光线将使用最近探测器的颜色。</p>
+<dl>
+<dt>屏幕空间折射</dt><dd><p>启用屏幕空间折射。</p>
+</dd>
+<dt>折射深度</dt><dd><p>如果“折射深度”不是0.0，材质中的所有折射BSDF将表现为该对象将是具有此厚度的折射材质的薄板。 这将模拟第二次折射事件，该事件将使吸收颜色加倍并在第二次事件之后开始折射光线。</p>
+<p>这个选项可以提高薄玻璃物体的质量。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="subsurface-translucency">
+<h2>次表面半透明<a class="headerlink" href="#subsurface-translucency" title="Permalink to this headline">¶</a></h2>
+<p>Eevee的次表面散射算法通过模糊屏幕空间的辐照度来工作。这意味着如果表面没有可见的部分被照亮，效果就会消失。</p>
+<p>然而，真正的次表面散射在表面下方并且可以行进很多距离。 这就是为什么从后面照亮的人耳在正面看起来是红色的。</p>
+<p>这就是这种效应模仿的结果。 这种半透明近似仅适用于具有阴影贴图且仅在次表面BSDF（不是半透明BSDF）上的灯具。 它不适用于间接照明。 阴影贴图的软参数也会影响此效果。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../world.html" class="btn btn-neutral float-right" title="世界" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="nodes_support.html" class="btn btn-neutral float-left" title="节点支持" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

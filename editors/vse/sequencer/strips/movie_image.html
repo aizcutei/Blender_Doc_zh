@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>影片和图像片段 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/vse/sequencer/strips/movie_image.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="声音片段" href="sound.html" />
+    <link rel="prev" title="剪辑&amp;遮罩片段" href="clip_mask.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../3dview/index.html">3D视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">视频序列编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">序列编辑器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../preview/index.html">预览</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../../index.html">视频序列编辑器</a> &raquo;</li>
+        
+          <li><a href="../index.html">序列编辑器</a> &raquo;</li>
+        
+          <li><a href="index.html">片段</a> &raquo;</li>
+        
+      <li>影片和图像片段</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/editors/vse/sequencer/strips/movie_image.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="movie-image-strips">
+<h1>影片和图像片段<a class="headerlink" href="#movie-image-strips" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="movie">
+<span id="bpy-types-moviesequence"></span><h2>影片<a class="headerlink" href="#movie" title="Permalink to this headline">¶</a></h2>
+<p>要添加影片（带或不带音频），请在文件浏览器中选择一个影片文件，例如音频 - 视频交错格式（ <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">.avi</span></code> 文件）。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>剪辑可以是巨大的</p>
+<p>三分钟quicktime <code class="docutils literal notranslate"><span class="pre">.mov</span></code> 文件可以有140M。加载它时，即使通过高速LAN也需要一些时间。如果你的电脑或Blender一段时间没有反应，不要假设你的电脑或Blender已经加载文件失败。</p>
+</div>
+</div>
+<div class="section" id="image">
+<span id="bpy-types-imagesequence"></span><h2>图像<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="single-image">
+<h3>单张图像<a class="headerlink" href="#single-image" title="Permalink to this headline">¶</a></h3>
+<p>当你添加单个静止图像（<code class="docutils literal notranslate"><span class="pre">*.jpg</span></code> ， <code class="docutils literal notranslate"><span class="pre">*.png</span></code> 等）时，Blender会创建一个25帧长的片段，沿条片段范围显示此图像。</p>
+</div>
+<div class="section" id="image-sequence">
+<h3>图像序列<a class="headerlink" href="#image-sequence" title="Permalink to this headline">¶</a></h3>
+<p>对于任何图像格式的（编号）图像序列（例如 <code class="docutils literal notranslate"><span class="pre">*-0001.jpg</span></code>， <code class="docutils literal notranslate"><span class="pre">*-0002.jpg</span></code>，<code class="docutils literal notranslate"><span class="pre">*-0003.jpg</span></code> 等等），你可以选择：</p>
+<dl class="simple">
+<dt>范围</dt><dd><p>导航到该目录并 <kbd class="kbd docutils literal notranslate">RMB</kbd> 单击并拖动在一个范围内名称以高亮显示多个文件。你可以向下翻页并继续 <kbd class="kbd docutils literal notranslate">RMB</kbd> 点击并拖动以添加更多选项。</p>
+</dd>
+<dt>批量</dt><dd><p><kbd class="kbd docutils literal notranslate">Shift-RMB</kbd>  点击选定的非相关图像进行批处理; 每个图像将是一个帧，按照排序顺序，可以是文件类型的混合（ <code class="docutils literal notranslate"><span class="pre">jpg</span></code> ， <code class="docutils literal notranslate"><span class="pre">png</span></code> ， <code class="docutils literal notranslate"><span class="pre">exr</span></code> 等）。</p>
+</dd>
+<dt>全部</dt><dd><p>按 <kbd class="kbd docutils literal notranslate">A</kbd> 选择或者取消选择全部文件。</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>不同尺寸处理</p>
+<p>处理不同大小的图像和不同大小的输出是棘手的。如果你的输入图像的大小和渲染输出大小之间不匹配，VSE将尝试自动缩放图片以使其完全它完全适合输出。这可能会导致剪切。如果你不想这样做，请在输入面板中使用 <em>Crop</em> 和/或 <em>Offset</em> 移动并选择并选择一个区域范围内的图像输出。当你使用 <em>Crop</em> 或 <em>Offset</em>，自动缩放将被禁用，您可以通过添加变换效果手动重新缩放。</p>
+</div>
+</div>
+<div class="section" id="add-image-strip">
+<h3>添加图像片段<a class="headerlink" href="#add-image-strip" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="placeholder-images">
+<h4>占位符图像<a class="headerlink" href="#placeholder-images" title="Permalink to this headline">¶</a></h4>
+<p>图像序列可以使用占位符文件。这可以通过在添加图像片段时启用 <em>使用占位符</em> 复选框来实现。该选项使用Blender的帧命名方案（文件名+帧号+ .扩展名）检测打开图像的帧范围，即使它们缺失。都会创建一个包含所有文件的图像序列，。这使你可以渲染一个缺少几帧的图像序列，并且该图像条仍然具有正确的范围，以解决显示为黑色的缺失帧。当丢失的帧被渲染或放置在同一个文件夹中时，你可以刷新序列器并获得片段中丢失的帧。该选项在使用 <em>更改数据/文件</em> 操作命令时也可用，并允许你向该范围添加更多图像。</p>
+</div>
+</div>
+</div>
+<div class="section" id="example">
+<h2>示例<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center">
+<img alt="../../../../_images/editors_vse_sequencer_strips_movie-image_example.png" src="../../../../_images/editors_vse_sequencer_strips_movie-image_example.png" />
+</div>
+<p>如果向上滚动工作区，你会看到，提供了有关活动片段一些有用的提示信息通道（在垂直位置的通道0）。上面的例子示出了从帧1至25颜色片段，然后一个 <code class="docutils literal notranslate"><span class="pre">MOV</span></code> 文件，然后一个图像片段。该信息渠道显示了图像片段有用的信息，他的名字已经在条形显示中被缩小了，但是在信息条上清楚地表明了它的名字。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sound.html" class="btn btn-neutral float-right" title="声音片段" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="clip_mask.html" class="btn btn-neutral float-left" title="剪辑&amp;遮罩片段" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

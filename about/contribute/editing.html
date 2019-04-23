@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>编辑手册 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/about/contribute/editing.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="补丁 &amp; 提交" href="patch_commit.html" />
+    <link rel="prev" title="在linux中编译" href="build/linux.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">关于本手册</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Blender中文手册介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html">许可证</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../whats_new.html">新增内容</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">贡献</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#how-it-works">如何工作</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#getting-started">入门</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="install/index.html">安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="build/index.html">生成</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">编辑手册</a></li>
+<li class="toctree-l4"><a class="reference internal" href="patch_commit.html">补丁 &amp; 提交</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#guidelines">指南</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#translations">翻译</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#contacts">联系</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">关于本手册</a> &raquo;</li>
+        
+          <li><a href="index.html">贡献</a> &raquo;</li>
+        
+      <li>编辑手册</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/about/contribute/editing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editing-the-manual">
+<h1>编辑手册<a class="headerlink" href="#editing-the-manual" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="update">
+<h2>更新<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h2>
+<p>首先，确保该手册的本地副本相对在线代码库是最新的：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>svn update
+</pre></div>
+</div>
+</div>
+<div class="section" id="writing">
+<h2>编写<a class="headerlink" href="#writing" title="Permalink to this headline">¶</a></h2>
+<p>现在你可以选择文本编辑器 <strong>编辑</strong> 文档文件, 这些文档位于 <code class="docutils literal notranslate"><span class="pre">manual</span></code> 文件夹中的 <code class="docutils literal notranslate"><span class="pre">.rst</span></code> 文件。</p>
+<p>务必查看 <a class="reference internal" href="guides/writing_guide.html"><span class="doc">写作样式指南</span></a> 中的约定和 <a class="reference internal" href="guides/markup_guide.html"><span class="doc">标记样式指南</span></a> 学习如何使用 reStructuredText 标记语言写作。</p>
+<p>开始写作吧！</p>
+<div class="section" id="bigger-changes">
+<h3>较大的修改<a class="headerlink" href="#bigger-changes" title="Permalink to this headline">¶</a></h3>
+<p>如果你打算添加或大修某一节，一定要仔细检查，确保现有手册没有这些内容。在一些地方，文档是如此杂乱无章，以至于一些章节内容重复或者位于某个奇怪的位置。在你找到一个重复或位置不当的章节后，请  <a class="reference external" href="https://developer.blender.org/maniphest/task/edit/form/default/?project=PHID-PROJ-c4nvvrxuczix2326vlti">新建任务</a> ，把问题解释清楚，还可以附带一份修改(真正的更改)。</p>
+<p>在你做出一些不那么简单明了的修改(如，移动文件夹)之前，你需要与手册维护人员确认你的贡献与社区对手册的设想是一致的。这能确保你的时间与善意得到最好的利用，否则的话，因为某些原因，你的修改可能会因造成冲突而被驳回或者经历费时的审查。例如，另外一个人可能已经在负责你想要修改的章节，这一节可能已经计划要删除，或者根据Blender的变化而相应更新。</p>
+<p>维持一个高效的环境的关键是先一步和频繁的 <a class="reference internal" href="index.html#contribute-contact"><span class="std std-ref">交流</span></a> , 这样才不至于浪费别人的努力，并且完成一份更好的Blender手册。</p>
+</div>
+<div class="section" id="getting-help-answers">
+<h3>获取帮助/答案<a class="headerlink" href="#getting-help-answers" title="Permalink to this headline">¶</a></h3>
+<p>如果你对所要记录的功能存在疑问，你应该向负责这一块的Blender开发人员提出你的疑问，或者在非官方的用户支持频道 <code class="docutils literal notranslate"><span class="pre">#blender</span></code> <a class="reference internal" href="../../getting_started/about/community.html#irc-channels"><span class="std std-ref">IRC 频道</span></a> 中提问。</p>
+<p>Blender有自己的模块所有者系统，包括负责指定Blender区域设计和维护的开发人员和艺术家。 详情参考 <a class="reference external" href="https://wiki.blender.org/wiki/Process/Module_Owners/List">模块所有者页面</a>。</p>
+</div>
+</div>
+<div class="section" id="preview">
+<h2>预览<a class="headerlink" href="#preview" title="Permalink to this headline">¶</a></h2>
+<p>想要 <strong>查看</strong> 你的修改，可以 <a class="reference internal" href="build/index.html"><span class="doc">参照说明</span></a> 自行生成手册。请记住，你也可以只生成你已经编辑好的章节来快速预览。进入 <code class="docutils literal notranslate"><span class="pre">build/html</span></code> 文件夹，使用Web浏览器打开生成的 <code class="docutils literal notranslate"><span class="pre">.html</span></code> 文件，或如果你已经打开的话，可以直接刷新页面。</p>
+</div>
+<div class="section" id="upload">
+<h2>上传<a class="headerlink" href="#upload" title="Permalink to this headline">¶</a></h2>
+<p>如果你很满意自己的修改，您可以将它们上传，将其呈现于在线手册中。首先，这是由提交补丁，从而使他人可以审查你的修改，并给您反馈完成。之后，你可以直接提交更改。下一节会详细介绍相关流程。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="patch_commit.html" class="btn btn-neutral float-right" title="补丁 &amp; 提交" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="build/linux.html" class="btn btn-neutral float-left" title="在linux中编译" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

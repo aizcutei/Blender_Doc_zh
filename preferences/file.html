@@ -1,0 +1,402 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>文件 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/preferences/file.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="系统" href="system.html" />
+    <link rel="prev" title="主题" href="themes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">用户设置</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#tabs">选项卡</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="interface.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input.html">输入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="addons.html">插件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="themes.html">主题</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">文件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#file-paths">文件路径</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#auto-execution">自动执行</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#save-load">保存和读取</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#auto-save">自动保存</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#text-editor">文本编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="system.html">系统</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">用户设置</a> &raquo;</li>
+        
+      <li>文件</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/preferences/file.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="file">
+<span id="bpy-types-userpreferencesfilepaths"></span><h1>文件<a class="headerlink" href="#file" title="Permalink to this headline">¶</a></h1>
+<p><em>用户设置</em> 的 <em>文件</em> 选项卡用于配置自动保存路径，以及blend文件，渲染图像等的默认路径。</p>
+<div class="figure align-center">
+<img alt="../_images/preferences_file_tab.png" src="../_images/preferences_file_tab.png" />
+</div>
+<div class="section" id="file-paths">
+<span id="prefs-file-paths"></span><h2>文件路径<a class="headerlink" href="#file-paths" title="Permalink to this headline">¶</a></h2>
+<p>各种各样的外部文件可以通过以下的选项来定位:</p>
+<dl class="simple">
+<dt>字体</dt><dd><p>查找字体的默认路径。</p>
+</dd>
+<dt>纹理</dt><dd><p>查找图像纹理的默认路径。</p>
+</dd>
+<dt>渲染输出</dt><dd><p>渲染完成的图片/视频的保存位置。</p>
+</dd>
+<dt>脚本</dt><dd><p>查找Python脚本的额外路径，见下文 <a class="reference internal" href="#scripts-path">脚本路径</a>。</p>
+</dd>
+<dt>声音</dt><dd><p>查找音频的默认路径。</p>
+</dd>
+<dt>临时文件夹</dt><dd><p>临时文件的储存位置。</p>
+</dd>
+<dt>渲染缓存</dt><dd><p>快速缓存渲染图像的存储位置。</p>
+</dd>
+<dt>国际化(i18n)分支</dt><dd><p>本地svn翻译文件副本 <code class="docutils literal notranslate"><span class="pre">/branches</span></code> 的路径，用于在UI中直接翻译。</p>
+</dd>
+<dt>图像编辑器</dt><dd><p>打开外部图像编辑软件的路径.</p>
+</dd>
+<dt>动画播放器</dt><dd><p>外部视频播放器路径，用于播放渲染好的动画。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>这些路径全部需要手动配置， <em>不会</em> 自动创建。</p>
+</div>
+<div class="section" id="scripts-path">
+<h3>脚本路径<a class="headerlink" href="#scripts-path" title="Permalink to this headline">¶</a></h3>
+<p>默认情况下，Blender会查找多个路径(与操作系统有关)。设置了用户脚本路径，Blender就会多查找一个路径。这个功能可用来储存脚本/模板/预设，使其独立于当前Blender的版本。</p>
+<p>在指定的文件夹下，创建指定的子文件夹，这样Blender才能找到对应的文件。新建的文件夹结构必须与blender安装路径中的脚本路径相一致：</p>
+<ul class="simple">
+<li><p>脚本</p></li>
+<li><p>插件</p></li>
+<li><p>样式</p></li>
+<li><p>预设</p></li>
+<li><p>摄像机</p></li>
+<li><p>布料</p></li>
+<li><p>用户界面主题</p></li>
+<li><p>操作项</p></li>
+<li><p>渲染</p></li>
+<li><p>...</p></li>
+<li><p>设置启动文件</p></li>
+<li><p>模板中不是所有文件夹都需要预设。</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>确保当前用户有访问指定的文件夹下可执行文件的权限。以MS-Windows为例，如果对可执行文件启用 <em>以管理员权限运行</em> 选项，会导致由于系统UAC限制，打开编辑器失败。提升程序的运行权限还存在潜在的风险!</p>
+</div>
+</div>
+</div>
+<div class="section" id="auto-execution">
+<span id="prefs-auto-execution"></span><h2>自动执行<a class="headerlink" href="#auto-execution" title="Permalink to this headline">¶</a></h2>
+<p>出于安全因素考虑，Python脚本(包括驱动表达式)默认不被执行。</p>
+<dl class="simple">
+<dt>自动运行 Python 脚本</dt><dd><p>忽视安全因素，允许自动运行Python脚本。</p>
+</dd>
+<dt>排除的路径</dt><dd><p>在这些文件夹下的blend文件将 <em>无法</em> 自动运行Python脚本，用于指定不受信任来源的blend文件存储路径。</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../advanced/scripting/security.html"><span class="doc">Python安全</span></a>。</p>
+</div>
+</div>
+<div class="section" id="save-load">
+<span id="prefs-save-load"></span><h2>保存和读取<a class="headerlink" href="#save-load" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>相对路径</dt><dd><p>系统默认使用 <a class="reference internal" href="../data_system/files/relative_paths.html"><span class="doc">相对路径</span></a>。</p>
+</dd>
+<dt>压缩文件</dt><dd><p>保存时压缩blend文件。</p>
+<p>保存 .blend文件时压缩文件。密集的网格、大量打包的贴图或者场景中的大量元素都会导致blend文件变得很大。</p>
+<p>该选项会降低Blender的关闭时，或者自动保存备份文件时的速度。使用该选项等于是用CPU运行时间交换文件大小。</p>
+</dd>
+<dt>加载用户界面</dt><dd><p>默认勾选，打开文件时，从文件加载窗口布局( <a class="reference internal" href="../interface/window_system/workspaces.html"><span class="doc">屏幕布局</span></a>)。从 <a class="reference internal" href="../editors/file_browser/index.html"><span class="doc">文件浏览器</span></a> 打开文件时，可以在 <em>打开Blender文件</em> 面板单独修改该选项。</p>
+</dd>
+<dt>过滤文件格式</dt><dd><p>启用该选项，文件浏览器对话框中将只显示匹配的文件类型(比如，加载完整Blender设置时，只显示blend文件)。显示的文件类型可以修改。</p>
+<div class="figure align-center" id="id1">
+<img alt="../_images/preferences_file_filter.png" src="../_images/preferences_file_filter.png" />
+<p class="caption"><span class="caption-text">扩展名过滤。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</dd>
+<dt>隐藏点文件/数据块</dt><dd><p>隐藏文件名以 <code class="docutils literal notranslate"><span class="pre">.</span></code> 开头的文件（linux和苹果系统下的 <code class="docutils literal notranslate"><span class="pre">.</span></code> 文件是隐藏的）</p>
+</dd>
+<dt>隐藏最近查看的路径</dt><dd><p>隐藏 <a class="reference internal" href="../editors/file_browser/index.html"><span class="doc">文件浏览器</span></a> 中 <em>最近打开的文件</em> 面板。</p>
+</dd>
+<dt>隐藏系统书签</dt><dd><p>隐藏 <em>文件浏览器</em> 中的系统书签。</p>
+</dd>
+<dt>显示缩略图</dt><dd><p>打开 <a class="reference internal" href="../editors/file_browser/index.html"><span class="doc">文件浏览器</span></a> 时，显示图片及视频的缩略图。</p>
+</dd>
+<dt>保存版本</dt><dd><p>为同一文件保存的版本数量(作为备份)。</p>
+<p>该选项用于告知Blender，在手动保存文件时，在当前工作目录为文件保存指定数量的版本。这些文件的扩展名为 <code class="docutils literal notranslate"><span class="pre">.blend1</span></code>, <code class="docutils literal notranslate"><span class="pre">.blend2</span></code> ，以此类推。越老的版本，末尾的数字越大。比如，默认设置为2，将保存3个版本的文件： <code class="docutils literal notranslate"><span class="pre">*.blend</span></code> (最后保存的), <code class="docutils literal notranslate"><span class="pre">*.blend1</span></code> (前一次保存的) 和 <code class="docutils literal notranslate"><span class="pre">*.blend2</span></code> (倒数第三次保存的)。</p>
+</dd>
+<dt>最近打开的文件</dt><dd><p><span class="menuselection">文件 ‣ 打开近期文件</span> 显示的文件数量。</p>
+</dd>
+<dt>保存预览图像</dt><dd><p><a class="reference internal" href="../editors/file_browser/index.html"><span class="doc">文件浏览器</span></a> 会根据需要生成图片和材质的预览。勾选此项可以将这些预览图保存到blend文件中(代价是增大文件体积)。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="auto-save">
+<span id="prefs-auto-save"></span><h2>自动保存<a class="headerlink" href="#auto-save" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>保存会话</dt><dd><p>在重启Blender后自动加载 <code class="docutils literal notranslate"><span class="pre">quit.blend</span></code> 文件。 无论是否启用当前选项，该文件总是在退出时自动保存。 见 <a class="reference internal" href="../troubleshooting/recover.html#troubleshooting-file-recovery"><span class="std std-ref">恢复上一次会话</span></a>。</p>
+</dd>
+<dt>自动保存临时文件</dt><dd><p>启用 <a class="reference internal" href="../troubleshooting/recover.html"><span class="doc">自动保存</span></a>。告知Blender <em>自动</em> 自动将在制文件的备份保存至 <a class="reference internal" href="../getting_started/installing/configuration/directories.html#temp-dir"><span class="std std-ref">临时目录</span></a>。</p>
+</dd>
+<dt>计时器</dt><dd><p>用于指定 <a class="reference internal" href="../troubleshooting/recover.html"><span class="doc">自动保存</span></a> 间隔的分钟数。Blender安装后的默认值为2分钟。最小值为 1，最大值为 60 (每小时保存一次)。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="text-editor">
+<h2>文本编辑器<a class="headerlink" href="#text-editor" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>制表符自动转换为空格</dt><dd><p>自动将键入的 <kbd class="kbd docutils literal notranslate">Tab</kbd> 转换为空格键。</p>
+</dd>
+<dt>作者</dt><dd><p>当格式支持此特性时，为导出的文件添加作者名。</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="system.html" class="btn btn-neutral float-right" title="系统" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="themes.html" class="btn btn-neutral float-left" title="主题" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>工具 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/sculpt_paint/painting/weight_paint/tools.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="权重工具" href="weight_tools.html" />
+    <link rel="prev" title="使用顶点组" href="usage.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">绘制与雕刻</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../brush.html">笔刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texture_tex_mask.html">纹理和纹理遮罩</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stroke_curve.html">笔触和曲线</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#modes">模式</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">绘制</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#paint-modes">绘制模式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../sculpting/index.html">雕刻</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">绘制与雕刻</a> &raquo;</li>
+        
+          <li><a href="../index.html">绘制</a> &raquo;</li>
+        
+          <li><a href="index.html">权重绘制</a> &raquo;</li>
+        
+      <li>工具</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/sculpt_paint/painting/weight_paint/tools.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tools">
+<h1>工具<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="brush">
+<h2>笔刷<a class="headerlink" href="#brush" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id1">
+<img alt="../../../_images/sculpt-paint_painting_weight-paint_tools_brush-panel.png" src="../../../_images/sculpt-paint_painting_weight-paint_tools_brush-panel.png" />
+<p class="caption"><span class="caption-text">笔刷面板。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>在 <em>权重绘制模式</em> 下绘制时需要绘制笔刷， Blender在工具架内提供了一个笔刷面板。</p>
+<dl>
+<dt>笔刷</dt><dd><p>在 <a class="reference internal" href="../../../interface/controls/templates/data_block.html#ui-data-block"><span class="std std-ref">数据块菜单</span></a> 你可以找到预定义的预设笔刷。你可以根据需要创建自己的自定义预设笔刷。</p>
+</dd>
+<dt>权重 <kbd class="kbd docutils literal notranslate">W</kbd></dt><dd><p>通过笔刷使用权重（颜色 ）。 但是，权重值应用到顶点组的方式不同，具体取决于所选的笔刷的混合模式（见下文）。</p>
+<p>按住 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 键点击顶点采样权重值。<kbd class="kbd docutils literal notranslate">Shift-LMB</kbd> 键让你选择从中进行采样的组。</p>
+</dd>
+<dt>半径</dt><dd><p>半径定义了笔刷的影响范围。</p>
+</dd>
+<dt>强度</dt><dd><p>应用于每个笔刷笔触的绘制数量。这意味着取决于笔刷混合模式。</p>
+</dd>
+<dt>Blend</dt><dd><p>The brush <a class="reference internal" href="../../../glossary/index.html#term-blend-modes"><span class="xref std std-term">Blend Modes</span></a> defines in which way the weight value is applied to the Vertex Group while painting.
+In addition, here you can select the <em>Blur</em> or <em>Smear</em> mode.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<dl class="simple">
+<dt>混合</dt><dd><p>在这种混合模式下，权重值定义了当鼠标在网格的相同位置上停留足够长的时间后，最终将达到的 <em>目标权重</em> 。 强度决定了你需要达到目标权重的次数。请注意，对于强度= 1.0，目标权重立即被绘制，而对于权重= 0.0，笔刷不做任何事情。</p>
+</dd>
+<dt>添加</dt><dd><p>在这种混合模式下，指定的权重值被 <em>添加</em> 顶点权重上。强度决定了每一个笔触添加权重的比率。但是，笔刷不会将权重值绘制在1.0以上。</p>
+</dd>
+<dt>相减</dt><dd><p>在这种混合模式下，是在顶点权重中 <em>减去</em> 指定的权重值。强度决定了每个笔触有多少权重被移除。但是，笔刷不会将权重值绘制在0.0以下。</p>
+</dd>
+<dt>变亮</dt><dd><p>在这种混合模式中，指定的权重值被解释为目标权重。非常类似于混合笔刷，但只有低于目标权重的权重受到影响。目标权重以上的权重保持不变。</p>
+</dd>
+<dt>变暗</dt><dd><p>此混合模式与淡化（Lighten）混合模式非常相似。但只有目标权重以上的权重受到影响。低于目标权重的权重保持不变。</p>
+</dd>
+<dt>正片叠底</dt><dd><p>将顶点权重与指定的权重值相乘。这有点像减去，但是去除的权重现在取决于权重值本身。</p>
+</dd>
+<dt>模糊</dt><dd><p>平滑相邻顶点的权重。在这种模式下，权重值被忽略。强度定义了应用了多少平滑。</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt>累积</dt><dd><p>This will allow a stroke to accumulate on itself, just like an airbrush would do.</p>
+</dd>
+<dt>Front Faces Only</dt><dd><p>Only paint on the front side of faces.</p>
+</dd>
+<dt>Falloff Angle</dt><dd><p>As faces point away from the view the brush strokes fade away to prevent harsh edges.</p>
+<dl class="simple">
+<dt>Angle</dt><dd><p>The angle at which the falloff begins.</p>
+</dd>
+</dl>
+</dd>
+<dt>2D Falloff</dt><dd><p>This turns the brush influence into a cylinder (the depth along the view is ignored) instead of a sphere.</p>
+</dd>
+<dt>自动标准化</dt><dd><p>确保绘画时所有变形的顶点组合在一起。当此选项关闭时，顶点的所有权重可以具有0.0到1.0之间的任何值。但是，当顶点组用作角色动画的变形组时， Blender总是解释相对于彼此的权重值。也就是说， Blender总是对所有变形的骨头进行标准化。因此实际上不需要严格标准化，进一步标准化权重根本不应该影响动画。</p>
+<p>这个选项最直观的用来维持标准化，同时在已经用其他工具标准化的权重上绘画。</p>
+</dd>
+<dt>多重绘制</dt><dd><p>同时在所有选定的顶点组上绘制，以保留其相对影响。当在一次受到三个以上骨头影响的区域调整权重时，这是有用的，例如，角色脸上的某些区域。</p>
+<p>此选项仅在“骨架”选项卡中有用，你可以通过选择多个“姿势骨骼”来选择多个“顶点组”。一旦至少选择了两个顶点组，视口颜色和绘画逻辑切换到多重绘制模式，如果启用自动标准化，则使用所选组的权重总和，否则为平均值。以这种集体权重为目标的任何绘制操作都应用于单个顶点组的权重，使得它们的比例保持不变。</p>
+<p>由于如果所有权重均为零，则比率未定义，因此多重绘制不能在没有任何权重分配给相关顶点组的顶点上操作。因为这个原因，它也不允许一直减到零。与X-Mirror一起使用时，如果权重初始对称，则保证完全对称。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>虽然多重绘制不能直接在零权重顶点上绘制，但可以使用 <em>平滑权重</em> 工具从相邻顶点复制一个合理的非零权重分配，而无需离开多重绘制模式或更改骨骼选择。</p>
+<p>要做到这一点，启用顶点选择，选择目标顶点，并应用一个迭代的工具使用来自 <em>选定的姿势骨骼</em> 具有低系数的顶点组。之后，只需在上绘制上设定所需的总权重。</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="stroke-curve">
+<h2>Stroke &amp; Curve<a class="headerlink" href="#stroke-curve" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="../../stroke_curve.html"><span class="doc">笔触和曲线</span></a>.</p>
+</div>
+<div class="section" id="symmetry">
+<h2>Symmetry<a class="headerlink" href="#symmetry" title="Permalink to this headline">¶</a></h2>
+<p>(Todo)</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="weight_tools.html" class="btn btn-neutral float-right" title="权重工具" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="usage.html" class="btn btn-neutral float-left" title="使用顶点组" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

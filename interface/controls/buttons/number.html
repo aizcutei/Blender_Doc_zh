@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>数值输入框 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/controls/buttons/number.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="吸管工具" href="eye_dropper.html" />
+    <link rel="prev" title="开关 &amp; 单选按钮" href="toggle_radio.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">用户界面</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../splash.html">启动画面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#window-system">窗口系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#keymap">键位映射</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#interface-controls">界面控件</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#buttons-and-controls">按钮与控件</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="buttons.html">按钮</a></li>
+<li class="toctree-l4"><a class="reference internal" href="menus.html">菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="toggle_radio.html">开关 &amp; 单选按钮</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">数值输入框</a></li>
+<li class="toctree-l4"><a class="reference internal" href="eye_dropper.html">吸管工具</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#extended-controls">扩展控件</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#tools">工具</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">用户界面</a> &raquo;</li>
+        
+      <li>数值输入框</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/interface/controls/buttons/number.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="numeric-input-fields">
+<h1>数值输入框<a class="headerlink" href="#numeric-input-fields" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id1">
+<img alt="../../../_images/interface_controls_buttons_number_number-button.png" src="../../../_images/interface_controls_buttons_number_number-button.png" />
+<p class="caption"><span class="caption-text">数值输入框。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>数字按钮用于容纳数值及其单位。</p>
+<p>第一种类型的数值框，当鼠标指针置于其上方时，会显示左侧(◂) 与 右侧 (▸) 的三角形。第二种类型的数字滑块背景是一个长条，用于有取值范围的数值，如百分数值。</p>
+<p>编辑数值的方式有以下几种：</p>
+<dl>
+<dt>递进式步长</dt><dd><p><kbd class="kbd docutils literal notranslate">LMB</kbd> 单击小三角形(仅适用于第一种数值框)，以固定步长增减数值。还可以将鼠标指针置于数值框上方， <kbd class="kbd docutils literal notranslate">Ctrl-Wheel</kbd> 编辑数值。</p>
+</dd>
+<dt>拖动</dt><dd><p>要在更大范围内修改数值，按下 <kbd class="kbd docutils literal notranslate">LMB</kbd> ，并向左侧或右侧拖动鼠标。</p>
+</dd>
+<dt>键盘输入</dt><dd><p>按下 <kbd class="kbd docutils literal notranslate">LMB</kbd> 或者 <kbd class="kbd docutils literal notranslate">Return</kbd> 键入数值。</p>
+<p>手动输入数值时，与其他文本框没有区别。</p>
+<ul class="simple">
+<li><p>在数值框外按 <kbd class="kbd docutils literal notranslate">Return</kbd> 或 <kbd class="kbd docutils literal notranslate">LMB</kbd> ，应用修改。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Esc</kbd> 或 <kbd class="kbd docutils literal notranslate">RMB</kbd> 取消修改。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Tab</kbd> 用于跳到下一个数字框， 或者 <kbd class="kbd docutils literal notranslate">Ctrl-Tab</kbd> 跳到上一个。</p></li>
+<li><p>鼠标在文本框上悬停并按下 <kbd class="kbd docutils literal notranslate">Minus</kbd> ，用于对数值取负。</p></li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="multi-value-editing">
+<h2>多数值编辑<a class="headerlink" href="#multi-value-editing" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id2">
+<img alt="../../../_images/interface_controls_buttons_number_multi-value-edit.png" src="../../../_images/interface_controls_buttons_number_multi-value-edit.png" />
+<p class="caption"><span class="caption-text">多数值编辑。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>在按钮上按下 <kbd class="kbd docutils literal notranslate">LMB</kbd> 不放，并竖直拖动选中需要编辑的文本框，实现一次修改多个数值。然后向左右两侧拖动调整数值，或者松开 <kbd class="kbd docutils literal notranslate">LMB</kbd> 键入数值。</p>
+</div>
+<div class="section" id="value-limits">
+<h2>数值限制<a class="headerlink" href="#value-limits" title="Permalink to this headline">¶</a></h2>
+<p>多数数值的取值范围都受&quot;软限制&quot; 和 &quot;硬限制&quot; 的限制。 拖动鼠标修改数值的数值范围受 &quot;软限制&quot; 限制。键入数值可以输入更大范围的数值，但仍无法超出 &quot;硬限制&quot;。</p>
+</div>
+<div class="section" id="expressions">
+<h2>表达式<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h2>
+<p>可以在任何数值框中输入数学表达式。 比如，输入 <code class="docutils literal notranslate"><span class="pre">3*2</span></code> 或 <code class="docutils literal notranslate"><span class="pre">10/5+4</span></code> ，而非直接输入结果 <code class="docutils literal notranslate"><span class="pre">6</span></code>。 即使是常数如 <code class="docutils literal notranslate"><span class="pre">pi</span></code> (3.142) 或者运算如 <code class="docutils literal notranslate"><span class="pre">sqrt(2)</span></code> (2的平方根)都是可以的。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>这些表达式由Python进行计算；可以使用的数学表达式见 <a class="reference external" href="https://docs.python.org/3/library/math.html">math模块参考</a>。</p>
+</div>
+<div class="section" id="expressions-as-drivers">
+<h3>表达式作为驱动<a class="headerlink" href="#expressions-as-drivers" title="Permalink to this headline">¶</a></h3>
+<p>用户可能希望键入的表达式可以在输入后重新运算。Blender中 <a class="reference internal" href="../../../animation/drivers/index.html"><span class="doc">驱动</span></a> (动画系统的功能之一)支持该用法。</p>
+<p>以 <code class="docutils literal notranslate"><span class="pre">#</span></code> 开头的表达式有特殊用途。输入该表达式后，对属性值添加驱动，而不是在数值运算后丢弃表达式。</p>
+<p><code class="docutils literal notranslate"><span class="pre">#frame</span></code> 是将数值映射至当前帧的快捷方法， 不过同样支持更复杂的表达式如 <code class="docutils literal notranslate"><span class="pre">#fmod(frame,</span> <span class="pre">24)</span> <span class="pre">/</span> <span class="pre">24</span></code> 。</p>
+<p>这仅仅是快速添加驱动的方法之一，还可以使用 <kbd class="kbd docutils literal notranslate">RMB</kbd> 菜单添加驱动。</p>
+</div>
+</div>
+<div class="section" id="units">
+<h2>单位<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h2>
+<p>与表达式一样，用户可以指定数值及其单位。如果未给定单位，使用默认单位。在 <a class="reference internal" href="../../../data_system/scenes/properties.html#data-scenes-props-units"><span class="std std-ref">场景设置</span></a> 中可以修改单位系统。</p>
+<p>数值后的单位取其简写或全称均可。</p>
+<p>合法的长度单位用法示例：</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1cm</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1m</span> <span class="pre">3mm</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1m,</span> <span class="pre">3mm</span></code></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">2ft</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3ft/0.5km</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2.2mm</span> <span class="pre">+</span> <span class="pre">5'</span> <span class="pre">/</span> <span class="pre">3&quot;</span> <span class="pre">-</span> <span class="pre">2yards</span></code></p></li>
+</ul>
+</td></tr></table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>使用单位</p>
+<ul class="simple">
+<li><p>逗号分隔符是可选的。</p></li>
+<li><p>可以混合使用公制和英制，尽管你只能看到一个结果。</p></li>
+<li><p>复数单位也可以识别，所以 <code class="docutils literal notranslate"><span class="pre">meter</span></code> 和 <code class="docutils literal notranslate"><span class="pre">meters</span></code> 都可以用。</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="eye_dropper.html" class="btn btn-neutral float-right" title="吸管工具" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="toggle_radio.html" class="btn btn-neutral float-left" title="开关 &amp; 单选按钮" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

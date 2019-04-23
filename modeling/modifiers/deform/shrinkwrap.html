@@ -1,0 +1,393 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>缩裹修改器 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/shrinkwrap.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="简单变形修改器" href="simple_deform.html" />
+    <link rel="prev" title="网格变形修改器" href="mesh_deform.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#generate">生成</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#deform">形变</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="armature.html">骨架修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cast.html">铸型修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corrective_smooth.html">矫正平滑修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curve.html">曲线函数修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="displace.html">置换修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hooks.html">钩挂修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="laplacian_smooth.html">拉普拉斯平滑修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="laplacian_deform.html">拉普拉斯变形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lattice.html">晶格修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_deform.html">网格变形修改器</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">缩裹修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="simple_deform.html">简单变形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="smooth.html">平滑修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="surface_deform.html">表面变形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="warp.html">弯绕修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wave.html">波浪修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#simulate">模拟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../index.html">修改器</a> &raquo;</li>
+        
+      <li>缩裹修改器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/modeling/modifiers/deform/shrinkwrap.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="shrinkwrap-modifier">
+<span id="bpy-types-shrinkwrapmodifier"></span><h1>缩裹修改器<a class="headerlink" href="#shrinkwrap-modifier" title="Permalink to this headline">¶</a></h1>
+<p><em>缩裹</em> 修改器允许一个物体“收缩”到另一个物体的表面上。它移动物体的每个顶点到所给网格的最近的表面（使用三种可用的方法之一）。</p>
+<p>它可以应用到网格，晶格，曲线，表面和文本。</p>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id1">
+<img alt="../../../_images/modeling_modifiers_deform_shrinkwrap_nearest-surface-point.png" src="../../../_images/modeling_modifiers_deform_shrinkwrap_nearest-surface-point.png" />
+<p class="caption"><span class="caption-text">最近的表面点.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>目标</dt><dd><p>收缩目标，即用来收缩或包裹的网格。</p>
+</dd>
+<dt>偏移量</dt><dd><p>与计算后的目标位置所保持的距离，以BU（Blender Unit）为单位。</p>
+</dd>
+<dt>顶点组</dt><dd><p>顶点组，以控制每个顶点是否移动以及移动多少到其目标位置。如果一个顶点不是该组的成员，它不会产生位移（等同于权重0）。</p>
+</dd>
+</dl>
+<div class="section" id="mode">
+<h3>模式<a class="headerlink" href="#mode" title="Permalink to this headline">¶</a></h3>
+<p>选项指定用于确定每个顶点在目标表面上最近顶点所使用的方法。一些选项会添加额外的具体控制选项到控制面板里。</p>
+<div class="section" id="nearest-surface-point">
+<h4>最近的表面点<a class="headerlink" href="#nearest-surface-point" title="Permalink to this headline">¶</a></h4>
+<p>这将会吸附顶点到收缩目标上最近的顶点。它没带其他额外的选项。</p>
+</div>
+<div class="section" id="projection">
+<h4>投影<a class="headerlink" href="#projection" title="Permalink to this headline">¶</a></h4>
+<p>这将会沿着选择的轴投射顶点，直到它们碰到收缩的目标。不会碰到收缩目标的顶点将保持原来的位置。</p>
+<div class="figure align-center" id="id2">
+<img alt="../../../_images/modeling_modifiers_deform_shrinkwrap_project.png" src="../../../_images/modeling_modifiers_deform_shrinkwrap_project.png" />
+<p class="caption"><span class="caption-text">投射选项.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>表面细分等级</dt><dd><p>在使用投射模式计算包裹之前，这会将（临时）*Catmull-Clark* 细分应用于修改后的对象。</p>
+</dd>
+<dt>限制</dt><dd><p>原顶点和表面之间存在距离限制。如果距离大于这个限制，顶点不会投射到表面.</p>
+</dd>
+<dt>轴向</dt><dd><p>修改的物体投射沿着所选择的局部轴。这些选项之间可以组合起来使用，以得到一个“中值轴”的投射。</p>
+<p>X、Y、Z轴</p>
+</dd>
+<dt>方向</dt><dd><p>该选项允许你选择沿着所选轴收缩的方向。使用多个缩裹修改器，负向、正向轴可以组合起来。</p>
+<p>负向、正向</p>
+</dd>
+<dt>剔除面</dt><dd><p>此单选按钮允许您阻止在目标面的“正面”（或“背面”）上进行任何投射。 面的“侧面”由其法线确定（正面是&quot;从&quot;法线&quot;起源&quot;的那面）。</p>
+<p>Off, Front, Back</p>
+</dd>
+<dt>Invert Cull</dt><dd><p>If Cull Faces is enabled, this option can be used to invert the <em>Front</em> or <em>Back</em> cull choice
+for the Negative direction. This is useful when projecting in both directions.</p>
+</dd>
+<dt>辅助目标</dt><dd><p>一个用来投射的额外的物体</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="nearest-vertex">
+<h4>最近的点<a class="headerlink" href="#nearest-vertex" title="Permalink to this headline">¶</a></h4>
+<p>这将会吸附顶点到收缩目标上最近的顶点。它没带其他额外的选项。</p>
+<div class="figure align-center" id="id3">
+<img alt="../../../_images/modeling_modifiers_deform_shrinkwrap_nearest-vertex.png" src="../../../_images/modeling_modifiers_deform_shrinkwrap_nearest-vertex.png" />
+<p class="caption"><span class="caption-text">最近的顶点选项.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>This method doesn't support the <em>Snap Mode</em> setting described below.</p>
+</div>
+<div class="section" id="target-normal-projection">
+<h4>Target Normal Projection<a class="headerlink" href="#target-normal-projection" title="Permalink to this headline">¶</a></h4>
+<p>This mode is similar to <em>Nearest Surface Point</em>, but produces a much smoother
+projection in return for being significantly slower.</p>
+<p>Instead of finding the closest point, it searches for the nearest point
+that has its interpolated smooth normal pointing towards or away from the original vertex position.
+Non-manifold boundary edges are specially handled as infinitely thin cylinders
+that emit normals in all perpendicular directions. Ignores flat shading and auto smooth settings.</p>
+</div>
+</div>
+<div class="section" id="snap-mode">
+<h3>Snap Mode<a class="headerlink" href="#snap-mode" title="Permalink to this headline">¶</a></h3>
+<p>Most modes support an additional setting to control how the vertex is moved to
+the target point selected by the methods described above. Some of the choices
+only differ if <em>Offset</em> is not zero.</p>
+<dl class="simple">
+<dt>On Surface</dt><dd><p>The vertex is always moved. The offset is applied along the projection line
+connecting the original vertex and selected target point towards the original position.</p>
+</dd>
+<dt>Outside Surface</dt><dd><p>Like <em>On Surface</em>, but the offset is always applied towards the outside of the target.</p>
+</dd>
+<dt>Above Surface</dt><dd><p>Like <em>On Surface</em>, but the offset is applied along the smooth normal of the target.</p>
+</dd>
+<dt>Inside</dt><dd><p>The vertex is not moved if it is already inside the target.
+Offset shrinks the allowed volume towards the inside along the projection line.</p>
+</dd>
+<dt>Outside</dt><dd><p>The vertex is not moved if it is already outside the target.
+Offset expands the exclusion volume towards the outside along the projection line.</p>
+</dd>
+</dl>
+<p>The <em>Inside</em> and <em>Outside</em> options can be used for very crude collision detection.
+The inside vs outside determination is done based on the target normal and
+is not always stable near 90 degree and sharper angles in the target mesh.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../../../rigging/constraints/relationship/shrinkwrap.html"><span class="doc">缩裹约束</span></a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="simple_deform.html" class="btn btn-neutral float-right" title="简单变形修改器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mesh_deform.html" class="btn btn-neutral float-left" title="网格变形修改器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

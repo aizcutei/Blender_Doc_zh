@@ -1,0 +1,483 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>输入 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/preferences/input.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="插件" href="addons.html" />
+    <link rel="prev" title="编辑" href="editing.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">用户设置</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#tabs">选项卡</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="interface.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">输入</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#interaction">交互</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keymap-editor">键位映射编辑器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#export-import-key-configuration">导入/导出键配置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="addons.html">插件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="themes.html">主题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file.html">文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system.html">系统</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">用户设置</a> &raquo;</li>
+        
+      <li>输入</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/preferences/input.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="input">
+<span id="bpy-types-userpreferencesinput"></span><h1>输入<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h1>
+<p>在输入设置中，可以自定义Blender与鼠标和键盘之间的交互，同时自定义键位映射。</p>
+<div class="figure align-center">
+<img alt="../_images/preferences_input_tab.png" src="../_images/preferences_input_tab.png" />
+</div>
+<div class="section" id="interaction">
+<h2>交互<a class="headerlink" href="#interaction" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>交互预设</dt><dd><p>可以根据个人喜好，设置和选择预设，实现与其他软件相似的使用体验。</p>
+</dd>
+</dl>
+<div class="section" id="mouse">
+<h3>鼠标<a class="headerlink" href="#mouse" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>模拟 3 键鼠标</dt><dd><p>可以通过配置Blender，与其他指针设备(比如双键鼠标，苹果的单键鼠标或者笔记本的触控板)一起使用。可以使用下表中的键盘/鼠标组合，模拟三键鼠标的功能。</p>
+<table class="colwidths-given valign docutils align-center" id="id1">
+<caption><span class="caption-text">支持的鼠标硬件的对应快捷键</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>三键鼠标</p></th>
+<th class="head"><p>双键鼠标</p></th>
+<th class="head"><p>苹果鼠标</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">LMB</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">LMB</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">LMB</kbd> (鼠标按钮)</p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">MMB</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Alt-LMB</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Alt-LMB</kbd> (Option/Alt 键 + 鼠标按键)</p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">RMB</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">RMB</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">Cmd-LMB</kbd> (Command/Apple 键 + 鼠标按键)</p></td>
+</tr>
+</tbody>
+</table>
+<p>本手册中鼠标/键盘的组合可以替换为下表中的组合。例如:</p>
+<ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">MMB</kbd> 拖动对应 <kbd class="kbd docutils literal notranslate">Alt-LMB</kbd> 拖动。</p></li>
+<li><p>对于单键鼠标，<kbd class="kbd docutils literal notranslate">Shift-Alt-RMB</kbd> 对应 <kbd class="kbd docutils literal notranslate">Shift-Alt-Cmd-LMB</kbd>。</p></li>
+</ul>
+</dd>
+<dt>持续拖拽</dt><dd><p>这个功能是用来解决拖拽或平移视图等操作被屏幕边界限制的问题。</p>
+<p>这是通过将鼠标指针重新定位到视窗实现的。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>持续拖拽仅支持 <em>相对</em> 定位输入装置(比如说鼠标，追踪球，追踪板)。</p>
+<p>不过，由于数位板通常使用的是 <em>绝对</em> 定位，所以使用数位板时该功能失效。</p>
+<p>Blender会侦测每个动作，所以使用数位板并不会影响鼠标指针的 <em>持续拖拽</em> 输入效果。</p>
+</div>
+</dd>
+<dt>拖动阈值</dt><dd><p>一个用户界面项目被认定为移动所需要的移动像素的值。阀值调节触发调节事件所需移动的像素值。</p>
+</dd>
+<dt>选择键</dt><dd><p>你可以选择使用鼠标左键或右键来选择物件（剩下的另一个鼠标按键是用来放置3D游标的）。</p>
+</dd>
+<dt>双击</dt><dd><p>双击的间隔时间(毫秒)。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>模拟鼠标的功能只有当 <em>选择键</em> 设置为 <em>右</em> 的时候才生效。</p>
+</div>
+</div>
+<div class="section" id="emulate-numpad">
+<h3>Emulate Numpad<a class="headerlink" href="#emulate-numpad" title="Permalink to this headline">¶</a></h3>
+<p>数字键在Blender中使用相当频繁，这里的数字键指的不是常规的数字键。如果用的键盘没有数字键区(如笔记本)，可以让Blender将标准数字键视为小键盘数字键。只需勾选 <em>模拟数字键盘</em>。</p>
+</div>
+<div class="section" id="view-manipulation">
+<h3>视角操控<a class="headerlink" href="#view-manipulation" title="Permalink to this headline">¶</a></h3>
+<dl id="prefs-input-orbit-style">
+<dt>旋转方式</dt><dd><p>选择按住 <kbd class="kbd docutils literal notranslate">MMB</kbd> 旋转3D视图的交互方式。</p>
+<dl>
+<dt>转盘</dt><dd><p>旋转视图保持地平线水平。</p>
+<p>这就像一个陶工轮或唱机，可以进行两个轴向的旋转，整个世界对在其中的 <em>上</em> 和 <em>下</em> 有很好的定义。</p>
+<p>缺点使用 <em>转盘</em> 风格是物体操作时会失去一些灵活性。但是，你获得“向上”和“向下”的概念，如果你感觉无所适从它可以帮助你。</p>
+</dd>
+<dt>轨迹球</dt><dd><p>限制较少，允许任何方向。</p>
+</dd>
+</dl>
+</dd>
+<dt>缩放风格</dt><dd><p>选择偏好的 <kbd class="kbd docutils literal notranslate">Ctrl-MMB</kbd> 缩放风格。</p>
+<dl class="simple">
+<dt>比例</dt><dd><p><em>比例</em> 缩放取决于你按下鼠标按键时光标的位置。按住Ctrl-鼠标中键从屏幕边缘向中心拖拽进行视图缩小。按住 <kbd class="kbd docutils literal notranslate">Ctrl-MMB</kbd> 从视窗中心向边缘拖动鼠标进行视图放大。</p>
+</dd>
+<dt>持续</dt><dd><p><em>尺寸</em> 缩放选项允许通过移动鼠标，调整到 <kbd class="kbd docutils literal notranslate">Ctrl-MMB</kbd> 的鼠标起始点的距离，控制缩放速度(而非比例)。向起始点右侧或下方移动鼠标，进行视图缩小。向起始点左侧或上方移动鼠标，进行视图放大。移的越远，缩放速度越快。通过 <em>垂直</em> 和 <em>水平</em> 单选按钮以及 <em>反转鼠标缩放方向</em> 选项切换缩放方向。</p>
+</dd>
+<dt>滑动</dt><dd><p><em>滑动</em> 缩放和 <em>持续</em> 缩放类似，除了滑动缩放的缩放速度是恒定。</p>
+</dd>
+</dl>
+</dd>
+<dt>缩放轴向</dt><dd><p>用于 <kbd class="kbd docutils literal notranslate">MMB</kbd> 缩放的轴向。</p>
+<dl class="simple">
+<dt>垂直</dt><dd><p>向上拖动为放大，向下拖动为缩小。</p>
+</dd>
+<dt>水平</dt><dd><p>向左拖动为放大，向右拖动为缩小。</p>
+</dd>
+</dl>
+</dd>
+<dt>反转鼠标缩放方向</dt><dd><p>反转 <em>滑动</em> 缩放和 <em>持续</em> 缩放的缩放方向。</p>
+</dd>
+<dt>反转滚轮缩放</dt><dd><p>反转鼠标滚轮缩放的缩放方向。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="view-navigation">
+<h3>视角浏览<a class="headerlink" href="#view-navigation" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>浏览模式</dt><dd><p>在3D视图使用 <kbd class="kbd docutils literal notranslate">Shift-F</kbd> 的默认浏览模式。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="walk-navigation">
+<h3>Walk Navigation<a class="headerlink" href="#walk-navigation" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>反转鼠标</dt><dd><p>反转鼠标的垂直移动。</p>
+</dd>
+<dt>鼠标敏感度</dt><dd><p>观察四周的速度系数，值越高，对鼠标移动的反应越大。</p>
+</dd>
+<dt>Teleport Duration</dt><dd><p>Interval of time warp when teleporting in navigation mode.</p>
+</dd>
+<dt>步行速度</dt><dd><p>行走或飞行的基本速度。</p>
+</dd>
+<dt>速度系数</dt><dd><p>加速的倍数系数。</p>
+</dd>
+<dt>重力</dt><dd><p>模拟行走时的重力作用。</p>
+<dl class="simple">
+<dt>视图高度</dt><dd><p>行走时相机到地板的距离。</p>
+</dd>
+<dt>跳跃高度</dt><dd><p>最大跳跃高度。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="fly">
+<h4>飞行<a class="headerlink" href="#fly" title="Permalink to this headline">¶</a></h4>
+<p>飞行模式没有额外的选项。</p>
+</div>
+</div>
+<div class="section" id="ndof-device">
+<h3>NDOF控制器<a class="headerlink" href="#ndof-device" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>Pan Sensitivity</dt><dd><p>3D视图平移操作的整体灵敏度。</p>
+</dd>
+<dt>轨迹球灵敏度</dt><dd><p>3D视图旋转操作的整体灵敏度。</p>
+</dd>
+<dt>Deadzone</dt><dd><p>从设备静止状态到活动状态所需的移动量的阈值。</p>
+</dd>
+<dt>浏览风格</dt><dd><p>视图的浏览风格。</p>
+<dl class="simple">
+<dt>自由</dt><dd><p>使用所有自由度。</p>
+</dd>
+<dt>滚动</dt><dd><p>绕视图中心旋转。</p>
+</dd>
+</dl>
+</dd>
+<dt>旋转方法</dt><dd><p>视窗的旋转风格。</p>
+<dl class="simple">
+<dt>转盘</dt><dd><p>旋转视图保持地平线水平。</p>
+</dd>
+<dt>轨迹球</dt><dd><p>限制较少，允许任何方向。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="keymap-editor">
+<span id="prefs-input-keymap-editor"></span><h2>键位映射编辑器<a class="headerlink" href="#keymap-editor" title="Permalink to this headline">¶</a></h2>
+<p>键位映射编辑器是用于修改默认快捷键，可以修改任一编辑器的键位映射。</p>
+<div class="figure align-center" id="id2">
+<img alt="../_images/preferences_input_keymap-editor.png" src="../_images/preferences_input_keymap-editor.png" />
+<p class="caption"><span class="caption-text">键位映射编辑器。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>键位映射预设</dt><dd><p>预定义的键位映射选项。</p>
+</dd>
+</dl>
+<ol class="arabic simple">
+<li><p>选中需要修改的键位映射，单击白箭头，打开键位映射树。</p></li>
+<li><p>选择用于控制该功能的输入方式。</p>
+<ul class="simple">
+<li><p>键盘：只允许快捷键和组合快捷键，如 <kbd class="kbd docutils literal notranslate">E</kbd>, <kbd class="kbd docutils literal notranslate">Shift-E</kbd>。</p></li>
+<li><p>鼠标：左/中/右单击，并可搭配 <kbd class="kbd docutils literal notranslate">Alt</kbd>, <kbd class="kbd docutils literal notranslate">Shift</kbd>, <kbd class="kbd docutils literal notranslate">Ctrl</kbd>, <kbd class="kbd docutils literal notranslate">Cmd</kbd> 键使用。</p></li>
+<li><p>NDOF: <a class="reference internal" href="../getting_started/installing/configuration/hardware.html#hardware-3d-mice"><span class="std std-ref">3D鼠标</span></a> 的移动。</p></li>
+<li><p>拖拽：单击并拖动，也可搭配上述四个功能键使用。</p></li>
+<li><p>文字输入: 输入文字使用该功能。</p></li>
+<li><p>计时器：用于控制基于时间区间内的动作，比如，默认情况下， <em>动画步骤</em> 使用 &quot;计时器0&quot; <em>平滑视角</em> 使用 &quot;计时器1&quot;。</p></li>
+</ul>
+</li>
+<li><p>自定义你喜欢的快捷键，只要点击快捷键输入框，输入新的快捷键就行。</p></li>
+</ol>
+<p>如果想要恢复一组键位映射，点击右上角的 <em>Restore</em> 按钮即可。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>可以通过为鼠标和键盘操作新增 <em>预设</em> 来创建键位映射，而无需删除默认键位映射。</p>
+</div>
+</div>
+<div class="section" id="export-import-key-configuration">
+<h2>导入/导出键配置<a class="headerlink" href="#export-import-key-configuration" title="Permalink to this headline">¶</a></h2>
+<p>在一些情况下(比如，安装新系统或者将键位映射配置共享至社区)，你可能需要将配置信息保存到外部文件。只需点击标题栏的 <em>导出键配置</em> 按钮即可实现。接着，会进入文件浏览器选择配置文件存储位置。 <em>导入键配置</em> 按钮用于安装电脑中保存的键位映射配置。</p>
+<p>键位映射只包含用户修改过的键位映射和分类。另外，插件可能会为各个功能注册键位映射，不过，这些键位映射不会被导出，除非用户做过修改。导出的文件可以当做是 <strong>键位映射变化</strong> ，而非全键位映射输出。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="addons.html" class="btn btn-neutral float-right" title="插件" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="editing.html" class="btn btn-neutral float-left" title="编辑" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>阴影 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/eevee/shadows.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Volumetrics" href="volumetrics.html" />
+    <link rel="prev" title="灯光" href="lamps.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lighting/index.html">灯光</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Eevee 渲染器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="world.html">世界</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lamps.html">灯光</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">阴影</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-settings">全局设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lamp-settings">灯光设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#limitations">局限</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="volumetrics.html">Volumetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="screen_space_effects/index.html">屏幕空间效果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indirect_lighting.html">间接照明缓存</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lightprobes/index.html">光照探头</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motion_blur.html">运动模糊</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bloom.html">泛光</a></li>
+<li class="toctree-l3"><a class="reference internal" href="depth_of_field.html">景深</a></li>
+<li class="toctree-l3"><a class="reference internal" href="limitations.html">限制</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles渲染引擎</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">工作流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../audio/index.html">音频渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="index.html">Eevee 渲染器</a> &raquo;</li>
+        
+      <li>阴影</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/render/eevee/shadows.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="shadows">
+<h1>阴影<a class="headerlink" href="#shadows" title="Permalink to this headline">¶</a></h1>
+<p>Eevee使用阴影贴图技术产生直接来自灯光物体的光线的正确的阴影。</p>
+<p>阴影贴图是一种纹理，用于存储距光照位置最近的遮挡。 Eevee还会过滤阴影贴图，以平滑像素化的外观。</p>
+<div class="section" id="global-settings">
+<h2>全局设置<a class="headerlink" href="#global-settings" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">渲染 ‣ 阴影</span></p>
+</dd>
+</dl>
+</div>
+<dl>
+<dt>模式</dt><dd><p>选择阴影贴图类型。它改变了阴影的存储和过滤方式。</p>
+<dl class="simple">
+<dt><abbr title="指数阴影贴图">ESM</abbr></dt><dd><p>它们滤光快，但在遮挡物附近会受到光泄漏的影响。这可以通过增加 <em>Exponent</em> 参数来最小化。另一个问题是深度不连续时存在的伪影。不幸的是，这个问题没有解决办法，而将其最小化的唯一方法是减少 <em>Soft</em> 参数。</p>
+</dd>
+<dt><abbr title="方差阴影映射">VSM</abbr></dt><dd><p>过滤效果很好，可在整个阴影范围内提供平滑的阴影贴图。然而，当使用低位深度时，它会受到可见的颗粒状伪影的影响。当两个遮挡物重叠时，它也容易发生漏光。在这种情况下，可以通过使用 <em>Bleed Bias</em> 参数来遮蔽阴影以减少泄漏。 VSM使用的内存是ESM的两倍，并且速度较慢。</p>
+</dd>
+</dl>
+</dd>
+<dt>立方体大小</dt><dd><p>用于点光，区域光和聚光灯的阴影立方体贴图的大小。较高的阴影贴图大小将提供更高的精度和更清晰的阴影。</p>
+</dd>
+<dt>级联大小</dt><dd><p><em>级联阴影贴图</em> 使用的一个级联的大小。这仅适用于阳光灯。</p>
+</dd>
+<dt>高色彩深度</dt><dd><p>此选项可以帮助减少由于阴影贴图内的浮动不精确而导致的一些瑕疵。此选项会使阴影贴图的内存使用量加倍，并且会降低其更新速度。</p>
+</dd>
+<dt>柔和阴影（软阴影）</dt><dd><p>随机化阴影贴图原点以创建柔和阴影。它需要大量的样品来去除带状物。</p>
+</dd>
+<dt>灯光阈值</dt><dd><p>为了避免花费昂贵的设置时间，首先根据光阈值自动计算该距离。该距离在光源原点处计算，并使用平方反比衰减。该设置可以在 <span class="menuselection">渲染设置面板 ‣ 阴影栏</span> 中找到。</p>
+<p>此光阈值不考虑光的形状，可能不适合每种情况。这就是我们提供每种灯替换的原因，你可以在这里设置截止距离（ <span class="menuselection">Light Properties Panel ‣ Light ‣ Custom Distance</span>）。</p>
+<p>影响距离也用作阴影远距剪辑距离，这可能会影响阴影的外观。这种影响距离不涉及仍然具有远距剪辑距离的阳光。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="lamps.html"><span class="doc">自定义限制</span></a>.</p>
+</div>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>软阴影方法不是基于物理的，并且不匹配非常大的Cycles灯光。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>512px立方体贴图是6 x 512 x 512像素。调整 <em>尺寸</em> 参数会对内存消耗和性能产生很大影响。</p>
+</div>
+</div>
+<div class="section" id="lamp-settings">
+<h2>灯光设置<a class="headerlink" href="#lamp-settings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="common-parameters">
+<h3>常用参数<a class="headerlink" href="#common-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>剪辑</dt><dd><p>阴影贴图开始和结束距灯光物体的距离。此距离之前的任何物体都不会投射阴影。 <em>Clip End</em> 仅适用于阳光灯。</p>
+</dd>
+<dt>柔和</dt><dd><p>应用于阴影贴图的滤镜大小。此滤镜大小独立于阴影贴图分辨率。较高的过滤器尺寸会对性能产生很大影响。滤镜大小（以像素为单位）的最大上限取决于阴影分辨率。</p>
+</dd>
+<dt>偏差</dt><dd><p>偏差应用于深度测试以减少自阴影瑕疵。</p>
+</dd>
+<dt>指数</dt><dd><p>指数应用于ESM以减少漏光。</p>
+</dd>
+<dt>出血偏差</dt><dd><p>偏差应用于VSM以减少漏光。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="contact-shadows">
+<h3>接触阴影<a class="headerlink" href="#contact-shadows" title="Permalink to this headline">¶</a></h3>
+<p>这种类型的阴影存在以解决由偏别或阴影贴图缺少采样引起的光泄漏。他们使用深度缓冲区来查找遮挡物（就像屏幕空间反射一样）。然而，与屏幕空间反射完全一样，它们也受到同样的限制：未知物体厚度，效果在屏幕边缘消失。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>接触阴影的作用距离应该保持很小。它们不够精确，无法覆盖整个场景。</p>
+</div>
+<dl class="simple">
+<dt>距离</dt><dd><p>世界空间中搜索屏幕空间遮挡的距离。</p>
+</dd>
+<dt>柔软性</dt><dd><p>控制接触阴影的柔和程度。接触阴影模糊与灯光的物理大小不匹配。</p>
+</dd>
+<dt>偏差</dt><dd><p>应用于光线跟踪以减少自阴影瑕疵。</p>
+</dd>
+<dt>厚度</dt><dd><p>像素厚度用于检测遮挡。将任何潜在的遮挡当成这个厚度。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="cascaded-shadow-map">
+<span id="eevee-cascaded-shadow-map"></span><h3>级联（层叠）阴影贴图<a class="headerlink" href="#cascaded-shadow-map" title="Permalink to this headline">¶</a></h3>
+<p>These special kind of shadow maps are used by Sun lights.
+This is because they can shadow large scenes by distributing multiple shadow maps over the frustum range.
+Each cascade covers a different portion of the view frustum.
+Do note that cascade shadow maps are always updated because they are view dependent.
+This means they have a high performance impact.</p>
+<dl class="simple">
+<dt>计数</dt><dd><p>要使用的级联数。更多级联意味着更好的精度但更慢的更新。</p>
+</dd>
+<dt>淡化</dt><dd><p>淡化两个级联之间的过渡区域。值越高意味着整体分辨率越低，因为级联需要重叠。</p>
+</dd>
+<dt>最大距离</dt><dd><p>远离视图原点（或摄像机原点，如果在摄像机视图中）以覆盖级联。如果视图远剪辑距离低于最大距离，则将使用两者中的最低距离。仅适用于透视图。</p>
+</dd>
+<dt>分布</dt><dd><p>使更多分辨率朝向近剪裁平面。仅适用于透视图。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="limitations">
+<h2>局限<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>不支持灯光实例阴影（复制对象，组实例）。</p></li>
+<li><p>Eevee场景中仅支持最多128个激活灯光。</p></li>
+<li><p>同时只能支持8个投影阳光。</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="volumetrics.html" class="btn btn-neutral float-right" title="Volumetrics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lamps.html" class="btn btn-neutral float-left" title="灯光" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

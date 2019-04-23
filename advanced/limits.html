@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>功能局限 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/advanced/limits.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="操作" href="operators.html" />
+    <link rel="prev" title="Keymap Customization" href="keymap_editing.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">高级应用</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="command_line/index.html">命令行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripting/index.html">脚本与扩展Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_templates.html">应用模板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keymap_editing.html">Keymap Customization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">功能局限</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#space">空间</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#time">时间</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#text-fields">文本字段</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="operators.html">操作</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">高级应用</a> &raquo;</li>
+        
+      <li>功能局限</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/advanced/limits.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="working-limits">
+<h1>功能局限<a class="headerlink" href="#working-limits" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="space">
+<h2>空间<a class="headerlink" href="#space" title="Permalink to this headline">¶</a></h2>
+<p>在物体位置、顶点位置没有被限制的情况下，数值越大，精度越低。</p>
+<p>为了帮助你了解不同尺寸下可以获得的精度。</p>
+<p>下面是尺寸范围及其精度对照表。</p>
+<dl class="field-list simple">
+<dt class="field-odd">10</dt>
+<dd class="field-odd"><p>1/1,048,576<sup>th</sup></p>
+</dd>
+<dt class="field-even">100</dt>
+<dd class="field-even"><p>1/131,072<sup>th</sup></p>
+</dd>
+<dt class="field-odd">1,000</dt>
+<dd class="field-odd"><p>1/16,384<sup>th</sup></p>
+</dd>
+<dt class="field-even">10,000</dt>
+<dd class="field-even"><p>1/1,024<sup>th</sup></p>
+</dd>
+<dt class="field-odd">100,000</dt>
+<dd class="field-odd"><p>1/128<sup>th</sup></p>
+</dd>
+<dt class="field-even">1,000,000</dt>
+<dd class="field-even"><p>1/16<sup>th</sup></p>
+</dd>
+</dl>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>粗略的经验法则是， -5,000/+5,000范围内的数值通常都是可靠的(10,000的范围大小)。</p>
+<p>内部运算使用 <em>单精度</em> 浮点数。</p>
+</div>
+</div>
+<div class="section" id="time">
+<h2>时间<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h2>
+<p>目前单个场景的最大帧数是 1,048,574，允许连续拍摄时间为：</p>
+<dl class="field-list simple">
+<dt class="field-odd">24 fps</dt>
+<dd class="field-odd"><p>12 小时, 8 分钟.</p>
+</dd>
+<dt class="field-even">25 fps</dt>
+<dd class="field-even"><p>11 小时, 39 分钟.</p>
+</dd>
+<dt class="field-odd">30 fps</dt>
+<dd class="field-odd"><p>9 小时, 42分钟.</p>
+</dd>
+<dt class="field-even">60 fps</dt>
+<dd class="field-even"><p>4 小时, 51 分钟.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>实际上，通常需要合成许多场景的输出才能完成一个作品。所以这些限制并不会妨碍你创作更长的作品。</p>
+</div>
+</div>
+<div class="section" id="text-fields">
+<h2>文本字段<a class="headerlink" href="#text-fields" title="Permalink to this headline">¶</a></h2>
+<p>内部使用固定长度的字符串，不过列出所有的限制并没有什么用，下面是一些常见的限制。</p>
+<dl class="field-list simple">
+<dt class="field-odd">目录</dt>
+<dd class="field-odd"><p>767</p>
+</dd>
+<dt class="field-even">文件名</dt>
+<dd class="field-even"><p>255</p>
+</dd>
+<dt class="field-odd">文件路径</dt>
+<dd class="field-odd"><p>1023</p>
+</dd>
+<dt class="field-even">标识符</dt>
+<dd class="field-even"><p>63</p>
+</dd>
+</dl>
+<p><em>用于数据块名称, 修改器, 顶点组, UV层...</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>使用多字节编码，意味着unicode字符比单个ASCII字符占用更多字节。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="operators.html" class="btn btn-neutral float-right" title="操作" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="keymap_editing.html" class="btn btn-neutral float-left" title="Keymap Customization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

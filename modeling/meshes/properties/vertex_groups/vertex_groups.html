@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>顶点组面板 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/properties/vertex_groups/vertex_groups.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="指定顶点组" href="assigning_vertex_group.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editing/index.html">编辑</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">属性</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../object_data.html">物体数据</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">顶点组</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../custom_data.html">自定义数据</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_display.html">网格显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../../index.html">网格</a> &raquo;</li>
+        
+          <li><a href="../index.html">属性</a> &raquo;</li>
+        
+          <li><a href="index.html">顶点组</a> &raquo;</li>
+        
+      <li>顶点组面板</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/modeling/meshes/properties/vertex_groups/vertex_groups.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vertex-groups-panel">
+<h1>顶点组面板<a class="headerlink" href="#vertex-groups-panel" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">对象数据选项卡 ‣ 顶点组</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-right" id="id1">
+<img alt="../../../../_images/modeling_meshes_properties_vertex-groups_introduction_panel.png" src="../../../../_images/modeling_meshes_properties_vertex-groups_introduction_panel.png" />
+<p class="caption"><span class="caption-text">顶点组面板。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>顶点组位于在 <em>对象数据</em> 属性编辑器，该选项卡下有一个 <em>顶点组</em> 面板。</p>
+<dl>
+<dt>活动顶点组</dt><dd><p>一个 <a class="reference internal" href="../../../../interface/controls/templates/list_presets.html#ui-list-view"><span class="std std-ref">列表视图</span></a>。</p>
+<dl class="simple">
+<dt>锁定</dt><dd><p>锁定该顶点组为不可编辑，只能重命名或者删除组。</p>
+</dd>
+<dt>添加 <code class="docutils literal notranslate"><span class="pre">+</span></code></dt><dd><p>创建一个空的顶点组。</p>
+</dd>
+<dt>移除 <code class="docutils literal notranslate"><span class="pre">-</span></code></dt><dd><p>删除活动顶点组。</p>
+</dd>
+<dt>其他菜单</dt><dd><dl class="simple">
+<dt>顶点组排序</dt><dd><p>按照字母表对顶点组排序。</p>
+</dd>
+<dt>复制顶点组</dt><dd><p>添加活动顶点组的副本作为新组。新组名为原名称加后缀 &quot;_copy&quot;。它将与源顶点组包含相同顶点和相同权重。</p>
+</dd>
+<dt>复制顶点组至关联对象</dt><dd><p>复制网格中的顶点组到使用相同网格数据(数据的所有使用者)的所有关联对象中。</p>
+</dd>
+<dt>复制顶点组至已选</dt><dd><p>将所有顶点组复制到其他选中物体，前提是它们有相匹配的顶点编号(通常只是变形而未编辑的网格副本满足该条件)。</p>
+</dd>
+<dt>镜像顶点组</dt><dd><p>镜像所有顶点组，翻转权重和/或名称，仅编辑选定的顶点，当两侧都选中时翻转；否则从未选中复制。</p>
+</dd>
+<dt>镜像顶点组(拓扑)</dt><dd><p>启用 <a class="reference internal" href="../../editing/mesh_options.html#modeling-meshes-editing-topology-mirror"><span class="std std-ref">拓扑镜像</span></a> 选项。</p>
+</dd>
+<dt>从所有组中移除</dt><dd><p>(不适用于已锁定的组)从所有组中移除选中的顶点。执行此操作后，任何顶点组将不再包含该顶点。</p>
+</dd>
+<dt>清除活动组</dt><dd><p>从活动组中移除所有已指定的顶点，清空该顶点组。请注意，这些顶点可能仍然被指定给物体的其他顶点组。(不适用于已锁定的组)。</p>
+</dd>
+<dt>删除全部非锁定组</dt><dd><p>从物体移除所有 <em>非</em> 锁定顶点组。</p>
+</dd>
+<dt>删除所有组</dt><dd><p>从物体移除所有顶点组。</p>
+</dd>
+<dt>全部锁定</dt><dd><p>锁定所有组。</p>
+</dd>
+<dt>全部解锁</dt><dd><p>解锁所有组。</p>
+</dd>
+<dt>反转全部锁定状态</dt><dd><p>反转顶点组锁定状态。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="editing-vertex-groups">
+<h2>编辑顶点组<a class="headerlink" href="#editing-vertex-groups" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">对象数据选项卡 ‣ 顶点组</span></p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">网格 ‣ 顶点 ‣ 顶点组</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Ctrl-G</kbd></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-right" id="id2">
+<img alt="../../../../_images/modeling_meshes_properties_vertex-groups_vertex-groups_panel-edit.png" src="../../../../_images/modeling_meshes_properties_vertex-groups_vertex-groups_panel-edit.png" />
+<p class="caption"><span class="caption-text">编辑或者权重绘制模式下的顶点组面板。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>当切换到 <em>编辑模式</em> 或 <em>权重编辑模式</em>，可以编辑顶点权重。在3D视图中，可使用菜单 <span class="menuselection">网格 ‣ 顶点 ‣ 顶点组</span> 或 <kbd class="kbd docutils literal notranslate">Ctrl-G</kbd> 访问该操作。</p>
+<dl class="simple">
+<dt>指定</dt><dd><p>将所选顶点指定给活动组，在 <em>权重</em> 滑块中定义其权重(见下文)。</p>
+</dd>
+<dt>移除</dt><dd><p>从活动组中删除所选顶点 (也因此删除其权重值)。</p>
+</dd>
+<dt>选择</dt><dd><p>选择顶点组里包含的全部顶点。</p>
+</dd>
+<dt>取消选择</dt><dd><p>取消选中顶点组里包含的全部顶点。</p>
+</dd>
+<dt>权重</dt><dd><p>为选中的顶点指定的权重值。</p>
+</dd>
+<dt>设置活动组</dt><dd><p>选中顶点组后，该组将会变成活动组(仅可在列表菜单实现)。</p>
+</dd>
+</dl>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>由于顶点组名称是存储在物体中的，所以共用相同网格数据的多个物体可以具有特殊的属性, , 但是权重是存储在网格中的。这样就可以为不同物体指定不同的顶点组名称，但要小心的是，删除一个顶点组会从共用该网格的所有物体中删除该组。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="assigning_vertex_group.html" class="btn btn-neutral float-right" title="指定顶点组" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>蒙皮修改器 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/skin.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="实体化修改器" href="solidify.html" />
+    <link rel="prev" title="螺旋修改器" href="screw.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#generate">生成</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="array.html">阵列修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bevel.html">倒角修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="booleans.html">布尔修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="build.html">建形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="decimate.html">精简修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edge_split.html">拆边修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mask.html">遮罩修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mirror.html">镜像修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiresolution.html">多级精度修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="remesh.html">重构网格修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="screw.html">螺旋修改器</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">蒙皮修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="solidify.html">实体化修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsurf.html">表面细分修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="triangulate.html">三角化修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wireframe.html">线框修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#deform">形变</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#simulate">模拟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../index.html">修改器</a> &raquo;</li>
+        
+      <li>蒙皮修改器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/modeling/modifiers/generate/skin.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="skin-modifier">
+<span id="bpy-types-skinmodifier"></span><h1>蒙皮修改器<a class="headerlink" href="#skin-modifier" title="Permalink to this headline">¶</a></h1>
+<p>蒙皮修改器使用顶点和边来创建蒙皮面，使用每个顶点的半径来更好地定义形状。输出通常是四边形，尽管一些三角形可能在相交处出现。</p>
+<p>用任意拓扑来雕刻和/或光滑形体来生成基础网格是一种快速的方法。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>原始几何形体的面会被蒙皮修改器忽略掉。</p>
+</div>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_generate_skin_panel.png"><img alt="../../../_images/modeling_modifiers_generate_skin_panel.png" src="../../../_images/modeling_modifiers_generate_skin_panel.png" style="width: 340px;" /></a>
+<p class="caption"><span class="caption-text">蒙皮修改器.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="create-armature">
+<h3>创建骨架<a class="headerlink" href="#create-armature" title="Permalink to this headline">¶</a></h3>
+<p>在物体之上创建骨架.每个边都成为骨头。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>如果根顶点有多于一个的邻接边，它会创建额外的一根骨头作为根。</p>
+</div>
+<p>该功能实现了下面几条:</p>
+<ol class="arabic simple">
+<li><p>添加一个新的骨架物体，其骨骼匹配输入网格。活动选中项将切换到新的骨架上。</p></li>
+<li><p>权重组添加到输入网格中。蒙皮修改器传播这些权重到输出网格。</p></li>
+<li><p>在蒙皮修改器下方直接添加骨架修改器。 请注意，在蒙皮修改器之后应用骨架修改器，因为它只应使输出变形，而如果它在蒙皮修改器上方，则可能会更改生成的拓扑.</p></li>
+</ol>
+</div>
+<div class="section" id="smoothing">
+<h3>平滑<a class="headerlink" href="#smoothing" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>分支平滑</dt><dd><p>分支顶点是一个有三个或三个以上连接边的顶点。这些区域倾向于产生更复杂的拓扑，其中一些可能重叠。 <em>分支光滑</em> 设置使这些点周围的表面松散点，但会有收缩表面的副作用。</p>
+</dd>
+<dt>平滑着色</dt><dd><p>采用光滑着色而不是平直着色来输出面。输入几何形体的光滑、平直着色不被保留。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="selected-vertices">
+<h3>选择的顶点<a class="headerlink" href="#selected-vertices" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>标记、清除松散点</dt><dd><p>默认情况下，为了保持输出紧凑，分支顶点 (具有三个或更多的连接边的顶点) 将沿相邻的边生成额外的边环。可通过点击 <em>标记松散点</em> 使分支松散点，这将使输出在所有相邻的顶点之间伸展开来。可对选定的顶点再次点击 <em>清除松散点</em> 而禁用。</p>
+</dd>
+<dt>标记根点</dt><dd><p>将一个顶点标记为根点，将导致该顶点用来为连接的枝干计算旋转。根顶点也影响骨架的输出，它们会用作根骨头的原点。</p>
+<p>根在3D视图里是以红色虚线圆圈显示的，绕着该顶点。</p>
+<p>每个连接的顶点集应该只有一个根节点。 <em>标记根点</em> 加强了每个集和有一个根节点的条件，所以手动取消标记根节点就没有必要了。</p>
+</dd>
+<dt>均化半径</dt><dd><p>使选择顶点的蒙皮半径在每个轴上都相等。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="symmetry-axes">
+<h3>对称轴<a class="headerlink" href="#symmetry-axes" title="Permalink to this headline">¶</a></h3>
+<p>对称轴复选框用来保持输出的拓扑在它们各自的轴上对称。换句话讲，使用它可以避免在某个轴上合并三角面，除非三角面构成一个对称的四边形。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>这些对称轴复选框不会添加在轴上翻转的几何体。想做到这点，应当使用镜像修改器，且通常置于蒙皮修改器之上。</p>
+</div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>使用<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>添加蒙皮修改器到一个网格。关闭3D视图的 <em>仅选择可见元素</em> 选项，这样你可以看到新几何体的内部顶点。确认修改器对于编辑模式中的显示是启用的(默认开启).</p>
+<p>蒙皮修改器用普通的顶点和边作为输入。当构建一个带蒙皮的网格时，在编辑模式下的所有常规工具（比如挤出、细分、平移、缩放，以及旋转）都可以使用。</p>
+<div class="section" id="skin-resize">
+<h3>皮肤重缩放<a class="headerlink" href="#skin-resize" title="Permalink to this headline">¶</a></h3>
+<p>默认情况下，输入顶点的半径可以在编辑模式下单独缩放，以改变皮肤的厚度, 通过按下 <kbd class="kbd docutils literal notranslate">Ctrl-A</kbd>. 通过用 <kbd class="kbd docutils literal notranslate">X</kbd> 或 <kbd class="kbd docutils literal notranslate">Y</kbd> 将其锁定 ，可以使用X轴和Y轴的非均匀缩放。 也可以在 <em>属性</em> 区域的 <em>变换</em> 面板中调整半径。</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>例子<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id2">
+<span id="fig-modifier-skin-creature"></span><img alt="../../../_images/modeling_modifiers_generate_skin_example.png" src="../../../_images/modeling_modifiers_generate_skin_example.png" />
+<p class="caption"><span class="caption-text">只用蒙皮修改器制作的简单的生物.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple">
+<li><p>在 <em>修改器</em> 菜单里添加一个蒙皮修改器。</p></li>
+<li><p>按下 <kbd class="kbd docutils literal notranslate">Tab</kbd> 进入编辑模式，然后挤出。</p></li>
+<li><p>试着绘制如图 <a class="reference internal" href="#fig-modifier-skin-creature"><span class="std std-ref">只用蒙皮修改器制作的简单的生物.</span></a> 的草图结果, 通过基础物体的顶点.</p></li>
+<li><p>用 <kbd class="kbd docutils literal notranslate">Ctrl-A</kbd> 来改变这个怪物不同区域的尺寸。</p></li>
+<li><p>在像脖子一样的区域用上 <em>标记松散点</em> ，可以使这些面更紧凑地在一起。</p></li>
+<li><p>为了得到更光滑的结果, 激活 <em>平滑着色</em> 并添加 <a class="reference internal" href="subsurf.html"><span class="doc">表面细分</span></a>.</p></li>
+</ol>
+</div>
+<div class="section" id="external-links">
+<h2>外部链接<a class="headerlink" href="#external-links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.blendernation.com/2011/03/11/skin-modifier-development/">Blender Nation 的蒙皮修改器开发</a> -- Nicholas Bishop (March 2011)的蒙皮修改器早期示范.</p></li>
+<li><p>计忠平，刘利刚，王毅刚 (2010). <a class="reference external" href="http://www.math.zju.edu.cn/ligangliu/CAGD/Projects/BMesh/">B-Mesh：一种用在3D关节互连形状的基网格的快速建模系统</a>, 计算机图形学论坛 29(7), pp. 2169-2178. -- 该修改器基于(<a class="reference external" href="http://www.math.zju.edu.cn/ligangliu/CAGD/Projects/BMesh/Paper/BMesh.pdf">直接链接到 PDF</a>)。</p></li>
+<li><p><a class="reference external" href="http://blenderartists.org/forum/showthread.php?209551-B-mesh-modeling-tools-papers-better-than-zsfere">Blender artists 上的相关内容</a>.</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="solidify.html" class="btn btn-neutral float-right" title="实体化修改器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="screw.html" class="btn btn-neutral float-left" title="螺旋修改器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

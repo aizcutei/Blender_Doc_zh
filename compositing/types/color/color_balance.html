@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>色彩平衡节点 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/compositing/types/color/color_balance.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="色彩校正节点" href="color_correction.html" />
+    <link rel="prev" title="亮度/对比度节点" href="bright_contrast.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">合成</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../properties.html">属性</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#node-types">节点类型</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../input/index.html">输入类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../output/index.html">输出类节点</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">颜色类节点</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="alpha_over.html">Alpha上叠节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bright_contrast.html">亮度/对比度节点</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">色彩平衡节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_correction.html">色彩校正节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gamma.html">伽玛节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hue_correct.html">色相校正节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hue_saturation.html">色相/饱和度/明度节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="invert.html">反转节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mix.html">混合节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rgb_curves.html">RGB曲线节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tone_map.html">色调映射节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="z_combine.html">Z通道合成节点</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../converter/index.html">转换器类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filter/index.html">滤镜节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/index.html">矢量类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matte/index.html">遮片类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distort/index.html">畸变类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../groups.html">节点组</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layout/index.html">布局类节点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">合成</a> &raquo;</li>
+        
+          <li><a href="index.html">颜色类节点</a> &raquo;</li>
+        
+      <li>色彩平衡节点</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/compositing/types/color/color_balance.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="color-balance-node">
+<span id="bpy-types-compositornodecolorbalance"></span><h1>色彩平衡节点<a class="headerlink" href="#color-balance-node" title="Permalink to this headline">¶</a></h1>
+<p>色彩平衡节点用来调节图像的色调和数值。</p>
+<div class="figure align-center" id="id1">
+<img alt="../../../_images/compositing_types_color_color-balance_node.png" src="../../../_images/compositing_types_color_color-balance_node.png" />
+<p class="caption"><span class="caption-text">色彩平衡节点。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="inputs">
+<h2>输入<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>系数</dt><dd><p>控制应用此节点后对图像输出结果的作用程度。</p>
+</dd>
+<dt>颜色</dt><dd><p>标准化图像输入。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="properties">
+<h2>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<p>可使用两种不同的色彩校正公式。</p>
+<dl>
+<dt>Lift（提升，暗部调节）/Gamma（伽玛，中间调调节）/Gain（增益，高光调节）</dt><dd><dl class="simple">
+<dt>Lift(提升)</dt><dd><p>提亮暗部颜色值。</p>
+</dd>
+<dt>伽玛</dt><dd><p>调节中间调颜色。</p>
+</dd>
+<dt>增益</dt><dd><p>调节高亮区域颜色。</p>
+</dd>
+</dl>
+</dd>
+<dt>Offset（偏移量）/Power（能量）/Slope（斜率）(ASC-CDL：美国电影摄影师协会-色彩决策列表 的简写)</dt><dd><dl>
+<dt>偏移量</dt><dd><p>Summand. (Adjusts the overall brightness).</p>
+<dl class="simple">
+<dt>Basis</dt><dd><p>Additional offset, allows to specify a negative Offset value.</p>
+</dd>
+</dl>
+</dd>
+<dt>能量</dt><dd><p>Over-all exponent. (Adjusts the midtones).</p>
+</dd>
+<dt>斜率</dt><dd><p>Multiplier. (Adjusts the highlights).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="outputs">
+<h2>输出<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>颜色</dt><dd><p>标准化图像输出。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="advanced">
+<h2>理论知识<a class="headerlink" href="#advanced" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-offset-power-slope-formula">
+<h3>TheOffset（偏移量）/Power（能量）/Slope（斜率）公式<a class="headerlink" href="#the-offset-power-slope-formula" title="Permalink to this headline">¶</a></h3>
+<p><em>out</em> = (<em>i</em> × <em>s</em> + <em>o</em>)<sup>p</sup></p>
+<p>各参数含义：</p>
+<ul class="simple">
+<li><p><em>out</em>: 颜色分级色彩编码值。</p></li>
+<li><p><em>i</em>: 输入像素编码值 (0 to 1) (黑色到白色)。</p></li>
+<li><p><em>s</em>: 斜率 (任何大于或等于0的数值, 默认标称值是 1.0)。</p></li>
+<li><p><em>o</em>: Offset (任意数值, 默认标称值是 0)。</p></li>
+<li><p><em>p</em>: 能量(任何大于0的数值, 默认标称值是 1.0)。</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="color_correction.html" class="btn btn-neutral float-right" title="色彩校正节点" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bright_contrast.html" class="btn btn-neutral float-left" title="亮度/对比度节点" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

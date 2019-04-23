@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>动作编辑器 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/dope_sheet/action.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="蜡笔" href="grease_pencil.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#general">常规</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#animation">动画</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">动画摄影表</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">动作编辑器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grease_pencil.html">蜡笔</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shape_key.html">形态键</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../timeline.html">时间轴编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nla/index.html">NLA编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="index.html">动画摄影表</a> &raquo;</li>
+        
+      <li>动作编辑器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/editors/dope_sheet/action.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="action-editor">
+<h1>动作编辑器<a class="headerlink" href="#action-editor" title="Permalink to this headline">¶</a></h1>
+<p><em>动作编辑器</em> 是你可以定义和控制 <a class="reference internal" href="../../animation/actions.html"><span class="doc">动作</span></a> 的地方。它使你能够查看和编辑在 <em>函数曲线编辑器</em> 中定义为动作的F曲线数据块。因此它是介于低级 <a class="reference internal" href="../graph_editor/introduction.html"><span class="doc">函数曲线</span></a> 和高级 <a class="reference internal" href="../nla/index.html"><span class="doc">NLA编辑器</span></a> 之间。</p>
+<p>编辑器它给你一个略微简化的函数曲线数据块视图 (有点类似于没有手柄的函数曲线)。编辑器可以同时列出物体的所有动作数据块。</p>
+<p>每个动作数据块都形成一个顶级通道 (见下图)。请注意, 一个物体可以有几个 <em>约束</em> (每个动画一个约束) 和 <em>姿势</em> (对于骨架, 每个骨骼对应每个动画) F 曲线数据块, 因此一个动作可以有几个这些通道。</p>
+<div class="figure align-center" id="id1">
+<img alt="../../_images/editors_dope-sheet_action_editor.png" src="../../_images/editors_dope-sheet_action_editor.png" />
+<p class="caption"><span class="caption-text">动作编辑器。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="header">
+<h2>标题栏<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>上一个/下一个层（向下/向上箭头图标）</dt><dd><p>在NLA 堆栈中堆叠/暂存不同的动作之间切换，而不必去NLA编辑器并离开调整模式 重新进入另一个长条。</p>
+<p>点击向上/向下箭头按钮进入NLA轨道上方/NLA长条下方中的动作，该动作在动作编辑器中将被调整。</p>
+<p>如果同一图层/轨道上有多个动作/长条带，则只使用最接近当前帧的动作/条带。</p>
+<p>操作者将考虑帐户设置以单独查看/编辑动作（即Solo和NLA Muting ）。这样做是为了更容易预览不同的隐藏（暂存）动作。</p>
+<ul class="simple">
+<li><p>如果从单独（solo）的NLA轨道到活动动作，则NLA轨道将被静默（不可用），以便可以单独编辑动作。</p></li>
+<li><p>同样，如果NLA堆栈在编辑动作时被静默，下面的NLA轨道将在启用solo的情况下编辑。</p></li>
+<li><p>如果它的轨道之间切换，为以前的轨道的solo地位将转移到新的轨道。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>当你不编辑NLA Strip使用的动作时，这些仍然有效。如果你只是通常为新动作制作动画，则可以使用“向下箭头”临时跳转到上一个动作，而不会丢失正在处理的新动作，然后使用“向上箭头”回到它，一旦你完成检查其他动作时。</p>
+</div>
+</dd>
+</dl>
+<dl id="dopesheet-action-action">
+<dt>动作</dt><dd><p><a class="reference internal" href="../../interface/controls/templates/data_block.html#ui-data-block"><span class="std std-ref">数据块菜单</span></a>.</p>
+<dl class="simple">
+<dt>添加 <code class="docutils literal notranslate"><span class="pre">+</span></code></dt><dd><p>当一个动作被创建时，它被存储在NLA动作存储（暂存）器中。</p>
+</dd>
+<dt>取消链接</dt><dd><p>当 <kbd class="kbd docutils literal notranslate">Shift-LMB</kbd> 点击它清除假用户并且也从NLA堆栈中移除暂存的动作。</p>
+</dd>
+</dl>
+</dd>
+<dt>按下（双向下箭头图标）</dt><dd><p>将活动动作添加到NLA堆栈作为作用长条带。这与在NLA编辑器中按下Push Down 按钮基本相同。</p>
+</dd>
+<dt>藏匿（雪花图标）</dt><dd><p>将活动动作暂存在NLA堆栈上。即它以与创建新动作相同的方式添加为非贡献（起作用）堆栈。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在这两种情况下（按下和隐藏），一旦该动作被添加到NLA堆栈中，它就被清除/取消分配给活动动作槽（即不能从动作/图形编辑器中进行编辑，除非您输入稍后在相应条上的“调整模式”）。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="grease_pencil.html" class="btn btn-neutral float-right" title="蜡笔" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

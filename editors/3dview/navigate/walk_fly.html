@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>行走/飞行 模式 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/3dview/navigate/walk_fly.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="对齐" href="align.html" />
+    <link rel="prev" title="视图浏览" href="navigation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../startup_scene.html">启动场景</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modes.html">物体模式</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">视图浏览</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d_cursor.html">3D游标</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object/index.html">物体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../properties/index.html">属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ruler_protractor.html">3D量尺 &amp; 量角器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../index.html">3D视图</a> &raquo;</li>
+        
+          <li><a href="index.html">视图浏览</a> &raquo;</li>
+        
+      <li>行走/飞行 模式</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/editors/3dview/navigate/walk_fly.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="walk-fly-mode">
+<span id="dview-walk-fly"></span><h1>行走/飞行 模式<a class="headerlink" href="#walk-fly-mode" title="Permalink to this headline">¶</a></h1>
+<p>当需要放置视图时, 通常可以按照前文所述.</p>
+<p>但是, 在某些情况下，用户只需要浏览模型，尤其是特别大的模型，比如环境或一些建筑模型。以透视模式查看模型存在局限性，例如，在缩放了大量的平移后，非常不舒服和困难， 或者显然不能移近相机。 举个例子, 在视图中试试使用传统方法浏览一个远处的模型 (如上文)，看看可以发现什么。</p>
+<p>有了行走/飞行模式， 就可以没有任何限制的移动, 平移, 倾斜和滑动相机。</p>
+<div class="figure align-center" id="id2">
+<img alt="../../../_images/editors_3dview_navigate_walk-fly_view-navigation-panel.png" src="../../../_images/editors_3dview_navigate_walk-fly_view-navigation-panel.png" />
+<p class="caption"><span class="caption-text">视图浏览。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>在 <a class="reference internal" href="../../../preferences/index.html"><span class="doc">用户设置编辑器</span></a> 中，选择希望在调用视图浏览操作时，使用的导航模式。 也可以从视图浏览菜单中调用各个模式。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>该模式实际上 <em>移动</em> 了视图使用的相机。这意味着，当处于相机视图时, 会移动活动相机, 这是另一种放置和瞄准的方式。</p>
+</div>
+<div class="section" id="walk-mode">
+<span id="bpy-types-walknavigation"></span><h2>行走漫游模式<a class="headerlink" href="#walk-mode" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">视图‣ 视图切换 ‣ 行走漫游模式</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-F</kbd></p>
+</dd>
+</dl>
+</div>
+<p>在激活时，鼠标指针会移动到视图的中心， 并且会出现十字准星标记。</p>
+<p>该导航模式与当今大多数3D世界游戏中的第一人称漫游系统相似。它可以结合键盘键 <kbd class="kbd docutils literal notranslate">W</kbd>, <kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">S</kbd>, <kbd class="kbd docutils literal notranslate">D</kbd> 和移动鼠标使用。默认在 &quot;自由&quot; 模式下漫游，没有重力影响。 使用 <kbd class="kbd docutils literal notranslate">Tab</kbd> 在重力和自由模式之间切换。</p>
+<p>为了更快地移动到想要的地方，可以通过 <kbd class="kbd docutils literal notranslate">Spacebar</kbd> 传送到物体周围。如果在十字准星前方存在物体， 在这个方向移动至触及该点后停止(通过 <a class="reference internal" href="../../../preferences/index.html"><span class="doc">用户首选项</span></a> 设置的 <em>相机高度</em> 偏移值).</p>
+<div class="section" id="shortcuts">
+<h3>快捷键<a class="headerlink" href="#shortcuts" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>左右移动鼠标，可以左右平移视图；上下移动鼠标可以上下倾斜视角。</p></li>
+<li><p>前后移动相机 <kbd class="kbd docutils literal notranslate">W</kbd>, <kbd class="kbd docutils literal notranslate">S</kbd>.</p></li>
+<li><p>左右移动相机 <kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">D</kbd>.</p></li>
+<li><p>跳 <kbd class="kbd docutils literal notranslate">V</kbd> - 仅 <em>重力</em> 模式下。</p></li>
+<li><p>上下移动 <kbd class="kbd docutils literal notranslate">Q</kbd>, <kbd class="kbd docutils literal notranslate">E</kbd> - 仅 <em>自由</em> 模式下。</p></li>
+<li><p>使用 <kbd class="kbd docutils literal notranslate">Tab</kbd> 在 <em>自由</em> 和 <em>重力</em> 模式之间切换。</p></li>
+<li><p>改变移动速度: - <kbd class="kbd docutils literal notranslate">WheelUp</kbd> 或 <kbd class="kbd docutils literal notranslate">NumpadPlus</kbd> 提高移动速度。 - <kbd class="kbd docutils literal notranslate">WheelDown</kbd> 或 <kbd class="kbd docutils literal notranslate">NumpadMinus</kbd> 降低移动速度。- <kbd class="kbd docutils literal notranslate">Shift</kbd> (按住) - 暂时加快移动. - <kbd class="kbd docutils literal notranslate">Alt</kbd> (按住) - 暂时减慢运动速度.</p></li>
+</ul>
+<p>当对新视图感到满意后，按 <kbd class="kbd docutils literal notranslate">LMB</kbd> 确认。按下 <kbd class="kbd docutils literal notranslate">Esc</kbd> 或 <kbd class="kbd docutils literal notranslate">RMB</kbd> ，返回初始位置。</p>
+<p>如果要为项目调整默认值(速度, 鼠标敏感性...)，可以到 <a class="reference internal" href="../../../preferences/index.html"><span class="doc">用户设置</span></a> 中调整相关选项：</p>
+</div>
+</div>
+<div class="section" id="fly-mode">
+<h2>飞行漫游模式<a class="headerlink" href="#fly-mode" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">视图 ‣ 视图切换 ‣ 飞行导航模式</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-F</kbd></p>
+</dd>
+</dl>
+</div>
+<p>激活该模式后，鼠标指针会移动到视图的中心，并显示为一个矩形标记 – 一种HUD...</p>
+<p>飞行模式的一些选项受鼠标指针与视图中心相对位置影响，视图中心周围的矩形标记区起 &quot;安全区&quot; 作用，鼠标放置在该区域内，对视图没有任何影响。 鼠标指针离标记区域越远，平移或前进越多。</p>
+<div class="section" id="id1">
+<h3>快捷键<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>左右移动鼠标，可以左右平移视图；上下移动鼠标可以上下倾斜视角。</p></li>
+<li><p>前后移动视图: - <kbd class="kbd docutils literal notranslate">WheelUp</kbd> 或 <kbd class="kbd docutils literal notranslate">NumpadPlus</kbd> 加速向前移动. - <kbd class="kbd docutils literal notranslate">WheelDown</kbd> 或 <kbd class="kbd docutils literal notranslate">NumpadMinus</kbd> 以加速向后移动。</p>
+<blockquote>
+<div><p>因此，如果视图正在向前移动了, <kbd class="kbd docutils literal notranslate">WheelDown</kbd>, <kbd class="kbd docutils literal notranslate">NumpadMinus</kbd> 会将其停住，然后向后移动, 等等。</p>
+</div></blockquote>
+</li>
+<li><p>拖动 <kbd class="kbd docutils literal notranslate">MMB</kbd> 进行滑移。在这种情况下，视图可以在你拖动鼠标的时候沿其自身轴向移动 – 很明显, 左/右/上/下拖动，左/右/上/下滑移视图。</p></li>
+</ul>
+<p>当对新视图感到满意后，按 <kbd class="kbd docutils literal notranslate">LMB</kbd> 确认。按下 <kbd class="kbd docutils literal notranslate">Esc</kbd> 或 <kbd class="kbd docutils literal notranslate">RMB</kbd> ，返回初始位置。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="align.html" class="btn btn-neutral float-right" title="对齐" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="navigation.html" class="btn btn-neutral float-left" title="视图浏览" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

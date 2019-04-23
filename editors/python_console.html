@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python 控制台 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/python_console.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="信息编辑器" href="info/index.html" />
+    <link rel="prev" title="文本编辑器" href="text_editor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#general">常规</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#animation">动画</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#scripting">脚本</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="text_editor.html">文本编辑器</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Python 控制台</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">使用方法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="info/index.html">信息编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">编辑器</a> &raquo;</li>
+        
+      <li>Python 控制台</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/editors/python_console.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-console">
+<span id="bpy-ops-console"></span><span id="bpy-types-spaceconsole"></span><span id="bpy-types-consoleline"></span><h1>Python 控制台<a class="headerlink" href="#python-console" title="Permalink to this headline">¶</a></h1>
+<p>Python的控制台是一个快速来执行命令的方法，以访问整个Python的API，命令历史记录和自动完成功能。</p>
+<p>可以通过控制台来探索可能性，然后将命令粘贴到脚本。</p>
+<div class="section" id="introduction">
+<h2>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="accessing-built-in-python-console">
+<h3>访问内置的Python控制台<a class="headerlink" href="#accessing-built-in-python-console" title="Permalink to this headline">¶</a></h3>
+<p>通过按 <kbd class="kbd docutils literal notranslate">Shift-F4</kbd> 在任何Blender编辑器类型（3D视图，时间线等），你可以把它改成一个控制台编辑器。</p>
+<div class="figure align-center">
+<img alt="../_images/editors_python-console_default.png" src="../_images/editors_python-console_default.png" />
+</div>
+<p>命令提示符是典型的 Python 3.x，解释器已加载，并准备接受提示符 <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> 后的命令。</p>
+</div>
+<div class="section" id="first-look-at-the-console-environment">
+<h3>先看看控制台环境<a class="headerlink" href="#first-look-at-the-console-environment" title="Permalink to this headline">¶</a></h3>
+<p>若要检查什么加载到了解释器环境，请在提示符下键入 <code class="docutils literal notranslate"><span class="pre">dir()</span></code> 并执行。</p>
+<div class="figure align-center">
+<img alt="../_images/editors_python-console_dir.png" src="../_images/editors_python-console_dir.png" />
+</div>
+</div>
+<div class="section" id="auto-completion">
+<h3>自动完成工作<a class="headerlink" href="#auto-completion" title="Permalink to this headline">¶</a></h3>
+<p>现在，键入 <code class="docutils literal notranslate"><span class="pre">bpy.</span></code> ，然后按 <kbd class="kbd docutils literal notranslate">Ctrl-Spacebar</kbd> ，你会看到控制台自动完成功能在运行中。</p>
+<div class="figure align-center">
+<img alt="../_images/editors_python-console_completion.png" src="../_images/editors_python-console_completion.png" />
+</div>
+<p>你会注意到出现在 <code class="docutils literal notranslate"><span class="pre">bpy</span></code> 子模块的列表。这些模块封装所有我们Blender  Python API 能做的工作，是非常强大的工具。</p>
+<p>让我们列出 <code class="docutils literal notranslate"><span class="pre">bpy.app</span></code> 模块的所有内容。</p>
+<p>注意在启用自动完成的提示符之上的绿色输出。你看到的是自动完成列表的结果。在上面的列表中，所有的都是模块属性名称，但是如果你看到任何以``（`` 结尾的名字，那么这是一个函数。</p>
+<p>我们将利用这一点来帮助我们更快地学习API。现在你已经掌握了这一点，让我们继续研究 <code class="docutils literal notranslate"><span class="pre">bpy</span></code> 中的一些模块。</p>
+</div>
+<div class="section" id="before-tinkering-with-the-modules">
+<h3>摆弄模块前<a class="headerlink" href="#before-tinkering-with-the-modules" title="Permalink to this headline">¶</a></h3>
+<p>如果你在 3D 视图查看默认 Blender场景，你将注意到 三个物体: 立方体、 灯和摄像机。</p>
+<ul class="simple">
+<li><p>所有对象的都存在上下文，可以有各种模式下对他们进行操作。</p></li>
+<li><p>在任何情况下，只有一个物体处于活动状态，并且可以有多个选定的物体。</p></li>
+<li><p>所有物体都是blend文件中的数据。</p></li>
+<li><p>有创建和修改这些对象的运算符/函数。</p></li>
+</ul>
+<p>对于上面列出的所有方案 (并非全部列出, 请注意...) &quot;bpy&quot; 模块提供了访问和修改数据的功能。</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>示例<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bpy-context">
+<h3>bpy.context<a class="headerlink" href="#bpy-context" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>要使下面的命令显示正确的输出, 请确保在3D 视图中有选定的对象。</p>
+</div>
+<div class="figure align-center">
+<img alt="../_images/editors_python-console_bpy-context.png" src="../_images/editors_python-console_bpy-context.png" />
+</div>
+<div class="section" id="try-it-out">
+<h4>试试看！<a class="headerlink" href="#try-it-out" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>bpy.context.mode</dt><dd><p>将打印当前 3D 视图模式 (物体、 编辑、 雕刻等.)。</p>
+</dd>
+<dt>bpy.context.object 或 bpy.context.active_object</dt><dd><p>将访问3D视图中的活动物体。</p>
+</dd>
+</dl>
+<p>将X位置值更改为1:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>将前一个X位置的物体移动0.5个单位:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mf">0.5</span>
+</pre></div>
+</div>
+<p>修改X, Y, Z 位置值:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>只更改X，Y组件:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">xy</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>物体的数据类型位置:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>现在，你可以有权访问许多数据:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">bpy.context.selected_objects</span></code></dt><dd><p>访问到所有选定物体的列表。</p>
+</dd>
+</dl>
+<p>然后按 <kbd class="kbd docutils literal notranslate">Ctrl-Spacebar</kbd>:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">selected_objects</span>
+</pre></div>
+</div>
+<p>打印列表中第一个物体的名称:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">selected_objects</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>复杂的一个......但是这会打印一个不包含活动物体的物体列表:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">obj</span> <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">selected_objects</span> <span class="k">if</span> <span class="n">obj</span> <span class="o">!=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">object</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="bpy-data">
+<h3>bpy.data<a class="headerlink" href="#bpy-data" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">bpy.data</span></code> 具有可以访问.blend文件中所有数据的函数和属性。</p>
+<p>你可以访问当前.blend文件中的以下数据: 物体、 网格、 材质、 纹理、 场景、 屏幕、 声音、 脚本，等等。</p>
+<p>这是大量的数据。</p>
+<div class="section" id="id1">
+<h4>试试看！<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-center">
+<img alt="../_images/editors_python-console_bpy-data.png" src="../_images/editors_python-console_bpy-data.png" />
+</div>
+</div>
+<div class="section" id="exercise">
+<h4>练习<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h4>
+<p>按 <kbd class="kbd docutils literal notranslate">Return</kbd> 两次后它将打印所有属于名称为“Scene”的Blender场景的物体:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">scenes</span><span class="p">[</span><span class="s1">&#39;Scene&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">objects</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>将活动物体与名为“Scene”的Blender场景取消关联:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">scenes</span><span class="p">[</span><span class="s1">&#39;Scene&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">active_object</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">materials</span><span class="p">[</span><span class="s1">&#39;Material&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shadows</span>
+
+<span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">materials</span><span class="p">[</span><span class="s1">&#39;Material&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shadows</span> <span class="o">=</span> <span class="bp">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="bpy-ops">
+<h3>bpy.ops<a class="headerlink" href="#bpy-ops" title="Permalink to this headline">¶</a></h3>
+<p>这个工具系统是围绕操作者的概念构建的。运算符通常从按钮或菜单执行, 但也可以直接从 Python 调用。</p>
+<p>见 <a class="reference external" href="https://www.blender.org/api/blender_python_api_current/bpy.ops.html">bpy.ops</a>  所有的操作符 API documentation 列表。</p>
+<p>让我们在3D视图中创建一组五个立方体。首先，选中它并按下 <kbd class="kbd docutils literal notranslate">X</kbd> 删除现有的立方体物体。</p>
+<div class="section" id="id2">
+<h4>试试看！<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>下面的命令用于指定在1层中创建物体。首先, 我们定义一个数组变量以供以后参考:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">mylayers</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="mi">20</span>
+<span class="n">mylayers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>我们创建一个用于创建立方体网格基础物体的操作符的引用:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_cube</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">primitive_cube_add</span>
+</pre></div>
+</div>
+<p>现在在一个 <em>for循环</em> 中，我们创建五个物体（在上面的屏幕截图中使用了另一种方法创建，）像这样： 在shell提示下输入命令后按两次 <kbd class="kbd docutils literal notranslate">Return</kbd></p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">add_cube</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">(</span><span class="n">index</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">layers</span><span class="o">=</span><span class="n">mylayers</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<img alt="../_images/editors_python-console_bpy-ops.png" src="../_images/editors_python-console_bpy-ops.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>使用方法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="aliases">
+<h3>别名管理<a class="headerlink" href="#aliases" title="Permalink to this headline">¶</a></h3>
+<p>一些变量和模块可以方便使用：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code>:  快速访问  'Bpy.context ' 。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">D</span></code>: 快速访问 <code class="docutils literal notranslate"><span class="pre">bpy.data</span></code>。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bpy</span></code>: 顶级Blender Python API模块。</p></li>
+</ul>
+</div>
+<div class="section" id="key-bindings">
+<h3>键绑定<a class="headerlink" href="#key-bindings" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">Up</kbd> / <kbd class="kbd docutils literal notranslate">Down</kbd> -- Cycle 命令历史。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Left</kbd> / <kbd class="kbd docutils literal notranslate">Right</kbd> -- 光标运动。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl-Left</kbd> / <kbd class="kbd docutils literal notranslate">Ctrl-Right</kbd> -- 光标运动，用文字。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Backspace</kbd> / <kbd class="kbd docutils literal notranslate">Delete</kbd> -- 擦除字符。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Tab</kbd> --缩进。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Shift-Tab</kbd> -- 取消缩进。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl-Backspace</kbd> / <kbd class="kbd docutils literal notranslate">Ctrl-Delete</kbd> -- 擦除文字。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl-Spacebar</kbd> --自动完成。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Return</kbd> -- 执行命令。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Shift-Return</kbd> -- 添加到命令历史记录而不执行。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl-C</kbd> -- 复制选择。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl-V</kbd> -- 粘贴到命令行。</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="info/index.html" class="btn btn-neutral float-right" title="信息编辑器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="text_editor.html" class="btn btn-neutral float-left" title="文本编辑器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

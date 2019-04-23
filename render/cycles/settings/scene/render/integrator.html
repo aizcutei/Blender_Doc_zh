@@ -1,0 +1,483 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>积分器 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/cycles/settings/scene/render/integrator.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="Film" href="film.html" />
+    <link rel="prev" title="Render Settings" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../lighting/index.html">灯光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../eevee/index.html">Eevee 渲染器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">Cycles渲染引擎</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lamps.html">灯光</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../world.html">世界</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../nodes/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../camera.html">Cameras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../features.html">渲染功能特性</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">Cycles Settings</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">Scene Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../objects/index.html">Object Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../gpu_rendering.html">GPU渲染</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../baking.html">渲染烘焙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../optimizations/index.html">Optimizing Renders</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../output/index.html">渲染输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../workflows/index.html">工作流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../opengl.html">OpenGL渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../audio/index.html">音频渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Cycles渲染引擎</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Cycles Settings</a> &raquo;</li>
+        
+          <li><a href="../index.html">Scene Settings</a> &raquo;</li>
+        
+          <li><a href="index.html">Render Settings</a> &raquo;</li>
+        
+      <li>积分器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../_sources/render/cycles/settings/scene/render/integrator.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="integrator">
+<h1>积分器<a class="headerlink" href="#integrator" title="Permalink to this headline">¶</a></h1>
+<p>积分器是一种用于计算光照的渲染算法。目前，Cycles引擎支持一种积分器，一种带直接光照采样的路径追踪积分器。它可以很好地适用于各种照明设定，但不适用于焦散以及其它一些复杂的光照情形。</p>
+<p>光线从摄像机出发射到场景中，并来回反弹，直到它们找到一个光源，例如一个灯光物体，一个发光物体，或是环境背景光。为了找到灯光或发光的表面，间接照明采样（让光线跟随表面BSDF）与直接照明采样（选取一个光源并追踪射向它的光线）都将会用到。</p>
+<div class="section" id="sampling">
+<h2>采样<a class="headerlink" href="#sampling" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<dl class="field-list simple">
+<dt class="field-odd">Panel</dt>
+<dd class="field-odd"><p><span class="menuselection">Render ‣ Sampling</span></p>
+</dd>
+</dl>
+</div>
+<dl>
+<dt>采样方法</dt><dd><p>There are two integrator modes that can be used: <em>Path Tracing</em> and <em>Branched Path Tracing</em>.</p>
+</dd>
+<dt>二次方采样</dt><dd><p>Square the amount samples.</p>
+</dd>
+<dt>采样种</dt><dd><p>Seed value for integrator to get different noise patterns.</p>
+<dl class="simple">
+<dt>Animate Seed (clock icon)</dt><dd><p>This button, which can be found on the right side of the <em>Seed</em> value,
+can be used to give different seed values. It is a good idea to enable this
+when making animation because in the real world each frame has a different noise pattern.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl id="render-cycles-integrator-clamp-samples">
+<dt>Clamp Direct</dt><dd><p>This option limits the maximum intensity a sample from rays which have not yet bounced can contribute to a pixel.
+It reduces noise at the cost of accuracy. Setting this option to 0.0 disables clamping altogether.
+Lower have a greater affect (dimmer samples) on the resulting image than higher values.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A common issue encountered with <em>Path Tracing</em> is the occurrence of &quot;fireflies&quot;:
+improbable samples that contribute very high values to pixels.
+This option provides a way to limit that. However, note that as you clamp out such values,
+other bright lights/reflections will be dimmed as well.</p>
+<p>Care must be taken when using this setting to find a balance between mitigating fireflies and
+losing intentionally bright parts. It is often useful to clamp indirect bounces separately,
+as they tend to cause more fireflies than direct bounces. See the <em>Clamp Indirect</em> setting.</p>
+</div>
+</dd>
+<dt>Clamp Indirect</dt><dd><p>The same as <em>Clamp Direct</em>, but for rays which have bounced multiple times.</p>
+</dd>
+<dt>Light Sampling Threshold</dt><dd><p>Probabilistically terminates light samples when the light contribution
+is below this threshold (more noise but faster rendering).
+Zero disables the test and never ignores lights.
+This is useful because in large scenes with many light sources,
+some might only contribute a small amount to the final image, and increase render times.
+Using this setting can decrease the render times needed to calculate
+the rays which in the end have very little affect on the image.</p>
+</dd>
+<dt>Pattern</dt><dd><p>Random sampling pattern used by the integrator.</p>
+<dl class="simple">
+<dt>Sobol</dt><dd><p>Uses a Sobol pattern to decide the random sampling pattern used by the integrator.
+See <a class="reference external" href="https://en.wikipedia.org/wiki/Sobol_sequence">Sobol sequence</a> on Wikipedia for more information.</p>
+</dd>
+<dt>Correlated Multi-Jitter</dt><dd><p>Uses a Correlated Multi-Jitter pattern to decide the random sampling pattern used by the integrator.
+See <a class="reference external" href="http://graphics.pixar.com/library/MultiJitteredSampling/paper.pdf">this Pixar paper</a>
+for more information.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl id="render-cycles-integrator-layer-samples">
+<dt>Layer Samples</dt><dd><p>When render layers have per layer number of samples set, this option specifies how to use them.</p>
+<dl class="simple">
+<dt>Use</dt><dd><p>The render layer samples will override the set scene samples.</p>
+</dd>
+<dt>Bounded</dt><dd><p>Bound render layer samples by scene samples.</p>
+</dd>
+<dt>Ignore</dt><dd><p>Ignore render layer sample settings.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="path-tracing">
+<h3>Path Tracing<a class="headerlink" href="#path-tracing" title="Permalink to this headline">¶</a></h3>
+<p>The <em>Path Tracing</em> integrator is a pure path tracer;
+at each hit it will bounce light in one direction and pick one light to receive lighting from.
+This makes each individual sample faster to compute,
+but will typically require more samples to clean up the noise.</p>
+<dl class="simple">
+<dt>渲染采样</dt><dd><p>这是最终渲染中单像素的光程追踪次数。采样次数越多，结果中的噪点就会越少，也会更加精确。</p>
+</dd>
+<dt>预览采样</dt><dd><p>这是视窗渲染时的采样次数。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="branched-path-tracing">
+<h3>Branched Path Tracing<a class="headerlink" href="#branched-path-tracing" title="Permalink to this headline">¶</a></h3>
+<p>The non-progressive Branched Path Tracing integrator offers finer control over sampling.
+It is similar to <em>Path Tracing</em>, but at the first hit it will split the path for
+different surface components and will take all lights into account for shading instead of just one.</p>
+<p>This makes each sample slower, but will reduce noise,
+especially in scenes dominated by direct or one-bounce lighting.
+To get the same number of diffuse samples as in the path tracing integrator, note that e.g.
+250 path tracing samples = 10 AA samples x 25 diffuse samples.
+The Sampling panel shows this total number of samples.</p>
+<dl class="simple">
+<dt>抗锯齿采样</dt><dd><p>Number of samples to take for each pixel in the final render. More samples will improve anti-aliasing.</p>
+</dd>
+<dt>抗锯齿采预览样</dt><dd><p>这是视窗渲染时的采样次数。</p>
+</dd>
+<dt>漫射色采样</dt><dd><p>每个抗锯齿采样中的漫射反弹采样数</p>
+</dd>
+<dt>光泽采样</dt><dd><p>每个抗锯齿采样中的光泽反弹采样数</p>
+</dd>
+<dt>传递采样</dt><dd><p>每个抗锯齿采样中的漫射传递采样数</p>
+</dd>
+<dt>环境光遮罩采样</dt><dd><p>每个抗锯齿采样中的环境遮罩采样数</p>
+</dd>
+<dt>网格照明采样</dt><dd><p>每个抗锯齿采样中的网格照明采样数</p>
+</dd>
+<dt>次表面采样</dt><dd><p>每个抗锯齿采样中的次表面散射采样数</p>
+</dd>
+<dt>Volume Samples</dt><dd><p>Number of volume scattering samples to take for each AA sample.</p>
+</dd>
+<dt>Sample All Direct Lights</dt><dd><p>When enabled, Cycles will sample all lights in the scene for direct bounces, instead of randomly picking one.
+Disabling this can improve performance, when using a lot of AA Samples anyway, to clear up the render.</p>
+</dd>
+<dt>Sample All Indirect Lights</dt><dd><p>Similar to direct light, but for indirect lights. This can reduce noise in scenes with many lights.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="light-paths">
+<span id="render-cycles-integrator-light-paths"></span><h2>Light Paths<a class="headerlink" href="#light-paths" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">Reference</p>
+<dl class="field-list simple">
+<dt class="field-odd">Panel</dt>
+<dd class="field-odd"><p><span class="menuselection">Render ‣ Light Paths</span></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="bounces">
+<span id="cycles-bounces"></span><h3>反弹<a class="headerlink" href="#bounces" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>最大反弹次数</dt><dd><p>光线反弹最大数值。要最好的质量的话，可以将该数值设到最大。但从实践来说，较小的数值会渲染得快一些。只能在直接光线下把最大值设置为零。</p>
+</dd>
+<dt>最低反弹次数</dt><dd><p>Minimum number of light bounces for each path,
+after which the integrator uses Russian Roulette to terminate paths that contribute less to the image.
+Setting this higher gives less noise, but may also increase render time considerably. For a low number of bounces,
+it is strongly recommended to set this equal to the maximum number of bounces.</p>
+</dd>
+<dt>漫射反弹</dt><dd><p>漫射反弹的最大次数</p>
+</dd>
+<dt>光泽反弹</dt><dd><p>光泽反弹的最大次数</p>
+</dd>
+<dt>传递反弹</dt><dd><p>传递反弹的最大次数</p>
+</dd>
+<dt>Volume Bounces</dt><dd><p>Maximum number of volume scattering bounces.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="transparency">
+<h3>透射<a class="headerlink" href="#transparency" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>透射最大值</dt><dd><p>透射反弹的最大次数</p>
+</dd>
+<dt>透射最小值</dt><dd><p>透射反弹的最小值，决定选用哪种罗斯轮盘。</p>
+</dd>
+<dt>透明阴影</dt><dd><p>对于直射光采样，用在阴影面和光源之间的表面的透明度来生成受表面透明度影响的阴影。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="caustics-filter-glossy">
+<h3>Caustics &amp; Filter Glossy<a class="headerlink" href="#caustics-filter-glossy" title="Permalink to this headline">¶</a></h3>
+<dl class="simple" id="render-cycles-integrator-no-caustics">
+<dt>Reflective Caustics</dt><dd><p>While in principle path tracing supports rendering of caustics with a sufficient number of samples,
+in practice it may be inefficient to the point that there is just too much noise.
+This option can be unchecked, to disable reflective caustics.</p>
+</dd>
+<dt>Refractive Caustics</dt><dd><p>The same as above, but for refractive caustics.</p>
+</dd>
+</dl>
+<dl id="render-cycles-integrator-filter-glossy">
+<dt>滤除光泽</dt><dd><p>设置一个高于 0.0的值的话，会在模糊反弹后将光泽反射模糊掉，通过降低精度来达到减少噪点的目的。1.0是用来调优的最好的起始值。</p>
+<p>在光线要对某个像素点贡献很大光亮的时候这些光路被寻找到的概率是非常低的。正因为如此，这样的光路可能会在某些像素点上找到，在另外的像素点又找不到，这就引起了亮点问题。一般引起这样问题的原因比如：非常锐利的光泽材质上的很小的一个高光反光点产生的反射光。</p>
+<p>路径追踪是很难找到反射高光的，但是如果我们把材质的粗糙度提高，高光会更大和柔和，也更容易找到。通常这种模糊很难被发觉，因为我们是在模糊的材质上看到的，不过也会损失掉一些光线的细节。</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See <a class="reference internal" href="../../../optimizations/reducing_noise.html#render-cycles-reducing-noise-clamp-samples"><span class="std std-ref">Reducing Noise</span></a>
+for examples of the clamp settings in use.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="film.html" class="btn btn-neutral float-right" title="Film" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Render Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

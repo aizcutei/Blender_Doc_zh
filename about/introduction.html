@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Blender中文手册介绍 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/about/introduction.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="许可证" href="license.html" />
+    <link rel="prev" title="关于本手册" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">关于本手册</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Blender中文手册介绍</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#conventions">约定</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#keyboards">键盘</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mice">鼠标</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#contribute">贡献</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="license.html">许可证</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whats_new.html">新增内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute/index.html">贡献</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">关于本手册</a> &raquo;</li>
+        
+      <li>Blender中文手册介绍</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/about/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction-to-the-blender-manual">
+<h1>Blender中文手册介绍<a class="headerlink" href="#introduction-to-the-blender-manual" title="Permalink to this headline">¶</a></h1>
+<p>我们意在提供一份完整且简明的参考手册。</p>
+<dl class="simple">
+<dt>目标群体</dt><dd><ul class="simple">
+<li><p>接受过计算机图形学方面的教育，理解三维基础知识，且/或了解其他3D软件。</p></li>
+</ul>
+</dd>
+<dt>本手册既定目标为提供</dt><dd><ul class="simple">
+<li><p>对Blender工作原理的深入解析，其内部(技术)设计 - 为了更好地理解选项和工具。</p></li>
+<li><p>Blender中所有功能、工具和选项的具体功能描述。</p></li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="conventions">
+<h2>约定<a class="headerlink" href="#conventions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="keyboards">
+<h3>键盘<a class="headerlink" href="#keyboards" title="Permalink to this headline">¶</a></h3>
+<p>快捷键与其在键盘上显示的一致，例如:</p>
+<dl class="simple">
+<dt><kbd class="kbd docutils literal notranslate">G</kbd></dt><dd><p>指代小写 <code class="docutils literal notranslate"><span class="pre">g</span></code>.</p>
+</dd>
+<dt><kbd class="kbd docutils literal notranslate">Shift</kbd>, <kbd class="kbd docutils literal notranslate">Ctrl</kbd>, <kbd class="kbd docutils literal notranslate">Alt</kbd></dt><dd><p>指定为组合键。</p>
+</dd>
+<dt><kbd class="kbd docutils literal notranslate">Ctrl-W</kbd>, <kbd class="kbd docutils literal notranslate">Shift-Alt-A</kbd>, ...</dt><dd><p>表示这些键需同时按下。</p>
+</dd>
+<dt><kbd class="kbd docutils literal notranslate">Numpad0</kbd> 到 <kbd class="kbd docutils literal notranslate">Numpad9</kbd>, <kbd class="kbd docutils literal notranslate">NumpadPlus</kbd></dt><dd><p>指代数字键盘上的对应键。</p>
+</dd>
+</dl>
+<p>其他按键使用其键名表示, 如 <kbd class="kbd docutils literal notranslate">Esc</kbd>, <kbd class="kbd docutils literal notranslate">Tab</kbd>, <kbd class="kbd docutils literal notranslate">F1</kbd> 到 <kbd class="kbd docutils literal notranslate">F12</kbd>. 比较特殊的是方向键, <kbd class="kbd docutils literal notranslate">Left</kbd>, <kbd class="kbd docutils literal notranslate">Right</kbd> 等等.</p>
+</div>
+<div class="section" id="mice">
+<h3>鼠标<a class="headerlink" href="#mice" title="Permalink to this headline">¶</a></h3>
+<p>本手册使用如下形式指代鼠标按键:</p>
+<dl class="simple">
+<dt><kbd class="kbd docutils literal notranslate">LMB</kbd></dt><dd><p>鼠标左键</p>
+</dd>
+<dt><kbd class="kbd docutils literal notranslate">RMB</kbd></dt><dd><p>鼠标右键</p>
+</dd>
+<dt><kbd class="kbd docutils literal notranslate">MMB</kbd></dt><dd><p>鼠标中键</p>
+</dd>
+<dt><kbd class="kbd docutils literal notranslate">Wheel</kbd></dt><dd><p>滚轮。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="contribute">
+<span id="about-user-contribute"></span><h2>贡献<a class="headerlink" href="#contribute" title="Permalink to this headline">¶</a></h2>
+<p>Blender中文手册的翻译和编写是由社区驱动的，任何人都可以参与并贡献的事业。不管你是发现拼写错误，还是想提高文档的综合质量，都可以来参与这些事情。你可以：</p>
+<ol class="arabic simple">
+<li><p>解决问题，改进文档并写入新的章节 - 了解如何 <a class="reference internal" href="contribute/index.html"><span class="doc">贡献</span></a>.</p></li>
+<li><p><a class="reference external" href="https://developer.blender.org/maniphest/task/edit/form/default/?project=PHID-PROJ-c4nvvrxuczix2326vlti">报告文档中的问题</a> .
+针对中文手册中的问题，请 <a class="reference external" href="http://bbs.blendercn.org/forum.php?mod=viewthread&amp;tid=3296">点此报错</a> 。</p></li>
+<li><p>通过 <a class="reference external" href="https://lists.blender.org/mailman/listinfo/bf-docboard">邮件列表</a> 和 <code class="docutils literal notranslate"><span class="pre">#blenderwiki</span></code> <a class="reference internal" href="../getting_started/about/community.html#irc-channels"><span class="std std-ref">IRC 频道</span></a> 参与讨论。</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="license.html" class="btn btn-neutral float-right" title="许可证" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="关于本手册" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Alembic &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/pipeline/alembic.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Collada" href="collada.html" />
+    <link rel="prev" title="BAM资产管理器" href="bam.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">管线</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bam.html">BAM资产管理器</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Alembic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#exporting-to-alembic-files">导出为 Alembic文件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#manual-transform">手动设置变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scene-options">场景选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#object-options">物体选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#particle-systems">粒子系统</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="collada.html">Collada</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">管线</a> &raquo;</li>
+        
+      <li>Alembic</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pipeline/alembic.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="alembic">
+<h1>Alembic<a class="headerlink" href="#alembic" title="Permalink to this headline">¶</a></h1>
+<p>以下摘自 <a class="reference external" href="https://www.alembic.io/">Alembic 主页</a>:</p>
+<blockquote>
+<div><p>Alembic 是一个开放的计算机图形交换构架。Alembic 把复杂的、动画的场景提取为非程序化的、与处理软件无关的一套烘焙好的几何体。这种把场景'提取'为烘焙好的几何体的过程完全类似于把灯光和渲染场景提取成渲染出的图像数据。</p>
+<p>Alembic专注于把复杂的程序化的几何体构建的计算结果进行高效的存储。非常明确的一点是，它 <strong>不</strong> 存储用来创建计算结果的复杂的程序化工具的依存关系。比如说，Alembic会高效地储存任意的复杂动画和模拟过程（包括包裹变形、形状校正、恒定体积模拟、布料和肌肉模拟，等等）所产生的动画的顶点位置和动画的变形。</p>
+</div></blockquote>
+<p><abbr title="Too long; didn't read.">TL;DR</abbr> （简言之）: Alembic可以把动画的网格写入硬盘，然后再迅速高效地读取出来。这意味着可以把需要巨大的CPU消耗的绑定动画的网格，'烘焙'到 Alembic文件里，然后再加载入镜头文件中进行贴图和灯光设置而只消耗较小的CPU使用量。</p>
+<p>对 Alembic 文件格式的支持始于 <a class="reference external" href="https://wiki.blender.org/wiki/Reference/Release_Notes/2.78">Blender 2.78</a>.</p>
+<p>由于 Alembic 标准的开放性以及C++库文件的标准化， <strong>Blender可以用于混合的流程</strong>. 比如说，Houdini或者Maya这样的软件可以把文件输出为 Alembic格式, 然后在Blender中载入、贴图、渲染. 也可以在Blender中对角色（或者其它模型）赋予动画, 然后输出为 Alembic文件, 继而在其它软件中加载后进一步处理.</p>
+<div class="section" id="exporting-to-alembic-files">
+<h2>导出为 Alembic文件<a class="headerlink" href="#exporting-to-alembic-files" title="Permalink to this headline">¶</a></h2>
+<p>此章节说明不同的输出选项的效果。</p>
+<div class="section" id="manual-transform">
+<h3>手动设置变换<a class="headerlink" href="#manual-transform" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id1">
+<img alt="../_images/pipeline_alembic_export-panel-scene-options.png" src="../_images/pipeline_alembic_export-panel-scene-options.png" />
+<p class="caption"><span class="caption-text">Alembic导出选项。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>比例</dt><dd><p>设置Alembic文件的全局缩放值。使用缺省值1.0则采用Blender的单位。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="scene-options">
+<h3>场景选项<a class="headerlink" href="#scene-options" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>起始和结束帧</dt><dd><p>设置输出至 Alembic的帧范围。缺省使用当前场景的帧范围。</p>
+</dd>
+<dt>次帧采样：变形和几何体采样，快门开、闭</dt><dd><p>这些选项控制动画的次帧采样。 Transform Samples设置对每一帧进行动画变形的采样并写入Alembic的次数。Geometry Samples的设置与此相同，只是针对的是动画的几何体。 Shutter Open &amp; Close（快门开、闭）规定了进行采样的 [开、闭] 间隔。有效范围为-1到1，其中-1指前一帧，1指后一帧。比如说，当需要详细的mesh运动模糊的信息时，以采样次数5、快门开设置为-0.25、快门闭设置为0.25对当前帧进行次帧采样并写入Alembic。这就模拟了一个180度的快门，在当前帧前开到90度，而在当前帧后关闭90度。</p>
+</dd>
+<dt>仅选中物体</dt><dd><p>选中此项时，只输出被选中的物体。否则输出所有物体。</p>
+</dd>
+<dt>仅可渲染物体</dt><dd><p>此选项很有用，比如用来避免输出自定义的骨骼形状。</p>
+</dd>
+<dt>仅可见层</dt><dd><p>输出的物体仅限于当前可见的场景层内。</p>
+</dd>
+<dt>摊平层级</dt><dd><p>不选此项时，将输出物体间的父/子关系。如果父物体本身不输出而自物体要被输出，则父物体以空物体代替。如果选中此项，则不输出父/子关系，所有的变形都按照世界坐标输出。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="object-options">
+<h3>物体选项<a class="headerlink" href="#object-options" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id2">
+<img alt="../_images/pipeline_alembic_export-panel-object-options.png" src="../_images/pipeline_alembic_export-panel-object-options.png" />
+<p class="caption"><span class="caption-text">物体选项。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>UV</dt><dd><p>选中此项后，将输出UV。虽然Alembic标准只支持单个UV，Blender以可以被其它软件读取的方式输出所有的UV。</p>
+</dd>
+<dt>拼排UV孤岛</dt><dd><p>优化UV布局，生成无重叠的UV孤岛，以有效利用 <a class="reference internal" href="../glossary/index.html#term-texture-space"><span class="xref std std-term">纹理空间</span></a>。 更多信息见相同原理的 <a class="reference internal" href="../editors/uv_image/uv/editing/layout.html#editors-uv-image-editing-layout-pack-islands"><span class="std std-ref">拼排UV孤岛操作</span></a>。</p>
+</dd>
+<dt>法向</dt><dd><p>启用后，将输出物体的 <a class="reference internal" href="../glossary/index.html#term-normal"><span class="xref std std-term">法向</span></a>。</p>
+</dd>
+<dt>顶点颜色</dt><dd><p>选中此项时，将输出顶点颜色。此时只支持静态的顶点颜色，而不是动态的带动画的顶点颜色。</p>
+</dd>
+<dt>面集合</dt><dd><p>按面输出材质名称。仅导出材质名称，不导出材质数据。</p>
+</dd>
+<dt>使用细分模式</dt><dd><p>使用 &quot;SubD&quot; Alembic图表输出多边形网格，而非 &quot;PolyMesh&quot;图表，即告知程序打开文件时应用其非破坏细分。</p>
+</dd>
+<dt>应用表面细分</dt><dd><p>在输出Alembic前应用任何 <a class="reference internal" href="../modeling/modifiers/generate/subsurf.html"><span class="doc">表面细分修改器</span></a>。</p>
+</dd>
+<dt>三角化</dt><dd><p>在输出Alembic前对网格三角化。具体选项的更多细节见 <a class="reference internal" href="../modeling/modifiers/generate/triangulate.html"><span class="doc">三角化修改器</span></a>。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="particle-systems">
+<h3>粒子系统<a class="headerlink" href="#particle-systems" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id3">
+<img alt="../_images/pipeline_alembic_export-panel-particle-systems.png" src="../_images/pipeline_alembic_export-panel-particle-systems.png" />
+<p class="caption"><span class="caption-text">粒子系统</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Alembic不支持粒子系统，正如它不支持骨骼。毛发输出为带动画的零宽度曲线。粒子输出为带动画的点。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="collada.html" class="btn btn-neutral float-right" title="Collada" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bam.html" class="btn btn-neutral float-left" title="BAM资产管理器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

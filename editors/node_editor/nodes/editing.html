@@ -1,0 +1,427 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>编辑 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/node_editor/nodes/editing.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="属性" href="properties.html" />
+    <link rel="prev" title="选择" href="selecting.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../3dview/index.html">3D视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">节点编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../navigate.html">导航</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">节点</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../index.html">节点编辑器</a> &raquo;</li>
+        
+          <li><a href="index.html">节点</a> &raquo;</li>
+        
+      <li>编辑</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/editors/node_editor/nodes/editing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editing">
+<h1>编辑<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="transform">
+<h2>变换<a class="headerlink" href="#transform" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">节点 ‣ 移动, 旋转, 缩放</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">G</kbd>, <kbd class="kbd docutils literal notranslate">R</kbd>, <kbd class="kbd docutils literal notranslate">S</kbd></p>
+</dd>
+</dl>
+</div>
+<p>通过单击并拖动单个节点来移动它。一个节点几乎可以在任何地方点击以开始拖动。按下 <kbd class="kbd docutils literal notranslate">G</kbd> 后可以平移多个节点。</p>
+<p>通常 , 建议在视图内排列节点 , 以便数据从左到右、从上到下流动。</p>
+<p>可以通过拖动左侧或右侧的边缘来调整节点的大小。</p>
+</div>
+<div class="section" id="connecting-sockets">
+<h2>连接接口<a class="headerlink" href="#connecting-sockets" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="interactively">
+<h3>交互<a class="headerlink" href="#interactively" title="Permalink to this headline">¶</a></h3>
+<p><kbd class="kbd docutils literal notranslate">LMB</kbd>-单击一个接口并拖动。你会看到一条线从它出来: 这叫做 <em>链接</em>。</p>
+<p>保持拖动并将链接连接到另一个节点的输入接口，然后释放 <kbd class="kbd docutils literal notranslate">LMB</kbd>。</p>
+<p>虽然可以由一个节点输出接口输出多个链接，但只有一个链接可以连接到输入接口。</p>
+<p>要重新定位节点的输出链接，而不是添加新链接，按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 在输出接口拖放 。这适用于单个以及多个输出链接。</p>
+<p>没有连接的节点可以插入链接。只需将该节点移动到链接上并在链接变为橙色时释放。</p>
+<dl class="simple">
+<dt>生成连接  <kbd class="kbd docutils literal notranslate">F</kbd></dt><dd><p>使用打开的接口选择多个节点，然后使用制作链接在它们之间创建链接。如果有其他可以连接的节点，请再次使用建立链接。</p>
+</dd>
+<dt>生成并替换链接 <kbd class="kbd docutils literal notranslate">Shift-F</kbd></dt><dd><p><em>生成并替换连接</em> 与 <em>生成连接</em> 的作用类似，但它将替换现有连接（如果存在）。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="disconnecting-sockets">
+<h2>断开接口<a class="headerlink" href="#disconnecting-sockets" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>交互<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>从输入接口拖动链接，让它保持未连接状态。</p>
+</div>
+<div class="section" id="cut-links">
+<h3>切断连接<a class="headerlink" href="#cut-links" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">节点 ‣ 切断关联</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd></p>
+</dd>
+</dl>
+</div>
+<p>要断开接口之间的链接，请在空白区域中单击 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 要断开连接的链接，然后拖动：你将看到鼠标指针上出现一个小切割器图标。移动链接本身，并释放 <kbd class="kbd docutils literal notranslate">LMB</kbd> 。</p>
+<dl class="simple">
+<dt>Detach Links <kbd class="kbd docutils literal notranslate">Alt-D</kbd>, <kbd class="kbd docutils literal notranslate">Alt-LMB</kbd>-drag</dt><dd><p>使用切断关联是为了一次切割到选定节点的所有链接。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="duplicate">
+<h2>复制<a class="headerlink" href="#duplicate" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">节点 ‣ 复制</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-D</kbd></p>
+</dd>
+</dl>
+</div>
+<p>在所需节点上点击 <kbd class="kbd docutils literal notranslate">LMB</kbd> 或 <kbd class="kbd docutils literal notranslate">RMB</kbd> ，按下 <kbd class="kbd docutils literal notranslate">Shift-D</kbd>  并移动鼠标以查看出现在鼠标指针下的所选节点的副本。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>当你复制一个节点时，新的节点将被定位在被复制的节点上。如果你把它留在那里（而且这样做很容易），你可能 <em>不</em> 容易知道那里有 <em>两个</em> 节点！ 如果有疑问，抓住一个节点并稍微移动一下，看看下面是否有东西隐藏。</p>
+</div>
+</div>
+<div class="section" id="delete">
+<h2>删除<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>删除 <kbd class="kbd docutils literal notranslate">X</kbd>, <kbd class="kbd docutils literal notranslate">Delete</kbd></dt><dd><p>删除选定的节点。</p>
+</dd>
+<dt>通过重新连接删除 <kbd class="kbd docutils literal notranslate">Ctrl-X</kbd></dt><dd><p>删除节点而不丢失连接。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="mute">
+<h2>禁用/启用节点<a class="headerlink" href="#mute" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">节点 ‣ 禁用/启用节点</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">M</kbd></p>
+</dd>
+</dl>
+</div>
+<p>将节点禁用将删除节点对节点树的（功能）贡献，并使所有的链接均可毫无改变地通过该节点。链接将显示为红色，作为通过禁用节点的指示器。</p>
+</div>
+<div class="section" id="show-hide">
+<h2>显示 / 隐藏<a class="headerlink" href="#show-hide" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Hide <kbd class="kbd docutils literal notranslate">H</kbd></dt><dd><p>Collapses the node so only the node header is visible.
+This can also be toggled by clicking the triangle at the top left of the node header.</p>
+</dd>
+<dt>切换节点预览 <kbd class="kbd docutils literal notranslate">Shift-H</kbd></dt><dd><p>Shows/Hides a preview region on the node that displays the frame
+after that node's operation has been applied. This can also be toggled
+by clicking the material ball icon in the node header.</p>
+</dd>
+<dt>显示 / 隐藏节点接口 <kbd class="kbd docutils literal notranslate">Ctrl-H</kbd></dt><dd><p>Collapses/Expands any input or output sockets that have no other nodes connected to them.</p>
+</dd>
+<dt>切换节点选项</dt><dd><p>Shows/Hides all node properties.</p>
+</dd>
+<dt>折叠并隐藏未使用的节点接口</dt><dd><p>Applies both the <em>Toggle Hidden Node Sockets</em> and <em>Toggle Node Options</em> operations.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="layers">
+<span id="bpy-ops-node-read-fullsamplelayers"></span><span id="bpy-ops-node-read-viewlayers"></span><h2>层<a class="headerlink" href="#layers" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The tools are only used in the <a class="reference internal" href="../../../compositing/index.html"><span class="doc">Compositor</span></a>.</p>
+</div>
+<dl class="simple">
+<dt>读取渲染层 <kbd class="kbd docutils literal notranslate">Ctrl-R</kbd></dt><dd><p>Reads all the current scene's render layers from cache, as needed.
+This can be used to save RAM while rendering because the render layers do not have to be saved in RAM.
+This can also be used to recover some information from a failed render.
+For this to work, <a class="reference internal" href="../../../render/cycles/settings/scene/render/performance.html#render-properties-save-buffers"><span class="std std-ref">Save Buffers</span></a> must be enabled.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="properties.html" class="btn btn-neutral float-right" title="属性" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="selecting.html" class="btn btn-neutral float-left" title="选择" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

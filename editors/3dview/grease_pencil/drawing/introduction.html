@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/3dview/grease_pencil/drawing/introduction.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="层" href="layers.html" />
+    <link rel="prev" title="绘制笔触" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#general">常规</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../startup_scene.html">启动场景</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../modes.html">物体模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../navigate/index.html">视图浏览</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d_cursor.html">3D游标</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../object/index.html">物体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ruler_protractor.html">3D量尺 &amp; 量角器</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">蜡笔</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../vse/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#scripting">脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#data">数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="../../index.html">3D视图</a> &raquo;</li>
+        
+          <li><a href="../index.html">蜡笔</a> &raquo;</li>
+        
+          <li><a href="index.html">绘制笔触</a> &raquo;</li>
+        
+      <li>简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/editors/3dview/grease_pencil/drawing/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>在工具栏(<kbd class="kbd docutils literal notranslate">T</kbd>)单击 <em>自由线、直线，多段线和擦除</em> 启用 <em>蜡笔</em> 后，会自动添加新图层用于绘制操作。</p>
+<p>在属性区块的蜡笔面板添加新图层。也可以在该面板调整蜡笔线条的颜色，透明度和粗细。对这些设置的修改会影响当前图层的所有笔画。</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/interface_grease-pencil_drawing_introduction_example-simple.png"><img alt="../../../../_images/interface_grease-pencil_drawing_introduction_example-simple.png" src="../../../../_images/interface_grease-pencil_drawing_introduction_example-simple.png" style="width: 620px;" /></a>
+<p class="caption"><span class="caption-text">Blender蜡笔示例。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p><em>蜡笔</em> 草图能够转换为可以编辑的几何体然后在动画流程中使用。</p>
+<div class="section" id="drawing">
+<span id="bpy-ops-gpencil-draw"></span><h2>绘制<a class="headerlink" href="#drawing" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 蜡笔 ‣ 蜡笔</span></p>
+</dd>
+</dl>
+</div>
+<p>工具栏提供了一些 <em>蜡笔</em> 的绘制选项，具体如下。</p>
+<dl>
+<dt>自由线 <kbd class="kbd docutils literal notranslate">D-LMB</kbd></dt><dd><p>绘制新笔画(多根连接的短线段)，松开鼠标后绘制结束。</p>
+</dd>
+<dt>直线 <kbd class="kbd docutils literal notranslate">Ctrl-D-LMB</kbd></dt><dd><p>以橡皮筋模式画一根线(定首末点位置)，松开鼠标后直线绘制结束。</p>
+</dd>
+<dt>多段线 <kbd class="kbd docutils literal notranslate">Ctrl-D-RMB</kbd></dt><dd><p>通过单击鼠标添加端点绘制连续线段，按下鼠标后自动添加直线连接端点。按下鼠标 LMB 不放，并拖动鼠标，可以预览新的端点/线段。点的位置锁定在鼠标移动平面。</p>
+</dd>
+<dt>擦除 <kbd class="kbd docutils literal notranslate">D-RMB</kbd>, <kbd class="kbd docutils literal notranslate">Eraser</kbd></dt><dd><p>擦除 &quot;笔刷&quot; (从笔刷圆心直线衰减)影响半径范围内的笔画。松开鼠标后，擦除操作结束，降低笔刷宽度直至彻底擦除。擦除操作作用于所有可见与可编辑图层。使用 <em>擦除</em> 工具时， <kbd class="kbd docutils literal notranslate">RMB</kbd> 与 <kbd class="kbd docutils literal notranslate">LMB</kbd> 均会擦除笔画。擦除操作的指示光标显示为虚线轮廓的红色圆。</p>
+<p>按住 <kbd class="kbd docutils literal notranslate">RMB</kbd>，使用 <kbd class="kbd docutils literal notranslate">Wheel</kbd> 、或者 <kbd class="kbd docutils literal notranslate">NumpadPlus</kbd> 与 <kbd class="kbd docutils literal notranslate">NumpadMinus</kbd> 控制擦除&quot;笔刷&quot;的大小。</p>
+</dd>
+<dt>插入空白帧 <kbd class="kbd docutils literal notranslate">D-B</kbd></dt><dd><p>如当前帧非关键帧，在当前帧添加空白帧。当前帧存在关键帧，将所有帧后移一帧，然后插入空白帧。</p>
+</dd>
+<dt>删除帧 <kbd class="kbd docutils literal notranslate">D-X</kbd></dt><dd><p>删除所有未被锁定的活动帧。</p>
+</dd>
+</dl>
+<div class="section" id="additive-drawing">
+<span id="bpy-types-toolsettings-use-gpencil-additive-drawing"></span><h3>累加绘制<a class="headerlink" href="#additive-drawing" title="Permalink to this headline">¶</a></h3>
+<p>当启用 &quot;累加绘制&quot; 选项后，在空白帧(非关键帧)开始绘制时，将保留/复制活动帧笔画。这样就无需打开动画摄影表，在绘制前对当前帧进行复制(否则，可能需要在没有参考的情况下绘制完美姿势)，节约时间。</p>
+<p>该选项使基于上一帧制作动画镜头变得更加简单。该选项带来方便的情形如：面部表情动画 (所有轮廓位于同一图层)，或者 &quot;生长&quot; 动画(比如藤蔓、从一点产生的同心圆)。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在不启用该选项时，在&quot;空白&quot;帧执行擦除操作默认获得相同效果。这样可以更方便地修改部分面部表情，或者制作&quot;擦除&quot;效果动画。</p>
+</div>
+</div>
+<div class="section" id="continuous-drawing">
+<span id="bpy-types-toolsettings-use-gpencil-continuous-drawing"></span><h3>持续绘制<a class="headerlink" href="#continuous-drawing" title="Permalink to this headline">¶</a></h3>
+<p>持续绘制用于快速绘制草图，可以一次使用 <em>蜡笔</em> 绘制多个笔画。所以用户只需在绘制开始时按住 <kbd class="kbd docutils literal notranslate">D</kbd> 即可。除勾选 <em>持续绘制</em> 外，使用 <kbd class="kbd docutils literal notranslate">LMB</kbd> 绘制时松开 <kbd class="kbd docutils literal notranslate">D</kbd> 也会启用该选项。一次性笔画的擦除操作 ((<kbd class="kbd docutils literal notranslate">RMB</kbd>) 仍然有效。 注意启动擦除工具后， <kbd class="kbd docutils literal notranslate">LMB</kbd> 或者 <kbd class="kbd docutils literal notranslate">RMB</kbd> 都可以擦除。</p>
+<p>使用 <kbd class="kbd docutils literal notranslate">Esc</kbd> 或者 <kbd class="kbd docutils literal notranslate">Return</kbd> 或者在当前视窗外(如其他区块或编辑器)单击退出该模式。使用 E 键快速进入雕刻模式时，持续拖拽失效。</p>
+</div>
+<div class="section" id="draw-on-back">
+<span id="bpy-types-toolsettings-use-gpencil-draw-onback"></span><h3>在后面绘制<a class="headerlink" href="#draw-on-back" title="Permalink to this headline">¶</a></h3>
+<p>确认绘制后，新笔画移至图形后方(堆至最底层)。</p>
+</div>
+</div>
+<div class="section" id="stroke-placement">
+<span id="bpy-types-gpencilsculptsettings-lockaxis"></span><span id="bpy-types-toolsettings-gpencil-stroke-placement-view3d"></span><h2>笔画放置<a class="headerlink" href="#stroke-placement" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id2">
+<img alt="../../../../_images/interface_grease-pencil_drawing_introduction_tools-panel.png" src="../../../../_images/interface_grease-pencil_drawing_introduction_tools-panel.png" />
+<p class="caption"><span class="caption-text">蜡笔面板。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>指定笔画如何转换至3D (或2D)空间。</p>
+<dl>
+<dt>视图</dt><dd><p>新笔画放置在屏幕空间(2D)，锁定于视窗平面。</p>
+</dd>
+<dt>Cursor</dt><dd><p>3D空间中绘制新笔画，所在平面由游标位置与绘制时视图旋转决定。 <em>UV/图像编辑器</em> 中也有 <em>游标选项</em>，不过其功能与 <em>视图</em> 选项等同。 <em>(仅适用于3D视图)</em></p>
+<dl class="simple">
+<dt>锁定轴向</dt><dd><p>锁定投影至指定轴向。</p>
+</dd>
+</dl>
+</dd>
+<dt>面</dt><dd><p>3D空间中绘制新笔画，并投影至第一个可见表面。 <em>(仅适用于3D视图)</em></p>
+</dd>
+<dt>笔画</dt><dd><p>3D空间中绘制新笔画，并投影至第一个可见笔画。<em>视图</em> 选项绘制的笔画不在3D空间中，所以投影时不予考虑。 <em>(仅适用于3D视图)</em></p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-toolsettings-use-gpencil-stroke-endpoints">
+<dt>仅端点</dt><dd><p>仅应用绘制选项于笔画端点。调整端点之间的笔画至经过这些端点的平面。</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id3">
+<img alt="../../../../_images/interface_grease-pencil_drawing_introduction_stroke-placement.png" src="../../../../_images/interface_grease-pencil_drawing_introduction_stroke-placement.png" />
+<p class="caption"><span class="caption-text">不同绘制设置下的蜡笔笔画效果。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>绘图板用户需注意：</p>
+<ul class="simple">
+<li><p>笔画的粗细受绘制压力影响。</p></li>
+<li><p>触控笔的 <em>橡皮擦</em> 笔头可用于擦除笔画。</p></li>
+</ul>
+</div>
+<dl class="simple">
+<dt>启用编辑</dt><dd><p>见 <a class="reference internal" href="../stroke_edit.html"><span class="doc">笔触编辑模式</span></a> 。启用后，在视窗右上角覆盖显示模式提示。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="tools">
+<h2>工具<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../convert_to_geometry.html"><span class="doc">转换为几何体</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruler_protractor.html"><span class="doc">3D量尺 &amp; 量角器</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="layers.html" class="btn btn-neutral float-right" title="层" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="绘制笔触" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

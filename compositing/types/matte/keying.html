@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>关键帧集节点 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/compositing/types/matte/keying.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="屏幕抠像节点" href="keying_screen.html" />
+    <link rel="prev" title="椭圆遮罩节点" href="ellipse_mask.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">合成</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../properties.html">属性</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#node-types">节点类型</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../input/index.html">输入类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../output/index.html">输出类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color/index.html">颜色类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../converter/index.html">转换器类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filter/index.html">滤镜节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/index.html">矢量类节点</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">遮片类节点</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="box_mask.html">方形遮罩节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="channel_key.html">通道抠像节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chroma_key.html">色度抠像</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_key.html">色彩抠像节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_spill.html">色彩溢出节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="difference_key.html">色差抠像节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="distance_key.html">色距抠像节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="double_edge_mask.html">双边遮罩节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ellipse_mask.html">椭圆遮罩节点</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">关键帧集节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="keying_screen.html">屏幕抠像节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="luminance_key.html">亮度抠像节点</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../distort/index.html">畸变类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../groups.html">节点组</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layout/index.html">布局类节点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">合成</a> &raquo;</li>
+        
+          <li><a href="index.html">遮片类节点</a> &raquo;</li>
+        
+      <li>关键帧集节点</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/compositing/types/matte/keying.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="keying-node">
+<span id="bpy-types-compositornodekeying"></span><h1>关键帧集节点<a class="headerlink" href="#keying-node" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id1">
+<img alt="../../../_images/compositing_types_matte_keying_node.png" src="../../../_images/compositing_types_matte_keying_node.png" />
+<p class="caption"><span class="caption-text">关键帧集节点。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p><em>关键帧集</em> 节点对于绿屏/蓝屏去背是一站式解决方案。它结合了色度抠像移除背景和色彩溢出去校正前景物体表面从背景中吸收的颜色信息。另外，用户可以对生成的遮片进行一些常规操作。</p>
+<div class="section" id="inputs">
+<h2>输入<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>图像</dt><dd><p>标准化图像输入。</p>
+</dd>
+<dt>关键色彩</dt><dd><p>打算移除的颜色部分。可以是单一颜色，或者是由 <a class="reference internal" href="keying_screen.html"><span class="doc">Keying Screen Node</span></a> 生成的参考图像。</p>
+</dd>
+<dt>垃圾遮片</dt><dd><p>被遮住的区域会在输出时 <em>移除</em> 此部分。比如从色度抠像生成的遮片中移除不需要的部分。</p>
+</dd>
+<dt>核心遮片</dt><dd><p>被遮住的区域会在输出时 <em>包含</em> 此部分。比如从色度抠像生成的遮片中移除不需要的部分。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="properties">
+<h2>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>预模糊</dt><dd><p>在不损失颜色亮度的前提下，用给定的数值模糊要处理的颜色以达到减少颜色杂质的效果。此操作只对计算遮片有效果，不会对图像本身进行颜色破坏。</p>
+</dd>
+<dt>屏幕平衡</dt><dd><p>在颜色通道和关键颜色之间比较平衡。取值0.5会平均化其他的颜色通道（在绿屏中指的是红色通道和蓝色通道）。</p>
+<p>稍微调整*限制黑色* 和 <em>限制白色</em> 将检查 <em>遮片</em> 将输出为最优的遮片分离效果。</p>
+</dd>
+<dt>非溢出系数</dt><dd><p>用于控制和关键颜色差距多大的颜色进行溢出移除处理：0则无溢出，1意味所有可能颜色均作为溢出被移除。通常处理色彩溢出的方法是调节 <a class="reference internal" href="color_spill.html"><span class="doc">Color Spill Node</span></a> 的 <em>非溢出</em> 值。</p>
+</dd>
+<dt>非溢出平衡</dt><dd><p>此参数用于控制在计算颜色溢出时，多少颜色通道被进行比较，将影响校正颜色的色相和阴影。和此项参数相似的还有 <a class="reference internal" href="color_spill.html"><span class="doc">Color Spill Node</span></a> 中的 <em>Limiting Channel</em> 参数。</p>
+</dd>
+<dt>边缘核心半径</dt><dd><p>定义查找边缘的像素半径。</p>
+</dd>
+<dt>边缘核心容差</dt><dd><p>用于检测半径范围内的像素是否与当前像素相同的阈值。当像素颜色值之间的差异高于该阈值将被认定为边缘。</p>
+</dd>
+<dt>限制黑色</dt><dd><p>此参数设置在输出中哪些部分将成为完全透明（遮片中的黑色部分）。对一些背景边缘不平整的可以加大这个参数。使用  <a class="reference internal" href="keying_screen.html"><span class="doc">Keying Screen Node</span></a> 将帮助此值处于低数值区间。用户可以使用 <em>垃圾遮片</em> 来排除有问题的区域。</p>
+<p>此值不影响那些被探测到的边缘区域以确保边缘细节被保留。</p>
+</dd>
+<dt>亮调</dt><dd><p>此参数用户设置在输出中哪些部分将成为完全不透明（遮片中的白色部分）。此值应尽量调高其数值。对于和绿屏背景相近的前景色应调低这个数值或者调节 <em>屏幕平衡</em> 。某些有问题的区域可以通过调节 <em>核心遮片</em> 代替 设置较低数值的 <em>亮调</em> 参数。</p>
+<p>此值不影响那些被探测到的边缘区域以确保边缘细节被保留。</p>
+</dd>
+<dt>膨胀/腐蚀</dt><dd><p>通过指定像素值来增加（正值）或减小（负值）遮片。这和在遮片上使用 <a class="reference internal" href="../filter/dilate_erode.html"><span class="doc">Dilate/Erode Node</span></a> 相似。</p>
+<p>此参数对包含一些遮片边缘的信息，特别是合并了的 <em>后置模糊</em> 信息。</p>
+</dd>
+<dt>羽化衰减</dt><dd><p>设置当羽化时，遮片边缘的衰减率，间接的处理了边缘的细节。</p>
+</dd>
+<dt>羽化距离</dt><dd><p>控制向内（负值）或向外（正值）的羽化程度。</p>
+</dd>
+<dt>后置模糊</dt><dd><p>降低遮片的锐利程度，平滑背景颜色并减少杂点。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="outputs">
+<h2>输出<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>图像</dt><dd><p>将 <em>遮片</em> 应用到图像的 <a class="reference internal" href="../../../glossary/index.html#term-alpha-channel"><span class="xref std std-term">alpha channel</span></a> 的处理过的图像。</p>
+</dd>
+<dt>遮片</dt><dd><p>输出遮片供下游节点使用以查看遮片生成的好坏，或者手动添加 <a class="reference internal" href="../converter/set_alpha.html"><span class="doc">Set Alpha Node</span></a> 或 <a class="reference internal" href="../color/mix.html"><span class="doc">Mix Node</span></a>。</p>
+</dd>
+<dt>边</dt><dd><p>显示遮片上哪些边将被探测到。调节 <em>边缘核心半径</em> and <em>边缘核心容差</em> 将是有效的方法。</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>若遮片的边缘有问题，在设置羽化效果之前调节 <em>边缘核心</em> 参数会有所帮助。探测边缘将不受 <em>限制黑色</em>/<em>亮调</em> 扩展影响以保持一个好的边缘细节。通过将 <a class="reference internal" href="../output/viewer.html"><span class="doc">Viewer Node</span></a> 连接到 <em>Edges</em> 的输出端口上可以检测遮片边缘的情况。</p>
+<p>锐化遮片边缘（调小 <em>核心边缘半径</em> 值，比如2 / 增大 <em>核心边缘容差</em> ，比如0.4 ）将会使遮片边缘更加锐利，但会丢失像散乱头发的模糊细节。一个锐利的遮片边缘是好的，但是消失或忽隐忽现的头发会让人心烦意乱。</p>
+<p>平坦的边缘(增大 <em>边缘核心半径</em>， 比如 8 / 减小 <em>Edge Kernel Tolerance</em>, like 0.05)</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="keying_screen.html" class="btn btn-neutral float-right" title="屏幕抠像节点" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ellipse_mask.html" class="btn btn-neutral float-left" title="椭圆遮罩节点" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>
