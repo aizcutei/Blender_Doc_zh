@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/cycles/gpu_rendering.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/devrender/cycles/gpu_rendering.html"/>
   
 
   
@@ -125,6 +125,7 @@
 <li class="toctree-l3"><a class="reference internal" href="optimizations/index.html">Optimizing Renders</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">Workbench Engine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">后期处理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
@@ -223,9 +224,11 @@
 <p>要想启用GPU渲染，请进入User Preferences（用户首选项），在System tab（系统标签）栏下,选择Compute Device(s)to use（用于计算的设备）。然后，你就可以在各个场景的Render properties（渲染属性）面板中配置使用CPU或GPU进行渲染了。</p>
 <div class="section" id="cuda">
 <h3>CUDA<a class="headerlink" href="#cuda" title="Permalink to this headline">¶</a></h3>
-<p>Nvidia <abbr title="图形处理元件">CUDA（计算统一设备架构)</abbr> 支持使用 <em>nvidia</em> 图形卡进行GPU渲染。我们支持从GTX6XX开始的图形卡（计算能力从3.0到6.1）。</p>
+<p>Nvidia <abbr title="Compute Unified Device Architecture">CUDA</abbr>
+is supported for GPU rendering with <em>Nvidia</em> graphics cards.
+We support graphics cards with compute capability 3.0 and higher. See the
+<a class="reference external" href="https://developer.nvidia.com/cuda-gpus">list of NVIDIA graphics cards with compute capabilities</a>.</p>
 <p>Cycles要求在所有操作系统上都需要安装最新的Nvidia驱动程序。</p>
-<p><a class="reference external" href="http://www.nvidia.com/object/cuda_gpus.htm">CUDA显卡列表对应的着色模式版本</a>。</p>
 </div>
 <div class="section" id="opencl">
 <h3>OpenCL<a class="headerlink" href="#opencl" title="Permalink to this headline">¶</a></h3>

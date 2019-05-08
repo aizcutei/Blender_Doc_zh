@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/laplacian_smooth.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/modifiers/deform/laplacian_smooth.html"/>
   
 
   
@@ -216,18 +216,18 @@
             
   <div class="section" id="laplacian-smooth-modifier">
 <span id="bpy-types-laplaciansmoothmodifier"></span><h1>拉普拉斯平滑修改器<a class="headerlink" href="#laplacian-smooth-modifier" title="Permalink to this headline">¶</a></h1>
-<p>拉普拉斯平滑修改器可以让你在尽量不修改网格形状的情况下，减少网格表面噪音。</p>
+<p>拉普拉斯平滑修改器可以让你在尽量不修改网格形状的情况下，减少网格表面起伏噪波。</p>
 <p>它也可以使用一个负 <em>系数</em> 扩大形状。</p>
-<p>拉普拉斯平滑对于那些从现实世界重建好的且有不良噪音的物体会很有用。它消除了噪音的同时，仍然保持理想的几何形状以及原始模型的形状。</p>
-<p>拉普拉斯光滑修改器基于微分方程中的曲率流量拉普拉斯-贝尔特拉米算符.</p>
+<p>拉普拉斯平滑对于那些从现实世界重建好的且有不良起伏噪波的物体会很有用。它消除了起伏噪波的同时，仍然保持理想的几何形状以及原始模型的形状。</p>
+<p>拉普拉斯平滑修改器基于微分方程中的曲率流量拉普拉斯-贝尔特拉米算符.</p>
 <div class="section" id="options">
 <h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center" id="id1">
 <img alt="../../../_images/modeling_modifiers_deform_laplacian-smooth_panel.png" src="../../../_images/modeling_modifiers_deform_laplacian-smooth_panel.png" />
-<p class="caption"><span class="caption-text">拉普拉斯光滑修改器</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">拉普拉斯平滑修改器</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <dl>
-<dt>重复</dt><dd><p>重复操作选项可以允许多次用拉普拉斯光滑。每次的重复操作将导致网格的曲率重新计算，因此当 <em>系数</em> 小于 1.0 时，它会在每次的迭代中移除更多的噪音。</p>
+<dt>重复</dt><dd><p>重复操作选项可以允许多次用拉普拉斯平滑。每次的重复操作将导致网格的曲率重新计算，因此当 <em>系数</em> 小于 1.0 时，它会在每次的迭代中移除更多的起伏噪波。</p>
 <p>当值为 0 时,什么都不做.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -332,10 +332,10 @@
 </dd>
 <dt>系数</dt><dd><p>沿着曲率流方向控制位移的大小。</p>
 <ul class="simple">
-<li><p>使用小 <em>系数</em>, 可以从形状中去除噪声,并不影响想要的几何体.</p></li>
+<li><p>使用小 <em>系数</em>, 可以从形状中去除起伏噪波,并不影响想要的几何体.</p></li>
 <li><p>大 <em>系数</em> 可以得到更光滑的形状，代价是损失了几何的细节。</p></li>
 <li><p>负 <em>系数</em> 可以增强形状，保留满意的几何形体。</p></li>
-<li><p><em>系数</em> 取负值时，多次迭代可以增强噪音。</p></li>
+<li><p><em>系数</em> 取负值时，多次迭代可以放大起伏噪波。</p></li>
 </ul>
 <table class="docutils align-center">
 <colgroup>

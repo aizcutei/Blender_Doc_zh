@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/rigging/constraints/transform/maintain_volume.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/devrigging/constraints/transform/maintain_volume.html"/>
   
 
   
@@ -218,6 +218,19 @@
 <dl>
 <dt>自由</dt><dd><p>自由缩放的物体轴向。</p>
 <p>X, Y, Z</p>
+</dd>
+<dt>Mode</dt><dd><p>Specifies how the constraint handles scaling of the non-free axes.</p>
+<dl class="simple">
+<dt>Strict</dt><dd><p>This mode overrides non-free axis scaling to strictly maintain the specified volume.
+Only the ratio between the scale of the non-free axes is passed through.</p>
+</dd>
+<dt>Uniform</dt><dd><p>This mode maintains the volume as specified only when the pre-constraint scaling is
+uniform. Deviations from uniform scaling on non-free axes are passed through.</p>
+</dd>
+<dt>Single Axis</dt><dd><p>This mode maintains the volume only when the object is scaled just on its free axis.
+Any additional non-free axis scaling is passed through.</p>
+</dd>
+</dl>
 </dd>
 <dt>Volume 体积</dt><dd><p>骨的初始体积。</p>
 </dd>

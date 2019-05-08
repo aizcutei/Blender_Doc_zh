@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Weighted Normal Modifier &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/modifiers/modify/weighted_normal.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="阵列修改器" href="../generate/array.html" />
+    <link rel="prev" title="顶点权重邻近修改器" href="weight_proximity.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#modify">修改</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="data_transfer.html">数据传递修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_cache.html">网格缓存修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_sequence_cache.html">网格序列缓存编辑器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="normal_edit.html">法线编辑修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="uv_project.html">UV 投射修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="uv_warp.html">UV偏移修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="weight_edit.html">顶点权重编辑修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="weight_mix.html">顶点权重混合修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="weight_proximity.html">顶点权重邻近修改器</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Weighted Normal Modifier</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#generate">生成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#deform">形变</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#simulate">模拟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../index.html">修改器</a> &raquo;</li>
+        
+      <li>Weighted Normal Modifier</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/modeling/modifiers/modify/weighted_normal.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>. _bpy.types.WeightedNormalModifier:</p>
+<div class="section" id="weighted-normal-modifier">
+<h1>Weighted Normal Modifier<a class="headerlink" href="#weighted-normal-modifier" title="Permalink to this headline">¶</a></h1>
+<p>This modifier changes the custom normals of a mesh, using various methods that can be
+specified using options.
+This can be useful to make some faces appear very flat during shading, among other effects.
+See <a class="reference internal" href="../../meshes/editing/normals.html"><span class="doc">Normals</span></a> for a description of normals
+and custom normals.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This modifier requires custom normals to be enabled, which you can do by
+enabling Auto Smooth in the Mesh Properties panel.
+See <a class="reference internal" href="../../meshes/editing/normals.html"><span class="doc">Normals</span></a>.</p>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>Weighting Mode</dt><dd><blockquote>
+<div><p>The normals around a vertex will be combined to make a custom (per-face-at-a-vertex) normal
+using various weights for each. The <em>Weighting Mode</em> says how to get the weights.</p>
+<dl>
+<dt>Face Area</dt><dd><p>Weight according to the area of the face that the normal comes from. A larger area means
+that the normal will get a higher weight.</p>
+</dd>
+<dt>Corner Angle</dt><dd><blockquote>
+<div><p>Weight according to the angle each face makes at the vertex. This is the method blender
+uses by default when combining normals at a vertex.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Face Area and Angle</dt><dd><p>Weights are obtained by multiplying the face area and corner angle.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>Weight</dt><dd><p>Determines how strongly the weights are biased according to the face areas and/or corner angles.
+A value of 50 means all faces are weighted equally.
+More than 50 means faces with higher area or angles are given even more weight.
+Less than 50 means faces with higher area or angles are given lesser weights.</p>
+</dd>
+</dl>
+</dd>
+<dt>Threshold</dt><dd><p>A weight-rounding threshold: if two angles or areas differ by less than the threshold
+then they will get equal weights.</p>
+</dd>
+<dt>Vertex Group</dt><dd><p>If a vertex group is specified here, the modifier will only affect those vertices.
+There is a button beside the name selection widget that will invert the effect:
+selecting that will affect only the vertices <em>not</em> in the vertex group.</p>
+</dd>
+<dt>Keep Sharp</dt><dd><p>This option tells the modifier to respect sharp edges, though smoothing will still happen
+if there are multiple faces between any two sharp edges.</p>
+</dd>
+<dt>Face Influence</dt><dd><p>Use face weights (weak, medium, or strong) as assigned by Custom Normal Tools or
+by the <em>Set Strength Mode</em> of a Bevel modifier.
+For example, if three faces meet at a vertex and have face weights weak, medium, and strong,
+then only the normal associated with the strong face will be used to set the final result.
+See the Set Strength command in <a class="reference internal" href="../../meshes/editing/normals.html"><span class="doc">Normals</span></a>
+for how to set the face strengths.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../generate/array.html" class="btn btn-neutral float-right" title="阵列修改器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="weight_proximity.html" class="btn btn-neutral float-left" title="顶点权重邻近修改器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

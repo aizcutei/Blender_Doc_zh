@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/preferences/system.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/devpreferences/system.html"/>
   
 
   
@@ -116,9 +116,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#sound">声音</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#screencast">程序截屏</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#compute-device">计算设备</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#opensubdiv-compute">OpenSubdiv计算</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#opengl">OpenGL</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#window-draw-method">窗口绘制方法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#textures">纹理</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sequencer-clip-editor">序列/剪辑编辑器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#solid-opengl-lights">OpenGL 实色光照</a></li>
@@ -274,22 +272,6 @@ Used for 3D source support by <em>Speaker Objects</em>.</p>
 </dd>
 </dl>
 </div>
-<div class="section" id="opensubdiv-compute">
-<span id="prefs-system-opensubdiv"></span><h2>OpenSubdiv计算<a class="headerlink" href="#opensubdiv-compute" title="Permalink to this headline">¶</a></h2>
-<p>该选项用于设置 <a class="reference internal" href="../modeling/modifiers/generate/subsurf.html"><span class="doc">细分曲面修改器</span></a> OpenSubdiv使用的计算设备。</p>
-<dl class="simple">
-<dt>无</dt><dd><p>禁用OpenSubdiv计算设备，确保使用老式(legacy)细分方法。当OpenSubdiv导致错误或回归时，使用此选项。</p>
-</dd>
-<dt>CPU</dt><dd><p>单线程CPU实现。当GPU计算可行，但多线程CPU选项存在瑕疵(不太可能发生，但还是有可能的)时使用。</p>
-</dd>
-<dt>OpenMP</dt><dd><p>多线程CPU实现。当GPU计算不可用时，使用该选项最大化利用机器性能。</p>
-</dd>
-<dt>GLSL变换反馈</dt><dd><p>使用GPU进行计算，对视频卡和驱动有最低要求。</p>
-</dd>
-<dt>GLSL计算</dt><dd><p>使用GPU来进行计算，应该比 <em>变换反馈</em> 更有效，但对显卡和驱动程序也有更高的配置要求。</p>
-</dd>
-</dl>
-</div>
 <div class="section" id="opengl">
 <h2>OpenGL<a class="headerlink" href="#opengl" title="Permalink to this headline">¶</a></h2>
 <dl>
@@ -301,39 +283,10 @@ Used for 3D source support by <em>Speaker Objects</em>.</p>
 </dd>
 <dt>16 位浮点纹理图</dt><dd><p>给每单位图像纹理使用16位纹理图像(浮点图像)。</p>
 </dd>
-<dt>选中项</dt><dd><p>用于选择的选择方法。</p>
-<dl class="simple">
-<dt>自动</dt><dd><p>基于操作系统、CPU和驱动，自动选择最佳设置。</p>
-</dd>
-<dt>OpenGL选择</dt><dd><p>老式硬件使用的OpenGL选择方法。</p>
-</dd>
-<dt>OpenGL遮面查询</dt><dd><p>优化的OpenGL选择方法。如果使用 <a class="reference internal" href="#opensubdiv-compute">OpenSubdiv计算</a> 设备，使用这种方法。</p>
-</dd>
-</dl>
-</dd>
 <dt>OpenGL Depth Picking</dt><dd><p>该选项使用另一种深度信息拾取方法，来选择最靠前的元素。仅适用于鼠标点选(不能框选、套索，圈选等)。</p>
 <p>具体性能视OpenGL硬件和驱动有所不同。</p>
 </dd>
 <dt>各向异性过滤</dt><dd><p>设置各向异性过滤级别，提高以性能为代价时的贴图绘制品质。可用选项有： <em>关闭</em> (无过滤), <em>2x</em>, <em>4x</em>, <em>8x</em>, 和 <em>16x</em>。</p>
-</dd>
-</dl>
-</div>
-<div class="section" id="window-draw-method">
-<span id="prefs-system-window-draw"></span><h2>窗口绘制方法<a class="headerlink" href="#window-draw-method" title="Permalink to this headline">¶</a></h2>
-<dl>
-<dt>窗口绘制方法</dt><dd><p>定义Blender视窗的绘制方法。</p>
-<dl class="simple">
-<dt>自动</dt><dd><p>根据驱动器和显卡自动选择。</p>
-</dd>
-<dt>三重缓存</dt><dd><p>为细致的刷新屏幕使用第三层缓存，这会消耗更多的内存，当然如果你有个吊炸天的GPU（核弹显卡什么的），你可开启这个选项，blender的动态显示将会变得又快又棒。</p>
-</dd>
-<dt>重叠</dt><dd><p>刷新所有重叠区，在尽量减少内存消耗的前提下多次刷新，推荐给一些使用显卡和驱动器搭配的用户。</p>
-</dd>
-<dt>重叠反转</dt><dd><p>刷新所有重叠区，在尽量减少内存消耗的前提下多次刷新（图像驱动器会自动跳过），推荐给一些使用显卡和驱动搭配的用户。</p>
-</dd>
-<dt>全部</dt><dd><p>每次都完全重绘。测试和其他选项都失败的情况下使用。有些卡没有或者很烂的opengl加速的时候使用。</p>
-</dd>
-</dl>
 </dd>
 </dl>
 <dl id="prefs-system-multi-sampling">

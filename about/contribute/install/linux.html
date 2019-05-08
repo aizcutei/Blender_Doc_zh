@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/about/contribute/install/linux.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/devabout/contribute/install/linux.html"/>
   
 
   
@@ -213,7 +213,7 @@
 <p>下面列出了几种流行Linux发行版的安装命令。</p>
 <p>对应的系统，使用对应的命令:</p>
 <dl>
-<dt>Debian/Ubuntu</dt><dd><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo apt-get install python python-pip subversion
+<dt>Debian/Ubuntu</dt><dd><div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo apt-get install python3 python3-pip subversion
 </pre></div>
 </div>
 </dd>
@@ -245,8 +245,9 @@ svn checkout https://svn.blender.org/svnroot/bf-manual/trunk/blender_docs
 </pre></div>
 </div>
 </li>
-<li><p>文件夹中有一个名为 <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> 的文件，包含了一系列需要安装的依赖关系。要安装这些依赖关系，可以使用 <code class="docutils literal notranslate"><span class="pre">pip</span></code> 命令:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo pip install -r requirements.txt
+<li><p>Inside that folder is a file called <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> which contains a list of all the dependencies we need.
+To install these dependencies, we can use the <code class="docutils literal notranslate"><span class="pre">pip3</span></code> command:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo pip3 install -r requirements.txt
 </pre></div>
 </div>
 </li>
@@ -254,7 +255,7 @@ svn checkout https://svn.blender.org/svnroot/bf-manual/trunk/blender_docs
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>你需要使用下面的命令，时不时确认一下当前的依赖库是不是最新的:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo pip install -r requirements.txt --upgrade
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo pip3 install -r requirements.txt --upgrade
 </pre></div>
 </div>
 </div>

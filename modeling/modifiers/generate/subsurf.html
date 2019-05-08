@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/subsurf.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/modifiers/generate/subsurf.html"/>
   
 
   
@@ -290,28 +290,9 @@
 <dl class="simple">
 <dt>优化显示</dt><dd><p>当画该物体的线框图时，新细分边的线会略过（仅画出原始几何体的边）。</p>
 </dd>
-<dt>Opensubdiv</dt><dd><p>见 <a class="reference internal" href="#opensubdiv">OpenSubdiv</a> 一节.</p>
-</dd>
 </dl>
 </dd>
 </dl>
-</div>
-<div class="section" id="opensubdiv">
-<h2>OpenSubdiv<a class="headerlink" href="#opensubdiv" title="Permalink to this headline">¶</a></h2>
-<p>在启用 <em>OpenSubdiv</em> 时, 修改器求值将在计算设备上进行. 要启用 OpenSubdiv 必须先在 <a class="reference internal" href="../../../preferences/system.html#prefs-system-opensubdiv"><span class="std std-ref">用户设置</span></a> 中选择最快的计算设备. 大多数情况下，使用 <em>GLSL</em> 时将获得最佳性能。 因此，修改器的性能将更高，这对于动画来说是很好的。</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>更多关于 OpenSubdiv，阅读 <a class="reference external" href="https://wiki.blender.org/wiki/Reference/Release_Notes/2.76/OpenSubdiv">发布日志</a>.</p>
-</div>
-<div class="section" id="improving-performance">
-<h3>增强性能<a class="headerlink" href="#improving-performance" title="Permalink to this headline">¶</a></h3>
-<p>为了利用OpenSubdiv的最大性能，需要以下内容:</p>
-<ul class="simple">
-<li><p>修改器必须位于 <a class="reference internal" href="../introduction.html#modifier-stack"><span class="std std-ref">修改器栈</span></a> 的最后.</p></li>
-<li><p>在更改网格拓扑的时间之前不应存在任何修改器。</p></li>
-<li><p>其他物体必须不使用 OpenSubdiv 网格几何体.</p></li>
-</ul>
-</div>
 </div>
 <div class="section" id="control">
 <h2>控制<a class="headerlink" href="#control" title="Permalink to this headline">¶</a></h2>
@@ -339,10 +320,6 @@
 <h2>性能考虑<a class="headerlink" href="#performance-considerations" title="Permalink to this headline">¶</a></h2>
 <p>高级别的细分意味着更多的顶点，更多的点意味着使用更多的内存（显存(VRAM)和用于渲染的系统RAM）。如果你内存不够的话，Blender很可能崩溃或卡死。</p>
 <p>当使用具有较低显存的图形卡进行高级细分时，几何体的某些部分将在视觉上消失。 您的网格实际上将完好无损，因为渲染是使用您的物体数据生成的（即使您的图形卡无法显示）。</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>要增强视图表现可以试着开启 <a class="reference internal" href="#opensubdiv">OpenSubdiv</a> 或者如果使用 Cycles 渲染器时,使用 <a class="reference internal" href="../../../render/cycles/settings/objects/adaptive_subsurf.html#render-cycles-settings-object-subdivision"><span class="std std-ref">适应细分</span></a>.</p>
-</div>
 </div>
 <div class="section" id="keyboard-shortcuts">
 <h2>键盘快捷键<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>

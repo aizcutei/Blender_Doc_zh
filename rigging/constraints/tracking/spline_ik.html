@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/rigging/constraints/tracking/spline_ik.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/devrigging/constraints/tracking/spline_ik.html"/>
   
 
   
@@ -211,6 +211,14 @@
 <li><p>设置 'Chain Length（链长）' 设置链的骨骼应受到曲线的影响数量（从包括选择的骨骼和开始骨骼）。</p></li>
 <li><p>最后，将 <em>目标</em> 设定为控制的曲线。</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The IK constraints are special in that they modify multiple bones. For this reason,
+they ignore their position in the stack and always run after all other constraints
+on the affected bones. To apply constraints after IK, it is necessary to first copy
+the final transformation to a new bone chain, e.g. using
+<a class="reference internal" href="../transform/copy_transforms.html"><span class="doc">Copy Transforms</span></a>.</p>
+</div>
 <div class="section" id="options">
 <h2>Options 选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center" id="id1">
@@ -256,9 +264,12 @@ in addition to the effects of target curve object scale and curvature.</p>
 </dd>
 <dt>Inverse Scale 反转缩放</dt><dd><p>X 轴和 Z 轴的缩放是对 Y 轴的反转缩放。</p>
 </dd>
-<dt>Volume Preservation  体积维持</dt><dd><p>类似于 <a class="reference internal" href="stretch_to.html#constraints-stretch-to-volume-preservation"><span class="std std-ref">拉伸至</span></a> 约束。</p>
+<dt>Volume Preservation  体积维持</dt><dd><p>Similar to the <a class="reference internal" href="stretch_to.html#constraints-stretch-to-volume-preservation"><span class="std std-ref">Stretch To</span></a> constraint.</p>
 </dd>
 </dl>
+</dd>
+<dt>Use Original Scale</dt><dd><p>Specifies that <em>Inverse Scale</em> or <em>Volume Preservation</em> should be applied on top of the
+original scaling of the bones, like in the Stretch To constraint.</p>
 </dd>
 </dl>
 <div class="admonition seealso">

@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/sculpt_paint/painting/texture_paint/tools.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/devsculpt_paint/painting/texture_paint/tools.html"/>
   
 
   
@@ -198,34 +198,30 @@
             
   <div class="section" id="tools">
 <h1>工具<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h1>
-<p>Tools located in the <em>Tools</em> tab of the <em>Tool Shelf</em> in the 3D View or UV/Image Editor.</p>
+<p>工具位于3D视图或UV /图像编辑器的 <em>工具</em> 选项卡中。</p>
 <div class="section" id="brush">
 <h2>笔刷<a class="headerlink" href="#brush" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-right" id="id1">
 <img alt="../../../_images/sculpt-paint_painting_texture-paint_tools_brush-settings.png" src="../../../_images/sculpt-paint_painting_texture-paint_tools_brush-settings.png" />
 <p class="caption"><span class="caption-text">笔刷设置。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p>With this panel, you can create many brushes, each with unique settings (such as color and width).
-In the UV/Image Editor this panel is called <em>Paint</em>.</p>
+<p>使用此面板，你可以创建多个笔刷，每个笔刷都有自己独特的设置（如颜色和宽度）。在UV/图像编辑器中该面板名称为 <em>绘制</em>。</p>
 <div class="section" id="brush-types">
 <h3>笔刷类型<a class="headerlink" href="#brush-types" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="texture-draw">
-<h4>Texture Draw 纹理绘制笔刷<a class="headerlink" href="#texture-draw" title="Permalink to this headline">¶</a></h4>
-<p>The normal brush, paints a swath of color.
-See <a class="reference internal" href="#common">Common</a> settings below.</p>
+<h4>纹理绘制<a class="headerlink" href="#texture-draw" title="Permalink to this headline">¶</a></h4>
+<p>普通笔刷；绘制一大片色彩。见下文 <a class="reference internal" href="#common">通用</a> 设置。</p>
 <dl>
-<dt>使用渐变色</dt><dd><p>A gradient can be used as a color source.</p>
+<dt>使用渐变色</dt><dd><p>使用渐变色作为颜色来源。</p>
 <dl class="simple">
-<dt>Gradient Colors</dt><dd><p>The <a class="reference internal" href="../../../interface/controls/templates/color_ramp.html#ui-color-ramp-widget"><span class="std std-ref">颜色渐变部件</span></a> to define the gradient colors.</p>
+<dt>渐变颜色</dt><dd><p><a class="reference internal" href="../../../interface/controls/templates/color_ramp.html#ui-color-ramp-widget"><span class="std std-ref">颜色渐变部件</span></a> 用于定义渐变色。</p>
 </dd>
 <dt>模式</dt><dd><dl class="simple">
-<dt>压感</dt><dd><p>Will choose a color from the color ramp according to the stylus pressure.</p>
+<dt>压感</dt><dd><p>将根据手写笔压力从色带中选择一种渐变色。</p>
 </dd>
-<dt>限定</dt><dd><p>Will alter the color along the stroke and as specified by <em>Gradient spacing</em>.
-With Clamp it uses the last color of the color ramp after the specified gradient.</p>
+<dt>钳制</dt><dd><p>将根据笔刷指定的距离自动改变颜色。通过 <em>渐变间距</em>。使用钳制，它将使用指定的颜色带的最后一种颜色。</p>
 </dd>
-<dt>重复</dt><dd><p>Similar to <em>Clamp</em>. After the last color it resets the color to the first color in the color ramp and
-repeats the pattern.</p>
+<dt>重复</dt><dd><p>类似于 <em>钳制</em> 。在最后一种颜色之后，将颜色重置为颜色带中的第一种颜色并重复该模式。</p>
 </dd>
 </dl>
 </dd>
@@ -234,19 +230,15 @@ repeats the pattern.</p>
 </dl>
 </div>
 <div class="section" id="fill">
-<h4>Fill 填充笔刷<a class="headerlink" href="#fill" title="Permalink to this headline">¶</a></h4>
-<p>It can be used to fill large areas of the image with the brush color.
-The tool fills adjacent pixels that have a color value similar to the pixel you clicked on.</p>
+<h4>Fill(填充)<a class="headerlink" href="#fill" title="Permalink to this headline">¶</a></h4>
+<p>用于使用笔刷颜色填充图像的大片区域。该工具会填充与点击位置像素颜色近似的邻近像素点。</p>
 <dl>
-<dt>Fill Threshold (2D only)</dt><dd><p>Determines how much the color must be similar to the color of pixel you click to be filled.
-A low <em>Threshold</em> only fills very similar in color pixels.
-A higher <em>Threshold</em> fills pixels within a broader range of color.</p>
+<dt>填充阈值(仅适用于二维)</dt><dd><p>决定被填充的像素点需与点击位置颜色相似程度。 <em>阈值</em> 较低仅填充颜色非常近似的像素点。 <em>阈值</em> 较高则会填充更大颜色范围内的像素点。</p>
 </dd>
-<dt>使用渐变色</dt><dd><p>Allows the use of a gradient to fill the image.</p>
-<p>To apply the gradient with the <em>Fill</em> brush click <kbd class="kbd docutils literal notranslate">LMB</kbd> and drag to define
-the gradient line, or radius if a radial gradient is used (depending on the <em>Gradient Fill Mode</em>).</p>
+<dt>使用渐变色</dt><dd><p>使用渐变色填充图像。</p>
+<p>单击 <kbd class="kbd docutils literal notranslate">LMB</kbd> 并拖动以定义渐变线或半径(取决于 <em>渐变填充模式</em>)，即可使用 <em>Fill(填充)</em> 笔刷来应用渐变。</p>
 <dl class="simple">
-<dt>Gradient Colors</dt><dd><p>The <a class="reference internal" href="../../../interface/controls/templates/color_ramp.html#ui-color-ramp-widget"><span class="std std-ref">颜色渐变部件</span></a> to define the gradient colors.</p>
+<dt>渐变颜色</dt><dd><p><a class="reference internal" href="../../../interface/controls/templates/color_ramp.html#ui-color-ramp-widget"><span class="std std-ref">颜色渐变部件</span></a> 用于定义渐变色。</p>
 </dd>
 <dt>渐变填充模式</dt><dd><p>线性，径向</p>
 </dd>
@@ -255,33 +247,26 @@ the gradient line, or radius if a radial gradient is used (depending on the <em>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Overrides 重写笔刷</p>
-<p>For projective texturing it will bypass some options for projective painting to paint the model.
-This means that occluded, backfacing and normal culled faces will always get filled,
-regardless of whether the options are activated
-in the <a class="reference internal" href="options.html"><span class="doc">Project Paint</span></a> panel.</p>
+<p>重写</p>
+<p>对于投射纹理，它将绕过投射绘制的一些选项来绘制模型。这意味着无论在 <a class="reference internal" href="options.html"><span class="doc">投射绘制</span></a> 面板中是否激活了选项，闭合，背面和正常的消光面都将被填满。</p>
 </div>
 </div>
 <div class="section" id="mask">
-<h4>Mask 遮罩笔刷<a class="headerlink" href="#mask" title="Permalink to this headline">¶</a></h4>
-<p>The mask feature maps an image to the mesh and uses the image intensity to
-mask out certain parts of the mesh out during painting.
-The mask options can be found in the mask panel's
-<a class="reference internal" href="slots_mask.html"><span class="doc">slots tab</span></a>.
-It's only available for 3D projective painting.</p>
+<h4>Mask(遮罩)<a class="headerlink" href="#mask" title="Permalink to this headline">¶</a></h4>
+<p>遮罩功能将图像映射到网格，并使用图像强度在绘制期间将网格的某些部分遮罩住。遮罩选项可以在 <a class="reference internal" href="slots_mask.html"><span class="doc">槽位选项卡</span></a> 找到。</p>
 <dl class="simple">
-<dt>Mask Value</dt><dd><p>Mask weight, a value of zero means not masked, while one is completely masked.</p>
+<dt>遮罩值</dt><dd><p>遮罩权重，0表示没有遮蔽，1表示完全遮蔽。</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="soften">
-<h4>Soften 柔化笔刷<a class="headerlink" href="#soften" title="Permalink to this headline">¶</a></h4>
-<p>Uses a &quot;blur effect&quot; to soften or sharpen the image.</p>
+<h4>Soften(柔化)<a class="headerlink" href="#soften" title="Permalink to this headline">¶</a></h4>
+<p>使用 <em>模糊效果</em> 来柔化或锐化图像。</p>
 <dl>
 <dt>方向</dt><dd><dl>
-<dt>Soften 柔化笔刷</dt><dd><p>Is used to paint a blur effect.</p>
+<dt>Soften(柔化)</dt><dd><p>用于绘制模糊效果。</p>
 <dl class="simple">
-<dt>Kernel Radius (2D only)</dt><dd><p>Blur radius in pixels.</p>
+<dt>核心半径(仅适用于二维)</dt><dd><p>笔刷半径，单位为像素。</p>
 </dd>
 </dl>
 </dd>
@@ -289,7 +274,7 @@ It's only available for 3D projective painting.</p>
 <dl class="simple">
 <dt>锐化阈值</dt><dd><p>阈值只对那些与周围像素值不同的像素进行锐化处理。</p>
 </dd>
-<dt>Kernel Radius (2D only)</dt><dd><p>The kernel size controls how big an area the tool searches over is while calculating that difference.</p>
+<dt>核心半径(仅适用于二维)</dt><dd><p>在计算模糊效果时，核心大小控制在计算差异时工具查找的区域大小。</p>
 </dd>
 </dl>
 </dd>
@@ -299,42 +284,40 @@ It's only available for 3D projective painting.</p>
 <dl class="simple">
 <dt>高斯</dt><dd><p>靠近笔刷中心的像素采样最多。</p>
 </dd>
-<dt>Box</dt><dd><p>将所有周围像素均匀地采样。</p>
+<dt>方框</dt><dd><p>将所有周围像素均匀地采样。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 </div>
 <div class="section" id="smear">
-<h4>Smear 笔刷<a class="headerlink" href="#smear" title="Permalink to this headline">¶</a></h4>
+<h4>Smear<a class="headerlink" href="#smear" title="Permalink to this headline">¶</a></h4>
 <p>当你点击鼠标时将光标下面的颜色与你移动鼠标方向的颜色相混合。类似于 <em>GIMP</em> 的“涂抹”工具。</p>
 </div>
 <div class="section" id="clone">
-<h4>Clone 克隆笔刷<a class="headerlink" href="#clone" title="Permalink to this headline">¶</a></h4>
-<p>Copies the colors from the specified image (or location of the same image) to the active image.</p>
-<p>In 3D projective painting the clone cursor can be set with <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd>.
-In 2D painting the clone can be moved dragging it with <kbd class="kbd docutils literal notranslate">RMB</kbd>.</p>
+<h4>Clone(克隆)<a class="headerlink" href="#clone" title="Permalink to this headline">¶</a></h4>
+<p>从指定的图像(或同一图像的区域)复制色彩到活动图像。</p>
+<p>在三维投射绘制中，可使用 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 定位克隆游标。在二维绘制中，可以 <kbd class="kbd docutils literal notranslate">RMB</kbd> 拖动来移动克隆。</p>
 <dl>
-<dt>Clone from Paint Slot (3D projective only)</dt><dd><p>Use another image as clone source, instead of using the 3D cursor position as the source in the same image.</p>
+<dt>从绘制槽克隆(仅适用于三维投射)</dt><dd><p>使用另一图像作为克隆源，而非同一图像上3D游标所在位置。</p>
 <dl class="simple">
-<dt>克隆源槽</dt><dd><p>This allows you to select an image as a clone source.</p>
+<dt>克隆源槽</dt><dd><p>当使用克隆笔刷时，用于选择一个图像作为克隆源。</p>
 </dd>
 </dl>
 </dd>
-<dt>Image (2D only)</dt><dd><p>Image used as a clone source.</p>
+<dt>图像(仅适用于二维)</dt><dd><p>使用图像作为克隆源。</p>
 </dd>
-<dt>Alpha (2D only)</dt><dd><p>复制的图像显示的不透明度。</p>
+<dt>Alpha (仅适用于二维)</dt><dd><p>复制的图像显示的不透明度。</p>
 </dd>
 </dl>
 </div>
 </div>
 <div class="section" id="common">
-<h3>常见<a class="headerlink" href="#common" title="Permalink to this headline">¶</a></h3>
+<h3>通用<a class="headerlink" href="#common" title="Permalink to this headline">¶</a></h3>
 <p>大多数笔刷有共同的设置。</p>
 <dl>
 <dt>颜色</dt><dd><p>笔刷的颜色。见 <a class="reference internal" href="../../../interface/controls/templates/color_picker.html#ui-color-picker"><span class="std std-ref">拾色器</span></a>.</p>
-<p>Press <kbd class="kbd docutils literal notranslate">S</kbd> on any part of the image to sample that color and set it as the brush color.
-Hold <kbd class="kbd docutils literal notranslate">Ctrl</kbd> to paint with background color.</p>
+<p>在图像的任何部分按下 <kbd class="kbd docutils literal notranslate">S</kbd> 来采样该颜色，并将其设置为笔刷颜色。长按 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 使用背景色绘制。</p>
 <dl class="simple">
 <dt>翻转 (循环图标) <kbd class="kbd docutils literal notranslate">X</kbd></dt><dd><p>交换前景和背景颜色。</p>
 </dd>
@@ -353,33 +336,28 @@ Hold <kbd class="kbd docutils literal notranslate">Ctrl</kbd> to paint with back
 <dt>混合</dt><dd><p>设置绘制应用在底层颜色的混合方式。请参阅 <a class="reference internal" href="../../../glossary/index.html#term-color-blend-modes"><span class="xref std std-term">颜色混合模式</span></a>.</p>
 <ul class="simple">
 <li><p>添加Alpha：绘制的地方使图像更加不透明。</p></li>
-<li><p>Erase Alpha: makes the image transparent where painted,
-allowing background colors and lower-level textures to show through.
-As you &quot;paint&quot;, the false checkerboard background will be revealed.
-Using a table pen's eraser end will toggle on this mode.</p></li>
+<li><p>擦除Alpha: 使绘制位置图像变透明，背景色和更底层的纹理透出。随着”绘制“进行，假的棋盘格背景将显现。使用数位笔的擦除端可切换该模式。</p></li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>为了在UV /图像编辑器中看到擦除和添加 Alpha（阿尔法）混合模式的效果，你必须通过单击UV /图像编辑器中的显示alpha或仅勾选alpha（阿尔法）按钮启用alpha通道显示。透明（无阿尔法alpha）区域将显示方格背景。</p>
+<p>为了在UV /图像编辑器中看到擦除和添加 Alpha混合模式的效果，你必须通过单击UV /图像编辑器中的显示alpha或仅勾选alpha按钮启用alpha通道显示。透明（无alpha）区域将显示棋盘格背景。</p>
 </div>
 </dd>
 <dt>累积</dt><dd><p>这将允许笔触自己累加，就像喷枪一样。</p>
 </dd>
-<dt>Alpha (3D only)</dt><dd><p>When this is disabled, it locks (prevents changes to) the alpha channel while painting.</p>
+<dt>Alpha (仅适用于三维)</dt><dd><p>禁用该选项，将在绘制时锁定(阻止修改)alpha通道。</p>
 </dd>
 </dl>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>遮罩</p>
-<p>Use the face selection mask to isolate faces.
-See <a class="reference internal" href="../weight_paint/hide_mask.html"><span class="doc">Face Selection Masking</span></a> details.</p>
+<p>使用面选择遮罩隔离面。 更多细节见 <a class="reference internal" href="../weight_paint/hide_mask.html"><span class="doc">面选择遮罩</span></a>。</p>
 </div>
 </div>
 </div>
 <div class="section" id="tilling">
 <h2>平铺<a class="headerlink" href="#tilling" title="Permalink to this headline">¶</a></h2>
-<p>Wraps the stroke to the other side of the image as your brush moves off the opposite side of the canvas.
-Very handy for making seamless textures. (In the <em>UV/Image Editor</em> only.)</p>
+<p>当笔刷从画布的另一侧移出时, 将笔触复制到图像的另一个侧面。制作无缝纹理时非常方便。</p>
 <blockquote>
 <div><dl class="simple">
 <dt>X</dt><dd><p>左/右</p>
@@ -395,7 +373,7 @@ Very handy for making seamless textures. (In the <em>UV/Image Editor</em> only.)
 <dl class="simple">
 <dt>Quick Edit</dt><dd><p>Edit a snapshot of the viewport in an external image editor.</p>
 </dd>
-<dt>Apply</dt><dd><p>Project edited image back onto the object.</p>
+<dt>应用</dt><dd><p>Project edited image back onto the object.</p>
 </dd>
 <dt>Size</dt><dd><p>Size of the captured image for reprojecting.</p>
 </dd>

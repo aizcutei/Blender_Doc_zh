@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/rigging/constraints/tracking/ik_solver.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/devrigging/constraints/tracking/ik_solver.html"/>
   
 
   
@@ -206,6 +206,14 @@
 <span id="bpy-types-kinematicconstraint"></span><h1>IK Solver Constraint 反向运动学约束<a class="headerlink" href="#ik-solver-constraint" title="Permalink to this headline">¶</a></h1>
 <p><em>反向运动学（IK）</em> 约束实现 <em>反向运动学（IK）</em> 骨骼姿势技术。因此，它仅仅适用于骨骼。要快速用一个目标（target）创建一个IK约束，在姿势模式下，选择一根骨骼，按Shift-I。</p>
 <p>此约束的完整文档在rigging章节 <a class="reference internal" href="../../armatures/posing/bone_constraints/index.html#bone-constraints-inverse-kinematics"><span class="std std-ref">Inverse Kinematics</span></a> 页部分。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The IK constraints are special in that they modify multiple bones. For this reason,
+they ignore their position in the stack and always run after all other constraints
+on the affected bones. To apply constraints after IK, it is necessary to first copy
+the final transformation to a new bone chain, e.g. using
+<a class="reference internal" href="../transform/copy_transforms.html"><span class="doc">Copy Transforms</span></a>.</p>
+</div>
 <div class="section" id="options">
 <h2>Options 选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center" id="id1">

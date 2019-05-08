@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/normals.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/editing/normals.html"/>
   
 
   
@@ -235,8 +235,8 @@
 <dt class="field-odd">模式</dt>
 <dd class="field-odd"><p>物体模式</p>
 </dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 编辑 ‣ 着色方式</span></p>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">Object ‣ Shade Smooth / Shade Flat</span></p>
 </dd>
 </dl>
 </div>
@@ -246,11 +246,11 @@
 <dt class="field-odd">模式</dt>
 <dd class="field-odd"><p>编辑模式</p>
 </dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 着色/UV ‣ 着色方式</span></p>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">Mesh ‣ Shading</span></p>
 </dd>
 <dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">网格 ‣ 面 ‣ 光滑着色/平直着色</span></p>
+<dd class="field-odd"><p><span class="menuselection">Face ‣ Shade Smooth / Shade Flat</span></p>
 </dd>
 </dl>
 </div>
@@ -278,20 +278,26 @@
 </div>
 <div class="section" id="smooth">
 <span id="bpy-ops-object-shade-smooth"></span><h3>光滑<a class="headerlink" href="#smooth" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-right" id="id2">
-<img alt="../../../_images/modeling_meshes_editing_normals_shading-smooth-flat.png" src="../../../_images/modeling_meshes_editing_normals_shading-smooth-flat.png" />
-<p class="caption"><span class="caption-text">工具栏上的着色按钮。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-<p>最简单的办法是在 <em>物体模式</em> 下，选择网格物体，然后在 <em>工具栏</em> 单击 <em>光滑</em>/<em>平直</em> 按钮，设定整个物体为光滑或平直。该按钮不会一直保持按下状态；该操作强制对网格中的每个面指定 <em>光滑</em> 属性，继续添加或删除几何体也一样。</p>
+<p>The easiest way is to set an entire object as smooth or faceted by selecting a mesh object,
+and in <em>Object Mode</em>, select <em>Shade Smooth</em> in the <em>Object</em> menu.
+This forces the assignment of the &quot;smoothing&quot; attribute to each face in the mesh,
+including when you add or delete geometry.</p>
 <p>可以注意到物体的轮廓仍然是棱角分明的。激活光滑属性实际上并没有修改物体的几何形状，只是改变了表面着色的计算方式(对法向进行插值)，造成光滑表面的错觉而已。</p>
-<p>单击 <em>工具栏</em> 中 <em>着色面板</em> 上的 <em>平直</em> 按钮，恢复为上面第一张图中的着色状态(法向为常数)。</p>
+<p>Select the <em>Shade Flat</em> item in the <em>Object</em> menu
+to revert the shading back (normals will be constant)
+to that shown in the first image above.</p>
 <div class="section" id="smoothing-parts-of-a-mesh">
 <h4>平滑部分网格<a class="headerlink" href="#smoothing-parts-of-a-mesh" title="Permalink to this headline">¶</a></h4>
-<p>另外，还可以进入 <em>编辑模式</em>，选择需要光滑的面，然后单击 <em>光滑按钮</em>，有选择地光滑边线。被选中的边线显示为黄色。</p>
-<p>当网格处于 <em>编辑模式</em>，只有选中的边线能够接受 <em>光滑</em> 属性。同样可以通过选择边线，单击 <em>平直</em> 按钮的方式设置边线为平直(移除 <em>光滑</em> 属性)。</p>
+<p>Alternatively, you can choose which faces to smooth by entering <em>Edit Mode</em>,
+then selecting some faces and picking <em>Shade Smooth</em> from the <em>Face Menu</em>.</p>
+<p>When the mesh is in <em>Edit Mode</em>,
+only the selected faces will receive the &quot;smoothing&quot; attribute. You can set faces as flat
+(removing the &quot;smoothing&quot; attribute)
+in the same way by selecting edges and picking the <em>Shade Flat</em> from the <em>Face Menu</em>.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#auto-smooth"><span class="std std-ref">自动光滑</span></a> 过滤选项是一种对同一个物体结合使用光滑和平直的多边形的便捷方法。</p>
+<p>The <a class="reference internal" href="#auto-smooth"><span class="std std-ref">Auto Smooth</span></a> option is a quick and easy way to combine smooth and
+faceted faces in the same object.</p>
 </div>
 </div>
 </div>
@@ -306,9 +312,9 @@
 </dd>
 </dl>
 </div>
-<div class="figure align-center" id="id3">
+<div class="figure align-center" id="id2">
 <img alt="../../../_images/modeling_meshes_properties_object-data_normals-panel.png" src="../../../_images/modeling_meshes_properties_object-data_normals-panel.png" />
-<p class="caption"><span class="caption-text">法线面板.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">法线面板.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <dl id="auto-smooth">
 <dt>自动光滑</dt><dd><p>当网格的这些部分的着色设置为平滑时，将平滑面之间的角度小于*角度*按钮中指定的边缘的边缘。 这是一种结合光滑和锐利边缘的简单方法。</p>
@@ -322,9 +328,9 @@
 </dl>
 <div class="section" id="example">
 <h3>范例<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center" id="id4">
+<div class="figure align-center" id="id3">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_properties_object-data_example-auto-smooth.png"><img alt="../../../_images/modeling_meshes_properties_object-data_example-auto-smooth.png" src="../../../_images/modeling_meshes_properties_object-data_example-auto-smooth.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">启用 <em>自动光滑</em> 时的网格例子.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">启用 <em>自动光滑</em> 时的网格例子.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
