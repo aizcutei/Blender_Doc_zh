@@ -307,7 +307,7 @@ and scroll the <kbd class="kbd docutils literal notranslate">Wheel</kbd> to incr
 </dd>
 </dl>
 <p>For vertex-only bevels, the Offset and Depth types measure from the original vertex,
-and the Width type measures from a new vertex to the center of the new face (as half the amount).</p>
+and the Width type is measured from a new vertex to the center of the new face (as half the amount).</p>
 </dd>
 <dt>段数 <kbd class="kbd docutils literal notranslate">S</kbd></dt><dd><p>滚动 <kbd class="kbd docutils literal notranslate">Wheel</kbd> 增加或减少倒角面段数。段数越多，倒角越平滑。也可以按下 <kbd class="kbd docutils literal notranslate">S</kbd> ，移动鼠标或输入数值来改变段数。</p>
 <p>另外，在使用该工具时或结束操作后的操作面板上，可以手动输入段数值。</p>
@@ -331,49 +331,54 @@ this option will maintain the expected propagation of seams.</p>
 </dd>
 <dt>材质</dt><dd><p><em>材质</em> 编号用于指定赋予新 <em>倒角</em> 面的材质，默认为-1，继承最近的现有面的材质(“最近” 似乎有些含糊)。否则，将为新的倒角面赋予材质槽中对应编号的材质。</p>
 </dd>
-<dt>Harden Normals <kbd class="kbd docutils literal notranslate">H</kbd></dt><dd><p>When enabled, the per-vertex face normals of the bevel faces are adjusted to match the surrounding faces,
-and the normals of the surrounding faces are not affected --
-so the effect is to keep the surrounding faces flat (if they were before), with the bevel faces shading smoothly into them.
-For this to work, custom split normals need to be enabled, which requires Auto Smooth to be enabled
+<dt>Harden Normals <kbd class="kbd docutils literal notranslate">H</kbd></dt><dd><p>When enabled, the per-vertex face normals of the bevel faces are adjusted to
+match the surrounding faces, and the normals of the surrounding faces are not affected.
+This will keep the surrounding faces flat (if they were before),
+with the bevel faces shading smoothly into them. For this effect to work,
+custom split normals need to be enabled, which requires Auto Smooth to be enabled
 (see <a class="reference internal" href="../normals.html"><span class="doc">Normals</span></a>).
 As a convenience, that option will be enabled for you if it is not already when you enable Harden Normals here.</p>
 </dd>
-<dt>Face Strength Mode</dt><dd><p>Set <em>Face Strength</em> on the faces involved in the bevel, according to the mode specified here.
+<dt>Face Strength Mode</dt><dd><p>Set <em>Face Strength</em> on the faces involved in the bevel, according to the specified mode.
 This can be used in conjunction with a
 <a class="reference internal" href="../../../modifiers/modify/weighted_normal.html"><span class="doc">Weight Normals Modifier</span></a>
-(with the 'Face Influence' option checked). Options:</p>
+(with the <em>Face Influence</em> option checked).</p>
 <dl class="simple">
-<dt>None</dt><dd><p>Don't set face strength.</p>
+<dt>None</dt><dd><p>Do not set face strength.</p>
 </dd>
-<dt>New</dt><dd><p>Set the face strength of new faces along edges to Medium, and the face strength of new faces at vertices to Weak.</p>
+<dt>New</dt><dd><p>Set the face strength of new faces along edges to <em>Medium</em>,
+and the face strength of new faces at vertices to <em>Weak</em>.</p>
 </dd>
-<dt>Affected</dt><dd><p>In addition to those set for the New case, also set the faces adjacent to new faces to have strength Strong.</p>
+<dt>Affected</dt><dd><p>In addition to those set for the <em>New</em> case,
+also set the faces adjacent to new faces to have strength <em>Strong</em>.</p>
 </dd>
-<dt>All</dt><dd><p>In addition to those set for the Affected case, also set all the rest of the faces of the model to have strength Strong.</p>
+<dt>All</dt><dd><p>In addition to those set for the <em>Affected</em> option,
+also set all the rest of the faces of the model to have strength <em>Strong</em>.</p>
 </dd>
 </dl>
 </dd>
-<dt>Outer Miter <kbd class="kbd docutils literal notranslate">O</kbd></dt><dd><p>An <em>miter</em> is formed when two beveled edges meet at an angle. On the side where the angle is greater than 180 degrees,
-if any, it is called an <em>outer miter</em>. This option specifies the pattern that Blender uses at an outer miter.</p>
+<dt>Outer Miter <kbd class="kbd docutils literal notranslate">O</kbd></dt><dd><p>A <em>miter</em> is formed when two beveled edges meet at an angle.
+On the side where the angle is greater than 180 degrees, if any, it is called an <em>outer miter</em>.
+This option specifies the pattern that Blender uses at an outer miter.</p>
 <dl class="simple">
 <dt>Sharp</dt><dd><p>Edges meet at a sharp point, with no extra vertices introduced on the edges.</p>
 </dd>
-<dt>Patch</dt><dd><p>Edges meet at a sharp point but in addition, two extra vertices are introduced near the
-point so that the edges and faces at the vertex may be less pinched together than
-what occurs in the Sharp case.
-The <em>Spread</em> parameter controls how far the new vertices are from the meeting point.</p>
+<dt>Patch</dt><dd><p>Edges meet at a sharp point but in addition, two extra vertices are introduced near the point
+so that the edges and faces at the vertex may be less pinched together than
+what occurs in the <em>Sharp</em> case.
+The <em>Spread</em> slider controls how far the new vertices are from the meeting point.</p>
 </dd>
 <dt>Arc</dt><dd><p>Two vertices are introduced near the meeting point, and a curved arc joins them together.
-The <em>Spread</em> parameter controls how far the new vertices are from the meeting point.
-The <em>Profile</em> parameter controls the shape of the arc.</p>
+The <em>Spread</em> slider controls how far the new vertices are from the meeting point.
+The <em>Profile</em> slider controls the shape of the arc.</p>
 </dd>
 </dl>
 </dd>
-<dt>Inner Miter <kbd class="kbd docutils literal notranslate">I</kbd></dt><dd><p>An <em>inner miter</em> is formed when the angle between two beveled edges is less than 180 degrees.
+<dt>Inner Miter <kbd class="kbd docutils literal notranslate">I</kbd></dt><dd><p>An <em>Inner Miter</em> is formed when the angle between two beveled edges is less than 180 degrees.
 This option specifies the pattern Blender uses at an inner miter.
-The options are the same as for Outer Miter, except that Patch makes no sense and is therefore omitted.</p>
+The options are the same as for Outer Miter, except that <em>Patch</em> makes no sense and is therefore omitted.</p>
 </dd>
-<dt>Spread</dt><dd><p>The value used to spread extra vertices apart for Outer and Inner Miters.</p>
+<dt>Spread</dt><dd><p>The value used to spread extra vertices apart for <em>Outer</em> and <em>Inner Miters</em>.</p>
 </dd>
 </dl>
 </div>

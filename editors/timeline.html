@@ -196,14 +196,17 @@
             
   <div class="section" id="timeline-editor">
 <span id="bpy-ops-time"></span><span id="bpy-types-spacetimeline"></span><h1>时间轴编辑器<a class="headerlink" href="#timeline-editor" title="Permalink to this headline">¶</a></h1>
-<p><em>时间轴</em> 不是通常意义上的编辑器，而是由时钟图标确定的编辑器，更多用法查看信息和动画回放控制。</p>
+<p>The <em>Timeline</em> editor, identified by a clock icon, is used for manipulating keyframes,
+scrubbing the playhead and it includes transport controls.</p>
 <div class="figure align-center" id="id1">
 <img alt="../_images/editors_timeline_interface.png" src="../_images/editors_timeline_interface.png" />
 <p class="caption"><span class="caption-text">时间轴。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p><em>时间轴</em> 是动画师最有用的工具之一，因为它可以给出一个场景动画的大概情况。时间轴可以以帧或以秒为单位播放当前时间帧，活动物体的关键帧，动画的起始帧和结束帧，标记等等。</p>
-<p><em>时间轴</em> 有 <em>播放器控件按钮</em>，用于播放，暂停动画，并跳转场景。</p>
-<p>它还有一些用于 <em>关键帧</em>，<em>插帧集</em> 和 <em>标记</em> 的工具。</p>
+<p>The <em>Timeline</em> gives the user a broad overview of a scene's animation,
+by showing the current frame, the keyframes of the active object,
+the start and end frames of your animation and any markers set by the user.</p>
+<p>The <em>Timeline</em> includes <em>Transport Controls</em>, to play, pause, and skip through an animation sequence.</p>
+<p>It also has tools for manipulating <em>Keyframes</em>, <em>Keying Sets</em>, and <em>Markers</em>.</p>
 <div class="section" id="main-view">
 <h2>主视图<a class="headerlink" href="#main-view" title="Permalink to this headline">¶</a></h2>
 <p>主 <em>时间轴</em> 区域随时间显示动画帧。</p>
@@ -215,26 +218,34 @@
 <h3>调整视图<a class="headerlink" href="#adjusting-the-view" title="Permalink to this headline">¶</a></h3>
 <p>你能够按住 <kbd class="kbd docutils literal notranslate">MMB</kbd> 左右拖动平移时间轴。</p>
 <p>你能够按住 <kbd class="kbd docutils literal notranslate">Ctrl-MMB</kbd> 移动鼠标缩放时间轴，也能够直接使用 <kbd class="kbd docutils literal notranslate">Wheel</kbd> 或按 <kbd class="kbd docutils literal notranslate">NumpadMinus</kbd> 和 <kbd class="kbd docutils literal notranslate">NumpadPlus</kbd> 缩放时间轴。</p>
+<p>You can also use the scrollbars, located at the bottom or the right of the editor, to pan and zoom the view.</p>
 </div>
-<div class="section" id="time-cursor">
-<h3>时间轴指针<a class="headerlink" href="#time-cursor" title="Permalink to this headline">¶</a></h3>
-<p>时间指指针是一条绿线，用来显示当前时间和帧的位置。</p>
+<div class="section" id="playhead">
+<h3>Playhead<a class="headerlink" href="#playhead" title="Permalink to this headline">¶</a></h3>
+<p>The <em>Playhead</em> is the blue vertical line with the current frame number at the top.</p>
 <div class="figure align-center" id="id3">
 <img alt="../_images/editors_timeline_cursor.png" src="../_images/editors_timeline_cursor.png" />
-<p class="caption"><span class="caption-text">时间轴指针。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Playhead.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
-<p>在时间轴编辑器按下 <kbd class="kbd docutils literal notranslate">LMB</kbd> 并移动鼠标可以将 <em>时间指针</em> 放置到新位置。</p>
-<p><em>时间指针</em> 的当前帧或者秒数显示在时间轴的标题栏和在3D视图的右下方。</p>
-<p><em>时间指针</em> 能够使用 <kbd class="kbd docutils literal notranslate">Left</kbd> 或 <kbd class="kbd docutils literal notranslate">Right</kbd> 单步移动，或者按下 <kbd class="kbd docutils literal notranslate">Shift-Up</kbd> 或 <kbd class="kbd docutils literal notranslate">Shift-Down</kbd> 每一步移动十帧。</p>
+<p>The <em>Playhead</em> can be set or moved to a new position by pressing or
+holding <kbd class="kbd docutils literal notranslate">LMB</kbd> in scrubbing area at the top of the timeline.</p>
+<p>The <em>Playhead</em> can be moved in increments by pressing <kbd class="kbd docutils literal notranslate">Left</kbd> or <kbd class="kbd docutils literal notranslate">Right</kbd>,
+or you can jump to the beginning or end frame by pressing <kbd class="kbd docutils literal notranslate">Shift-Left</kbd> or <kbd class="kbd docutils literal notranslate">Shift-Right</kbd>.</p>
 </div>
-<div class="section" id="playback-rendering-range">
-<h3>回放/渲染范围<a class="headerlink" href="#playback-rendering-range" title="Permalink to this headline">¶</a></h3>
-<p>默认情况下，<em>回放/渲染范围</em> （从1到200帧）是用浅灰色表示的。按下 <kbd class="kbd docutils literal notranslate">S</kbd> 或 <kbd class="kbd docutils literal notranslate">E</kbd> 键可以设置 <em>时间指针</em> 开始和结束帧。 在按下 <kbd class="kbd docutils literal notranslate">P</kbd> 之后画一个框来设置可以 <em>回放范围</em> 。</p>
+<div class="section" id="frame-range">
+<h3>Frame Range<a class="headerlink" href="#frame-range" title="Permalink to this headline">¶</a></h3>
+<p>By default, the <em>Frame Range</em> is set to start at frame 1 and end at frame 250.
+You can change the frame range in the top right of the Timeline header, or in the Output Properties.</p>
 </div>
 <div class="section" id="keyframes">
 <h3>关键帧<a class="headerlink" href="#keyframes" title="Permalink to this headline">¶</a></h3>
-<p>对于当前激活和已经选择的物体，关键帧显示为一条黄色线。对于 <em>骨架</em>，显示物体关键帧和姿态骨骼关键帧。</p>
-<p><em>只有选定的通道</em> 能启用，在 <span class="menuselection">Timeline ‣ View ‣ Only Selected Channels</span> 。对于 <em>骨架</em>，这个操作将显示出物体关键帧以及所选骨骼的姿态关键帧。</p>
+<p>For the active and selected objects, keyframes are displayed as yellow diamonds.</p>
+<p>You can click to select one at a time, or select several by holding <kbd class="kbd docutils literal notranslate">Shift</kbd>,
+or by dragging a box around the keyframes.
+You can then move and scale them using <kbd class="kbd docutils literal notranslate">G</kbd> and <kbd class="kbd docutils literal notranslate">S</kbd></p>
+<p><em>Only Selected Channels</em> can be enabled. <span class="menuselection">Timeline ‣ View ‣ Only Selected Channels</span>.
+For <em>Armatures</em>, this will display the object keyframes,
+and the keyframes for the active and selected pose bones.</p>
 </div>
 <div class="section" id="markers">
 <h3>标记<a class="headerlink" href="#markers" title="Permalink to this headline">¶</a></h3>
@@ -243,11 +254,11 @@
 </div>
 <div class="section" id="header">
 <h2>标题栏<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="pop-overs">
-<h3>Pop-Overs<a class="headerlink" href="#pop-overs" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="playback-pop-over">
-<span id="timeline-playback"></span><h4>回放菜单<a class="headerlink" href="#playback-pop-over" title="Permalink to this headline">¶</a></h4>
-<p>The <em>Playback</em> pop-over contains options controlling animation playback.</p>
+<div class="section" id="popovers">
+<h3>Popovers<a class="headerlink" href="#popovers" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="playback-popover">
+<span id="timeline-playback"></span><h4>Playback Popover<a class="headerlink" href="#playback-popover" title="Permalink to this headline">¶</a></h4>
+<p>The <em>Playback</em> popover contains options controlling the animation playback.</p>
 <dl>
 <dt>同步回放</dt><dd><div class="figure align-right" id="id4" style="width: 109px">
 <img alt="../_images/editors_timeline_red-fps.png" src="../_images/editors_timeline_red-fps.png" />
@@ -256,7 +267,10 @@
 <p>54.75</p>
 </div>
 </div>
-<p>当你播放动画时，帧速率（FPS）显示在 3D 视图的左上角。如果详细的现场和回放是集比慢 <em>帧率</em>  (见  <a class="reference internal" href="../render/output/output.html#render-tab-dimensions"><span class="std std-ref">尺寸面板</span></a>，这些选项用于同步播放。</p>
+<p>When you play an animation, the frame rate is displayed at the top left of the 3D View.
+If the scene is detailed and playback is slower than the set
+<em>Frame Rate</em> (see <a class="reference internal" href="../render/output/output.html#render-tab-dimensions"><span class="std std-ref">尺寸面板</span></a>),
+these options are used to synchronize the playback.</p>
 <dl class="simple">
 <dt>不同步</dt><dd><p>不同步, 播放每一帧。</p>
 </dd>
@@ -266,7 +280,8 @@
 </dd>
 </dl>
 </dd>
-<dt>滑音</dt><dd><p>如果你的动画加载有声音，那么这个选项将允许在你通过鼠标或键盘移动时间指针时播放一小截音频（就像一个移动播放头）。</p>
+<dt>滑音</dt><dd><p>If your animation has sound, this option plays bits of the sound wave
+while you move the playhead with <kbd class="kbd docutils literal notranslate">LMB</kbd> or keyboard arrows (like a moving playhead).</p>
 </dd>
 <dt>Mute Audio</dt><dd><p>静音。这将在回放时关闭序列编辑器的音频播放。</p>
 </dd>
@@ -294,9 +309,9 @@
 </dd>
 </dl>
 </div>
-<div class="section" id="keying-pop-over">
-<span id="timeline-keying"></span><h4>Keying Pop-Over<a class="headerlink" href="#keying-pop-over" title="Permalink to this headline">¶</a></h4>
-<p>The <em>Keying</em> pop-over contains options that affect keyframe insertion.</p>
+<div class="section" id="keying-popover">
+<span id="timeline-keying"></span><h4>Keying Popover<a class="headerlink" href="#keying-popover" title="Permalink to this headline">¶</a></h4>
+<p>The <em>Keying</em> popover contains options that affect keyframe insertion.</p>
 <dl>
 <dt>活动插帧集</dt><dd><div class="figure align-right" id="id5">
 <img alt="../_images/editors_timeline_keying-sets.png" src="../_images/editors_timeline_keying-sets.png" />
@@ -340,13 +355,14 @@ is applied to preserve the cycle integrity (most useful while tweaking an establ
 <span id="timeline-view-menu"></span><h4>视图菜单<a class="headerlink" href="#view-menu" title="Permalink to this headline">¶</a></h4>
 <p><em>视图菜单</em> 控制着你看到的一切，以及他们的样式。</p>
 <dl>
-<dt>显示秒数 <kbd class="kbd docutils literal notranslate">Ctrl-T</kbd></dt><dd><p>是否将时间显示在X轴上，或将 <em>时间指针</em> 显示为帧（基于FPS）或秒数。</p>
+<dt>显示秒数 <kbd class="kbd docutils literal notranslate">Ctrl-T</kbd></dt><dd><p>Whether to show the time in the X axis and the <em>Playhead</em> as
+frames (based on the FPS) or as seconds.</p>
 </dd>
 <dt>锁定时间到其他窗口</dt><dd><p>It synchronizes the horizontal panning and scale of the current editor
 with the other editors (Graph, Dope Sheet, NLA) when this option is set.
 That way you always have these editors showing an identical part of the time you work on.</p>
 </dd>
-<dt>显示帧数值</dt><dd><p>这将在 <em>时间轴</em> 上当前帧的绿色线条下显示当前帧的帧数或者秒数。</p>
+<dt>显示帧数值</dt><dd><p>This will draw the current frame or seconds on the <em>Playhead</em>.</p>
 </dd>
 <dt>仅选择的通道的关键帧</dt><dd><p>对于 <em>骨架</em>，这就会仅保留对象关键帧和姿态模式下选择的骨头的关键帧。</p>
 </dd>
@@ -362,7 +378,7 @@ That way you always have these editors showing an identical part of the time you
 </dd>
 <dt>查看全部 <kbd class="kbd docutils literal notranslate">Home</kbd></dt><dd><p>根据动画范围最大化区域。</p>
 </dd>
-<dt>查看帧 <kbd class="kbd docutils literal notranslate">Numpad0</kbd></dt><dd><p>在时间轴中将时间指针居中显示。</p>
+<dt>查看帧 <kbd class="kbd docutils literal notranslate">Numpad0</kbd></dt><dd><p>Centers the Timeline to the Playhead.</p>
 </dd>
 </dl>
 <dl class="simple">
@@ -388,13 +404,16 @@ within an animation. Like with most animation editors, markers are shown at the 
 <img alt="../_images/editors_timeline_header.png" src="../_images/editors_timeline_header.png" />
 <p class="caption"><span class="caption-text">时间轴的标题栏控制按钮。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 <div class="legend">
-<p>1. 范围控制按钮，2.帧控制，3.播放器控制， 4.同步播放，5.关键帧控制。</p>
+<p>1. Range Control, 2. Frame Control, 3. Transport Control,
+4. Synchronize Playback, 5. Keyframe Control.</p>
 </div>
 </div>
 <div class="section" id="range-control">
 <h4>范围控制<a class="headerlink" href="#range-control" title="Permalink to this headline">¶</a></h4>
 <dl class="simple">
-<dt>使用预览范围（时钟图标）</dt><dd><p>这是用于预览动画的替代范围。这适用于UI播放，这不适用于渲染动画。请参阅 <a class="reference internal" href="graph_editor/introduction.html#graph-preview-range"><span class="std std-ref">预览范围</span></a> 。</p>
+<dt>Preview Range (clock icon)</dt><dd><p>This is a temporary frame range used for previewing a smaller part of the full range.
+The preview range only affects the viewport, not the rendered output.
+See <a class="reference internal" href="graph_editor/introduction.html#graph-preview-range"><span class="std std-ref">预览范围</span></a>.</p>
 </dd>
 </dl>
 </div>
@@ -405,16 +424,17 @@ within an animation. Like with most animation editors, markers are shown at the 
 </dd>
 <dt>结束帧</dt><dd><p>动画 / 播放范围的结束帧。</p>
 </dd>
-<dt>当前帧 <kbd class="kbd docutils literal notranslate">Alt-Wheel</kbd></dt><dd><p>动画 / 播放范围的当前帧。也就是 <em>时间光标</em> 的位置。</p>
+<dt>当前帧 <kbd class="kbd docutils literal notranslate">Alt-Wheel</kbd></dt><dd><p>The current frame of the animation/playback range.
+Also the position of the <em>Playhead</em>.</p>
 </dd>
 </dl>
 </div>
-<div class="section" id="player-control">
-<h4>播放控制<a class="headerlink" href="#player-control" title="Permalink to this headline">¶</a></h4>
-<p>这些按钮用于 <em>时间指针</em> 设置，播放，倒放。</p>
+<div class="section" id="transport-controls">
+<h4>Transport Controls<a class="headerlink" href="#transport-controls" title="Permalink to this headline">¶</a></h4>
+<p>These buttons are used to set, play, rewind, the <em>Playhead</em>.</p>
 <div class="figure align-right" id="id9">
 <img alt="../_images/editors_timeline_player-controls.png" src="../_images/editors_timeline_player-controls.png" />
-<p class="caption"><span class="caption-text">播放控制。</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Transport controls.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 <dl class="simple">
 <dt>跳转到开头(⏮)  <kbd class="kbd docutils literal notranslate">Shift-Ctrl-Down</kbd> 或 <kbd class="kbd docutils literal notranslate">Shift-Left</kbd></dt><dd><p>这将时间指针设置为帧范围的开始。</p>
@@ -440,8 +460,10 @@ within an animation. Like with most animation editors, markers are shown at the 
 <img alt="../_images/editors_timeline_keyframes-auto.png" src="../_images/editors_timeline_keyframes-auto.png" />
 <p class="caption"><span class="caption-text">时间轴自动关键帧。</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
-<p>“记录”红点按钮启用了一项称为 <em>自动关键帧</em> 的功能：当你在3D视图中变换它时，它将为活动对象添加和/或替换现有关键帧。</p>
-<p>例如，启用时，首先将 <em>时间指针</em> 设置到所需帧，然后在3D视图中移动物体，或者在界面中为属性设置新值。</p>
+<p>The record button enables <em>Auto Keyframe</em>:
+It will add and/or replace existing keyframes for the active object when you transform it in the 3D View.</p>
+<p>For example, when enabled, first set the <em>Playhead</em> to the desired frame,
+then move an object in the 3D View, or set a new value for a property in the UI.</p>
 <p>当你为属性设置新值时，Blender将为当前帧转变为关键帧以获取变换属性。其他用例如下 <a class="reference internal" href="3dview/navigate/walk_fly.html#dview-walk-fly"><span class="std std-ref">Fly/Walk Mode</span></a> 记录行走/飞行路径和  <a class="reference internal" href="3dview/properties/panels.html#dview-lock-camera-to-view"><span class="std std-ref">Lock Camera to View</span></a>  以记录相机视图中的导航。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

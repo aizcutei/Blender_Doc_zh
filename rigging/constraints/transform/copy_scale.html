@@ -224,14 +224,22 @@
 </dd>
 <dt>X, Y, Z</dt><dd><p>这些复选框用于选择被约束缩放的轴向。</p>
 </dd>
+<dt>Power</dt><dd><p>Allows raising the copied scale to the specified arbitrary power.</p>
+</dd>
 <dt>Offset 偏移量</dt><dd><p>启用时，该控件允许约束对象(使用其当前的变换属性)相对于目标继续缩放。</p>
 </dd>
-<dt>Additive</dt><dd><p>Scale is a multiplicative quantity, so the <em>Offset</em> option by default multiplies
-the owner scale by the target scale. With this option enabled it instead adds them.</p>
+<dt>Additive</dt><dd><p>Uses addition instead of multiplication in the implementation of the <em>Offset</em> option.</p>
 </dd>
 <dt>Space 空间</dt><dd><p>空间之间的标准转换。</p>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since scale is a multiplicative quantity, it should be combined using multiplication,
+and split into fractions or inverted via power. Thus the use of <em>Power</em> is
+more mathematically correct than <em>Influence</em>, which uses linear interpolation.
+The use of the <em>Additive</em> option is also not recommended.</p>
+</div>
 <iframe src="https://player.vimeo.com/video/171077617" style="border: 0; height: 345px; width: 560px">
 </iframe></div>
 </div>
