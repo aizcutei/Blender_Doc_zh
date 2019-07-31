@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>区块 &mdash; Blender Manual</title>
+  <title>区块-Regions &mdash; Blender Manual</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devinterface/window_system/regions.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/window_system/regions.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="选项卡 &amp; 面板" href="tabs_panels.html" />
-    <link rel="prev" title="区域" href="areas.html" /> 
+    <link rel="prev" title="区域-Areas" href="areas.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,14 +114,19 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">用户界面</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../splash.html">启动画面</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#window-system">窗口系统</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="introduction.html">介绍</a></li>
-<li class="toctree-l3"><a class="reference internal" href="workspaces.html">工作空间</a></li>
-<li class="toctree-l3"><a class="reference internal" href="areas.html">区域</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">区块</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topbar.html">顶栏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workspaces.html">工作区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="status_bar.html">状态栏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="areas.html">区域-Areas</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">区块-Regions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#main-region">主区块</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#header">标题栏</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tool-bar">工具栏</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#side-bar">侧栏</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#toolbar">工具栏</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tool-settings">工具设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adjust-last-operation">调整上一步操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sidebar">侧栏</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#footer">底栏</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#arranging">布局</a></li>
 </ul>
 </li>
@@ -115,18 +139,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -179,7 +204,7 @@
         
           <li><a href="../index.html">用户界面</a> &raquo;</li>
         
-      <li>区块</li>
+      <li>区块-Regions</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -199,40 +224,64 @@
            <div itemprop="articleBody">
             
   <div class="section" id="regions">
-<span id="bpy-types-region"></span><h1>区块<a class="headerlink" href="#regions" title="Permalink to this headline">¶</a></h1>
-<p>每个编辑器都被细分为几个小区块。</p>
+<span id="ui-region"></span><span id="bpy-types-region"></span><h1>区块-Regions<a class="headerlink" href="#regions" title="Permalink to this headline">¶</a></h1>
+<p>每个编辑器由几个区块组成。区块又可以划分为较小的结构元素如 <a class="reference internal" href="tabs_panels.html"><span class="doc">选项卡&amp;面板</span></a> ，其中包含按钮，控件和小部件等。</p>
 <div class="figure align-center" id="id1">
 <img alt="../../_images/interface_window-system_regions_3d-view.png" src="../../_images/interface_window-system_regions_3d-view.png" />
-<p class="caption"><span class="caption-text">显示侧栏和添加立方体的操作面板的3D视图编辑器区块。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">在添加一个立方体的后，3D视图编辑器会在侧栏区块显示调整上一步操作面板。</span></p>
 <div class="legend">
-<p>标题栏(绿色)，主区块(黄色)，工具栏(蓝色)，侧栏(红色)和操作面板(粉色)。</p>
-</div>
+标题栏（绿色），主区块（黄色），工具栏（蓝色），侧栏（红色）和调整上一步操作面板（粉色）。</div>
 </div>
 <div class="section" id="main-region">
-<h2>主区块<a class="headerlink" href="#main-region" title="Permalink to this headline">¶</a></h2>
+<span id="ui-region-window"></span><h2>主区块<a class="headerlink" href="#main-region" title="Permalink to this headline">¶</a></h2>
 <p>有一个区块是始终可见的，这也就是所谓的主区块，它是编辑器最重要的部分。</p>
 <p>每个编辑器都有特定的用途，所以每个编辑器的主区块和附加区域的功能都是不一样的。更多信息见 <a class="reference internal" href="../../editors/index.html"><span class="doc">编辑器</span></a> 章节中各编辑器对应文档。</p>
 </div>
 <div class="section" id="header">
 <span id="bpy-types-header"></span><span id="ui-region-header"></span><h2>标题栏<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
 <p>标题栏是位于区域顶部或底部以浅灰色为背景的水平长条。所有编辑器的标题栏都作为菜单和常用工具的容器。 <a class="reference internal" href="../controls/buttons/menus.html#ui-header-menu"><span class="std std-ref">菜单</span></a> 和按钮随编辑器类型以及选中对象及其模式而变化。</p>
-<div class="figure align-center" id="id2">
-<img alt="../../_images/modeling_meshes_introduction_3d-view-header-object-mode.png" src="../../_images/modeling_meshes_introduction_3d-view-header-object-mode.png" />
-<p class="caption"><span class="caption-text">3D视图编辑标题栏。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<div class="figure" id="id2">
+<img alt="../../_images/editors_3dview_introduction_3d-view-header-object-mode.png" src="../../_images/editors_3dview_introduction_3d-view-header-object-mode.png" />
+<p class="caption"><span class="caption-text">3D视图编辑标题栏。</span></p>
 </div>
-<p>按下的所有快捷键都作用于鼠标指针所在编辑器的内容。</p>
+<div class="section" id="context-menu">
+<span id="bpy-ops-screen-header"></span><h3>标题栏菜单<a class="headerlink" href="#context-menu" title="Permalink to this headline">¶</a></h3>
+<p><kbd class="kbd docutils literal notranslate">RMB</kbd> 单击在标题上显示一个带有几个选项的上下文菜单：</p>
+<dl class="docutils">
+<dt>显示标题栏</dt>
+<dd>切换显示标题栏，如果标题栏隐藏了，可以拖动编辑器上下边缘的右侧小箭头来重新显示标题栏。</dd>
+<dt>显示菜单</dt>
+<dd>切换显示 <a class="reference internal" href="#tool-settings">工具设置</a>。</dd>
+<dt>上下反转</dt>
+<dd>切换 <a class="reference internal" href="../controls/buttons/menus.html#ui-header-menu"><span class="std std-ref">菜单</span></a> 是否折叠。</dd>
+<dt>上下反转</dt>
+<dd>切换标题栏或工具设置显示在编辑器的上面还是下面。</dd>
+<dt>区域最大化</dt>
+<dd>见 <a class="reference internal" href="areas.html#bpy-ops-screen-screen-full-area"><span class="std std-ref">切换区域最大化</span></a> 。</dd>
+</dl>
 </div>
-<div class="section" id="tool-bar">
-<h2>工具栏<a class="headerlink" href="#tool-bar" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="toolbar">
+<h2>工具栏<a class="headerlink" href="#toolbar" title="Permalink to this headline">¶</a></h2>
 <p><em>工具栏</em> (位于编辑器左侧)包含工具设定。 <kbd class="kbd docutils literal notranslate">T</kbd> 切换显示/隐藏工具栏。</p>
-<div class="section" id="operator-panel">
-<h3>操作面板<a class="headerlink" href="#operator-panel" title="Permalink to this headline">¶</a></h3>
-<p><em>操作面板</em> 是3D视图中的一个区块，在运行工具(操作)时显示工具选项。它显示被执行的 <a class="reference internal" href="../undo_redo.html#ui-redo-last"><span class="std std-ref">上一步操作</span></a> 的属性。</p>
+<p>进一步了解: <a class="reference internal" href="../tool_system.html#ui-region-toolbar"><span class="std std-ref">工具栏</span></a>。</p>
 </div>
+<div class="section" id="tool-settings">
+<h2>工具设置<a class="headerlink" href="#tool-settings" title="Permalink to this headline">¶</a></h2>
+<p><em>工具设置</em> （在编辑器区域的上方或下方）包含当前活动工具的名字和设置。可以在标题栏内容菜单中的 <em>反转 顶部/底部</em> 改变位置。</p>
 </div>
-<div class="section" id="side-bar">
-<h2>侧栏<a class="headerlink" href="#side-bar" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="adjust-last-operation">
+<h2>调整上一步操作<a class="headerlink" href="#adjust-last-operation" title="Permalink to this headline">¶</a></h2>
+<p><em>调整上一步操作</em> 是当工具（操作）运行时的设置选项区块。</p>
+<p>进一步了解: <a class="reference internal" href="../undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> 。</p>
+</div>
+<div class="section" id="sidebar">
+<span id="ui-region-sidebar"></span><h2>侧栏<a class="headerlink" href="#sidebar" title="Permalink to this headline">¶</a></h2>
 <p><em>侧栏</em> (位于编辑器右侧)，包含编辑器中对象与编辑器自身的设置 <a class="reference internal" href="tabs_panels.html#ui-panels"><span class="std std-ref">面板</span></a> 。 <kbd class="kbd docutils literal notranslate">N</kbd> 用于显示/隐藏侧栏。</p>
+</div>
+<div class="section" id="footer">
+<h2>底栏<a class="headerlink" href="#footer" title="Permalink to this headline">¶</a></h2>
+<p>一些编辑器显示一个栏（在编辑器区域的顶部/底部），显示有关例如活动工具的信息。</p>
 </div>
 <div class="section" id="arranging">
 <h2>布局<a class="headerlink" href="#arranging" title="Permalink to this headline">¶</a></h2>
@@ -242,30 +291,8 @@
 </div>
 <div class="section" id="changing-the-size-and-hiding">
 <h3>改变尺寸与隐藏<a class="headerlink" href="#changing-the-size-and-hiding" title="Permalink to this headline">¶</a></h3>
-<p>与 <a class="reference internal" href="areas.html"><span class="doc">区域</span></a> 一样，可以使用拖拽边界调整区块大小。</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>拉伸工具栏后将显示两列工具图标。继续拉伸会显示为图标+标题。</p>
-</div>
-<p>调小区块尺寸直至消失即可隐藏区块。隐藏后的区块显示为一个小加号(见下图)。在小加号上单击 <kbd class="kbd docutils literal notranslate">LMB</kbd> ，重新显示区块。</p>
-<table class="docutils align-center" id="id3">
-<caption><span class="caption-text">隐藏与显示标题栏。</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
-<img alt="../../_images/interface_window-system_regions_headers-hide.png" src="../../_images/interface_window-system_regions_headers-hide.png" />
-</div>
-</td>
-<td><div class="figure align-center">
-<img alt="../../_images/interface_window-system_regions_headers-show.png" src="../../_images/interface_window-system_regions_headers-show.png" />
-</div>
-</td>
-</tr>
-</tbody>
-</table>
+<p>与 <a class="reference internal" href="areas.html"><span class="doc">区域-Areas</span></a> 一样，可以使用拖拽边界调整区块大小。</p>
+<p>调整区块的大小直至隐藏，隐藏的区块会留下一个箭头图标，用 <kbd class="kbd docutils literal notranslate">LMB</kbd> 点击这个图标，区块会重新显示。</p>
 </div>
 </div>
 </div>
@@ -281,7 +308,7 @@
         <a href="tabs_panels.html" class="btn btn-neutral float-right" title="选项卡 &amp; 面板" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="areas.html" class="btn btn-neutral float-left" title="区域" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="areas.html" class="btn btn-neutral float-left" title="区域-Areas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

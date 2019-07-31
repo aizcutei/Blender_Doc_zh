@@ -1,0 +1,785 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>布局 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/uv/layout.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="布局工作流" href="layout_workflow.html" />
+    <link rel="prev" title="缝合线" href="unwrapping/seams.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/index.html">基础</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vertices.html">顶点工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../edges.html">边工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../faces.html">面工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../normals.html">法向</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">UV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../transform/index.html">变形</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../duplicating/index.html">复制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">细分</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cleanup.html">清理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../misc.html">其他编辑工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_transfer.html">数据传递</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mesh_options.html">网格选项</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../../index.html">网格</a> &raquo;</li>
+        
+          <li><a href="../index.html">编辑</a> &raquo;</li>
+        
+          <li><a href="index.html">UV</a> &raquo;</li>
+        
+      <li>布局</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/modeling/meshes/editing/uv/layout.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="layout">
+<h1>布局<a class="headerlink" href="#layout" title="Permalink to this headline">¶</a></h1>
+<p>展开之后，要对UV进行整理，使之可以有逻辑地进行贴图或绘制。编辑要达到的效果是：</p>
+<ul class="simple">
+<li>将一些碎片(UV)重新缝合到一起。</li>
+<li>最大化地利用图像空间。</li>
+<li>对细节面进行放大。</li>
+<li>调整/缩放被拉伸的面。</li>
+<li>缩小过于粗糙和细节过多的面。</li>
+</ul>
+<p>使用最小的给定空间，让大多数像素点给予UV贴图尽可能多的细节和精度。一个UV面可以小到一个像素(组成整张图像的小点)大小，也可以达到填满整个图像。你可能需要先做一些大的调整，然后再对布局进行微调。</p>
+<div class="section" id="transforms">
+<h2>变换<a class="headerlink" href="#transforms" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式 与 遮罩模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">工具栏 ‣ 工具 ‣ 变换</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body">菜 <span class="menuselection">UV ‣ 变换</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="simple">
+<li>Move <kbd class="kbd docutils literal notranslate">G</kbd></li>
+<li>旋转 <kbd class="kbd docutils literal notranslate">R</kbd></li>
+<li>缩放 <kbd class="kbd docutils literal notranslate">S</kbd></li>
+<li>切变 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-Alt-S</kbd></li>
+</ul>
+<div class="section" id="axis-locking">
+<h3>锁定轴向<a class="headerlink" href="#axis-locking" title="Permalink to this headline">¶</a></h3>
+<p>在执行变换操作时，按下 <kbd class="kbd docutils literal notranslate">X</kbd> 或者 <kbd class="kbd docutils literal notranslate">Y</kbd> 可以锁定变换的轴向。同时，按住 <kbd class="kbd docutils literal notranslate">MMB</kbd> 也可以限制变换轴向为X或Y轴。</p>
+</div>
+</div>
+<div class="section" id="uv-options">
+<span id="bpy-types-spaceuveditor-lock-bounds"></span><span id="bpy-types-spaceuveditor-pixel-snap-mode"></span><span id="bpy-types-spaceuveditor-use-live-unwrap"></span><h2>UV选项<a class="headerlink" href="#uv-options" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式 与 遮罩模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UV</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="docutils">
+<dt>实时展开</dt>
+<dd>移动钉固点时，持续展开所选UV孤岛。</dd>
+<dt>吸附至像素点</dt>
+<dd><dl class="first last docutils">
+<dt>Disabled</dt>
+<dd>UVs will not be snapped.</dd>
+<dt>Corner</dt>
+<dd>Will force the UVs to snap to the corners of the nearest pixels of an image if loaded.</dd>
+<dt>Center</dt>
+<dd>Will force the UVs to snap to the center of the nearest pixels of an image if loaded.</dd>
+</dl>
+</dd>
+<dt>约束至画布边缘</dt>
+<dd>开启 <em>约束至画布边缘</em> ，阻止UV顶点被移出 0 到 1 UV范围。</dd>
+</dl>
+</div>
+<div class="section" id="pin-and-unpin">
+<span id="bpy-ops-uv-pin"></span><h2>钉固和取消钉固<a class="headerlink" href="#pin-and-unpin" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ UV Tools ‣ UV Unwrap: Pin/Unpin</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UV ‣ 钉固/取消钉固</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">P</kbd>, <kbd class="kbd docutils literal notranslate">Alt-P</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>钉固UV可以防止多次展开操作后的UV顶点移动。在模型展开时，有时需要 “锁定” 特定的UV顶点，以使部分UV保持原本形状和/或原本位置。选择UV，然后选择 <em>UV</em> 菜单的 <em>钉固</em> 选项或快捷键 <kbd class="kbd docutils literal notranslate">P</kbd> ，即可钉固UV。快捷键 <kbd class="kbd docutils literal notranslate">Alt-P</kbd> 用于 <em>取消钉固</em>。</p>
+<p>在对生物体展开UV时，钉固是十分高效的。使用 <a class="reference internal" href="../../../modifiers/generate/mirror.html"><span class="doc">镜像修改器</span></a> 建模就是一个例子。镜像轴上的UV顶点是与其镜像部分共用的。可以钉固中心线对应的UV顶点，然后将其X轴对齐，固定这些顶点的位置。</p>
+<p>钉固还可以配合实时展开工具使用。钉固两个或更多UV顶点，开启实时展开，拖动被钉固的UV可以交互展开模型。这有助于UV孤岛匹配特定形状或区域。</p>
+</div>
+<div class="section" id="seams">
+<h2>缝合线<a class="headerlink" href="#seams" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ UV Tools ‣ UV Unwrap: Mark/Clear Seam</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UV ‣ 标记/清除缝合边</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>See <a class="reference internal" href="unwrapping/seams.html"><span class="doc">缝合线</span></a>.</p>
+</div>
+<div class="section" id="pack-islands">
+<span id="editors-uv-editing-layout-pack-islands"></span><span id="bpy-ops-uv-pack-islands"></span><h2>拼排孤岛<a class="headerlink" href="#pack-islands" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ UV Tools ‣ Pack Islands</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UV ‣ 拼排孤岛</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-P</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>拼排孤岛</em> 工具用于生成无重叠的最优UV布局，试图充分填充 <a class="reference internal" href="../../../../glossary/index.html#term-texture-space"><span class="xref std std-term">纹理空间</span></a>。</p>
+<p>首先，它会统一缩放选中的UV孤岛，然后分别变换每个孤岛，尽可能填满整个UV空间。</p>
+</div>
+<div class="section" id="average-island-scale">
+<span id="bpy-ops-uv-average-islands-scale"></span><h2>孤岛比例平均化<a class="headerlink" href="#average-island-scale" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ UV Tools ‣ Average Island Scale</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UV ‣ 孤岛比例平均化</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-A</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>使用 <em>孤岛比例均匀化</em> 工具，会对每个孤岛执行缩放，使其获得近似的缩放比例。</p>
+</div>
+<div class="section" id="minimize-stretch">
+<span id="bpy-ops-uv-minimize-stretch"></span><h2>最小化拉伸<a class="headerlink" href="#minimize-stretch" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ UV Tools ‣ Minimize Stretch</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UV ‣ 最小化拉伸</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-V</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>最小化拉伸</em> 工具，通过最小化角度降低UV拉伸。这实质上是松弛UV。</p>
+</div>
+<div class="section" id="stitch">
+<span id="bpy-ops-uv-stitch"></span><h2>缝合<a class="headerlink" href="#stitch" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ UV Tools ‣ Stitch</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UV ‣ 缝合</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">V</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The <em>Stitch</em> tool, will join selected UVs that share vertices.
+you set the tool to limit stitching by distance in the <a class="reference internal" href="../../../../interface/undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> panel,
+by activating <em>use limit</em> and adjusting the <em>limit distance</em></p>
+</div>
+<div class="section" id="copy-mirrored-uv-coordinates">
+<h2>复制镜像UV坐标<a class="headerlink" href="#copy-mirrored-uv-coordinates" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ UV Tools ‣ Copy Mirrored UV Coordinates</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UV ‣ 复制镜像UV坐标</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>将镜像所得网格一侧的UV复制到另一侧。仅影响选中顶点(两侧)。</p>
+<dl class="docutils">
+<dt>轴线方向</dt>
+<dd>正向/负向</dd>
+<dt>精度</dt>
+<dd>查找顶点副本的容差。</dd>
+</dl>
+</div>
+<div class="section" id="mirror">
+<h2>镜射<a class="headerlink" href="#mirror" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ UV Align ‣ Mirror X/Y</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UV ‣ 镜射</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-M</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>可以通过X轴或Y轴镜射UV:</p>
+<ul class="simple">
+<li>镜射X</li>
+<li>镜射Y</li>
+</ul>
+<p>也可以使用快捷键 <kbd class="kbd docutils literal notranslate">Ctrl-M</kbd>, 然后输入 <kbd class="kbd docutils literal notranslate">X</kbd> 或 <kbd class="kbd docutils literal notranslate">Y</kbd>, 或者按住 <kbd class="kbd docutils literal notranslate">MMB</kbd> 并拖动选择镜射方向。</p>
+</div>
+<div class="section" id="snap">
+<h2>吸附<a class="headerlink" href="#snap" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UV ‣ 吸附</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Shift-S</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Snapping in the UV Editor is similar to
+<a class="reference internal" href="../../../../scene_layout/object/editing/transform/control/snap.html"><span class="doc">Snapping in 3D</span></a>.
+For the snap to pixel options to work an image has to be loaded.</p>
+<dl class="docutils">
+<dt>选中项到像素点</dt>
+<dd>移动选中UV顶点至最近像素点。参考上文 <em>吸附至像素点</em>。</dd>
+<dt>选中项到游标</dt>
+<dd>移动选中项到2D游标位置。</dd>
+<dt>选中项到像素点(偏移)</dt>
+<dd>移动选中项到2D游标位置，但保持选中顶点与中心点的距离。</dd>
+<dt>选中项到临近未选项</dt>
+<dd>移动选中项到临近(共用顶点)的未选中元素。</dd>
+<dt>游标到像素点</dt>
+<dd>吸附游标至最近像素点。</dd>
+<dt>游标到选中项</dt>
+<dd>移动游标至选中项中心点。</dd>
+</dl>
+</div>
+<div class="section" id="weld">
+<span id="bpy-ops-uv-weld"></span><h2>焊接<a class="headerlink" href="#weld" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ UV Tools ‣ Weld</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UV ‣ 焊接/对齐 ‣ 焊接</span>, <span class="menuselection">专用项菜单 ‣ 焊接</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">W</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>焊接</em> 工具会将选中的UV顶点移动至其平均位置。</p>
+</div>
+<div class="section" id="merge-uvs-by-distance">
+<span id="bpy-ops-uv-remove-doubles"></span><h2>Merge UVs by Distance<a class="headerlink" href="#merge-uvs-by-distance" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ UV Tools ‣ Merge UVs by Distance</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UVs ‣ Weld/Align ‣ Merge UVs by Distance</span>,
+<span class="menuselection">Specials ‣ Merge UVs by Distance</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The <em>Merge UVs by Distance</em> tool will merge selected UVs within the specified <em>Margin</em>.</p>
+</div>
+<div class="section" id="straighten-align">
+<span id="bpy-ops-uv-align"></span><h2>拉直/对齐<a class="headerlink" href="#straighten-align" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ UV Tools ‣ UV Align ‣ Straighten/Align</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UV ‣ 焊接/对齐 ‣ 拉直/对齐</span>, <span class="menuselection">专用项菜单 ‣ 拉直/对齐</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">W</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="docutils">
+<dt>拉直</dt>
+<dd>自动, X, Y</dd>
+<dt>对齐</dt>
+<dd><p class="first">使选定UV X轴、Y轴或自动选择轴向对齐。</p>
+<p class="last">自动, X, Y</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="proportional-editing">
+<h2>衰减编辑<a class="headerlink" href="#proportional-editing" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">标题栏:</th><td class="field-body"><span class="menuselection">衰减编辑</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UV ‣ 衰减编辑</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">O</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Proportional Editing is available in UV editing. The controls are the same as in the 3D View.
+See <a class="reference internal" href="../../../../scene_layout/object/editing/transform/control/proportional_edit.html"><span class="doc">Proportional Editing in 3D</span></a>
+for a full reference.</p>
+</div>
+<div class="section" id="show-hide-faces">
+<h2>显示/隐藏面<a class="headerlink" href="#show-hide-faces" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UV ‣ 显示/隐藏面</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="simple">
+<li>恢复显示隐藏项 <kbd class="kbd docutils literal notranslate">Alt-H</kbd></li>
+<li>隐藏选中项 <kbd class="kbd docutils literal notranslate">H</kbd></li>
+<li>隐藏未选项 <kbd class="kbd docutils literal notranslate">Shift-H</kbd></li>
+</ul>
+</div>
+<div class="section" id="export-uv-layout">
+<h2>导出UV布局图<a class="headerlink" href="#export-uv-layout" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">UV ‣ 导出UV布局图</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This is an <a class="reference internal" href="../../../../addons/io_mesh_uv_layout.html"><span class="doc">add-on</span></a> activated by default.</p>
+</div>
+<div class="section" id="header">
+<h2>标题栏<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pivot-point">
+<h3>轴心<a class="headerlink" href="#pivot-point" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">视图模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">标题栏:</th><td class="field-body"><span class="menuselection">轴心点</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The UV Editor has a 2D cursor. Its position can be changed by <kbd class="kbd docutils literal notranslate">LMB</kbd>
+clicking in the UV editor. You can also manually adjust its position in the Sidebar region.
+The range by default is from 0 to 256 starting from the lower left corner.
+By enabling <em>Normalized</em> under <em>Coordinates</em>, the range changes from 0 to 1.</p>
+<p>可以修改轴心为:</p>
+<ul class="simple">
+<li>边界框中心</li>
+<li>质心点</li>
+<li>2D游标位置</li>
+</ul>
+</div>
+</div>
+<div class="section" id="d-view">
+<h2>3D视图<a class="headerlink" href="#d-view" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="face-mirror-and-rotate-uvs">
+<span id="uv-image-rotate-reverse-uvs"></span><h3>面镜射和旋转UV<a class="headerlink" href="#face-mirror-and-rotate-uvs" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">编辑器:</th><td class="field-body">3D视图</td>
+</tr>
+<tr class="field-even field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面 ‣ 旋转UV/翻转UV</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>UV贴图的朝向是由每个面定义的。比如，如果图像是上下颠倒的或者侧向的，可以使用 <cite>面 --&gt; 旋转UV</cite> (3D视图面旋转模式下)菜单对每个面的UV旋转90度。</p>
+<p><span class="menuselection">面 ‣ 翻转UV</span> 工具对UV面进行逐面镜射，翻转图像，显示颠倒的图像。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="layout_workflow.html" class="btn btn-neutral float-right" title="布局工作流" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="unwrapping/seams.html" class="btn btn-neutral float-left" title="缝合线" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

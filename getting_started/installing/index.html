@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devgetting_started/installing/index.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/getting_started/installing/index.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="简介" href="introduction.html" />
+    <link rel="next" title="在Linux上安装" href="linux.html" />
     <link rel="prev" title="Blender社区" href="../about/community.html" /> 
 </head>
 
@@ -94,27 +113,34 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Blender入门</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../about/index.html">关于Blender</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">安装Blender</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="configuration/index.html">配置Blender</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#support-requirements">支持与要求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download-blender">下载Blender</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linux.html">在Linux上安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="macos.html">在macOS安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows.html">在 Windows 上安装</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">配置Blender</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../help.html">帮助系统</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -188,21 +214,38 @@
             
   <div class="section" id="installing-blender">
 <h1>安装Blender<a class="headerlink" href="#installing-blender" title="Permalink to this headline">¶</a></h1>
+<p>Blender大概每隔三个月发布一次。用户可以通过 <a class="reference external" href="https://www.blender.org/features/releases/">发行说明</a> 了解最新的变化。</p>
+<div class="section" id="support-requirements">
+<h2>支持与要求<a class="headerlink" href="#support-requirements" title="Permalink to this headline">¶</a></h2>
+<p>Blender提供Windows, macOS以及Linux版本。请不时检查确保显卡驱动为最新，且OpenGL支持正常。Blender列出了 <a class="reference external" href="https://www.blender.org/download/requirements/">最低及推荐配置</a>; 所以在安装Blender前确保满足这些条件。</p>
+<p>其他硬件如图形数位板及3D鼠标的支持将在后面的 <a class="reference internal" href="../configuration/hardware.html"><span class="doc">配置外设</span></a> 作介绍。</p>
+</div>
+<div class="section" id="download-blender">
+<h2>下载Blender<a class="headerlink" href="#download-blender" title="Permalink to this headline">¶</a></h2>
+<p>Blender提供了两种不同的二进制包；用户可以选择稳定发行版或者每日版。前者优势在于更加可靠；而处在开发阶段的后者则提供了最新的特性，代价则是稳定性。</p>
+<dl class="docutils">
+<dt><a class="reference external" href="https://www.blender.org/download/">最新的稳定发行版</a></dt>
+<dd>这是Blender最新版本的二进制发行版，可以认为是稳定且没有性能退化的。</dd>
+<dt><a class="reference external" href="https://builder.blender.org/download">每日版</a></dt>
+<dd>这是每日更新的Blender二进制发行版，包含开发阶段的最新变化。尽管这些版本也是官方版且并非高度试验性质，但由于未同稳定发行版一样经过完整测试，可能会崩溃。</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Blender的源码可供自由参考或 <a class="reference external" href="https://wiki.blender.org/wiki/Building_Blender">从源码编译</a>。 尽管 <strong>并不</strong> 期望普通用户自行编译Blender，但这确实带来了一些优势:</p>
+<ul class="last simple">
+<li>Blender永远保持最新状态。</li>
+<li>允许访问开发阶段特性所在的任意版本或分支。</li>
+<li>可以自由定制。</li>
+</ul>
+</div>
+<p>无论是最新的稳定版，还是每日版，安装的过程是相同的。请按照下面对应操作系统的步骤操作:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">简介</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#minimum-requirements">最低配置要求</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#download-blender">下载 Blender</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#install-blender">安装Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux.html">在Linux上安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macos.html">在macOS安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows.html">在 Windows 上安装</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="configuration/index.html">配置Blender</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="configuration/introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="configuration/hardware.html">配置外设</a></li>
-<li class="toctree-l2"><a class="reference internal" href="configuration/directories.html">配置目录</a></li>
-</ul>
-</li>
-</ul>
+</div>
 </div>
 </div>
 
@@ -214,7 +257,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="introduction.html" class="btn btn-neutral float-right" title="简介" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="linux.html" class="btn btn-neutral float-right" title="在Linux上安装" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../about/community.html" class="btn btn-neutral float-left" title="Blender社区" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

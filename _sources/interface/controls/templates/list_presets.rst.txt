@@ -10,6 +10,7 @@ List Views
 
 .. figure:: /images/interface_controls_templates_list-presets_view-filter.png
    :align: right
+   :figwidth: 268px
 
    List view with expanded Filtering Options panel.
 
@@ -51,7 +52,7 @@ Add ``+``
    Adds a new item.
 Remove ``-``
    Removes the selected item.
-Specials
+Specials ``v``
    A :ref:`Specials <ui-specials-menu>` menu with tools to operate on list entries.
 Move (up/down arrow icon)
    Moves the selected item up/down one position.

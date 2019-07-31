@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devtroubleshooting/gpu.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/troubleshooting/gpu.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="崩溃" href="crash.html" />
@@ -94,18 +113,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">问题排查</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="startup.html">启动</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3d_view.html">3D视图</a></li>
@@ -118,11 +138,11 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#laptops">笔记本</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#common-problems">常见问题</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#unsupported-graphics-driver-error">Unsupported Graphics Driver Error</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#crash-on-startup">Crash on Startup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#poor-performance">Poor Performance</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#render-errors">Render Errors</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#wrong-selection-in-3d-viewport">Wrong Selection in 3D Viewport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unsupported-graphics-driver-error">不支持的图形驱动程序错误</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#crash-on-startup">启动时崩溃</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#poor-performance">低性能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#render-errors">渲染器错误</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wrong-selection-in-3d-viewport">3D视图中的错误选择</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#information">信息</a></li>
@@ -207,93 +227,65 @@
   <div class="section" id="graphics-hardware">
 <h1>图形硬件的故障排除<a class="headerlink" href="#graphics-hardware" title="Permalink to this headline">¶</a></h1>
 <p>Blender使用OpenGL渲染3D视图与用户界面。显卡(GPU) 及其驱动对Blender的功能和性能影响很大。</p>
-<p>This pages lists possible solutions for graphics glitches, problems with Eevee and Cycles,
-and crashes related to your GPU.</p>
+<p>此页面列出了可能是图形故障的解决方案</p>
 <div class="section" id="drivers">
 <h2>驱动<a class="headerlink" href="#drivers" title="Permalink to this headline">¶</a></h2>
-<p>Upgrading to the latest graphics drivers often solves problems.
-Newer drivers have bug fixes that help Blender function correctly.</p>
+<p>升级到最新的图形驱动程序通常可以解决问题。 较新的驱动程序使错误修复，可以帮助Blender正常运行。</p>
 <div class="section" id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
-<p>On Windows drivers are provided by the graphics card manufacturer (Intel, AMD and NVIDIA).
-Windows update automatically installs graphics drivers,
-or your computer manufacturer may provide its own version of the graphics drivers.
-However these are not always the latest version or may have been corrupted in some way.</p>
-<p>To ensure you have the latest version, go to the graphics card manufacturer's website and
-download the latest drivers from there. It can help to uninstall the previous drivers first and
-perform a clean installation.</p>
+<p>在Windows上，驱动程序由显卡制造商提供（Intel，AMD和NVIDIA) Windows Update会自动安装图形驱动程序，或者您的计算机制造商可能会提供自己的版本图形驱动程序。但这些并不总是最新版本或可能在某种程度上已经无效了。</p>
+<p>要确保您拥有最新版本，请访问显卡制造商的网站并从那里下载最新的驱动程序。它可以帮助首先卸载以前的驱动程序并执行全新安装。</p>
 </div>
 <div class="section" id="linux">
 <h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
-<p>On Linux, graphics drivers are usually installed as a package by your Linux distribution.
-Installing the latest drivers is typically done by upgrading packages or the distribution as a whole.
-Some distributions provide multiple packages for multiple drivers versions,
-giving you the choice to install newer versions.</p>
-<p>For NVIDIA there are open source (Nouveau) and closed source (by NVIDIA) graphics drivers.
-Blender functions best with the closed source drivers as they are more optimized and complete.
-Linux graphics drivers can be downloaded from NVIDIA's website, however in most cases
-the ones from your Linux distribution are fine and make things easier.
-Manually downloading drivers is mostly useful to get the very latest version,
-for example for a GPU that was only recently released.</p>
-<p>For AMD the drivers are open source, except for the OpenCL support which is available as part of Pro drivers.
-Installing packages through your Linux distribution is usually best.
-AMD also provides graphics drivers for download on their website if you need the latest version.</p>
+<p>在Linux上，图形驱动程序通常作为包安装在您的Linux发行版。安装最新的驱动程序通常由升级包或整个发行版。一些发行版为多个驱动程序版本提供多个包，为您提供选择安装新版本。</p>
+<p>对于NVIDIA，有开源（Nouveau）和闭源（由NVIDIA提供）图形驱动程序。Blender最适合闭源驱动程序因为它们优化更加完整.Linux图形驱动程序可以从NVIDIA的网站下载，但在大多数情况下来自你的Linux发行版是很好的，可以让事情变得更容易。手动下载驱动程序对于获取最新版本非常有用，例如最近才发布的GPU。</p>
+<p>对于AMD来说，驱动程序是开源的，除了OpenCL支持作为Pro驱动程序的一部分提供。通过您的Linux发行版安装包通常是最好的.AMD也提供了图形驱动程序如果您需要最新版本，可以在他们的网站上下载。</p>
 </div>
 <div class="section" id="macos">
 <h3>macOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h3>
-<p>On macOS graphics drivers are built into the operating system and
-the only way to get newer drivers is to upgrade macOS as a whole to the latest version.</p>
+<p>macOS图形驱动程序是内置到操作系统中的，所以获得更新驱动程序的唯一方法是将整个macOS升级为最新版本。</p>
 </div>
 </div>
 <div class="section" id="laptops">
 <h2>笔记本<a class="headerlink" href="#laptops" title="Permalink to this headline">¶</a></h2>
-<p>Laptops often have two GPUs for power saving purposes.
-One slower onboard GPU (typically Intel) and one faster dedicated GPU for better performance (AMD or NVIDIA).</p>
-<p>For best performance the dedicated GPU should be used for Blender.
-Which GPU to use for which application can be configured in your graphics driver settings.</p>
-<p>If there is a graphics glitch specific to the onboard GPU, then using the dedicated GPU can also help avoid that.</p>
+<p>笔记本电脑通常有两个GPU用于省电。 一个较慢的板载GPU（通常是英特尔）和一个更快更好的独立GPU（AMD或NVIDIA）。</p>
+<p>为获得最佳性能，将独立GPU应用于Blender。可以在图形配置中配置哪个应用程序应用GPU的驱动设置。</p>
+<p>如果存在特殊板载GPU的图形故障，则使用独立GPU也有利于避免这种情况。</p>
 </div>
 <div class="section" id="common-problems">
 <h2>常见问题<a class="headerlink" href="#common-problems" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="unsupported-graphics-driver-error">
-<h3>Unsupported Graphics Driver Error<a class="headerlink" href="#unsupported-graphics-driver-error" title="Permalink to this headline">¶</a></h3>
-<p>This means your graphics card and driver do not have the minimum required OpenGL 3.3 version needed by Blender.</p>
-<p>Installing the latest driver can help upgrade the OpenGL version,
-though some graphics cards are simply too old to run the latest Blender.
-Using Blender 2.79 or earlier is the only option then.</p>
+<h3>不支持的图形驱动程序错误<a class="headerlink" href="#unsupported-graphics-driver-error" title="Permalink to this headline">¶</a></h3>
+<p>这意味着您的显卡和驱动程序没有达到最低要求Blender需要OpenGL 3.3版本。</p>
+<p>安装最新的驱动程序可以帮助升级OpenGL版本，但有些显卡太老了，无法运行最新的Blender。只有使用Blender2.79或更早版本是唯一的选择。</p>
 </div>
 <div class="section" id="crash-on-startup">
-<h3>Crash on Startup<a class="headerlink" href="#crash-on-startup" title="Permalink to this headline">¶</a></h3>
-<p>Try running Blender from the <a class="reference internal" href="../advanced/command_line/index.html"><span class="doc">command line</span></a>,
-to see if any helpful error messages are printed.</p>
-<p>On Windows, graphics drivers can sometimes get corrupted.
-In this case it can help to uninstall all graphics drivers (there may be multiple from Intel, AMD and NVIDIA) and
-perform a clean installation with drivers from the manufacturer's website.</p>
+<h3>启动时崩溃<a class="headerlink" href="#crash-on-startup" title="Permalink to this headline">¶</a></h3>
+<p>试着运行Blender的 <a class="reference internal" href="../advanced/command_line/index.html"><span class="doc">命令行模式</span></a>,查看是否打印了任何有用的错误消息。</p>
+<p>在Windows上，图形驱动程序有时会损坏。在这种情况下，它可以帮助卸载所有图形驱动程序（可能有多个来自Intel，AMD和NVIDIA）并使用制造商网站上的驱动程序执行全新安装。</p>
 </div>
 <div class="section" id="poor-performance">
-<h3>Poor Performance<a class="headerlink" href="#poor-performance" title="Permalink to this headline">¶</a></h3>
+<h3>低性能<a class="headerlink" href="#poor-performance" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Update your graphics drivers (see above).</p></li>
-<li><p>On laptops, make sure you are using a dedicated GPU (see above).</p></li>
-<li><p>Try lowering quality settings in <span class="menuselection">Preferences ‣ System ‣ OpenGL</span>.</p></li>
-<li><p>Try undoing settings in your graphics drivers, if you made any changes there.</p></li>
+<li>更新图形驱动程序（见上文）。</li>
+<li>在笔记本电脑上，确保使用独立GPU（见上文）。</li>
+<li>尝试降低质量设置：<span class="menuselection">用户设置 ‣ 系统 ‣ 内存 &amp; 限额</span>。</li>
+<li>如果您在其中进行了任何更改，请尝试撤消图形驱动程序中的设置。</li>
 </ul>
 </div>
 <div class="section" id="render-errors">
-<h3>Render Errors<a class="headerlink" href="#render-errors" title="Permalink to this headline">¶</a></h3>
-<p>See <a class="reference internal" href="../render/eevee/limitations.html"><span class="doc">Eevee</span></a> and
-<a class="reference internal" href="../render/cycles/gpu_rendering.html"><span class="doc">Cycles</span></a> documentation respectively.</p>
+<h3>渲染器错误<a class="headerlink" href="#render-errors" title="Permalink to this headline">¶</a></h3>
+<p>请参见 <a class="reference internal" href="../render/eevee/limitations.html"><span class="doc">Eevee</span></a> 和 <a class="reference internal" href="../render/cycles/gpu_rendering.html"><span class="doc">Cycles</span></a> 文档。</p>
 </div>
 <div class="section" id="wrong-selection-in-3d-viewport">
-<h3>Wrong Selection in 3D Viewport<a class="headerlink" href="#wrong-selection-in-3d-viewport" title="Permalink to this headline">¶</a></h3>
+<h3>3D视图中的错误选择<a class="headerlink" href="#wrong-selection-in-3d-viewport" title="Permalink to this headline">¶</a></h3>
 <p>请参见 <a class="reference internal" href="3d_view.html#troubleshooting-3dview-invalid-selection"><span class="std std-ref">无效的选择、禁用抗锯齿</span></a>。</p>
 </div>
 </div>
 <div class="section" id="information">
 <h2>信息<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
-<p>To find out which graphics card and driver Blender is using,
-use <span class="menuselection">Help ‣ Save System Info</span> inside Blender.
-The OpenGL section will have information about your graphics card, vendor and driver version.</p>
+<p>要查询Blender使用的显卡和驱动程序，在Blender里使用 <span class="menuselection">帮助 ‣ 保存系统信息</span> 。</p>
 </div>
 </div>
 

@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devanimation/drivers/introduction.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/drivers/introduction.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="驱动器面板" href="drivers_panel.html" />
+    <link rel="next" title="Usage" href="usage.html" />
     <link rel="prev" title="驱动器" href="index.html" /> 
 </head>
 
@@ -94,20 +113,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画 &amp; 绑定</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/index.html">骨架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lattice.html">Lattice 晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../constraints/index.html">约束</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../actions.html">动作</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">驱动器</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#adding-removing">添加 &amp; 删除</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#graph-view">曲线视图</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#driver-configuration">Driver Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#notes-on-scripted-expressions">Notes on Scripted Expressions</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html">Usage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="drivers_panel.html">驱动器面板</a></li>
 <li class="toctree-l3"><a class="reference internal" href="workflow_examples.html">工作流程 &amp; 范例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="troubleshooting.html">问题排查</a></li>
@@ -121,10 +145,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -175,7 +200,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">动画</a> &raquo;</li>
+          <li><a href="../index.html">动画 &amp; 绑定</a> &raquo;</li>
         
           <li><a href="index.html">驱动器</a> &raquo;</li>
         
@@ -200,100 +225,71 @@
             
   <div class="section" id="introduction">
 <h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>驱动器即脚本，主要目的是以属性控制其他属性。例如，可以用一个物体的位置控制另一个物体的旋转。</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="../../advanced/scripting/security.html"><span class="doc">自动运行</span></a></p>
-</div>
-<div class="section" id="adding-removing">
-<h2>添加 &amp; 删除<a class="headerlink" href="#adding-removing" title="Permalink to this headline">¶</a></h2>
-<p>在Blender中添加驱动器有几种不同方式。添加驱动器后，通常到 <em>曲线编辑器</em> 中的 <em>驱动器</em> 模式下进行修改。</p>
-<div class="section" id="add-driver">
-<h3>驱动器<a class="headerlink" href="#add-driver" title="Permalink to this headline">¶</a></h3>
-<div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">上下文菜单 ‣ 添加驱动器</span></p>
-</dd>
-<dt class="field-even">快捷键</dt>
-<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Ctrl-D</kbd></p>
-</dd>
-</dl>
-</div>
-<p>添加驱动器的常规方式是在属性上方 <kbd class="kbd docutils literal notranslate">RMB</kbd> 单击，然后通过弹出的上下文菜单添加驱动器。还可以在将鼠标移到属性上方，按下 <kbd class="kbd docutils literal notranslate">Ctrl-D</kbd> 添加驱动器。被选中的属性将成为驱动目标 (输出)。</p>
-<dl class="simple">
-<dt>全部来自目标 (属性图标)</dt><dd><p>该选项将一组属性作为目标添加驱动器。默认将创建一条通过(0, 0) 和 (1, 1)的函数曲线。比如，对位移的X, Y和Z同时添加驱动器。</p>
-</dd>
-<dt>单个来自目标</dt><dd><p>仅为选中属性添加驱动器。</p>
-</dd>
-<dt>匹配索引 (调色盘图标)</dt><dd><p>对向量/数组属性，使用对应下标的属性驱动目标属性。对于使用 <code class="docutils literal notranslate"><span class="pre">ob2.location</span></code> 驱动 <code class="docutils literal notranslate"><span class="pre">ob1.location</span></code>, 或者 <code class="docutils literal notranslate"><span class="pre">XYZ位移</span></code> 驱动 <code class="docutils literal notranslate"><span class="pre">RGB颜色</span></code> 。</p>
-</dd>
-<dt>稍后自动创建/(单个) (手掌图标)</dt><dd><p>添加1个/组驱动器，分别使用一个变量(空值)驱动。不会出现吸管工具。</p>
-</dd>
-</dl>
-<p>源/目标 (输入) 可以稍后使用 <a class="reference internal" href="../../interface/controls/buttons/eye_dropper.html#ui-eye-dropper"><span class="std std-ref">吸管工具</span></a> (比如 &quot;Scale Y&quot;)选择。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>由于Blender界面工作方式的缘故，用户需要打开 <em>两个</em> 属性编辑器(并且钉住其中一个，以显示非选中物体的属性)。由于使用吸管工具选择数据的时候无法操作UI，只能这样做。因此，使用吸管工具时必须可以同时看到源属性和目标属性。</p>
-</div>
-</div>
-<div class="section" id="copy-paste">
-<h3>复制 &amp; 粘贴<a class="headerlink" href="#copy-paste" title="Permalink to this headline">¶</a></h3>
-<div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">上下文菜单 ‣ 复制/粘贴驱动器</span></p>
-</dd>
-</dl>
-</div>
-<p>通过上下文菜单，可以直接在界面上复制和粘贴驱动器。当添加相同设置的驱动器时，该操作可以节约修改设置的时间。</p>
-</div>
-<div class="section" id="expression">
-<h3>表达式<a class="headerlink" href="#expression" title="Permalink to this headline">¶</a></h3>
-<p>使用脚本表达式添加驱动是一种快捷的方法。首先单击想要添加驱动的目标属性，然后输入井号 <code class="docutils literal notranslate"><span class="pre">#</span></code> 和表达式。</p>
-<p>一些例子:</p>
+<p>Drivers are a way to control values of properties by means of a function,
+mathematical expression or small script.</p>
+<p>Effectively, drivers are composed by:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">#frame</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">#frame</span> <span class="pre">/</span> <span class="pre">20.0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">#sin(frame)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">#cos(frame)</span></code></p></li>
+<li>A <strong>driver configuration</strong> that specifies input values from properties and
+combines them with a mathematical expression or Python script.</li>
+<li>An <strong>animation</strong> <a class="reference internal" href="../../editors/graph_editor/fcurves/introduction.html"><span class="doc">F-Curve</span></a>
+that maps the output of the driver configuration to the value to apply
+to the driven property.</li>
 </ul>
-</div>
-<div class="section" id="removing-drivers">
-<h3>移除驱动器<a class="headerlink" href="#removing-drivers" title="Permalink to this headline">¶</a></h3>
-<div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">编辑器</dt>
-<dd class="field-odd"><p>曲线编辑器</p>
-</dd>
-<dt class="field-even">模式</dt>
-<dd class="field-even"><p>驱动器</p>
-</dd>
-<dt class="field-odd">面板</dt>
-<dd class="field-odd"><p><span class="menuselection">属性栏 ‣ 驱动 ‣ 驱动器 ‣ 移除驱动器</span></p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">上下文菜单 ‣ 删除驱动器</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Ctrl-Alt-D</kbd></p>
-</dd>
-</dl>
-</div>
-<p>ToDo add.</p>
-</div>
-</div>
+<p>As an example, the rotation of Object 1 can be controlled by the scale of Object 2.
+It is then said that the scale of Object 2 <em>drives</em> the rotation of Object 1.</p>
+<p>Not only drivers can use the value of most properties as a direct mapping to other properties,
+they can also evaluate that value as part of a mathematical expression or Python script
+and further modulate it with a function and a modifier stack.</p>
+<p>Drivers are an extremely powerful tool for building rigs and are typically used
+to drive bone transforms and the influence of shape keys, action constraints and custom properties.</p>
 <div class="section" id="graph-view">
 <h2>曲线视图<a class="headerlink" href="#graph-view" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-right" id="id1">
 <img alt="../../_images/animation_drivers_introduction_fcurve.png" src="../../_images/animation_drivers_introduction_fcurve.png" />
-<p class="caption"><span class="caption-text">曲线编辑器中的驱动器范例。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Driver curve in the Drivers editor.</span></p>
 </div>
-<p>驱动器模式下的 <a class="reference internal" href="../../editors/graph_editor/index.html"><span class="doc">曲线编辑器</span></a> 主区域显示的是一条 <a class="reference internal" href="../../editors/graph_editor/fcurves/introduction.html"><span class="doc">函数曲线</span></a> ，将驱动值映射至目标属性。驱动值是驱动器脚本的输出。横轴表示驱动值，纵轴是目标属性植。在上例的图片中，如果驱动值为2.0，属性值将为0.5。</p>
-<p>默认的函数曲线是等值映射，即数值不变。可用于矫正驱动器。</p>
+<p>The main area of the <a class="reference internal" href="../../editors/drivers_editor.html"><span class="doc">Drivers editor</span></a>
+shows an <a class="reference internal" href="../../editors/graph_editor/fcurves/introduction.html"><span class="doc">F-Curve</span></a> that
+represents the driver function.</p>
+<p>The <strong>X axis</strong> maps the output value of the driver configuration. The units depend on the setup.</p>
+<p>The <strong>Y axis</strong> shows the value applied to the target property. The units depend on the property.</p>
+<p>In the example image, if the driver value is 2.0 the property value will be 0.5.</p>
+<p>The default F-curve is an identity map i.e. the value is applied to the driven
+property as is outputted by the driver, unchanged. If the driver output value is 2.0,
+the property will be 2.0.</p>
+<p>The driver function can be defined artistically with Bézier curve handles or
+mathematically with trigonometric functions or polynomial expressions such as <span class="math notranslate nohighlight">\(y = a + bx\)</span>.
+Furthermore, the function can also be procedurally modulated with noise or cyclic repetitions.
+See <a class="reference internal" href="../../editors/graph_editor/fcurves/modifiers.html"><span class="doc">Modifiers</span></a> for more details.</p>
+</div>
+<div class="section" id="driver-configuration">
+<h2>Driver Configuration<a class="headerlink" href="#driver-configuration" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="drivers_panel.html"><span class="doc">Drivers panel</span></a> shows the setup for a driver.</p>
+<p>A driver can have zero, one, or more <strong>variables</strong>. Variables are the values of properties
+or distances between two objects.</p>
+<p>The driver <strong>type</strong> determines how the variables are used. The type can be:</p>
+<ul class="simple">
+<li>a built-in function: for example, the sum of the variables' values, or</li>
+<li>a scripted expression: a custom mathematical or Python expression that can make use of any existing variables.</li>
+</ul>
+<p>This driver configuration outputs a single value which changes when the variables change.
+This value is then evaluated through the driver function to produce the result
+to be applied to the driven property.</p>
+</div>
+<div class="section" id="notes-on-scripted-expressions">
+<h2>Notes on Scripted Expressions<a class="headerlink" href="#notes-on-scripted-expressions" title="Permalink to this headline">¶</a></h2>
+<p>When a driver uses a <em>Scripted Expression</em>, Blender can convert it to a native expression
+if it is simple enough.
+This means that drivers are fast to evaluate with simple divisions, additions and other
+&quot;simple&quot; expressions even on heavy scenes. The built-in functions are always evaluated natively.</p>
+<p>See <a class="reference internal" href="drivers_panel.html#drivers-simple-expressions"><span class="std std-ref">Simple Expressions</span></a>
+for a comprehensive list of expressions that can be evaluated natively.</p>
+<p>When the expression is not simple, it will be evaluated using Python.
+As a consequence, the driver will be slower and there is a security risk
+if the author of the Python code is unknown.
+This is an important thing to take into consideration for heavy scenes and
+when sharing files with other people.
+See also: <a class="reference internal" href="../../advanced/scripting/security.html"><span class="doc">Auto run</span></a>.</p>
 </div>
 </div>
 
@@ -305,7 +301,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="drivers_panel.html" class="btn btn-neutral float-right" title="驱动器面板" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="usage.html" class="btn btn-neutral float-right" title="Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="驱动器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

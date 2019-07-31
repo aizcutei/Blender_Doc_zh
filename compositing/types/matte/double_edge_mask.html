@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devcompositing/types/matte/double_edge_mask.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/compositing/types/matte/double_edge_mask.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="椭圆遮罩节点" href="ellipse_mask.html" />
@@ -94,11 +113,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">合成</a><ul class="current">
@@ -117,6 +136,7 @@
 <li class="toctree-l4"><a class="reference internal" href="chroma_key.html">色度抠像</a></li>
 <li class="toctree-l4"><a class="reference internal" href="color_key.html">色彩抠像节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="color_spill.html">色彩溢出节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptomatte.html">Cryptomatte</a></li>
 <li class="toctree-l4"><a class="reference internal" href="difference_key.html">色差抠像节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="distance_key.html">色距抠像节点</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">双边遮罩节点</a></li>
@@ -133,10 +153,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -187,6 +208,8 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
+          <li><a href="../../../editors/index.html">编辑器</a> &raquo;</li>
+        
           <li><a href="../../index.html">合成</a> &raquo;</li>
         
           <li><a href="index.html">遮片类节点</a> &raquo;</li>
@@ -213,68 +236,70 @@
   <div class="section" id="double-edge-mask-node">
 <span id="bpy-types-compositornodedoubleedgemask"></span><h1>双边遮罩节点<a class="headerlink" href="#double-edge-mask-node" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-right" id="id1">
-<img alt="../../../_images/compositing_types_matte_double-edge-mask_node.png" src="../../../_images/compositing_types_matte_double-edge-mask_node.png" />
-<p class="caption"><span class="caption-text">双边遮罩节点。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<img alt="../../../_images/compositing_node-types_CompositorNodeDoubleEdgeMask.png" src="../../../_images/compositing_node-types_CompositorNodeDoubleEdgeMask.png" />
+<p class="caption"><span class="caption-text">双边遮罩节点。</span></p>
 </div>
 <p><em>双边遮罩</em> 节点在两个遮罩之间生成一个过渡渐变效果。</p>
 <div class="section" id="inputs">
 <h2>输入<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>内侧遮罩</dt><dd><p>代表遮罩的内部形状，显示为全白。</p>
-</dd>
-<dt>外侧遮罩</dt><dd><p>代表遮罩的外部形状，在 <em>内侧遮罩</em> 参数控制边缘从黑到白。</p>
-</dd>
+<dl class="docutils">
+<dt>内侧遮罩</dt>
+<dd>代表遮罩的内部形状，显示为全白。</dd>
+<dt>外侧遮罩</dt>
+<dd>代表遮罩的外部形状，在 <em>内侧遮罩</em> 参数控制边缘从黑到白。</dd>
 </dl>
 </div>
 <div class="section" id="properties">
 <h2>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
-<dl>
-<dt>内侧边</dt><dd><dl class="simple">
-<dt>全部</dt><dd><p><em>内部遮罩</em> 的所有形状逐渐过渡到 <em>外部遮罩</em> 形状，但是不会到达 <em>外部遮罩</em> 的范围区间。</p>
-</dd>
-<dt>仅相邻项</dt><dd><p>只有 <em>内部遮罩</em> 的形状和 <em>外部遮罩</em> 形成的渐变进行重叠。</p>
-</dd>
+<dl class="docutils">
+<dt>内侧边</dt>
+<dd><dl class="first docutils">
+<dt>全部</dt>
+<dd><em>内部遮罩</em> 的所有形状逐渐过渡到 <em>外部遮罩</em> 形状，但是不会到达 <em>外部遮罩</em> 的范围区间。</dd>
+<dt>仅相邻项</dt>
+<dd>只有 <em>内部遮罩</em> 的形状和 <em>外部遮罩</em> 形成的渐变进行重叠。</dd>
 </dl>
-<table class="docutils align-center">
+<table border="1" class="last docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id2">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id2">
 <img alt="../../../_images/compositing_types_matte_double-edge-mask_all.png" src="../../../_images/compositing_types_matte_double-edge-mask_all.png" />
-<p class="caption"><span class="caption-text">全部。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">全部。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id3">
+<td><div class="first last figure" id="id3">
 <img alt="../../../_images/compositing_types_matte_double-edge-mask_adjacent.png" src="../../../_images/compositing_types_matte_double-edge-mask_adjacent.png" />
-<p class="caption"><span class="caption-text">仅相邻项。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">仅相邻项。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt>缓冲边线</dt><dd><dl class="simple">
-<dt>抑制</dt><dd><p>当 <em>外部遮罩</em> 到达图像边缘处即停止。</p>
-</dd>
-<dt>溢出</dt><dd><p>当 <em>外部遮罩</em> 到达图像边缘处继续延展到图像边缘之外。</p>
-</dd>
+<dt>缓冲边线</dt>
+<dd><dl class="first docutils">
+<dt>抑制</dt>
+<dd>当 <em>外部遮罩</em> 到达图像边缘处即停止。</dd>
+<dt>溢出</dt>
+<dd>当 <em>外部遮罩</em> 到达图像边缘处继续延展到图像边缘之外。</dd>
 </dl>
-<table class="docutils align-center">
+<table border="1" class="last docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id4">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
 <img alt="../../../_images/compositing_types_matte_double-edge-mask_in.png" src="../../../_images/compositing_types_matte_double-edge-mask_in.png" />
-<p class="caption"><span class="caption-text">抑制。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">抑制。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id5">
+<td><div class="first last figure" id="id5">
 <img alt="../../../_images/compositing_types_matte_double-edge-mask_bleed.png" src="../../../_images/compositing_types_matte_double-edge-mask_bleed.png" />
-<p class="caption"><span class="caption-text">溢出。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">溢出。</span></p>
 </div>
 </td>
 </tr>
@@ -285,9 +310,9 @@
 </div>
 <div class="section" id="outputs">
 <h2>输出<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>遮罩</dt><dd><p>标准化遮罩输出。</p>
-</dd>
+<dl class="docutils">
+<dt>遮罩</dt>
+<dd>标准化遮罩输出。</dd>
 </dl>
 </div>
 <div class="section" id="example">

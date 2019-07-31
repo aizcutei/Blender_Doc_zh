@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devphysics/particles/hair/emission.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/particles/hair/emission.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Hair Dynamics" href="dynamics.html" />
@@ -94,43 +113,49 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">物理</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gravity.html">重力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloth/index.html">布料模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Particles System</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../particle_system_panel.html">粒子系统面板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emitter/index.html">Emitter</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Hair</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Emission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dynamics.html">Hair Dynamics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="render.html">渲染</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shape.html">Shape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="children.html">Children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="display.html">Viewport Display</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../texture_influence.html">Texture Influence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mode.html">粒子编辑模式</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../fluid/index.html">流体模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../forces/index.html">Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collision.html">碰撞</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../baking.html">烘焙物理模拟</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#physics-types">物理类型</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../../force_fields/index.html">力场</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../collision.html">碰撞</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../cloth/index.html">布料模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../soft_body/index.html">Soft Body</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../fluid/index.html">流体模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../smoke/index.html">Smoke Simulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../rigid_body/index.html">刚体</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Particles System</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../particle_system_panel.html">粒子系统面板</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../emitter/index.html">Emitter</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="index.html">Hair</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../texture_influence.html">Texture Influence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../mode.html">粒子编辑模式</a></li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -209,64 +234,83 @@
   <div class="section" id="emission">
 <h1>Emission<a class="headerlink" href="#emission" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
-<p class="admonition-title">Reference</p>
-<dl class="field-list simple">
-<dt class="field-odd">Panel</dt>
-<dd class="field-odd"><p><span class="menuselection">Particle System ‣ Emission</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">Reference</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Panel:</th><td class="field-body"><span class="menuselection">Particle System ‣ Emission</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="figure align-center" id="id1">
-<img alt="../../../_images/physics_particles_hair_emission_settings.png" src="../../../_images/physics_particles_hair_emission_settings.png" />
-<p class="caption"><span class="caption-text">Hair particle system settings.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<dl>
-<dt>Number</dt><dd><p>Set the amount of hair strands. Use as little particles as possible,
+<dl class="docutils">
+<dt>Number</dt>
+<dd>Set the amount of hair strands. Use as little particles as possible,
 especially if you plan to use soft body animation later.
 But you need enough particles to have good control.
 For a &quot;normal&quot; haircut I found some thousand (very roughly 2000) particles to give enough control.
 You may need a lot more particles if you plan to cover a body with fur.
-Volume will be produced later with <em>Children</em>.</p>
-</dd>
-<dt>Hair Length</dt><dd><p>Controls how long the hair are.</p>
-</dd>
-<dt>Emit From</dt><dd><dl class="simple">
-<dt>Vertices</dt><dd><p>Emits hair particles from the vertices of a mesh.
-When using this the distribution settings (see below) are not available.</p>
-</dd>
-<dt>Faces</dt><dd><p>Emits hair particles from the surface of a mesh's faces.</p>
-</dd>
-<dt>Volume</dt><dd><p>Emits hair particles from the volume of an enclosed mesh.</p>
-</dd>
+Volume will be produced later with <em>Children</em>.</dd>
+<dt>Hair Length</dt>
+<dd>Controls how long the hair are.</dd>
+</dl>
+<div class="section" id="source">
+<h2>Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Panel:</th><td class="field-body"><span class="menuselection">Particle System ‣ Emission ‣ Source</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="docutils">
+<dt>Emit From</dt>
+<dd><dl class="first last docutils">
+<dt>Vertices</dt>
+<dd>Emits hair particles from the vertices of a mesh.
+When using this the distribution settings (see below) are not available.</dd>
+<dt>Faces</dt>
+<dd>Emits hair particles from the surface of a mesh's faces.</dd>
+<dt>Volume</dt>
+<dd>Emits hair particles from the volume of an enclosed mesh.</dd>
 </dl>
 </dd>
-<dt>Random</dt><dd><p>Hair particles are emitted in a random order.</p>
-</dd>
-<dt>Even Distribution</dt><dd><p>Hair particle distribution is made even based on surface area of the elements,
-i.e. small elements emit less particles than large elements, so that the particle density is even.</p>
-</dd>
-<dt>Distribution</dt><dd><dl>
-<dt>Jittered</dt><dd><p>Particles are placed at jittered intervals on the emitter elements.</p>
-<dl class="simple">
-<dt>Particles/Face</dt><dd><p>Number of emissions per face (0 = automatic).</p>
-</dd>
-<dt>Jittering Amount</dt><dd><p>Amount of jitter applied to the sampling.</p>
-</dd>
-</dl>
-</dd>
-<dt>Random</dt><dd><p>Particles are emitted from random locations in the emitter's elements.</p>
-</dd>
-</dl>
-</dd>
-<dt>Use Modifier Stack</dt><dd><p>Take any <a class="reference internal" href="../../../modeling/modifiers/introduction.html"><span class="doc">Modifiers</span></a> above the Particle Modifier
+<dt>Use Modifier Stack</dt>
+<dd><p class="first">Take any <a class="reference internal" href="../../../modeling/modifiers/introduction.html"><span class="doc">Modifiers</span></a> above the Particle Modifier
 in the <a class="reference internal" href="../../../modeling/modifiers/introduction.html#modifier-stack"><span class="std std-ref">modifier stack</span></a> into account when emitting particles.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Note that particles may differ in the final render if these modifiers
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Note that particles may differ in the final render if these modifiers
 generate different geometry between the viewport and render.</p>
 </div>
 </dd>
+<dt>Distribution</dt>
+<dd><dl class="first last docutils">
+<dt>Jittered</dt>
+<dd><p class="first">Particles are placed at jittered intervals on the emitter elements.</p>
+<dl class="last docutils">
+<dt>Particles/Face</dt>
+<dd>Number of emissions per face (0 = automatic).</dd>
+<dt>Jittering Amount</dt>
+<dd>Amount of jitter applied to the sampling.</dd>
 </dl>
+</dd>
+<dt>Random</dt>
+<dd>Particles are emitted from random locations in the emitter's elements.</dd>
+</dl>
+</dd>
+<dt>Random</dt>
+<dd>Hair particles are emitted in a random order.</dd>
+<dt>Even Distribution</dt>
+<dd>Hair particle distribution is made even based on surface area of the elements,
+i.e. small elements emit less particles than large elements, so that the particle density is even.</dd>
+</dl>
+</div>
 </div>
 
 

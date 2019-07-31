@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Alpha上叠节点 &mdash; Blender Manual</title>
+  <title>Alpha转换节点 &mdash; Blender Manual</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devcompositing/types/converter/alpha_convert.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/compositing/types/converter/alpha_convert.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="颜色渐变节点" href="color_ramp.html" />
@@ -94,11 +113,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">合成</a><ul class="current">
@@ -109,14 +128,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../output/index.html">输出类节点</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../color/index.html">颜色类节点</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">转换器类节点</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Alpha上叠节点</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Alpha转换节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="color_ramp.html">颜色渐变节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="combine_separate.html">合并/分离节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="id_mask.html">ID遮罩节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="math.html">运算节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="rgb_to_bw.html">RGB -&gt; BW节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="set_alpha.html">设置Alpha节点</a></li>
-<li class="toctree-l4"><a class="reference internal" href="switch_view.html">Switch View节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="switch_view.html">视图切换节点</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../filter/index.html">滤镜节点</a></li>
@@ -129,10 +148,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -183,11 +203,13 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
+          <li><a href="../../../editors/index.html">编辑器</a> &raquo;</li>
+        
           <li><a href="../../index.html">合成</a> &raquo;</li>
         
           <li><a href="index.html">转换器类节点</a> &raquo;</li>
         
-      <li>Alpha上叠节点</li>
+      <li>Alpha转换节点</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -207,44 +229,37 @@
            <div itemprop="articleBody">
             
   <div class="section" id="alpha-convert-node">
-<span id="bpy-types-compositornodepremulkey"></span><h1>Alpha上叠节点<a class="headerlink" href="#alpha-convert-node" title="Permalink to this headline">¶</a></h1>
+<span id="bpy-types-compositornodepremulkey"></span><h1>Alpha转换节点<a class="headerlink" href="#alpha-convert-node" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-right" id="id1">
-<img alt="../../../_images/compositing_types_converter_alpha-convert_node.png" src="../../../_images/compositing_types_converter_alpha-convert_node.png" />
-<p class="caption"><span class="caption-text">Alpha Convert Node.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<img alt="../../../_images/compositing_node-types_CompositorNodePremulKey.png" src="../../../_images/compositing_node-types_CompositorNodePremulKey.png" />
+<p class="caption"><span class="caption-text">Alpha转换节点。</span></p>
 </div>
-<p>The <em>Alpha Convert Node</em> converts the alpha channel interpretation of an image.</p>
-<p>For compositing and rendering, premultiplied alpha is the standard in Blender.
-Render layers will be premultiplied alpha, and images loaded into rendering
-or compositing will be converted to this.</p>
-<p>If you want to do a compositing operation with straight alpha,
-the <em>Alpha Convert</em> node can be used. Typically this would be a color correction operation
-where it might give better results working on RGB channels without alpha.
-If the alpha is converted to straight in the compositor,
-it should be converted back to premultiplied before the <em>Composite Output</em> node,
-otherwise some artifacts might occur.</p>
+<p><em>Alpha转换节点</em> 对一幅图像的alpha通道信息的映射方式进行转换。</p>
+<p>在Blender的合成和渲染工作中，预乘alpha是标准默认设置。渲染层将apha信息进行预乘映射处理，然后图像将其加载到渲染或合成工作中来。</p>
+<p>如果用户想在合成操作中直接使用alpha通道信息，<em>Alpha转换节点*就可以用来实现这个目的。通常，这是一个颜色校正操作，在无alpha通道的RGB图像上可以起到比较好的效果。如果alpha通道在合成操作中被转换为“直接” ，在使用 *合成输出</em> 节点之前，应该转换回“预乘”模式，否则会产生一些不可知的错误表现。</p>
 <div class="section" id="inputs">
-<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>Image</dt><dd><p>Standard image input.</p>
-</dd>
+<h2>输入<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>图像</dt>
+<dd>标准图像输入。</dd>
 </dl>
 </div>
 <div class="section" id="properties">
-<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>Mapping</dt><dd><dl class="simple">
-<dt>Straight to Premul, Premul to Straight</dt><dd><p>Conversion in both directions. Premul. stands for Premultiplied.
-For details on the difference between both ways to store alpha values see <a class="reference internal" href="../../../glossary/index.html#term-alpha-channel"><span class="xref std std-term">Alpha Channel</span></a>.</p>
-</dd>
+<h2>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>映射</dt>
+<dd><dl class="first last docutils">
+<dt>直接-&gt;预乘，预乘-&gt;直接</dt>
+<dd>在两者之间进行转换。Premul代表预乘。两种方式存储alpha信息之间的区别细节信息，参考 <a class="reference internal" href="../../../glossary/index.html#term-alpha-channel"><span class="xref std std-term">Alpha通道</span></a>。</dd>
 </dl>
 </dd>
 </dl>
 </div>
 <div class="section" id="outputs">
-<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>Image</dt><dd><p>Standard image output.</p>
-</dd>
+<h2>输出<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>图像</dt>
+<dd>标准图像输出。</dd>
 </dl>
 </div>
 </div>

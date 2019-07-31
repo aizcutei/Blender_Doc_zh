@@ -1,0 +1,603 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>相机 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/cameras.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lights" href="lights/index.html" />
+    <link rel="prev" title="采样" href="workbench/sampling.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eevee/index.html">Eevee</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cycles/index.html">Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workbench/index.html">Workbench</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">相机</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#properties">属性</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lens">镜头</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#depth-of-field">景深</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#camera">相机</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#safe-areas">安全区域</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#background-images">背景图片</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#viewport-display">视口显示</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lights/index.html">Lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="materials/index.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shader_nodes/index.html">着色器节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="color_management.html">色彩管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output/index.html">渲染输出</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">渲染</a> &raquo;</li>
+        
+      <li>相机</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/render/cameras.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cameras">
+<h1>相机<a class="headerlink" href="#cameras" title="Permalink to this headline">¶</a></h1>
+<p><em>相机</em> 是一个物体,它提供了一种从 Blender 渲染图像的方法。它定义场景的哪个部分在渲染的图像中可见。</p>
+<p>设置相机在渲染中不可见，因此没有任何材质或纹理设置。但是，它们有可用 <em>物体</em> 和 <em>编辑</em> 设置面板，当选定相机时会显示这些面板活动物体。</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">有关在视口中管理摄像机的文档的 <a class="reference internal" href="../editors/3dview/navigate/camera_view.html"><span class="doc">3D视图相机漫游</span></a> 。</p>
+</div>
+<div class="section" id="properties">
+<h2>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">编辑:</th><td class="field-body">相机属性</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="lens">
+<span id="camera-lens-type"></span><h3>镜头<a class="headerlink" href="#lens" title="Permalink to this headline">¶</a></h3>
+<p class="rubric">类型</p>
+<p>相机镜头选项控制三维物体在二维图像中的表示方式。</p>
+<dl class="docutils">
+<dt>透视</dt>
+<dd><p class="first">这与您在现实世界中查看事物的方式相匹配。距离中的物体看起来比前景中的物体小，并且平行线（例如铁路上的铁轨）看起来会随着它们越来越远而收敛。</p>
+<dl class="last docutils">
+<dt>焦距/视野</dt>
+<dd><p class="first">该 <a class="reference internal" href="../glossary/index.html#term-focal-length"><span class="xref std std-term">焦距</span></a> 控制变焦量，即它是可见的所有一次场景的量。较长的焦距导致较小的 <abbr title="视野">FOV</abbr> （更大的变焦），而较短的焦距允许您一次看到更多的场景（更大的FOV，更少的变焦）。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
+<img alt="../_images/render_cameras_traintracks-perspective-BI.jpg" src="../_images/render_cameras_traintracks-perspective-BI.jpg" />
+<p class="caption"><span class="caption-text">35mm焦距的透视相机.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id2">
+<img alt="../_images/render_cameras_traintracks-perspective-telephoto-BI.jpg" src="../_images/render_cameras_traintracks-perspective-telephoto-BI.jpg" />
+<p class="caption"><span class="caption-text">210mm焦距的透视相机.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>镜头单位</dt>
+<dd><p class="first">焦距可以以毫米为单位设置，也可以以实际 <a class="reference internal" href="../glossary/index.html#term-field-of-view"><span class="xref std std-term">视野</span></a> 角度设置.</p>
+<div class="last figure align-center">
+<a class="reference internal image-reference" href="../_images/render_cameras_perspective.svg"><img alt="../_images/render_cameras_perspective.svg" src="../_images/render_cameras_perspective.svg" width="50%" /></a>
+</div>
+</dd>
+</dl>
+<div class="last admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>当相机朝向物体移动时，可以减小焦距属性产生变焦相机的效果。此视频演示了移动相机的效果。</p>
+<p class="last">相机变焦效果视频链接。</p>
+</div>
+</dd>
+</dl>
+</dd>
+<dt>正交</dt>
+<dd><p class="first">对于 <em>正交透视</em> 物体，无论距离如何，始终以实际尺寸显示。这意味着平行线看起来是平行的，并且不会产生像透视那样的效果。</p>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../_images/render_cameras_traintracks-orthographic-BI.jpg"><img alt="../_images/render_cameras_traintracks-orthographic-BI.jpg" src="../_images/render_cameras_traintracks-orthographic-BI.jpg" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-text">使用与前面示例相同的摄像机角度渲染，但使用正交透视图。</span></p>
+</div>
+<dl class="last docutils">
+<dt>正交尺度</dt>
+<dd><p class="first">这可以控制投影在图像上的物体的外观尺寸。</p>
+<p>请注意，这实际上是唯一适用于正交视角的设置。由于平行线不会在正交模式下收敛（没有消失点），因此镜头移位设置相当于在3D视图中平移相机。</p>
+<div class="last figure align-center">
+<a class="reference internal image-reference" href="../_images/render_cameras_orthographic.svg"><img alt="../_images/render_cameras_orthographic.svg" src="../_images/render_cameras_orthographic.svg" width="50%" /></a>
+</div>
+</dd>
+</dl>
+</dd>
+<dt>全景</dt>
+<dd>全景相机仅适用于Cycles。有关详细信息，请参阅Cycles <a class="reference internal" href="cycles/object_settings/cameras.html#cycles-panoramic-camera"><span class="std std-ref">全景相机</span></a> 设置。</dd>
+<dt>偏移</dt>
+<dd><p class="first">允许调整消失点。 消失点指的是平行线会聚的位置。在这些渲染示例中，最明显的消失点是在铁路的尽头。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
+<img alt="../_images/render_cameras_traintracks-perspective-lens-shift-BI.jpg" src="../_images/render_cameras_traintracks-perspective-lens-shift-BI.jpg" />
+<p class="caption"><span class="caption-text">水平镜头偏移0.330.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id5">
+<img alt="../_images/render_cameras_traintracks-perspective-rotate-BI.jpg" src="../_images/render_cameras_traintracks-perspective-rotate-BI.jpg" />
+<p class="caption"><span class="caption-text">旋转相机物体而不是镜头偏移.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>请注意在使用镜头偏移时水平线条如何保持完全水平，但在旋转相机物体时会出现偏斜.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">使用镜头偏移相当于渲染一个较大的 <abbr title="视野">FOV</abbr> 图像，并将其裁剪到偏离中心的位置。</p>
+</div>
+</dd>
+</dl>
+<dl class="docutils" id="camera-clipping">
+<dt>剪切开始和结束</dt>
+<dd><p class="first">物体直接可见的间隔，此范围之外的任何物体仍会间接影响图像，因为不会剪切进一步的光反弹。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">对于视口渲染，将剪切距离设置为有限值对于确保足够的光栅化精度非常重要。光线跟踪渲染不会受到这个问题的影响，因此可以安全地设置更极端的值。</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">当限制在显示面板被启用时，剪切范围会随着上的摄象机视线两个黄色的连接点是可见的。</p>
+</div>
+<div class="last admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="../editors/3dview/properties/sidebar.html"><span class="doc">3D视图裁剪</span></a></li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="depth-of-field">
+<span id="bpy-types-cameradofsettings"></span><h3>景深<a class="headerlink" href="#depth-of-field" title="Permalink to this headline">¶</a></h3>
+<p>真实世界的相机通过镜头传输光线，镜头将光束弯曲并聚焦到传感器上。因此，距离一定距离的物体会聚焦，但前后的物体会模糊不清。</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../_images/render_cameras_dof-bokeh.jpg"><img alt="../_images/render_cameras_dof-bokeh.jpg" src="../_images/render_cameras_dof-bokeh.jpg" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-text">成像范围散景效果的示例。</span></p>
+</div>
+<p>焦点区域称为焦点，可以使用精确值或使用摄像机与所物体之间的距离进行设置：</p>
+<dl class="docutils">
+<dt>焦点物体</dt>
+<dd>选择一个将确定焦点的秩。关联物体将停用距离参数。通常，这用于精确控制焦点的位置，并且还允许其被动画或约束到另一个物体。</dd>
+<dt>焦距</dt>
+<dd><p class="first">未指定焦点物体时设置到焦点的距离。如果启用了限制，则在此距离处的摄像机视线上会显示黄色十字。</p>
+<div class="last admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">将鼠标悬停在“ 距离”属性上，然后按E以使用特殊的“ 深度选择器”。然后单击3D视图中的一个点以采样从该点到相机的距离。</p>
+</div>
+</dd>
+</dl>
+<div class="section" id="aperture">
+<h4>光圈<a class="headerlink" href="#aperture" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>光圈数值</dt>
+<dd>光圈数值比率定义模糊量。较低的值会产生强烈的景深效果。</dd>
+<dt>刀片</dt>
+<dd>用于改变渲染中模糊物体形状的多边形刀片总数，以及渲染预览。与视口一样，启用散景效果的最小刀片数量为3，导致三角形模糊。</dd>
+<dt>旋转</dt>
+<dd>沿着面对轴旋转多边形刀片，并以顺时针和逆时针方式旋转。</dd>
+<dt>比率</dt>
+<dd>更改失真量以模拟变形散景效果。设置为1.0表示没有失真，低于1.0的数字将导致水平失真，数字越大则导致垂直失真。</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="camera">
+<span id="bpy-types-camera-sensor"></span><h3>相机<a class="headerlink" href="#camera" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>相机预设</dt>
+<dd>匹配真实相机的 <a class="reference internal" href="../interface/controls/templates/list_presets.html#ui-presets"><span class="std std-ref">预设</span></a> 。</dd>
+</dl>
+<dl class="docutils" id="render-camera-sensor-size">
+<dt>传感器尺寸</dt>
+<dd>此设置是控制焦距的另一种方法，将Blender中的相机与物理相机和镜头组合相匹配非常有用，例如用于 <a class="reference internal" href="../movie_clip/index.html"><span class="doc">运动跟踪</span></a>。</dd>
+<dt>传感器选择</dt>
+<dd>可选择控制视角适合的尺寸（垂直或水平）。</dd>
+</dl>
+</div>
+<div class="section" id="safe-areas">
+<span id="camera-safe-areas"></span><span id="bpy-ops-safe-areas"></span><span id="bpy-types-displaysafeareas"></span><h3>安全区域<a class="headerlink" href="#safe-areas" title="Permalink to this headline">¶</a></h3>
+<p>安全区域是用于定位元素的指南，以确保可以在所有屏幕上看到内容的最重要部分。</p>
+<p>不同的屏幕具有不同数量的 <a class="reference internal" href="../glossary/index.html#term-overscan"><span class="xref std std-term">过扫描</span></a> （尤其是较旧的电视机）。这意味着并非所有观看者都可以看到所有内容，因为未显示围绕边缘的部分图像。为了解决这个问题，电视制作人确定了两个保证内容可以显示的区域：安全操作尺寸和安全标题图像区域。</p>
+<p>具有纯数字信号的现代LCD /等离子屏幕没有 <a class="reference internal" href="../glossary/index.html#term-overscan"><span class="xref std std-term">过扫描</span></a> ，但安全区域仍被认为是最佳实践，并且可能在法律上需要广播。</p>
+<p>在Blender中，可以从相机和序列视图设置安全区域。</p>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../_images/render_cameras_safe-areas-main-BI.png"><img alt="../_images/render_cameras_safe-areas-main-BI.png" src="../_images/render_cameras_safe-areas-main-BI.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-text">红线：安全操作尺寸。绿线：安全标题图像区域</span></p>
+</div>
+<p>安全区域可以通过其外边距来定制，外边距是中心和渲染大小之间的区域的百分比。值在视频序列编辑器和摄像机视图之间共享。</p>
+<dl class="docutils">
+<dt>图形安全边距X / Y</dt>
+<dd>也称为图形安全。将所有重要信息（图形或文本）放在此区域内，以确保大多数观看者都能看到它。</dd>
+<dt>行动安全边距X / Y</dt>
+<dd>确保镜头中的任何重要动作或角色都在此区域内。该区域还可以作为屏幕的一种“边缘”，可以用来防止元素堆积在边缘上。</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">每个国家都设定了广播的法律标准。其中包括安全区域的具体值。安全区域的Blender默认值遵循EBU（欧盟）标准。在广播工作时确保使用正确的值以避免任何麻烦。</p>
+</div>
+<div class="section" id="center-cut-safe-areas">
+<h4>中心切割安全区域<a class="headerlink" href="#center-cut-safe-areas" title="Permalink to this headline">¶</a></h4>
+<p>中心切割是第二组安全区域，用于确保在具有不同宽高比的屏幕上正确显示内容。旧电视机接收16:9或21:9视频将切断两侧。将内容放置在中心切割区域内，以确保在这些屏幕中仍然可以看到合成中最重要的元素。</p>
+<p>Blender默认值显示（宽屏）4:3内的（方形）比率16:9。</p>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="../_images/render_cameras_safe-areas-cuts-BI.png"><img alt="../_images/render_cameras_safe-areas-cuts-BI.png" src="../_images/render_cameras_safe-areas-cuts-BI.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-text">青色线：行动中心安全区域。蓝线：标题中心安全区域。</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="background-images">
+<span id="bpy-types-camerabackgroundimage"></span><h3>背景图片<a class="headerlink" href="#background-images" title="Permalink to this headline">¶</a></h3>
+<p>在许多情况下，相机中的背景图片非常有用：建模显然是一个，但它在绘画时也很有用（例如，在直接在模型上绘制纹理时可以有面部参考图片......）或动画（使用时）视频作为背景）等.</p>
+<dl class="docutils">
+<dt>背景来源</dt>
+<dd><p class="first">背景图片的来源。</p>
+<dl class="last docutils">
+<dt>图片</dt>
+<dd>使用外部图像，图像序列，视频文件或生成的纹理。</dd>
+<dt>电影剪辑</dt>
+<dd>使用其中一个电影剪辑数据块。</dd>
+</dl>
+</dd>
+<dt>透明通道</dt>
+<dd>控制背景图像的透明度。</dd>
+<dt>深度</dt>
+<dd>选择图像是显示在所有物体后面还是显示在所有物体前面。</dd>
+<dt>框架模式</dt>
+<dd><p class="first">控制图像在摄像机视图中的放置方式。</p>
+<dl class="last docutils">
+<dt>伸展纵横比</dt>
+<dd>强制图像尺寸与相机边界匹配（可能会改变纵横比）。</dd>
+<dt>适合画布</dt>
+<dd>缩放图像以使其填满整个摄像机视图，但不会改变纵横比（某些图像将被裁剪）。</dd>
+<dt>裁剪</dt>
+<dd>缩放图像以使其填满整个摄像机视图，但不会改变纵横比（某些图像将被裁剪）。</dd>
+</dl>
+</dd>
+<dt>偏移X / Y</dt>
+<dd><p class="first">使用这些偏移定位背景图像。</p>
+<p class="last">在正交视图中，这是在正常场景单元中测量的。在摄像机视图中，这是相对于摄像机边界测量的（0.1将偏移视图宽度/高度的10％）。</p>
+</dd>
+<dt>旋转</dt>
+<dd>围绕中心旋转图像。</dd>
+<dt>比例</dt>
+<dd>从中心向上或向下缩放图像。</dd>
+<dt>水平翻转</dt>
+<dd>交换图像，使左侧现在在右侧，右侧现在在左侧。</dd>
+<dt>垂直翻转</dt>
+<dd>交换图像，使顶部现在位于底部，底部现在位于顶部。</dd>
+</dl>
+</div>
+<div class="section" id="viewport-display">
+<span id="bpy-types-camera-display-size"></span><span id="bpy-types-camera-show"></span><h3>视口显示<a class="headerlink" href="#viewport-display" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="../_images/render_cameras_display-view-BI.png"><img alt="../_images/render_cameras_display-view-BI.png" src="../_images/render_cameras_display-view-BI.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-text">相机视图显示安全区域，传感器和名称.</span></p>
+</div>
+<dl class="docutils">
+<dt>尺寸</dt>
+<dd>3D视图中摄像机可视化的大小。此设置对相机的渲染输出没有影响。还可以使用标准比例S变换键缩放相机可视化。</dd>
+<dt>范围</dt>
+<dd>显示一行，指示开始和结束剪辑值。</dd>
+<dt>薄雾</dt>
+<dd>切换打开和关闭雾限制。限制显示为摄像机视线上的两个连接的白点。雾的限制和其他选项在 <em>世界环境</em> 面板中的 <a class="reference internal" href="cycles/world_settings.html#render-cycles-integrator-world-mist"><span class="std std-ref">烟雾部分</span></a> 设置。</dd>
+<dt>传感器</dt>
+<dd>在摄像机视图中显示虚线框。</dd>
+<dt>名称</dt>
+<dd>在摄像机视图中打开和关闭名称显示。</dd>
+</dl>
+<div class="section" id="passepartout">
+<h4>边框<a class="headerlink" href="#passepartout" title="Permalink to this headline">¶</a></h4>
+<p>此选项会使摄像机视野外的区域变暗。</p>
+<dl class="docutils">
+<dt>透明通道</dt>
+<dd>控制边框遮罩的透明度。</dd>
+</dl>
+</div>
+<div class="section" id="composition-guides">
+<span id="bpy-types-camera-show-composition"></span><h4>合成指南<a class="headerlink" href="#composition-guides" title="Permalink to this headline">¶</a></h4>
+<p>合成指南可以覆盖到相机显示屏上，可以在构图时提供帮助。</p>
+<dl class="docutils">
+<dt>中心</dt>
+<dd>添加将框架垂直和水平分成两半的线条。</dd>
+<dt>中心对角线</dt>
+<dd>添加连接对角的线条。</dd>
+<dt>三分之二</dt>
+<dd>添加垂直和水平分隔三分之一帧的线条.</dd>
+<dt>黄金比例</dt>
+<dd>将宽度和高度分成黄金比例（框架四周大小约为0.618）。</dd>
+<dt>黄金三角A</dt>
+<dd>显示从左下角到右上角的对角线，然后添加穿过左上角和右下角的垂直线。</dd>
+<dt>黄金三角B</dt>
+<dd>与A相同，但有相反的角落。</dd>
+<dt>均衡三角A</dt>
+<dd>显示从左下角到右上角的对角线，然后是从左上角和右下角的线到0.618相对侧的长度。</dd>
+<dt>与A相同，但有相反的角落</dt>
+<dd>与A相同，但有相反的角落。</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lights/index.html" class="btn btn-neutral float-right" title="Lights" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="workbench/sampling.html" class="btn btn-neutral float-left" title="采样" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

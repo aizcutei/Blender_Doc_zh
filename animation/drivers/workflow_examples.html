@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devanimation/drivers/workflow_examples.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/drivers/workflow_examples.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="问题排查" href="troubleshooting.html" />
@@ -94,21 +113,26 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画 &amp; 绑定</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/index.html">骨架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lattice.html">Lattice 晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../constraints/index.html">约束</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../actions.html">动作</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">驱动器</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html">Usage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="drivers_panel.html">驱动器面板</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">工作流程 &amp; 范例</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#workflow">工作流程</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#examples">范例</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#drivers-and-multiple-relative-shape-keys">驱动器和多重相关形态键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transform-driver">变换驱动器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scripted-expression-orbit-a-point">Scripted Expression - Orbit a Point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-function-square-value">Custom Function - Square Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shape-key-drivers">Shape Key Drivers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="troubleshooting.html">问题排查</a></li>
@@ -122,10 +146,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -176,7 +201,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">动画</a> &raquo;</li>
+          <li><a href="../index.html">动画 &amp; 绑定</a> &raquo;</li>
         
           <li><a href="index.html">驱动器</a> &raquo;</li>
         
@@ -201,213 +226,302 @@
             
   <div class="section" id="workflow-examples">
 <h1>工作流程 &amp; 范例<a class="headerlink" href="#workflow-examples" title="Permalink to this headline">¶</a></h1>
-<p>这里有几个驱动器范例和工作流程。</p>
-<div class="section" id="workflow">
-<h2>工作流程<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>Simple Drivers can be configured from the pop-over that appears when adding a new Driver.</p>
+<p>When adding multiple Drivers or for more advanced configurations,
+it is useful to have open the <a class="reference internal" href="../../editors/drivers_editor.html"><span class="doc">Drivers Editor</span></a>.</p>
 <div class="section" id="transform-driver">
-<h3>变换驱动器<a class="headerlink" href="#transform-driver" title="Permalink to this headline">¶</a></h3>
-<p>这个例子展示了如何建立一个变换驱动器。首先确保你用的是正交前视图。 <kbd class="kbd docutils literal notranslate">Numpad5</kbd>, <kbd class="kbd docutils literal notranslate">Numpad1</kbd>.</p>
+<h2>变换驱动器<a class="headerlink" href="#transform-driver" title="Permalink to this headline">¶</a></h2>
+<p>Control a property with an object's transform.
+In this example, the Y rotation of Object 2 will be driven by the X position of Object 1.</p>
+<p>Starting from a simple setup with two objects:</p>
+<ol class="arabic">
+<li><p class="first">Add a Driver to the <em>Rotation Y</em> property of the second object via the context menu or with <kbd class="kbd docutils literal notranslate">Ctrl-D</kbd>.</p>
+<div class="figure">
+<img alt="../../_images/animation_drivers_workflow-examples_transform-driver-1.png" src="../../_images/animation_drivers_workflow-examples_transform-driver-1.png" />
+</div>
+</li>
+<li><p class="first">Open the <em>Drivers Editor</em> and select the <em>Y Euler Rotation</em> property in the channels region.</p>
+</li>
+<li><p class="first">Open the Sidebar region and select the <em>Drivers</em> tab.</p>
+</li>
+<li><p class="first">Configure the driver to be the <em>Averaged Value</em> of a <em>Transform Channel</em> of the first object.</p>
+<div class="figure">
+<img alt="../../_images/animation_drivers_workflow-examples_transform-driver-2.png" src="../../_images/animation_drivers_workflow-examples_transform-driver-2.png" />
+</div>
+</li>
+<li><p class="first">Experiment with moving the first object and notice how it affects the Y rotation of the second object.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="scripted-expression-orbit-a-point">
+<h2>Scripted Expression - Orbit a Point<a class="headerlink" href="#scripted-expression-orbit-a-point" title="Permalink to this headline">¶</a></h2>
+<p>Orbit an object's position around a point with a custom <em>Scripted Expression</em>.
+The object's position will change when scrubbing the timeline.</p>
+<p>Using trigonometry, circular motion can be defined in 2D using the sinus and cosine functions.
+(See <a class="reference external" href="https://en.wikipedia.org/wiki/Unit_circle">Unit Circle</a>.)</p>
+<p>In this example, the current frame is used as the variable that induces the motion.
+<code class="docutils literal notranslate"><span class="pre">frame</span></code> is a <a class="reference internal" href="drivers_panel.html#drivers-simple-expressions"><span class="std std-ref">Simple Expression</span></a> that corresponds to
+<code class="docutils literal notranslate"><span class="pre">bpy.context.scene.frame_current</span></code>.</p>
+<div class="figure">
+<img alt="../../_images/animation_drivers_workflow-examples_object-rotation.png" src="../../_images/animation_drivers_workflow-examples_object-rotation.png" />
+</div>
 <ol class="arabic simple">
-<li><p>在物体模式，选择并复制默认立方体。 <kbd class="kbd docutils literal notranslate">Shift-D</kbd> ，将 &quot;Cube.001&quot; 移到一边。</p></li>
-<li><p>选中 &quot;Cube.001&quot; ，对 <em>旋转 Y</em> 属性添加单个驱动器。</p></li>
-<li><p>打开 <em>曲线编辑器</em> ，设置模式为 <em>驱动器</em>。</p></li>
-<li><p>禁用图中绿框标记的 <em>仅显示选中</em> 按钮。</p></li>
-<li><p>在通道区域，选择 <em>Y欧拉旋转</em> 属性。</p></li>
-<li><p>按下 <kbd class="kbd docutils literal notranslate">N</kbd> 打开属性区块，向下滚动到驱动器面板。</p></li>
-<li><p>修改 <em>类型</em> 为 <em>平均化值</em> ，这将返回所有驱动器变量的平均值。</p></li>
-<li><p>修改驱动器变量设置：</p>
-<ul class="simple">
-<li><p>类型 -- 变换</p></li>
-<li><p>物体 -- Cube</p></li>
-<li><p>变换类型 -- X 位移</p></li>
-<li><p>变换空间 -- 世界空间</p></li>
+<li>Add a driver to the X Location property.<ol class="arabic">
+<li>Set the <em>Driver Type</em> to <em>Scripted Expression</em>.</li>
+<li>Add the expression <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">+</span> <span class="pre">(sin(frame</span> <span class="pre">/</span> <span class="pre">8)</span> <span class="pre">*</span> <span class="pre">4)</span></code>, where:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">frame/8</span></code> : is the current frame of the animation, divided by 8 to slow the orbit down.</li>
+<li><code class="docutils literal notranslate"><span class="pre">(sin(</span> <span class="pre">)*4)</span></code> : multiplies the result of <code class="docutils literal notranslate"><span class="pre">sin(frame/8)</span></code> by 4 for a bigger circle.</li>
+<li><code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">+</span></code> : is used to control the offset to the orbit center point.</li>
 </ul>
 </li>
 </ol>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
-<img alt="../../_images/animation_drivers_workflow-examples_transform-driver-1.png" src="../../_images/animation_drivers_workflow-examples_transform-driver-1.png" />
+</li>
+<li>Add a driver to the Y Location property with the expression <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">+</span> <span class="pre">(cos(frame</span> <span class="pre">/</span> <span class="pre">8)</span> <span class="pre">*</span> <span class="pre">4)</span></code>.</li>
+<li>Scrub the timeline to see the effect.
+Experiment with the variables to control the size and center of the orbit.</li>
+</ol>
 </div>
-</td>
-<td><div class="figure align-center">
-<img alt="../../_images/animation_drivers_workflow-examples_transform-driver-2.png" src="../../_images/animation_drivers_workflow-examples_transform-driver-2.png" />
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-<p>结束之后，从左向右移动 &quot;Cube&quot;时，&quot;Cube.001&quot; 会绕Y轴旋转。</p>
-</div>
-</div>
-<div class="section" id="examples">
-<h2>范例<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="driver-expression">
-<h3>驱动器表达式<a class="headerlink" href="#driver-expression" title="Permalink to this headline">¶</a></h3>
-<p>这里是一些使用脚本表达式设置驱动器值的范例。</p>
-<div class="figure align-center" id="id1">
-<img alt="../../_images/animation_drivers_workflow-examples_object-rotation.png" src="../../_images/animation_drivers_workflow-examples_object-rotation.png" />
-<p class="caption"><span class="caption-text">物体旋转。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="orbit-a-point">
-<h4>环绕一个点<a class="headerlink" href="#orbit-a-point" title="Permalink to this headline">¶</a></h4>
-<p>这里对立方体的X位移和Y位移分别添加驱动器。</p>
-<p>使用脚本表达式设置物体位置。</p>
-<dl class="simple">
-<dt>X位移表达式</dt><dd><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">+</span> <span class="pre">(sin(frame</span> <span class="pre">/</span> <span class="pre">8)</span> <span class="pre">*</span> <span class="pre">4)</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">(frame/8)</span></code> : 表示当前动画帧除以8，降低环绕速度。 <code class="docutils literal notranslate"><span class="pre">(sin(</span> <span class="pre">)*4)</span></code> : 返回 (frame/8)的正弦值，再乘以4，放大环绕半径。 <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">+</span></code> : 用于控制环绕时 X 位移偏移量。</p>
-</dd>
-</dl>
-</dd>
-<dt>Y位移表达式</dt><dd><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">+</span> <span class="pre">(cos(frame</span> <span class="pre">/</span> <span class="pre">8)</span> <span class="pre">*</span> <span class="pre">4)</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">(frame/8)</span></code> : 表示当前动画帧除以8，降低环绕速度。 <code class="docutils literal notranslate"><span class="pre">(cos(</span> <span class="pre">)*4)</span></code> : 返回 (frame/8)的余弦值，再乘以4，放大环绕半径。 <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">+</span></code> : 用于控制环绕时 Y 位移偏移量。</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p><code class="docutils literal notranslate"><span class="pre">frame</span></code> 与 bpy.context.scene.frame_current 等价。</p>
-</div>
-<div class="section" id="driver-namespace">
-<h4>驱动器命名空间<a class="headerlink" href="#driver-namespace" title="Permalink to this headline">¶</a></h4>
-<p>内置的驱动器函数和属性是一个列表。可以使用Python控制台显示出来:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bpy</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">driver_namespace</span><span class="p">[</span><span class="s1">&#39;</span>
-<span class="go">                              __builtins__&#39;]</span>
-<span class="go">                              __doc__&#39;]</span>
-<span class="go">                              __loader__&#39;]</span>
-<span class="go">                              __name__&#39;]</span>
-<span class="go">                              __package__&#39;]</span>
+<div class="section" id="custom-function-square-value">
+<span id="driver-namespace"></span><h2>Custom Function - Square Value<a class="headerlink" href="#custom-function-square-value" title="Permalink to this headline">¶</a></h2>
+<p>Create a custom function to get the square of a value (i.e. <em>value</em><sup>2</sup>).
+Adding the function to the <em>Driver Namespace</em> allows it to be used from driver expressions.</p>
+<p>The <em>Driver Namespace</em> has a list of built-in functions for use in driver expressions,
+as well as constants such as π and e.
+These can be inspected via the Python Console:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bpy</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">driver_namespace</span><span class="p">[</span><span class="s1">&#39; &lt;tab&gt;</span>
 <span class="go">                              acos&#39;]</span>
 <span class="go">                              acosh&#39;]</span>
 <span class="go">                              asin&#39;]</span>
 <span class="go">                              asinh&#39;]</span>
 <span class="go">                              atan&#39;]</span>
-<span class="go">                              atan2&#39;]</span>
-<span class="go">                              atanh&#39;]</span>
-<span class="go">                              bpy&#39;]</span>
-<span class="go">                              ceil&#39;]</span>
-<span class="go">                              copysign&#39;]</span>
-<span class="go">                              cos&#39;]</span>
-<span class="go">                              cosh&#39;]</span>
-<span class="go">                              ..</span>
+<span class="go">                              ...</span>
 </pre></div>
 </div>
-<p>下面的脚本用于添加一个函数到驱动器命名空间，接下来可以在表达式中使用 <code class="docutils literal notranslate"><span class="pre">driver_func(frame)</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bpy</span>
+<p>To add a new function to the <em>Driver Namespace</em>, the function itself needs to be implemented
+and then added to the <code class="docutils literal notranslate"><span class="pre">bpy.app.driver_namespace</span></code>.</p>
+<ol class="arabic">
+<li><p class="first">Add the following to the Text Editor inside Blender and press <em>Run Script</em>.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bpy</span>
 
-<span class="k">def</span> <span class="nf">driver_func</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">val</span> <span class="o">*</span> <span class="n">val</span>    <span class="c1"># return val squared</span>
+<span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+   <span class="sd">&quot;&quot;&quot;Returns the square of the given value&quot;&quot;&quot;</span>
+   <span class="k">return</span> <span class="n">val</span> <span class="o">*</span> <span class="n">val</span>
 
-<span class="c1"># add function to driver_namespace</span>
-<span class="n">bpy</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">driver_namespace</span><span class="p">[</span><span class="s1">&#39;driver_func&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">driver_func</span>
+<span class="c1"># Add function to driver_namespace.</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">driver_namespace</span><span class="p">[</span><span class="s1">&#39;square&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">square</span>
 </pre></div>
 </div>
+</li>
+<li><p class="first">Add a driver with a <em>Scripted Expression</em> such as <code class="docutils literal notranslate"><span class="pre">square(frame)</span></code>.</p>
+</li>
+<li><p class="first">Observe the effect when scrubbing the timeline.</p>
+</li>
+</ol>
+<p>There are more custom function examples available in Blender's Text Editor
+<span class="menuselection">Templates ‣ Python ‣ Driver Functions</span>.</p>
 </div>
-<div class="section" id="shape-key-driver">
-<h4>形态键驱动器<a class="headerlink" href="#shape-key-driver" title="Permalink to this headline">¶</a></h4>
-<p>这是一个形态键驱动器的范例，即对形态键数值添加驱动器。</p>
-<div class="figure align-center" id="id2">
-<a class="reference internal image-reference" href="../../_images/animation_drivers_workflow-examples_shape-key.png"><img alt="../../_images/animation_drivers_workflow-examples_shape-key.png" src="../../_images/animation_drivers_workflow-examples_shape-key.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">形态键驱动器。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<div class="section" id="shape-key-drivers">
+<span id="shapekey-driver-example"></span><h2>Shape Key Drivers<a class="headerlink" href="#shape-key-drivers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="improved-mesh-deformation">
+<h3>Improved Mesh Deformation<a class="headerlink" href="#improved-mesh-deformation" title="Permalink to this headline">¶</a></h3>
+<p>Fix intersection problems that happen when using armatures and weight painting, specially at joints.
+Shape keys can also be used to tweak and refine a rig, for example to suggest muscle formations.
+In this example, a shape key is used to improve the deformation at the elbow of a rudimentary arm.</p>
+<div class="figure" id="id1">
+<img alt="../../_images/animation_drivers_workflow-examples_shape-key_improved_deformation.png" src="../../_images/animation_drivers_workflow-examples_shape-key_improved_deformation.png" />
+<p class="caption"><span class="caption-text">Left: Skeletal mesh deformation without correction.
+Right: Corrective shape key applied</span></p>
 </div>
-<p>该例子使用骨架的骨骼 &quot;b&quot; 的Z旋转控制形态键数值。骨骼旋转模式设置为XYZ欧拉。</p>
-<p>驱动器函数曲线映射如下：</p>
-<ul class="simple">
-<li><p>骨骼Z旋转 0.0 (0.0): 形态键数值 0.0</p></li>
-<li><p>骨骼Z旋转 -2.09 (-120.0): 形态键数值 1.0</p></li>
-</ul>
-<p>这种类型的驱动器还可以使用旋转差值变量类型设置。</p>
-<p>更多信息参考 <a class="reference internal" href="../shape_keys/index.html"><span class="doc">形态键</span></a> 。</p>
+<dl class="docutils">
+<dt>Setup</dt>
+<dd><ol class="first arabic simple">
+<li>Add a mesh (in this example, a cylinder with loop cuts).</li>
+<li>Add an armature with a chain of bones.</li>
+<li>Skin the mesh to the armature using weight painting.</li>
+</ol>
+<p class="last">(Note: to parent the mesh to the armature: select the mesh first,
+then the armature and use <kbd class="kbd docutils literal notranslate">Ctrl-P</kbd> to parent with auto weights.)</p>
+</dd>
+</dl>
+<p>Experiment with posing the armature and observe the deformation at the joint.
+To fix intersection problems or angles that look unsatisfactory,
+you can associate a <a class="reference internal" href="../shape_keys/index.html"><span class="doc">Shape Key</span></a> with a pose.</p>
+<dl class="docutils">
+<dt>Shape Key</dt>
+<dd><ol class="first last arabic simple">
+<li>Pose the armature such that the problems are visible.
+Be sure to cover the extreme poses that you want to support for the rig.</li>
+<li>With the mesh selected, add a new <em>Shape Key</em> in addition to the <em>Basis</em> key.
+<span class="menuselection">Properties ‣ Mesh tab ‣ Shape Keys</span></li>
+<li>In order to author the shape key on top of the armature deformation,
+enable both <em>Edit Mode Display</em> and <em>Cage Editing</em> in the armature modifier.
+<span class="menuselection">Properties ‣ Modifiers tab ‣ Armature Modifier ‣ Header</span></li>
+<li>Enter Edit Mode and select the new shape key in the properties panel.
+Adjust the vertices as desired.
+Select the <em>Basis</em> key to toggle between the original mesh and your edits.
+(Note: be careful to apply edits only to your shape and not to
+the original mesh or other existing keys.)</li>
+</ol>
+</dd>
+</dl>
+<p>Once you are satisfied with how the deformation looks for the problematic pose,
+you'll need to configure a driver to activate the shape smoothly when entering that position.</p>
+<dl class="docutils">
+<dt>Driver</dt>
+<dd><ol class="first arabic simple">
+<li>Add a driver to the <em>Value</em> of the shape key you've created.</li>
+<li>Open the Drivers Editor and select the driver.</li>
+</ol>
+<dl class="last docutils">
+<dt>Method 1 -- Direct mapping to a bone rotation value</dt>
+<dd><p class="first">A simple way to configure the driver is with a direct correspondence of
+the value of a bone's rotation channel to the shape key activation <em>Value</em>.
+This method has the disadvantage of relying on a single channel of a bone's
+rotation which might be insufficient to precisely express the condition
+under which the shape key should be activated.</p>
+<ol class="last arabic">
+<li><p class="first">In the Drivers tab, select the <em>Averaged Value</em> of the rotation of
+the bone you're posing.</p>
+<p>Understand the rotation axis that you're interested in by enabling axes display
+in the armature or by observing the bone's transform values in the Properties.</p>
+<p>Select the rotation channel and set it to local, meaning, the bone's
+rotation value relative to its parent bone.</p>
+<div class="figure">
+<img alt="../../_images/animation_drivers_workflow-examples_shape-key_method1.png" src="../../_images/animation_drivers_workflow-examples_shape-key_method1.png" />
 </div>
+</li>
+<li><p class="first">Manually set points in the driver curve by selecting a handle and
+dragging it or inserting values in the <em>F-Curve</em> tab.
+The Y axis represents the shape key <em>Value</em>, which should go from 0.0 to 1.0.
+The X axis is usually the frame, but for this driver it represents the rotation value in radians.
+You can have more than two points in the curve and tweak the transitions
+with the handles in the curve view (<kbd class="kbd docutils literal notranslate">G</kbd> to move).</p>
+</li>
+<li><p class="first">To verify that the driver behaves correctly, deselect the option to
+only show drivers for selected objects. This way, you can pose the armature
+and keep an eye on the driver.</p>
+</li>
+</ol>
+</dd>
+<dt>Method 2 -- Rotational difference to a target bone</dt>
+<dd><p class="first">This method requires an additional <em>target</em> or <em>corrective</em> bone, but it
+better expresses the spatial condition in 3D space of the bone that is
+causing the problem.</p>
+<ol class="last arabic">
+<li><p class="first">In armature Edit Mode, add a new bone extruded from Bone 1,
+in the position at which Bone 2 should have the shape key active.
+This type of bones usually follow a naming convention such as
+&quot;TAR-&quot; (target) or &quot;COR-&quot; (corrective).</p>
+</li>
+<li><p class="first">In the Drivers tab, select the <em>Averaged Value</em> of the rotational difference
+between the bone you're rotating and the target bone.
+A rotational difference is the minimum angle between two objects in World Space.
+It is therefore important that the bones have the same root,
+so that the only thing affecting the angle between the bones is the rotation of one of them.
+When the deformation bone (Bone 2) reaches the target rotation (TAR-Bone 2)
+the rotational difference will be 0°.</p>
+<div class="figure">
+<img alt="../../_images/animation_drivers_workflow-examples_shape-key_method2.png" src="../../_images/animation_drivers_workflow-examples_shape-key_method2.png" />
 </div>
+</li>
+<li><p class="first">Manually adjust the driver curve handles so that the shape key <em>Value</em>
+(Y axis) is 1.0 when the rotational difference (X axis) is 0°.
+The <em>Value</em> should be 0.0 when the arm is extended, at which point
+the rotational difference should be around 90° or more (in radians).</p>
+</li>
+<li><p class="first">See the steps in Method 1 on how to adjust the curve handles and
+confirm that the functionality is working. Pose the armature to
+verify that the ranges are correct.</p>
+</li>
+</ol>
+</dd>
+</dl>
+</dd>
+</dl>
 </div>
-<div class="section" id="drivers-and-multiple-relative-shape-keys">
-<h2>驱动器和多重相关形态键<a class="headerlink" href="#drivers-and-multiple-relative-shape-keys" title="Permalink to this headline">¶</a></h2>
-<p>下面的屏幕截图展示了结合形态键，骨骼和驱动器，来制作共用基型的多重链状相关形态键。尽管这样没有使用绝对形态键的单一时间计算来的方便，但却可以做出更复杂的形态键关系。</p>
-<table class="docutils align-center">
+<div class="section" id="chained-relative-shape-keys">
+<h3>Chained Relative Shape Keys<a class="headerlink" href="#chained-relative-shape-keys" title="Permalink to this headline">¶</a></h3>
+<p>Activate different shape keys in succession.
+In this example, moving a single bone will activate first <em>Key 1</em> and then <em>Key 2</em>.
+See also <a class="reference internal" href="../shape_keys/introduction.html#animation-shapekeys-relative-vs-absolute"><span class="std std-ref">relative shape keys mix additively</span></a>.</p>
+<dl class="docutils">
+<dt>Shape Keys</dt>
+<dd>Add two shape keys to a mesh, besides the <em>Basis</em>.</dd>
+</dl>
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id3">
-<a class="reference internal image-reference" href="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-shape-base.png"><img alt="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-shape-base.png" src="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-shape-base.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">Basis 形态键。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id2">
+<a class="reference internal image-reference" href="../../_images/animation_drivers_workflow-examples_chained-shape-keys_basis.png"><img alt="../../_images/animation_drivers_workflow-examples_chained-shape-keys_basis.png" src="../../_images/animation_drivers_workflow-examples_chained-shape-keys_basis.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Basis</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id4">
-<a class="reference internal image-reference" href="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-shape-1.png"><img alt="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-shape-1.png" src="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-shape-1.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">Key1 形态键。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<td><div class="first last figure" id="id3">
+<a class="reference internal image-reference" href="../../_images/animation_drivers_workflow-examples_chained-shape-keys_key1.png"><img alt="../../_images/animation_drivers_workflow-examples_chained-shape-keys_key1.png" src="../../_images/animation_drivers_workflow-examples_chained-shape-keys_key1.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Key 1: top faces moved up by 1m</span></p>
 </div>
 </td>
-</tr>
-<tr class="row-even"><td><div class="figure align-center" id="id5">
-<a class="reference internal image-reference" href="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-shape-2a.png"><img alt="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-shape-2a.png" src="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-shape-2a.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">Key2A 形态键。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</div>
-</td>
-<td><div class="figure align-center" id="id6">
-<a class="reference internal image-reference" href="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-shape-2b.png"><img alt="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-shape-2b.png" src="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-shape-2b.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">Key2B 形态键。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../_images/animation_drivers_workflow-examples_chained-shape-keys_key2.png"><img alt="../../_images/animation_drivers_workflow-examples_chained-shape-keys_key2.png" src="../../_images/animation_drivers_workflow-examples_chained-shape-keys_key2.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Key 2: inner top moved up by 1m</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
-<p>作为基型的形态键的挤出面完全缩回，Key1的基底完全挤出，Key2A挤出左侧凸起，Key2B挤出右侧凸起。Key2A和2B都和Key1相关(如右下角的形态键面板所见)。</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id7">
-<a class="reference internal image-reference" href="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-key1.png"><img alt="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-key1.png" src="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-key1.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">Key1需要处理来自两个骨骼的数值冲突。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<dl class="docutils">
+<dt>Drivers</dt>
+<dd><p class="first">Add an armature with a single bone to control the shape keys.
+The goal is to activate the keys in succession as this bone moves up.</p>
+<div class="figure">
+<img alt="../../_images/animation_drivers_workflow-examples_chained-shape-keys_result.png" src="../../_images/animation_drivers_workflow-examples_chained-shape-keys_result.png" />
 </div>
-</td>
-<td><div class="figure align-center" id="id8">
-<a class="reference internal image-reference" href="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-key2a.png"><img alt="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-key2a.png" src="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-key2a.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">Key2A有不同的生成器系数，所以会在骨骼的另外一段位置范围内才被激活。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p>As shown in the picture above, when the bone is halfway up, both <em>Key 1</em> and <em>Key 2</em> have an influence.
+It is a matter of preference if <em>Key 1</em> should be at its maximum <em>Value</em> before <em>Key 2</em> starts to become active,
+or how much they should overlap. This example shows a seamless blend.</p>
+<p>For a seamless blend where there is overlap, <em>Key 1</em> should have a <em>Value</em> of 0.0 when the bone
+is at the bottom and increase linearly to 1.0 until the bone is past the midpoint height.
+<em>Key 2</em> should have a value of 0.0 before the midpoint height and then increase at the same
+rate than <em>Key 1</em> until reaching <em>Value</em> 1.0 when the bone is at maximum height.</p>
+<ol class="last arabic">
+<li><p class="first">Add a driver to the <em>Value</em> of <em>Key 1</em> and <em>Key 2</em>.
+In the <em>Drivers</em> tab, configure both drivers to be the <em>Averaged Value</em> of
+a variable with the bone's Z location.</p>
+</li>
+<li><p class="first">Determine the range of the bone's motion in the World Z axis by moving it up so that it is
+aligned with the top of the mesh when both keys are active. Here we will use [0.0 , 2.5].</p>
+</li>
+<li><p class="first">Configure the driver functions so that the <em>Value</em> of the shape keys (Y axis) is as
+desired for the bone's height (X axis).</p>
+<p>The driver functions should be linear, therefore, they can be defined analytically
+with a function of type <span class="math notranslate nohighlight">\(y = a + bx\)</span>,
+where <span class="math notranslate nohighlight">\(a\)</span> is an offset in <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(b\)</span> is the slope.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">In the <em>Modifiers</em> tab, add a <em>Generator</em> of type <em>Extended Polynomial</em> for both drivers.</p>
+</li>
+<li><p class="first">Play with the values of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> so that the curves go from [0.0 , 1.0]
+in the Y axis and from [0.0 , 2.5] in the X axis.
+The curves should overlap in the mid area of the X axis and they should have the same slope (<span class="math notranslate nohighlight">\(b\)</span>).</p>
+<p>Possible values are <em>Key 1</em>: <span class="math notranslate nohighlight">\(y = 0.0 + 0.6x\)</span> and <em>Key 2</em>: <span class="math notranslate nohighlight">\(y = -0.5 + 0.6x\)</span>.</p>
+<div class="figure">
+<img alt="../../_images/animation_drivers_workflow-examples_chained-shape-keys_driver-setup.png" src="../../_images/animation_drivers_workflow-examples_chained-shape-keys_driver-setup.png" />
 </div>
-</td>
-<td><div class="figure align-center" id="id9">
-<a class="reference internal image-reference" href="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-key2b.png"><img alt="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-key2b.png" src="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-key2b.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">Key2B和Key2A类似，但是被第二根骨骼控制。</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p>Note that the functions go outside the range [0.0 , 1.0] for the shape keys' <em>Value</em>,
+but that has no effect because <em>Value</em> is clamped in a <em>Range</em> in the <em>Shape Keys</em> panel.</p>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</dd>
+</dl>
 </div>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Key1的值通过一个包含两个变量的驱动器，与两个骨骼的位置属性绑定。每一个变量使用的都是骨骼的全局Z坐标，然后取最大值决定基底的挤出量。多项式生成器用于使基底的上表面与骨骼对齐。</p>
-<p>Key2A的值与 <code class="docutils literal notranslate"><span class="pre">Bone.L</span></code> 的位置绑定。生成器的参数使得当Key1的值增加到1时，Key2A 才开始从0增长。这样的话，左侧凸起顶部会与 bone.L 一起移动(基本上)。</p>
-<p>Key2B的值与 <code class="docutils literal notranslate"><span class="pre">Bone.R</span></code> 的位置绑定。它的生成参数和Key2A类似，右边的凸起会随着bone.R一起移动(基本上)。</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id10">
-<a class="reference internal image-reference" href="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-retracted.png"><img alt="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-retracted.png" src="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-retracted.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">当骨骼所有骨骼调低时，Key2B 和 Key2A 不被激活，Key1处于低影响。</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
-</td>
-<td><div class="figure align-center" id="id11">
-<a class="reference internal image-reference" href="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-extended.png"><img alt="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-extended.png" src="../../_images/animation_drivers_workflow-examples_for-multiple-shape-keys-extended.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">Extended.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-<p>由于bone.L 和 bone.R很容易出现位置差异，这意味着Key1的值会导致冲突，有时骨骼无法与对应的凸起对齐。如果Key1的驱动器使用平均值或最小值，而非最大值，来确定形变键的值， bone.L 和 bone.R 的“冲突”则会断然不同。用户可以视动画需求进行选择。</p>
-<iframe src="https://player.vimeo.com/video/173408647" style="border: 0; height: 345px; width: 560px">
-</iframe></div>
 </div>
 
 

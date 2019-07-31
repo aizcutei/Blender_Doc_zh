@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/editing/subdividing/subdivide.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/subdividing/subdivide.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="环切细分" href="loop.html" />
@@ -94,14 +113,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/index.html">基础</a></li>
@@ -109,6 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../edges.html">边工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../faces.html">面工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../uv/index.html">UV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../transform/index.html">变形</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../duplicating/index.html">复制</a></li>
 <li class="toctree-l4 current"><a class="reference internal" href="index.html">细分</a></li>
@@ -119,7 +140,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../mesh_display.html">网格显示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
 </ul>
 </li>
@@ -131,16 +151,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -221,147 +242,151 @@
   <div class="section" id="subdivide">
 <span id="bpy-ops-mesh-subdivide"></span><h1>细分<a class="headerlink" href="#subdivide" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 网格工具 ‣ 添加: 细分</span></p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">网格 ‣ 边 ‣ 细分</span>, <span class="menuselection">专用项 ‣ 细分/平滑细分</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ Mesh Tools ‣ Add: Subdivide</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 边 ‣ 细分</span>, <span class="menuselection">专用项 ‣ 细分/平滑细分</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>细分工具将边和面切为两半或更多，添加新的顶点，并细分对应相关面。它通过将面和边切割为更小的单元，来增加分辨率。</p>
 <p>该过程根据设置的不同，遵循一些规则:</p>
 <ul class="simple">
-<li><p>当仅选中一个面的一条边时(三角模式)，三角面会细分为两个三角面，四边形细分为三个三角面。</p></li>
-<li><p>当一个面的两条边被选中时：</p>
-<ul>
-<li><p>如果该面是三角面，两个新顶点以一条边相连，将该三角形细分为一个三角形和一个四边形。</p></li>
-<li><p>如果该面是四边形，且这两条边是相邻边，根据 <em>边角类型</em> 设置(位于 <em>细分</em> 的操作面板)不同，会有 <em>三种</em> 可能的结果，详情见下文。</p></li>
-<li><p>如果该面是四边形，且这两条边是相对的，两个新顶点以一条边相连，将其细分为两个四边形。</p></li>
+<li>当仅选中一个面的一条边时(三角模式)，三角面会细分为两个三角面，四边形细分为三个三角面。</li>
+<li>当一个面的两条边被选中时：<ul>
+<li>如果该面是三角面，两个新顶点以一条边相连，将该三角形细分为一个三角形和一个四边形。</li>
+<li>如果该面是四边形，且这两条边是相邻边，根据 <em>边角类型</em> 设置(位于 <em>细分</em> 的操作面板)不同，会有 <em>三种</em> 可能的结果，详情见下文。</li>
+<li>如果该面是四边形，且这两条边是相对的，两个新顶点以一条边相连，将其细分为两个四边形。</li>
 </ul>
 </li>
-<li><p>当一个面的三条边被选中时：</p>
-<ul>
-<li><p>如果该面是三角面，这意味着该三角形将补细分为四个更小的三角形。</p></li>
-<li><p>如果该面是四边形，相对的两条边将以上文方式细分。然后，&quot;中间&quot; 的边经细分后，将如上文中仅选中一条边的情形一样影响新的 &quot;小四边形&quot;。</p></li>
+<li>当一个面的三条边被选中时：<ul>
+<li>如果该面是三角面，这意味着该三角形将补细分为四个更小的三角形。</li>
+<li>如果该面是四边形，相对的两条边将以上文方式细分。然后，&quot;中间&quot; 的边经细分后，将如上文中仅选中一条边的情形一样影响新的 &quot;小四边形&quot;。</li>
 </ul>
 </li>
-<li><p>当一个面(四边形)的四条边都被选中，该面将被细分为四个更小的四边形。</p></li>
+<li>当一个面(四边形)的四条边都被选中，该面将被细分为四个更小的四边形。</li>
 </ul>
 <div class="section" id="options">
 <h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <p>运行该工具后， <em>工具面板</em> 将呈现以下选项;</p>
-<dl>
-<dt>切割次数</dt><dd><p>指定每条边的切割次数。默认为1，切为两等份。数值2表示切割为三等分，以此类推。</p>
-</dd>
-<dt>平滑度</dt><dd><p>转换细分结果，获得近似曲度。效果类似表面细分修改器。</p>
-<table class="docutils align-center">
+<dl class="docutils">
+<dt>切割次数</dt>
+<dd>指定每条边的切割次数。默认为1，切为两等份。数值2表示切割为三等分，以此类推。</dd>
+<dt>平滑度</dt>
+<dd><p class="first">转换细分结果，获得近似曲度。效果类似表面细分修改器。</p>
+<table border="1" class="last docutils">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_smooth-before.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_smooth-before.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_smooth-before.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">细分前网格。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">细分前网格。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id2">
+<td><div class="first last figure" id="id2">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_smooth-none.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_smooth-none.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_smooth-none.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">不加平滑的细分。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">不加平滑的细分。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id3">
+<td><div class="first last figure" id="id3">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_smooth-after.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_smooth-after.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_smooth-after.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">平滑度为1的细分结果。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">平滑度为1的细分结果。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt>四边面/三角面模式</dt><dd><p>强制细分为三角面或四边形，而非多边形(见下文范例)。该模式不能与 <em>直接切分</em> 边角类型同时使用。</p>
-</dd>
-<dt>四边面角类型</dt><dd><p>该菜单用于控制仅有两条相邻边被选中的四边形的细分方式。</p>
-<dl class="simple">
-<dt>扇形</dt><dd><p>将四边形细分为四个三角形组成的扇形，公共顶点为两选中边的对角顶点。</p>
-</dd>
-<dt>内侧顶点</dt><dd><p>细分选中边，并且以两个新顶点创建一条边，生成一个小三角形。再细分新创建的边，<em>内侧顶点</em> 与对角顶点相连，细分结果为一个三角形+两个四边形。</p>
-</dd>
-<dt>路径</dt><dd><p>首先连接选中边的对角端点，将该四边形细分成两个三角形，然后连接细分顶点。</p>
-</dd>
-<dt>直接切分</dt><dd><p>细分选中边，在新的顶点之间创建一条边，生成一个小三角形加一个多边形。</p>
-</dd>
+<dt>四边面/三角面模式</dt>
+<dd>强制细分为三角面或四边形，而非多边形(见下文范例)。该模式不能与 <em>直接切分</em> 边角类型同时使用。</dd>
+<dt>四边面角类型</dt>
+<dd><p class="first">该菜单用于控制仅有两条相邻边被选中的四边形的细分方式。</p>
+<dl class="docutils">
+<dt>扇形</dt>
+<dd>将四边形细分为四个三角形组成的扇形，公共顶点为两选中边的对角顶点。</dd>
+<dt>内侧顶点</dt>
+<dd>细分选中边，并且以两个新顶点创建一条边，生成一个小三角形。再细分新创建的边，<em>内侧顶点</em> 与对角顶点相连，细分结果为一个三角形+两个四边形。</dd>
+<dt>路径</dt>
+<dd>首先连接选中边的对角端点，将该四边形细分成两个三角形，然后连接细分顶点。</dd>
+<dt>直接切分</dt>
+<dd>细分选中边，在新的顶点之间创建一条边，生成一个小三角形加一个多边形。</dd>
 </dl>
-<table class="docutils align-center">
+<table border="1" class="last docutils">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id4">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-fan2.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-fan2.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-fan2.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">扇形切分类型。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">扇形切分类型。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id5">
+<td><div class="first last figure" id="id5">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-innervert.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-innervert.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-innervert.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">内侧顶点切分类型。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">内侧顶点切分类型。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id6">
+<td><div class="first last figure" id="id6">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-path.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-path.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-path.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">路径切分类型。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">路径切分类型。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt>分形</dt><dd><p>细分网格后，随机置换顶点。</p>
-<table class="docutils align-center">
+<dt>分形</dt>
+<dd><p class="first">细分网格后，随机置换顶点。</p>
+<table border="1" class="last docutils">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id7">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id7">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_fractal-before.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_fractal-before.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_fractal-before.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">细分前平面。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">细分前平面。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id8">
+<td><div class="first last figure" id="id8">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_fractal-none.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_fractal-none.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_fractal-none.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">常规细分。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">常规细分。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id9">
+<td><div class="first last figure" id="id9">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_fractal-after1.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_fractal-after1.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_fractal-after1.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">增加分形后。</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">增加分形后。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt>沿法线方向</dt><dd><p>沿法线方向置换顶点，而非随机方向。</p>
-<div class="figure align-center" id="id10">
+<dt>沿法线方向</dt>
+<dd><p class="first">沿法线方向置换顶点，而非随机方向。</p>
+<div class="last figure" id="id10">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_fractal-along-normal.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_fractal-along-normal.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_fractal-along-normal.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">沿法线方向设置为1.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">沿法线方向设置为1.</span></p>
 </div>
 </dd>
-<dt>随机种</dt><dd><p>设置 <em>分形</em> 噪波的随机种，每个随机种都会产生不同的结果。</p>
-<div class="figure align-center" id="id11">
+<dt>随机种</dt>
+<dd><p class="first">设置 <em>分形</em> 噪波的随机种，每个随机种都会产生不同的结果。</p>
+<div class="last figure" id="id11">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_fractal-after2.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_fractal-after2.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_fractal-after2.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">上文网格修改随机种后。</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">上文网格修改随机种后。</span></p>
 </div>
 </dd>
 </dl>
@@ -369,26 +394,26 @@
 <div class="section" id="examples">
 <h2>范例<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>下面的几个范例展示了 <em>细分</em> 和 <em>多等分</em> 工具的各种可能性。注意细分后的选中元素。</p>
-<div class="figure align-center" id="id12">
+<div class="figure" id="id12">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_before.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_before.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_before.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">示范网格。</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">示范网格。</span></p>
 </div>
 <div class="section" id="one-edge">
 <h3>一条边<a class="headerlink" href="#one-edge" title="Permalink to this headline">¶</a></h3>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id13">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id13">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_one-edge.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_one-edge.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_one-edge.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">一条边。</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">一条边。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id14">
+<td><div class="first last figure" id="id14">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_one-edge-tri.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_one-edge-tri.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_one-edge-tri.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">四边面/三角面模式。</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">四边面/三角面模式。</span></p>
 </div>
 </td>
 </tr>
@@ -397,19 +422,19 @@
 </div>
 <div class="section" id="two-tri-edges">
 <h3>两条三角边<a class="headerlink" href="#two-tri-edges" title="Permalink to this headline">¶</a></h3>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-tri.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-tri.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-tri.png" style="width: 250px;" /></a>
 </div>
 </td>
-<td><div class="figure align-center" id="id15">
+<td><div class="first last figure" id="id15">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-tri-tri.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-tri-tri.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-tri-tri.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">四边面/三角面模式。</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">四边面/三角面模式。</span></p>
 </div>
 </td>
 </tr>
@@ -418,19 +443,19 @@
 </div>
 <div class="section" id="two-opposite-quad-edges">
 <h3>四边形的对边<a class="headerlink" href="#two-opposite-quad-edges" title="Permalink to this headline">¶</a></h3>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-opposite.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-opposite.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-opposite.png" style="width: 250px;" /></a>
 </div>
 </td>
-<td><div class="figure align-center" id="id16">
+<td><div class="first last figure" id="id16">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-opposite-tri.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-opposite-tri.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-opposite-tri.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">四边面/三角面模式。</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">四边面/三角面模式。</span></p>
 </div>
 </td>
 </tr>
@@ -439,58 +464,58 @@
 </div>
 <div class="section" id="two-adjacent-quad-edges">
 <h3>四边形相邻边<a class="headerlink" href="#two-adjacent-quad-edges" title="Permalink to this headline">¶</a></h3>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id17">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id17">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-fan2.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-fan2.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-fan2.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">扇形切分类型。</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">扇形切分类型。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id18">
+<td><div class="first last figure" id="id18">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-fan.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-fan.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-fan.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">四边面/三角面模式。</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">四边面/三角面模式。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id19">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id19">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-innervert.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-innervert.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-innervert.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">内侧顶点切分类型。</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">内侧顶点切分类型。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id20">
+<td><div class="first last figure" id="id20">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-innervert-tri.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-innervert-tri.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-innervert-tri.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">四边面/三角面模式。</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">四边面/三角面模式。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id21">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id21">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-path.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-path.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-path.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">路径切分类型。</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">路径切分类型。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id22">
+<td><div class="first last figure" id="id22">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-path-tri.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-path-tri.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_two-edges-quad-path-tri.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">四边面/三角面模式。</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">四边面/三角面模式。</span></p>
 </div>
 </td>
 </tr>
@@ -499,19 +524,19 @@
 </div>
 <div class="section" id="three-edges">
 <h3>三条边<a class="headerlink" href="#three-edges" title="Permalink to this headline">¶</a></h3>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_three-edges.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_three-edges.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_three-edges.png" style="width: 250px;" /></a>
 </div>
 </td>
-<td><div class="figure align-center" id="id23">
+<td><div class="first last figure" id="id23">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_three-edges-tri2.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_three-edges-tri2.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_three-edges-tri2.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">四边面/三角面模式。</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">四边面/三角面模式。</span></p>
 </div>
 </td>
 </tr>
@@ -520,19 +545,19 @@
 </div>
 <div class="section" id="tri">
 <h3>三角面<a class="headerlink" href="#tri" title="Permalink to this headline">¶</a></h3>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_three-edges-tri.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_three-edges-tri.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_three-edges-tri.png" style="width: 250px;" /></a>
 </div>
 </td>
-<td><div class="figure align-center" id="id24">
+<td><div class="first last figure" id="id24">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_three-edges-tri-tri.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_three-edges-tri-tri.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_three-edges-tri-tri.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">四边面/三角面模式。</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">四边面/三角面模式。</span></p>
 </div>
 </td>
 </tr>
@@ -541,19 +566,19 @@
 </div>
 <div class="section" id="quad-four-edges">
 <h3>四边形的四条边<a class="headerlink" href="#quad-four-edges" title="Permalink to this headline">¶</a></h3>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_four-edges.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_four-edges.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_four-edges.png" style="width: 250px;" /></a>
 </div>
 </td>
-<td><div class="figure align-center" id="id25">
+<td><div class="first last figure" id="id25">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_four-edges-tri.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_four-edges-tri.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_four-edges-tri.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">四边面/三角面模式。</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">四边面/三角面模式。</span></p>
 </div>
 </td>
 </tr>
@@ -562,20 +587,20 @@
 </div>
 <div class="section" id="multicut">
 <h3>多等分<a class="headerlink" href="#multicut" title="Permalink to this headline">¶</a></h3>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id26">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id26">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_tri-multi.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_tri-multi.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_tri-multi.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">两次细分后的三角面。</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">两次细分后的三角面。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id27">
+<td><div class="first last figure" id="id27">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_subdividing_subdivide_quad-multi.png"><img alt="../../../../_images/modeling_meshes_editing_subdividing_subdivide_quad-multi.png" src="../../../../_images/modeling_meshes_editing_subdividing_subdivide_quad-multi.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">两次细分后的四边形。</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">两次细分后的四边形。</span></p>
 </div>
 </td>
 </tr>
@@ -586,20 +611,22 @@
 <div class="section" id="un-subdivide">
 <span id="mesh-unsubdivide"></span><h2>反细分<a class="headerlink" href="#un-subdivide" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 边 ‣ 反细分</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 边 ‣ 反细分</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>反细分是细分的反向过程，尝试移除细分操作的结果。如果在细分操作后做了其他编辑，效果可能不如预期。</p>
-<dl class="simple">
-<dt>迭代</dt><dd><p>移除细分的次数。</p>
-</dd>
+<dl class="docutils">
+<dt>迭代</dt>
+<dd>移除细分的次数。</dd>
 </dl>
 </div>
 </div>

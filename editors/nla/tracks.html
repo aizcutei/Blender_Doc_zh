@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/deveditors/nla/tracks.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/nla/tracks.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="片段" href="strips.html" />
@@ -94,37 +113,52 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../index.html#general">常规</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#animation">动画</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../dope_sheet/index.html">动画摄影表</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../timeline.html">时间轴编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../graph_editor/index.html">曲线编辑器</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">NLA编辑器</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">轨道</a></li>
-<li class="toctree-l4"><a class="reference internal" href="strips.html">片段</a></li>
-<li class="toctree-l4"><a class="reference internal" href="properties_modifiers.html">属性 &amp; 修改器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3dview/index.html">3D视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uv/index.html">UV编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_editor/index.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compositing/index.html">Compositor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../video_editing/index.html">Video Sequencer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">非线性动画</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">轨道</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#action-track">动作轨道</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#action-stashing">动作存储（隐藏）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#remove-empty-animation-data">删除空白动画数据</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strips.html">片段</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties_modifiers.html">属性 &amp; 修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#scripting">脚本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#data">数据</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outliner.html">大纲视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../properties_editor.html">属性编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../file_browser.html">文件浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -177,7 +211,7 @@
         
           <li><a href="../index.html">编辑器</a> &raquo;</li>
         
-          <li><a href="index.html">NLA编辑器</a> &raquo;</li>
+          <li><a href="index.html">非线性动画</a> &raquo;</li>
         
       <li>轨道</li>
     
@@ -201,40 +235,46 @@
   <div class="section" id="tracks">
 <span id="bpy-types-nlatrack"></span><h1>轨道<a class="headerlink" href="#tracks" title="Permalink to this headline">¶</a></h1>
 <p>轨道是NLA的分层系统。在最基本上，它可以帮助组织片段。但它也像图像编辑器一样将运动分层 - 底层，首层，最后层。</p>
-<div class="figure align-center" id="id1">
+<div class="figure" id="id1">
 <img alt="../../_images/editors_nla_tracks_example.png" src="../../_images/editors_nla_tracks_example.png" />
-<p class="caption"><span class="caption-text">NLA轨道和片段。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">NLA轨道和片段。</span></p>
 </div>
-<dl class="simple">
-<dt>孤立化（单放、独奏）轨道（星形图标）</dt><dd><p>切换 <em>孤立化轨道</em> 会导致动画在选定的轨道的效果可见。</p>
-</dd>
-<dt>禁用（扬声器图标）</dt><dd><p>避免轨道对动画产生影响。 （禁用仅适用于 <em>孤立化</em> 未使用时）。该轨道中的所有片段都被绘制为静音（虚线轮廓）。</p>
-</dd>
-<dt>锁定（挂锁图标）</dt><dd><p>防止对此图层进行更改。</p>
-</dd>
+<dl class="docutils">
+<dt>孤立化（单放、独奏）轨道（星形图标）</dt>
+<dd>Toggling <em>Solo Track</em> causes only the selected tracks effects to be visible when animating.
+This is very useful for debugging complex animations.</dd>
+<dt>禁用（扬声器图标）</dt>
+<dd>Keeps the track from having an effect on the animation. (Mute only applies when <em>Solo</em> is not used.)
+All strips in that track are shown as being muted (dashed outline).</dd>
+<dt>锁定（挂锁图标）</dt>
+<dd>Prevents changes from being made to this layer.
+This is useful, for example, if you want to select several strips and move them;
+but you want to keep a few tracks excluded from the change.</dd>
 </dl>
 <div class="section" id="action-track">
 <h2>动作轨道<a class="headerlink" href="#action-track" title="Permalink to this headline">¶</a></h2>
 <p>默认情况下，动作编辑器会自动存储你通过3D视图创建的关键帧，通过将它们存储到基于正在处理的物体的名称的动作中来。</p>
-<dl>
-<dt>按下（双向下箭图标）</dt><dd><p>将活动动作转换为NLA堆栈顶部的新NLA片段。</p>
-<div class="figure align-center">
+<dl class="docutils">
+<dt>Push Down</dt>
+<dd><p class="first">将活动动作转换为NLA堆栈顶部的新NLA片段。</p>
+<div class="figure">
 <img alt="../../_images/editors_nla_tracks_push-down-button.png" src="../../_images/editors_nla_tracks_push-down-button.png" />
 </div>
-<p>按下动作按钮。</p>
+<p class="last">按下动作按钮。</p>
 </dd>
-<dt>固定（图钉图标）</dt><dd><p>如果你尝试在 <em>调整模式</em> 下移动片段，你会注意到键（菱形标记）会随之移动。有时候，无论片段在哪里，你都希望按键保持原有的帧。为此，请点击片段旁边的 <em>不固定</em> 图标。</p>
-<div class="figure align-center" id="id2">
+<dt>固定（图钉图标）</dt>
+<dd><p class="first">如果你尝试在 <em>调整模式</em> 下移动片段，你会注意到键（菱形标记）会随之移动。有时候，无论片段在哪里，你都希望按键保持原有的帧。为此，请点击片段旁边的 <em>不固定</em> 图标。</p>
+<div class="figure" id="id2">
 <img alt="../../_images/editors_nla_tracks_pin1.png" src="../../_images/editors_nla_tracks_pin1.png" />
-<p class="caption"><span class="caption-text">带固定键的NLA片段。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">带固定键的NLA片段。</span></p>
 </div>
-<div class="figure align-center" id="id3">
+<div class="figure" id="id3">
 <img alt="../../_images/editors_nla_tracks_pin2.png" src="../../_images/editors_nla_tracks_pin2.png" />
-<p class="caption"><span class="caption-text">片段移动，注意到键随之移动。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">片段移动，注意到键随之移动。</span></p>
 </div>
-<div class="figure align-center" id="id4">
+<div class="last figure" id="id4">
 <img alt="../../_images/editors_nla_tracks_pin3.png" src="../../_images/editors_nla_tracks_pin3.png" />
-<p class="caption"><span class="caption-text">未固定的键返回到其原始帧。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">未固定的键返回到其原始帧。</span></p>
 </div>
 </dd>
 </dl>
@@ -242,7 +282,9 @@
 <div class="section" id="action-stashing">
 <h2>动作存储（隐藏）<a class="headerlink" href="#action-stashing" title="Permalink to this headline">¶</a></h2>
 <p>当创建一个新的动作时，如果现有的动作只有一个用户（即仅仅是当前的参考），它将被“存储”在NLA堆栈中。动作存储用于防止大多数的动作丢失。</p>
-<p>动作“存储”方法的工作原理是将NLA堆栈中未使用/休眠的操作存储为特殊未启用NLA轨道中的片段。这样，Blender就可以“知道”该动作与特定数据块有关（即与特定物体或特定材料/灯等有关），并且你仍然希望将其保留以备后用。</p>
+<p>The action &quot;stashing&quot; method works by storing otherwise unused/dormant actions in the NLA stack
+as strips in special muted NLA tracks. This way, the action is linked up to a particular data-block
+(i.e. to a specific object, or to a specific material/light/etc.) and will be preserved for later use.</p>
 <div class="section" id="deleting-converting">
 <h3>删除 &amp; 转换<a class="headerlink" href="#deleting-converting" title="Permalink to this headline">¶</a></h3>
 <p>如果你决定不再需要存储（隐藏）动作，只需删除相应的NLA片段，然后保存并重新加载文件。</p>
@@ -252,14 +294,19 @@
 <div class="section" id="remove-empty-animation-data">
 <h2>删除空白动画数据<a class="headerlink" href="#remove-empty-animation-data" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">编辑 ‣ 删除空白动画数据</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">编辑 ‣ 删除空白动画数据</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>该操作删除AnimData块（仅限于动画编辑器中可见的那些“空”（即没有活动动作，驱动程序和NLA轨道或片段）块）。</p>
+<p>This operator removes AnimData data-blocks (restricted to only those
+which are visible in the animation editor where it is run from) which are &quot;empty&quot;
+(i.e. that is, have no active action, drivers, and NLA tracks or strips).</p>
 <p>有时候可能会产生大量的数据块，这些数据块中仍然附有旧的和未使用的动画数据容器。这通常发生在进行运动图形工作时（即，某些链接对象以前可能用于开发一组可重用的资产），并且在NLA编辑器中尤其令人分心。</p>
 </div>
 </div>

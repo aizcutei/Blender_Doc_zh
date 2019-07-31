@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>区域 &mdash; Blender Manual</title>
+  <title>区域-Areas &mdash; Blender Manual</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devinterface/window_system/areas.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/window_system/areas.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="区块" href="regions.html" />
-    <link rel="prev" title="工作空间" href="workspaces.html" /> 
+    <link rel="next" title="区块-Regions" href="regions.html" />
+    <link rel="prev" title="状态栏" href="status_bar.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,17 +114,20 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">用户界面</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../splash.html">启动画面</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#window-system">窗口系统</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="introduction.html">介绍</a></li>
-<li class="toctree-l3"><a class="reference internal" href="workspaces.html">工作空间</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">区域</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#resizing">调整大小</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#splitting-and-joining">分割与合并</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topbar.html">顶栏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workspaces.html">工作区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="status_bar.html">状态栏</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">区域-Areas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#resizing">改变大小</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#splitting">分割</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#joining">合并</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#duplicate-area-into-new-window">复制区域到新窗口</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#toggle-maximize-area">切换为最大化区域</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#toggle-maximize-area">切换区域最大化</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#toggle-fullscreen-area">切换全屏区域</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="regions.html">区块</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regions.html">区块-Regions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tabs_panels.html">选项卡 &amp; 面板</a></li>
 </ul>
 </li>
@@ -115,18 +137,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -179,7 +202,7 @@
         
           <li><a href="../index.html">用户界面</a> &raquo;</li>
         
-      <li>区域</li>
+      <li>区域-Areas</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -199,42 +222,46 @@
            <div itemprop="articleBody">
             
   <div class="section" id="areas">
-<span id="bpy-types-areaspaces"></span><span id="bpy-types-area"></span><h1>区域<a class="headerlink" href="#areas" title="Permalink to this headline">¶</a></h1>
-<p>应用窗口在桌面上总是显示为矩形，并被分割为一些可改变大小的区域。一个区域包含特定类型 <a class="reference internal" href="../../editors/index.html"><span class="doc">编辑器</span></a> 的工作区，如3D视图编辑器，或者大纲视图。区域间以圆角边界隔开。</p>
-<div class="figure align-center" id="id1">
-<img alt="../../_images/interface_window-system_areas_borders.png" src="../../_images/interface_window-system_areas_borders.png" />
-<p class="caption"><span class="caption-text">区域间以圆角边界(黄色)隔开.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<span id="bpy-types-areaspaces"></span><span id="bpy-types-area"></span><h1>区域-Areas<a class="headerlink" href="#areas" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id1" style="width: 250px">
+<a class="reference internal image-reference" href="../../_images/interface_window-system_areas_borders.png"><img alt="../../_images/interface_window-system_areas_borders.png" src="../../_images/interface_window-system_areas_borders.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">区域边界由圆角(黄色高光)表示。</span></p>
 </div>
+<p>Blender窗口由多个长方形的区域组成。区域里面是各种 <a class="reference internal" href="../../editors/index.html"><span class="doc">编辑器</span></a> ,如 3D 视口或大纲等。作为Blender的一部分，通常每个编辑器会在某一方面有自己的功能定位。您按下的快捷键首先将影响鼠标所在的区域中的编辑器，区域边界由圆角（倒角）区分。</p>
+<p>可以为不同的项目任务自定义组合出各种区域的 <a class="reference internal" href="workspaces.html"><span class="doc">工作区</span></a> ,命名并保存这些工作区供以后使用。</p>
 <div class="section" id="resizing">
-<h2>调整大小<a class="headerlink" href="#resizing" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center">
-<img alt="../../_images/interface_window-system_areas_resize.png" src="../../_images/interface_window-system_areas_resize.png" />
+<h2>改变大小<a class="headerlink" href="#resizing" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" style="width: 250px">
+<a class="reference internal image-reference" href="../../_images/interface_window-system_areas_resize.png"><img alt="../../_images/interface_window-system_areas_resize.png" src="../../_images/interface_window-system_areas_resize.png" style="width: 250px;" /></a>
 </div>
-<p>用户可以通过按住 <cite>LMB</cite> 并拖动其边界调整区域。只需移动鼠标光标移到两个区域之间的边界，直到它变成一个双向箭头，然后按下并拖动。</p>
+<p>用户可以通过按住 <kbd class="kbd docutils literal notranslate">LMB</kbd> 并拖动其边界调整区域。只需移动鼠标光标移到两个区域之间的边界，直到它变成一个双向箭头，然后按下并拖动。</p>
 </div>
-<div class="section" id="splitting-and-joining">
-<h2>分割与合并<a class="headerlink" href="#splitting-and-joining" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center">
-<img alt="../../_images/interface_window-system_areas_split.png" src="../../_images/interface_window-system_areas_split.png" />
+<div class="section" id="splitting">
+<h2>分割<a class="headerlink" href="#splitting" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" style="width: 250px">
+<a class="reference internal image-reference" href="../../_images/interface_window-system_areas_split.png"><img alt="../../_images/interface_window-system_areas_split.png" src="../../_images/interface_window-system_areas_split.png" style="width: 250px;" /></a>
 </div>
-<p>分割区域将新增一个新的区域，合并两个区域则将关闭一个区域。当鼠标指针置于区域一角，待其变成&quot;十&quot;字(✛)。按下 <kbd class="kbd docutils literal notranslate">LMB</kbd> 将激活分割或合并命令。向内拖拽 <em>分割</em> 区域，拖拽的方向可以是水平或者垂直的。</p>
-<div class="figure align-center" id="id2">
-<img alt="../../_images/interface_window-system_areas_join.png" src="../../_images/interface_window-system_areas_join.png" />
-<p class="caption"><span class="caption-text">将属性编辑器合并至大纲视图编辑器。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p>分割一个区域将创建新个小的区域。将鼠标放在区域的角上时，光标显示为十字 (+), 当 :kbd:'LMB' 按下并拖动时，将激活 <strong>分割</strong> 和 <strong>合并</strong> 的操作，往区域的内部拖动是分割，往区域的外部是合并，可以水平或垂直拖动来定义分割方向。</p>
 </div>
-<p>向外拖拽 <em>合并</em> 两个区域。最终会关闭的区域会颜色变暗并显示箭头，这时候用户就可以通过移动鼠标选择想要关闭的区域。松开 <kbd class="kbd docutils literal notranslate">LMB</kbd> 完成合并操作。如在松开鼠标前按下 <kbd class="kbd docutils literal notranslate">Esc</kbd> 或 <kbd class="kbd docutils literal notranslate">RMB</kbd> ，将中止操作。</p>
+<div class="section" id="joining">
+<h2>合并<a class="headerlink" href="#joining" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id2" style="width: 250px">
+<a class="reference internal image-reference" href="../../_images/interface_window-system_areas_join.png"><img alt="../../_images/interface_window-system_areas_join.png" src="../../_images/interface_window-system_areas_join.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">将属性编辑器合并至大纲视图编辑器。</span></p>
+</div>
+<p>向外拖拽 <strong>合并</strong> 两个区域。拖拽过程中会显示一个箭头并最终关闭颜色变暗的那个区域，同时你也可以改变拖拽的方向已关闭另外一个区域。松开 <kbd class="kbd docutils literal notranslate">LMB</kbd> 完成合并操作。按下 <kbd class="kbd docutils literal notranslate">Esc</kbd> 或 <kbd class="kbd docutils literal notranslate">RMB</kbd> ，将中止操作。</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>合并拖拽的方向必须有相同尺寸(等宽或高)的区域，这样合并后的区域才能是矩形的。</p>
+<p class="first admonition-title">Note</p>
+<p class="last">合并拖拽的方向必须有相同尺寸(等宽或高)的区域，否则不会有任何改变，这样合并后的区域才能是矩形的。</p>
 </div>
 <div class="section" id="area-options">
 <h3>区域选项<a class="headerlink" href="#area-options" title="Permalink to this headline">¶</a></h3>
-<p>在区域边界 <kbd class="kbd docutils literal notranslate">RMB</kbd>  打开 <em>区域选项</em> 。</p>
-<dl class="simple">
-<dt>分割区域</dt><dd><p>显示一条虚线用于选择分割的区域和位置，按 <kbd class="kbd docutils literal notranslate">Tab</kbd> 切换水平/垂直分割。</p>
-</dd>
-<dt>合并区域</dt><dd><p>覆盖显示合并方向。</p>
-</dd>
+<p>在区域边界按 <kbd class="kbd docutils literal notranslate">RMB</kbd>  打开 <em>区域选项</em> 。</p>
+<dl class="docutils">
+<dt>分割区域</dt>
+<dd>显示一条虚线用于选择分割的区域和位置，按 <kbd class="kbd docutils literal notranslate">Tab</kbd> 切换水平/垂直分割。</dd>
+<dt>合并区域</dt>
+<dd>覆盖显示合并方向。</dd>
 </dl>
 <div class="section" id="swapping-contents">
 <h4>互换内容<a class="headerlink" href="#swapping-contents" title="Permalink to this headline">¶</a></h4>
@@ -245,48 +272,58 @@
 <div class="section" id="duplicate-area-into-new-window">
 <span id="bpy-ops-screen-area-dupli"></span><h2>复制区域到新窗口<a class="headerlink" href="#duplicate-area-into-new-window" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">视图 ‣ 将区域复制到新窗口</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">视图 ‣ 区域 ‣ 将区域复制到新窗口</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>可以使用 <span class="menuselection">视图 ‣ 将区域复制到新窗口</span> 创建一个新的浮动窗口。</p>
+<p>可以使用 <span class="menuselection">视图 ‣ 区域 ‣ 将区域复制到新窗口</span> 创建一个新的浮动窗口。</p>
 <p>新窗口是一个全功能窗口，是Blender相同实例的一部分。这在用户使用多显示器时很有用。</p>
 <p>用户还可以在区域拐角按下 <kbd class="kbd docutils literal notranslate">Shift-LMB</kbd> ，然后轻轻向外拖拽，创建新窗口。</p>
 <p>可以使用系统的 <em>关闭窗口</em> 关闭。</p>
 </div>
 <div class="section" id="toggle-maximize-area">
-<h2>切换为最大化区域<a class="headerlink" href="#toggle-maximize-area" title="Permalink to this headline">¶</a></h2>
+<span id="bpy-ops-screen-screen-full-area"></span><h2>切换区域最大化<a class="headerlink" href="#toggle-maximize-area" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">视图 ‣ 区域最大化</span></p>
-</dd>
-<dt class="field-even">快捷键</dt>
-<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Ctrl-Spacebar</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">视图 ‣ 区域 ‣ 区域最大化</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-Spacebar</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>最大化后的区域会填满整个应用窗口。用户可以使用 <span class="menuselection">视图 ‣ 区域最大化</span> 菜单或快捷键 <kbd class="kbd docutils literal notranslate">Ctrl-Spacebar</kbd> 最大化区域。再次使用该快捷键，或者栏 <kbd class="kbd docutils literal notranslate">RMB</kbd> 并选择标题上的 <em>返回前一视图</em> 按钮恢复正常区域大小。</p>
+<p>最大化后的区域会填满整个应用窗口。用户可以使用 <span class="menuselection">视图 ‣ 区域 ‣ 区域最大化</span> 菜单或快捷键 <kbd class="kbd docutils literal notranslate">Ctrl-Spacebar</kbd> 最大化区域。再次使用该快捷键，或者栏 <kbd class="kbd docutils literal notranslate">RMB</kbd> 并选择标题上的 <em>返回前一视图</em> 按钮恢复正常区域大小。</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>使用键盘快捷键时，获得最大化的区域是鼠标当前停留区域。</p>
+<p class="first admonition-title">Note</p>
+<p class="last">当使用快捷键时，是对鼠标停留的区域做最大化操作。</p>
 </div>
 </div>
 <div class="section" id="toggle-fullscreen-area">
-<span id="bpy-ops-screen-screen-full-area"></span><h2>切换全屏区域<a class="headerlink" href="#toggle-fullscreen-area" title="Permalink to this headline">¶</a></h2>
+<h2>切换全屏区域<a class="headerlink" href="#toggle-fullscreen-area" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">视图 ‣ 切换全屏模式</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">视图 ‣ 区域 ‣ 切换全屏模式</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-Alt-Spacebar</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>全屏区域仅包含主区域。移动鼠标到区域的右上角会显示返回图标，按下退出全屏。</p>
+<p>全屏区域仅包含主区域。点击区域右上角的 <strong>返回前一视图按钮</strong>，退出全屏模式。</p>
 </div>
 </div>
 
@@ -298,10 +335,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="regions.html" class="btn btn-neutral float-right" title="区块" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="regions.html" class="btn btn-neutral float-right" title="区块-Regions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="workspaces.html" class="btn btn-neutral float-left" title="工作空间" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="status_bar.html" class="btn btn-neutral float-left" title="状态栏" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

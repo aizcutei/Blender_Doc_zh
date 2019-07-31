@@ -1,0 +1,707 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>编辑 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/armatures/posing/editing.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="骨骼约束" href="bone_constraints/index.html" />
+    <link rel="prev" title="选择" href="selecting.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">动画 &amp; 绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">骨架</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bones/index.html">骨骼</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../skinning/index.html">蒙皮</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">姿态</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selecting.html">选择</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">编辑</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bone_constraints/index.html">骨骼约束</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../lattice.html">Lattice 晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../constraints/index.html">约束</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../actions.html">动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../drivers/index.html">驱动器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../markers.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shape_keys/index.html">形态键</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_paths.html">运动路径</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">动画 &amp; 绑定</a> &raquo;</li>
+        
+          <li><a href="../index.html">骨架</a> &raquo;</li>
+        
+          <li><a href="index.html">姿态</a> &raquo;</li>
+        
+      <li>编辑</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/animation/armatures/posing/editing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editing">
+<h1>编辑<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h1>
+<p>In <em>Pose Mode</em>, bones behave like objects. So the transform actions
+(move/rotate/scale, etc.) are very similar to the same ones in Object Mode
+(all available ones are regrouped in the <span class="menuselection">Pose ‣ Transform</span> submenu). However,
+there are some important specificities:</p>
+<ul class="simple">
+<li>骨骼的关系至关重要（参见 <a class="reference internal" href="../bones/properties/relations.html#bone-relations-parenting"><span class="std std-ref">Parenting 父子</span></a>）。</li>
+<li>给定的骨骼（即它的默认枢轴点，当它是唯一选择的骨骼时）的&quot;变换中心&quot; 是 <em>其首端</em> 。注意一些枢轴点选项似乎不能正常工作，实际上，除了 <em>3D游标</em> 之外，其它的似乎总是使用选择的中点（当 <em>激活物体</em> 被选中时，而不是例如激活骨骼的首端等）。</li>
+</ul>
+<div class="section" id="basic-posing">
+<h2>Basic Posing 基本姿势<a class="headerlink" href="#basic-posing" title="Permalink to this headline">¶</a></h2>
+<p>如前面所述，骨骼的变换是根据骨架的 <em>重置位置</em> 执行的，也就是 <em>编辑模式</em> 中定义的状态。这意味着在 <em>姿态模式</em> 中，每个骨骼的缩放比例为1.0，零旋转和零位移(你可以在3D视图中按 <kbd class="kbd docutils literal notranslate">N</kbd> 在 <em>变换</em> 面板中看到)。</p>
+<div class="figure" id="id1">
+<img alt="../../../_images/animation_armatures_posing_editing_local-rotation.png" src="../../../_images/animation_armatures_posing_editing_local-rotation.png" />
+<p class="caption"><span class="caption-text">An example of locally-Y-axis locked rotation, with two bones selected.</span></p>
+<div class="legend">
+选择了两个骨骼，局部Y轴锁定旋转的示例。请注意，两条绿色的轴线以骨架的中心为中心，而不是每根骨骼的首端...</div>
+</div>
+<p>此外，这些动作的局部空间是骨骼自己的空间（当您启用 <em>Armature</em> 面板的 <em>Axes</em> 选项时可见）。这在使用轴锁定时尤为重要，例如 <em>姿势模式</em> 中没有特定的“骨扭转”工具，因为你可以通过按 <kbd class="kbd docutils literal notranslate">R Y Y</kbd> 键锁定在局部Y轴上的方式围绕骨骼的主轴旋转... 这也适用于选定的几个骨骼; 每个骨骼都锁定到自己的局部轴！</p>
+<p>当你给骨架摆姿势时，假定你用一个或多个物体蒙皮给它！显然，当你在 <em>姿态模式</em> 中转换骨骼时，其相关物体或物体的形状相应地跟着实时移动/变形。不幸的是，如果你有一个复杂的绑定设置和/或一个复杂的蒙皮物体，这可能会产生滞后，并让交互式编辑非常痛苦。如果遇到这种麻烦，请尝试启用 <em>Armature</em> 面板的 <em>Delay Deform（延迟变形）</em> 按钮，一旦应用了变换操作，蒙皮物体才会被更新。</p>
+</div>
+<div class="section" id="auto-ik">
+<h2>Auto IK 自动IK<a class="headerlink" href="#auto-ik" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">姿态模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Sidebar region ‣ Tool ‣ Pose Options</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The auto IK option in the Sidebar enables a temporary IK constraint when posing bones.
+The chain acts from the tip of the selected bone to root of the upper-most parent bone.
+Note that this mode lacks options,
+and only works by applying the resulting transform to the bones in the chain.</p>
+</div>
+<div class="section" id="clear-transform">
+<h2>Clear Transform 清除变换<a class="headerlink" href="#clear-transform" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">姿态模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">姿态 ‣ 清除变换</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Alt-G</kbd>, <kbd class="kbd docutils literal notranslate">Alt-R</kbd>, <kbd class="kbd docutils literal notranslate">Alt-S</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>一旦你改变了一些骨骼，如果你想回到他们的重置位置，只要清除他们的变换。</p>
+<dl class="docutils">
+<dt>位置，旋转，缩放 <kbd class="kbd docutils literal notranslate">Alt-G</kbd>, <kbd class="kbd docutils literal notranslate">Alt-R</kbd>, <kbd class="kbd docutils literal notranslate">Alt-S</kbd></dt>
+<dd>清除单个变换。</dd>
+<dt>All</dt>
+<dd>立即清除所有内容。</dd>
+<dt>Reset Unkeyed 重置非关键帧</dt>
+<dd><p class="first">将变换清除转换到关键帧状态。这个操作也可以用 <span class="menuselection">Specials（W） ‣ Clear User Transform</span> 菜单项。</p>
+<dl class="last docutils">
+<dt>Only Selected 仅选定</dt>
+<dd>仅在所选骨骼或所有骨骼上操作。</dd>
+</dl>
+</dd>
+</dl>
+<p>请注意，在 <em>封套（Envelope）</em> 可视化中， <kbd class="kbd docutils literal notranslate">Alt-S</kbd> 不是清除缩放，而是缩放所选骨骼的 <em>距离</em> 影响区域（也可以通过： <span class="menuselection">Pose ‣ Scale Envelope Distance</span> 菜单项，这仅在 <em>封套（Envelope）</em> 可视化中有效，即使它始终可用...）。</p>
+</div>
+<div class="section" id="apply">
+<h2>Apply  应用<a class="headerlink" href="#apply" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">姿态模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">姿态‣ 应用</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-A</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="docutils">
+<dt>Pose as Rest Pose</dt>
+<dd>Conversely, you may define the current pose as the new rest pose
+(i.e. &quot;apply&quot; current transformations to the <em>Edit Mode</em>),
+When you do so, the skinned objects/geometry is <strong>also</strong> reset to its default,
+undeformed state, which generally means you will have to skin it again.</dd>
+<dt>Pose Selected as Rest Pose</dt>
+<dd>Same as <em>Pose as Rest Pose</em> but only applies to selected bones.</dd>
+<dt>Visual Transform to Pose</dt>
+<dd>TODO.</dd>
+<dt>Assign Custom Property Values as Default</dt>
+<dd>TODO.</dd>
+</dl>
+</div>
+<div class="section" id="in-betweens">
+<h2>In-Betweens 中间帧调整<a class="headerlink" href="#in-betweens" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id2">
+<img alt="../../../_images/animation_armatures_posing_editing_inbetweens-tools.png" src="../../../_images/animation_armatures_posing_editing_inbetweens-tools.png" />
+<p class="caption"><span class="caption-text">In-Betweens Tools.</span></p>
+</div>
+<p>在动画中有几种编辑姿势的工具。</p>
+<p><em>姿势模式</em> 还有一堆骨架专用的编辑选项/工具，如 <a class="reference internal" href="../bones/editing/naming.html#armature-editing-naming-bones"><span class="std std-ref">auto-bones naming</span></a> ， <a class="reference internal" href="../bones/editing/properties.html#armature-bone-properties"><span class="std std-ref">properties switching/enabling/disabling</span></a> 等等。我们已经在骨架编辑页面中描述过。看上面的链接...</p>
+<div class="section" id="push-pose-from-breakdown">
+<h3>Push Pose from Breakdown<a class="headerlink" href="#push-pose-from-breakdown" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">姿态模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Tool:</th><td class="field-body"><span class="menuselection">Toolbar ‣ In-Betweens Tools ‣ Push</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Pose ‣ In-Betweens ‣ Push Pose from Breakdown</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-E</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Push Pose</em> interpolates the current pose by making it closer to the next keyframed position.</p>
+</div>
+<div class="section" id="push-pose-from-rest">
+<h3>Push Pose from Rest<a class="headerlink" href="#push-pose-from-rest" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">姿态模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Pose ‣ In-Betweens ‣ Push Pose from Rest</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Similar to <em>Push Pose from Breakdown</em> but interpolates the pose to the rest position instead.
+Only one keyframe is needed for this tool unlike two for the other.</p>
+</div>
+<div class="section" id="relax-pose-to-breakdown">
+<h3>Relax Pose to Breakdown<a class="headerlink" href="#relax-pose-to-breakdown" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">姿态模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Tool:</th><td class="field-body"><span class="menuselection">Toolbar ‣ In-Betweens Tools ‣ Relax</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Pose ‣ In-Betweens ‣ Relax Pose to Breakdown</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Alt-E</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>放缓姿态与上述主题有些相关，但它只适用于关键帧。当你编辑这样一个骨骼（并因此将其从“关键位置”移开）时，使用此工具将逐渐“回到”其“关键位置”，随着越来越近的时候步调会越来越小。</p>
+</div>
+<div class="section" id="relax-pose-to-rest">
+<h3>Relax Pose to Rest<a class="headerlink" href="#relax-pose-to-rest" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">姿态模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Pose ‣ In-Betweens ‣ Relax Pose to Rest</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Similar to <em>Relax Pose to Breakdown</em> but works to bring the pose back to the rest position instead.
+Only one keyframe is needed for this tool unlike two for the other.</p>
+</div>
+<div class="section" id="breakdowner">
+<h3>Breakdowner 补间器<a class="headerlink" href="#breakdowner" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">姿态模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar region ‣ In-Betweens Tools ‣ Breakdowner</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">姿态 ‣ In-Betweens ‣ Pose Breakdowner</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">LMB</kbd>-drag</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>在当前帧创建一个合适的补间姿态。</p>
+<p>通过在工具处于活动状态时按下以下键，“分解程序（Breakdowner）”工具可以约束在特定变换和轴上工作：</p>
+<ul class="simple">
+<li><kbd class="kbd docutils literal notranslate">G</kbd>, <kbd class="kbd docutils literal notranslate">R</kbd>, <kbd class="kbd docutils literal notranslate">S</kbd>: move, rotate, scale</li>
+<li><kbd class="kbd docutils literal notranslate">B</kbd>: 软骨骼</li>
+<li><kbd class="kbd docutils literal notranslate">C</kbd>: 自定义属性</li>
+<li><kbd class="kbd docutils literal notranslate">X</kbd>, <kbd class="kbd docutils literal notranslate">Y</kbd>, <kbd class="kbd docutils literal notranslate">Z</kbd>: 对应轴向</li>
+</ul>
+</div>
+</div>
+<div class="section" id="copy-paste-pose">
+<h2>Copy/Paste Pose<a class="headerlink" href="#copy-paste-pose" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">姿态模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Pose ‣ Copy Current Pose</span>,
+<span class="menuselection">Pose ‣ Paste Pose</span>,
+<span class="menuselection">Pose ‣ Paste X-Flipped Pose</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-C</kbd>
+<kbd class="kbd docutils literal notranslate">Ctrl-V</kbd>
+<kbd class="kbd docutils literal notranslate">Shift-Ctrl-V</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Blender allows you to copy and paste a pose, either through the <em>Pose</em> menu, or
+by using hotkeys.</p>
+<dl class="docutils">
+<dt>Copy Current Pose 复制当前姿势</dt>
+<dd>将所选骨骼的当前姿势复制到姿势缓存。</dd>
+<dt>Paste Pose 粘贴姿势</dt>
+<dd>将缓存的姿势粘贴到当前姿势的骨骼上。</dd>
+<dt>Paste X-Flipped Pose  粘贴X轴向翻转（姿势）动作</dt>
+<dd>将 <em>X轴镜像</em> 缓存姿势粘贴到当前姿势的骨骼上。</dd>
+</dl>
+<p>以下是重点：</p>
+<ul class="simple">
+<li>该工具在Blender会话阶段工作，这意味着你可以在电影，场景甚至文件中使用它。但是，姿势缓存不保存，所以当你关闭Blender时，你将丢失它。</li>
+<li>只有一个姿势缓存。</li>
+<li>在复制期间只考虑所选择的骨骼（即仅复制选定的骨骼姿势）。</li>
+<li>另一方面，在粘贴过程中，骨骼的选择并不重要。复制的姿势是以每个名字为基础应用的（例如，如果你在复制姿势时选择了“前臂”骨骼，则当粘贴它时，当前姿势的骨骼会获得其姿势 - 如果没有这样的命名的骨骼，什么都不会发生...）。</li>
+<li>What is copied and pasted is in fact the position/rotation/scale of each bone, in its own space.
+This means that the resulting pasted pose might be very different from the originally copied one, depending on:<ul>
+<li>The rest position of the bones,</li>
+<li>and the current pose of their parents.</li>
+</ul>
+</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id3">
+<img alt="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-1.png" src="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-1.png" />
+<p class="caption"><span class="caption-text">我们原来骨架的重置位置。</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id4">
+<img alt="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-2.png" src="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-2.png" />
+<p class="caption"><span class="caption-text">我们目标骨架的重置位置。</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id5">
+<caption><span class="caption-text">姿势复制/粘贴示例。</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id6">
+<img alt="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-3.png" src="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-3.png" />
+<p class="caption"><span class="caption-text">第一个复制的姿势（注意，只选择了两个骨骼，因此复制它们）。</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id7">
+<img alt="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-4.png" src="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-4.png" />
+<p class="caption"><span class="caption-text">...粘贴在目标骨架上...</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id8">
+<img alt="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-5.png" src="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-5.png" />
+<p class="caption"><span class="caption-text">...镜像粘贴在目标骨架上。</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id9">
+<img alt="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-6.png" src="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-6.png" />
+<p class="caption"><span class="caption-text">上面同样的姿势被复制，但是这次所有骨骼都被选中了，…</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id10">
+<img alt="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-7.png" src="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-7.png" />
+<p class="caption"><span class="caption-text">...粘贴在目标骨架上...</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id11">
+<img alt="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-8.png" src="../../../_images/animation_armatures_posing_editing_copy-paste-pose-examples-8.png" />
+<p class="caption"><span class="caption-text">...镜像粘贴在目标骨架上。</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="propagate">
+<h2>Propagate 传导<a class="headerlink" href="#propagate" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">姿态模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Pose ‣ Propagate</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Alt-P</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>传导工具将当前帧上所选骨骼的姿态复制到由 <em>终止模式</em> 分隔的关键帧。它自动化复制和粘贴的过程。</p>
+<div class="section" id="options">
+<h3>Options 选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Termination Mode 终止模式</dt>
+<dd><p class="first">确定如何决定何时停止覆盖关键帧的模式。</p>
+<dl class="last docutils">
+<dt>While Held 同时举行</dt>
+<dd>The most complicated of the modes available, as it tries to guess when to stop propagating by
+examining the pauses in the animation curves per control
+(i.e. all F-curves for a bone, instead of per F-curve).</dd>
+<dt>To Next Keyframe 到下一个关键帧</dt>
+<dd>简单地将姿势复制到当前帧之后的第一个关键帧（但不包括任何关键帧）。</dd>
+<dt>To Last Keyframe 到最末关键帧</dt>
+<dd>Will simply replace the last keyframe (i.e. making action cyclic).</dd>
+<dt>Before Frame</dt>
+<dd>To all keyframes between current frame and the <em>End frame</em> option.
+This option is best suited for use from scripts due to the difficulties in setting this frame value,
+though it is possible to set this manually via the <a class="reference internal" href="../../../interface/undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> panel if necessary.</dd>
+<dt>Before Last Keyframe 最后一个关键帧之前</dt>
+<dd>从当前帧到所有关键帧，直到找不到更多关键帧。</dd>
+<dt>On Selected Keyframes 在选定的关键帧上</dt>
+<dd>将所选骨骼的姿势应用于所有选定的关键帧。</dd>
+<dt>On Selected Markers  在所选标记处</dt>
+<dd>发生在当前帧之后具有场景标记的帧上的所有关键帧。</dd>
+</dl>
+</dd>
+<dt>End Frame 结束帧</dt>
+<dd>定义关键帧将受影响的帧范围的上限（下限为当前帧）。</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="show-hide">
+<h2>Show/Hide 显示/隐藏<a class="headerlink" href="#show-hide" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">所有模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Properties editor ‣ Bone ‣ Viewport Display</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">... ‣ 显示/隐藏</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>你不必使用骨骼层来显示/隐藏一些骨骼。和物体，顶点或控制点一样，您可以使用快捷键 <kbd class="kbd docutils literal notranslate">H</kbd>:</p>
+<ul class="simple">
+<li><kbd class="kbd docutils literal notranslate">H</kbd> 将隐藏选定的骨骼。</li>
+<li><kbd class="kbd docutils literal notranslate">Shift-H</kbd> 将隐藏所有骨骼 <em>但除了所选的那个</em> 。</li>
+<li><kbd class="kbd docutils literal notranslate">Alt-H</kbd> 将显示所有隐藏的骨骼。</li>
+</ul>
+<p>You can also use the <em>Hide</em> checkbox of the <span class="menuselection">Bone tab ‣ Viewport Display panel</span>.</p>
+<p>请注意，隐藏的骨骼是特定于某种模式的，即你可以在 <em>编辑模式</em> 中隐藏某些骨骼，但它们仍将在 <em>姿态模式</em> 中可见，反之亦然。 <em>姿势模式</em> 中的隐藏骨骼在 <em>物体模式</em> 中也是不可见的。在 <em>编辑模式</em> 中，要隐藏的骨骼必须被完全选择，而不仅仅是他的首端或尾端。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bone_constraints/index.html" class="btn btn-neutral float-right" title="骨骼约束" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="selecting.html" class="btn btn-neutral float-left" title="选择" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

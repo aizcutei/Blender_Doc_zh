@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devcompositing/types/converter/set_alpha.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/compositing/types/converter/set_alpha.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Switch View节点" href="switch_view.html" />
+    <link rel="next" title="视图切换节点" href="switch_view.html" />
     <link rel="prev" title="RGB -&gt; BW节点" href="rgb_to_bw.html" /> 
 </head>
 
@@ -94,11 +113,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">合成</a><ul class="current">
@@ -109,14 +128,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../output/index.html">输出类节点</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../color/index.html">颜色类节点</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">转换器类节点</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="alpha_convert.html">Alpha上叠节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alpha_convert.html">Alpha转换节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="color_ramp.html">颜色渐变节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="combine_separate.html">合并/分离节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="id_mask.html">ID遮罩节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="math.html">运算节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="rgb_to_bw.html">RGB -&gt; BW节点</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">设置Alpha节点</a></li>
-<li class="toctree-l4"><a class="reference internal" href="switch_view.html">Switch View节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="switch_view.html">视图切换节点</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../filter/index.html">滤镜节点</a></li>
@@ -129,10 +148,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -183,6 +203,8 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
+          <li><a href="../../../editors/index.html">编辑器</a> &raquo;</li>
+        
           <li><a href="../../index.html">合成</a> &raquo;</li>
         
           <li><a href="index.html">转换器类节点</a> &raquo;</li>
@@ -209,17 +231,17 @@
   <div class="section" id="set-alpha-node">
 <span id="bpy-types-compositornodesetalpha"></span><h1>设置Alpha节点<a class="headerlink" href="#set-alpha-node" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-right" id="id1">
-<img alt="../../../_images/compositing_types_converter_set-alpha_node.png" src="../../../_images/compositing_types_converter_set-alpha_node.png" />
-<p class="caption"><span class="caption-text">设置Alpha节点。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<img alt="../../../_images/compositing_node-types_CompositorNodeSetAlpha.png" src="../../../_images/compositing_node-types_CompositorNodeSetAlpha.png" />
+<p class="caption"><span class="caption-text">设置Alpha节点。</span></p>
 </div>
 <p><em>设置Alpha节点</em> 给图像加入一个alpha通道。</p>
 <div class="section" id="inputs">
 <h2>输入<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>图像</dt><dd><p>标准化图像输入。</p>
-</dd>
-<dt>Alpha通道</dt><dd><p>Alpha的大小可以设置为整个图像大小，或者使用和连接端口相连的输入框进行设置。</p>
-</dd>
+<dl class="docutils">
+<dt>图像</dt>
+<dd>标准化图像输入。</dd>
+<dt>Alpha通道</dt>
+<dd>Alpha的大小可以设置为整个图像大小，或者使用和连接端口相连的输入框进行设置。</dd>
 </dl>
 </div>
 <div class="section" id="properties">
@@ -228,13 +250,13 @@
 </div>
 <div class="section" id="outputs">
 <h2>输出<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>图像</dt><dd><p>标准化图像输出。</p>
-</dd>
+<dl class="docutils">
+<dt>图像</dt>
+<dd>标准化图像输出。</dd>
 </dl>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>此节点不是在合成一幅不包含Alpha通道信息的图像时作为多用途解决方案。用户可能希望使用“色度抠像”或“色差抠像”（在其他相应章节有详细介绍）来创建ALpha通道。此节点通常是在（借助提供的合适连接端口）一些比较麻烦的合成项目案例中因为某些原因 <em>不能够</em> 直接使用这些遮片技巧时才使用。</p>
+<p class="first admonition-title">Note</p>
+<p class="last">此节点不是在合成一幅不包含Alpha通道信息的图像时作为多用途解决方案。用户可能希望使用“色度抠像”或“色差抠像”（在其他相应章节有详细介绍）来创建ALpha通道。此节点通常是在（借助提供的合适连接端口）一些比较麻烦的合成项目案例中因为某些原因 <em>不能够</em> 直接使用这些遮片技巧时才使用。</p>
 </div>
 </div>
 <div class="section" id="example">
@@ -242,23 +264,23 @@
 <div class="section" id="fade-to-black">
 <h3>淡出为黑场<a class="headerlink" href="#fade-to-black" title="Permalink to this headline">¶</a></h3>
 <p>从一个场景（镜头）到另一个场景（镜头）的过渡，一个常用手法是“淡出到黑场”。就像它的名字所指的那样，场景逐渐淡出，屏幕变黑。用户也可以“淡出到白场”或任何想使用的颜色，但是黑色是一个比较好的折中选择，在视觉上起到重新开启观看者的思路。如下的节点连接图显示了如何利用设置Alpha节点做淡出到黑场效果。</p>
-<div class="figure align-center" id="id2">
+<div class="figure" id="id2">
 <img alt="../../../_images/compositing_types_converter_set-alpha_fade-to-black.png" src="../../../_images/compositing_types_converter_set-alpha_fade-to-black.png" />
-<p class="caption"><span class="caption-text">淡出为黑场。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">淡出为黑场。</span></p>
 </div>
 <p>上面的范例中，漩涡的alpha通道被忽略。取而代之的是 <a class="reference internal" href="../input/time.html"><span class="doc">时间节点</span></a> 产生一个从0.00到1.00的因数，共六十帧画面，或者说是两秒钟的画面输入到设置Alpha节点。注意时间曲线是呈指数形式递增的，全部暗色部分会慢慢淡出然后加速朝向时间结尾变化。设置Alpha节点不需要输入图像；取而代之的是使用一个平滑的黑色。设置Alpha节点使用输入因数和颜色去创建一个黑色图像，alpha设置范围为从0.00到1.00，共六十帧，从完全透明到完全不透明。考虑到alpha作为一个因数使图像像素看起来清晰。这两幅图像在Alpha上叠节点（<em>因数</em> 为1）中进行合并输出合成图像。设置Alpha节点依据帧来进行渲染，输出一个黑色带透明的图像。从节点设置到动画，用户得到了时间范围为2秒钟的动画图像序列帧。</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="first admonition-title">Note</p>
 <p>没有可使用的场景信息</p>
-<p>范例的节点连接图没有使用渲染层节点。生成两秒钟动画，没有Blender场景信息被使用。这是使用Blender从建模到动画的强大合成功能的实际范例。（渲染层可以代替图像图层，“淡出节点连接网络”特效也同样可以实现相同的效果）。</p>
+<p class="last">范例的节点连接图没有使用渲染层节点。生成两秒钟动画，没有Blender场景信息被使用。这是使用Blender从建模到动画的强大合成功能的实际范例。（渲染层可以代替图像图层，“淡出节点连接网络”特效也同样可以实现相同的效果。）</p>
 </div>
 </div>
 <div class="section" id="fade-in-a-title">
 <h3>淡入到标题<a class="headerlink" href="#fade-in-a-title" title="Permalink to this headline">¶</a></h3>
 <p>为了引入动画，用户需要表达动画的标题划过背景的效果。用户可以让标题飞入或淡入。若要使用淡入，下面是运用带“时间节点”的“设置Alpha节点”的情形。</p>
-<div class="figure align-center" id="id3">
+<div class="figure" id="id3">
 <img alt="../../../_images/compositing_types_converter_set-alpha_fade-in-title.png" src="../../../_images/compositing_types_converter_set-alpha_fade-in-title.png" />
-<p class="caption"><span class="caption-text">运用设置Alpha节点淡入标题。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">运用设置Alpha节点淡入标题。</span></p>
 </div>
 <p>In the above example, a Time curve provides the Alpha value to the input socket.
 The current Render Layer node, which has the title in view, provides the image. As before,
@@ -267,15 +289,13 @@ the background swirl and the alpha title to produce the composite image.</p>
 </div>
 <div class="section" id="colorizing-a-bw-image">
 <h3>彩色化BW（灰度）图像<a class="headerlink" href="#colorizing-a-bw-image" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center" id="id4">
+<div class="figure" id="id4">
 <img alt="../../../_images/compositing_types_converter_set-alpha_colorizing-image.png" src="../../../_images/compositing_types_converter_set-alpha_colorizing-image.png" />
-<p class="caption"><span class="caption-text">运用设置Alpha节点色彩化一幅图像。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">运用设置Alpha节点色彩化一幅图像。</span></p>
 </div>
-<p>在如上范例中，关注蓝色调旋涡渲染输入的颜色。用户可以使用设置Alpha节点的颜色按钮添加一个连续的颜色到BW图像上。</p>
-<p>In the example map to the right,
-use the <em>Alpha</em> value of the Set Alpha node to give a desired degree of colorization.
-Thread the input image and the Set Alpha node into an Alpha Over node to colorize
-any black-and-white image in this manner.</p>
+<p>In the example above, notice how the blue tinge of the render input colors the swirl.
+You can use the Set Alpha node's color field with this kind of node map to add a consistent color to a BW image.</p>
+<p>在如图所示中，使用设置Alpha节点的 <em>Alpha</em> 值参数控制彩色化的显示程度。将 设置Alpha 节点连接到 Alpha上叠 节点的连接端口上可以彩色化任意的灰度图像。</p>
 </div>
 </div>
 </div>
@@ -288,7 +308,7 @@ any black-and-white image in this manner.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="switch_view.html" class="btn btn-neutral float-right" title="Switch View节点" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="switch_view.html" class="btn btn-neutral float-right" title="视图切换节点" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="rgb_to_bw.html" class="btn btn-neutral float-left" title="RGB -&gt; BW节点" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devinterface/splash.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/splash.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="介绍" href="window_system/introduction.html" />
+    <link rel="next" title="窗口系统介绍" href="window_system/introduction.html" />
     <link rel="prev" title="用户界面" href="index.html" /> 
 </head>
 
@@ -101,18 +120,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
 </ul>
@@ -189,32 +209,44 @@
 <p>启动Blender过程中，启动画面出现在窗口中间，其中包含了帮助选项链接和最近打开的blend文件，详情见下文。</p>
 <div class="figure align-center" id="id1">
 <img alt="../_images/interface_splash_current.png" src="../_images/interface_splash_current.png" />
-<p class="caption"><span class="caption-text">Blender启动画面。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Blender启动画面。</span></p>
 </div>
 <p>单击启动画面外任意位置(必须位于Blender窗口)，或者按 <kbd class="kbd docutils literal notranslate">Esc</kbd> ， 可以关闭启动画面并启动新项目。启动画面将消失，并显示默认窗口布局。</p>
-<p>在 <a class="reference internal" href="../editors/info/index.html"><span class="doc">信息编辑器</span></a> 标题栏单击Blender图标或者选择 <span class="menuselection">信息编辑器 ‣ 帮助 ‣ 启动画面</span> 菜单，可以重新打开启动画面。</p>
-<dl class="simple">
-<dt>标题</dt><dd><p>除Blender图标和文字之外，还显示Blender版本，例如目前的版本就是 2.80 。</p>
+<p>在顶栏的Blender图标上点击选择启动画面重新打开 <span class="guilabel">Splash Screen</span> 。</p>
+<dl class="docutils">
+<dt>信息区域</dt>
+<dd><p class="first">启动画面上半部分的图片包含很多关键信息。</p>
+<dl class="last docutils">
+<dt>标题</dt>
+<dd>除Blender图标和文字之外，还显示Blender版本，例如目前的版本就是 2.80 。</dd>
+<dt>日期</dt>
+<dd>在右上角，你可以看到该版本Blender的编译日期。</dd>
+<dt>Hash</dt>
+<dd>Git Hash值。在诊断问题时，这个可以帮到维护人员。</dd>
+<dt>分支</dt>
+<dd>可选分支ID。</dd>
+</dl>
 </dd>
-<dt>图像</dt><dd><p>通过图像可以识别包和版本。</p>
-</dd>
-<dt>日期</dt><dd><p>在右上角，你可以看到该版本Blender的编译日期。</p>
-</dd>
-<dt>Hash</dt><dd><p>Git Hash值。在诊断问题时，这个可以帮到维护人员。</p>
-</dd>
-<dt>分支</dt><dd><p>可选分支ID。</p>
-</dd>
-<dt>新建文件</dt><dd><p>基于预定义的应用模板，启动一个新工程。</p>
-</dd>
-<dt>最近打开的文件</dt><dd><p>你最近打开的blend文件，可以快速方便地打开最近的项目。</p>
-</dd>
-<dt>打开</dt><dd><p>用于打开现有blend文件。</p>
-</dd>
-<dt>恢复最后一次会话</dt><dd><p>Blender会试图从临时文件中恢复最后一次的项目。见 <a class="reference internal" href="../troubleshooting/recover.html"><span class="doc">恢复数据</span></a> 。</p>
-</dd>
-<dt>链接</dt><dd><p>官方网页链接，与信息编辑器中 <em>帮助</em> 菜单相同。见 <a class="reference internal" href="../getting_started/help.html#help-menu"><span class="std std-ref">帮助菜单</span></a> 。</p>
+<dt>交互区域</dt>
+<dd><p class="first">启动画面的下半部分是交互区域。</p>
+<dl class="last docutils">
+<dt>新建文件</dt>
+<dd>基于预定义的应用模板，启动一个新工程。</dd>
+<dt>最近打开的文件</dt>
+<dd>你最近打开的blend文件，可以快速方便地打开最近的项目。</dd>
+<dt>打开</dt>
+<dd>用于打开现有blend文件。</dd>
+<dt>恢复最后一次会话</dt>
+<dd>Blender会试图从临时文件中恢复最后一次的项目。见 <a class="reference internal" href="../troubleshooting/recover.html"><span class="doc">恢复数据</span></a> 。</dd>
+<dt>链接</dt>
+<dd>官方网页链接，与 <a class="reference internal" href="window_system/topbar.html"><span class="doc">顶栏</span></a> 中 <em>帮助</em> 菜单相同。见 <a class="reference internal" href="../getting_started/help.html#help-menu"><span class="std std-ref">帮助菜单</span></a> 。</dd>
+</dl>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">当首次启动Blender时，交互区域包含 <a class="reference internal" href="../getting_started/configuration/defaults.html#splash-quick-start"><span class="std std-ref">快速设置</span></a>。</p>
+</div>
 </div>
 
 
@@ -225,7 +257,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="window_system/introduction.html" class="btn btn-neutral float-right" title="介绍" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="window_system/introduction.html" class="btn btn-neutral float-right" title="窗口系统介绍" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="用户界面" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

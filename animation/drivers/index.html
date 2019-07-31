@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devanimation/drivers/index.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/drivers/index.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="简介" href="introduction.html" />
@@ -94,16 +113,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画 &amp; 绑定</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/index.html">骨架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lattice.html">Lattice 晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../constraints/index.html">约束</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../actions.html">动作</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">驱动器</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html">Usage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="drivers_panel.html">驱动器面板</a></li>
 <li class="toctree-l3"><a class="reference internal" href="workflow_examples.html">工作流程 &amp; 范例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="troubleshooting.html">问题排查</a></li>
@@ -117,10 +140,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -171,7 +195,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">动画</a> &raquo;</li>
+          <li><a href="../index.html">动画 &amp; 绑定</a> &raquo;</li>
         
       <li>驱动器</li>
     
@@ -197,25 +221,36 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">简介</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#adding-removing">添加 &amp; 删除</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#graph-view">曲线视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#driver-configuration">Driver Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#notes-on-scripted-expressions">Notes on Scripted Expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#add-driver">Add Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#edit-driver">Edit Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#open-drivers-editor">Open Drivers Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#copy-paste">Copy &amp; Paste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#expression">Expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#removing-drivers">Removing Drivers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="drivers_panel.html">驱动器面板</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="drivers_panel.html#settings">设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drivers_panel.html#example">示例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drivers_panel.html#driver-settings">驱动器设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drivers_panel.html#driver-variables">驱动变量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drivers_panel.html#expressions">表达式</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="workflow_examples.html">工作流程 &amp; 范例</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="workflow_examples.html#workflow">工作流程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="workflow_examples.html#examples">范例</a></li>
-<li class="toctree-l2"><a class="reference internal" href="workflow_examples.html#drivers-and-multiple-relative-shape-keys">驱动器和多重相关形态键</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_examples.html#transform-driver">变换驱动器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_examples.html#scripted-expression-orbit-a-point">Scripted Expression - Orbit a Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_examples.html#custom-function-square-value">Custom Function - Square Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_examples.html#shape-key-drivers">Shape Key Drivers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">问题排查</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#scripted-expression">脚本表达式</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#rotational-properties-are-radians">旋转属性是弧度制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#intra-armature-bone-drivers-can-misbehave">骨架内部骨骼驱动器会导致失常动作</a></li>
 </ul>
 </li>
 </ul>

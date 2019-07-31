@@ -1,0 +1,597 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>权重编辑 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/sculpt_paint/weight_paint/editing.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="蜡笔" href="../../grease_pencil/index.html" />
+    <link rel="prev" title="使用顶点组" href="usage.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">雕刻 &amp; 绘制</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brush/index.html">笔刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../navigation.html">Navigation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#modes">模式</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../sculpting/index.html">雕刻</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../texture_paint/index.html">纹理绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vertex_paint/index.html">顶点绘制</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">权重绘制</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tools.html">权重绘制工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tool_settings/index.html">工具设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage.html">使用顶点组</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">权重编辑</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">雕刻 &amp; 绘制</a> &raquo;</li>
+        
+          <li><a href="index.html">权重绘制</a> &raquo;</li>
+        
+      <li>权重编辑</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/sculpt_paint/weight_paint/editing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editing-weights">
+<h1>权重编辑<a class="headerlink" href="#editing-weights" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式和权重绘制模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">权重</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right" id="id1">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_panel.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_panel.png" />
+<p class="caption"><span class="caption-text">权重绘制工具。</span></p>
+</div>
+<p>Blender提供了一组权重绘制的工具。</p>
+<p class="rubric" id="bpy-ops-object-vertex-group-levels">子集选项</p>
+<p>其中一些工具还提供了一个子集过滤器（filter），以便将其功能限制只作用在特定的顶点组（在 <a class="reference internal" href="../../interface/undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> 中，调用该工具后显示），其中包含以下选项：</p>
+<ul class="simple">
+<li>激活的组</li>
+<li>选中的姿势骨骼</li>
+<li>变形姿势骨骼</li>
+<li>全部组</li>
+</ul>
+<p>所有工具也可以使用“顶点选择遮罩”和“面部选择遮罩”。在这些模式下，工具只能在选定的顶点或面上操作。</p>
+<div class="section" id="assign-from-bone-envelopes">
+<h2>指定来自封套骨骼<a class="headerlink" href="#assign-from-bone-envelopes" title="Permalink to this headline">¶</a></h2>
+<p>将选定骨骼的封套权重应用于选定的顶点组。</p>
+</div>
+<div class="section" id="assign-automatic-from-bone">
+<h2>从骨骼自动分配<a class="headerlink" href="#assign-automatic-from-bone" title="Permalink to this headline">¶</a></h2>
+<p>从选定的骨骼向顶点组应用与父级骨架菜单中相同的“自动权重”方法。</p>
+</div>
+<div class="section" id="normalize-all">
+<h2>全部规格化<a class="headerlink" href="#normalize-all" title="Permalink to this headline">¶</a></h2>
+<p>对于每个顶点，此工具确保所有顶点组的权重总和等于1. 此工具对所有顶点组进行了规格化，除了锁定组之外，这些组保持其权重值不变。</p>
+<div class="figure align-right" id="id2">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_normalize.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_normalize.png" />
+<p class="caption"><span class="caption-text">规格化所有选项。</span></p>
+</div>
+<dl class="docutils">
+<dt>锁定活动项</dt>
+<dd>保持激活组的值，同时使所有其他组的值正常化。</dd>
+</dl>
+</div>
+<div class="section" id="normalize">
+<h2>规格化<a class="headerlink" href="#normalize" title="Permalink to this headline">¶</a></h2>
+<p>该工具仅适用于激活的顶点组。所有顶点保持相对权重，但是整个权重组被放大，使得最高权重值为1.0。</p>
+<div class="figure" id="id3">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_normalize-example.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_normalize-example.png" />
+<p class="caption"><span class="caption-text">规格化范例。</span></p>
+</div>
+</div>
+<div class="section" id="mirror">
+<h2>镜像<a class="headerlink" href="#mirror" title="Permalink to this headline">¶</a></h2>
+<p>这个工具将权重从网格的一侧镜像到另一侧（只支持沿着x轴的镜像）。但请注意，权重不会转移到相应的骨骼权重组。镜像只在选定的顶点组内发生。</p>
+<div class="figure" id="id4">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_mirror-example.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_mirror-example.png" />
+<p class="caption"><span class="caption-text">镜像范例。</span></p>
+</div>
+<div class="figure align-right" id="id5">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_mirror.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_mirror.png" />
+<p class="caption"><span class="caption-text">镜像选项。</span></p>
+</div>
+<dl class="docutils">
+<dt>镜像权重</dt>
+<dd>镜像激活组的权重到另一边。请注意，这只影响激活的权重组。</dd>
+<dt>翻转组名称</dt>
+<dd>交换左侧和右侧的名称。该选项仅重命名组。</dd>
+<dt>全部组</dt>
+<dd>操作所有选定的骨骼。</dd>
+<dt>拓扑镜像</dt>
+<dd><p class="first">对于不是100％对称的网格的镜像（近似镜像）。更多信息见 <a class="reference internal" href="../../modeling/meshes/editing/mesh_options.html#modeling-meshes-editing-topology-mirror"><span class="std std-ref">这里</span></a>。</p>
+<div class="last admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>镜像到对面的骨骼</p>
+<p>如果你想为另一边的骨骼创建一个镜像的权重组（对称角色），那么你可以这样做：</p>
+<ol class="last arabic simple">
+<li>删除目标顶点组（将放置镜像权重的位置）。</li>
+<li>创建源骨骼“顶点组”（包含要复制的权重的组）的副本。</li>
+<li>将新的顶点组重命名为目标顶点组（你在上面删除的组）的名称。</li>
+<li>选择目标顶点组并调用镜像工具（如果网格不对称，则仅使用镜像权重选项和可选的 <em>拓扑镜像</em>）。</li>
+</ol>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="invert">
+<h2>反转<a class="headerlink" href="#invert" title="Permalink to this headline">¶</a></h2>
+<p>将所选权重组的每个权重替换为×-1.0权重。</p>
+<p>示例：</p>
+<ul class="simple">
+<li>原始的1.0转换为0.0</li>
+<li>原始0.5仍然是0.5</li>
+<li>原始0.0转换为1.0</li>
+</ul>
+<div class="figure" id="id6">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_invert-example.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_invert-example.png" />
+<p class="caption"><span class="caption-text">反转。</span></p>
+</div>
+<div class="figure align-right" id="id7">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_invert.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_invert.png" />
+<p class="caption"><span class="caption-text">反转选项。</span></p>
+</div>
+<dl class="docutils">
+<dt>子集</dt>
+<dd>将工具限制为子集。请参阅上面的 <a class="reference internal" href="#bpy-ops-object-vertex-group-levels"><span class="std std-ref">子集选项</span></a> ，了解如何定义子集。</dd>
+<dt>添加权重</dt>
+<dd>在反转之前添加没有权重的顶点（这些权重将全部设置为1.0)</dd>
+<dt>移除权重</dt>
+<dd>反转后，如果它们为0.0，则从顶点组中移除顶点。</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">锁定的顶点组不受影响。</p>
+</div>
+</div>
+<div class="section" id="clean">
+<h2>清空<a class="headerlink" href="#clean" title="Permalink to this headline">¶</a></h2>
+<p>删除给定阈值以下的权重。这个工具对清除权重非常低（或零）的权重组很有用。</p>
+<p>在所示的示例中，使用了0.2的截止值（见下面的操作员选项），以便清除所有（右侧）蓝色部分（左侧）。</p>
+<p>请注意，图像使用 <em>显示零权重</em> 活动选项，以便未引用的权重显示为黑色。</p>
+<div class="figure" id="id8">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_clean-example.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_clean-example.png" />
+<p class="caption"><span class="caption-text">清空范例。</span></p>
+</div>
+<div class="figure align-right" id="id9">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_clean.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_clean.png" />
+<p class="caption"><span class="caption-text">清空选项。</span></p>
+</div>
+<dl class="docutils">
+<dt>子集</dt>
+<dd>将工具限制为子集。有关如何定义子集，请参阅上面的 <a class="reference internal" href="#bpy-ops-object-vertex-group-levels"><span class="std std-ref">子集选项</span></a> 。</dd>
+<dt>限制</dt>
+<dd>这是本组保留的最低权重值。低于此值的权重将从组中删除。</dd>
+<dt>保持单个</dt>
+<dd>确保清除工具将不会创建完全未引用的顶点（不分配给任何顶点组的顶点），所以每个顶点将保持至少一个权重，即使它低于极限值！</dd>
+</dl>
+</div>
+<div class="section" id="quantize">
+<h2>量化<a class="headerlink" href="#quantize" title="Permalink to this headline">¶</a></h2>
+<p>此运算使用 <a class="reference external" href="https://en.wikipedia.org/wiki/Quantization">量化</a> 过程，获取输入权重并把权重转化为(0 - 1)之间有限个离散值，从而避免连续值的存在。</p>
+<div class="figure" id="id10">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_quantize-example.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_quantize-example.png" />
+<p class="caption"><span class="caption-text">量化范例 (阶距 = 2)。</span></p>
+</div>
+<dl class="docutils">
+<dt>阶距</dt>
+<dd>衡量0到1之间需要划分的量化精度。例如阶距为5则允许以下权重值 <code class="docutils literal notranslate"><span class="pre">[0.0,</span> <span class="pre">0.2,</span> <span class="pre">0.4,</span> <span class="pre">0.6,</span> <span class="pre">0.8,</span> <span class="pre">1.0]</span></code> 。</dd>
+</dl>
+</div>
+<div class="section" id="levels">
+<h2>层级<a class="headerlink" href="#levels" title="Permalink to this headline">¶</a></h2>
+<p>为所选权重组的所有权重添加偏移量和比例。使用此工具，您可以提高或降低权重组的整体“热量”。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">无论设置如何，权重都不会超过1.0或低于0.0。</p>
+</div>
+<div class="figure" id="id11">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_levels-example.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_levels-example.png" />
+<p class="caption"><span class="caption-text">层级范例。</span></p>
+</div>
+<div class="figure align-right" id="id12">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_levels.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_levels.png" />
+<p class="caption"><span class="caption-text">层级选项。</span></p>
+</div>
+<dl class="docutils">
+<dt>子集</dt>
+<dd>将工具限制为子集。有关如何定义子集，请参阅上面的 <a class="reference internal" href="#bpy-ops-object-vertex-group-levels"><span class="std std-ref">子集选项</span></a> 。</dd>
+<dt>偏移量</dt>
+<dd>将范围（-1.0  -  1.0）中的值添加到顶点组中的所有权重。</dd>
+<dt>增益</dt>
+<dd>子集中的所有权重都与增益相乘。</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">无论您选择哪种 <em>增益</em> 和 <em>偏移</em>，在任何情况下，每个权重的最终值将被限制在范围（0.0  -  1.0）内。所以使用此工具你永远不会得到负的权重或过热的面积（重量&gt; 1.0）。</p>
+</div>
+</div>
+<div class="section" id="smooth">
+<h2>光滑<a class="headerlink" href="#smooth" title="Permalink to this headline">¶</a></h2>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Blend工具只在启用“绘制时顶点选择遮罩”才起作用。否则，该工具按钮变灰。</p>
+</div>
+<p>将所选顶点的权重与相邻的未选顶点进行混合。该工具仅适用于顶点选择模式。</p>
+<div class="figure">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_smooth-example-1.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_smooth-example-1.png" />
+</div>
+<p>要理解这个工具的功能，让我们来看一个简单的例子。选定的顶点连接到四个相邻的顶点（在图像中用灰色圆圈标记）。所有相邻的顶点都未被选中。现在，该工具将计算所有连接的 <strong>和</strong> 未选顶点的平均权重。在这个例子中是这样的：</p>
+<p><span class="math notranslate nohighlight">\((1 + 0 + 0 + 0) / 4 = 0.25\)</span></p>
+<p>该值乘以运算符选项中给出的系数（见下文）。</p>
+<ul class="simple">
+<li>如果系数是0.0，那么实际上什么也没有发生，顶点只是保持它的值。</li>
+<li>如果系数(因子）是1.0，则计算平均权重（在此为0.25）。</li>
+<li>将系数（因子）从0拖到1逐渐从旧值改变到计算的平均值。</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_smooth-example-2.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_smooth-example-2.png" />
+</div>
+<p>现在，让我们看看在选择除了的选择顶点的邻近顶点之外的所有顶点会发生什么。再次，所有连接和未选择的顶点都用灰色圆圈标记。当我们现在调用光滑工具并将系数设置为1.0时，我们会看到每个选定顶点的不同结果：</p>
+<ul>
+<li><p class="first">最顶部和最底部的选定顶点：</p>
+<p>被三个未被选择的顶点包围，平均权重为 <span class="math notranslate nohighlight">\((1 + 0 + 0) / 3 = 0.333\)</span> 因此，它们的颜色变成浅绿色。</p>
+</li>
+<li><p class="first">中间顶点：</p>
+<p>与“权重= 1”未选中的顶点连接。所以在这种情况下平均权重是1.0，因此选定的顶点颜色已经变成红色。</p>
+</li>
+<li><p class="first">右顶点：</p>
+<p>被平均权重= <span class="math notranslate nohighlight">\((0 + 0 + 0) / 3 = 0.0\)</span> 的三个未选择的顶点包围。因此，平均权重为0，因此所选顶点颜色根本没有改变（在平滑之前它已经是蓝色）。</p>
+</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_smooth-example-3.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_smooth-example-3.png" />
+</div>
+<p>最后让我们看一个实际的例子。中间边循环已被选中，并将用于混合区域的左侧和右侧。</p>
+<ul class="simple">
+<li>所有选定的顶点都有两个未选中的相邻顶点。</li>
+<li>未选定顶点的平均权重为 <span class="math notranslate nohighlight">\((1 + 0) / 2 = 0.5\)</span></li>
+<li>因此，当 <em>系数</em> 设置为1.0时，边循环变为绿色，最后混合冷端（右）和热端（左）。</li>
+</ul>
+<div class="figure align-right" id="id13">
+<img alt="../../_images/sculpt-paint_weight-paint_weight-tools_smooth.png" src="../../_images/sculpt-paint_weight-paint_weight-tools_smooth.png" />
+<p class="caption"><span class="caption-text">光滑的选项。</span></p>
+</div>
+<dl class="docutils">
+<dt>系数</dt>
+<dd>混合的有效量。当系数设置为0.0时，<a class="reference internal" href="#smooth">光滑</a> 工具不会执行任何操作。对于系数&gt; 0，受影响顶点的权重逐渐从它们的原始值向所有连接的 <strong>和</strong> 未选定顶点的平均权重（见上面的示例）转移。</dd>
+<dt>迭代</dt>
+<dd>重复光滑操作的次数。</dd>
+<dt>展开/收缩</dt>
+<dd>正值展开选中相邻顶点，负值收缩选中范围。</dd>
+<dt>源</dt>
+<dd><p class="first">需要混合的顶点。</p>
+<dl class="last docutils">
+<dt>所有</dt>
+<dd>对所有选中和未选中的顶点应用光滑操作。</dd>
+<dt>仅限选中</dt>
+<dd>对所有选中顶点应用光滑操作。</dd>
+<dt>仅限未选中</dt>
+<dd>对所有未选中顶点应用光滑操作。</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="transfer-weights">
+<h2>传递权重<a class="headerlink" href="#transfer-weights" title="Permalink to this headline">¶</a></h2>
+<p>从其他物体复制权重到激活物体的顶点组。</p>
+<p>默认情况下，此工具仅将源对象的激活（选定）顶点组复制到目标对象的激活顶点组，如果该组不存在，则创建一个新的顶点组。但是，您可以在 <a class="reference internal" href="../../interface/undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> 面板中更改此工具行为。</p>
+<p>例如，要将所有现有顶点组从源对象传输到目标，请将 <em>源层选择</em> 选项更改为 <em>按名称</em> 。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">这个工具现在使用通用的“数据传输”，将所有选中物体的数据传输到激活物体。有关选项的详细信息和解释，请参阅 <a class="reference internal" href="../../modeling/meshes/editing/data_transfer.html"><span class="doc">数据传递</span></a> 。</p>
+</div>
+<div class="section" id="prepare-the-copy">
+<h3>准备副本<a class="headerlink" href="#prepare-the-copy" title="Permalink to this headline">¶</a></h3>
+<p>您首先选择所有源物体，最后选择目标物体（目标物体必须是激活物体）。</p>
+<p>源物体和目标物体位于同一位置很重要。如果它们并排放置，那么权重传递（转移）将不起作用。(参考 <em>顶点映射</em> 选项)。 你可以将物体放置在不同的图层上，但必须确保在调用该工具时所有物体都可见。</p>
+<p>现在确保目标物体处于权重绘制模式。打开工具栏调用 <em>权重工具</em> 面板中的 <em>传递权重</em> 工具。</p>
+</div>
+<div class="section" id="adjust-last-operation-panel-confusion">
+<h3>调整上一步操作面板混淆<a class="headerlink" href="#adjust-last-operation-panel-confusion" title="Permalink to this headline">¶</a></h3>
+<p>您可能会注意到 <a class="reference internal" href="../../interface/undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> ` 面板在权重传递完成后仍然可用。只有当调用另一个具有 <a class="reference internal" href="../../interface/undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> 面板的操作时，面板才会消失。这可能会导致在更改顶点组后重复使用传递权重时出现混淆。如果您随后使用仍然可见的 <a class="reference internal" href="../../interface/undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> 面板，那么Blender会将您的工作重置为初次调用 <em>传递权重</em> 时的状态。</p>
+<p>在对顶点组进行了一些更改后，如果要再次调用 <em>传递权重</em> 工具，则即使 <a class="reference internal" href="../../interface/undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> 操作面板仍然可用，也应 <strong>始终</strong> 使用 <em>传递权重</em> 按钮。除非你真的想将你的更改重置为该工具的初始调用状态。</p>
+</div>
+</div>
+<div class="section" id="limit-total">
+<h2>总限值<a class="headerlink" href="#limit-total" title="Permalink to this headline">¶</a></h2>
+<p>减少每个顶点的权重组到指定的限制数量。该工具首先删除最低的权重，直到达到限制数量。</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">只有选择了多个权重组时，该工具才能合理工作。</p>
+</div>
+<dl class="docutils">
+<dt>子集</dt>
+<dd>将工具限制为子集。有关如何定义子集，请参阅上面的 <a class="reference internal" href="#bpy-ops-object-vertex-group-levels"><span class="std std-ref">子集选项</span></a> 。</dd>
+<dt>限制</dt>
+<dd>每个顶点允许的最大权重数。</dd>
+</dl>
+</div>
+<div class="section" id="fix-deforms">
+<h2>修正形变<a class="headerlink" href="#fix-deforms" title="Permalink to this headline">¶</a></h2>
+<p><em>修正形变</em> 工具用于修改一个物体的非零权重，使其变形的顶点处于新定义的距离。此工具可以修复当复杂模型变形到其极端姿势时通常会明显出现凹凸不平、锯齿状或其他不正确的变形。使用此工具，可以平滑变形。</p>
+<p>要使用该工具，请在编辑模式下或使用顶点选择/遮罩选择要移动的顶点。此操作可以使用和更改这些选项：</p>
+<dl class="docutils">
+<dt>距离</dt>
+<dd>需要移动的距离。</dd>
+<dt>强度</dt>
+<dd>通过此参数修改移动距离。</dd>
+<dt>精度</dt>
+<dd>通过此参数修改权重在每次迭代的变化量：数值越小变化越慢。</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">请注意如果不做修改，则非零骨骼权重不会为了靠近目的距离而被修改。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../grease_pencil/index.html" class="btn btn-neutral float-right" title="蜡笔" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="usage.html" class="btn btn-neutral float-left" title="使用顶点组" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

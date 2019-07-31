@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>体积着色器 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/materials/components/volume.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="置换着色器" href="displacement.html" />
+    <link rel="prev" title="表面" href="surface.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../eevee/index.html">Eevee</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cycles/index.html">Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workbench/index.html">Workbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cameras.html">相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lights/index.html">Lights</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Materials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="surface.html">表面</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">体积着色器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="displacement.html">置换着色器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../assignment.html">Assignment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preview.html">预览</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../settings.html">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../legacy_textures/index.html">Legacy Textures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../shader_nodes/index.html">着色器节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../color_management.html">色彩管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染输出</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="../index.html">Materials</a> &raquo;</li>
+        
+          <li><a href="index.html">Components</a> &raquo;</li>
+        
+      <li>体积着色器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/render/materials/components/volume.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="volumes">
+<h1>体积着色器<a class="headerlink" href="#volumes" title="Permalink to this headline">¶</a></h1>
+<p>体积渲染可以用来实现像火，烟，雾，或者玻璃吸收光的渲染效果，以及许多不能单独被表面网格所表现的效果。</p>
+<p>要设置体积着色时，先要创建一个包含这块体积的网格区域。在默认材质节点中，移除表面节点，连接体积内部的节点，以此来定义内部纹理。要模拟玻璃的吸收效果可以把表面着色器和体积着色器都加上。世界设置也可以使用体着色器来模拟烟雾等效果。</p>
+<div class="section" id="shading">
+<h2>着色<a class="headerlink" href="#shading" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="principled-volume">
+<h3>Principled 体积<a class="headerlink" href="#principled-volume" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="../../shader_nodes/shader/volume_principled.html"><span class="doc">Principled Volume</span></a>
+is a physically-based volume shader that can be used to create a wide range of volume materials.
+It supports scattering, absorption and emission in one easy to use node. Fire can be rendered with blackbody emission.</p>
+<div class="figure align-center" id="id1">
+<img alt="../../../_images/render_materials_components_volume_principled.jpg" src="../../../_images/render_materials_components_volume_principled.jpg" />
+<p class="caption"><span class="caption-text">通过原理Principled着色渲染烟雾和火焰。</span></p>
+</div>
+</div>
+<div class="section" id="volume-components">
+<h3>体积组件<a class="headerlink" href="#volume-components" title="Permalink to this headline">¶</a></h3>
+<p>要获得更多控制，可以将体积着色组件手动组合到自定义着色器设置中。</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../shader_nodes/shader/volume_absorption.html"><span class="doc">Volume Absorption</span></a>
+will absorb part of the light as it passes through the volume.
+This can be used to shade for example black smoke or colored glass objects, or mixed with the volume scatter node.
+This node is similar to the transparent BSDF node,
+it blocks part of the light and lets other light pass straight through.</li>
+<li><a class="reference internal" href="../../shader_nodes/shader/volume_scatter.html"><span class="doc">Volume Scatter</span></a>
+lets light scatter in other directions as it hits particles in the volume.
+The anisotropy defines in which direction the light is more likely to scatter.
+A value of 0 will let light scatter evenly in all directions (similar to the diffuse BSDF node),
+negative values let light scatter mostly backwards, and positive values let light scatter mostly forward.
+This can be used to shade white smoke or clouds for example.</li>
+<li><a class="reference internal" href="../../shader_nodes/shader/emission.html"><span class="doc">Emission</span></a>
+will emit light from the volume, for example for fire.</li>
+</ul>
+<div class="figure align-center" id="id2">
+<img alt="../../../_images/render_materials_components_volume_node.jpg" src="../../../_images/render_materials_components_volume_node.jpg" />
+<p class="caption"><span class="caption-text">体积吸收，散射，发射</span></p>
+</div>
+</div>
+<div class="section" id="attributes">
+<h3>属性<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>渲染烟雾和火焰时，体积属性用于定义体积的形状和阴影。 Principled 体积着色器默认使用它们，而自定义体积着色器可以使用Attribute节点获取密度，颜色和温度等属性。</p>
+</div>
+<div class="section" id="density">
+<h3>密度<a class="headerlink" href="#density" title="Permalink to this headline">¶</a></h3>
+<p>所有的体着色器都有一个密度定义。密度决定了光线有多少需要跟体积进行交互，得到吸收或者散色，还有多少会直接穿透。要模拟烟雾的时候你需要指定一个密度场来说明体积的哪些地方烟比较多（密度大于0），哪些地方是没有烟的（密度等于0）。</p>
+<p>现实世界中的体积由粒子组成，密度越高意味着每单位体积的粒子越多。更多的粒子意味着光线与粒子碰撞并被吸收或散射的可能性更大，而不是直接通过。</p>
+</div>
+</div>
+<div class="section" id="mesh-volumes">
+<h2>网格体积<a class="headerlink" href="#mesh-volumes" title="Permalink to this headline">¶</a></h2>
+<p>作为体积渲染的网格需要是闭合的，以及符合 <a class="reference internal" href="../../../glossary/index.html#term-manifold"><span class="xref std std-term">流形</span></a> 。这意味着网格上是不能有开口。每条边必须严格的保证链接到两个面上，不能有洞和T形的面，比如说不能有三个或者三个以上的面链接到一条边上。</p>
+<p>想要结果正确，法线必须全部指向外面。法线是用来探测光束是进入还是穿出体积的，如果法线指向错误的方向，又或是网格上有开口的话，渲染器可能根本无法知道体积的内外方向。</p>
+<p>这套规则也同样适用于：如何正确地渲染玻璃折射。</p>
+</div>
+<div class="section" id="world-volume">
+<h2>世界体积<a class="headerlink" href="#world-volume" title="Permalink to this headline">¶</a></h2>
+<p>体积着色器也可以在整个世界中应用，它会填满整个空间。</p>
+<p>Currently, this is most useful for night time or other dark scenes,
+as the world surface shader or sun lights will have no effect if a volume shader is used.
+This is because the world background is assumed to be infinitely far away,
+which is accurate enough for the sun for example.
+However, for modeling effects such as fog or atmospheric scattering,
+it is not a good assumption that the volume fills the entire space,
+as most of the distance between the sun and the earth is empty space.
+For such effects it is be better to create a volume object surrounding the scene.
+The size of this object will determine how much light is scattered or absorbed.</p>
+</div>
+<div class="section" id="multiple-scattering">
+<h2>多重散射<a class="headerlink" href="#multiple-scattering" title="Permalink to this headline">¶</a></h2>
+<p>Real-world effects such as scattering in clouds or subsurface scattering require many
+scattering bounces. However, unbiased rendering of such effects can be noisy, so by default
+the number of bounces is zero in Cycles, and no support is available in Eevee.
+The effect you get when rendering with zero volume bounces is what is known as
+&quot;single scattering&quot;, the effect from more bounces is &quot;multiple scattering&quot;.</p>
+<p>对于需要多次散射的渲染材质（如皮肤或牛奶），次表面散射更有效且更易于控制。特别地，随机游走方法可以准确地渲染这种材质。</p>
+<p>云和烟雾这样没有明确边界表面的材质，体渲染是必须的。多次散射反弹的外观效果更逼真，但是在实际操作中通常会限制反弹次数，为了保证渲染不会耗时太长。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="displacement.html" class="btn btn-neutral float-right" title="置换着色器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="surface.html" class="btn btn-neutral float-left" title="表面" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

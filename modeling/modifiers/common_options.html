@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>常见的修改器选项 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/common_options.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="数据传递修改器" href="modify/data_transfer.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">空物体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">常见的修改器选项</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vertex-group">顶点组</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#texture">纹理</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#modify">修改</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#generate">生成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#deform">形变</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#simulate">模拟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="index.html">修改器</a> &raquo;</li>
+        
+      <li>常见的修改器选项</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modeling/modifiers/common_options.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="common-modifier-options">
+<h1>常见的修改器选项<a class="headerlink" href="#common-modifier-options" title="Permalink to this headline">¶</a></h1>
+<p>一些选项经常被许多修改器使用，并且在所有修改器中共享对这些选项的操作。特别是，许多选项提供了建立在顶点基础上的精确遮罩和权重的效果的方法(使用顶点组和/或纹理)。</p>
+<div class="section" id="vertex-group">
+<span id="modifiers-common-options-masking"></span><h2>顶点组<a class="headerlink" href="#vertex-group" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id1">
+<img alt="../../_images/modeling_modifiers_generic_vertex-group.png" src="../../_images/modeling_modifiers_generic_vertex-group.png" />
+<p class="caption"><span class="caption-text">典型的修改器顶点组选项</span></p>
+</div>
+<p><a class="reference internal" href="../meshes/properties/vertex_groups/introduction.html"><span class="doc">顶点组</span></a> 是一种简单的方法来控制哪些顶点受到修改器的影响，以及影响到什么程度(使用它们的权重)。在修改网格或晶格时，它们是可用的。</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">顶点组也可以编辑，甚至使用 <a class="reference internal" href="modify/weight_edit.html#bpy-types-vertexweighteditmodifier"><span class="std std-ref">顶点权重修改器</span></a> 动画化。</p>
+</div>
+<dl class="docutils">
+<dt>顶点组</dt>
+<dd><p class="first">顶点组名。</p>
+<div class="last admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">顶点组按其名称引用。这意味着如果重命名它，使用它的所有修改器将丢失与重命名顶点组的连接(它们的字段将变为红色)，并且您必须在所有修改器中再次选择正确的顶点组。</p>
+</div>
+</dd>
+<dt>反转（双箭头图标）</dt>
+<dd>反转顶点组所产生的影响。仅在部分修改器可用。</dd>
+</dl>
+</div>
+<div class="section" id="texture">
+<h2>纹理<a class="headerlink" href="#texture" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id2">
+<img alt="../../_images/modeling_modifiers_generic_texture.png" src="../../_images/modeling_modifiers_generic_texture.png" />
+<p class="caption"><span class="caption-text">典型的修改器纹理选项。</span></p>
+</div>
+<p>这些选项允许使用任何类型的图像(包括参数图像)来控制修改器的效果。大多数情况下，只使用纹理的值(灰度)，但在某些情况下(例如 <a class="reference internal" href="deform/displace.html#bpy-types-displacemodifier"><span class="std std-ref">置换修改器</span></a> 的一些模式)，可能会利用整个RGB颜色组件。</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">纹理可以被动画化(或者使用视频，或者通过动画化映射坐标…)</p>
+</div>
+<dl class="docutils">
+<dt>纹理</dt>
+<dd><p class="first">要使用 <a class="reference internal" href="../../render/materials/legacy_textures/introduction.html"><span class="doc">纹理数据块</span></a>。</p>
+<div class="last admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">通过点击这个区域最右边的按钮(带有设置图标)，你可以直接在“纹理属性”编辑器中进入所选纹理的设置。</p>
+</div>
+</dd>
+<dt>纹理坐标</dt>
+<dd><p class="first">纹理坐标得到每个顶点的值:</p>
+<dl class="last docutils">
+<dt>UV</dt>
+<dd><p class="first">从UV坐标
+中提取纹理坐标。</p>
+<dl class="docutils">
+<dt>UV贴图</dt>
+<dd><a class="reference internal" href="../../glossary/index.html#term-uv-map"><span class="xref std std-term">UV映射</span></a> 从UV获取纹理坐标。如果对象没有UV坐标，则返回到*本地*坐标系。如果这个字段是空白的，但是有一个UV贴图可用(例如，在将第一个UV贴图添加到网格之后)，则使用当前活动的UV贴图。</dd>
+</dl>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p>由于UV坐标是为每个面指定的，因此UV纹理坐标系统通过使用遇到该顶点的第一个面来在当前确定每个顶点的UV坐标。使用该顶点的任何其他面都将被忽略。</p>
+<p class="last">如果网格具有不连续的UV坐标，可能会导致图像伪影。</p>
+</div>
+</dd>
+<dt>对象</dt>
+<dd><p class="first">从另一个对象的坐标系中获取纹理坐标。</p>
+<dl class="docutils">
+<dt>对象</dt>
+<dd><p class="first">要从中获取纹理坐标的对象。因此，移动对象将改变纹理映射的坐标。</p>
+<p class="last">如果该字段为空，则返回到*本地*坐标系。</p>
+</dd>
+</dl>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">移动原始对象 <strong>也</strong> 会导致纹理坐标的更新。因此，如果需要在移动使用修改器的对象时保持位移坐标系，请考虑 <a class="reference internal" href="../../scene_layout/object/properties/relations/parents.html#bpy-ops-object-parent-set"><span class="std std-ref">父处理</span></a> 坐标对象到使用修改器对象。</p>
+</div>
+</dd>
+<dt>全局的</dt>
+<dd>从全局坐标系中获取纹理坐标。</dd>
+<dt>本地的</dt>
+<dd>从对象的本地坐标系中获取纹理坐标。</dd>
+</dl>
+</dd>
+<dt>使用信道</dt>
+<dd><p class="first">该通道作为值源使用(目前只有少数几个修改器可用，除非另有规定，其他通道只使用*强度*来操作)。</p>
+<dl class="docutils">
+<dt>强度</dt>
+<dd>RGB通道的平均值(如果RGB(1.0, 0.0, 0.0)值为0.33)。</dd>
+<dt>红/绿/蓝/Alpha</dt>
+<dd>颜色通道的值之一。</dd>
+<dt>色调</dt>
+<dd>来自HSV颜色空间的色调(即;标准轮中的颜色，例如蓝色比黄色的色调值高)。</dd>
+<dt>饱和度</dt>
+<dd>HSV颜色空间的饱和度(例如纯红色为1.0，灰色为0.0)。</dd>
+<dt>值</dt>
+<dd>来自HSV颜色空间的值。</dd>
+</dl>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">除 <em>强度</em> 外，上述所有通道均经过伽马校正。</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="modify/data_transfer.html" class="btn btn-neutral float-right" title="数据传递修改器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

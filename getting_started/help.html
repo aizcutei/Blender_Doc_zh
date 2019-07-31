@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devgetting_started/help.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/getting_started/help.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="用户界面" href="../interface/index.html" />
-    <link rel="prev" title="配置目录" href="installing/configuration/directories.html" /> 
+    <link rel="prev" title="默认配置" href="configuration/defaults.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,6 +113,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Blender入门</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="about/index.html">关于Blender</a></li>
 <li class="toctree-l2"><a class="reference internal" href="installing/index.html">安装Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/index.html">配置Blender</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">帮助系统</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#tooltips">工具提示</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#elements">包含元素</a></li>
@@ -102,9 +122,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#context-sensitive-manual-access">访问上下文相关手册</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#help-menu">帮助菜单</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#web-links">网页链接</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#scripting-reference">脚本参考</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#save-system-info">保存系统信息</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#splash-screen">启动画面</a></li>
 </ul>
 </li>
 </ul>
@@ -113,18 +131,19 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
 </ul>
@@ -201,116 +220,105 @@
 <p>Blender有许多内置或基于网页的帮助选项。</p>
 <div class="section" id="tooltips">
 <h2>工具提示<a class="headerlink" href="#tooltips" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id2">
+<div class="figure" id="id2">
 <img alt="../_images/getting-started_help_tooltip.png" src="../_images/getting-started_help_tooltip.png" />
-<p class="caption"><span class="caption-text">信息编辑器中渲染引擎选择器的工具提示。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">信息编辑器中渲染引擎选择器的工具提示。</span></p>
 </div>
 <p>当鼠标划过某个按钮或者设置时，停留片刻，会出现工具提示。</p>
 <div class="section" id="elements">
 <h3>包含元素<a class="headerlink" href="#elements" title="Permalink to this headline">¶</a></h3>
 <p>上下文相关的工具提示可能会包含如下元素:</p>
-<dl class="simple">
-<dt>简短介绍</dt><dd><p>控件相关细节。</p>
-</dd>
-<dt>快捷键</dt><dd><p>与工具关联的键盘或者鼠标操作。</p>
-</dd>
-<dt>值</dt><dd><p>属性值。</p>
-</dd>
-<dt>库</dt><dd><p>活动物体的源文件，另见 <a class="reference internal" href="../data_system/linked_libraries.html"><span class="doc">关联库</span></a>。</p>
-</dd>
-<dt>禁用(红色)</dt><dd><p>数值无法编辑的原因。</p>
-</dd>
-<dt>Python</dt><dd><p>用于 <a class="reference internal" href="../advanced/scripting/index.html#scripting-index"><span class="std std-ref">脚本</span></a> ——与控件(通常是属性或者操作符)相关的Python命令。</p>
-</dd>
+<dl class="docutils">
+<dt>简短介绍</dt>
+<dd>控件相关细节。</dd>
+<dt>快捷键</dt>
+<dd>与工具关联的键盘或者鼠标操作。</dd>
+<dt>值</dt>
+<dd>属性值。</dd>
+<dt>库</dt>
+<dd>活动物体的源文件，另见 <a class="reference internal" href="../files/linked_libraries.html"><span class="doc">关联库</span></a>。</dd>
+<dt>禁用(红色)</dt>
+<dd>数值无法编辑的原因。</dd>
+<dt>Python</dt>
+<dd>当启用 <a class="reference internal" href="../editors/preferences/interface.html#prefs-interface-dev-extras"><span class="std std-ref">开发选项</span></a>，将显示一个用于 <a class="reference internal" href="../advanced/scripting/index.html#scripting-index"><span class="std std-ref">脚本编写</span></a> 的Python表达式(通常为一操作项或属性)。</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="context-sensitive-manual-access">
 <span id="help-manual-access"></span><h2>访问上下文相关手册<a class="headerlink" href="#context-sensitive-manual-access" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>所有模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">RMB</kbd>, <span class="menuselection">在线手册</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Alt-F1</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">所有模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">RMB</kbd>, <span class="menuselection">在线手册</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Alt-F1</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>用户可能需要在Blender内部获取工具或界面内容的相关帮助。</p>
 <p>使用快捷键或者右键菜单，访问Blender的参考手册的相关页面。通常会打开与光标下的按钮相关的网页，适用于工具和数值按钮。</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="first admonition-title">Note</p>
 <p>手册尚未覆盖所有界面内容，如果某个工具没有相关手册链接，用户会在信息编辑器标题栏看到警告信息。</p>
-<p>有些时候，按钮可能指向文档通用章节。</p>
+<p class="last">有些时候，按钮可能指向文档通用章节。</p>
 </div>
 </div>
 <div class="section" id="help-menu">
 <span id="id1"></span><h2>帮助菜单<a class="headerlink" href="#help-menu" title="Permalink to this headline">¶</a></h2>
-<p>信息编辑器标题栏上的 <em>帮助</em> 按钮。</p>
-<div class="figure align-right" id="id3">
-<img alt="../_images/getting-started_help_menu.png" src="../_images/getting-started_help_menu.png" />
-<p class="caption"><span class="caption-text">帮助菜单。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
 <div class="section" id="web-links">
 <h3>网页链接<a class="headerlink" href="#web-links" title="Permalink to this headline">¶</a></h3>
 <p>该菜单提供了指向Blender相关页面的选项：在 <a class="reference internal" href="../interface/splash.html#splash"><span class="std std-ref">启动画面</span></a> 中也可以找到这些链接。</p>
-<dl class="simple">
-<dt>手册</dt><dd><p>该链接指向你正在阅读的 <a class="reference internal" href="../index.html"><span class="doc">Blender官方手册</span></a> 。</p>
-</dd>
-<dt>发布日志</dt><dd><p><a class="reference external" href="https://www.blender.org/features/releases/">发布日志</a> 会记录当前Blender版本做出的改动。</p>
-</dd>
-<dt>Blender主页</dt><dd><p><a class="reference external" href="http://www.blender.org/">Blender 网站</a> 主页。</p>
-</dd>
-<dt>Blender商店</dt><dd><p><a class="reference external" href="https://store.blender.org/">Blender商店</a> , 你可以在上面买到教程DVD，书籍，T恤以及其他一些产品。</p>
-</dd>
-<dt>开发者社区</dt><dd><p><em>blender.org</em> <a class="reference external" href="https://www.blender.org/get-involved/">参与</a> 页面。这是Blender的软件开发、bug追踪、补丁以及脚本、教育和培训、文档开发以及功能研究的导航页面。</p>
-</dd>
-<dt>用户社区</dt><dd><p><a class="reference external" href="https://www.blender.org/support/user-community/">支持站点</a> 列表。</p>
-</dd>
-<dt>提交Bug</dt><dd><p><a class="reference external" href="https://developer.blender.org/maniphest/task/create/?project=2&amp;type=Bug">Blender Bug追踪器</a> （需要注册）。</p>
-</dd>
+<dl class="docutils">
+<dt><a class="reference internal" href="../index.html"><span class="doc">手册</span></a></dt>
+<dd>该链接指向你正在阅读的Blender官方手册。</dd>
+<dt><a class="reference external" href="https://www.blender.org/support/tutorials">教程</a></dt>
+<dd>帮助用户学习如何使用Blender的大量教程。</dd>
+<dt><a class="reference external" href="https://www.blender.org/support/user-community/">支持</a></dt>
+<dd>各种站点的链接，提供社区与专业化支持。</dd>
 </dl>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>浏览器和互联网连接</p>
-<p>很多帮助的内容会启动浏览器，并访问Blender基金会的网络服务器。要实现这些，必须在操作系统中配置默认浏览器，并连接互联网。</p>
-</div>
-</div>
-<div class="section" id="scripting-reference">
-<h3>脚本参考<a class="headerlink" href="#scripting-reference" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt>Python API 参考</dt><dd><p>可以通过 <a class="reference external" href="https://www.blender.org/api/blender_python_api_current/">Python API 参考手册</a> 来查询Python的API。</p>
-</dd>
-<dt>操作项信息一览</dt><dd><p>创建 <code class="docutils literal notranslate"><span class="pre">OperatorList.txt</span></code> 文本块，用户可以在 <em>文本编辑器</em> 里来访问它。用户还可以使用Blender搜索来生成该文件。该文件列出可用的Python操作。</p>
-</dd>
+<hr class="docutils" />
+<dl class="docutils">
+<dt><a class="reference external" href="https://www.blender.org/support/user-community/">用户社区</a></dt>
+<dd>不同地区的社区站点列表。</dd>
+<dt><a class="reference external" href="https://devtalk.blender.org">开发社区</a></dt>
+<dd>Blender开发论坛。</dd>
+</dl>
+<hr class="docutils" />
+<dl class="docutils">
+<dt>可以通过 <a class="reference external" href="https://www.blender.org/api/blender_python_api_current/">Python API 参考手册</a> 来查询Python的API。</dt>
+<dd>Python应用编程接口(API)</dd>
+</dl>
+<hr class="docutils" />
+<dl class="docutils">
+<dt><a class="reference external" href="https://developer.blender.org/maniphest/task/create/?project=2&amp;type=Bug">报告问题</a></dt>
+<dd>Blender Bug追踪器(需要注册)。</dd>
 </dl>
 </div>
 <div class="section" id="save-system-info">
 <span id="help-system-info"></span><h3>保存系统信息<a class="headerlink" href="#save-system-info" title="Permalink to this headline">¶</a></h3>
-<p>访问 <span class="menuselection">帮助 ‣ 保存系统信息</span>。</p>
 <p>提取有用的系统信息，用于bug报告，配置检查或诊断问题。</p>
 <p>会提示用户保存文本文件 <code class="docutils literal notranslate"><span class="pre">system-info.txt</span></code> 。</p>
 <p>该文本文件包含几个部分：</p>
-<dl>
-<dt>Blender</dt><dd><p>显示Blender版本号，版本配置与运行Blender路径的详细信息。</p>
+<dl class="docutils">
+<dt>Blender</dt>
+<dd>显示Blender版本号，版本配置与运行Blender路径的详细信息。</dd>
+<dt>Python</dt>
+<dd>正在使用的Python版本，显示Python路径。</dd>
+<dt>Directories</dt>
+<dd><p class="first">用过的脚本，数据文件，预设和临时文件的路径。</p>
+<p class="last">这些目录通过 <a class="reference internal" href="../editors/preferences/file_paths.html"><span class="doc">用户设置</span></a> 编辑器进行配置。</p>
 </dd>
-<dt>Python</dt><dd><p>正在使用的Python版本，显示Python路径。</p>
-</dd>
-<dt>目录</dt><dd><p>脚本，数据文件，预设和临时文件的路径。</p>
-<p>这些目录通过 <a class="reference internal" href="../preferences/file.html"><span class="doc">用户设置</span></a> 编辑器进行配置。</p>
-</dd>
-<dt>OpenGL</dt><dd><p>显示OpenGL版本，制造商的名称，并列出用户硬件以及驱动程序的性能。</p>
-</dd>
+<dt>OpenGL</dt>
+<dd>该部分显示OpenGL版本，制造商的名称，并列出用户硬件以及驱动程序的性能。</dd>
+<dt>Enabled Add-Ons:</dt>
+<dd>目前在使用的插件列表。</dd>
 </dl>
-</div>
-<div class="section" id="splash-screen">
-<h3>启动画面<a class="headerlink" href="#splash-screen" title="Permalink to this headline">¶</a></h3>
-<p>显示 <a class="reference internal" href="../interface/splash.html#splash"><span class="std std-ref">启动画面</span></a> 。</p>
 </div>
 </div>
 </div>
@@ -326,7 +334,7 @@
         <a href="../interface/index.html" class="btn btn-neutral float-right" title="用户界面" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="installing/configuration/directories.html" class="btn btn-neutral float-left" title="配置目录" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="configuration/defaults.html" class="btn btn-neutral float-left" title="默认配置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

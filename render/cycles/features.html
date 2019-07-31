@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>渲染功能特性 &mdash; Blender Manual</title>
+  <title>试验特性 &mdash; Blender Manual</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devrender/cycles/features.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/cycles/features.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Cycles Settings" href="settings/index.html" />
-    <link rel="prev" title="Cameras" href="camera.html" /> 
+    <link rel="next" title="渲染烘焙" href="baking.html" />
+    <link rel="prev" title="GPU渲染" href="gpu_rendering.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,47 +113,45 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lighting/index.html">灯光</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee 渲染器</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cycles渲染引擎</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cycles</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="materials/index.html">材质</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lamps.html">灯光</a></li>
-<li class="toctree-l3"><a class="reference internal" href="world.html">世界</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nodes/index.html">节点</a></li>
-<li class="toctree-l3"><a class="reference internal" href="camera.html">Cameras</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">渲染功能特性</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#experimental-features">试验特性</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="settings/index.html">Cycles Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="render_settings/index.html">Render Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="world_settings.html">World Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="object_settings/index.html">Object Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material_settings.html">材质设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="light_settings.html">Light Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gpu_rendering.html">GPU渲染</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">试验特性</a></li>
 <li class="toctree-l3"><a class="reference internal" href="baking.html">渲染烘焙</a></li>
 <li class="toctree-l3"><a class="reference internal" href="optimizations/index.html">Optimizing Renders</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">Workbench Engine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cameras.html">相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lights/index.html">Lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials/index.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_nodes/index.html">着色器节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../color_management.html">色彩管理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">工作流</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL渲染</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../audio/index.html">音频渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -187,9 +204,9 @@
         
           <li><a href="../index.html">渲染</a> &raquo;</li>
         
-          <li><a href="index.html">Cycles渲染引擎</a> &raquo;</li>
+          <li><a href="index.html">Cycles</a> &raquo;</li>
         
-      <li>渲染功能特性</li>
+      <li>试验特性</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -208,96 +225,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="render-features">
-<h1>渲染功能特性<a class="headerlink" href="#render-features" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="experimental-features">
+<h1>试验特性<a class="headerlink" href="#experimental-features" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">面板</dt>
-<dd class="field-odd"><p><span class="menuselection">渲染 ‣ 渲染</span></p>
-</dd>
-</dl>
-</div>
-<p>本页提供了可用的功能特性在CPU, CUDA 以及 OpenCL上的一个对比。</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>特性</p></th>
-<th class="head"><p>CPU</p></th>
-<th class="head"><p>CUDA (Nvidia GPU)</p></th>
-<th class="head"><p>OpenCL (AMD GPU)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><abbr title="包含节点着色器、纹理、环境遮蔽、全局光照...">基础着色</abbr></p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-</tr>
-<tr class="row-odd"><td><p>透明阴影</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-</tr>
-<tr class="row-even"><td><p>运动模糊</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-</tr>
-<tr class="row-odd"><td><p>毛发</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-</tr>
-<tr class="row-even"><td><p>体积渲染</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-</tr>
-<tr class="row-odd"><td><p>烟雾/火焰渲染</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-</tr>
-<tr class="row-even"><td><p>次表面散射 (SSS)</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-</tr>
-<tr class="row-odd"><td><p>开放式着色语言 (OSL)</p></td>
-<td><p>✔</p></td>
-<td><p>✗</p></td>
-<td><p>✗</p></td>
-</tr>
-<tr class="row-even"><td><p>CMJ采样</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-</tr>
-<tr class="row-odd"><td><p>分路路径追踪</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-<td><p>✔</p></td>
-</tr>
-<tr class="row-even"><td><p>位移/细分</p></td>
-<td><p>✔ <sup>(experimental)</sup></p></td>
-<td><p>✔ <sup>(experimental)</sup></p></td>
-<td><p>✔ <sup>(experimental)</sup></p></td>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">渲染</span></td>
 </tr>
 </tbody>
 </table>
-<div class="section" id="experimental-features">
-<span id="cycles-experimental-features"></span><h2>试验特性<a class="headerlink" href="#experimental-features" title="Permalink to this headline">¶</a></h2>
-<p>试验特性默认禁用或者隐藏了，但是可以通过在渲染属性里设置 <em>特性设置</em> 成 <em>实验性</em> 以开启。开启  <em>实验性特性设置</em>  将使用实验性的和不完整的特性，这些特性在以后可能会被破坏或者被改变。</p>
-<div class="figure align-center">
-<img alt="../../_images/render_cycles_features_experimental.png" src="../../_images/render_cycles_features_experimental.png" />
 </div>
-</div>
+<p id="cycles-experimental-features">试验特性默认处于禁用/隐藏状态,但可以通过在渲染属性中将 <em>特性集</em> 设置为 <em>试验特性</em> 来启用。启用 <em>试验特性设置</em> 将使用实验性的和不完整的特性，这些特性在以后可能会被破坏或者被改变。</p>
+<p>自适应细分是目前唯一的实验功能。</p>
 </div>
 
 
@@ -308,10 +250,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="settings/index.html" class="btn btn-neutral float-right" title="Cycles Settings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="baking.html" class="btn btn-neutral float-right" title="渲染烘焙" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="camera.html" class="btn btn-neutral float-left" title="Cameras" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="gpu_rendering.html" class="btn btn-neutral float-left" title="GPU渲染" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

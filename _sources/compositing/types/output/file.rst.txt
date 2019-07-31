@@ -5,7 +5,7 @@
 File Output Node
 ****************
 
-.. figure:: /images/compositing_types_output_file_node.png
+.. figure:: /images/compositing_node-types_CompositorNodeOutputFile.png
    :align: right
 
    File Output Node.
@@ -46,7 +46,7 @@ File Format label
 
 .. note::
 
-   More options could be set in the properties region.
+   More options could be set in the Sidebar region.
 
 
 Outputs

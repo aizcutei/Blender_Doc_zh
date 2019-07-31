@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devinterface/undo_redo.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/undo_redo.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="标注工具" href="annotation_tool.html" />
-    <link rel="prev" title="通用快捷键" href="common_shortcuts.html" /> 
+    <link rel="next" title="标注工具" href="annotate_tool.html" />
+    <link rel="prev" title="工具系统" href="tool_system.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -98,33 +117,36 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#keymap">键位映射</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#interface-controls">界面控件</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#tools">工具</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tool_system.html">工具系统</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">撤销 &amp; 重做</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#undo">撤销</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#redo">重做</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#redo-last">重做上一步</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adjust-last-operation">调整上一步操作</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#undo-history">撤销历史</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#repeat-last">重复上一步</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#repeat-history">重复历史</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="annotation_tool.html">标注工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="annotate_tool.html">标注工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selecting.html">选择</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
 </ul>
@@ -202,158 +224,155 @@
 <div class="section" id="undo">
 <span id="bpy-ops-ed-undo"></span><h2>撤销<a class="headerlink" href="#undo" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>所有模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 历史 ‣ 撤销</span></p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">物体/物体类型 ‣ 撤销</span></p>
-</dd>
-<dt class="field-even">快捷键</dt>
-<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Ctrl-Z</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">所有模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">编辑 ‣ 撤销</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-Z</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>按 <kbd class="kbd docutils literal notranslate">Ctrl-Z</kbd> 撤销上一步操作。</p>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>关于修改撤销的默认设置，参考 <a class="reference internal" href="../preferences/editing.html"><span class="doc">编辑设置</span></a> 章节。</p>
+<p class="first admonition-title">See also</p>
+<p class="last">关于修改撤销的默认设置，参考 <a class="reference internal" href="../editors/preferences/editing.html"><span class="doc">编辑设置</span></a> 章节。</p>
 </div>
 </div>
 <div class="section" id="redo">
 <span id="bpy-ops-ed-redo"></span><h2>重做<a class="headerlink" href="#redo" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>所有模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 历史 ‣ 重做</span></p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">物体/物体类型 ‣ 重做</span></p>
-</dd>
-<dt class="field-even">快捷键</dt>
-<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Shift-Ctrl-Z</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">所有模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">编辑 ‣ 重做</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Shift-Ctrl-Z</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>按 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-Z</kbd>，回滚已撤销操作。</p>
 </div>
-<div class="section" id="redo-last">
-<span id="ui-redo-last"></span><h2>重做上一步<a class="headerlink" href="#redo-last" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="adjust-last-operation">
+<span id="ui-undo-redo-adjust-last-operation"></span><h2>调整上一步操作<a class="headerlink" href="#adjust-last-operation" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>所有模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">操作面板</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">F6</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">所有模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">编辑 ‣ 调整上一步操作...</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">F9</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p><em>重做上一步</em> 是 <em>重新做上一步步动作</em> 的简称。按下 <kbd class="kbd docutils literal notranslate">F6</kbd>  后，会基于当前编辑器与模式，弹出上一步操作的菜单。</p>
-<p>例如，如果上一步是 <em>物体模式</em> 下的旋转操作，Blender会显示上一步操作中对角度的修改(见 <a class="reference internal" href="#fig-interface-redo-last"><span class="std std-ref">重做上一步。</span></a> 左图)，你可以输入 <kbd class="kbd docutils literal notranslate">Numpad0</kbd> 将旋转改回来。根据操作的不同，还有一些其他的有用选项，用户不仅可以撤销操作，还可以通过这些选项彻底改变上一步操作的结果。</p>
-<p>在 <em>编辑模式下</em>，Blender也会根据上一步操作改变弹出菜单的内容。第二个例子(右图)中，上一步操作是顶点移动， 对一个面进行了 <em>缩放</em> 操作，然后，如你所见，由于模式(编辑模式)不同，弹出菜单的内容有所不同。(见 <a class="reference internal" href="#fig-interface-redo-last"><span class="std std-ref">重做上一步。</span></a> 右图)</p>
-<span id="fig-interface-redo-last"></span><table class="docutils align-center" id="id1">
-<caption><span class="caption-text">重做上一步。</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<p>操作完成后，您可以调整操作的参数。根据模式和内容，在受支持的编辑器左下角有一个“抬头显示”面板包含了上次操作的参数调整。 或者也可以按 <kbd class="kbd docutils literal notranslate">F9</kbd> 调出窗口做同样的事情。</p>
+<p>例如，如果上一步是 <em>物体模式</em> 下的旋转操作，Blender会显示上一步操作中对角度的修改(见  <a class="reference internal" href="#fig-interface-redo-last-object-mode"><span class="std std-ref">重做上一步 - 旋转 (物体模式, 60度)。</span></a> 左图)，你可以输入 <kbd class="kbd docutils literal notranslate">Numpad0</kbd> 将旋转改回来。根据操作的不同，还有一些其他的有用选项，用户不仅可以撤销操作，还可以通过这些选项彻底改变上一步操作的结果。</p>
+<p>在 <em>编辑模式下</em>，Blender也会根据上一步操作改变弹出菜单的内容。第二个例子(右图)中，上一步操作是顶点移动， 对一个面进行了 <em>缩放</em> 操作，然后，如你所见，由于模式(编辑模式)不同，弹出菜单的内容有所不同。(见 <a class="reference internal" href="#fig-interface-redo-last-edit-mode"><span class="std std-ref">重做上一步 - 缩放 (编辑模式, 调整面)。</span></a> 右图)。</p>
+<table border="1" class="docutils" id="id1">
+<caption><span class="caption-text">调整上一步操作。</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id2">
-<a class="reference internal image-reference" href="../_images/interface_undo-redo_redo-last-object-mode.png"><img alt="../_images/interface_undo-redo_redo-last-object-mode.png" src="../_images/interface_undo-redo_redo-last-object-mode.png" style="width: 310px;" /></a>
-<p class="caption"><span class="caption-text">重做上一步 - 旋转 (物体模式, 60度)。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id2">
+<span id="fig-interface-redo-last-object-mode"></span><a class="reference internal image-reference" href="../_images/interface_undo-redo_redo-last-object-mode.png"><img alt="../_images/interface_undo-redo_redo-last-object-mode.png" src="../_images/interface_undo-redo_redo-last-object-mode.png" style="width: 310px;" /></a>
+<p class="caption"><span class="caption-text">重做上一步 - 旋转 (物体模式, 60度)。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id3">
-<a class="reference internal image-reference" href="../_images/interface_undo-redo_redo-last-edit-mode.png"><img alt="../_images/interface_undo-redo_redo-last-edit-mode.png" src="../_images/interface_undo-redo_redo-last-edit-mode.png" style="width: 310px;" /></a>
-<p class="caption"><span class="caption-text">重做上一步 - 缩放 (编辑模式, 调整面).</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<td><div class="first last figure" id="id3">
+<span id="fig-interface-redo-last-edit-mode"></span><a class="reference internal image-reference" href="../_images/interface_undo-redo_redo-last-edit-mode.png"><img alt="../_images/interface_undo-redo_redo-last-edit-mode.png" src="../_images/interface_undo-redo_redo-last-edit-mode.png" style="width: 310px;" /></a>
+<p class="caption"><span class="caption-text">重做上一步 - 缩放 (编辑模式, 调整面)。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>使用重复上一步进行操作</p>
-<p>使用 <code class="docutils literal notranslate"><span class="pre">F6</span></code> 菜单调整参数后，一些操作可以产生特别有用的结果。以添加圆为例，将顶点数量减至3，可以获得完美的等边三角形。</p>
+<p class="first admonition-title">Tip</p>
+<p class="last">有些操作，使用 <em>调整上一步操作</em> 会产生特别有用的结果，比如，在3D视图中添加一个圆，如果把 <em>点</em> 的数量改为3个，会得到一个等边三角形。</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last"><em>调整上一步操作</em> 区块可以在 <span class="menuselection">视图 ‣ 调整上一步操作</span> 隐藏</p>
 </div>
 </div>
 <div class="section" id="undo-history">
 <span id="bpy-ops-ed-undo-history"></span><h2>撤销历史<a class="headerlink" href="#undo-history" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>所有模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 历史 ‣ 撤销历史</span></p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">物体/物体类型 ‣ 撤销历史</span></p>
-</dd>
-<dt class="field-even">快捷键</dt>
-<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Ctrl-Alt-Z</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">所有模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">编辑 ‣ 撤销历史</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="figure align-right" id="id4">
 <img alt="../_images/interface_undo-redo_undo-history-menu.png" src="../_images/interface_undo-redo_undo-history-menu.png" />
-<p class="caption"><span class="caption-text">撤销历史菜单。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">撤销历史菜单。</span></p>
 </div>
-<p>从Blender记录的历史操作中选择要回退到的操作。使用 <kbd class="kbd docutils literal notranslate">Ctrl-Alt-Z</kbd> 可以访问历史弹出菜单。</p>
+<p>从Blender记录的历史操作中选择要回退到的操作。使用 <kbd class="kbd docutils literal notranslate">Ctrl-Alt-Z</kbd> 可以访问历史弹出菜单 。</p>
 <p>位于上侧的选项对应最近的操作。条目左侧的眼睛图标表示目前的状态。选中后，回退到对应操作。与使用 <em>撤销</em> 和 <em>重做</em> 来回切换一样，在执行新的修改操作前，用户可以在选项之间来回跳转。一旦执行新的修改，撤销历史菜单会删减至回退后的状态。在列表中选择条目，即可从当前状态跳转到该状态。</p>
 </div>
 <div class="section" id="repeat-last">
 <span id="bpy-ops-screen-repeat-last"></span><h2>重复上一步<a class="headerlink" href="#repeat-last" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>所有模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 历史 ‣ 重复: 重复上一步</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-R</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">所有模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">编辑 ‣ 重复上一步</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Shift-R</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>按下 <kbd class="kbd docutils literal notranslate">Shift-R</kbd> 执行重复上一步操作。</p>
 <p>下面的示例图像中，先复制猴头，并移动物体.。使用 <kbd class="kbd docutils literal notranslate">Shift-R</kbd> 命令，会再复制一个猴头并移动。</p>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id5">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id5">
 <img alt="../_images/interface_undo-redo_repeat-last1.png" src="../_images/interface_undo-redo_repeat-last1.png" />
-<p class="caption"><span class="caption-text">猴头。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">猴头。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id6">
+<td><div class="first last figure" id="id6">
 <img alt="../_images/interface_undo-redo_repeat-last2.png" src="../_images/interface_undo-redo_repeat-last2.png" />
-<p class="caption"><span class="caption-text"><kbd class="kbd docutils literal notranslate">Shift-D</kbd> 并移动。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><kbd class="kbd docutils literal notranslate">Shift-D</kbd> 并移动。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id7">
+<td><div class="first last figure" id="id7">
 <img alt="../_images/interface_undo-redo_repeat-last3.png" src="../_images/interface_undo-redo_repeat-last3.png" />
-<p class="caption"><span class="caption-text"><kbd class="kbd docutils literal notranslate">Shift-R</kbd> 后。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><kbd class="kbd docutils literal notranslate">Shift-R</kbd> 后。</span></p>
 </div>
 </td>
 </tr>
@@ -363,37 +382,32 @@
 <div class="section" id="repeat-history">
 <span id="bpy-ops-screen-repeat-history"></span><h2>重复历史<a class="headerlink" href="#repeat-history" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>所有模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 历史 ‣ 重复: 历史...</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">F3</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">所有模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">编辑 ‣ 重复 历史...</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="figure align-right" id="id8">
 <img alt="../_images/interface_undo-redo_repeat-history-menu.png" src="../_images/interface_undo-redo_repeat-history-menu.png" />
-<p class="caption"><span class="caption-text">重复历史菜单。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">重复历史菜单。</span></p>
 </div>
 <p><em>重复历史</em> 功能会呈现用户操作历史列表，用户可以选择想要重复的操作。与上文中撤销历史操作原理类似，不过选项列表仅包含可重复操作。使用 <kbd class="kbd docutils literal notranslate">F3</kbd> 访问重复历史菜单。</p>
 <div class="lead docutils container">
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Blender有两个独立的历史记录， 一个专用于 <em>编辑模式</em> ，另一个用于 <em>物体模式</em> 。</p>
-</div>
 <div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>退出Blender后，所有的操作历史会丢失，即便在退出前进行了保存。</p>
+<p class="first admonition-title">Important</p>
+<p class="last">退出Blender后，所有的操作历史会丢失，即便在退出前进行了保存。</p>
 </div>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>问题排查章节见 <a class="reference internal" href="../troubleshooting/recover.html"><span class="doc">恢复丢失作品</span></a> 。</p>
+<p class="first admonition-title">See also</p>
+<p class="last">问题排查章节见 <a class="reference internal" href="../troubleshooting/recover.html"><span class="doc">恢复丢失作品</span></a> 。</p>
 </div>
 </div>
 </div>
@@ -406,10 +420,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="annotation_tool.html" class="btn btn-neutral float-right" title="标注工具" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="annotate_tool.html" class="btn btn-neutral float-right" title="标注工具" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="common_shortcuts.html" class="btn btn-neutral float-left" title="通用快捷键" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tool_system.html" class="btn btn-neutral float-left" title="工具系统" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

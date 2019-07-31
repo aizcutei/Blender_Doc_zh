@@ -1,0 +1,527 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>FBX &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/io_scene_fbx.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="glTF 2.0" href="io_scene_gltf2.html" />
+    <link rel="prev" title="UV布局图" href="io_mesh_uv_layout.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#import-export">导入 / 导出</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="io_anim_bvh.html">BioVision运动捕捉(BVH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_curve_svg.html">可缩放矢量图形 (SVG)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_mesh_ply.html">Stanford PLY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_mesh_stl.html">STL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_mesh_uv_layout.html">UV布局图</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">FBX</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#usage">用法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties">属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compatibility">兼容性</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="io_scene_gltf2.html">glTF 2.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_scene_obj.html">Wavefront OBJ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_scene_x3d.html">Web3D X3D/VRML2</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#render">渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">插件</a> &raquo;</li>
+        
+      <li>FBX</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/addons/io_scene_fbx.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fbx">
+<h1>FBX<a class="headerlink" href="#fbx" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">类别:</th><td class="field-body">导入-导出</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">文件 ‣ 导入/导出 ‣ FBX (.fbx)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>此格式主要用在不同应用程序之间交换角色动画，支持的应用程序有Cinema4D，Maya，Autodesk 3ds Max，Wings3D，支持的引擎有Unity3D，Unreal Engine 3/UDK及Unreal Engine 4。</p>
+<p>导出器可将网格修改器及动画烘培到FBX文件中，因此最终效果与Blender中的结果相同。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>骨骼需要对其方向进行校正（FBX骨骼似乎是-X对齐，Blender是Y对齐的），这不会影响蒙皮或动画，但在其他应用程序中导入的骨骼看起来会出错。</li>
+<li>动画（FBX 动画堆栈，Blender动作）**没有链接**到其对象，因为没有真正的方法可以知道哪个堆栈用作给定对象，网格或骨骼的“活动”动作。 这未来可能会做强化以更智能，但目前并非紧急任务，所以现在你必须手动将动作链接到对象。</li>
+<li>骨架实例 <strong>是不被支持的</strong> 。</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>骨骼的方向导入很复杂，您可能需要反复调整一些相关设置，直到达到预期结果。</li>
+<li>目前动画的支持最少。如果经过“烘焙”，我们会读取所有曲线（即一组具有线性插值的近似关键帧）。</li>
+<li>导入的动作将依照“先到先得”原则链接到它们的相关对象，骨骼或形态键。如果您将组对象作为单一对象导出，则需要手动重新对其进行制定。</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>只保存动画</p>
+<p class="last">FBX文件格式支持仅包含take动画实例的文件，需由您自行指定动画跟踪的模型。 将导出的动画是动作编辑器中当前选定的动作。 要减小文件大小，请关闭任何不需要导出的部分，并禁用*所有动作*。 对于骨架动画，通常只需启用骨架，这对于该类型的动画是必需的。 减少导出量可以使导入和之后的导出操作更快。 通常情况下，每个动作都有自己的名称，但可以强制将当前或唯一的take实例命名为“Default Take”。 通常该选项可以保持关闭状态。</p>
+</div>
+</div>
+<div class="section" id="properties">
+<h2>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="import">
+<h3>导入<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="main">
+<h4>主标签<a class="headerlink" href="#main" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>手动朝向</dt>
+<dd>待完成。</dd>
+<dt>向前/向上轴</dt>
+<dd><p class="first">由于许多应用程序使用不同的“向上”轴，因此存在转换轴向设置，向前和向上轴——通过映射不同的轴，您可以转换应用程序默认的向上和向前轴之间的旋转。</p>
+<p class="last">Blender使用Y轴向前，Z轴向上（因为前视图沿+Y轴方向看）。 例如，许多应用程序通常使用Y作为向上轴，在这种情况下，需要使用-Z轴向前，Y轴向上。</p>
+</dd>
+<dt>应用变换</dt>
+<dd>待完成。</dd>
+<dt>导入法向</dt>
+<dd>待完成。</dd>
+<dt>导入动画</dt>
+<dd><p class="first">待完成。</p>
+<dl class="last docutils">
+<dt>动画偏移</dt>
+<dd>待完成。</dd>
+</dl>
+</dd>
+<dt>导入用户属性</dt>
+<dd>待完成。</dd>
+<dt>导入枚举为字符串</dt>
+<dd>待完成。</dd>
+<dt>图像查找</dt>
+<dd>待完成。</dd>
+<dt>贴花偏移</dt>
+<dd>待完成。</dd>
+<dt>使用预/后旋转</dt>
+<dd>待完成。</dd>
+</dl>
+</div>
+<div class="section" id="armatures">
+<h4>骨架<a class="headerlink" href="#armatures" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>忽略叶骨</dt>
+<dd>待完成。</dd>
+<dt>强制连接子级</dt>
+<dd>待完成。</dd>
+<dt>自动骨骼坐标系</dt>
+<dd>待完成。</dd>
+<dt>主/次骨骼轴向</dt>
+<dd>待完成。</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="export">
+<h3>导出<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4>主标签<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>选定的物体</dt>
+<dd>仅导出选定的物体。否则将导出场景中所有的物体。注意，批量导出时不适用。</dd>
+<dt>比例</dt>
+<dd>按此值缩放导出的数据。 10是默认值，因为这最适合大多数应用程序导入FBX的比例。</dd>
+<dt>应用比例</dt>
+<dd>待完成。</dd>
+<dt>应用缩放</dt>
+<dd>待完成。</dd>
+<dt>向前/向上轴</dt>
+<dd><p class="first">由于许多应用程序使用不同的“向上”轴，因此存在转换向前和向上轴的设置——通过映射不同的轴，您可以转换应用程序默认的向上和向前轴之间的旋转。</p>
+<p class="last">Blender使用Y轴向前，Z轴向上（因为前视图沿+Y轴方向看）。 例如，许多应用程序通常使用Y作为向上轴，在这种情况下，需要使用-Z轴向前，Y轴向上。</p>
+</dd>
+<dt>空物体/相机/光/骨架/网格/其他</dt>
+<dd>启用/禁用各类物体的导出。</dd>
+<dt>应用变换</dt>
+<dd>待完成。</dd>
+<dt>自定义属性</dt>
+<dd>待完成。</dd>
+<dt>路径模式</dt>
+<dd><p class="first">在导出文件中引用路径时，您可能需要对所使用的方法进行一些控制，因为绝对路径可能只在您自己的系统上正确。 另一方面，相对路径更具可移植性，但这意味着在本地文件系统上移动时必须保持文件分组。 在某些情况下，路径无关紧要，因为目标应用程序无论如何都会搜索一组预定义路径，因此您也可以选择去除路径。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">自动:</th><td class="field-body">对于导出位置的子目录中的文件使用相对路径，对于此外的任何目录使用绝对路径。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">绝对:</th><td class="field-body">使用完整路径。</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">相对:</th><td class="field-body">在所有情况都使用相对路径（除了在Windows上的不同驱动器上）。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">匹配:</th><td class="field-body">依照在Blender中用到的路径使用相对/绝对路径。</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">片段路径:</th><td class="field-body">只写入文件名并忽略路径组件。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">复制:</th><td class="field-body">在导出时复制文件并使用相对路径引用它。</td>
+</tr>
+</tbody>
+</table>
+<dl class="last docutils">
+<dt>内嵌纹理</dt>
+<dd>待完成。</dd>
+</dl>
+</dd>
+<dt>分批模式</dt>
+<dd><p class="first">当启用时，导出每个群组或场景为一个文件。</p>
+<dl class="last docutils">
+<dt>群组/场景</dt>
+<dd>选择是否批量导出群组或场景到文件。 请注意，启用组/场景选项时，您无法使用动画选项的*当前动作*，因为它使用场景数据，并且组不会附加到任何场景。 另请注意，启用“群组/场景”时，必须在群组中包含骨架对象才能使动画动作起作用。</dd>
+<dt>自身目录</dt>
+<dd>启用后每个文件都会导出到自己的目录中，这在使用*复制图像*选项时很有用。 因此每个目录都包含一个模型及其所用到的图片。 注意，这需要Python被完整安装， 否则不会显示此按钮。</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="geometries">
+<h4>几何数据<a class="headerlink" href="#geometries" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>应用修改器</dt>
+<dd>启用后，网格将来自应用于网格的修改器的输出。</dd>
+<dt>使用修改器的渲染设定</dt>
+<dd>待完成。</dd>
+<dt>平滑</dt>
+<dd>待完成。</dd>
+<dt>松散边</dt>
+<dd>待完成。</dd>
+<dt>切向空间</dt>
+<dd>待完成。</dd>
+</dl>
+</div>
+<div class="section" id="id2">
+<h4>骨架<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>仅使骨骼箱变</dt>
+<dd>待完成。</dd>
+<dt>添加叶骨</dt>
+<dd>待完成。</dd>
+<dt>主/次骨骼轴向</dt>
+<dd>待完成。</dd>
+<dt>骨架FBXNode类型</dt>
+<dd>待完成。</dd>
+</dl>
+</div>
+<div class="section" id="animation">
+<h4>动画<a class="headerlink" href="#animation" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>烘焙动画</dt>
+<dd>待完成。</dd>
+<dt>对所有骨骼插帧</dt>
+<dd>待完成。</dd>
+<dt>NLA片段</dt>
+<dd>待完成。</dd>
+<dt>全部动作</dt>
+<dd>导出与所选骨骼开始/结束时间兼容的所有动作，这些动作源自每个动作的关键帧范围。禁用时，仅导出当前分配的动作。</dd>
+<dt>强制开始/结束关键帧</dt>
+<dd>待完成。</dd>
+<dt>采样率</dt>
+<dd>待完成。</dd>
+<dt>简化</dt>
+<dd>待完成。</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="section" id="compatibility">
+<h2>兼容性<a class="headerlink" href="#compatibility" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>导入<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>请注意，导入器是新增加的，并且缺少导出器支持的许多功能。</p>
+<ul class="simple">
+<li>仅限二进制FBX文件。</li>
+<li>7.1及更新版本。</li>
+</ul>
+<div class="section" id="missing">
+<h4>缺失<a class="headerlink" href="#missing" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>网格：形态键</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>导出<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>NURBS表面，文本3D及变形球在导出时会被转换为网格。</p>
+<div class="section" id="id5">
+<h4>缺失<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>因为FBX格式不支持，缺少以下某些功能，其他功能可能会在以后添加。</p>
+<ul class="simple">
+<li>对象实例化——导出对象不可共享数据，实例化对象将分别写入自身数据。</li>
+<li>材质纹理</li>
+<li>顶点形态键——FBX支持，但此导出器尚未写入。</li>
+<li>动画流体模拟——FBX不支持这种此类动画。 但您可以使用OBJ导出器写入文件序列。</li>
+<li>约束——使用约束的结果将导出为关键帧动画，但约束本身不会保存在FBX中。</li>
+<li>实例化对象——目前实例化对象仅可在静态场景中写入（禁用动画时）。</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="io_scene_gltf2.html" class="btn btn-neutral float-right" title="glTF 2.0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="io_mesh_uv_layout.html" class="btn btn-neutral float-left" title="UV布局图" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

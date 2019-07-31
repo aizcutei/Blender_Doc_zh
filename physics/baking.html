@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devphysics/baking.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/baking.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="力场" href="force_fields/index.html" />
-    <link rel="prev" title="重力" href="gravity.html" /> 
+    <link rel="next" title="渲染" href="../render/index.html" />
+    <link rel="prev" title="碰撞" href="collision.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,28 +113,36 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">物理</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gravity.html">重力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloth/index.html">布料模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="particles/index.html">Particles System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluid/index.html">流体模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forces/index.html">Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collision.html">碰撞</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">烘焙物理模拟</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#options">Options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#baking">Baking</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#physics-types">物理类型</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
 </ul>
@@ -197,96 +224,107 @@ and you will be unable to change the simulation settings
 until you clear the baked frames by clicking <em>Free Bake</em>.</p>
 <p>通常建议在渲染之前烘焙您的物理模拟。除了不再需要经过耗时的模拟过程之外，烘焙可以帮助防止潜在的错误，并确保模拟的结果每次都保持完全相同。</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Blender中大多数物理模拟器使用类似的系统，但并不全部具有完全相同的设置。所有设置都在此处介绍，但单个物理类型可能无法提供所有这些选项。</p>
+<p class="first admonition-title">Note</p>
+<p class="last">Blender中大多数物理模拟器使用类似的系统，但并不全部具有完全相同的设置。所有设置都在此处介绍，但单个物理类型可能无法提供所有这些选项。</p>
 </div>
 <div class="figure align-right" id="id1">
 <img alt="../_images/physics_baking_multi-cache-interface.png" src="../_images/physics_baking_multi-cache-interface.png" />
-<p class="caption"><span class="caption-text">两个不同的缓存同时存储。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">两个不同的缓存同时存储。</span></p>
 </div>
-<dl>
-<dt>缓存列表</dt><dd><p>Blender允许同时存储和管理同一物理对象的多个缓存，可以使用 <a class="reference internal" href="../interface/controls/templates/list_presets.html#ui-list-view"><span class="std std-ref">列表视图</span></a> 来管理这些缓存。</p>
-<p>可以使用 <kbd class="kbd docutils literal notranslate">Plus</kbd> 和 <kbd class="kbd docutils literal notranslate">Minus</kbd> 按钮添加和删​​除缓存。可以通过双击或按下 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 所需的缓存来重命名缓存。</p>
+<dl class="docutils">
+<dt>缓存列表</dt>
+<dd><p class="first">Blender允许同时存储和管理同一物理对象的多个缓存，可以使用 <a class="reference internal" href="../interface/controls/templates/list_presets.html#ui-list-view"><span class="std std-ref">列表视图</span></a> 来管理这些缓存。</p>
+<p class="last">可以使用 <kbd class="kbd docutils literal notranslate">Plus</kbd> 和 <kbd class="kbd docutils literal notranslate">Minus</kbd> 按钮添加和删​​除缓存。可以通过双击或按下 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 所需的缓存来重命名缓存。</p>
 </dd>
 </dl>
 <div class="section" id="options">
 <h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
-<dl>
-<dt>Disk Cache</dt><dd><p>The cache of a baked simulation will be stored inside the blend-file when you save it.
+<dl class="docutils">
+<dt>Disk Cache</dt>
+<dd><p class="first">The cache of a baked simulation will be stored inside the blend-file when you save it.
 When <em>Disk Cache</em> is checked, Blender will save the Cache separately to the drive
 in a folder named <code class="docutils literal notranslate"><span class="pre">blendcache_[filename]</span></code> alongside the blend-file.
 (The blend-file must be saved first.)</p>
-<dl>
-<dt>文件路径</dt><dd><p>当物理对象 <a class="reference internal" href="../data_system/linked_libraries.html"><span class="doc">关联</span></a> 到另一个混合文件时共享磁盘缓存 。</p>
-<p>启用此选项后，对象的关联版本将引用相同的磁盘缓存。否则，对象的关联版本将使用独立的缓存。</p>
+<dl class="last docutils">
+<dt>Use Library Path</dt>
+<dd><p class="first">Share the disk cache when the physics object is
+<a class="reference internal" href="../files/linked_libraries.html"><span class="doc">linked</span></a> into another blend-file.</p>
+<p class="last">启用此选项后，对象的关联版本将引用相同的磁盘缓存。否则，对象的关联版本将使用独立的缓存。</p>
 </dd>
-<dt>压缩</dt><dd><p>缓存文件的压缩级别。一些物理缓存可能非常大(比如烟雾)。Blender可以压缩这些缓存，以节省空间。</p>
-<dl class="simple">
-<dt>无</dt><dd><p>不要压缩缓存。</p>
-</dd>
-<dt>低压缩率</dt><dd><p>压缩操作将优化压缩/解压缩文件大小的操作速度。</p>
-</dd>
-<dt>高压缩率</dt><dd><p>压缩操作将带来比 <em>低压缩率</em> 更小的缓存文件，但是需要更多的CPU时间进行压缩/解压缩。</p>
-</dd>
+<dt>压缩</dt>
+<dd><p class="first">缓存文件的压缩级别。一些物理缓存可能非常大(比如烟雾)。Blender可以压缩这些缓存，以节省空间。</p>
+<dl class="last docutils">
+<dt>无</dt>
+<dd>不要压缩缓存。</dd>
+<dt>低压缩率</dt>
+<dd>压缩操作将优化压缩/解压缩文件大小的操作速度。</dd>
+<dt>高压缩率</dt>
+<dd>压缩操作将带来比 <em>低压缩率</em> 更小的缓存文件，但是需要更多的CPU时间进行压缩/解压缩。</dd>
 </dl>
 </dd>
 </dl>
 </dd>
-<dt>外部数据</dt><dd><p>使用用户指定的文件路径读写驱动器上的缓存。</p>
+<dt>外部数据</dt>
+<dd><p class="first">使用用户指定的文件路径读写驱动器上的缓存。</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The cache name in <em>Caches List</em> and the <em>Index Number</em>
+<p class="first admonition-title">Note</p>
+<p class="last">The cache name in <em>Caches List</em> and the <em>Index Number</em>
 has to exactly match the external cache files name in order to work.
 The cache files name format is <code class="docutils literal notranslate"><span class="pre">name_frame_index.bphys</span></code>.</p>
 </div>
-<dl class="simple">
-<dt>索引号</dt><dd><p>The index number of cache files. (The last two digits of the files name.)</p>
-</dd>
-<dt>File Path</dt><dd><p>Select the directory path to the cache files.</p>
-</dd>
+<dl class="last docutils">
+<dt>索引号</dt>
+<dd>The index number of cache files. (The last two digits of the files name.)</dd>
+<dt>File Path</dt>
+<dd>Select the directory path to the cache files.</dd>
 </dl>
 </dd>
-<dt>起始</dt><dd><p>模拟开始的帧位置。</p>
-</dd>
-<dt>结束</dt><dd><p>模拟结束的帧位置。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The simulation is only calculated for positive frames
+<dt>起始</dt>
+<dd>模拟开始的帧位置。</dd>
+<dt>结束</dt>
+<dd><p class="first">模拟结束的帧位置。</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The simulation is only calculated for positive frames
 in between the <em>Start</em> and <em>End</em> frames of the <em>Cache</em> panel, whether you bake or not.
 So if you want a simulation that is longer than the default frame range you have to change the <em>End</em> frame.</p>
 </div>
 </dd>
-<dt>缓存步长</dt><dd><p>存储模拟数据的间隔。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>一些物理系统（例如粒子）允许仅在每个第n帧位置位置储存缓存，从而空出这些帧之间的位置。使用大于1的缓存步长将带来较小的缓存，但结果可能与原始模拟不同。</p>
+<dt>缓存步长</dt>
+<dd><p class="first">存储模拟数据的间隔。</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">一些物理系统（例如粒子）允许仅在每个第n帧位置位置储存缓存，从而空出这些帧之间的位置。使用大于1的缓存步长将带来较小的缓存，但结果可能与原始模拟不同。</p>
 </div>
 </dd>
 </dl>
 </div>
 <div class="section" id="baking">
 <span id="physics-bake"></span><h2>Baking<a class="headerlink" href="#baking" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>烘焙</dt><dd><p>开始烘焙。Blender在大多数烘焙操作中将变得无响应。光标将显示为代表烘焙进度的数字。必须在物体模式下进行烘焙。</p>
-</dd>
+<dl class="docutils">
+<dt>烘焙</dt>
+<dd>开始烘焙。Blender在大多数烘焙操作中将变得无响应。光标将显示为代表烘焙进度的数字。必须在物体模式下进行烘焙。</dd>
 </dl>
-<dl class="simple" id="free-physics-bake">
-<dt>清除烘培</dt><dd><p>将烘焙缓存标记为临时。数据仍然存在，但会随着下一个物体修改和帧更改而被删除。此按钮仅在物理系统烘焙时可用。</p>
-</dd>
+<dl class="docutils" id="free-physics-bake">
+<dt>清除烘培</dt>
+<dd>将烘焙缓存标记为临时。数据仍然存在，但会随着下一个物体修改和帧更改而被删除。此按钮仅在物理系统烘焙时可用。</dd>
 </dl>
-<dl id="calc-physics-bake-to-frame">
-<dt>计算至帧</dt><dd><p>烘焙只能达到当前帧。受限于在缓存设置中设置的结束帧。</p>
+<dl class="docutils" id="calc-physics-bake-to-frame">
+<dt>计算至帧</dt>
+<dd>烘焙只能达到当前帧。受限于在缓存设置中设置的结束帧。</dd>
+<dt>当前烘培缓存</dt>
+<dd>将任何临时缓存的模拟数据存储为烘焙。请注意，播放动画将尝试模拟任何可见的物理模拟。根据物理类型，这些数据可能暂时缓存。通常，当对象或设置被修改时，这样的临时缓存将被清除，但将其转换为烘焙将会“保存”它。</dd>
+<dt>烘培所有动力学解算结果</dt>
+<dd><p class="first">烘焙场景中的所有物理系统，甚至不同类型的物理系统。用于烘焙涉及不同物理类型之间相互作用的复杂设置。</p>
+<p class="last">请参阅 <a class="reference internal" href="#physics-bake"><span class="std std-ref">烘培</span></a>。</p>
 </dd>
-<dt>当前烘培缓存</dt><dd><p>将任何临时缓存的模拟数据存储为烘焙。请注意，播放动画将尝试模拟任何可见的物理模拟。根据物理类型，这些数据可能暂时缓存。通常，当对象或设置被修改时，这样的临时缓存将被清除，但将其转换为烘焙将会“保存”它。</p>
+<dt>清除所有烘培</dt>
+<dd><p class="first">清除场景中所有物理系统的烘焙，甚至是不同类型的物理系统。</p>
+<p class="last">请参阅 <a class="reference internal" href="#free-physics-bake"><span class="std std-ref">清除烘培</span></a>.</p>
 </dd>
-<dt>烘培所有动力学解算结果</dt><dd><p>烘焙场景中的所有物理系统，甚至不同类型的物理系统。用于烘焙涉及不同物理类型之间相互作用的复杂设置。</p>
-<p>请参阅 <a class="reference internal" href="#physics-bake"><span class="std std-ref">烘培</span></a>。</p>
-</dd>
-<dt>清除所有烘培</dt><dd><p>清除场景中所有物理系统的烘焙，甚至是不同类型的物理系统。</p>
-<p>请参阅 <a class="reference internal" href="#free-physics-bake"><span class="std std-ref">清除烘培</span></a>.</p>
-</dd>
-<dt>全部更新到帧</dt><dd><p>将场景中的所有物理系统烘烤到当前帧。</p>
-<p>请参阅 <a class="reference internal" href="#calc-physics-bake-to-frame"><span class="std std-ref">计算至帧</span></a>。</p>
+<dt>全部更新到帧</dt>
+<dd><p class="first">将场景中的所有物理系统烘烤到当前帧。</p>
+<p class="last">请参阅 <a class="reference internal" href="#calc-physics-bake-to-frame"><span class="std std-ref">计算至帧</span></a>。</p>
 </dd>
 </dl>
 </div>
@@ -300,10 +338,10 @@ So if you want a simulation that is longer than the default frame range you have
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="force_fields/index.html" class="btn btn-neutral float-right" title="力场" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../render/index.html" class="btn btn-neutral float-right" title="渲染" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="gravity.html" class="btn btn-neutral float-left" title="重力" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="collision.html" class="btn btn-neutral float-left" title="碰撞" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

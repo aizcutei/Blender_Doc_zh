@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>工作空间 &mdash; Blender Manual</title>
+  <title>工作区 &mdash; Blender Manual</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devinterface/window_system/workspaces.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/window_system/workspaces.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="区域" href="areas.html" />
-    <link rel="prev" title="介绍" href="introduction.html" /> 
+    <link rel="next" title="状态栏" href="status_bar.html" />
+    <link rel="prev" title="顶栏" href="topbar.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,15 +114,17 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">用户界面</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../splash.html">启动画面</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#window-system">窗口系统</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="introduction.html">介绍</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">工作空间</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topbar.html">顶栏</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">工作区</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#controls">控件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#default-workspaces">默认工作空间</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#default-workspaces">默认工作区</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#save-and-override">保存以及覆盖</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="areas.html">区域</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regions.html">区块</a></li>
+<li class="toctree-l3"><a class="reference internal" href="status_bar.html">状态栏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="areas.html">区域-Areas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regions.html">区块-Regions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tabs_panels.html">选项卡 &amp; 面板</a></li>
 </ul>
 </li>
@@ -113,18 +134,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -177,7 +199,7 @@
         
           <li><a href="../index.html">用户界面</a> &raquo;</li>
         
-      <li>工作空间</li>
+      <li>工作区</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -197,62 +219,103 @@
            <div itemprop="articleBody">
             
   <div class="section" id="workspaces">
-<h1>工作空间<a class="headerlink" href="#workspaces" title="Permalink to this headline">¶</a></h1>
+<h1>工作区<a class="headerlink" href="#workspaces" title="Permalink to this headline">¶</a></h1>
+<p><em>工作区</em> 本质上是预设的窗口布局。Blender <a class="reference internal" href="areas.html"><span class="doc">区域</span></a> 的弹性让用户得以为不同点任务，如建模，动画和脚本编写自定义不同点工作区。常用于在同一文件中快速切换不同的工作区。</p>
 <div class="figure align-center" id="id1">
 <img alt="../../_images/interface_window-system_workspaces_screen.png" src="../../_images/interface_window-system_workspaces_screen.png" />
-<p class="caption"><span class="caption-text">工作空间位于顶栏</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">工作区位于顶栏。</span></p>
 </div>
-<p><em>工作空间</em> 本质上是预设的窗口布局。Blender <a class="reference internal" href="areas.html"><span class="doc">区域</span></a> 的弹性让用户得以为不同点任务，如建模，动画和脚本编写自定义不同点工作空间。常用于在同一文件中快速切换不同的工作空间。</p>
 <div class="section" id="controls">
 <h2>控件<a class="headerlink" href="#controls" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>选项卡</dt><dd><p>单击选项卡切换工作空间。使用 <kbd class="kbd docutils literal notranslate">Ctrl-PageUp</kbd> 和 <kbd class="kbd docutils literal notranslate">Ctrl-PageDown</kbd> 循环切换工作空间。</p>
-</dd>
-<dt>添加 <code class="docutils literal notranslate"><span class="pre">+</span></code></dt><dd><p>单击 <em>添加</em> 按钮添加一个新的工作空间。</p>
-</dd>
-<dt>上下文菜单 <kbd class="kbd docutils literal notranslate">RMB</kbd></dt><dd><p>上下文菜单包含复制，删除和重新排序工作空间。</p>
-</dd>
+<dl class="docutils">
+<dt>选项卡</dt>
+<dd>单击选项卡切换工作区。使用 <kbd class="kbd docutils literal notranslate">Ctrl-PageUp</kbd> 和 <kbd class="kbd docutils literal notranslate">Ctrl-PageDown</kbd> 循环切换工作区，左键双击重命名工作区。</dd>
+<dt>添加 <code class="docutils literal notranslate"><span class="pre">+</span></code></dt>
+<dd>单击 <em>添加</em> 按钮添加一个新的工作区。</dd>
+<dt>上下文菜单 <kbd class="kbd docutils literal notranslate">RMB</kbd></dt>
+<dd>上下文菜单包含复制，删除和重新排序工作区。</dd>
 </dl>
 </div>
 <div class="section" id="default-workspaces">
-<h2>默认工作空间<a class="headerlink" href="#default-workspaces" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list simple">
-<dt class="field-odd">布局</dt>
-<dd class="field-odd"><p>用于预览场景以及物体的常规工作空间。</p>
-</dd>
-<dt class="field-even">建模</dt>
-<dd class="field-even"><p>使用建模工具修改几何体。</p>
-</dd>
-<dt class="field-odd">雕刻</dt>
-<dd class="field-odd"><p>使用雕刻工具修改网格。</p>
-</dd>
-<dt class="field-even">UV编辑</dt>
-<dd class="field-even"><p>将图像纹理坐标映射至三维表面。</p>
-</dd>
-<dt class="field-odd">纹理绘制</dt>
-<dd class="field-odd"><p>在3D视图中绘制图像纹理。</p>
-</dd>
-<dt class="field-even">着色</dt>
-<dd class="field-even"><p>为渲染指定材质属性。</p>
-</dd>
-<dt class="field-odd">动画</dt>
-<dd class="field-odd"><p>使物体属性随时间发生变化。</p>
-</dd>
-<dt class="field-even">渲染</dt>
-<dd class="field-even"><p>用于查看以及分析渲染结果。</p>
-</dd>
-<dt class="field-odd">合成</dt>
-<dd class="field-odd"><p>图像以及渲染信息合并以及后处理。</p>
-</dd>
-<dt class="field-even">脚本</dt>
-<dd class="field-even"><p>用于编写脚本的编程工作空间。</p>
-</dd>
-</dl>
+<h2>默认工作区<a class="headerlink" href="#default-workspaces" title="Permalink to this headline">¶</a></h2>
+<p>Blender启动时默认显示Layout工作区。这是一个通用的工作区，用来预览场景和物体，它包含以下 <a class="reference internal" href="../../editors/index.html"><span class="doc">编辑器</span></a> ：</p>
+<ul class="simple">
+<li>3D视图位于左上方。</li>
+<li>大纲位于右上方。</li>
+<li>属性编辑器位于右下方。</li>
+<li>时间线位于左下方。</li>
+</ul>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/interface_window-system_introduction_layout-workspace.png" src="../../_images/interface_window-system_introduction_layout-workspace.png" />
+<p class="caption"><span class="caption-text">Blender的Layout工作区的四个编辑器。</span></p>
+<div class="legend">
+3D视图（黄色），大纲（绿色），属性编辑（蓝色）和时间线（红色）。</div>
+</div>
+<p>BLender还默认添加了其他几个工作区：</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">建模:</th><td class="field-body">使用建模工具修改几何体。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">雕刻:</th><td class="field-body">使用雕刻工具修改网格。</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">UV编辑:</th><td class="field-body">将图像纹理坐标映射至三维表面。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">纹理绘制:</th><td class="field-body">在3D视图中绘制图像纹理。</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">着色:</th><td class="field-body">为渲染指定材质属性。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">动画:</th><td class="field-body">使物体属性随时间发生变化。</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">渲染:</th><td class="field-body">用于查看以及分析渲染结果。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">合成:</th><td class="field-body">图像以及渲染信息合并以及后处理。</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">脚本:</th><td class="field-body">用于编写脚本的编程工作区。</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="additional-workspaces">
+<h3>附加工作区<a class="headerlink" href="#additional-workspaces" title="Permalink to this headline">¶</a></h3>
+<p>Blender还附加了几套工作区用于新建：</p>
+<p class="rubric">2D动画</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">2D动画:</th><td class="field-body">蜡笔绘画的通用工作区。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">全屏2D画布:</th><td class="field-body">类似 <em>2D动画</em> 但有个更大的画布。</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">VFX</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">遮罩:</th><td class="field-body">创建2D遮罩的合成工具。</td>
+</tr>
+<tr class="field-even field"><th class="field-name">运动追踪:</th><td class="field-body">运动追踪的稳定镜头工具。</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">视频编辑</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">视频编辑:</th><td class="field-body">将媒体整合到一个视频中。</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="section" id="save-and-override">
 <h2>保存以及覆盖<a class="headerlink" href="#save-and-override" title="Permalink to this headline">¶</a></h2>
-<p>工作空间随blend文件一同保存。打开文件时，在文件浏览器中启用 <em>加载UI</em>，也就意味着Blender会使用该文件的屏幕布局，并覆盖当前布局。详情见 <a class="reference internal" href="../../data_system/files/open.html#file-load-ui"><span class="std std-ref">加载UI</span></a>。</p>
-<p>可将一组自定义的工作空间保存为 <a class="reference internal" href="../../data_system/files/startup_file.html"><span class="doc">启动文件</span></a> 的一部分。</p>
+<p>工作区随blend文件一同保存。打开文件时，在文件浏览器中启用 <em>加载UI</em>，也就意味着Blender会使用该文件的屏幕布局，并覆盖当前布局。详情见 <a class="reference internal" href="../../files/blend/save_load.html#file-load-ui"><span class="std std-ref">加载UI</span></a>。</p>
+<p>可将一组自定义的工作区保存为 <a class="reference internal" href="../../getting_started/configuration/defaults.html"><span class="doc">默认配置</span></a> 的一部分。</p>
 </div>
 </div>
 
@@ -264,10 +327,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="areas.html" class="btn btn-neutral float-right" title="区域" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="status_bar.html" class="btn btn-neutral float-right" title="状态栏" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral float-left" title="介绍" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="topbar.html" class="btn btn-neutral float-left" title="顶栏" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

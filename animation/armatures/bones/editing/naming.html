@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>命名 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/armatures/bones/editing/naming.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Parenting 父级" href="parenting.html" />
+    <link rel="prev" title="编辑骨骼" href="bones.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">动画 &amp; 绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">骨架</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">骨骼</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../structure.html">结构</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../selecting.html">选择</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">编辑</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../properties/index.html">属性</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../skinning/index.html">蒙皮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../posing/index.html">姿态</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lattice.html">Lattice 晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../constraints/index.html">约束</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../actions.html">动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../drivers/index.html">驱动器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../markers.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../shape_keys/index.html">形态键</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_paths.html">运动路径</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">动画 &amp; 绑定</a> &raquo;</li>
+        
+          <li><a href="../../index.html">骨架</a> &raquo;</li>
+        
+          <li><a href="../index.html">骨骼</a> &raquo;</li>
+        
+          <li><a href="index.html">编辑</a> &raquo;</li>
+        
+      <li>命名</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/animation/armatures/bones/editing/naming.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="naming">
+<span id="armature-editing-naming-bones"></span><h1>命名<a class="headerlink" href="#naming" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Sidebar region ‣ Item</span>,
+<span class="menuselection">Bones tab ‣ Bones panel</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>You can rename your bones, either using the <em>name</em> field of the <em>Item</em>
+panel in the 3D Views, for the active bone,
+or using the <em>name</em> field in each bone of the <em>Bones</em> tab in <em>Edit Mode</em>.
+It is also possible to rename by double-clicking bones in the Outliner.</p>
+<p>Blender也提供了一些方便左右对称命名骨骼的工具，和自动命名骨架上骨骼的工具。让我们具体来看看这些工具。</p>
+<div class="section" id="naming-conventions">
+<span id="armature-editing-naming-conventions"></span><h2>Naming Conventions 命名习惯<a class="headerlink" href="#naming-conventions" title="Permalink to this headline">¶</a></h2>
+<p>在Blender命名习惯不仅仅是用于找到正确的骨骼，也告诉Blender哪两个骨骼是配对骨骼。</p>
+<p>如果你的骨架可以镜像另一半（即它是两侧对称），这是值得坚持左/右命名的约定。这将使您能够使用一些工具，可能会节省您的时间和精力（如 <em>X轴镜像</em> 的编辑工具，我们上面看到的...）。</p>
+<div class="figure" id="id1">
+<img alt="../../../../_images/animation_armatures_bones_editing_naming_example.png" src="../../../../_images/animation_armatures_bones_editing_naming_example.png" />
+<p class="caption"><span class="caption-text">一个简单的绑定的左右骨骼命名的例子。</span></p>
+</div>
+<ol class="arabic">
+<li><p class="first">首先，你应该给你的骨骼有意义的基名称，如leg （腿部），arm （手臂），finger （手指），back （背部），foot （脚部）等。</p>
+</li>
+<li><p class="first">如果你的骨骼的副本在另一边，像手臂，给它如下面的分隔符区别：</p>
+<ul class="simple">
+<li>左/右分隔符可以在任意第二位置“L  <strong>_</strong> calfbone”或最后一个位置 &quot;calfbone <strong>.</strong> R&quot;</li>
+<li>如果有一个大写或小写 &quot;L&quot;, &quot;R&quot;, &quot;left&quot; 或 &quot;right&quot;, Blender 正确处理副本。有关分隔符的列表，请参见下文。，选择一个，当在绑定时尽量使用它们。会得到收获的。</li>
+</ul>
+<p>有效的分隔符示例:</p>
+<ul class="simple">
+<li>(nothing无): handLeft --&gt; handRight</li>
+<li><code class="docutils literal notranslate"><span class="pre">_</span></code> (underscore下划线): hand<strong>_</strong>L --&gt; hand<strong>_</strong>R</li>
+<li><code class="docutils literal notranslate"><span class="pre">.</span></code> (dot点): hand<strong>.</strong>l --&gt; hand<strong>.</strong>r</li>
+<li><code class="docutils literal notranslate"><span class="pre">-</span></code> (dash破折号): hand<strong>-</strong>l --&gt; hand<strong>-</strong>r</li>
+<li>`` `` (space空格): hand LEFT --&gt; hand RIGHT</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">注意上面的所有例子在命名前都有有效的左右部分。如果你使用分隔符你仅仅可以使用左右的缩写&quot;L&quot;/ &quot;R&quot; （例如&quot;handL&quot;/&quot;handR&quot;将不起作用）。</p>
+</div>
+</li>
+<li><p class="first">在Blender处理一个骨骼的镜像和翻转前，它首先是移除数字扩展，如果有的话（像&quot;.001&quot;.）。</p>
+</li>
+<li><p class="first">你可以复制名为“bla.L”的骨骼并将其翻转过来通过使用 <span class="menuselection">Specials ‣ Flip Left-Right Names</span>. Blender将命名副本为 &quot;bla.L.001”并翻转名字为 &quot;bla.R”。</p>
+</li>
+</ol>
+</div>
+<div class="section" id="flip-name">
+<h2>Flip Name 翻转命名<a class="headerlink" href="#flip-name" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body">菜单:     <span class="menuselection">Armature ‣ Flip Name</span>, <span class="menuselection">Specials ‣ Flip Name</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>你能够翻转选择的骨骼的左右标记（见上文）， 通过使用 <span class="menuselection">Armature ‣ Flip Name</span>. 这非常有用的在你已经构建了一半的对称绑定（标记为左侧和右侧）和复制和镜像它，想要更新另一半的名字时。Blender将根据上述命名约定交换骨骼名称的文本，如果有的话删除数字扩展。</p>
+</div>
+<div class="section" id="autoname">
+<h2>AutoName 自动命名<a class="headerlink" href="#autoname" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Armature ‣ AutoName Left/Right</span>,
+<span class="menuselection">Armature ‣ AutoName Front/Back</span>,
+<span class="menuselection">Armature ‣ AutoName Top/Bottom</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The three <em>AutoName</em> entries of the <em>Armature</em> and <em>Specials</em> menu <kbd class="kbd docutils literal notranslate">W</kbd>
+allow you to automatically add a suffix to all selected bones, based
+on the position of their root relative to the armature's origin and its local coordinates:</p>
+<dl class="docutils">
+<dt>AutoName Left/Right 自动命名左/右</dt>
+<dd>将所有的骨骼 <em>正（positive）</em> 的坐标首端添加 &quot;.L&quot; 后缀给，给所有的骨骼 <em>负（negative）</em> 的坐标首端添加&quot;.R&quot;后缀，如果首端完全位于X轴的0.0处，X轴坐标的的尾端将被使用。如果两端都位于X轴的0.0处，骨骼将得到一个周期的后缀,没有 &quot;L&quot;/ &quot;R&quot; 左右（Blender将不能够区分那个是左右骨骼…)。</dd>
+<dt>AutoName Front/Back 自动命名前/后</dt>
+<dd>将为所有的骨骼的 <em>正</em> 的Y根部添加 &quot;.Bk&quot; 后缀，所有 <em>负</em> 的Y根部添加 &quot;.Fr&quot; 后缀，和 <em>AutoName Left-Right（自动命名左/右）</em> 给Y 坐标的骨骼0值一样......</dd>
+<dt>AutoName Top/Bottom 自动命名顶部/底部</dt>
+<dd>将为所有的骨骼的 <em>正</em> 的Z根部添加 &quot;.Top&quot;后缀，所有 <em>负</em> 的Y根部添加 &quot;.Bot&quot; 后缀，和 <em>AutoName Left-Right（自动命名左/右）</em> 给Z坐标的骨骼0值一样......</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="parenting.html" class="btn btn-neutral float-right" title="Parenting 父级" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bones.html" class="btn btn-neutral float-left" title="编辑骨骼" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

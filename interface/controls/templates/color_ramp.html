@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devinterface/controls/templates/color_ramp.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/controls/templates/color_ramp.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="曲线部件" href="curve.html" />
@@ -105,7 +124,7 @@
 <li class="toctree-l4 current"><a class="current reference internal" href="#">颜色渐变部件</a></li>
 <li class="toctree-l4"><a class="reference internal" href="curve.html">曲线部件</a></li>
 <li class="toctree-l4"><a class="reference internal" href="operator_search.html">操作搜索</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../common_shortcuts.html">通用快捷键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../nodes/index.html">节点</a></li>
 </ul>
 </li>
 </ul>
@@ -114,18 +133,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -199,72 +219,89 @@
             
   <div class="section" id="color-ramp-widget">
 <span id="bpy-types-colorramp"></span><span id="ui-color-ramp-widget"></span><h1>颜色渐变部件<a class="headerlink" href="#color-ramp-widget" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-center" id="id1">
-<img alt="../../../_images/interface_controls_templates_color-ramp_color-ramp.png" src="../../../_images/interface_controls_templates_color-ramp_color-ramp.png" />
-<p class="caption"><span class="caption-text">颜色渐变。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
 <p><em>颜色渐变</em> 使用户能够指定基于色标的颜色变化。色标类似于标记，用于标明该点的确切颜色。色标之间的颜色取决于色标颜色与插值方式。</p>
+<div class="figure" id="id1">
+<img alt="../../../_images/interface_controls_templates_color-ramp_color-ramp.png" src="../../../_images/interface_controls_templates_color-ramp_color-ramp.png" />
+<p class="caption"><span class="caption-text">颜色渐变。</span></p>
+</div>
 <div class="section" id="controls">
 <h2>控件<a class="headerlink" href="#controls" title="Permalink to this headline">¶</a></h2>
-<dl>
-<dt>添加 <code class="docutils literal notranslate"><span class="pre">+</span></code></dt><dd><p>单击该按钮，为自定义权重映射添加色标。新添加的色标位于最后选中的色标与左侧色标中间。</p>
-</dd>
-<dt>删除 <code class="docutils literal notranslate"><span class="pre">-</span></code></dt><dd><p>从列表中删除选中色标。</p>
-</dd>
-<dt>翻转 <code class="docutils literal notranslate"><span class="pre">&lt;-&gt;</span></code></dt><dd><p>翻转渐变色带，翻转自定义权重绘制范围的值。</p>
-</dd>
-<dt>色彩模式</dt><dd><p>选择用于插值的 <a class="reference internal" href="../../../glossary/index.html#term-color-space"><span class="xref std std-term">色彩空间</span></a>。</p>
-<dl class="simple">
-<dt>RGB</dt><dd><p>混合各个颜色通道，并合成颜色。</p>
-</dd>
-<dt>HSV/HSL</dt><dd><p>先转换颜色为HSV或者HSL，然后混合，在合成颜色。该方法的优势在于可以保持不同色调之间的饱和度，获得更丰富的渐变，而RGB则会降低饱和度。</p>
-</dd>
+<dl class="docutils">
+<dt>添加 <code class="docutils literal notranslate"><span class="pre">+</span></code></dt>
+<dd>单击该按钮，为自定义权重映射添加色标。新添加的色标位于最后选中的色标与左侧色标中间。</dd>
+<dt>删除 <code class="docutils literal notranslate"><span class="pre">-</span></code></dt>
+<dd>从列表中删除选中色标。</dd>
+<dt>专项菜单 <code class="docutils literal notranslate"><span class="pre">v</span></code></dt>
+<dd><p class="first">包含更多颜色渐变的操作。</p>
+<dl class="last docutils">
+<dt>反转渐变色</dt>
+<dd>翻转渐变色带，翻转自定义权重绘制范围的值。</dd>
+<dt>从左侧分布断点</dt>
+<dd>从左至右均匀分布每一个断点，当与插入常值一起使用时，这非常有用。</dd>
+<dt>均匀分布断点</dt>
+<dd>使每一个断点之间的距离保持相等。</dd>
+<dt>吸管工具（吸管图标）:kbd:<cite>E</cite></dt>
+<dd>使用 <a class="reference internal" href="../buttons/eyedropper.html#ui-eyedropper"><span class="std std-ref">吸管工具</span></a> 从界面中提取相同的颜色或渐变色。</dd>
+<dt>重置颜色渐变</dt>
+<dd>恢复颜色渐变至初始状态。</dd>
 </dl>
 </dd>
-<dt>插值选项</dt><dd><p>供用户选择色标之间的插值计算方法类型。</p>
-<dl>
-<dt>RGB</dt><dd><dl class="simple">
-<dt>插值样条</dt><dd><p>色标之间使用 <em>B-样条曲线</em> 插值。</p>
-</dd>
-<dt>原始</dt><dd><p>色标之间使用 <em>原始</em> 插值。</p>
-</dd>
-<dt>线性</dt><dd><p>色标之间使用 <em>线性</em> 插值。</p>
-</dd>
-<dt>移动</dt><dd><p>色标之间使用 <em>移动</em> 插值。</p>
-</dd>
-<dt>常值</dt><dd><p>色标之间使用 <em>常数</em> 插值。</p>
-</dd>
+<dt>色彩模式</dt>
+<dd><p class="first">选择用于插值的 <a class="reference internal" href="../../../glossary/index.html#term-color-space"><span class="xref std std-term">色彩空间</span></a>。</p>
+<dl class="last docutils">
+<dt>RGB</dt>
+<dd>混合各个颜色通道，并合成颜色。</dd>
+<dt>HSV/HSL</dt>
+<dd>先转换颜色为HSV或者HSL，然后混合，在合成颜色。该方法的优势在于可以保持不同色调之间的饱和度，获得更丰富的渐变，而RGB则会降低饱和度。</dd>
 </dl>
 </dd>
-<dt>HSV 与 HSL</dt><dd><dl class="simple">
-<dt>顺时针</dt><dd><p>沿HSV/HSL 色轮顺时针插值。</p>
+<dt>插值选项</dt>
+<dd><p class="first">供用户选择色标之间的插值计算方法类型。</p>
+<dl class="docutils">
+<dt>RGB</dt>
+<dd><dl class="first last docutils">
+<dt>插值样条</dt>
+<dd>色标之间使用 <em>B-样条曲线</em> 插值。</dd>
+<dt>原始</dt>
+<dd>色标之间使用 <em>原始</em> 插值。</dd>
+<dt>线性</dt>
+<dd>色标之间使用 <em>线性</em> 插值。</dd>
+<dt>移动</dt>
+<dd>色标之间使用 <em>移动</em> 插值。</dd>
+<dt>常值</dt>
+<dd>色标之间使用 <em>常数</em> 插值。</dd>
+</dl>
 </dd>
-<dt>逆时针</dt><dd><p>沿HSV/HSL 色轮顺时针插值。</p>
-</dd>
-<dt>相近</dt><dd><p>色轮上最近的路径。</p>
-</dd>
-<dt>远</dt><dd><p>色轮上最远的路径。</p>
+<dt>HSV 与 HSL</dt>
+<dd><dl class="first last docutils">
+<dt>顺时针</dt>
+<dd>沿HSV/HSL 色轮顺时针插值。</dd>
+<dt>逆时针</dt>
+<dd>沿HSV/HSL 色轮顺时针插值。</dd>
+<dt>相近</dt>
+<dd>色轮上最近的路径。</dd>
+<dt>远</dt>
+<dd>色轮上最远的路径。</dd>
+</dl>
 </dd>
 </dl>
-<div class="figure align-center" id="id2">
-<a class="reference internal image-reference" href="../../../_images/interface_controls_templates_color-ramp_color-ramp_interpolation.png"><img alt="../../../_images/interface_controls_templates_color-ramp_color-ramp_interpolation.png" src="../../../_images/interface_controls_templates_color-ramp_color-ramp_interpolation.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-text">HSV 与 HSL插值选项</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<div class="last figure" id="id2">
+<a class="reference internal image-reference" href="../../../_images/interface_controls_templates_color-ramp_interpolation.png"><img alt="../../../_images/interface_controls_templates_color-ramp_interpolation.png" src="../../../_images/interface_controls_templates_color-ramp_interpolation.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">HSV 与 HSL插值选项。</span></p>
 </div>
 </dd>
-</dl>
-</dd>
-<dt>活动色标</dt><dd><p>活动色标 (显示为虚线)索引。在色标过于密集时，可以用于改变活动色标。</p>
-</dd>
-<dt>位置</dt><dd><p>该滑块用于控制选中色标在色带上的位置。</p>
-</dd>
-<dt>颜色</dt><dd><p>打开拾色器供用户指定选中色标的颜色和透明度。当该色彩使用Alpha，颜色按钮一分为二，左侧显示基础色彩，右侧带透明度的颜色。</p>
-</dd>
+<dt>活动色标</dt>
+<dd>活动色标 (显示为虚线)索引。在色标过于密集时，可以用于改变活动色标。</dd>
+<dt>位置</dt>
+<dd>该滑块用于控制选中色标在色带上的位置。</dd>
+<dt>颜色</dt>
+<dd>打开颜色选择器选择颜色点和Alpha通道值。 当颜色使用Alpha时，颜色区域将被分为两部分，左侧显示基色，右侧显示带alpha值的颜色。</dd>
 </dl>
 <div class="section" id="shortcuts">
 <h3>快捷键<a class="headerlink" href="#shortcuts" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><kbd class="kbd docutils literal notranslate">LMB</kbd> (拖动) 移动颜色。</p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> (单击) 添加控制点。</p></li>
+<li><kbd class="kbd docutils literal notranslate">LMB</kbd> (拖动) 移动颜色。</li>
+<li><kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> (单击) 添加控制点。</li>
 </ul>
 </div>
 </div>

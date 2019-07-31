@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>工具 &mdash; Blender Manual</title>
+  <title>Sculpting Tools &mdash; Blender Manual</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devsculpt_paint/sculpting/tools.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/sculpt_paint/sculpting/tools.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="选项" href="options.html" />
+    <link rel="next" title="Tool Settings" href="tool_settings/index.html" />
     <link rel="prev" title="简介" href="introduction.html" /> 
 </head>
 
@@ -94,36 +113,38 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">绘制与雕刻</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">雕刻 &amp; 绘制</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">介绍</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../brush.html">笔刷</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../texture_tex_mask.html">纹理和纹理遮罩</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../stroke_curve.html">笔触和曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brush/index.html">笔刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../navigation.html">Navigation</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#modes">模式</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../painting/index.html">绘制</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">雕刻</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">工具</a></li>
-<li class="toctree-l4"><a class="reference internal" href="options.html">选项</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Sculpting Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tool_settings/index.html">Tool Settings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="adaptive.html">自适应雕刻</a></li>
 <li class="toctree-l4"><a class="reference internal" href="hide_mask.html">隐藏 &amp; 遮罩</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../texture_paint/index.html">纹理绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vertex_paint/index.html">顶点绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../weight_paint/index.html">权重绘制</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -174,11 +195,11 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">绘制与雕刻</a> &raquo;</li>
+          <li><a href="../index.html">雕刻 &amp; 绘制</a> &raquo;</li>
         
           <li><a href="index.html">雕刻</a> &raquo;</li>
         
-      <li>工具</li>
+      <li>Sculpting Tools</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -197,192 +218,117 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tools">
-<h1>工具<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h1>
-<div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>雕刻模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具</span></p>
-</dd>
+  <div class="section" id="sculpting-tools">
+<h1>Sculpting Tools<a class="headerlink" href="#sculpting-tools" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right">
+<img alt="../../_images/sculpt-paint_sculpting_toolbar_index_brushes.png" src="../../_images/sculpt-paint_sculpting_toolbar_index_brushes.png" />
+</div>
+<dl class="docutils">
+<dt>Draw <kbd class="kbd docutils literal notranslate">X</kbd></dt>
+<dd>Moves vertices inward or outward,
+based the average normal of the vertices contained within the drawn brush stroke.</dd>
+<dt>Clay <kbd class="kbd docutils literal notranslate">C</kbd></dt>
+<dd>Similar to the <em>Draw</em> brush, but includes settings to adjust the plane on which the brush acts.
+It behaves like a combination of the <em>Flatten</em> and <em>Draw</em> brushes.</dd>
+<dt>Clay Strips</dt>
+<dd>Similar to the <em>Clay</em> brush, but it uses a cube to define the brush area of influence rather than a sphere.</dd>
+<dt>Layer <kbd class="kbd docutils literal notranslate">L</kbd></dt>
+<dd><p class="first">This brush is similar to <em>Draw</em>, except that the height of the displacement layer is capped.
+This creates the appearance of a solid layer being drawn.
+This brush does not draw on top of itself; a brush stroke intersects itself.
+Releasing the mouse button and starting a new stroke
+will reset the depth and paint on top of the previous stroke.</p>
+<dl class="last docutils">
+<dt>Persistent</dt>
+<dd>You can keep sculpting on the same layer between strokes when this is on.</dd>
+<dt>Set Persistent Base</dt>
+<dd>This button resets the base so that you can add another layer.</dd>
 </dl>
-</div>
-<div class="section" id="brush">
-<h2>笔刷<a class="headerlink" href="#brush" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="brush-type">
-<h3>笔刷类型<a class="headerlink" href="#brush-type" title="Permalink to this headline">¶</a></h3>
-<div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>雕刻模式</p>
 </dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 笔刷</span></p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">Brush ‣ Sculpt Tool</span></p>
-</dd>
-</dl>
-</div>
-<div class="figure align-center" id="id1">
-<img alt="../../_images/sculpt-paint_sculpting_tools_brushes.png" src="../../_images/sculpt-paint_sculpting_tools_brushes.png" />
-<p class="caption"><span class="caption-text">雕刻笔刷。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<dl>
-<dt>球体</dt><dd><p>使用通过控制设置球体边的夹捏量的球形将网格向外或向内推。</p>
-</dd>
-<dt>Clay <kbd class="kbd docutils literal notranslate">C</kbd> 粘土 <kbd class="kbd docutils literal notranslate">C</kbd></dt><dd><p>Similar to the <em>SculptDraw</em> brush, but includes settings to adjust the plane on which the brush acts.
-It behaves like a combination of the <em>Flatten</em> and <em>SculptDraw</em> brushes.</p>
-</dd>
-<dt>Clay Strips 粘土条</dt><dd><p>类似于 <em>Clay（粘土）</em> 笔刷，但它使用立方体测试来定义笔刷区域的影响而不是球体。</p>
-</dd>
-<dt>Crease <kbd class="kbd docutils literal notranslate">Shift-C</kbd>   折痕 <kbd class="kbd docutils literal notranslate">Shift-C</kbd></dt><dd><p>通过推或拉动网格，同时将顶点挤压在一起，创建尖锐的凹痕或凸脊。</p>
-</dd>
-<dt>Fill/Deepen 填充/深化</dt><dd><p>Works like the Flatten brush, but only brings vertices below the brush plane upwards.
-The inverse of the <em>Fill</em> brush is to <em>Deepen</em> by pushing vertices below the plane downward.</p>
-</dd>
-<dt>Flatten/Contrast <kbd class="kbd docutils literal notranslate">Shift-T</kbd> 展平 <kbd class="kbd docutils literal notranslate">Shift-T</kbd></dt><dd><p>The <em>Flatten</em> brush determines an &quot;area plane&quot;
+<dt>Inflate/Deflate <kbd class="kbd docutils literal notranslate">I</kbd></dt>
+<dd>Similar to <em>Draw</em>,
+except that vertices in <em>Inflate</em> mode are displaced in the direction of their own normals.</dd>
+<dt>Blob</dt>
+<dd>Pushes mesh outward or inward into a spherical shape with settings to
+control the amount of pinching at the edge of the sphere.</dd>
+<dt>Crease <kbd class="kbd docutils literal notranslate">Shift-C</kbd></dt>
+<dd>Creates sharp indents or ridges by pushing or pulling the mesh, while pinching the vertices together.</dd>
+<dt>Smooth <kbd class="kbd docutils literal notranslate">S</kbd></dt>
+<dd>As the name suggests, eliminates irregularities in the area of the mesh within the brush's
+influence by smoothing the positions of the vertices.</dd>
+<dt>Flatten/Contrast <kbd class="kbd docutils literal notranslate">Shift-T</kbd></dt>
+<dd>The <em>Flatten</em> brush determines an &quot;area plane&quot;
 located by default at the average height above/below the vertices within the brush area.
 The vertices are then pulled towards this plane.
 The inverse of the <em>Flatten</em> brush is the <em>Contrast</em> brush
-which pushes vertices up or down away from the brush plane.</p>
+which pushes vertices up or down away from the brush plane.</dd>
+<dt>Fill/Deepen</dt>
+<dd>Works like the Flatten brush, but only brings vertices below the brush plane upwards.
+The inverse of the <em>Fill</em> brush is to <em>Deepen</em> by pushing vertices below the plane downward.</dd>
+<dt>Scrape/Peaks</dt>
+<dd>The <em>Scrape</em> brush works like the <em>Flatten</em> brush, but only brings vertices above the plane downwards.
+The inverse of the <em>Scrape</em> brush is to <em>Peak</em> by pushing vertices above the plane up away from the plane.</dd>
+<dt>Pinch/Magnify <kbd class="kbd docutils literal notranslate">P</kbd></dt>
+<dd>Pulls vertices towards the center of the brush.
+The inverse setting is <em>Magnify</em>, in which vertices are pushed away from the center of the brush.</dd>
+<dt>Grab <kbd class="kbd docutils literal notranslate">G</kbd></dt>
+<dd>Used to drag a group of points around. Unlike the other brushes,
+<em>Grab</em> does not modify different points as the brush is dragged across the model.
+Instead, <em>Grab</em> selects a group of vertices on mouse-down, and pulls them to follow the mouse.
+The effect is similar to moving a group of vertices in Edit Mode with Proportional Editing enabled,
+except that <em>Grab</em> can make use of other Sculpt Mode options (like textures and symmetry).</dd>
+<dt>Snake Hook <kbd class="kbd docutils literal notranslate">K</kbd></dt>
+<dd><p class="first">Pulls vertices along with the movement of the brush to create long, snake-like forms.</p>
+<dl class="last docutils">
+<dt>Pinch</dt>
+<dd>The <em>Snake Hook</em> brush tends to loose volume along the stroke,
+with pinch &gt; 0.5 it's possible to sculpt shapes without loosing volume.</dd>
+<dt>Rake</dt>
+<dd>A factor to support moving the mesh with rotation following the cursor's motion.</dd>
+</dl>
 </dd>
-<dt>Grab <kbd class="kbd docutils literal notranslate">G</kbd>  移动</dt><dd><p>用于拖动一组顶点。与其它笔刷不同，<em>Grab</em> 不会在笔刷拖过模型时修改不同的顶点。相反，<em>Grab</em> 只会选择在鼠标按下上的一组顶点，它们将会跟随鼠标拉动。效果类似于使用衰减编辑功能在 <em>编辑模式</em> 中移动一组顶点，除外 <em>Grab</em> 可以使用其他雕刻模式选项（如纹理和对称性）。</p>
-</dd>
-<dt>Inflate/Deflate <kbd class="kbd docutils literal notranslate">I</kbd>  膨胀  <kbd class="kbd docutils literal notranslate">I</kbd></dt><dd><p>与 <em>SculptDraw</em> 类似，除了 <em>Inflate（膨胀）</em> 模式中的顶点在自己的法线方向上移位。</p>
-</dd>
-<dt>Layer <kbd class="kbd docutils literal notranslate">L</kbd> 层次 <kbd class="kbd docutils literal notranslate">L</kbd></dt><dd><p>这个笔刷类似于 <em>SculptDraw</em>，除了位移层的高度被叠加绘制。这将产生正在绘制的实心层的外观。这个笔刷不能在自己的顶部绘制; 笔刷笔触与本身相交。释放鼠标按钮并开始新的笔触将重置深度并在上一个笔触之上绘画。</p>
-<dl class="simple">
-<dt>Persistent</dt><dd><p>You can keep sculpting on the same layer between strokes when this is on.</p>
-</dd>
-<dt>Set Persistent Base</dt><dd><p>This button resets the base so that you can add another layer.</p>
+<dt>Thumb</dt>
+<dd>Similar to the <em>Nudge</em> brush, this one flattens the mesh in the brush area,
+while moving it in the direction of the brush stroke.</dd>
+<dt>Nudge</dt>
+<dd>Moves vertices in the direction of the brush stroke.</dd>
+<dt>Rotate</dt>
+<dd>Rotates vertices within the brush in the direction the cursor is moved. The initial drag direction
+is the zero angle and by rotating around the center you can create a vortex effect.</dd>
+<dt>Simplify</dt>
+<dd>This brush collapses short edges (as defined by the detail size) whether or
+not the <em>Collapse Short Edges</em> option is enabled.
+This brush has no effect if dynamic topology is not enabled.
+It can be found in the <span class="menuselection">Brush ‣ Sculpt Tool</span> menu.</dd>
+<dt>Mask <kbd class="kbd docutils literal notranslate">M</kbd></dt>
+<dd><p class="first">Lets you select mesh parts to be unaffected by other brushes by painting vertex colors.
+The mask values are shown as gray-scale.
+I.e. the darker a masked area is, the less effect sculpting on it will have.
+See also the options of the <a class="reference internal" href="hide_mask.html#sculpt-mask-menu"><span class="std std-ref">遮罩</span></a> menu.</p>
+<dl class="last docutils">
+<dt>Mask Tool</dt>
+<dd><p class="first">The mask brush has two modes:</p>
+<dl class="last docutils">
+<dt>Draw</dt>
+<dd>Mask drawing.</dd>
+<dt>Smooth <kbd class="kbd docutils literal notranslate">Shift</kbd></dt>
+<dd>Pressing <kbd class="kbd docutils literal notranslate">Shift</kbd> with the mask brush active will toggle the mask smoothing mode.</dd>
+</dl>
 </dd>
 </dl>
 </dd>
-<dt>Mask 遮罩 <kbd class="kbd docutils literal notranslate">M</kbd></dt><dd><p>让你通过绘制顶点颜色来选择不受其他画笔影响的部分网格。遮罩值显示为灰度。即一个遮罩面的区域越暗，雕刻的效果就越少。另请参阅 <a class="reference internal" href="hide_mask.html#sculpt-mask-menu"><span class="std std-ref">遮罩</span></a> 菜单的选项。</p>
-<dl>
-<dt>遮罩工具</dt><dd><p>遮罩刷有两种模式：</p>
-<dl class="simple">
-<dt>绘画</dt><dd><p>Mask drawing. 遮罩绘画。</p>
-</dd>
-<dt>平滑 <kbd class="kbd docutils literal notranslate">Shift</kbd></dt><dd><p>按 <kbd class="kbd docutils literal notranslate">Shift</kbd> 遮罩笔刷将切换到平滑模式。</p>
-</dd>
+<dt><a class="reference internal" href="../../interface/annotate_tool.html#tool-annotate"><span class="std std-ref">Annotate</span></a></dt>
+<dd><p class="first">Draw free-hand annotation.</p>
+<dl class="last docutils">
+<dt>Annotate Line</dt>
+<dd>Draw straight line annotation.</dd>
+<dt>Annotate Polygon</dt>
+<dd>Draw a polygon annotation.</dd>
+<dt>Annotate Eraser</dt>
+<dd>Erase previous drawn annotations.</dd>
 </dl>
 </dd>
 </dl>
-</dd>
-<dt>Nudge 微调</dt><dd><p>沿着笔刷笔触的方向移动顶点。</p>
-</dd>
-<dt>Pinch/Magnify <kbd class="kbd docutils literal notranslate">P</kbd>  夹捏/放大 <kbd class="kbd docutils literal notranslate">P</kbd></dt><dd><p>将顶点拉向笔刷的中心。反向设置为 <em>Magnify</em>，其顶点从笔刷的中心向外推开。</p>
-</dd>
-<dt>Rotate 旋转</dt><dd><p>沿着光标移动的方向旋转画笔中的顶点。初始拖动方向是零角度，通过围绕中心旋转可以创建涡流效果。</p>
-</dd>
-<dt>Scrape/Peaks  削刮</dt><dd><p><em>削刮</em> 笔刷像展平笔刷一样，但只能将平面上方的顶点向下推。削刮的反向设置为 <em>Peak</em> 是通过将平面上方的顶点推离开平面。</p>
-</dd>
-<dt>SculptDraw 绘画笔刷 <kbd class="kbd docutils literal notranslate">X</kbd></dt><dd><p>基于包含在绘制的笔触中的顶点的平均法线，向内或向外移动顶点。</p>
-</dd>
-<dt>平滑 <kbd class="kbd docutils literal notranslate">S</kbd></dt><dd><p>顾名思义，通过平滑顶点的位置来消除因为笔刷影响的不规则性网格部分。</p>
-</dd>
-<dt>Snake Hook 钩子笔刷 <kbd class="kbd docutils literal notranslate">K</kbd></dt><dd><p>沿着笔刷的运动反向拉起顶点以创建长的，类似蛇的大形。</p>
-<dl class="simple">
-<dt>Pinch 夹捏</dt><dd><p>The <em>Snake Hook</em> brush tends to loose volume along the stroke,
-with pinch &gt; 0.5 it's possible to sculpt shapes without loosing volume.</p>
-</dd>
-<dt>Rake 变向</dt><dd><p>支持按照游标旋转运动来移动网格。</p>
-</dd>
-</dl>
-</dd>
-<dt>Thumb 拇指笔刷</dt><dd><p>类似于 <em>Nudge微调</em> 笔刷，这一个笔刷使笔刷区域中的网格平整，同时沿着笔刷的笔触移动。</p>
-</dd>
-<dt>Simplify</dt><dd><p>无论 <em>折叠短边</em> 选项是否启用，此笔刷将折叠短边（由细节大小定义）。如果未启用动态拓扑，则此刷无效。可以在 <span class="menuselection">Brush ‣ Sculpt Tool</span> 中找到菜单。</p>
-</dd>
-</dl>
-</div>
-<div class="section" id="common-options">
-<h3>常用选项<a class="headerlink" href="#common-options" title="Permalink to this headline">¶</a></h3>
-<dl>
-<dt>Radius 半径</dt><dd><p>此选项以像素为单位控制笔刷的半径。<kbd class="kbd docutils literal notranslate">F</kbd> 允许你通过拖动鼠标交互式更改笔刷大小，然后按住  <kbd class="kbd docutils literal notranslate">LMB</kbd> （画笔的纹理应该在圆圈内可见）。键入数字，然后在使用时输入 <kbd class="kbd docutils literal notranslate">F</kbd> 允许你以数字形式输入大小。如果你使用数位板（ <a class="reference internal" href="../../getting_started/installing/configuration/hardware.html#hardware-tablet"><span class="std std-ref">Graphics Tablet</span></a>），则可以通过启用压力敏感图标来影响画笔大小。</p>
-</dd>
-<dt>Strength 强度</dt><dd><p>控制每个笔刷如何应用对模型的影响。例如，较高的值会导致 <em>SculptDraw</em> 笔刷更快地为模型添加深度，并使 <em>Smooth</em> 画笔更快地平滑模型。此设置不适用于 <em>Grab</em>，<em>Snake Hook</em> 或 <em>Rotate</em>。</p>
-<p>你可以通过在3D视图中按下 <kbd class="kbd docutils literal notranslate">Shift-F</kbd> 来交互地更改笔刷强度，然后移动笔刷，然后 <kbd class="kbd docutils literal notranslate">LMB</kbd> 确认。你可以按住 <kbd class="kbd docutils literal notranslate">Shift-F</kbd> 下输入数值大小。如果使用支持的平板电脑，则可以通过启用压力敏感度图标来影响笔刷强度。</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>如果强度范围似乎不符合模型（例如，即使最低强度设置仍然使模型发生变化太大），则可以缩放模型（ <em>编辑模式</em>，而不是 <em>对象模式</em> ）。较大的尺寸将使刷子的效果更小，反之亦然。</p>
-</div>
-</dd>
-<dt>Autosmooth 自动平滑</dt><dd><p>设置要应用于每个笔刷的平滑量。</p>
-</dd>
-<dt>Normal Weight 法线权重 <kbd class="kbd docutils literal notranslate">Ctrl</kbd></dt><dd><p>沿着表面法线限制笔刷运动。特别适用于 <em>Grab Brush</em>，可以通过按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd>. 暂时启用。例如当设置 <em>法线权重</em> 时，Grab笔刷可以使用推动将凹陷（孔）推入网格。</p>
-<p>适用于 <em>Grab</em> 和 <em>Snake Hook</em> 笔刷。</p>
-</dd>
-<dt>Use Original Normal (padlock icon)  使用原始法线（挂锁图标)</dt><dd><p>When locked it keeps using the normal of the surface where stroke was initiated,
-instead of the surface normal currently under the cursor.</p>
-</dd>
-<dt>Sculpt Plane 雕刻的平面</dt><dd><p>Use this menu to set the plane in which the sculpting takes place.
-In other words, the primary direction that the vertices will move.</p>
-<dl class="simple">
-<dt>Area Plane 区域面</dt><dd><p>平面位于笔刷区域内顶点的上方/下方的平均高度。本质上，这意味着方向取决于笔刷下方的表面。</p>
-</dd>
-<dt>View Plane 视图平面</dt><dd><p>Sculpting in the plane of the current 3D View.</p>
-</dd>
-<dt>X, Y, Z Plane  X, Y, Z 平面</dt><dd><p>The movement takes place in the positive direction of one of the global axes.</p>
-</dd>
-</dl>
-</dd>
-<dt>Plane Offset 平面偏移</dt><dd><p>Offset for planar brushes (Clay, Fill, Flatten, Scrape),
-shifts the plane that is found by averaging the faces above or below.</p>
-</dd>
-<dt>Trim 裁剪</dt><dd><p>Ability to limit the distance that planar brushes act.
-If trim is enabled vertices that are further away from the offset plane than
-the trim distance are ignored during sculpting.</p>
-</dd>
-<dt>Front Faces Only 仅前面的面</dt><dd><p>启用时，画笔只影响面向视图的顶点。</p>
-</dd>
-<dt>2D Falloff</dt><dd><p>This turns the brush influence into a cylinder (the depth along the view is ignored) instead of a sphere.
-It can be used along the outline of a mesh to adjust its silhouette.</p>
-</dd>
-<dt>Add/Subtract <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 添加、相减</dt><dd><p>Brush direction toggle. <kbd class="kbd docutils literal notranslate">Ctrl</kbd> pressed while sculpting. 当雕刻时按 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 笔刷方向切换。</p>
-</dd>
-<dt>Accumulate 累积</dt><dd><p>导致笔触在顶部彼此累积。</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="section" id="symmetry-lock-panel">
-<h2>对称/锁定面板<a class="headerlink" href="#symmetry-lock-panel" title="Permalink to this headline">¶</a></h2>
-<div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>雕刻模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">Tool Shelf ‣ Tools ‣ Symmetry/Lock</span></p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">Sculpt ‣ Symmetry/Lock</span></p>
-</dd>
-</dl>
-</div>
-<dl class="simple">
-<dt>Mirror  镜像</dt><dd><p>在所选局部轴上对笔刷笔触进行镜像。请注意，如果要更改轴指向的方向，则必须以 <em>编辑模式</em> 旋转模型，而不是 <em>物体模式</em>。</p>
-</dd>
-<dt>Radial 径向</dt><dd><p>这些设置允许所需轴线的径向对称。该数字确定在中心轴周围360度内重复行程的次数。</p>
-</dd>
-<dt>Feather 羽化</dt><dd><p>降低与对称平面重叠的笔触强度。</p>
-</dd>
-<dt>Lock 锁定</dt><dd><p>当你雕刻它时，这三个按钮允许你阻止模型沿着选定的局部轴的任何修改/变形。</p>
-</dd>
-<dt>Tiling 平铺</dt><dd><p>使用此选项可以让您沿给定的轴无缝地平铺你的笔画。这允许创建重复模式。</p>
-</dd>
-<dt>Tile Offset 平铺偏移</dt><dd><p>默认的平铺大小设置为 <abbr title="Blender Unit">BU</abbr>。偏移允许选项沿所有三个轴改变平铺大小。</p>
-</dd>
-</dl>
-</div>
 </div>
 
 
@@ -393,7 +339,7 @@ It can be used along the outline of a mesh to adjust its silhouette.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="options.html" class="btn btn-neutral float-right" title="选项" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tool_settings/index.html" class="btn btn-neutral float-right" title="Tool Settings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

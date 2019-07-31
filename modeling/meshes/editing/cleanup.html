@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/editing/cleanup.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/cleanup.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="其他编辑工具" href="misc.html" />
@@ -94,14 +113,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting.html">Selecting</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="basics/index.html">基础</a></li>
@@ -109,6 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="edges.html">边工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="faces.html">面工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="uv/index.html">UV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="transform/index.html">变形</a></li>
 <li class="toctree-l4"><a class="reference internal" href="duplicating/index.html">复制</a></li>
 <li class="toctree-l4"><a class="reference internal" href="subdividing/index.html">细分</a></li>
@@ -119,7 +140,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh_display.html">网格显示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">网格分析</a></li>
 </ul>
 </li>
@@ -131,16 +151,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -220,143 +241,158 @@
 <h1>清理<a class="headerlink" href="#clean-up" title="Permalink to this headline">¶</a></h1>
 <p>这些工具用于辅助清理无用的几何元素，并填充网格的缺失区域。</p>
 <div class="section" id="decimate-geometry">
-<h2>精简几何体<a class="headerlink" href="#decimate-geometry" title="Permalink to this headline">¶</a></h2>
+<span id="bpy-ops-mesh-decimate"></span><h2>精简几何体<a class="headerlink" href="#decimate-geometry" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 清理 ‣ 精简几何体</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 清理 ‣ 精简几何体</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>精简几何体工具可以在引起最小形状修改的前提下，降低网格顶点/面数。</p>
-<dl>
-<dt>比率</dt><dd><p>精减为三角面的比例。</p>
-</dd>
-<dt>顶点组</dt><dd><p>使用顶点组影响精减结果。</p>
-<dl class="simple">
-<dt>权重</dt><dd><p>顶点组强度。</p>
-</dd>
-<dt>反转</dt><dd><p>反转顶点组。</p>
-</dd>
+<dl class="docutils">
+<dt>比率</dt>
+<dd>精减为三角面的比例。</dd>
+<dt>顶点组</dt>
+<dd><p class="first">使用顶点组影响精减结果。</p>
+<dl class="last docutils">
+<dt>权重</dt>
+<dd>顶点组强度。</dd>
+<dt>反转</dt>
+<dd>反转顶点组。</dd>
 </dl>
 </dd>
-<dt>对称</dt><dd><p>维持 <em>X</em>, <em>Y</em>, 或 <em>Z</em> 轴对称。</p>
-</dd>
+<dt>对称</dt>
+<dd>维持 <em>X</em>, <em>Y</em>, 或 <em>Z</em> 轴对称。</dd>
 </dl>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>该工具 <a class="reference internal" href="../../modifiers/generate/decimate.html"><span class="doc">精减修改器</span></a> 作用类似。</p>
+<p class="first admonition-title">See also</p>
+<p class="last">该工具 <a class="reference internal" href="../../modifiers/generate/decimate.html"><span class="doc">精减修改器</span></a> 作用类似。</p>
 </div>
 </div>
 <div class="section" id="fill-holes">
 <h2>填充洞面<a class="headerlink" href="#fill-holes" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 清理 ‣ 填充洞面</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 清理 ‣ 填充洞面</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>该工具可接受大量选中元素，然后侦测网格中的孔洞，然后填充。</p>
 <p>该工具与创建边/面操作有以下三大重要区别：</p>
 <ol class="arabic simple">
-<li><p>自动侦测孔洞，无需手动查找和选择四周的边线。</p></li>
-<li><p>可以限制孔洞的边数(比如可以仅填充四边形和三角面)。</p></li>
-<li><p>从四周几何元素复制网格数据(UV、顶点颜色、多级精度、全部图层)，而手动创建这些数据是十分耗时的。</p></li>
+<li>自动侦测孔洞，无需手动查找和选择四周的边线。</li>
+<li>可以限制孔洞的边数(比如可以仅填充四边形和三角面)。</li>
+<li>从四周几何元素复制网格数据(UV、顶点颜色、多级精度、全部图层)，而手动创建这些数据是十分耗时的。</li>
 </ol>
 </div>
 <div class="section" id="make-planar-faces">
 <h2>Make Planar Faces<a class="headerlink" href="#make-planar-faces" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 清理 ‣ Make Planar Faces</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 清理 ‣ Make Planar Faces</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p><em>生成平面</em> 会迭代地让面变得更平. 这可用于有三个顶点以上的平面, 而且面应该更平是一个常用约定.</p>
-<dl class="simple">
-<dt>系数</dt><dd><p>每次迭代移动顶点的距离.</p>
-</dd>
-<dt>迭代</dt><dd><p>该操作的重复次数。</p>
-</dd>
+<dl class="docutils">
+<dt>系数</dt>
+<dd>每次迭代移动顶点的距离.</dd>
+<dt>迭代</dt>
+<dd>该操作的重复次数。</dd>
 </dl>
 </div>
 <div class="section" id="split-non-planar-faces">
 <h2>拆分非平面<a class="headerlink" href="#split-non-planar-faces" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 清理 ‣ 拆分非平面</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 清理 ‣ 拆分非平面</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>当非平直面弯折超过角度阈值时，对其进行拆分，以避免几何结构存在模棱两可区域。</p>
 </div>
 <div class="section" id="split-concave-faces">
 <h2>拆分凹面<a class="headerlink" href="#split-concave-faces" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 清理 ‣ 拆分凹面</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 清理 ‣ 拆分凹面</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>该工具可以把一个 <a class="reference internal" href="../../../glossary/index.html#term-concave-face"><span class="xref std std-term">凹面</span></a> 切分为多个凹面，将任何凹面转化为凹面。</p>
 </div>
 <div class="section" id="delete-loose-geometry">
 <h2>删除松散元素<a class="headerlink" href="#delete-loose-geometry" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 清理 ‣ 删除松散元素</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 清理 ‣ 删除松散元素</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>该工具用于移除断开的顶点和松散边(也可以是面)。</p>
 </div>
 <div class="section" id="degenerate-dissolve">
 <h2>简并融并<a class="headerlink" href="#degenerate-dissolve" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 清理 ‣ 简并融并</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 清理 ‣ 简并融并</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>该工具用于塌陷/移除不需要的几何元素。</p>
 <ul class="simple">
-<li><p>没有长度的边。</p></li>
-<li><p>没有面积的面(凑在一个点的面或窄面)。</p></li>
-<li><p>没有面积的面拐角。</p></li>
+<li>没有长度的边。</li>
+<li>没有面积的面(凑在一个点的面或窄面)。</li>
+<li>没有面积的面拐角。</li>
 </ul>
 </div>
 </div>

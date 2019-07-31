@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devadvanced/scripting/addon_tutorial.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/advanced/scripting/addon_tutorial.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="应用模板" href="../app_templates.html" />
@@ -94,15 +113,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">高级应用</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../command_line/index.html">命令行</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">脚本与扩展Blender</a><ul class="current">
@@ -120,13 +142,12 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../app_templates.html">应用模板</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../keymap_editing.html">Keymap Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../keymap_editing.html">键位映射自定义</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../limits.html">功能局限</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operators.html">操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_directory_layout.html">Blender目录布局</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -209,16 +230,16 @@
 <h3>前提<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
 <p>阅读本教程前，用户需要：</p>
 <ul class="simple">
-<li><p>熟悉Blender中的基础功能。</p></li>
-<li><p>知道如何在Blender的文本编辑器中运行脚本。</p></li>
-<li><p>理解Python的基础基础类型(整型、布尔、字符串、列表、元组、字典和集合)。</p></li>
-<li><p>熟悉Python模块的概念。</p></li>
-<li><p>对Python中的类(面向对象)有基础认知。</p></li>
+<li>熟悉Blender中的基础功能。</li>
+<li>知道如何在Blender的文本编辑器中运行脚本。</li>
+<li>理解Python的基础基础类型(整型、布尔、字符串、列表、元组、字典和集合)。</li>
+<li>熟悉Python模块的概念。</li>
+<li>对Python中的类(面向对象)有基础认知。</li>
 </ul>
 <p>学习本教程前建议阅读。</p>
 <ul class="simple">
-<li><p><a class="reference external" href="http://getpython3.com/diveintopython3/index.html">深入Python</a> 章节(1, 2, 3, 4, 和 7)。</p></li>
-<li><p><a class="reference external" href="https://docs.blender.org/api/blender_python_api_current/info_quickstart.html">Blender API快速入门</a> 有助于更加熟悉Blender/Python基础。</p></li>
+<li><a class="reference external" href="http://getpython3.com/diveintopython3/index.html">深入Python</a> 章节(1, 2, 3, 4, 和 7)。</li>
+<li><a class="reference external" href="https://docs.blender.org/api/blender_python_api_current/info_quickstart.html">Blender API快速入门</a> 有助于更加熟悉Blender/Python基础。</li>
 </ul>
 <p>为了在编写脚本时更好的排查Python打印的错误，可以从终端启动Blender。参见 <a class="reference external" href="https://docs.blender.org/api/blender_python_api_current/info_tips_and_tricks.html#use-the-terminal">使用终端</a>。</p>
 </div>
@@ -227,9 +248,12 @@
 <h2>文档链接<a class="headerlink" href="#documentation-links" title="Permalink to this headline">¶</a></h2>
 <p>在阅读教程时，用户可能需要查找参考文档。</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.blender.org/api/blender_python_api_current/info_overview.html">blender_api:Blender API概述</a>. - <em>这份文档相当详细，不过如果你想对某个话题了解更多的话，这很有用。</em></p></li>
-<li><p><code class="xref py py-mod docutils literal notranslate"><span class="pre">blender_api:bpy.context</span></code> API参考. - <em>可以方便地获得脚本可以调用的选项。</em></p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">blender_api:bpy.types.Operator</span></code>. - <em>下文的插件会定义操作，这些文档提供了更多操作的范例和细节。</em></p></li>
+<li><a class="reference external" href="https://docs.blender.org/api/blender_python_api_current/info_overview.html">Blender API Overview</a>:
+This document is rather detailed but helpful if you want to know more on a topic.</li>
+<li><a class="reference external" href="https://docs.blender.org/api/2.80/bpy.context.html#module-bpy.context" title="(in Blender 2.80 Python API vf6cb5f54494e)"><code class="docutils literal notranslate"><span class="pre">bpy.context</span></code></a> API reference --
+Handy to have a list of available items your script may operate on.</li>
+<li><a class="reference external" href="https://docs.blender.org/api/2.80/bpy.types.Operator.html#bpy.types.Operator" title="(in Blender 2.80 Python API vf6cb5f54494e)"><code class="docutils literal notranslate"><span class="pre">bpy.types.Operator</span></code></a> --
+The following add-ons define operators, these docs give details and more examples of operators.</li>
 </ul>
 </div>
 <div class="section" id="what-is-an-add-on">
@@ -243,21 +267,24 @@
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Goodbye World&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">bl_info</span></code></dt><dd><p>一个字典，包含插件元数据如标题、版本和作者，这些信息会显示在用户设置的插件列表。</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">register</span></code></dt><dd><p>仅在启用插件时运行的函数，这意味着无需激活插件即可加载模块。</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">unregister</span></code></dt><dd><p>用于卸载 <code class="docutils literal notranslate"><span class="pre">register</span></code> 建立的数据的函数，在禁用插件时调用。</p>
-</dd>
+<dl class="docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">bl_info</span></code></dt>
+<dd>is a dictionary containing add-on metadata such as the title,
+version and author to be displayed in the Preferences add-on list.</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">register</span></code></dt>
+<dd>仅在启用插件时运行的函数，这意味着无需激活插件即可加载模块。</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">unregister</span></code></dt>
+<dd>用于卸载 <code class="docutils literal notranslate"><span class="pre">register</span></code> 建立的数据的函数，在禁用插件时调用。</dd>
 </dl>
-<p>注意：该插件不会进行任何Blender相关操作(比如不会载入 <code class="xref py py-mod docutils literal notranslate"><span class="pre">blender_api:bpy</span></code> 模块)。</p>
+<p>注意：该插件不会进行任何Blender相关操作(比如不会载入 <a class="reference external" href="https://docs.blender.org/api/2.80/bpy.data.html#module-bpy" title="(in Blender 2.80 Python API vf6cb5f54494e)"><code class="docutils literal notranslate"><span class="pre">bpy</span></code></a> 模块)。</p>
 <p>这是一个刻意设计的插件示例，用于说明插件的基础要求其实很简单。</p>
-<p>插件通常会注册操作、面板、菜单选项等，不过这没有多大价值，从文本编辑器，甚至交互控制台执行的脚本也可以做到 -- 插件与Blender的结合方式并没有本质上的不同, 这些功能都是 <code class="xref py py-mod docutils literal notranslate"><span class="pre">blender_api:bpy</span></code> 模块提供的，任何脚本都可以访问。</p>
+<p>插件通常会注册操作、面板、菜单选项等，不过这没有多大价值，从文本编辑器，甚至交互控制台执行的脚本也可以做到 -- 插件与Blender的结合方式并没有本质上的不同, 这些功能都是 <a class="reference external" href="https://docs.blender.org/api/2.80/bpy.data.html#module-bpy" title="(in Blender 2.80 Python API vf6cb5f54494e)"><code class="docutils literal notranslate"><span class="pre">bpy</span></code></a> 模块提供的，任何脚本都可以访问。</p>
 <p>所以，插件仅仅是一种封装Python模块的方法，以方便用户使用。</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>在文本编辑器运行这个脚本不会有任何输出，必须通过用户设置安装该脚本才能看到输出。启用和禁用时均会打印提示信息。</p>
+<p class="first admonition-title">Note</p>
+<p class="last">Running this script within the Text editor won't print anything,
+to see the output it must be installed through the Preferences.
+Messages will be printed when enabling and disabling.</p>
 </div>
 </div>
 <div class="section" id="your-first-add-on">
@@ -274,7 +301,8 @@
     <span class="n">obj</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mf">1.0</span>
 </pre></div>
 </div>
-<p>按下 <a class="reference internal" href="../../editors/text_editor.html#editors-text-run-script"><span class="std std-ref">运行脚本按钮</span></a>, 活动场景内的所有物体均会移动1个Blender单位。</p>
+<p>Click the <a class="reference internal" href="../../editors/text_editor.html#editors-text-run-script"><span class="std std-ref">Run Script button</span></a>,
+all objects in the active scene are moved by 1.0 unit.</p>
 </div>
 <div class="section" id="write-the-add-on-simple">
 <h3>写插件 (简易)<a class="headerlink" href="#write-the-add-on-simple" title="Permalink to this headline">¶</a></h3>
@@ -317,39 +345,42 @@
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">bl_info</span></code> 被分割成多行，这仅仅是一种编程风格，可以方便添加元素。</p>
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">bl_info</span></code> 被分割成多行，这仅仅是一种编程风格，可以方便添加元素。</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>这里传递给 <code class="docutils literal notranslate"><span class="pre">execute()</span></code> 的参数是 <code class="docutils literal notranslate"><span class="pre">context.scene</span></code> ，而非 <code class="docutils literal notranslate"><span class="pre">bpy.context.scene</span></code> 。大多数情况下，两者是一致的。然而在一些情况下，传递给operators的是自定义context，所以脚本作者更愿意传递 <code class="docutils literal notranslate"><span class="pre">context</span></code> 参数至operator。</p>
+<p class="first admonition-title">Note</p>
+<p class="last">这里传递给 <code class="docutils literal notranslate"><span class="pre">execute()</span></code> 的参数是 <code class="docutils literal notranslate"><span class="pre">context.scene</span></code> ，而非 <code class="docutils literal notranslate"><span class="pre">bpy.context.scene</span></code> 。大多数情况下，两者是一致的。然而在一些情况下，传递给operators的是自定义context，所以脚本作者更愿意传递 <code class="docutils literal notranslate"><span class="pre">context</span></code> 参数至operator。</p>
 </div>
 <p>要测试这段脚本，你可以将其复制粘贴到Blender文本编辑器，并运行。这将直接执行脚本，并立即调用register函数。</p>
 <p>不过，运行该脚本不能直接移动物体。你需要执行新注册的operator。</p>
-<div class="figure align-center" id="id2">
+<div class="figure" id="id2">
 <img alt="../../_images/advanced_scripting_addon-tutorial_operator-search-menu.png" src="../../_images/advanced_scripting_addon-tutorial_operator-search-menu.png" />
-<p class="caption"><span class="caption-text">操作搜索菜单。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">操作搜索菜单。</span></p>
 </div>
-<p>按下 <kbd class="kbd docutils literal notranslate">Spacebar</kbd> 弹出操作搜索菜单，输入 &quot;Move X by One&quot; (<code class="docutils literal notranslate"><span class="pre">bl_label</span></code>), 然后按下 <kbd class="kbd docutils literal notranslate">Return</kbd> 执行操作。</p>
+<p>Do this by pressing <kbd class="kbd docutils literal notranslate">F3</kbd> to bring up the operator search menu and type in
+&quot;Move X by One&quot; (the <code class="docutils literal notranslate"><span class="pre">bl_label</span></code>), then <kbd class="kbd docutils literal notranslate">Return</kbd>.</p>
 <p>物体将与前文一样移动。</p>
 <p><em>不要关闭文本编辑器，下一步安装需要用到</em></p>
 </div>
 <div class="section" id="install-the-add-on">
 <h3>安装插件<a class="headerlink" href="#install-the-add-on" title="Permalink to this headline">¶</a></h3>
-<p>在Blender文本编辑器写好插件后，你可能想要安装该插件，这样就可以在用户设置中启用启动时加载插件。</p>
+<p>Once you have your add-on within in Blender's Text editor,
+you will want to be able to install it so it can be enabled in the Preferences to load on startup.</p>
 <p>尽管上面的插件只是一个测试，但还是把这些步骤都走一遍，这样以后就知道该怎么做了。</p>
 <p>要安装Blender文本编辑器里写的插件，首先需要存盘，注意遵守Python模块的命名限制， 并以 <code class="docutils literal notranslate"><span class="pre">.py</span></code> 作为扩展名。</p>
 <p>存盘之后，就可以跟从网上下载的插件一样安装了。</p>
-<p>打开 <span class="menuselection">文件 ‣ 用户设置</span> ， 进入 <em>插件</em> 选项卡，按下 <em>安装插件...</em> 按钮，并选择该文件。</p>
+<p>Open the <span class="menuselection">Preferences ‣ Add-ons ‣ Install...</span> and select the file.</p>
 <p>现在插件就添加到了插件列表，可以勾选启用，如果要在下次启动时加载，可以 <em>保存用户设置</em> 。</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="first admonition-title">Note</p>
 <p>插件的安装位置取决于你的Blender配置。安装插件时，控制台会提示插件的原始和目标路径。运行下面的脚本，也可以查找插件目标路径。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">addon_utils</span>
 <span class="k">print</span><span class="p">(</span><span class="n">addon_utils</span><span class="o">.</span><span class="n">paths</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>更多这方面内容见: <a class="reference internal" href="../../getting_started/installing/configuration/directories.html#getting-started-installing-config-directories"><span class="std std-ref">目录布局</span></a>。</p>
+<p class="last">More is written on this topic here:
+<a class="reference internal" href="../blender_directory_layout.html#blender-directory-layout"><span class="std std-ref">Directory Layout</span></a>.</p>
 </div>
 </div>
 </div>
@@ -365,17 +396,17 @@
 <span class="c1"># Get the current scene</span>
 <span class="n">scene</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">scene</span>
 
-<span class="c1"># Get the 3D cursor</span>
-<span class="n">cursor</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">cursor_location</span>
+<span class="c1"># Get the 3D cursor location</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">cursor</span><span class="o">.</span><span class="n">location</span>
 
 <span class="c1"># Get the active object (assume we have one)</span>
-<span class="n">obj</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">active</span>
+<span class="n">obj</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">active_object</span>
 
 <span class="c1"># Now make a copy of the object</span>
 <span class="n">obj_new</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
-<span class="c1"># The object won&#39;t automatically get into a new scene</span>
-<span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="n">obj_new</span><span class="p">)</span>
+<span class="c1"># The new object has to be added to a collection in the scene</span>
+<span class="n">scene</span><span class="o">.</span><span class="n">collection</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="n">obj_new</span><span class="p">)</span>
 
 <span class="c1"># Now we can place the object</span>
 <span class="n">obj_new</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">cursor</span>
@@ -388,8 +419,8 @@
 <span class="kn">from</span> <span class="nn">bpy</span> <span class="k">import</span> <span class="n">context</span>
 
 <span class="n">scene</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">scene</span>
-<span class="n">cursor</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">cursor_location</span>
-<span class="n">obj</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">active</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">cursor</span><span class="o">.</span><span class="n">location</span>
+<span class="n">obj</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">active_object</span>
 
 <span class="c1"># Use a fixed value for now, eventually make this user adjustable</span>
 <span class="n">total</span> <span class="o">=</span> <span class="mi">10</span>
@@ -397,7 +428,7 @@
 <span class="c1"># Add &#39;total&#39; objects into the scene</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total</span><span class="p">):</span>
     <span class="n">obj_new</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-    <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="n">obj_new</span><span class="p">)</span>
+    <span class="n">scene</span><span class="o">.</span><span class="n">collection</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="n">obj_new</span><span class="p">)</span>
 
     <span class="c1"># Now place the object in between the cursor</span>
     <span class="c1"># and the active object based on &#39;i&#39;</span>
@@ -406,8 +437,11 @@
 </pre></div>
 </div>
 <p>将3D游标远离活动物体，运行脚本，查看结果。</p>
-<p>在这段脚本里，对物体和游标位置做了一点数学运算，这是因为两者都是3D <code class="xref py py-class docutils literal notranslate"><span class="pre">blender_api:mathutils.</span> <span class="pre">Vector</span></code> 实例， <code class="xref py py-mod docutils literal notranslate"><span class="pre">blender_api:mathutils</span></code> 模块提供了这个方便的类， 并且允许向量与数值和矩阵做乘法运算。</p>
-<p>如果你对这方面感兴趣的话，可以进一步阅读 <code class="xref py py-class docutils literal notranslate"><span class="pre">blender_api:mathutils.Vector</span></code> -- 这里有很多方便的工具函数如计算向量夹角、叉乘、点乘， <code class="xref py py-mod docutils literal notranslate"><span class="pre">blender_api:mathutils.geometry</span></code> 还提供了更高级的函数如 Bézier 样条曲线插值和射线-三角形相交。</p>
+<p>With this script you'll notice we're doing some math with the object location and cursor,
+this works because both are 3D <a class="reference external" href="https://docs.blender.org/api/2.80/mathutils.html#mathutils.Vector" title="(in Blender 2.80 Python API vf6cb5f54494e)"><code class="docutils literal notranslate"><span class="pre">mathutils.Vector</span></code></a> instances,
+a convenient class provided by the <a class="reference external" href="https://docs.blender.org/api/2.80/mathutils.html#module-mathutils" title="(in Blender 2.80 Python API vf6cb5f54494e)"><code class="docutils literal notranslate"><span class="pre">mathutils</span></code></a> module which
+allows vectors to be multiplied by numbers and matrices.</p>
+<p>如果你对这方面感兴趣的话，可以进一步阅读 <a class="reference external" href="https://docs.blender.org/api/2.80/mathutils.html#mathutils.Vector" title="(in Blender 2.80 Python API vf6cb5f54494e)"><code class="docutils literal notranslate"><span class="pre">mathutils.Vector</span></code></a> -- 这里有很多方便的工具函数如计算向量夹角、叉乘、点乘， <a class="reference external" href="https://docs.blender.org/api/2.80/mathutils.geometry.html#module-mathutils.geometry" title="(in Blender 2.80 Python API vf6cb5f54494e)"><code class="docutils literal notranslate"><span class="pre">mathutils.geometry</span></code></a> 还提供了更高级的函数如 Bézier 样条曲线插值和射线-三角形相交。</p>
 <p>现在我们专心将这段脚本编程插件，不过知道这个3D数学模块也是不错的，以后更高级的功能可能用到它。</p>
 </div>
 <div class="section" id="write-the-add-on">
@@ -429,14 +463,14 @@
 
     <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
         <span class="n">scene</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">scene</span>
-        <span class="n">cursor</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">cursor_location</span>
-        <span class="n">obj</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">active</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">cursor</span><span class="o">.</span><span class="n">location</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">active_object</span>
 
         <span class="n">total</span> <span class="o">=</span> <span class="mi">10</span>
 
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total</span><span class="p">):</span>
             <span class="n">obj_new</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-            <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="n">obj_new</span><span class="p">)</span>
+            <span class="n">scene</span><span class="o">.</span><span class="n">collection</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="n">obj_new</span><span class="p">)</span>
 
             <span class="n">factor</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="n">total</span>
             <span class="n">obj_new</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">location</span> <span class="o">*</span> <span class="n">factor</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">cursor</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">factor</span><span class="p">))</span>
@@ -465,17 +499,17 @@
 <p>尽管这是相当Python化的方式，但是记住，实际上你定义的工具设置会被加载到Blender，并被Blender的其他部分从Python外部访问。</p>
 <p>要消除 <code class="docutils literal notranslate"><span class="pre">总数</span></code> 为10的问题， 会用到一个操作属性。操作属性是通过 bpy.props模块定义的，将下面的代码加到operator类的主体中:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># moved assignment from execute() to the body of the class...</span>
-<span class="n">total</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">props</span><span class="o">.</span><span class="n">IntProperty</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Steps&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">total</span><span class="p">:</span> <span class="n">bpy</span><span class="o">.</span><span class="n">props</span><span class="o">.</span><span class="n">IntProperty</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Steps&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 
 <span class="c1"># and this is accessed on the class</span>
 <span class="c1"># instance within the execute() function as...</span>
 <span class="bp">self</span><span class="o">.</span><span class="n">total</span>
 </pre></div>
 </div>
-<p>这些来自 <code class="xref py py-mod docutils literal notranslate"><span class="pre">blender_api:bpy.props</span></code> 的属性会被Blender特别处理，当(operator)类被注册后，会在界面显示属性按钮。可以传递很多参数给属性，如设置上下界、修改默认值和显示工具提示。</p>
+<p>这些来自 <a class="reference external" href="https://docs.blender.org/api/2.80/bpy.props.html#module-bpy.props" title="(in Blender 2.80 Python API vf6cb5f54494e)"><code class="docutils literal notranslate"><span class="pre">bpy.props</span></code></a> 的属性会被Blender特别处理，当(operator)类被注册后，会在界面显示属性按钮。可以传递很多参数给属性，如设置上下界、修改默认值和显示工具提示。</p>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><code class="xref py py-mod docutils literal notranslate"><span class="pre">blender_api:bpy.props.IntProperty</span></code></p>
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bpy.props.IntProperty</span></code></p>
 </div>
 <p>这篇文档不会详细介绍如何使用其他属性类型，不过上面的链接包含了更高级的属性用法范例。</p>
 </div>
@@ -483,11 +517,12 @@
 <h4>菜单选项<a class="headerlink" href="#menu-item" title="Permalink to this headline">¶</a></h4>
 <p>插件可以添加到现有的面板、标题栏和菜单等Python定义的用户界面中。</p>
 <p>这个例子里，我们将其添加到现有菜单。</p>
-<div class="figure align-center" id="id3">
+<div class="figure" id="id3">
 <img alt="../../_images/advanced_scripting_addon-tutorial_menu-id.png" src="../../_images/advanced_scripting_addon-tutorial_menu-id.png" />
-<p class="caption"><span class="caption-text">菜单标识符。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">菜单标识符。</span></p>
 </div>
-<p>鼠标在菜单上方停留，会出现提示，这就是菜单标识符。</p>
+<p>To find the identifier of a menu, first enable <em>Python Tooltips</em> in the preferences.
+Then you can hover your mouse over the menu item and the identifier is displayed.</p>
 <p>添加菜单选项的方式是，在给现有类追加一个绘制函数:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">menu_func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">operator</span><span class="p">(</span><span class="n">ObjectCursorArray</span><span class="o">.</span><span class="n">bl_idname</span><span class="p">)</span>
@@ -496,12 +531,14 @@
     <span class="n">bpy</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">VIEW3D_MT_object</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">menu_func</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>扩展菜单的文档，请参考 <code class="xref py py-class docutils literal notranslate"><span class="pre">blender_api:bpy.types.Menu</span></code>。</p>
+<p>扩展菜单的文档，请参考 <a class="reference external" href="https://docs.blender.org/api/2.80/bpy.types.Menu.html#bpy.types.Menu" title="(in Blender 2.80 Python API vf6cb5f54494e)"><code class="docutils literal notranslate"><span class="pre">bpy.types.Menu</span></code></a>。</p>
 </div>
 <div class="section" id="keymap">
 <h4>键位映射<a class="headerlink" href="#keymap" title="Permalink to this headline">¶</a></h4>
 <p>在Blender中，插件可以有自己的键位映射，以避免与Blender内置键位映射冲突。</p>
-<p>在下面的例子中，添加了一个新的物体模式 <code class="xref py py-class docutils literal notranslate"><span class="pre">blender_api:bpy.types.KeyMap</span></code> ，接着向该键位映射添加了一个 <code class="xref py py-class docutils literal notranslate"><span class="pre">blender_api:bpy.types.KeyMapItem</span></code> ，指向新添加的操作，使用 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-Spacebar</kbd> 作为快捷键</p>
+<p>In the example below, a new object mode <a class="reference external" href="https://docs.blender.org/api/2.80/bpy.types.KeyMap.html#bpy.types.KeyMap" title="(in Blender 2.80 Python API vf6cb5f54494e)"><code class="docutils literal notranslate"><span class="pre">bpy.types.KeyMap</span></code></a> is added,
+then a <a class="reference external" href="https://docs.blender.org/api/2.80/bpy.types.KeyMapItem.html#bpy.types.KeyMapItem" title="(in Blender 2.80 Python API vf6cb5f54494e)"><code class="docutils literal notranslate"><span class="pre">bpy.types.KeyMapItem</span></code></a> is added to the key-map which references
+our newly added operator, using <kbd class="kbd docutils literal notranslate">Shift-Ctrl-T</kbd> as the key shortcut to activate it.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># store keymaps here to access after registration</span>
 <span class="n">addon_keymaps</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -511,7 +548,7 @@
     <span class="n">wm</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">window_manager</span>
     <span class="n">km</span> <span class="o">=</span> <span class="n">wm</span><span class="o">.</span><span class="n">keyconfigs</span><span class="o">.</span><span class="n">addon</span><span class="o">.</span><span class="n">keymaps</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Object Mode&#39;</span><span class="p">,</span> <span class="n">space_type</span><span class="o">=</span><span class="s1">&#39;EMPTY&#39;</span><span class="p">)</span>
 
-    <span class="n">kmi</span> <span class="o">=</span> <span class="n">km</span><span class="o">.</span><span class="n">keymap_items</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">ObjectCursorArray</span><span class="o">.</span><span class="n">bl_idname</span><span class="p">,</span> <span class="s1">&#39;SPACE&#39;</span><span class="p">,</span> <span class="s1">&#39;PRESS&#39;</span><span class="p">,</span> <span class="n">ctrl</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">kmi</span> <span class="o">=</span> <span class="n">km</span><span class="o">.</span><span class="n">keymap_items</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">ObjectCursorArray</span><span class="o">.</span><span class="n">bl_idname</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;PRESS&#39;</span><span class="p">,</span> <span class="n">ctrl</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">kmi</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">total</span> <span class="o">=</span> <span class="mi">4</span>
 
     <span class="n">addon_keymaps</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">km</span><span class="p">,</span> <span class="n">kmi</span><span class="p">))</span>
@@ -527,15 +564,18 @@
 </div>
 <p>值得注意的是，键位映射的 <code class="docutils literal notranslate"><span class="pre">total</span></code> 值与operator的默认值不同，这样就可以通过不同按键组合访问不同设置的同一operator。</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>尽管 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-Spacebar</kbd> 不是Blender的默认快捷键，但也很难确保插件之间不会互相覆盖键位映射。至少，在指定快捷键时要注意避免与Blender重要功能出现冲突。</p>
+<p class="first admonition-title">Note</p>
+<p class="last">While <kbd class="kbd docutils literal notranslate">Shift-Ctrl-T</kbd> is not a default Blender key shortcut,
+it is hard to make sure add-ons will not overwrite each other's keymaps,
+At least take care when assigning keys that they do not
+conflict with important functionality within Blender.</p>
 </div>
 <p>上文所用函数的API文档，见：</p>
 <ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">blender_api:bpy.types.KeyMaps.new</span></code>,</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">blender_api:bpy.types.KeyMap</span></code>,</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">blender_api:bpy.types.KeyMapItems.new</span></code>,</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">blender_api:bpy.types.KeyMapItem</span></code>.</p></li>
+<li><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.KeyMaps.new</span></code>,</li>
+<li><a class="reference external" href="https://docs.blender.org/api/2.80/bpy.types.KeyMap.html#bpy.types.KeyMap" title="(in Blender 2.80 Python API vf6cb5f54494e)"><code class="docutils literal notranslate"><span class="pre">bpy.types.KeyMap</span></code></a>,</li>
+<li><code class="xref py py-class docutils literal notranslate"><span class="pre">bpy.types.KeyMapItems.new</span></code>,</li>
+<li><a class="reference external" href="https://docs.blender.org/api/2.80/bpy.types.KeyMapItem.html#bpy.types.KeyMapItem" title="(in Blender 2.80 Python API vf6cb5f54494e)"><code class="docutils literal notranslate"><span class="pre">bpy.types.KeyMapItem</span></code></a>.</li>
 </ul>
 </div>
 <div class="section" id="bringing-it-all-together">
@@ -554,16 +594,16 @@
     <span class="n">bl_label</span> <span class="o">=</span> <span class="s2">&quot;Cursor Array&quot;</span>
     <span class="n">bl_options</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;REGISTER&#39;</span><span class="p">,</span> <span class="s1">&#39;UNDO&#39;</span><span class="p">}</span>
 
-    <span class="n">total</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">props</span><span class="o">.</span><span class="n">IntProperty</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Steps&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">total</span><span class="p">:</span> <span class="n">bpy</span><span class="o">.</span><span class="n">props</span><span class="o">.</span><span class="n">IntProperty</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Steps&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
         <span class="n">scene</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">scene</span>
-        <span class="n">cursor</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">cursor_location</span>
-        <span class="n">obj</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">active</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">cursor</span><span class="o">.</span><span class="n">location</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">active_object</span>
 
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">total</span><span class="p">):</span>
             <span class="n">obj_new</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-            <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="n">obj_new</span><span class="p">)</span>
+            <span class="n">scene</span><span class="o">.</span><span class="n">collection</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="n">obj_new</span><span class="p">)</span>
 
             <span class="n">factor</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">total</span>
             <span class="n">obj_new</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">location</span> <span class="o">*</span> <span class="n">factor</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">cursor</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">factor</span><span class="p">))</span>
@@ -589,7 +629,7 @@
     <span class="n">kc</span> <span class="o">=</span> <span class="n">wm</span><span class="o">.</span><span class="n">keyconfigs</span><span class="o">.</span><span class="n">addon</span>
     <span class="k">if</span> <span class="n">kc</span><span class="p">:</span>
         <span class="n">km</span> <span class="o">=</span> <span class="n">wm</span><span class="o">.</span><span class="n">keyconfigs</span><span class="o">.</span><span class="n">addon</span><span class="o">.</span><span class="n">keymaps</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Object Mode&#39;</span><span class="p">,</span> <span class="n">space_type</span><span class="o">=</span><span class="s1">&#39;EMPTY&#39;</span><span class="p">)</span>
-        <span class="n">kmi</span> <span class="o">=</span> <span class="n">km</span><span class="o">.</span><span class="n">keymap_items</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">ObjectCursorArray</span><span class="o">.</span><span class="n">bl_idname</span><span class="p">,</span> <span class="s1">&#39;SPACE&#39;</span><span class="p">,</span> <span class="s1">&#39;PRESS&#39;</span><span class="p">,</span> <span class="n">ctrl</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">kmi</span> <span class="o">=</span> <span class="n">km</span><span class="o">.</span><span class="n">keymap_items</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">ObjectCursorArray</span><span class="o">.</span><span class="n">bl_idname</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;PRESS&#39;</span><span class="p">,</span> <span class="n">ctrl</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="n">kmi</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">total</span> <span class="o">=</span> <span class="mi">4</span>
         <span class="n">addon_keymaps</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">km</span><span class="p">,</span> <span class="n">kmi</span><span class="p">))</span>
 
@@ -609,19 +649,21 @@
     <span class="n">register</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id4">
+<div class="figure" id="id4">
 <img alt="../../_images/advanced_scripting_addon-tutorial_in-menu.png" src="../../_images/advanced_scripting_addon-tutorial_in-menu.png" />
-<p class="caption"><span class="caption-text">菜单选项。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">菜单选项。</span></p>
 </div>
-<p>运行该脚本(或保存后通过用户设置安装)，操作会出现在菜单选项中。</p>
-<div class="figure align-center" id="id5">
+<p>Run the script (or save it and add it through the Preferences like before) and it will appear in the <em>Object</em> menu.</p>
+<div class="figure" id="id5">
 <img alt="../../_images/advanced_scripting_addon-tutorial_op-prop.png" src="../../_images/advanced_scripting_addon-tutorial_op-prop.png" />
-<p class="caption"><span class="caption-text">操作属性。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">操作属性。</span></p>
 </div>
 <p>从菜单执行操作后，你还可以选择添加的立方体数量。</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>直接运行脚本多次，会添加多个菜单选项。不过这没什么好担心的，因为从用户设置启用插件是不会出现重复注册的问题的。</p>
+<p class="first admonition-title">Note</p>
+<p class="last">Directly executing the script multiple times will add the menu each time too.
+While not useful behavior, there's nothing to worry about since add-ons will not
+register themselves multiple times when enabled through the Preferences.</p>
 </div>
 </div>
 </div>
@@ -636,10 +678,11 @@
 <p>Blender附带了一些注释过的模板，可以在文本编辑器标题栏找到，如果你需要某个方面的示例代码，从这里开始是一个不错的选择。</p>
 <p>看完上面的教程过后，这里提供了几个你可能用到的网址。</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.blender.org/api/blender_python_api_current/info_overview.html">Blender/Python API 概述</a> -- <em>关于Blender/Python整合的更多背景细节。</em></p></li>
-<li><p><a class="reference external" href="http://interactivepython.org/courselib/static/thinkcspy/index.html">如何像计算机科学家一样思考</a> -- <em>给哪些仍在学习Python的资料</em></p></li>
-<li><p><a class="reference external" href="https://wiki.blender.org">Blender开发 (Wiki)</a> -- <em>Blender开发、基本信息和有用链接。</em></p></li>
-<li><p><a class="reference external" href="https://blenderartists.org/forum/forumdisplay.php?47-Coding">Blender Artists (编程版块)</a> -- <em>Python开发的问答论坛</em></p></li>
+<li><a class="reference external" href="https://docs.blender.org/api/blender_python_api_current/info_overview.html">Blender/Python API 概述</a> -- <em>关于Blender/Python整合的更多背景细节。</em></li>
+<li><a class="reference external" href="http://interactivepython.org/courselib/static/thinkcspy/index.html">如何像计算机科学家一样思考</a> -- <em>给哪些仍在学习Python的资料</em></li>
+<li><a class="reference external" href="https://wiki.blender.org">Blender开发 (Wiki)</a> -- <em>Blender开发、基本信息和有用链接。</em></li>
+<li><a class="reference external" href="https://devtalk.blender.org/c/python">DevTalk</a> --
+<em>Forum where people ask Python development questions.</em></li>
 </ul>
 </div>
 </div>

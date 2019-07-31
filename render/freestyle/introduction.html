@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devrender/freestyle/introduction.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/freestyle/introduction.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="核心选项" href="core.html" />
+    <link rel="next" title="Render Properties" href="render.html" />
     <link rel="prev" title="Freestyle" href="index.html" /> 
 </head>
 
@@ -94,45 +113,44 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lighting/index.html">灯光</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee 渲染器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles渲染引擎</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">Workbench Engine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cameras.html">相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lights/index.html">Lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials/index.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_nodes/index.html">着色器节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../color_management.html">色彩管理</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Freestyle</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#what-is-freestyle">什么是FreeStyle？</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#the-big-picture">整体结构</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#known-limitations">已知的局限性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="core.html">核心选项</a></li>
-<li class="toctree-l3"><a class="reference internal" href="view_map.html">View maps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="parameter_editor/index.html">Parameter Editor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="python.html">Python脚本模式</a></li>
-<li class="toctree-l3"><a class="reference internal" href="line.html">Line</a></li>
-<li class="toctree-l3"><a class="reference internal" href="export_svg.html">Freestyle SVG Exporter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="render.html">Render Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="view_layer.html">View Layer Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material.html">Material Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#control-modes">Control Modes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">工作流</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL渲染</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../audio/index.html">音频渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -208,73 +226,79 @@
             
   <div class="section" id="introduction">
 <h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="what-is-freestyle">
-<h2>什么是FreeStyle？<a class="headerlink" href="#what-is-freestyle" title="Permalink to this headline">¶</a></h2>
-<p>FreeStyle是基于边和线的非真实感（non-photorealisitc rendering, NPR）渲染引擎。基于网格和z-depth（深度）信息，FreeStyle可以根据选择的边类型来画线。FreeStyle中有各种各样的线条类型供选择来绘制出有艺术感图片（例如，<code class="docutils literal notranslate"><span class="pre">手绘</span></code>，<code class="docutils literal notranslate"><span class="pre">水彩</span></code>，或者技术用的硬线条）。</p>
-<p>有两种操作模式： <a class="reference internal" href="python.html"><span class="doc">Python 脚本</span></a> 和 <a class="reference internal" href="parameter_editor/index.html"><span class="doc">参数编辑器</span></a> -- 可以画出多种多样的线条风格。在Python中预存了多种线条风格，比如日式的大笔刷，卡通，蓝本，有深度信息的粗线条。参数编辑器模式可以方便地编辑特征（比如虚线），设置线条类型，定义边缘。在这些功能之上，Blender还允许用户编辑线条的风格，从而使用户最大化的控制最后的渲染效果。</p>
-<table class="docutils align-center">
+<p>Freestyle is an edge/line-based non-photorealistic (NPR) rendering engine.
+It relies on mesh data and Z-depth information to draw lines on selected edge types.
+Various line styles can be added to produce artistic (&quot;hand drawn&quot;, &quot;painted&quot;, etc.)
+or technical (hard line) looks.</p>
+<p>The two operating modes: <a class="reference internal" href="python.html"><span class="doc">Python Scripting</span></a> and
+<a class="reference internal" href="parameter_editor/index.html"><span class="doc">Parameter Editor</span></a> --
+allow a powerful diversity of line styles and results. Line styles such as Japanese big brush, cartoon, blueprint,
+thickness-with-depth are already pre-scripted in Python. The Parameter Editor mode allows intuitive editing of
+features such as dotted lines and easy setup of multiple line types and edge definitions.
+On top of all of that, with line style modifiers, the sky is the limit!</p>
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
 <img alt="../../_images/render_freestyle_introduction_example-1.png" src="../../_images/render_freestyle_introduction_example-1.png" />
-<p class="caption"><span class="caption-text">ATV 童车， 作者 Rylan Wright (RONIN). CC BY. (<a class="reference external" href="https://wiki.blender.org/wiki/File:AtvBuggy.zip">File:AtvBuggy.zip</a>)。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">ATV buggy by Rylan Wright (RONIN). CC BY.
+(<a class="reference external" href="https://wiki.blender.org/wiki/File:AtvBuggy.zip">File:AtvBuggy.zip</a>)</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id2">
+<td><div class="first last figure" id="id2">
 <img alt="../../_images/render_freestyle_introduction_example-2.png" src="../../_images/render_freestyle_introduction_example-2.png" />
-<p class="caption"><span class="caption-text">作者 mato.sus304. CC BY-SA. (<a class="reference external" href="https://wiki.blender.org/wiki/File:Mato_sus304_cut02.zip">File:Mato_sus304_cut02.zip</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">By mato.sus304. CC BY-SA.
+(<a class="reference external" href="https://wiki.blender.org/wiki/File:Mato_sus304_cut02.zip">File:Mato_sus304_cut02.zip</a>)</span></p>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><div class="figure align-center" id="id3">
+<tr class="row-even"><td><div class="first last figure" id="id3">
 <img alt="../../_images/render_freestyle_introduction_example-3.png" src="../../_images/render_freestyle_introduction_example-3.png" />
-<p class="caption"><span class="caption-text"><a class="reference external" href="http://oha-studios.com/">OHA Studio</a> © 中的卡通场景，Mechanimotion Entertainment. (<a class="reference external" href="https://download.blender.org/demo/test/FreeStyle_demo_file.blend.zip">the blend-file</a>).</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">A cartoon scene from <a class="reference external" href="http://oha-studios.com/">OHA Studio</a>
+© Mechanimotion Entertainment.
+(<a class="reference external" href="https://download.blender.org/demo/test/FreeStyle_demo_file.blend.zip">blend-file</a>)</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id4">
+<td><div class="first last figure" id="id4">
 <img alt="../../_images/render_freestyle_introduction_example-4.png" src="../../_images/render_freestyle_introduction_example-4.png" />
-<p class="caption"><span class="caption-text">Martin M-130 from 1935 的蓝本渲染，作者 LightBWK. CC0. 注意: 此文件很大，主要用于测试Blender的性能，直接导入可能会使Blender崩溃。 (<a class="reference external" href="https://wiki.blender.org/wiki/File:M-130Blueprint.zip">File:M-130Blueprint.zip</a>)</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Blueprint render of Martin M-130 from 1935 by LightBWK. CC0. Warning:
+heavy file! designed for stress test Blender to the limits and may crash Blender.
+(<a class="reference external" href="https://wiki.blender.org/wiki/File:M-130Blueprint.zip">File:M-130Blueprint.zip</a>)</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
-<p>想看更过作品可以浏览： <a class="reference external" href="https://wiki.blender.org/wiki/Reference/Release_Notes/2.67/FreeStyle#FreeStyle_Artwork_Showcase">Release Note Artwork Showcase</a>.</p>
-</div>
 <div class="section" id="the-big-picture">
 <h2>整体结构<a class="headerlink" href="#the-big-picture" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>通过勾选 <span class="menuselection">属性编辑器 ‣ 渲染标签页 ‣ FreeStyle</span> 面板标题左侧的复选框，启动FreeStyle。</p></li>
-<li><p>FreeStyle的设置选项可以在 <em>渲染层</em> 中找到。</p></li>
-<li><p>一个渲染层只能有一个viewmap。一个viewmap存储着边缘检测的设置（Crease Angle， Culling toggle，Face Smoothness，Material Boundaries， Sphere Radius，和Kr Derivative Epsilon等高级选项)。</p></li>
-<li><p>一个viewmap可以有多个line set。</p></li>
-<li><p>一个line set控制哪种线条类型和选项将被用于渲染，基于你场景中的线条。</p></li>
-<li><p>每个line set使用一种线条的风格（一个线条风格可以在多个line set中共享）。</p></li>
-<li><p>一个线条风格指定FreeStyle怎样渲染与其关联的line set的color，alpha，thickness，和其它属性。</p></li>
+<li>Activate Freestyle by the <span class="menuselection">Properties ‣ Render ‣ Freestyle</span> checkbox.</li>
+<li>Freestyle settings are located in the <a class="reference internal" href="../../scene_layout/view_layers/index.html"><span class="doc">View Layer</span></a> properties.</li>
+<li>One view layer can only have one view map. A view map holds the edge detection settings
+(Crease Angle, Culling toggle, Face Smoothness toggle, Material Boundaries toggle,
+Sphere Radius, and Kr Derivative Epsilon advanced options).</li>
+<li>A view map can have multiple Line Sets.</li>
+<li>一个line set控制哪种线条类型和选项将被用于渲染，基于你场景中的线条。</li>
+<li>Each line set uses one line style (which can be shared between multiple Line Sets).</li>
+<li>A line style tells Freestyle how to render the linked Line Sets in terms of color, alpha,
+thickness and other aspects.</li>
 </ul>
-<div class="figure align-center" id="id5">
+<div class="figure" id="id5">
 <img alt="../../_images/render_freestyle_introduction_view-map-processes.png" src="../../_images/render_freestyle_introduction_view-map-processes.png" />
-<p class="caption"><span class="caption-text">FreeStyle的viewmap和处理流程框图。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Block diagram of Freestyle view map and processes.</span></p>
 </div>
 </div>
 <div class="section" id="known-limitations">
 <h2>已知的局限性<a class="headerlink" href="#known-limitations" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>高内存占用：所有网格物体在一个渲染层里会一次性全部加载。</p></li>
-<li><p>仅支持面结构的网格物体（faced mesh objects）。以下的网格类型会被忽略：</p>
-<ul>
-<li><p>网格面是透明材质。</p></li>
-<li><p>网格面的材质选项 <em>Cast Only</em> 被勾选。</p></li>
-</ul>
-</li>
-<li><p>透明面（transparent face）被处理为不透明面（opaque face）。</p></li>
-<li><p>面与面相交出无法检测到边缘。</p></li>
-<li><p>FreeStyle不支持图层蒙版。</p></li>
-<li><p>FreeStyle的渲染结果没有深度信息（Z depth）。</p></li>
-<li><p>不支持全景相机。</p></li>
+<li>Highly memory demanding: All mesh objects in a view layer are loaded at once.</li>
+<li>Only faced mesh objects are supported.</li>
+<li>面与面相交出无法检测到边缘。</li>
+<li>Freestyle rendering results do not have any Z depth information.</li>
+<li>不支持全景相机。</li>
 </ul>
 </div>
 </div>
@@ -287,7 +311,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="core.html" class="btn btn-neutral float-right" title="核心选项" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="render.html" class="btn btn-neutral float-right" title="Render Properties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="Freestyle" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

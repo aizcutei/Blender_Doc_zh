@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devphysics/fluid/types/flow.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/fluid/types/flow.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="流体粒子" href="particle.html" />
@@ -94,41 +113,47 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">物理</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gravity.html">重力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloth/index.html">布料模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particles/index.html">Particles System</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">流体模拟</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">流体类型</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="domain.html">流体域</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fluid_object.html">流体对象</a></li>
+<li class="toctree-l4"><a class="reference internal" href="obstacle.html">流体障碍</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">流体流入/流出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particle.html">流体粒子</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control.html">流体控制</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../baking.html">烘焙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendix.html">流体附录</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../forces/index.html">Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collision.html">碰撞</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../baking.html">烘焙物理模拟</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#physics-types">物理类型</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../../force_fields/index.html">力场</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../collision.html">碰撞</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../cloth/index.html">布料模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../soft_body/index.html">Soft Body</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../index.html">流体模拟</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="index.html">流体类型</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../baking.html">烘焙</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../appendix.html">流体附录</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../smoke/index.html">Smoke Simulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../rigid_body/index.html">刚体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../particles/index.html">Particles System</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -210,57 +235,51 @@
 <div class="section" id="inflow">
 <span id="bpy-types-inflowfluidsettings"></span><h2>流入<a class="headerlink" href="#inflow" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">面板</dt>
-<dd class="field-odd"><p><span class="menuselection">物理 ‣ 流体</span></p>
-</dd>
-<dt class="field-even">类型</dt>
-<dd class="field-even"><p>流入</p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">物理 ‣ 流体</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">类型:</th><td class="field-body">流入</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="figure align-center" id="id1">
-<img alt="../../../_images/physics_fluid_types_flow_inflow.png" src="../../../_images/physics_fluid_types_flow_inflow.png" />
-<p class="caption"><span class="caption-text">流体流入的设置。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<dl class="simple">
-<dt>体初始化类型</dt><dd><p>详见 <a class="reference internal" href="introduction.html#fluid-initialization"><span class="std std-ref">体初始化类型</span></a>。</p>
-</dd>
-</dl>
 <p>这个对象将就会把流体添到模拟，如水龙头。</p>
-<dl class="simple">
-<dt>流入速度</dt><dd><p>即物体的内部产生的流体的速度。</p>
-</dd>
-<dt>局部坐标系/启用</dt><dd><p>为流入采用局部坐标系。如果流入物体移动或旋转，且流入流（inflow stream）将遵循/复制该项运动，这将非常有用。如果停用，流入的位置和方向不会改变。</p>
-</dd>
-<dt>动画网格/导出</dt><dd><p>详见 <a class="reference internal" href="introduction.html#fluid-animated-mesh"><span class="std std-ref">动画网格/导出</span></a>。</p>
-</dd>
+<dl class="docutils">
+<dt>体初始化类型</dt>
+<dd>详见 <a class="reference internal" href="introduction.html#fluid-initialization"><span class="std std-ref">体初始化类型</span></a>。</dd>
+<dt>动画网格/导出</dt>
+<dd>详见 <a class="reference internal" href="introduction.html#fluid-animated-mesh"><span class="std std-ref">动画网格/导出</span></a>。</dd>
+<dt>局部坐标系/启用</dt>
+<dd>为流入采用局部坐标系。如果流入物体移动或旋转，且流入流（inflow stream）将遵循/复制该项运动，这将非常有用。如果停用，流入的位置和方向不会改变。</dd>
+<dt>流入速度</dt>
+<dd>即物体的内部产生的流体的速度。</dd>
 </dl>
 </div>
 <div class="section" id="outflow">
 <span id="bpy-types-outflowfluidsettings"></span><h2>流出<a class="headerlink" href="#outflow" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">面板</dt>
-<dd class="field-odd"><p><span class="menuselection">物理 ‣ 流体</span></p>
-</dd>
-<dt class="field-even">类型</dt>
-<dd class="field-even"><p>流出</p>
-</dd>
-</dl>
-</div>
-<div class="figure align-center" id="id2">
-<img alt="../../../_images/physics_fluid_types_flow_outflow.png" src="../../../_images/physics_fluid_types_flow_outflow.png" />
-<p class="caption"><span class="caption-text">流体流出设置。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">物理 ‣ 流体</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">类型:</th><td class="field-body">流出</td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>即进入此对象的区域的任何流体将被删除（设想排水管或黑洞）。这与流入组合使用将很有用，以防止整个域被填满。启用时，这是像龙卷风（龙卷）或“湿真空”真空吸尘器，围绕其对象运动的流体部分将消失。</p>
-<dl class="simple">
-<dt>体初始化类型</dt><dd><p>详见 <a class="reference internal" href="introduction.html#fluid-initialization"><span class="std std-ref">体初始化类型</span></a>。</p>
-</dd>
-<dt>动画网格/导出</dt><dd><p>详见 <a class="reference internal" href="introduction.html#fluid-animated-mesh"><span class="std std-ref">动画网格/导出</span></a>。</p>
-</dd>
+<dl class="docutils">
+<dt>体初始化类型</dt>
+<dd>详见 <a class="reference internal" href="introduction.html#fluid-initialization"><span class="std std-ref">体初始化类型</span></a>。</dd>
+<dt>动画网格/导出</dt>
+<dd>详见 <a class="reference internal" href="introduction.html#fluid-animated-mesh"><span class="std std-ref">动画网格/导出</span></a>。</dd>
 </dl>
 </div>
 </div>

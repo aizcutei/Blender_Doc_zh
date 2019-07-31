@@ -25,7 +25,7 @@ causes them to move in an orbit-like fashion around the 3D cursor.
 Similar to *Edit Mode*,
 the Pivot Point is not taken into account and the results are view dependent.
 
-.. (TODO <2.8 remove): there is no Warp in Object Mode, maybe Bend?
+.. TODO2.8 Remove, there is no Warp in Object Mode, maybe Bend?
 
 
 Usage
@@ -52,16 +52,6 @@ Usage
           :width: 320px
 
           Warp Angle 360.
-
-Select the elements you want to operate on and activate the *Warp* transform tool.
-The *Warp* tool can be invoked from
-the :menuselection:`Object/Mesh/Curve/Surface --> Transform --> Warp` menu.
-The amount of warping given to the selection can be determined
-interactively by moving the mouse or by typing a number. Pressing :kbd:`Return`
-will confirm the transformation. The confirmed transformation can
-be further edited by pressing :kbd:`F6` or by going into the Tool Shelf
-and altering the Angle slider provided that no other actions take place between
-the *Warp* transform confirmation and accessing the slider.
 
 
 Cursor Position and View

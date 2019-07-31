@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/structure.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/structure.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="基本体" href="primitives.html" />
-    <link rel="prev" title="简介" href="introduction.html" /> 
+    <link rel="prev" title="Toolbar" href="toolbar/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,23 +113,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">结构</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#vertices">顶点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#edges">边</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#faces">面</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#loops">循环</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#normals">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#topology">拓扑</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selecting.html">Selecting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="editing/index.html">编辑</a></li>
 <li class="toctree-l3"><a class="reference internal" href="properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mesh_display.html">网格显示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mesh_analysis.html">网格分析</a></li>
 </ul>
 </li>
@@ -122,16 +142,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -208,53 +229,179 @@
   <div class="section" id="structure">
 <h1>结构<a class="headerlink" href="#structure" title="Permalink to this headline">¶</a></h1>
 <p>对于一切网格，都是由三个基本结构构成的： <em>顶点</em>，<em>边</em> 和 <em>面</em>。</p>
-<div class="figure align-center" id="id1">
+<div class="figure" id="id1">
 <a class="reference internal image-reference" href="../../_images/modeling_meshes_structure_example.svg"><img alt="../../_images/modeling_meshes_structure_example.svg" src="../../_images/modeling_meshes_structure_example.svg" width="600px" /></a>
-<p class="caption"><span class="caption-text">网格结构示例。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">网格结构示例。</span></p>
 </div>
 <div class="section" id="vertices">
 <h2>顶点<a class="headerlink" href="#vertices" title="Permalink to this headline">¶</a></h2>
-<p>网格中最基本的部分是3D空间中单独的点或位置。顶点存储在坐标数组中。</p>
-<p>通常在渲染和 <em>物体模式</em> 中不可见。不要将对象的 <a class="reference internal" href="../../editors/3dview/object/origin.html"><span class="doc">原点</span></a> 误认为顶点。它看起来很相似，但它更大，而且不能选中。</p>
-<div class="figure align-center" id="id2">
+<p>网格的最基本组成就是顶点序列，用于表达3D空间中的点或位置。顶点在编辑模式下会在3D视图下以小圆点的形式存在。对象的顶点以一组坐标位置的数组形式进行存储。</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>不要将对象的 <a class="reference internal" href="../../scene_layout/object/origin.html"><span class="doc">原点</span></a> 误认为顶点。它看起来很相似，但更大，而且不能选中。</p>
+<div class="last figure" id="id2">
 <img alt="../../_images/modeling_meshes_structure_cube-example.png" src="../../_images/modeling_meshes_structure_cube-example.png" />
-<p class="caption"><span class="caption-text">顶点被标记为“A”；“B”是原点。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">顶点被标记为“A”；“B”是物体的原点。</span></p>
+</div>
 </div>
 </div>
 <div class="section" id="edges">
 <h2>边<a class="headerlink" href="#edges" title="Permalink to this headline">¶</a></h2>
-<p>边是连接两个顶点之间的直线。当你在线框视图查看网格时边是“线”。这些线条通常不会出现在渲染图像上。它们用于构造面。</p>
+<p>边是连接两个顶点之间的直线。当你在线框视图着色方式下查看网格时边是“线”。这些线条通常不会出现在渲染图像上。它们用于构造面。</p>
 </div>
 <div class="section" id="faces">
 <h2>面<a class="headerlink" href="#faces" title="Permalink to this headline">¶</a></h2>
 <p>面是用于构造物体的真实表面。渲染网格后其实看到的就是这些面。如果某区域不包含面，则在渲染图像中将显示为透明的或不存在的。</p>
 <p>三个(三角面)，四个(四边面)或更多(n边面)顶点之间的区域定义为面，每侧都有一条边，通常缩写为 <em>tris，quads ＆ n-gons</em>。</p>
 <p>三角形总是平坦的，因此易于计算。另一方面，四边形 “利于形变”，因此常用于动画和细分建模。</p>
-<p>尽管可以使用三角形面构建一个立方体，但是在 <em>编辑模式</em> 中会看起来很混乱。</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a href="#id7"><span class="problematic" id="id8">`为什么在角色动画中应该避免三角面的出现？&lt;https://blender.stackexchange.com/questions/2931&gt;`__</span></a></li>
+<li><a href="#id7"><span class="problematic" id="id9">`何时应该使用多边面，何时不应该使用？&lt;https://blender.stackexchange.com/questions/89&gt;`__</span></a></li>
+</ul>
 </div>
+</div>
+<div class="section" id="normals">
+<h2>法向<a class="headerlink" href="#normals" title="Permalink to this headline">¶</a></h2>
+<p>在几何对象中，法向是一个方向或一条垂直于某对象的直线，主要是垂直于三角面或其他表面，但也能和某条直线、点在曲线上的切线或点在曲面上的切面垂直。</p>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../../_images/modeling_meshes_editing_normals_viewport.png"><img alt="../../_images/modeling_meshes_editing_normals_viewport.png" src="../../_images/modeling_meshes_editing_normals_viewport.png" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">环提面法线显示。</span></p>
+</div>
+<p>在上图中，每条蓝线表示环体上一个面的法向。每条线都垂直于其所在的面。法向显示可以在编辑模式开启，在 <a class="reference internal" href="../../editors/3dview/controls/overlays.html#mesh-display-normals"><span class="std std-ref">视图覆盖面板网格显示视图</span></a>。</p>
+<div class="section" id="properties">
+<span id="modeling-meshes-editing-normals-properties"></span><h3>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">属性编辑器 ‣ 物体数据 ‣ 法向</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure" id="id4">
+<img alt="../../_images/modeling_meshes_editing_normals_normals-panel.png" src="../../_images/modeling_meshes_editing_normals_normals-panel.png" />
+<p class="caption"><span class="caption-text">法向面板。</span></p>
+</div>
+<span id="bpy-types-mesh-use-auto-smooth"></span><span id="auto-smooth"></span><dl class="docutils" id="bpy-types-mesh-auto-smooth-angle">
+<dt>自动光滑</dt>
+<dd><p class="first">面与面之间角度小于在 <em>角度</em> 按钮位置设定值的边将会被平滑显示，当对网格中这些区域进行着色时会进行平滑着色。该方法对于使网格中光滑边与锐边共存是个比较简单的方式。</p>
+<dl class="last docutils">
+<dt>角度</dt>
+<dd>角度数值范围。</dd>
+</dl>
+</dd>
+</dl>
+<div class="figure" id="id5">
+<a class="reference internal image-reference" href="../../_images/modeling_meshes_editing_normals_example-auto-smooth.png"><img alt="../../_images/modeling_meshes_editing_normals_example-auto-smooth.png" src="../../_images/modeling_meshes_editing_normals_example-auto-smooth.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">开启了 <em>Auto Smooth</em> 的示例网格。</span></p>
+</div>
+</div>
+<div class="section" id="custom-split-normals">
+<span id="modeling-meshes-normals-custom"></span><h3>自定义拆边法向<a class="headerlink" href="#custom-split-normals" title="Permalink to this headline">¶</a></h3>
+<p><em>自定义拆边法向</em> 是一种通过使法向指向默认法向和自动计算法向以外的方向来进行微调和假着色的方式。该方式主要用于游戏开发，可以减弱一部分低多边形对象所带来的问题（最常见的例子就是低多边形树、灌木、草等。以及一些圆形的角落）。</p>
+<p>Blender支持在 '光滑扇形' 上自定义法线，其被定义为一组共享相同顶点的相邻面并彼此以 '光滑边' 进行连接。这意味着您可以单独定义某组面拐角的法向、某部分相邻面片的法向或某顶点。</p>
+<div class="section" id="enabling-custom-split-normals">
+<h4>启用自定义拆边法向<a class="headerlink" href="#enabling-custom-split-normals" title="Permalink to this headline">¶</a></h4>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 法向 ‣ 拆分</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>启用自定义拆边法向。</p>
+<p>除此之外，作为法向修改的便捷途径，任何自定义法向工具（见下文）都将在未启用自定义法向时启用它。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">当有必要使用自定义法向时，也会产生启用 <a class="reference internal" href="#auto-smooth"><span class="std std-ref">自动光滑</span></a> 的副作用。一旦您拥有自定义法向， <em>自动光滑</em> 的角度阈值行为将会被禁用 -- 所有标记为非锐边的边都会被无视角度，直接视为光滑边。</p>
+</div>
+</div>
+<div class="section" id="editing-custom-split-normals">
+<h4>编辑自定义拆边法向<a class="headerlink" href="#editing-custom-split-normals" title="Permalink to this headline">¶</a></h4>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 法向</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">热键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Alt-N</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>有一些工具用于编辑自定义拆边法向。自定义法向网格编辑工具能够作用于所有法向（默认选项），或仅作用于选择项。选择一个与特定顶点或面相关联的自定义法向：</p>
+<ul class="simple">
+<li>使元素选择模式同时支持顶点和面（使用 <kbd class="kbd docutils literal notranslate">Shift-LMB</kbd> 以同时启用第二个选择模式）。</li>
+<li>Select one or more vertices, then select a face.
+This can be repeated to select more vertices and a different face and so on.
+It is easiest to see the effect of these tools if you turn on
+the Edit Mode Overlays option <em>Display vertex-per-face normals as lines</em>.</li>
+</ul>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="editing/normals.html"><span class="doc">编辑法线</span></a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="importing-custom-split-normals">
+<h3>导入自定义拆边法向数据<a class="headerlink" href="#importing-custom-split-normals" title="Permalink to this headline">¶</a></h3>
+<p>某些工具，特别是 <abbr>CAD （Computer-Aided Design）</abbr> 这类工具，常常会在对其对象进行细分以及转换为网格时生成不规则几何对象（非常薄或非常长的三角形等。）自动计算得到的法线在这类几何对象上的效果常常不太好，因此能够导入和使用CAD工具自己生成的法向数据就显得尤为重要。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">当前，只有 <a class="reference internal" href="../../addons/io_scene_fbx.html"><span class="doc">FBX Importer</span></a> 可用于导入自定义法线。</p>
+</div>
+</div>
+</div>
+<div class="section" id="topology">
+<h2>拓扑<a class="headerlink" href="#topology" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="loops">
-<h2>循环<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id3">
+<h3>循环<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id6">
 <span id="fig-mesh-topo-loop"></span><img alt="../../_images/modeling_meshes_structure_edge-face-loops.png" src="../../_images/modeling_meshes_structure_edge-face-loops.png" />
-<p class="caption"><span class="caption-text">边和面循环。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">边和面循环。</span></p>
 </div>
 <p><em>边</em> 和 <em>面循环</em> 是形成连续“循环”的一组面或边，如上图 <a class="reference internal" href="#fig-mesh-topo-loop"><span class="std std-ref">边和面循环。</span></a> 所示。</p>
+<p>In the image above, loops that do not end in poles are cyclic (1 and 3).
+They start and end at the same vertex and divide the model into two partitions.
+Loops can be a quick and powerful tool to work with specific,
+continuous regions of a mesh and are a prerequisite for organic character animation.
+For a detailed description of how to work with loops in Blender, see:
+<a class="reference internal" href="selecting.html#modeling-meshes-selecting-edge-loops"><span class="std std-ref">Edge Loop Selection</span></a>.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>请注意，循环(2和4)不能围绕整个模型。循环在所谓的极点上中断，因为没有从极点继续循环的路径。极点是连接到三个，五个或更多边的顶点。因此，与一条，两条或四条边连接的顶点不是极点。</p>
+<p class="first admonition-title">Note</p>
+<p class="last">请注意，循环(2和4)不能围绕整个模型。循环在所谓的极点上中断，因为没有从极点继续循环的路径。极点是连接到三个，五个或更多边的顶点。因此，与一条，两条或四条边连接的顶点不是极点。</p>
 </div>
-<p>在上图中，不在极点中断的循环是闭合的(1和3)。它们开始和结束的顶点是相同的，并将模型分成两个部分。在处理网格的特定连续区域时，循环是一个快捷和强大的工具，这也是活体角色动画的先决条件。有关如何在Blender中使用循环的详细说明，请参阅： <a class="reference internal" href="selecting/advanced.html"><span class="doc">进阶选择</span></a> 。</p>
-<div class="section" id="edge-loops">
-<span id="modeling-mesh-structure-edge-loops"></span><h3>边循环<a class="headerlink" href="#edge-loops" title="Permalink to this headline">¶</a></h3>
+<p class="rubric" id="modeling-mesh-structure-edge-loops">边循环</p>
 <p>图 <a class="reference internal" href="#fig-mesh-topo-loop"><span class="std std-ref">边和面循环。</span></a> 中1和2为边循环。循环边上的顶点需满足：每个顶点正好有两个不在循环中，且分别位于循环两侧的相邻顶点(极点情形下的首尾端点例外)。</p>
 <p>边循环是一个重要的概念，特别是在生物(细分)建模和角色动画中。正确使用的话，可以使用相对少的顶点构造模型，使其用在细分表面和变形动画时，看起来非常自然。</p>
 <p>以机体建模中的 <a class="reference internal" href="#fig-mesh-topo-loop"><span class="std std-ref">边和面循环。</span></a> 为例：边循环沿着皮肤和底层肌肉的自然轮廓和变形线，并且在角色移动时变形更多的区域(比如肩膀或者膝盖)，边循环更密集。</p>
-<p>有关使用边循环的更多详细信息，请参见： <a class="reference internal" href="selecting/edges_faces.html#modeling-meshes-selecting-edge-loops"><span class="std std-ref">循环边选择</span></a> 。</p>
-</div>
-<div class="section" id="face-loops">
-<h3>面循环<a class="headerlink" href="#face-loops" title="Permalink to this headline">¶</a></h3>
+<p>有关使用边循环的更多详细信息，请参考： <a class="reference internal" href="selecting.html#modeling-meshes-selecting-edge-loops"><span class="std std-ref">循环边选择</span></a> 。</p>
+<p class="rubric">面循环</p>
 <p>这些是边循环的逻辑延伸，它们由两个边循环之间的面组成，如图 <a class="reference internal" href="#fig-mesh-topo-loop"><span class="std std-ref">边和面循环。</span></a> 中的循环(3和4)所示。请注意，对于非闭合循环(4)，包含极点的面不包括在面循环中。</p>
-<p>有关使用面循环的更多详细信息，请参见 <a class="reference internal" href="selecting/edges_faces.html#modeling-meshes-selecting-face-loops"><span class="std std-ref">面循环选择</span></a>。</p>
+<p>有关使用面循环的更多详细信息，请参考 <a class="reference internal" href="selecting.html#modeling-meshes-selecting-face-loops"><span class="std std-ref">面循环选择</span></a>。</p>
+</div>
+<div class="section" id="poles">
+<h3>Poles<a class="headerlink" href="#poles" title="Permalink to this headline">¶</a></h3>
+<p>See <a class="reference external" href="https://blender.stackexchange.com/a/133676/55">N-poles &amp; E-poles</a>.</p>
+</div>
+<div class="section" id="non-manifold">
+<h3>Non-Manifold<a class="headerlink" href="#non-manifold" title="Permalink to this headline">¶</a></h3>
+<p>见 <a class="reference internal" href="../../glossary/index.html#term-non-manifold"><span class="xref std std-term">非流形</span></a>.</p>
 </div>
 </div>
 </div>
@@ -270,7 +417,7 @@
         <a href="primitives.html" class="btn btn-neutral float-right" title="基本体" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="toolbar/index.html" class="btn btn-neutral float-left" title="Toolbar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devrender/eevee/limitations.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/eevee/limitations.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Cycles渲染引擎" href="../cycles/index.html" />
-    <link rel="prev" title="景深" href="depth_of_field.html" /> 
+    <link rel="next" title="Cycles" href="../cycles/index.html" />
+    <link rel="prev" title="反射平面" href="lightprobes/reflection_planes.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,62 +113,57 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lighting/index.html">灯光</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Eevee 渲染器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Eevee</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="render_settings/index.html">渲染设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="materials/index.html">材质</a></li>
-<li class="toctree-l3"><a class="reference internal" href="world.html">世界</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lamps.html">灯光</a></li>
-<li class="toctree-l3"><a class="reference internal" href="shadows.html">阴影</a></li>
-<li class="toctree-l3"><a class="reference internal" href="volumetrics.html">Volumetrics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="screen_space_effects/index.html">屏幕空间效果</a></li>
-<li class="toctree-l3"><a class="reference internal" href="indirect_lighting.html">间接照明缓存</a></li>
+<li class="toctree-l3"><a class="reference internal" href="world.html">世界环境</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lighting.html">灯光设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lightprobes/index.html">光照探头</a></li>
-<li class="toctree-l3"><a class="reference internal" href="motion_blur.html">运动模糊</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bloom.html">泛光</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_of_field.html">景深</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">限制</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#cameras">相机</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lights">灯光</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#light-probes">灯光探针</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#light-probes">光照探针</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#indirect-lighting">间接光照明</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#volumetrics">体素元素</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#screen-space-reflections">屏幕空间反射</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#screen-space-refraction">屏幕空间折射</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ambient-occlusion">环境光遮蔽</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shadows">阴影</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#volumetrics">体积</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#screen-space-effects">屏幕空间效果</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#materials">材质</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#shader-nodes">着色器节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#memory-management">内存管理</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cpu-rendering">CPU渲染</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#multiple-gpu-support">多GPU支持</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#headless-rendering">无窗渲染</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#headless-rendering">无头（窗）渲染</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles渲染引擎</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">Workbench Engine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cameras.html">相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lights/index.html">Lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials/index.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_nodes/index.html">着色器节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../color_management.html">色彩管理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">工作流</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL渲染</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../audio/index.html">音频渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -202,7 +216,7 @@
         
           <li><a href="../index.html">渲染</a> &raquo;</li>
         
-          <li><a href="index.html">Eevee 渲染器</a> &raquo;</li>
+          <li><a href="index.html">Eevee</a> &raquo;</li>
         
       <li>限制</li>
     
@@ -225,114 +239,146 @@
             
   <div class="section" id="limitations">
 <h1>限制<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h1>
-<p>Eevee的目标是成为一个交互式渲染引擎。在不影响性能的前提下，一些功能还没有加入或不可能整合进Eevee的架构中。</p>
-<p>以下是在使用Eevee时你可以预见到的功能限制的详尽列表。</p>
+<p>Eevee的目标是成为交互式渲染引擎。在不影响性能的前提下，一些功能还没有加入或不可能整合进Eevee的架构中。</p>
+<p>以下是在使用Eevee时你可以预见到的功能限制详尽列表。</p>
 <div class="section" id="cameras">
 <h2>相机<a class="headerlink" href="#cameras" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>目前只支持透视和正字投影。</p></li>
+<li>目前只支持透视和正交。</li>
 </ul>
 </div>
 <div class="section" id="lights">
 <h2>灯光<a class="headerlink" href="#lights" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>不支持灯光实例阴影（复制对象，组实例）。</p></li>
-<li><p>Eevee场景中仅支持最多128个激活灯光。</p></li>
-<li><p>同时只能支持8个投影阳光。</p></li>
-<li><p>到目前为止, 灯光只能有一种颜色, 不支持灯光节点组。</p></li>
+<li>不支持实例化灯光的阴影</li>
+<li>Eevee场景中仅支持最多128个激活灯光。</li>
+<li>只能同时支持8个投影阳光。</li>
+<li>到目前为止, 灯光只能有一种颜色, 不支持灯光节点组。</li>
 </ul>
 </div>
 <div class="section" id="light-probes">
-<h2>灯光探针<a class="headerlink" href="#light-probes" title="Permalink to this headline">¶</a></h2>
+<h2>光照探针<a class="headerlink" href="#light-probes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Eevee仅支持至多128个活动立方体反射贴图。</p></li>
-<li><p>Eevee仅支持至多64个活动的体积辐射。</p></li>
-<li><p>在相机视野内，Eevee仅支持最多16个活动的反射平面。</p></li>
+<li>Eevee仅支持至多128个活动立方体反射贴图。</li>
+<li>Eevee仅支持至多64个活动的体积辐射。</li>
+<li>在相机视野内，Eevee仅支持最多16个活动的反射平面。</li>
 </ul>
 </div>
 <div class="section" id="indirect-lighting">
 <h2>间接光照明<a class="headerlink" href="#indirect-lighting" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>体素元素不接收体积辐射光但接收世界环境漫射照明。</p></li>
-<li><p>Eevee既不支持“镜面漫反射”光反弹，也不支持“镜射”光反弹。所有镜射照明在烘培中关闭。</p></li>
+<li>体积不接收体积辐射光但接收世界环境漫射照明。</li>
+<li>Eevee既不支持“镜面到漫反射”的光反弹，也不支持“镜面到镜面”的光反弹。</li>
+<li>在烘焙过程中，所有镜面照明都会关闭。</li>
+</ul>
+</div>
+<div class="section" id="shadows">
+<span id="eevee-limitations-shadows"></span><h2>阴影<a class="headerlink" href="#shadows" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>不支持实例化灯光的阴影</li>
+<li>Eevee场景中仅支持最多128个激活灯光。</li>
+<li>只能同时支持8个投影阳光。</li>
 </ul>
 </div>
 <div class="section" id="volumetrics">
-<h2>体素元素<a class="headerlink" href="#volumetrics" title="Permalink to this headline">¶</a></h2>
+<span id="eevee-limitations-volumetrics"></span><h2>体积<a class="headerlink" href="#volumetrics" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>仅支持单次散射。</p></li>
-<li><p>体素元素仅能从相机“光线”中渲染。 它们不会出现在反射/折射和探针中。</p></li>
-<li><p>体素元素不接收体积辐射光但接收世界环境漫射照明。</p></li>
-<li><p>体素元素投影仅在其它体素元素上有效。它们不能在场景中实体物体上投影。</p></li>
-<li><p>体积阴影仅适用于视锥内的体积。</p></li>
-<li><p>体素灯光不支持灯光形状。它们被视为点光</p></li>
+<li>仅支持一次散射。</li>
+<li>只在相机光线中渲染体积。 它们在屏幕空间反射/屏幕空间折射和光照探针不可见。</li>
+<li>体积不接收体积辐射的光照但接收世界环境漫射照明。</li>
+<li>体积阴影仅在其它体积物体上有效。它们不能在场景实物上投射阴影。</li>
+<li>仅在视锥体（视野）中的体积会有阴影。</li>
+<li>体积光照明不支持设置灯光形状。它们都被视为点光。</li>
+</ul>
+</div>
+<div class="section" id="screen-space-effects">
+<h2>屏幕空间效果<a class="headerlink" href="#screen-space-effects" title="Permalink to this headline">¶</a></h2>
+<p>Eevee不是光线追踪引擎，不会计算全部的光线反弹。而是使用深度缓冲区作为近似场景表示，这会降低场景缩放效果的复杂性并实现了更高的性能。 eevee计算那些效果时，仅计算视图范围的内容。另外它只利用一层深度，因此仅知道最前面的像素距离。</p>
+<p>这些限制会产生一些问题。</p>
+<ul class="simple">
+<li>屏幕空间效果会在屏幕（视图）边框消失。可以使用 <em>过扫描</em> 功能来修复此问题。</li>
+<li>屏幕空间效果缺乏深层信息（或者物体的厚度）。这就是为什么大多数效果都有厚度参数来控制如何考虑潜在的相交像素。</li>
+<li>这些效果不考虑混合表面。 它们不是深度预处理的一部分，不会出现在深度缓冲区中。</li>
+</ul>
+<div class="section" id="ambient-occlusion">
+<span id="eevee-limitations-ao"></span><h3>环境光遮蔽（AO）<a class="headerlink" href="#ambient-occlusion" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>对象被视为无限厚，如果距离非常大，投影会混叠。</li>
 </ul>
 </div>
 <div class="section" id="screen-space-reflections">
-<h2>屏幕空间反射<a class="headerlink" href="#screen-space-reflections" title="Permalink to this headline">¶</a></h2>
+<span id="eevee-limitations-reflections"></span><h3>屏幕空间反射<a class="headerlink" href="#screen-space-reflections" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>仅光泽BSDF支持屏幕空间反射。</p></li>
-<li><p>所选BSDF是当前独有选择。</p></li>
-<li><p>屏幕空间反射将会反射透明物体和使用屏幕空间反射的物体，但是因为仅有单层深度缓冲没有准确的定位。</p></li>
+<li>仅光泽BSDF支持屏幕空间反射。</li>
+<li>目前任意选择评估的BSDF。</li>
+<li>屏幕空间反射将使用屏幕空间折射反射透明对象和对象，但由于单层深度缓冲区而没有精确定位。</li>
 </ul>
 </div>
 <div class="section" id="screen-space-refraction">
-<h2>屏幕空间折射<a class="headerlink" href="#screen-space-refraction" title="Permalink to this headline">¶</a></h2>
+<h3>屏幕空间折射<a class="headerlink" href="#screen-space-refraction" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>只有一个折射事件被正确建模。</p></li>
-<li><p>Only opaque and alpha hashed materials can be refracted.</p></li>
+<li>只有第一个折射是精确的。</li>
+<li>只能折射不透明或者alpha hashed材质的物体。</li>
 </ul>
 </div>
-<div class="section" id="ambient-occlusion">
-<h2>环境光遮蔽<a class="headerlink" href="#ambient-occlusion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="subsurface-scattering">
+<span id="eevee-limitations-sss"></span><h3>次表面散射<a class="headerlink" href="#subsurface-scattering" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>对象被视为无限厚，如果距离非常大，投影会混叠。</p></li>
+<li>只有一个BSSRDF可以产生屏幕空间次表面散射。</li>
+<li>目前任意选择评估的BSSRDF。</li>
+<li>最多254个次表面散射材质的物体。</li>
+<li>每个像素只能调整缩放比例。 单个RGB半径可在插槽默认值中调整。</li>
+<li>在模糊期间，每个表面的输入辐射不被隔离，导致光从表面泄漏到表面。</li>
 </ul>
+</div>
 </div>
 <div class="section" id="materials">
-<h2>材质<a class="headerlink" href="#materials" title="Permalink to this headline">¶</a></h2>
-<dl>
-<dt>折射</dt><dd><p>折射由折射探针通过光泽BSDFs使用相同的采样伪造，但使用折射视图方向而不是反射视图方向。只有第一次折射事件会被正确建模。使用折射深度可以将第二折射事件近似应用于相对较薄的物体。</p>
+<span id="eevee-limitations-materials"></span><h2>材质<a class="headerlink" href="#materials" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>折射</dt>
+<dd><p class="first">通过对光泽 BSDF使用的相同反射探头进行采样，但使用折射视图方向而不是反射视图方向来折射。 只有第一次折射事件才是精确的。 使用折射深度可以将第二折射事件的近似用于相对较薄的物体。 使用屏幕空间折射将折射视图内部可见的内容，并在没有命中时使用最近的探测器。</p>
+<p class="last">屏幕空间反射和环境光屏蔽（AO）与屏幕空间折射不兼容; 它们将在使用它的表面上禁用。 使用屏幕空间折射的曲面不会出现在屏幕空间反射的反射中。 使用屏幕空间折射的曲面不会将环境光屏蔽（AO）投射到其他曲面上。</p>
 </dd>
-<dt>置换</dt><dd><p>目前为止，置换贴图通过OpenGL衍生获得支持，对于每个2x2像素的块，它们是相同的。这意味着置换输出会显得像素化。建议使用法线贴图替代。</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>如果必要使用置换节点，渲染最终目标2倍大小然后降级到最终输出。</p>
+<dt>凹凸贴图</dt>
+<dd><p class="first">目前为止，置换贴图是通过OpenGL衍生获得支持，对于每个2x2像素的块，它们是相同的。这意味着置换输出会显得像素化。建议使用法线贴图替代。</p>
+<div class="last admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">如果您绝对需要使用Bump节点进行渲染，请以目标分辨率的两倍渲染并缩小最终输出。</p>
 </div>
 </dd>
-<dt>体素物体</dt><dd><p>体积着色器将影响对象的整个边界框。 必须使用着色器内的程序纹理调整形状。</p>
-</dd>
+<dt>体积物体</dt>
+<dd>体积着色器将影响对象的整个边缘。 必须使用着色器内的程序纹理调整形状。</dd>
 </dl>
 </div>
 <div class="section" id="shader-nodes">
 <h2>着色器节点<a class="headerlink" href="#shader-nodes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>所有BSDF都使用近似值来实现实时性能，因此Cycles和Eevee之间总会存在细微差别。</p></li>
-<li><p>某些实用程序节点尚未与Eevee兼容（例如 天空贴图节点）。</p></li>
+<li>所有BSDF都使用近似值来实现实时性能，因此Cycles和Eevee之间总会存在细微差别。</li>
+<li>某些实用节点尚未与Eevee兼容（例如 天空贴图节点）。</li>
 </ul>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>不支持节点完整列表 <a class="reference internal" href="materials/nodes_support.html"><span class="doc">节点支持</span></a>.</p>
+<p class="first admonition-title">See also</p>
+<p class="last">不支持节点完整列表 <a class="reference internal" href="materials/nodes_support.html"><span class="doc">节点支持</span></a>.</p>
 </div>
 </div>
 <div class="section" id="memory-management">
 <h2>内存管理<a class="headerlink" href="#memory-management" title="Permalink to this headline">¶</a></h2>
-<p>目前为止Eevee使用OpenGL，而且 <abbr title="中央处理器">GPU （图形处理单元，一般叫做显卡）</abbr> 内存处理由OpenGL驱动实现。理论上，只需要贴图和网格（现在称为“资源”）作为一次(例如 一个物体)合理的GPU内存的请求。</p>
+<p>目前为止Eevee使用OpenGL，而且 <abbr>GPU （图形处理器，一般叫做显卡）</abbr> 内存处理由OpenGL驱动实现。理论上，只需要贴图和网格（现在称为“资源”）作为一次(例如 一个物体)合理的GPU内存的请求。</p>
 <p>如果场景非常大，驱动会交换切换物体进出来保证所有物体被正确渲染。</p>
 <p>在实践中，使用太多的GPU内存会导致GPU驱动崩溃，冻结，或终止其它应用程序。所以请小心做出您的请求。</p>
-<p>没有标准的方法来估计资源是否适合GPU内存，或者GPU是否能成功渲染它们。</p>
+<p>目前没有好办法估计资源是否适合GPU内存，或者GPU是否能成功渲染它们。</p>
 </div>
 <div class="section" id="cpu-rendering">
 <h2>CPU渲染<a class="headerlink" href="#cpu-rendering" title="Permalink to this headline">¶</a></h2>
-<p>作为一个OpenGL引擎，Eevee仅支持 <abbr title="中央处理器">GPU （图形处理单元，一般叫做显卡）</abbr> 渲染。目前没有计划支持 <abbr title="中央处理器">CPU</abbr> （软件）渲染，因为它会非常低效。CPU仍需要处理，在高复杂度场景中在每帧渲染之前准备几何图形。</p>
+<p>作为光栅化引擎，Eevee仅使用 :abbr：<cite>GPU（图形处理器，也叫显卡）</cite> 的功能进行渲染。不打算支持 :abbr：<cite>CPU（中央处理单元）</cite> 渲染，因为效率太低。但工作中仍然需要CPU来处理场景的复杂任务，因为在渲染每个帧之前必须由CPU准备几何数据。</p>
 </div>
 <div class="section" id="multiple-gpu-support">
 <h2>多GPU支持<a class="headerlink" href="#multiple-gpu-support" title="Permalink to this headline">¶</a></h2>
-<p>目前不支持多 <abbr title="中央处理器">GPU （图形处理单元，一般叫做显卡）</abbr> 系统</p>
+<p>目前不支持多 <abbr>GPU （图形处理器，也叫做显卡）</abbr> 系统</p>
 </div>
 <div class="section" id="headless-rendering">
-<h2>无窗渲染<a class="headerlink" href="#headless-rendering" title="Permalink to this headline">¶</a></h2>
-<p>目前Eevee不支持无窗渲染系统（例如没有显示管理器）。</p>
+<h2>无头（窗）渲染<a class="headerlink" href="#headless-rendering" title="Permalink to this headline">¶</a></h2>
+<p>目前Eevee不支持无头渲染系统（例如没有显示管理器）。</p>
 </div>
 </div>
 
@@ -344,10 +390,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cycles/index.html" class="btn btn-neutral float-right" title="Cycles渲染引擎" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../cycles/index.html" class="btn btn-neutral float-right" title="Cycles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="depth_of_field.html" class="btn btn-neutral float-left" title="景深" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="lightprobes/reflection_planes.html" class="btn btn-neutral float-left" title="反射平面" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devrender/freestyle/python.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/freestyle/python.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Line" href="line.html" />
-    <link rel="prev" title="Geometry" href="parameter_editor/line_style/modifiers/geometry.html" /> 
+    <link rel="next" title="层 &amp; 通道" href="../layers/index.html" />
+    <link rel="prev" title="Tip Remover" href="parameter_editor/line_style/modifiers/geometry/tip_remover.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,43 +113,44 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lighting/index.html">灯光</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee 渲染器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles渲染引擎</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">Workbench Engine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cameras.html">相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lights/index.html">Lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials/index.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_nodes/index.html">着色器节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../color_management.html">色彩管理</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Freestyle</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html">核心选项</a></li>
-<li class="toctree-l3"><a class="reference internal" href="view_map.html">View maps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="parameter_editor/index.html">Parameter Editor</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Python脚本模式</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#writing-style-modules">Writing Style Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="render.html">Render Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="view_layer.html">View Layer Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material.html">Material Properties</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#control-modes">Control Modes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="parameter_editor/index.html">Parameter Editor</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Python脚本模式</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="line.html">Line</a></li>
-<li class="toctree-l3"><a class="reference internal" href="export_svg.html">Freestyle SVG Exporter</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">工作流</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL渲染</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../audio/index.html">音频渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -222,34 +242,30 @@ by the stroke creation operator, which takes a list of user-defined stroke shade
 External style module files first need to be loaded in the Text Editor.
 Then the select menu within an entry of the style module stack
 allows you to select a module from the list of loaded style modules.</p>
-<div class="figure align-center" id="id1">
+<div class="figure" id="id1">
 <img alt="../../_images/render_freestyle_python_scripting-mode.png" src="../../_images/render_freestyle_python_scripting-mode.png" />
-<p class="caption"><span class="caption-text">A screen capture of a style module (cartoon.py) loaded in the Text Editor (left),
-as well as Freestyle options in the Python Scripting mode in the Render Layers buttons (right).</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">A screen capture of a style module <code class="docutils literal notranslate"><span class="pre">cartoon.py</span></code> loaded in the Text Editor (left),
+as well as Freestyle options in the Python Scripting mode in the View Layers buttons (right).</span></p>
 </div>
 <p>Freestyle for Blender comes with a number of Python style modules that can serve as a starting
 point of your own style module writing. See also the section of the Freestyle Python API in
 the Blender Python API reference manual for the full detail of style module constructs.</p>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id2">
-<a class="reference internal image-reference" href="../../_images/render_freestyle_python_scripting-mode-example-1.jpg"><img alt="../../_images/render_freestyle_python_scripting-mode-example-1.jpg" src="../../_images/render_freestyle_python_scripting-mode-example-1.jpg" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">By T.K. using the Python Scripting mode.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-<div class="legend">
-<p>(<a class="reference external" href="https://wiki.blender.org/wiki/File:Turning_Pages.zip">File:Turning_Pages.zip</a>, CC0).</p>
-</div>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id2">
+<img alt="../../_images/render_freestyle_python_scripting-mode-example-1.jpg" src="../../_images/render_freestyle_python_scripting-mode-example-1.jpg" />
+<p class="caption"><span class="caption-text">By T.K. using the Python Scripting mode
+(<a class="reference external" href="https://wiki.blender.org/wiki/File:Turning_Pages.zip">blend-file</a>, CC0).</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id3">
-<a class="reference internal image-reference" href="../../_images/render_freestyle_python_scripting-mode-example-2.png"><img alt="../../_images/render_freestyle_python_scripting-mode-example-2.png" src="../../_images/render_freestyle_python_scripting-mode-example-2.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">By T.K. using the Python Scripting mode.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-<div class="legend">
-<p>(<a class="reference external" href="https://wiki.blender.org/wiki/File:Lily_Broken_Topology.zip">File:Lily_Broken_Topology.zip</a>, CC0).</p>
-</div>
+<td><div class="first last figure" id="id3">
+<img alt="../../_images/render_freestyle_python_scripting-mode-example-2.png" src="../../_images/render_freestyle_python_scripting-mode-example-2.png" />
+<p class="caption"><span class="caption-text">By T.K. using the Python Scripting mode
+(<a class="reference external" href="https://wiki.blender.org/wiki/File:Lily_Broken_Topology.zip">blend-file</a>, CC0).</span></p>
 </div>
 </td>
 </tr>
@@ -264,11 +280,11 @@ structured as a pipeline of operations that allow for building strokes from the 
 within the view map.</p>
 <p>There are five kinds of operations (listed with corresponding operator functions):</p>
 <ul class="simple">
-<li><p>Selection <code class="docutils literal notranslate"><span class="pre">Operators.select()</span></code></p></li>
-<li><p>Chaining <code class="docutils literal notranslate"><span class="pre">Operators.chain(),</span> <span class="pre">Operators.bidirectional_chain()</span></code></p></li>
-<li><p>Splitting <code class="docutils literal notranslate"><span class="pre">Operators.sequential_split(),</span> <span class="pre">Operators.recursive_split()</span></code></p></li>
-<li><p>Sorting <code class="docutils literal notranslate"><span class="pre">Operators.sort()</span></code></p></li>
-<li><p>Stroke creation <code class="docutils literal notranslate"><span class="pre">Operators.create()</span></code></p></li>
+<li>Selection <code class="docutils literal notranslate"><span class="pre">Operators.select()</span></code></li>
+<li>Chaining <code class="docutils literal notranslate"><span class="pre">Operators.chain(),</span> <span class="pre">Operators.bidirectional_chain()</span></code></li>
+<li>Splitting <code class="docutils literal notranslate"><span class="pre">Operators.sequential_split(),</span> <span class="pre">Operators.recursive_split()</span></code></li>
+<li>Sorting <code class="docutils literal notranslate"><span class="pre">Operators.sort()</span></code></li>
+<li>Stroke creation <code class="docutils literal notranslate"><span class="pre">Operators.create()</span></code></li>
 </ul>
 <p>The input view map is populated with a set of ViewEdge objects. The selection operation is
 used to pick up ViewEdges of interest to artists based on user-defined selection conditions
@@ -421,9 +437,9 @@ The stroke creation is always the last operation that concludes a style module.<
 base classes and overriding appropriate methods. See the reference manual entries of
 the following base classes for more information on the user-scriptable constructs.</p>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Predicates, functions, chaining iterators, and stroke shaders can be defined by inheriting
-base classes and overriding appropriate methods. See <code class="xref py py-mod docutils literal notranslate"><span class="pre">Freestyle</span> <span class="pre">python</span> <span class="pre">module</span></code> for more information on the user-scriptable constructs.</p>
+<p class="first admonition-title">See also</p>
+<p class="last">Predicates, functions, chaining iterators, and stroke shaders can be defined by inheriting
+base classes and overriding appropriate methods. See <a class="reference external" href="https://docs.blender.org/api/2.80/freestyle.html#module-freestyle" title="(in Blender 2.80 Python API vf6cb5f54494e)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Freestyle</span> <span class="pre">python</span> <span class="pre">module</span></code></a> for more information on the user-scriptable constructs.</p>
 </div>
 </div>
 </div>
@@ -437,10 +453,10 @@ base classes and overriding appropriate methods. See <code class="xref py py-mod
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="line.html" class="btn btn-neutral float-right" title="Line" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../layers/index.html" class="btn btn-neutral float-right" title="层 &amp; 通道" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="parameter_editor/line_style/modifiers/geometry.html" class="btn btn-neutral float-left" title="Geometry" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="parameter_editor/line_style/modifiers/geometry/tip_remover.html" class="btn btn-neutral float-left" title="Tip Remover" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

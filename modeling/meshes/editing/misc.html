@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/editing/misc.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/misc.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="数据传递" href="data_transfer.html" />
@@ -94,14 +113,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting.html">Selecting</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="basics/index.html">基础</a></li>
@@ -109,6 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="edges.html">边工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="faces.html">面工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="uv/index.html">UV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="transform/index.html">变形</a></li>
 <li class="toctree-l4"><a class="reference internal" href="duplicating/index.html">复制</a></li>
 <li class="toctree-l4"><a class="reference internal" href="subdividing/index.html">细分</a></li>
@@ -119,7 +140,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh_display.html">网格显示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">网格分析</a></li>
 </ul>
 </li>
@@ -131,16 +151,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -219,74 +240,78 @@
   <div class="section" id="miscellaneous-editing-tools">
 <h1>其他编辑工具<a class="headerlink" href="#miscellaneous-editing-tools" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="sort-elements">
-<h2>元素排序<a class="headerlink" href="#sort-elements" title="Permalink to this headline">¶</a></h2>
+<span id="mesh-edit-sort-elements"></span><h2>元素排序<a class="headerlink" href="#sort-elements" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 网格元素排序...</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 网格元素排序...</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>该工具用于按照指定的条件，对选中网格元素编号进行排序。</p>
-<dl class="simple">
-<dt>视图Z轴向</dt><dd><p>沿活动视图的Z轴排序，默认从远到近(勾选 <em>反向</em> 反转排序方式)。</p>
-</dd>
-<dt>视图X轴向</dt><dd><p>沿活动视图的X轴排序，默认从左到右(同样地，勾选 <em>反向</em> 反转排序方式)。</p>
-</dd>
-<dt>光标距离</dt><dd><p>按照与3D游标之间的距离进行排序(同样可 <em>反向</em>)。</p>
-</dd>
-<dt>材质</dt><dd><p>仅对面排序，按材质编号由低到高。注意 <em>反向</em> 仅反转材质的顺序， <em>而非</em> 面的顺序。</p>
-</dd>
-<dt>选中项</dt><dd><p>将所有选中元素编号移至最前(勾选 <em>反向</em> 则移至最后)，不改变其相对次序。注意：该选项同样会影响 <strong>未选中</strong> 元素的编号！</p>
-</dd>
-<dt>随机</dt><dd><p>对选中元素编号随机化(<em>不</em> 影响非选中元素的编号)。随机种用于调整随机结果 -- 对同一组选中网格使用同一个随机种，总是会得到相同的结果!</p>
-</dd>
-<dt>反向</dt><dd><p>简单地反转选中元素的次序。</p>
-</dd>
+<dl class="docutils">
+<dt>视图Z轴向</dt>
+<dd>沿活动视图的Z轴排序，默认从远到近(勾选 <em>反向</em> 反转排序方式)。</dd>
+<dt>视图X轴向</dt>
+<dd>沿活动视图的X轴排序，默认从左到右(同样地，勾选 <em>反向</em> 反转排序方式)。</dd>
+<dt>光标距离</dt>
+<dd>按照与3D游标之间的距离进行排序(同样可 <em>反向</em>)。</dd>
+<dt>材质</dt>
+<dd>仅对面排序，按材质编号由低到高。注意 <em>反向</em> 仅反转材质的顺序， <em>而非</em> 面的顺序。</dd>
+<dt>选中项</dt>
+<dd>将所有选中元素编号移至最前(勾选 <em>反向</em> 则移至最后)，不改变其相对次序。注意：该选项同样会影响 <strong>未选中</strong> 元素的编号！</dd>
+<dt>随机</dt>
+<dd>对选中元素编号随机化(<em>不</em> 影响非选中元素的编号)。随机种用于调整随机结果 -- 对同一组选中网格使用同一个随机种，总是会得到相同的结果!</dd>
+<dt>反向</dt>
+<dd>简单地反转选中元素的次序。</dd>
 </dl>
 <div class="admonition hint">
-<p class="admonition-title">Hint</p>
+<p class="first admonition-title">Hint</p>
 <p>启用显示编号选项</p>
-<p>在Python控制台输入 <code class="docutils literal notranslate"><span class="pre">bpy.app.debug</span> <span class="pre">=</span> <span class="pre">True</span></code> ，属性栏将出现 <span class="menuselection">网格显示 ‣ 边信息 ‣ 索引</span> 选项。</p>
+<p class="last">Type <code class="docutils literal notranslate"><span class="pre">bpy.app.debug</span> <span class="pre">=</span> <span class="pre">True</span></code> into the Python Console and a checkbox will appear
+in the Sidebar region under <span class="menuselection">Mesh Display ‣ Edge Info ‣ Indices</span>.</p>
 </div>
 </div>
 <div class="section" id="separate">
 <span id="object-separate"></span><h2>分离<a class="headerlink" href="#separate" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 顶点 ‣ 分离</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">P</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 顶点 ‣ 分离</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">P</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>一些情况下，用户需要将部分网格分离出来。</p>
 <p>要分离出一个物体，首先需要选中对应的顶点(或面)，然后分离。分离的方式有以下几种。</p>
-<div class="figure align-center" id="id1">
+<div class="figure" id="id1">
 <img alt="../../../_images/modeling_meshes_editing_misc_separate-example.png" src="../../../_images/modeling_meshes_editing_misc_separate-example.png" />
-<p class="caption"><span class="caption-text">整齐地肢解后的猴头。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">整齐地肢解后的猴头。</span></p>
 </div>
-<dl class="simple">
-<dt>选中项</dt><dd><p>将选中元素分离为一个新的物体。</p>
-</dd>
-<dt>按松散块</dt><dd><p>以断开为依据分离网格。</p>
-</dd>
-<dt>按材质</dt><dd><p>按照材质分离网格为多个物体。</p>
-</dd>
+<dl class="docutils">
+<dt>选中项</dt>
+<dd>将选中元素分离为一个新的物体。</dd>
+<dt>按松散块</dt>
+<dd>以断开为依据分离网格。</dd>
+<dt>按材质</dt>
+<dd>按照材质分离网格为多个物体。</dd>
 </dl>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="../../../editors/3dview/object/editing/introduction.html#object-join"><span class="std std-ref">合并物体</span></a>。</p>
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../../scene_layout/object/editing/introduction.html#object-join"><span class="std std-ref">合并物体</span></a>。</p>
 </div>
 </div>
 </div>

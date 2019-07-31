@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devtroubleshooting/python.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/troubleshooting/python.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="恢复数据" href="recover.html" />
@@ -94,18 +113,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">问题排查</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="startup.html">启动</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3d_view.html">3D视图</a></li>
@@ -115,7 +135,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#pythonpath">Python路径</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#precompiled-libraries">预编译库</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#platform-specific">平台特定</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#ms-windows">MS-Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windows">Windows</a></li>
 </ul>
 </li>
 </ul>
@@ -198,7 +218,7 @@
 <h1>Python错误<a class="headerlink" href="#python-errors" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="pythonpath">
 <h2>Python路径<a class="headerlink" href="#pythonpath" title="Permalink to this headline">¶</a></h2>
-<p>如果 &quot;PYTHONPATH&quot; 设置不正确, Blender 将无法加载。</p>
+<p>如果 <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> 设置不正确, Blender 将无法加载。</p>
 <p>这对于想要使用自己的Python安装的Python开发人员非常有用，但是，如果设置为不兼容的Python版本，它将完全阻止Blender打开。</p>
 <p>要查看这是否是错误的原因，请暂时取消设置环境变量并重新加载Blender。</p>
 <p>有关详细信息, 请参阅 <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH">Python 文档</a> 。</p>
@@ -207,22 +227,22 @@
 <h2>预编译库<a class="headerlink" href="#precompiled-libraries" title="Permalink to this headline">¶</a></h2>
 <p>虽然不是很常见的做法，但是Python插件可以使用他们自己的预编译库进行分发。与常规Python脚本不同，这些脚本在不同平台之间不可移植。</p>
 <p>该库可能与您的Blender安装不兼容（尝试加载为不同版本的Python构建的库，或在64位系统上加载32位库）。</p>
-<p>如果附加组件包含 “.pyd” 或 “.so” 文件，请检查该分发版本是否与您的操作系统兼容。</p>
+<p>如果附加组件包含 <code class="docutils literal notranslate"><span class="pre">.pyd</span></code> 或 <code class="docutils literal notranslate"><span class="pre">.so</span></code> 文件, 请检查该分发版本是否与您的操作系统兼容。</p>
 </div>
 <div class="section" id="platform-specific">
 <h2>平台特定<a class="headerlink" href="#platform-specific" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="ms-windows">
-<h3>MS-Windows<a class="headerlink" href="#ms-windows" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="mixed-python-libraries-dll-s">
 <h4>混合的Python库（DLL）<a class="headerlink" href="#mixed-python-libraries-dll-s" title="Permalink to this headline">¶</a></h4>
 <p>如果Python发生错误，或者您的附加组件在启用错误时失败，例如: <code class="docutils literal notranslate"><span class="pre">...</span> <span class="pre">不是有效的Win32应用程序</span></code> 。</p>
-<div class="figure align-center" id="id1">
+<div class="figure" id="id1">
 <img alt="../_images/troubleshooting_python_traceback.png" src="../_images/troubleshooting_python_traceback.png" />
-<p class="caption"><span class="caption-text">Python traceback模块 。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Python traceback模块 。</span></p>
 </div>
 <p>这可能是由于 Python 库中的某些不一致造成的。虽然Blender附带了自己捆绑的 Python 解释器, 但重复的、不兼容的库可能会导致问题。</p>
 <p>要找出哪个Python库导致问题，请检查错误消息。</p>
-<p>他的报告通常在 traceback的底部行附近。有了上面的错误，你会发现问题是在尝试导入  <cite>_socket</cite> 时引起的。这对应于名为 “_socket.py” 或 “_socket.pyd” 的文件。</p>
+<p>他的报告通常在 traceback的底部行附近。有了上面的错误，你会发现问题是在尝试导入  <code class="docutils literal notranslate"><span class="pre">_socket</span></code> 时引起的。这对应于名为 <code class="docutils literal notranslate"><span class="pre">_socket.py</span></code> 或 <code class="docutils literal notranslate"><span class="pre">_socket.pyd</span></code> 的文件。</p>
 <p>为了帮助解决这个问题，可以将以下脚本粘贴到文本编辑器中并运行以检查搜索路径中的重复库。 （输出将显示在 <a class="reference internal" href="../advanced/command_line/introduction.html"><span class="doc">Command Line Window</span></a> 中）。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">sys</span>

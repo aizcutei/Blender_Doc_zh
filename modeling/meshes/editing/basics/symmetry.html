@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/editing/basics/symmetry.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/basics/symmetry.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="顶点工具" href="../vertices.html" />
@@ -94,14 +113,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l4 current"><a class="reference internal" href="index.html">基础</a></li>
@@ -109,6 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../edges.html">边工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../faces.html">面工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../uv/index.html">UV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../transform/index.html">变形</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../duplicating/index.html">复制</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">细分</a></li>
@@ -119,7 +140,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../mesh_display.html">网格显示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
 </ul>
 </li>
@@ -131,16 +151,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -223,45 +244,47 @@
 <div class="section" id="snap-to-symmetry">
 <h2>吸附到对称结构<a class="headerlink" href="#snap-to-symmetry" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 吸附到对称结构</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 吸附到对称结构</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>The Snap to Symmetry tool lets you snap a mesh vertices to their mirrored neighbors.</p>
 <p>Useful when dealing with meshes which are mostly symmetrical,
 but have vertices which have been moved enough that Blender
 does not detect them as mirrored (when X Mirror option is enabled for example).</p>
 <p>这可能是在未开启X向镜像时无意导致的。有时候，从其他软件导入的模型，在不够对称时，也会导致镜像失败。</p>
-<dl class="simple">
-<dt>方向</dt><dd><p>指定吸附的轴和方向。可以选择三个轴向之一，正向到负向，或负向到正向。</p>
-</dd>
-<dt>阈值</dt><dd><p>指定查找配对顶点时的搜索半径。</p>
-</dd>
-<dt>系数</dt><dd><p>支持从镜像位置到目标位置的混合(0.5表示等比例混合)。</p>
-</dd>
-<dt>中心</dt><dd><p>吸附中心轴附近的顶点至轴心。</p>
-</dd>
+<dl class="docutils">
+<dt>方向</dt>
+<dd>指定吸附的轴和方向。可以选择三个轴向之一，正向到负向，或负向到正向。</dd>
+<dt>阈值</dt>
+<dd>指定查找配对顶点时的搜索半径。</dd>
+<dt>系数</dt>
+<dd>支持从镜像位置到目标位置的混合(0.5表示等比例混合)。</dd>
+<dt>中心</dt>
+<dd>吸附中心轴附近的顶点至轴心。</dd>
 </dl>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_basics_symmetry_snap-to-symmetry-before.png"><img alt="../../../../_images/modeling_meshes_editing_basics_symmetry_snap-to-symmetry-before.png" src="../../../../_images/modeling_meshes_editing_basics_symmetry_snap-to-symmetry-before.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">吸附到对称结构前。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">吸附到对称结构前。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id2">
+<td><div class="first last figure" id="id2">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_basics_symmetry_snap-to-symmetry-after.png"><img alt="../../../../_images/modeling_meshes_editing_basics_symmetry_snap-to-symmetry-after.png" src="../../../../_images/modeling_meshes_editing_basics_symmetry_snap-to-symmetry-after.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">吸附到对称结构后。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">吸附到对称结构后。</span></p>
 </div>
 </td>
 </tr>
@@ -271,45 +294,47 @@ does not detect them as mirrored (when X Mirror option is enabled for example).<
 <div class="section" id="symmetrize">
 <h2>对称<a class="headerlink" href="#symmetrize" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 对称</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 对称</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p><em>对称</em> 工具是一种使网格快速对称化的方法。 <em>对称</em> 通过在物体的轴心点切开物体，然后沿指定轴向对几何体进行镜像，然后合并两半(如果是相连的)。同时其他网格数据(比如UV，顶点色、顶点权重)也从一侧复制到另一侧。</p>
-<dl class="simple">
-<dt>方向</dt><dd><p>指定作用的轴和方向。可以选择三个轴向之一，正向到负向，或负向到正向。</p>
-</dd>
-<dt>阈值</dt><dd><p>位于该范围内的顶点会被吸附至对称的平面。</p>
-</dd>
+<dl class="docutils">
+<dt>方向</dt>
+<dd>指定作用的轴和方向。可以选择三个轴向之一，正向到负向，或负向到正向。</dd>
+<dt>阈值</dt>
+<dd>位于该范围内的顶点会被吸附至对称的平面。</dd>
 </dl>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id3">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id3">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_basics_symmetry_symmetrize1.png"><img alt="../../../../_images/modeling_meshes_editing_basics_symmetry_symmetrize1.png" src="../../../../_images/modeling_meshes_editing_basics_symmetry_symmetrize1.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">对称前网格。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">对称前网格。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id4">
+<td><div class="first last figure" id="id4">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_basics_symmetry_symmetrize2.png"><img alt="../../../../_images/modeling_meshes_editing_basics_symmetry_symmetrize2.png" src="../../../../_images/modeling_meshes_editing_basics_symmetry_symmetrize2.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">对称后网格。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">对称后网格。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>关于镜像的更多信息请访问 <a class="reference internal" href="../transform/mirror.html"><span class="doc">镜像</span></a> 页面，该工具用于沿对称轴翻转几何体。</p>
+<p class="first admonition-title">See also</p>
+<p class="last">关于镜像的更多信息请访问 <a class="reference internal" href="../transform/mirror.html"><span class="doc">镜像</span></a> 页面，该工具用于沿对称轴翻转几何体。</p>
 </div>
 </div>
 </div>

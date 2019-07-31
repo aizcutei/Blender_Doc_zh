@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/editing/transform/warp.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/transform/warp.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="弯曲" href="bend.html" />
@@ -94,14 +113,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/index.html">基础</a></li>
@@ -109,6 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../edges.html">边工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../faces.html">面工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../uv/index.html">UV</a></li>
 <li class="toctree-l4 current"><a class="reference internal" href="index.html">变形</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../duplicating/index.html">复制</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">细分</a></li>
@@ -119,7 +140,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../mesh_display.html">网格显示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
 </ul>
 </li>
@@ -131,16 +151,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -221,134 +242,135 @@
   <div class="section" id="warp">
 <h1>弯绕<a class="headerlink" href="#warp" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>物体和编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">物体/网格/曲线/曲面 ‣ 变换 ‣ 弯绕</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体和编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">物体/网格/曲线/曲面 ‣ 变换 ‣ 弯绕</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="figure align-right" id="id1">
 <img alt="../../../../_images/modeling_meshes_editing_transform_warp_operator-panel.png" src="../../../../_images/modeling_meshes_editing_transform_warp_operator-panel.png" />
-<p class="caption"><span class="caption-text">弯绕工具选项。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">弯绕工具选项。</span></p>
 </div>
 <p>在 <em>编辑模式</em> 下，<em>弯绕</em> 变换接受选中元素，绕3D游标将选中元素弯曲特定角度。注意该变换的结果总是取决于3D游标的位置，轴心点对其没有影响。 <em>弯绕</em> 变换的结果还取决于视图方向。</p>
 <p>在 <em>物体模式</em> ， <em>弯绕</em> 变换接受选中物体，使其绕3D游标做类似轨道的运动。与 <em>编辑模式</em> 类似，轴心点对其没有影响，变换结果取决于视图方向。</p>
 <div class="section" id="usage">
 <h2>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-center" id="d">
+<table border="1" class="docutils" id="d">
 <caption><span class="caption-text">在这个例子里，将平面绕3D游标弯绕，角度如数字标示。</span><a class="headerlink" href="#d" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id2">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id2">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_warp_mesh.png"><img alt="../../../../_images/modeling_meshes_editing_transform_warp_mesh.png" src="../../../../_images/modeling_meshes_editing_transform_warp_mesh.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">弯绕前。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">弯绕前。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id3">
+<td><div class="first last figure" id="id3">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_warp_mesh-90.png"><img alt="../../../../_images/modeling_meshes_editing_transform_warp_mesh-90.png" src="../../../../_images/modeling_meshes_editing_transform_warp_mesh-90.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">弯绕90度。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">弯绕90度。</span></p>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><div class="figure align-center" id="id4">
+<tr class="row-even"><td><div class="first last figure" id="id4">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_warp_mesh-180.png"><img alt="../../../../_images/modeling_meshes_editing_transform_warp_mesh-180.png" src="../../../../_images/modeling_meshes_editing_transform_warp_mesh-180.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">弯绕180度。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">弯绕180度。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id5">
+<td><div class="first last figure" id="id5">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_warp_mesh-360.png"><img alt="../../../../_images/modeling_meshes_editing_transform_warp_mesh-360.png" src="../../../../_images/modeling_meshes_editing_transform_warp_mesh-360.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">弯绕360度。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">弯绕360度。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
-<p>选择需要操作的元素，然后激活 <em>弯绕</em> 变换工具。通过 <span class="menuselection">物体/网格/曲线/曲面 ‣ 变换 ‣ 弯绕</span> 菜单调用 <em>弯绕</em> 工具。通过移动鼠标或输入数值，交互式控制弯曲程度。按下 <kbd class="kbd docutils literal notranslate">Return</kbd> 确认变换。确认变换后，如未进行其他操作，可以通过按下 <kbd class="kbd docutils literal notranslate">F6</kbd> 或进入工具栏，调整角度滑块做进一步编辑。</p>
 <div class="section" id="cursor-position-and-view">
 <h3>游标位置与视图<a class="headerlink" href="#cursor-position-and-view" title="Permalink to this headline">¶</a></h3>
 <p>可以使用3D游标的位置来改变 <em>弯绕</em> 变换的结果。就像下面的例子中看到的一样，<em>弯绕</em> 半径取决于游标到选中元素的距离。距离越远，半径越大。</p>
 <p><em>弯绕</em> 变换的结果还受当前视图影响。下面在例子展示了在不同视图方位下对同一个平面网格做 <em>弯绕</em> 变换的结果。</p>
-<table class="docutils align-center" id="id6">
+<table border="1" class="docutils" id="id6">
 <caption><span class="caption-text">上图展示了游标位置对弯绕变换的影响。</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id7">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id7">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_warp_mesh.png"><img alt="../../../../_images/modeling_meshes_editing_transform_warp_mesh.png" src="../../../../_images/modeling_meshes_editing_transform_warp_mesh.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">弯绕前。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">弯绕前。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id8">
+<td><div class="first last figure" id="id8">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_warp_mesh-180.png"><img alt="../../../../_images/modeling_meshes_editing_transform_warp_mesh-180.png" src="../../../../_images/modeling_meshes_editing_transform_warp_mesh-180.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">弯绕180度。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">弯绕180度。</span></p>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><div class="figure align-center" id="id9">
+<tr class="row-even"><td><div class="first last figure" id="id9">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_warp_mesh-cursor.png"><img alt="../../../../_images/modeling_meshes_editing_transform_warp_mesh-cursor.png" src="../../../../_images/modeling_meshes_editing_transform_warp_mesh-cursor.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">弯绕前。</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">弯绕前。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id10">
+<td><div class="first last figure" id="id10">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_warp_mesh-cursor-180.png"><img alt="../../../../_images/modeling_meshes_editing_transform_warp_mesh-cursor-180.png" src="../../../../_images/modeling_meshes_editing_transform_warp_mesh-cursor-180.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">弯绕180度。</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">弯绕180度。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
-<table class="docutils align-center" id="id11">
+<table border="1" class="docutils" id="id11">
 <caption><span class="caption-text">上图展示了当前视图方位的影响。</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id12">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id12">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_warp_view-1.png"><img alt="../../../../_images/modeling_meshes_editing_transform_warp_view-1.png" src="../../../../_images/modeling_meshes_editing_transform_warp_view-1.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">弯绕前。</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">弯绕前。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id13">
+<td><div class="first last figure" id="id13">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_warp_view-2.png"><img alt="../../../../_images/modeling_meshes_editing_transform_warp_view-2.png" src="../../../../_images/modeling_meshes_editing_transform_warp_view-2.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">在X-Z视图弯绕180度。</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">在X-Z视图弯绕180度。</span></p>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><div class="figure align-center" id="id14">
+<tr class="row-even"><td><div class="first last figure" id="id14">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_warp_view-3.png"><img alt="../../../../_images/modeling_meshes_editing_transform_warp_view-3.png" src="../../../../_images/modeling_meshes_editing_transform_warp_view-3.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">在Y-Z视图弯绕180度。</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">在Y-Z视图弯绕180度。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id15">
+<td><div class="first last figure" id="id15">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_warp_view-4.png"><img alt="../../../../_images/modeling_meshes_editing_transform_warp_view-4.png" src="../../../../_images/modeling_meshes_editing_transform_warp_view-4.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">在用户视图弯绕180度。</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">在用户视图弯绕180度。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="first admonition-title">Note</p>
 <p>弯绕文字</p>
-<p>如果要弯绕文字，你需要先使用 <a class="reference internal" href="../../../../editors/3dview/object/editing/introduction.html#object-convert-to"><span class="std std-ref">转换为</span></a> 将其从文本物体转换为网格。</p>
+<p class="last">如果要弯绕文字，你需要先使用 <a class="reference internal" href="../../../../scene_layout/object/editing/introduction.html#object-convert-to"><span class="std std-ref">转换为</span></a> 将其从文本物体转换为网格。</p>
 </div>
 </div>
 </div>
 <div class="section" id="example">
 <h2>范例<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id16">
+<div class="figure" id="id16">
 <img alt="../../../../_images/modeling_meshes_editing_transform_warp_text.jpg" src="../../../../_images/modeling_meshes_editing_transform_warp_text.jpg" />
-<p class="caption"><span class="caption-text">绕logo弯绕的文字。</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">绕logo弯绕的文字。</span></p>
 </div>
 <p>上面的例子是先分别创建Blender logo和文字物体，将文字转换为网格，再绕Blender logo弯绕变换得到的。</p>
 </div>

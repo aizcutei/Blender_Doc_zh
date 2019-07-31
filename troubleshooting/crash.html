@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devtroubleshooting/crash.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/troubleshooting/crash.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Python错误" href="python.html" />
@@ -94,18 +113,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">问题排查</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="startup.html">启动</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3d_view.html">3D视图</a></li>
@@ -193,26 +213,26 @@
 <h1>崩溃<a class="headerlink" href="#crashes" title="Permalink to this headline">¶</a></h1>
 <p>引起Blender崩溃的最常见原因:</p>
 <ul class="simple">
-<li><p>运行内存不足。</p></li>
-<li><p>图形硬件或驱动程序的问题。</p></li>
-<li><p>Blender里的bug。</p></li>
+<li>运行内存不足。</li>
+<li>图形硬件或驱动程序的问题。</li>
+<li>Blender里的bug。</li>
 </ul>
-<p>首先，你可以通过 <span class="menuselection">文件 ‣ 恢复最近的一次工程</span> 来恢复你的工作。</p>
+<p>首先，你可以通过 <span class="menuselection">文件 ‣ 恢复 ‣ 自动保存...</span> 来恢复你的工作。</p>
 <p>要防止问题再次发生，您可以检查显卡驱动程序是最新版本，你已经升级了你的计算机硬件 （RAM 或图形卡），并禁用需要消耗大量内存的某些选项：</p>
 <ul class="simple">
-<li><p>减少撤消步骤 <span class="menuselection">用户设置 - &gt;编辑 - &gt;撤消步骤</span> 。</p></li>
-<li><p>使用多重采样，抗锯齿都会增加内存的使用量，也使显示变慢。</p></li>
-<li><p>在Linux上，窗口管理器(KDE，Gnome，Unity)可能会使用硬件加速效果(比如，窗口阴影和透明)这些也会占用掉很多原本Blender需要的内存。试着关闭这些桌面特效或者切换成轻量级的窗口管理器。</p></li>
+<li>减少撤消次数 <span class="menuselection">设置 ‣ 系统 ‣ 内存 &amp; 限额 ‣ 撤销次数</span>。</li>
+<li>使用多重采样抗锯齿也会增加内存使用量并使显示速度变慢。</li>
+<li>在Linux上，窗口管理器(KDE，Gnome，Unity)可能会使用硬件加速效果(比如，窗口阴影和透明)这些也会占用掉很多原本Blender需要的内存。试着关闭这些桌面特效或者切换成轻量级的窗口管理器。</li>
 </ul>
 <div class="section" id="crash-log">
 <h2>崩溃日志<a class="headerlink" href="#crash-log" title="Permalink to this headline">¶</a></h2>
 <p>当Blender崩溃时，它会写入到一个文本文件，其中包含可能有助于识别崩溃原因的信息。</p>
-<p>在崩溃时，根据当前加载的 blend文件的名称编写文件，因此“test.blend”会创建一个名为“test.crash.txt”的文件。未保存文件的崩溃日志将被写入 <a class="reference internal" href="../getting_started/installing/configuration/directories.html#temp-dir"><span class="std std-ref">临时目录</span></a> 目录。</p>
+<p>在崩溃时，根据当前加载的 blend文件的名称编写文件，因此“test.blend”会创建一个名为“test.crash.txt”的文件。未保存文件的崩溃日志将被写入 <a class="reference internal" href="../advanced/blender_directory_layout.html#temp-dir"><span class="std std-ref">临时目录</span></a> 目录。</p>
 <p>该文件包含崩溃前使用的工具日志以及其他一些调试信息。</p>
 <p>在报告崩溃错误时，将此文件附加到报告可能会有所帮助，特别是在其他人无法重现崩溃情况时。</p>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>这是当前禁用的 MS 窗口。</p>
+<p class="first admonition-title">Warning</p>
+<p class="last">目前，Windows已禁用此功能.。</p>
 </div>
 </div>
 </div>

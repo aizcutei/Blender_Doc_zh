@@ -1,0 +1,465 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>副本 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/scene_layout/object/editing/duplication.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="属性" href="../properties/index.html" />
+    <link rel="prev" title="清除 &amp; 应用" href="transform/clear_apply.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">场景 &amp; 物体</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../scene/index.html">场景</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">物体</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types.html">物体类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../origin.html">物体原点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting.html">选择</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transform/index.html">变换</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">副本</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolbar/index.html">工具栏</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../collections/index.html">集合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../view_layers/index.html">视图层</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">场景 &amp; 物体</a> &raquo;</li>
+        
+          <li><a href="../index.html">物体</a> &raquo;</li>
+        
+          <li><a href="index.html">编辑</a> &raquo;</li>
+        
+      <li>副本</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/scene_layout/object/editing/duplication.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="duplication">
+<h1>副本<a class="headerlink" href="#duplication" title="Permalink to this headline">¶</a></h1>
+<p>有两种类型的物体复制操作，<a class="reference internal" href="#duplicate">复制</a> 以及引用物体数据的 <a class="reference internal" href="#linked-duplicates">关联复制</a>。</p>
+<div class="section" id="duplicate">
+<span id="bpy-ops-object-duplicate-move"></span><h2>复制<a class="headerlink" href="#duplicate" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑和物体模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">物体‣复制物体</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Shift-D</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>这将创建与所选物体的外观一致的副本。此副本将在与原始物体相同的位置创建并自动进入 <em>拖拽</em> 模式。见下文示例。</p>
+<p>该副本是一个新物体，与原始物体共享一些(默认为，所有材质，纹理和函数曲线)数据块，但是其他数据块是复制的，例如，网格。这就是为什么这种复制形式有时被称为“浅关联”，因为并不是所有的数据块都是共享的; 其中一些是“硬拷贝”！</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">可以在 <a class="reference internal" href="../../../editors/preferences/editing.html#prefs-editing-duplicate-data"><span class="std std-ref">用户设置</span></a>，选择复制操作时关联或复制哪些类型的数据块。</p>
+</div>
+<div class="section" id="examples">
+<h3>范例<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id2">
+<img alt="../../../_images/scene-layout_object_editing_duplication_example.png" src="../../../_images/scene-layout_object_editing_duplication_example.png" />
+<p class="caption"><span class="caption-text">复制立方体。</span></p>
+</div>
+<p>使用 <kbd class="kbd docutils literal notranslate">Shift-D</kbd> ，复制物体 <code class="docutils literal notranslate"><span class="pre">Cube</span></code>。两个cube有不同的名称: <code class="docutils literal notranslate"><span class="pre">Cube</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Cube.001</span></code>，网格也是分开的。</p>
+<ul class="simple">
+<li>左侧的立方体处于编辑状态，右侧的立方体副本保持不变。网格数据已经被复制，而非关联。</li>
+<li>同样，如果在物体模式下编辑了其中一个立方体，另一个将保持不变。新物体的变换属性或数据块是新的副本，而非关联。</li>
+<li>复制出右侧立方体后，它继承了原始立方体的材质。材质属性保持关联，而非复制。</li>
+</ul>
+<p>如果要单独复制通常关联数据块，请参见上文。</p>
+</div>
+</div>
+<div class="section" id="linked-duplicates">
+<span id="bpy-ops-object-duplicate-move-linked"></span><h2>关联复制<a class="headerlink" href="#linked-duplicates" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">顶栏 ‣ 工具‣ 编辑‣ 关联复制</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">物体‣ 关联复制</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Alt-D</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>用户还可以选择 <em>关联复制</em> 而不是 <em>复制</em> ; 这被称为深度关联。这将创建一个新物体，其 <strong>所有</strong> 数据都关联到原始物体上。如果在 <em>编辑模式</em> 下修改其中一个关联的物体，则所有关联的副本都将被修改。变换属性（对象数据块）仍为副本，而非关联，因此仍可以随意旋转，缩放，和移动且不会影响其他副本。深入讨论参考下文 <a class="reference internal" href="#expl-object-link-duplicate"><span class="std std-ref">复制范例</span></a>。</p>
+<dl class="docutils">
+<dt>已关联</dt>
+<dd>在 <em>复制物体</em> <a class="reference internal" href="../../../interface/undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> 操作面板中与 <em>复制</em> 不同的是 <em>关联</em> 复选框已经勾选。</dd>
+</dl>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">如果要单独修改新关联的副本物体，必须用 <kbd class="kbd docutils literal notranslate">LMB</kbd> 单击“属性”编辑器的 <em>物体数据</em> 面板中的编号，手动将对象转换为“独立化”副本。 (见 <a class="reference internal" href="../../../interface/controls/templates/data_block.html#ui-data-block"><span class="std std-ref">数据块菜单</span></a>.)</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#make-single-user">使其独立化</a> 用于取消关联数据块。</p>
+</div>
+<div class="section" id="expl-object-link-duplicate">
+<span id="id1"></span><h3>范例<a class="headerlink" href="#expl-object-link-duplicate" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id3">
+<img alt="../../../_images/scene-layout_object_editing_duplication_linked-example.png" src="../../../_images/scene-layout_object_editing_duplication_linked-example.png" />
+<p class="caption"><span class="caption-text">关联复制立方体。</span></p>
+</div>
+<p>使用 <kbd class="kbd docutils literal notranslate">Alt-D</kbd> 关联复制物体 <code class="docutils literal notranslate"><span class="pre">Cube</span></code>。尽管两个立方体有不同的名称: <code class="docutils literal notranslate"><span class="pre">Cube</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Cube.001</span></code>，但是它们共用同一个名为 <code class="docutils literal notranslate"><span class="pre">Cube</span></code> 的网格。</p>
+<ul class="simple">
+<li>在 <em>编辑模式</em> 中编辑一个物体的网格，另一个   立方体也将发生相同变化。网格数据是关联的，而非复制。</li>
+<li>相反，如果在物体模式下旋转或重新缩放其中一个立方体，另一个将保持不变。变换属性是复制的，而非关联。</li>
+<li>与前面的例子一样，新创建的立方体继承了原始立方体的材质。材质属性是关联的，而非复制。</li>
+</ul>
+<p>一个普通的桌子有一个顶部和四条腿。对一条对进行建模，然后关联复制出另外三条腿。如果今后修改网格，所有的桌腿仍然是一样的。关联复制也适用于一套酒杯，汽车上的车轮...任何有重复或对称性的情形。</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>关联库复制</p>
+<p class="last"><a class="reference internal" href="../../../files/linked_libraries.html"><span class="doc">关联库</span></a> 也是一种复制的形式。任何其他blend文件中的物体或数据块可以在当前文件中重复使用。</p>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">如果要将变换属性 (即对象数据块) 为&quot;关联&quot;, 请参阅 <a class="reference internal" href="../properties/relations/parents.html"><span class="doc">父级</span></a> 页面.</p>
+</div>
+</div>
+</div>
+<div class="section" id="make-single-user">
+<span id="bpy-ops-object-make-single-user"></span><h2>使其独立化<a class="headerlink" href="#make-single-user" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">物体 ‣ 关系 ‣ 使其独立化</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>使已选或所有的物体数据块独立化，意味着，在blend文件中不再共享（关联）其它物体的数据块。</p>
+<p>另外，它也可以使物体的依赖产生独立副本，例如网格，曲线，材质，动画...</p>
+<dl class="docutils">
+<dt>类型</dt>
+<dd><p class="first">这些操作适用于所选物体，或者场景中的全部物体。</p>
+<p class="last">全部，所选物体</p>
+</dd>
+<dt>数据块</dt>
+<dd><p class="first">使用户，在除了菜单预设的选项外，能单独地选择数据块的类型。</p>
+<p class="last">物体，物体数据，材质，纹理，物体动画</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../../files/data_blocks.html#data-system-datablock-make-single-user"><span class="std std-ref">Making Single User</span></a> 用于取消关联数据块</p>
+</div>
+</div>
+<div class="section" id="make-link">
+<span id="bpy-ops-object-make-links"></span><span id="data-system-linked-libraries-make-link"></span><h2>产生关联<a class="headerlink" href="#make-link" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">物体 ‣ 产生关联项...</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-L</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>在不同场景或数据块中将所活动物体与选物体进行关联。在某些情况下 (例如物体数据，修改器) 目标物体必须类型相同而不是与活动项或有能力接受数据。如果目标早已关联了一些数据，它将先取消关联再继续。</p>
+<dl class="docutils">
+<dt>物体到场景</dt>
+<dd><p class="first">关联所选物体到另一个不同场景而不是当前场景。 <em>关联物体到场景</em> 在 <a class="reference internal" href="../../../interface/undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> 面板中可以让用户选择场景之间。</p>
+<p class="last">这将使得同样的物体同时存在于多个不同的场景中，包括物体的位置和动画数据。物体的原点会因此改变颜色。</p>
+</dd>
+<dt>类型</dt>
+<dd><p class="first">数据块的关联类型。</p>
+<p>物体数据，材质，动画数据，集合，实例化集合，修改器，字体</p>
+<dl class="last docutils">
+<dt>传递UV贴图</dt>
+<dd>已选物体的活动UV贴图将被另一个活动物体的活动UV贴图副本所替代。</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../../files/data_blocks.html#data-system-datablock-make-single-user"><span class="std std-ref">Making Single User</span></a> 用于取消关联数据块。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../properties/index.html" class="btn btn-neutral float-right" title="属性" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="transform/clear_apply.html" class="btn btn-neutral float-left" title="清除 &amp; 应用" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

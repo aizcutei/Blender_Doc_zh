@@ -1,0 +1,413 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Texture Paint Tools &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/sculpt_paint/texture_paint/tools.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tool Settings" href="tool_settings/index.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">雕刻 &amp; 绘制</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brush/index.html">笔刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../navigation.html">Navigation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#modes">模式</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../sculpting/index.html">雕刻</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">纹理绘制</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Texture Paint Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tool_settings/index.html">Tool Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../vertex_paint/index.html">顶点绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../weight_paint/index.html">权重绘制</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">雕刻 &amp; 绘制</a> &raquo;</li>
+        
+          <li><a href="index.html">纹理绘制</a> &raquo;</li>
+        
+      <li>Texture Paint Tools</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/sculpt_paint/texture_paint/tools.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="texture-paint-tools">
+<h1>Texture Paint Tools<a class="headerlink" href="#texture-paint-tools" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>Draw</dt>
+<dd><p class="first">The normal brush, paints a swath of color.</p>
+<dl class="last docutils">
+<dt>使用渐变色</dt>
+<dd><p class="first">使用渐变色作为颜色来源。</p>
+<dl class="last docutils">
+<dt>渐变颜色</dt>
+<dd><a class="reference internal" href="../../interface/controls/templates/color_ramp.html#ui-color-ramp-widget"><span class="std std-ref">颜色渐变部件</span></a> 用于定义渐变色。</dd>
+<dt>模式</dt>
+<dd><dl class="first last docutils">
+<dt>压感</dt>
+<dd>将根据手写笔压力从色带中选择一种渐变色。</dd>
+<dt>钳制</dt>
+<dd>将根据笔刷指定的距离自动改变颜色。通过 <em>渐变间距</em>。使用钳制，它将使用指定的颜色带的最后一种颜色。</dd>
+<dt>重复</dt>
+<dd>类似于 <em>钳制</em> 。在最后一种颜色之后，将颜色重置为颜色带中的第一种颜色并重复该模式。</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>Soften(柔化)</dt>
+<dd><p class="first">使用 <em>模糊效果</em> 来柔化或锐化图像。</p>
+<dl class="last docutils">
+<dt>方向</dt>
+<dd><dl class="first last docutils">
+<dt>Soften(柔化)</dt>
+<dd><p class="first">用于绘制模糊效果。</p>
+<dl class="last docutils">
+<dt>核心半径(仅适用于二维)</dt>
+<dd>笔刷半径，单位为像素。</dd>
+</dl>
+</dd>
+<dt>锐化</dt>
+<dd><p class="first">锐化工具可增强图像的对比度。</p>
+<dl class="last docutils">
+<dt>锐化阈值</dt>
+<dd>阈值只对那些与周围像素值不同的像素进行锐化处理。</dd>
+<dt>核心半径(仅适用于二维)</dt>
+<dd>在计算模糊效果时，核心大小控制在计算差异时工具查找的区域大小。</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>模糊模式</dt>
+<dd><p class="first">在计算模糊效果时，模糊内核类型控制相邻像素如何进行加权。</p>
+<dl class="last docutils">
+<dt>高斯</dt>
+<dd>靠近笔刷中心的像素采样最多。</dd>
+<dt>方框</dt>
+<dd>将所有周围像素均匀地采样。</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>Smear</dt>
+<dd>当你点击鼠标时将光标下面的颜色与你移动鼠标方向的颜色相混合。类似于 <em>GIMP</em> 的“涂抹”工具。</dd>
+<dt>Clone(克隆)</dt>
+<dd><p class="first">从指定的图像(或同一图像的区域)复制色彩到活动图像。</p>
+<p>在三维投射绘制中，可使用 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 定位克隆游标。在二维绘制中，可以 <kbd class="kbd docutils literal notranslate">RMB</kbd> 拖动来移动克隆。</p>
+<dl class="last docutils">
+<dt>从绘制槽克隆(仅适用于三维投射)</dt>
+<dd><p class="first">使用另一图像作为克隆源，而非同一图像上3D游标所在位置。</p>
+<dl class="last docutils">
+<dt>克隆源槽</dt>
+<dd>当使用克隆笔刷时，用于选择一个图像作为克隆源。</dd>
+</dl>
+</dd>
+<dt>图像(仅适用于二维)</dt>
+<dd>使用图像作为克隆源。</dd>
+<dt>Alpha (仅适用于二维)</dt>
+<dd>复制的图像显示的不透明度。</dd>
+</dl>
+</dd>
+<dt>Fill(填充)</dt>
+<dd><p class="first">用于使用笔刷颜色填充图像的大片区域。该工具会填充与点击位置像素颜色近似的邻近像素点。</p>
+<dl class="docutils">
+<dt>填充阈值(仅适用于二维)</dt>
+<dd>决定被填充的像素点需与点击位置颜色相似程度。 <em>阈值</em> 较低仅填充颜色非常近似的像素点。 <em>阈值</em> 较高则会填充更大颜色范围内的像素点。</dd>
+<dt>使用渐变色</dt>
+<dd><p class="first">使用渐变色填充图像。</p>
+<p>单击 <kbd class="kbd docutils literal notranslate">LMB</kbd> 并拖动以定义渐变线或半径(取决于 <em>渐变填充模式</em>)，即可使用 <em>Fill(填充)</em> 笔刷来应用渐变。</p>
+<dl class="last docutils">
+<dt>渐变颜色</dt>
+<dd><a class="reference internal" href="../../interface/controls/templates/color_ramp.html#ui-color-ramp-widget"><span class="std std-ref">颜色渐变部件</span></a> 用于定义渐变色。</dd>
+<dt>渐变填充模式</dt>
+<dd>线性，径向</dd>
+</dl>
+</dd>
+</dl>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p>重写</p>
+<p class="last">For projective texturing it will bypass some options for projective painting to paint the model.
+This means that occluded, backfacing and normal culled faces will always get filled,
+regardless of whether the options are activated
+in the <a class="reference internal" href="tool_settings/options.html"><span class="doc">External</span></a> panel.</p>
+</div>
+</dd>
+<dt>Mask(遮罩)</dt>
+<dd><p class="first">The mask feature maps an image to the mesh and uses the image intensity to
+mask out certain parts of the mesh out during painting.
+The mask options can be found in the <a class="reference internal" href="tool_settings/mask.html"><span class="doc">Mask panel</span></a>.
+It's only available for 3D projective painting.</p>
+<dl class="docutils">
+<dt>遮罩值</dt>
+<dd>遮罩权重，0表示没有遮蔽，1表示完全遮蔽。</dd>
+</dl>
+<div class="last admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Use the face selection mask to isolate faces.
+See <a class="reference internal" href="../brush/introduction.html#bpy-types-mesh-use-paint-mask"><span class="std std-ref">Face Selection Masking</span></a> for details.</p>
+</div>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tool_settings/index.html" class="btn btn-neutral float-right" title="Tool Settings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

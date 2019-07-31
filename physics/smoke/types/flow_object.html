@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devphysics/smoke/types/flow_object.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/smoke/types/flow_object.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="碰撞" href="collision.html" />
@@ -94,41 +113,43 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">物理</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gravity.html">重力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloth/index.html">布料模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particles/index.html">Particles System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fluid/index.html">流体模拟</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Smoke Simulation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Smoke Types</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="domain.html">烟雾场</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Smoke Flow Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="collision.html">碰撞</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../material.html">烟雾材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../baking.html">Baking Smoke Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../forces/index.html">Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collision.html">碰撞</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../baking.html">烘焙物理模拟</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#physics-types">物理类型</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../../force_fields/index.html">力场</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../collision.html">碰撞</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../cloth/index.html">布料模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../soft_body/index.html">Soft Body</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../fluid/index.html">流体模拟</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Smoke Simulation</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="index.html">Smoke Types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../material.html">烟雾材质</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../baking.html">Baking Smoke Simulations</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../rigid_body/index.html">刚体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../particles/index.html">Particles System</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -207,15 +228,17 @@
   <div class="section" id="smoke-flow-object">
 <span id="bpy-types-smokeflowsettings"></span><h1>Smoke Flow Object<a class="headerlink" href="#smoke-flow-object" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
-<p class="admonition-title">Reference</p>
-<dl class="field-list simple">
-<dt class="field-odd">Panel</dt>
-<dd class="field-odd"><p><span class="menuselection">Physics ‣ Smoke</span></p>
-</dd>
-<dt class="field-even">Type</dt>
-<dd class="field-even"><p>Flow</p>
-</dd>
-</dl>
+<p class="first admonition-title">Reference</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Panel:</th><td class="field-body"><span class="menuselection">Physics ‣ Smoke</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">Flow</td>
+</tr>
+</tbody>
+</table>
 </div>
 <p><em>Smoke Flow</em> objects are used to add or remove smoke and fire
 to a <a class="reference internal" href="domain.html"><span class="doc">Smoke Domain</span></a> object.</p>
@@ -223,132 +246,148 @@ to a <a class="reference internal" href="domain.html"><span class="doc">Smoke Do
 in <span class="menuselection">Properties ‣ Physics</span>. Then select <em>Flow</em> as the <em>Smoke Type</em>.
 Now you should have a default smoke flow source object. You can test this by playing the animation
 <kbd class="kbd docutils literal notranslate">Alt-A</kbd> from the first frame. If your source object is inside your domain, you should see smoke.</p>
-<div class="section" id="options">
-<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-right" id="id1">
-<img alt="../../../_images/physics_smoke_types_flow-object_settings.png" src="../../../_images/physics_smoke_types_flow-object_settings.png" />
-<p class="caption"><span class="caption-text">Smoke Flow options.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<div class="section" id="settings">
+<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Panel:</th><td class="field-body"><span class="menuselection">Physics ‣ Smoke ‣ Settings</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">Flow</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="flow-type">
 <h3>Flow Type<a class="headerlink" href="#flow-type" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt>Fire</dt><dd><p>Emit only fire. Note that the domain will automatically create some smoke to simulate smoke left by burnt fuel.</p>
-</dd>
-<dt>Smoke</dt><dd><p>Emit only smoke.</p>
-</dd>
-<dt>Fire + Smoke</dt><dd><p>Emit both fire and smoke.</p>
-</dd>
-<dt>Outflow</dt><dd><p>Remove smoke and fire. Note that the shape of the outflow will use the object's <a class="reference internal" href="../../../glossary/index.html#term-bounding-box"><span class="xref std std-term">bounding box</span></a>.</p>
-</dd>
+<dl class="docutils">
+<dt>Fire</dt>
+<dd>Emit only fire. Note that the domain will automatically create some smoke to simulate smoke left by burnt fuel.</dd>
+<dt>Smoke</dt>
+<dd>Emit only smoke.</dd>
+<dt>Fire + Smoke</dt>
+<dd>Emit both fire and smoke.</dd>
+<dt>Outflow</dt>
+<dd>Remove smoke and fire. Note that the shape of the outflow will use the object's <a class="reference internal" href="../../../glossary/index.html#term-bounding-box"><span class="xref std std-term">bounding box</span></a>.</dd>
 </dl>
 </div>
 <div class="section" id="flow-source">
 <h3>Flow Source<a class="headerlink" href="#flow-source" title="Permalink to this headline">¶</a></h3>
-<dl>
-<dt>Source</dt><dd><p>This setting defines the method used to emit smoke and fire.</p>
-<dl>
-<dt>Mesh</dt><dd><p>Create smoke/fire directly from the object's mesh.
+<dl class="docutils">
+<dt>Source</dt>
+<dd><p class="first">This setting defines the method used to emit smoke and fire.</p>
+<dl class="last docutils">
+<dt>Mesh</dt>
+<dd><p class="first">Create smoke/fire directly from the object's mesh.
 With this option selected there two additional settings, <em>Surface</em> and <em>Volume</em>.</p>
-<blockquote>
-<div><dl class="simple" id="smoke-flow-surface">
-<dt>Surface</dt><dd><p>Maximum distance in voxels from the surface of the mesh in which smoke is created (see <a class="reference internal" href="../../../glossary/index.html#term-voxel"><span class="xref std std-term">voxel</span></a>).
+<blockquote class="last">
+<div><dl class="docutils" id="smoke-flow-surface">
+<dt>Surface</dt>
+<dd>Maximum distance in voxels from the surface of the mesh in which smoke is created (see <a class="reference internal" href="../../../glossary/index.html#term-voxel"><span class="xref std std-term">voxel</span></a>).
 Since this setting uses voxels to determine distance,
-results will vary depending on the domain's resolution.</p>
-</dd>
-<dt>Volume</dt><dd><p>Amount of smoke to emit inside the emitter mesh, where 0 is none and 1 is
+results will vary depending on the domain's resolution.</dd>
+<dt>Volume</dt>
+<dd>Amount of smoke to emit inside the emitter mesh, where 0 is none and 1 is
 Note that emitting smoke based on volume may have unpredictable results
-if your mesh is <a class="reference internal" href="../../../glossary/index.html#term-non-manifold"><span class="xref std std-term">non-manifold</span></a>.</p>
-</dd>
+if your mesh is <a class="reference internal" href="../../../glossary/index.html#term-non-manifold"><span class="xref std std-term">non-manifold</span></a>.</dd>
 </dl>
 </div></blockquote>
 </dd>
-<dt>Particle System</dt><dd><p>Create smoke/fire from a particle system on the flow object. Note that only <em>Emitter</em> type particle systems
+<dt>Particle System</dt>
+<dd><p class="first">Create smoke/fire from a particle system on the flow object. Note that only <em>Emitter</em> type particle systems
 can add smoke.
 See <a class="reference internal" href="../../particles/introduction.html"><span class="doc">Particles</span></a> for information on how to create a particle system.</p>
 <p>With this option selected, there is a box to select a particle system and one additional setting, <em>Set Size</em>.</p>
-<blockquote>
-<div><dl>
-<dt>Set Size</dt><dd><p>When this setting is enabled, it allows the <em>Size</em> setting to define
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Set Size</dt>
+<dd><p class="first">When this setting is enabled, it allows the <em>Size</em> setting to define
 the maximum distance in voxels at which particles can emit smoke,
 similar to the <a class="reference internal" href="#smoke-flow-surface"><span class="std std-ref">*Surface*</span></a> setting for mesh sources.</p>
-<p>When disabled, particles will fill the nearest <a class="reference internal" href="../../../glossary/index.html#term-voxel"><span class="xref std std-term">voxel</span></a> with smoke.</p>
+<p class="last">When disabled, particles will fill the nearest <a class="reference internal" href="../../../glossary/index.html#term-voxel"><span class="xref std std-term">voxel</span></a> with smoke.</p>
 </dd>
 </dl>
 </div></blockquote>
 </dd>
 </dl>
 </dd>
-<dt>Initial Velocity</dt><dd><p>When enabled, smoke will inherit the momentum of the flow source.</p>
-<dl class="simple">
-<dt>Source</dt><dd><p>Multiplier for inherited velocity. A value of 1 will emit smoke moving at the same speed as the source.</p>
-</dd>
-<dt>Normal</dt><dd><p>When using a mesh source,
-this option controls how much velocity smoke is given along the source's <a class="reference internal" href="../../../glossary/index.html#term-normal"><span class="xref std std-term">normal</span></a>.</p>
-</dd>
+<dt>Initial Velocity</dt>
+<dd><p class="first">When enabled, smoke will inherit the momentum of the flow source.</p>
+<dl class="last docutils">
+<dt>Source</dt>
+<dd>Multiplier for inherited velocity. A value of 1 will emit smoke moving at the same speed as the source.</dd>
+<dt>Normal</dt>
+<dd>When using a mesh source,
+this option controls how much velocity smoke is given along the source's <a class="reference internal" href="../../../glossary/index.html#term-normal"><span class="xref std std-term">normal</span></a>.</dd>
 </dl>
 </dd>
 </dl>
 </div>
 <div class="section" id="initial-values">
 <h3>Initial Values<a class="headerlink" href="#initial-values" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt>Absolute Density</dt><dd><p>Maximum density of smoke allowed within range of the source.</p>
-</dd>
-<dt>Density</dt><dd><p>Amount of smoke to emit at once.</p>
-</dd>
+<dl class="docutils">
+<dt>Absolute Density</dt>
+<dd>Maximum density of smoke allowed within range of the source.</dd>
+<dt>Density</dt>
+<dd>Amount of smoke to emit at once.</dd>
 </dl>
-<dl id="smoke-flow-temp-diff">
-<dt>Temperature Difference</dt><dd><p>Difference between the temperature of emitted smoke and the domain's ambient temperature.
-This setting's effect on smoke depends on the domain's <a class="reference internal" href="domain.html#smoke-domain-temp-diff"><span class="std std-ref">Temperature Difference</span></a>.</p>
-</dd>
-<dt>Smoke Color</dt><dd><p>Color of emitted smoke. When smoke of different colors are mixed they will blend together,
+<dl class="docutils" id="smoke-flow-temp-diff">
+<dt>Temperature Difference</dt>
+<dd>Difference between the temperature of emitted smoke and the domain's ambient temperature.
+This setting's effect on smoke depends on the domain's <a class="reference internal" href="domain.html#smoke-domain-temp-diff"><span class="std std-ref">Temperature Difference</span></a>.</dd>
+<dt>Smoke Color</dt>
+<dd><p class="first">Color of emitted smoke. When smoke of different colors are mixed they will blend together,
 eventually settling into a new combined color.</p>
-<div class="figure align-center">
+<div class="last figure">
 <img alt="../../../_images/physics_smoke_types_flow-object_color-blending.jpg" src="../../../_images/physics_smoke_types_flow-object_color-blending.jpg" />
 </div>
 </dd>
-<dt>Flame Rate</dt><dd><p>Amount of &quot;fuel&quot; being burned per second. Larger values result in larger flames,
+<dt>Flame Rate</dt>
+<dd><p class="first">Amount of &quot;fuel&quot; being burned per second. Larger values result in larger flames,
 smaller values result in smaller flames:</p>
-<div class="figure align-center" id="id2">
+<div class="last figure" id="id1">
 <img alt="../../../_images/physics_smoke_types_flow-object_flame-rate.jpg" src="../../../_images/physics_smoke_types_flow-object_flame-rate.jpg" />
 <p class="caption"><span class="caption-text">Example showing two fire sources.
-The object on the left has a <em>Flame Rate</em> of 5, while the one on the right has 0.3.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+The object on the left has a <em>Flame Rate</em> of 5, while the one on the right has 0.3.</span></p>
 </div>
 </dd>
-<dt>Sampling: Subframes</dt><dd><p>Number of subframes used to reduce gaps in emission of smoke from fast-moving sources.</p>
-<div class="figure align-center" id="id3">
+<dt>Sampling Subframes</dt>
+<dd><p class="first">Number of subframes used to reduce gaps in emission of smoke from fast-moving sources.</p>
+<div class="last figure" id="id2">
 <img alt="../../../_images/physics_smoke_types_flow-object_subframes.jpg" src="../../../_images/physics_smoke_types_flow-object_subframes.jpg" />
 <p class="caption"><span class="caption-text">Example showing two fast-moving sources.
-The object on the left uses 0 subframes, while the one on the right uses 6.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+The object on the left uses 0 subframes, while the one on the right uses 6.</span></p>
 </div>
 </dd>
+<dt>Vertex Group</dt>
+<dd>When set, use the specified <a class="reference internal" href="../../../modeling/meshes/properties/vertex_groups/vertex_groups.html"><span class="doc">Vertex Group</span></a>
+to control where smoke is emitted.</dd>
 </dl>
 </div>
 </div>
-<div class="section" id="smoke-flow-advanced">
-<h2>Smoke Flow Advanced<a class="headerlink" href="#smoke-flow-advanced" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="texture">
+<h2>Texture<a class="headerlink" href="#texture" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">Reference</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Flow</p>
-</dd>
-<dt class="field-even">Panel</dt>
-<dd class="field-even"><p><span class="menuselection">Physics ‣ Smoke Flow Advanced</span></p>
-</dd>
-</dl>
-</div>
-<div class="figure align-right">
-<img alt="../../../_images/physics_smoke_types_flow-object_advanced.png" src="../../../_images/physics_smoke_types_flow-object_advanced.png" />
+<p class="first admonition-title">Reference</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">Flow</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Panel:</th><td class="field-body"><span class="menuselection">Physics ‣ Smoke Flow ‣ Texture</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>When using a mesh as the <em>Flow Source</em>, you can use these settings to control where on
 the mesh smoke can be emitted from. These settings have no effect on outflow objects.</p>
-<dl class="simple">
-<dt>Use Texture</dt><dd><p>When enabled, use the specified texture to control where smoke is emitted.</p>
-</dd>
-<dt>Vertex Group</dt><dd><p>When set, use the specified <a class="reference internal" href="../../../modeling/meshes/properties/vertex_groups/vertex_groups.html"><span class="doc">Vertex Group</span></a>
-to control where smoke is emitted.</p>
-</dd>
+<dl class="docutils">
+<dt>Use Texture</dt>
+<dd>When enabled, use the specified texture to control where smoke is emitted.</dd>
 </dl>
 <div class="lead docutils container">
 </div>

@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/metas/structure.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/metas/structure.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="基本体" href="primitives.html" />
-    <link rel="prev" title="简介" href="introduction.html" /> 
+    <link rel="prev" title="Toolbar" href="toolbar/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
@@ -102,6 +121,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">曲面</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">融球</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">结构</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#technical-details">技术细节</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#underlying-structure">基础结构</a></li>
@@ -117,16 +137,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -207,51 +228,70 @@
 <p>融球的更正式的定义可以作为 <em>直接结构</em> 给出, 也可以被看作是一个静场的源. 场可正可负, 因此场产生的相邻直接结构可以相吸或相斥.</p>
 <p>隐藏面被定义为由所有直接结构呈现出给定值时所生成的3D场的表面. 例如融球, 它的直接结构是点, 产生围绕它的一个各向同性(也就是各个方向都相同)的场, 而且恒场值的表面是中心在直接点的球.</p>
 <p><em>融球</em> 物体除了数学公式之外就没别的了, 一个融球可以在另一个上执行一些逻辑操作(与, 或), 还可以相加或相减. 这种方法也称为 <em>构造实体几何</em> (CSG). 因为它的数学本质, CSG占用内存很少, 但需要很多计算力.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">The Wikipedia page about <a class="reference external" href="https://en.wikipedia.org/wiki/Metaballs">metaballs</a>.</p>
+</div>
 </div>
 <div class="section" id="underlying-structure">
 <h2>基础结构<a class="headerlink" href="#underlying-structure" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">属性区域 ‣ 变换面板 ‣ 类型</span>, <span class="menuselection">融球项 ‣ 活动元素面板 ‣ 类型</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Sidebar region ‣ Transform panel ‣ Type</span>,
+<span class="menuselection">Metaball tab ‣ Active Element panel ‣ Type</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>Blender有五种融球类型, 每一种都由其基础(或直接)结构定义.</p>
-<p>在编辑模式里, 你可以改变其结构, 使用相关按钮 <span class="menuselection">融球项 ‣ 活动元素面板</span>, 或者在属性区域的变换面板里做些选择. 根据结构不同，可能有附加参数，位于 <em>变换</em> 面板和 <em>活动元素</em> 面板。</p>
-<dl>
-<dt>球(一点，零维结构)</dt><dd><p>这是最简单的融球，没有任何额外设置。因为它仅有一点，它产生的各向同性的场，张成一个球面(这是为什么它在Blender里被称为 <em>元球</em> 或 <em>球</em>)(译者注: 一点的球(one ball)=&gt;元球(meta ball)=&gt;融球(meta ball), 悲剧性的历史意译)。</p>
-</dd>
-<dt>管形(直线，一维结构)</dt><dd><p>这是一个元物体, 其表面由给定长度的直线产生的场来生成. 这给出了一个圆柱形的面，带有环形闭合的终点。它有一个附加参数:</p>
-<dl class="simple">
-<dt>dx</dt><dd><p>线的长度(因此，也是管的长度)。</p>
-</dd>
+<p>In Edit Mode, you can change this structure,
+either using the relevant buttons in the <em>Active Element</em> panel,
+or the selector in the <em>Transform</em> panel in the Sidebar region.
+Depending on the structure, you might have additional parameters,
+located in both <em>Transform</em> panel and <em>Active Element</em> panel.</p>
+<dl class="docutils">
+<dt>球(一点，零维结构)</dt>
+<dd>这是最简单的融球，没有任何额外设置。因为它仅有一点，它产生的各向同性的场，张成一个球面(这是为什么它在Blender里被称为 <em>元球</em> 或 <em>球</em>)(译者注: 一点的球(one ball)=&gt;元球(meta ball)=&gt;融球(meta ball), 悲剧性的历史意译)。</dd>
+<dt>Capsule (straight line, uni-dimensional structure)</dt>
+<dd><p class="first">这是一个元物体, 其表面由给定长度的直线产生的场来生成. 这给出了一个圆柱形的面，带有环形闭合的终点。它有一个附加参数:</p>
+<dl class="last docutils">
+<dt>Size X</dt>
+<dd>The length of the line (and hence, of the capsule).</dd>
 </dl>
 </dd>
-<dt>平面(长方形平面, 二维结构)</dt><dd><p>这是一个元物体, 其表面由一个长方形平面产生的场来生成. 这给出了一个平行六面体的面, 带有一定的厚度和环形边界. 它有两个附加参数：</p>
-<dl class="simple">
-<dt>dx,dy</dt><dd><p>矩形的长度和宽度</p>
-</dd>
+<dt>平面(长方形平面, 二维结构)</dt>
+<dd><p class="first">This is a meta which surface is generated by the field produced by a rectangular plane.
+This gives a parallelepipedal surface, with a fixed thickness,
+and rounded borders. It has two additional parameters:</p>
+<dl class="docutils">
+<dt>Size X/Y</dt>
+<dd>The length and width of the rectangle.</dd>
 </dl>
-<p>注意: 默认情况下, 矩形是正方形.</p>
+<p class="last">注意: 默认情况下, 矩形是正方形.</p>
 </dd>
-<dt>椭圆体(椭球体、三维结构)</dt><dd><p>这是一个元物体, 其表面由一个椭球体产生的场来生成. 这给出了一个椭球表面。它有三个附加参数：</p>
-<dl class="simple">
-<dt>dx,dy,dz</dt><dd><p>椭球体的长度、宽度、高度(默认设定为1.0).</p>
-</dd>
+<dt>椭圆体(椭球体、三维结构)</dt>
+<dd><p class="first">这是一个元物体, 其表面由一个椭球体产生的场来生成. 这给出了一个椭球表面。它有三个附加参数：</p>
+<dl class="docutils">
+<dt>Size X/Y/Z</dt>
+<dd>The length, width and height of the ellipsoid (defaults set to 1.0).</dd>
 </dl>
-<p>注意: 默认情况下, 物体是球, 产生一个球形的元物体, 作为 <em>球</em> 选项...</p>
+<p class="last">Note that by default, the volume is a sphere, producing a spherical meta, similar to the <em>Ball</em> option...</p>
 </dd>
-<dt>立方体(平行六面体, 三维结构)</dt><dd><p>这是一个元物体, 其表面由一个平行六面体产生的场来生成. 这给出了一个平行六面体表面, 带有圆形的边缘. 你可能已经猜到了，它有三个附加参数：</p>
-<dl class="simple">
-<dt>dx,dy,dz</dt><dd><p>平行六面体的长度、宽度、高度(默认设定为1.0).</p>
-</dd>
+<dt>立方体(平行六面体, 三维结构)</dt>
+<dd><p class="first">This is a meta which surface is generated by the field produced by a parallelepipedal volume.
+This gives a parallel-epipedal surface, with rounded edges.
+As you might have guessed, it has three additional parameters:</p>
+<dl class="docutils">
+<dt>Size X/Y/Z</dt>
+<dd>The length, width and height of the parallelepiped (defaults set to 1.0).</dd>
 </dl>
-<p>注意: 默认情况下, 它是一个正方体.</p>
+<p class="last">注意: 默认情况下, 它是一个正方体.</p>
 </dd>
 </dl>
 </div>
@@ -268,7 +308,7 @@
         <a href="primitives.html" class="btn btn-neutral float-right" title="基本体" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="toolbar/index.html" class="btn btn-neutral float-left" title="Toolbar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

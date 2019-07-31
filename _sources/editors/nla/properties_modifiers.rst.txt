@@ -6,7 +6,7 @@ Properties & Modifiers
 Properties
 ==========
 
-Strip properties can be accessed via the NLA Properties region.
+Strip properties can be accessed via the NLA Sidebar region.
 
 
 Animation Data
@@ -15,7 +15,7 @@ Animation Data
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties region --> Animations --> Animation Data`
+   :Panel:     :menuselection:`Sidebar region --> Animations --> Animation Data`
 
 .. figure:: /images/editors_nla_properties-modifiers_animation-data-panel.png
 
@@ -85,7 +85,7 @@ Active Track
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties region --> Animations --> Active Track`
+   :Panel:     :menuselection:`Sidebar region --> Animations --> Active Track`
 
 Name
    Name of the track which the strip currently belongs to.
@@ -130,7 +130,7 @@ Action Clip
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties region --> Animations --> Active Clip`
+   :Panel:     :menuselection:`Sidebar region --> Animations --> Active Clip`
 
 .. figure:: /images/editors_nla_properties-modifiers_action-clip-panel.png
 
@@ -144,8 +144,13 @@ Action
 Action Extents
    How much of the Action to use.
 
+   For instance, it is common to set the first and last keyframe of an Action to be the same keyframes.
+   The problem with this is if you loop the animation,
+   there is a slight hitch where the same keyframes are played twice.
+   To fix this, simply reduce the *End Frame* one.
+
    Note: If you select values that are above or below the actual keyframe count of the Action,
-   then the F-Curve Extrapolation will be consulted.
+   then the F-curve Extrapolation will be applied.
    Which can be changed in the Graph Editor, under :menuselection:`Channel --> Extrapolation Mode`.
 Sync Length
    Causes the "Start" and "End" Frames, above, to be reset to the first and last keyframed frames of the Action.
@@ -164,7 +169,7 @@ Evaluation
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties region --> Animations --> Evaluation`
+   :Panel:     :menuselection:`Sidebar region --> Animations --> Evaluation`
 
 .. figure:: /images/editors_nla_properties-modifiers_evaluation-panel.png
 
@@ -190,7 +195,7 @@ Modifiers
 .. admonition:: Reference
    :class: refbox
 
-   :Panel:     :menuselection:`Properties region --> Modifiers --> Modifiers`
+   :Panel:     :menuselection:`Sidebar region --> Modifiers --> Modifiers`
 
 Like its counterparts in graph and video editing,
 Modifiers can stack different combinations of effects for strips.

@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/editing/introduction.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/introduction.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="基础" href="basics/index.html" />
@@ -94,14 +113,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting.html">Selecting</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="basics/index.html">基础</a></li>
@@ -109,6 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="edges.html">边工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="faces.html">面工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="uv/index.html">UV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="transform/index.html">变形</a></li>
 <li class="toctree-l4"><a class="reference internal" href="duplicating/index.html">复制</a></li>
 <li class="toctree-l4"><a class="reference internal" href="subdividing/index.html">细分</a></li>
@@ -119,7 +140,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh_display.html">网格显示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">网格分析</a></li>
 </ul>
 </li>
@@ -131,16 +151,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -219,10 +240,18 @@
   <div class="section" id="introduction">
 <h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <p>Blender提供了各种网格编辑工具，用于添加、 复制、 移动和删除网格元素。</p>
-<p>这些工具可以通过 <em>网格工具</em> 面板，3D视图标题栏上的网格菜单，3D视图中的上下文菜单访问，还有一些可以通过独立的快捷键调用。</p>
+<p>These are available through the <em>Mesh Tools</em> panel in the Toolbar,
+the Mesh menu in the 3D View header, and context menus in the 3D View,
+as well as individual shortcut keys.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>&quot;变换精度/吸附&quot; 快捷键 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 和 <kbd class="kbd docutils literal notranslate">Shift</kbd> 同样适用于这些高级操作... 然而，它们之中的大部分都没有 <a class="reference internal" href="../../../editors/3dview/object/editing/transform/control/precision/axis_locking.html"><span class="doc">轴向锁定</span></a> 功能，并且还有一些操作不考虑 <a class="reference internal" href="../../../editors/3dview/object/editing/transform/control/pivot_point/index.html"><span class="doc">轴心</span></a> 和 <a class="reference internal" href="../../../editors/3dview/object/editing/transform/control/orientations.html"><span class="doc">变换坐标系</span></a>。</p>
+<p class="first admonition-title">Note</p>
+<p class="last">All the &quot;transform precision/snap&quot; keys <kbd class="kbd docutils literal notranslate">Ctrl</kbd> and/or <kbd class="kbd docutils literal notranslate">Shift</kbd>
+work also for all these advanced operations... However, most of them do not have
+<a class="reference internal" href="../../../scene_layout/object/editing/transform/control/axis_locking.html"><span class="doc">axis locking</span></a> possibilities,
+and some of them do not take into account
+<a class="reference internal" href="../../../scene_layout/object/editing/transform/control/pivot_point/index.html"><span class="doc">pivot point</span></a> and/or
+<a class="reference internal" href="../../../scene_layout/object/editing/transform/control/orientations.html"><span class="doc">transform orientation</span></a>
+either.</p>
 </div>
 <p>这些变换工具可以在标题栏的 <em>网格</em> 菜单中的 <em>变换</em> 子菜单中找到。注意其中一些工具还可以用在其他可编辑的物体上，如曲线，曲面和晶格。</p>
 <div class="section" id="accessing-mesh-tools">
@@ -230,15 +259,17 @@
 <p>这些网格工具可以在多个位置找到，还可以通过快捷键访问。</p>
 <div class="section" id="mesh-tools-shelf">
 <h3>网格工具栏<a class="headerlink" href="#mesh-tools-shelf" title="Permalink to this headline">¶</a></h3>
-<p>选中一个网格， <kbd class="kbd docutils literal notranslate">Tab</kbd> 进入编辑模式，并且 <em>工具栏</em> 由 <em>物体工具</em> 变成 <em>网格工具</em>。但这只是一部分网格编辑工具。</p>
+<p>When you select a mesh and <kbd class="kbd docutils literal notranslate">Tab</kbd> into edit mode,
+the <em>Toolbar</em> changes from <em>Object Tools</em> to <em>Mesh Tools</em>.
+These are only some of the mesh editing tools.</p>
 </div>
 <div class="section" id="menus">
 <h3>菜单<a class="headerlink" href="#menus" title="Permalink to this headline">¶</a></h3>
 <p><em>网格</em> 菜单位于标题栏，其中一些菜单可以通过快捷键访问:</p>
 <ul class="simple">
-<li><p><kbd class="kbd docutils literal notranslate">Ctrl-F</kbd> 调出面工具菜单</p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Ctrl-E</kbd> 调出边工具菜单</p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Ctrl-V</kbd> 调出顶点工具菜单</p></li>
+<li><kbd class="kbd docutils literal notranslate">Ctrl-F</kbd> 调出面工具菜单</li>
+<li><kbd class="kbd docutils literal notranslate">Ctrl-E</kbd> 调出边工具菜单</li>
+<li><kbd class="kbd docutils literal notranslate">Ctrl-V</kbd> 调出顶点工具菜单</li>
 </ul>
 </div>
 </div>

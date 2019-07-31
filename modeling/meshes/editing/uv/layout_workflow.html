@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>布局工作流 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/uv/layout_workflow.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="UV雕刻" href="uv_sculpt.html" />
+    <link rel="prev" title="布局" href="layout.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/index.html">基础</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vertices.html">顶点工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../edges.html">边工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../faces.html">面工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../normals.html">法向</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">UV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../transform/index.html">变形</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../duplicating/index.html">复制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">细分</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cleanup.html">清理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../misc.html">其他编辑工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../data_transfer.html">数据传递</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mesh_options.html">网格选项</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">制作模型</a> &raquo;</li>
+        
+          <li><a href="../../index.html">网格</a> &raquo;</li>
+        
+          <li><a href="../index.html">编辑</a> &raquo;</li>
+        
+          <li><a href="index.html">UV</a> &raquo;</li>
+        
+      <li>布局工作流</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/modeling/meshes/editing/uv/layout_workflow.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="layout-workflow">
+<h1>布局工作流<a class="headerlink" href="#layout-workflow" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="optimizing-the-uv-layout">
+<h2>优化UV布局<a class="headerlink" href="#optimizing-the-uv-layout" title="Permalink to this headline">¶</a></h2>
+<p>也许你用的是缝合线展开，展开完成后，UV布局可能相当杂乱无章。那么你接下来的任务就是：UV映射的排列、整理UV映射、将几个UV映射缝合到一起。</p>
+<p>下一步是在通过展开流程创建UV布局后继续创作。如果对已经展开的模型添加面或细分现有面，Blender会自动在UV映射中添加面。这种情况下，可以使用UV贴图图像指导对几何体的修改。</p>
+<p>在整理时，要记得虽然整个视图都是你的创作空间，但是只有位于栅格中的UV坐标才能映射到图像。所以整理过程中，可以将一些部分移到一旁。另外，每一组UV映射的关联坐标集合都是独立的。</p>
+<p>You can lay them on top of one another, and they will onion skin
+(the bottom one will show through the top one). To move only one though,
+<kbd class="kbd docutils literal notranslate">RMB</kbd> select one of the UV coordinates,
+and use <span class="menuselection">Select ‣ Linked UVs</span>, <kbd class="kbd docutils literal notranslate">Ctrl-L</kbd>
+to select connected UVs, not box select because UVs from both will be selected.</p>
+<div class="section" id="combining-uv-maps">
+<h3>组合UV映射<a class="headerlink" href="#combining-uv-maps" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id1">
+<img alt="../../../../_images/modeling_meshes_editing_uv_layout-workflow_combining-uv-maps-1.png" src="../../../../_images/modeling_meshes_editing_uv_layout-workflow_combining-uv-maps-1.png" />
+<p class="caption"><span class="caption-text">糟糕的展开，注意耳朵和颈部。</span></p>
+</div>
+<p>在展开物体时，常常会出现 “多数正确”但部分网格展开不当的问题，就像上面的例子。上面的图片展示了使用球面方式展开脸部的原始结果。问题出在耳朵上，它的UV变成了一坨，还有颈部，拉伸和收缩都很明显。这需要很多工夫来整理。</p>
+<div class="figure" id="id2">
+<img alt="../../../../_images/modeling_meshes_editing_uv_layout-workflow_combining-uv-maps-2.png" src="../../../../_images/modeling_meshes_editing_uv_layout-workflow_combining-uv-maps-2.png" />
+<p class="caption"><span class="caption-text">耳朵和颈部先放一边，仅展开脸部。</span></p>
+</div>
+<p>We can tell that the ear would unwrap nicely with just a straightforward projection from
+the side view, and the neck with a tubular unwrap.
+So, our general approach will be to unwrap different parts of the object (face, ears, and so on)
+using different unwrap calculations,
+selecting each calculation according to whatever works best for that piece. So let us begin:
+We select only the &quot;face&quot; faces, unwrap them using the <em>Sphere</em> calculation, and scale and
+rotate them somewhat to fit logically within the image area of the UV Editor.</p>
+<div class="figure" id="id3">
+<img alt="../../../../_images/modeling_meshes_editing_uv_layout-workflow_combining-uv-maps-3.png" src="../../../../_images/modeling_meshes_editing_uv_layout-workflow_combining-uv-maps-3.png" />
+<p class="caption"><span class="caption-text">仅展开耳朵，使用 <em>从视角投影</em>。</span></p>
+</div>
+<p>Once we are satisfied with the face, it is time to turn our attention to the ear. First, unselect
+the faces you were working with. Their UVs will disappear from the UV Editor, but they are still there,
+just not shown. (To verify this, you can select a few faces in 3D View and it will show up in the UV Editor.)</p>
+<p>要处理耳朵，先在3D视图仅选择耳朵上的面。可以使用顶点组进行选择。选择子网格也一样简单，因为它与网格的其他部分是断开的。只需要选择相连的顶点就可以选中整个子网格了。因为是在编辑模式下，基本上所有的选择/取消选择方法都可以用。</p>
+<p>现在开始从侧面使用 <em>投影</em> 算法重新展开耳朵，然后稍稍缩放和旋转(见下文)，并放置到一边。可以使用不同的UV算法重复展开；每次重新计算也只是将选中的面放到其他位置而已。选择最适合接下来的绘制且最有逻辑的布局。</p>
+<p>当所有的网格都已经使用不同算法展开后，你应该可以得到类似下图的结果。网格的所有部分都存在映射，且这些映射铺在同一张UV贴图里。恭喜你！下面只需要一些简单的 <em>缝合</em> (见下文)工作就可以组成一张完整的UV映射了。</p>
+<div class="figure" id="id4">
+<img alt="../../../../_images/modeling_meshes_editing_uv_layout-workflow_combining-uv-maps-4.png" src="../../../../_images/modeling_meshes_editing_uv_layout-workflow_combining-uv-maps-4.png" />
+<p class="caption"><span class="caption-text">整理后和缝合后的UV映射。</span></p>
+</div>
+<p>整理和缝合工作结束后，可以获得如上图一样的完整UV映射，这样一张图像就可以囊括整个网格的细节绘制了。细节的做法会在下文介绍。本段的目的在于展示最终的目标。要注意的是，上面的网格是沿Z轴镜像的，所以左侧的脸部是虚拟的；它只是右侧的副本而已，所以其实只存在一组UV。(如果要获得更加真实的效果，需要应用镜像修改器，获得真实的镜像和完整的头部。接下来可以修改一侧，使两侧获得真实的差异。展开过后可以得到一组完整的UV，绘制过后的脸部两侧也会有所不同，更加真实)。</p>
+</div>
+<div class="section" id="iteration-and-refinement">
+<h3>重复和改进<a class="headerlink" href="#iteration-and-refinement" title="Permalink to this headline">¶</a></h3>
+<p>对多数人来说，是没法做到 <em>一步到位</em> 的。这需要基于一个想法，然后不断重复创造的过程，直到抵达称之为 <em>完成</em> 的神奇的里程碑。在软件开发中，这也叫做螺旋型方法。</p>
+<p>放到计算机图形学上，我们需要反复经历建模、贴图、动画的过程，然后修改网格、重新映射UV、调整动画、添加骨骼、弄清楚还要增加几个面等等。我们需要这样循环往复，直到耗尽时间、金钱、耐心，或者在极少数的情况下得到满意的结果。</p>
+</div>
+</div>
+<div class="section" id="refining-the-layout">
+<h2>改进布局<a class="headerlink" href="#refining-the-layout" title="Permalink to this headline">¶</a></h2>
+<p>当看着我们的角色，然后意识到某个点需要更多细节的时候，改进流程就派上用场了。比如，要在眼睛周围添加一些鱼尾纹，或者在马甲上加个logo。当你开始修改图片的时候，才意识到没有足够的像素点容纳你想要的细节。</p>
+<p>你唯一的选择是扩大(放大)UV面尺寸。使用最小化拉伸或者缩放工具，放大眼睛或者胸部周围的UV面，为这些区域分配更多的像素点，但同时也拿走了其他部位的像素点(细节)，比如后脑勺。改进UV映射后，然后就可以修改图像，把你想要的细节都放进去。</p>
+<div class="section" id="reusing-textures">
+<h3>重复利用贴图<a class="headerlink" href="#reusing-textures" title="Permalink to this headline">¶</a></h3>
+<p>另外需要考虑的就是节约资源。每张图像文件都会被加载到内存里。如果可以对不同的网格重复使用同一张图像，就可以节约内存。所以，比如，可以绘制一个通用的脸部，然后用在不同的角色上，通过调整UV映射和形状以及道具(墨镜)来加以区别。</p>
+<p>你可能想要一张 “褪色的蓝色牛仔裤” 贴图，并且单独展开角色的腿部来使用这张贴图。把一张皮肤图像用在角色的手部、脚步、胳膊。腿和颈部，是再好不过的。在制作一个幻想的刀剑时，有一小张剑刃的贴图就够了，可以通过重置展开刀剑的面，对整个剑身重复利用这样贴图。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="uv_sculpt.html" class="btn btn-neutral float-right" title="UV雕刻" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="layout.html" class="btn btn-neutral float-left" title="布局" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devtroubleshooting/startup.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/troubleshooting/startup.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3D视图" href="3d_view.html" />
@@ -94,22 +113,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">问题排查</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">启动</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#blender">Blender</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#python">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#common-startup-messages">常见的启动消息</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="3d_view.html">3D视图</a></li>
@@ -194,12 +215,12 @@
 <h1>启动<a class="headerlink" href="#startup" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="blender">
 <h2>Blender<a class="headerlink" href="#blender" title="Permalink to this headline">¶</a></h2>
-<p>下面是一些使用Blender时常见的问题。如果你在这里找不到解决问题的办法，可以到 <a class="reference internal" href="../getting_started/about/community.html"><span class="doc">社区y</span></a> 去寻求帮助。</p>
+<p>下面是一些使用Blender时常见的问题。如果你在这里找不到解决问题的办法，可以到 <a class="reference internal" href="../getting_started/about/community.html"><span class="doc">社区</span></a> 去寻求帮助。</p>
 <p>如果Blender在启动时崩溃，则需要检查几件事情：</p>
 <ul class="simple">
-<li><p>看看你的电脑是否符合 <a class="reference external" href="http://www.blender.org/download/requirements/">最低要求</a> 。</p></li>
-<li><p>Confirm that your graphics card is supported and that the drivers are up to date.</p></li>
-<li><p>确保你使用的Blender版本（32位和64位版本）和你的软件和硬件平台架构是一致的。</p></li>
+<li>看看你的电脑是否符合 <a class="reference external" href="http://www.blender.org/download/requirements/">最低要求</a> 。</li>
+<li>确认您的图形卡是否受支持且驱动程序是最新的.</li>
+<li>确保你使用的Blender版本（32位和64位版本）和你的软件和硬件平台架构是一致的。</li>
 </ul>
 <p>下面列出的已知的原因。</p>
 </div>
@@ -209,9 +230,19 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Fatal</span> <span class="n">Python</span> <span class="n">error</span><span class="p">:</span> <span class="n">Py_Initialize</span><span class="p">:</span> <span class="n">unable</span> <span class="n">to</span> <span class="n">load</span> <span class="n">the</span> <span class="nb">file</span> <span class="n">system</span> <span class="n">codec</span>
 </pre></div>
 </div>
-<p>你可能设置了你的系统  <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>  环境变量。</p>
-<p>在这种情况下，Blender捆绑的Python将尝试使用“PYTHONPATH”。如果Python版本与Blender使用的版本不同，则会在启动时崩溃Blender。</p>
-<p>要解决这个问题，或者在启动Blender之前清除“PYTHONPATH”（也可以使用启动脚本来完成），或者将其设置为兼容的Python版本。</p>
+<p>你可能设置了你的系统 <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> 环境变量。</p>
+<p>在这种情况下，Blender捆绑的Python将尝试使用 <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> 。如果Python版本与Blender使用的版本不同，则会在启动时崩溃Blender。</p>
+<p>要解决这个问题，或者在启动Blender之前清除 <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> （也可以使用启动脚本来完成），或者将其设置为兼容的Python版本。</p>
+</div>
+<div class="section" id="common-startup-messages">
+<h2>常见的启动消息<a class="headerlink" href="#common-startup-messages" title="Permalink to this headline">¶</a></h2>
+<p><em>Blender控制窗口*能显示许多不同类型的状态和错误消息。有些消息只是告知用户Blender在做什么,但对Blender的运作能力没有实际影响。其他消息可能表示严重错误，这些错误最有可能阻止Blender执行特定任务，甚至可能使Blender无响应或完全关闭。 *Blender控制窗口</em> 也可以从Blender代码内部或外部源代码内部发起例如 <a class="reference internal" href="../editors/preferences/addons.html"><span class="doc">Python脚本</span></a>.</p>
+<dl class="docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">找到被捆绑的python：{目录}</span></code></dt>
+<dd>此消息表明Blender能够为嵌入在Blender中的Python解释器找到 <a class="reference internal" href="../advanced/scripting/index.html#scripting-index"><span class="std std-ref">Python</span></a> 库。</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">阅读首选项：{目录}/userpref.blend</span></code></dt>
+<dd>用户设置使用这个路径。</dd>
+</dl>
 </div>
 </div>
 

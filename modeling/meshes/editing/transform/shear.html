@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/editing/transform/shear.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/transform/shear.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="球形化" href="to_sphere.html" />
@@ -94,14 +113,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/index.html">基础</a></li>
@@ -109,6 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../edges.html">边工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../faces.html">面工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../uv/index.html">UV</a></li>
 <li class="toctree-l4 current"><a class="reference internal" href="index.html">变形</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../duplicating/index.html">复制</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">细分</a></li>
@@ -119,7 +140,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../mesh_display.html">网格显示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
 </ul>
 </li>
@@ -131,16 +151,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -219,45 +240,82 @@
            <div itemprop="articleBody">
             
   <div class="section" id="shear">
-<span id="bpy-ops-transform-shear"></span><h1>切变<a class="headerlink" href="#shear" title="Permalink to this headline">¶</a></h1>
+<span id="tool-transform-shear"></span><span id="bpy-ops-transform-shear"></span><h1>切变<a class="headerlink" href="#shear" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>物体和编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">物体/网格/曲线/曲面 ‣ 变换 ‣ 切变</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-Ctrl-Alt-S</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体和编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">物体/网格/曲线/曲面 ‣ 变换 ‣ 切变</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Shift-Ctrl-Alt-S</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>切变是两个平行表面的相向运动。执行该变换时，选中元素会沿着当前视图的水平轴向移动。轴线位置由 <a class="reference internal" href="../../../../editors/3dview/object/editing/transform/control/pivot_point/index.html"><span class="doc">轴心点</span></a> 确定。所有位于该轴&quot;上方&quot; 的元素移动(切变)方向与鼠标指针一致(但总是平行于水平轴)。所有位于该轴&quot;下方&quot; 的元素移动方向与鼠标指针相反。</p>
-<div class="figure align-center" id="id1">
+<p>Shearing is a form of movement where parallel surfaces move past one another. During this transform,
+movement of the selected elements will occur along the horizontal axis of the current view.
+The axis location will be defined by
+the <a class="reference internal" href="../../../../scene_layout/object/editing/transform/control/pivot_point/index.html"><span class="doc">Pivot Point</span></a>.
+Everything that is &quot;above&quot; this axis will move (Shear)
+in the same direction as your mouse pointer (but always parallel to the horizontal axis).
+Everything that is &quot;below&quot; the horizontal axis will move in the opposite direction.</p>
+<div class="figure" id="id1">
 <img alt="../../../../_images/modeling_meshes_editing_transform_shear_operator-panel.png" src="../../../../_images/modeling_meshes_editing_transform_shear_operator-panel.png" />
-<p class="caption"><span class="caption-text">切变系数。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">切变系数。</span></p>
+</div>
+<div class="section" id="tool-settings">
+<h2>Tool Settings<a class="headerlink" href="#tool-settings" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Offset</dt>
+<dd>How far items are shifted from their original location.</dd>
+<dt>Shear Axis</dt>
+<dd>The shear tool shears items along a 2D plane.
+The <em>Shear Axis</em> controls whether the items are sheared along the X or Y axes of this imaginary plane.
+The orientation of this plane is controlled by the following two axis controls.</dd>
+<dt>Axis</dt>
+<dd>Defines one axis of the imaginary shearing plane.</dd>
+<dt>Axis Ortho</dt>
+<dd>Defines the other axis of the imaginary shearing plane.</dd>
+<dt>Orientation</dt>
+<dd>See <a class="reference internal" href="../../../../scene_layout/object/editing/transform/control/orientations.html"><span class="doc">Transform Orientations</span></a>.</dd>
+<dt>Proportional Editing</dt>
+<dd>See <a class="reference internal" href="../../../../scene_layout/object/editing/transform/control/proportional_edit.html"><span class="doc">Proportional Editing</span></a>.</dd>
+</dl>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The <em>Axis</em> and <em>Axis Ortho</em> cannot be the same axis,
+else the imaginary plane is dimensionless and the objects will disappear into a point.</p>
+</div>
 </div>
 <div class="section" id="usage">
 <h2>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<p>选择要对其执行操作的元素，激活 <em>切变</em> 变换工具。可以在 <span class="menuselection">物体/网格/曲线/曲面 ‣ 变换 ‣ 切变</span> 菜单或按下 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-Alt-S</kbd> ，调用 <em>切变</em> 工具。通过移动鼠标或输入数值，交互式控制移动程度。按下 <kbd class="kbd docutils literal notranslate">Return</kbd> 确认变换。确认变换后，如未进行其他操作，可以通过按下 <kbd class="kbd docutils literal notranslate">F6</kbd> 或进入工具栏 ，调整滑块做进一步编辑。</p>
-<p>注意， <em>切变</em> 变换的结果还取决于选中元素(物体，顶点、面等)的数量和类型，可参考下文中对不同元素使用 <em>切变</em> 的结果。</p>
-<div class="figure align-center" id="id2">
+<p>See below for the result of using <em>Shear</em> on a number of different elements.</p>
+<div class="figure" id="id2">
 <img alt="../../../../_images/modeling_meshes_editing_transform_shear_mesh.png" src="../../../../_images/modeling_meshes_editing_transform_shear_mesh.png" />
-<p class="caption"><span class="caption-text">不同轴心点下的切变效果。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">不同轴心点下的切变效果。</span></p>
 </div>
-<p>上图展示了不同轴心点下对选中顶点切变后的效果。中间图中，设置 <a class="reference internal" href="../../../../editors/3dview/object/editing/transform/control/pivot_point/index.html"><span class="doc">轴心点</span></a> 为 <em>质心点</em> (用黄色线条表示)，变换时鼠标向左移动。右图中，设置 <em>轴心点</em> 为3D游标，置于网格上方(用黄色线条表示)，在 <em>切变</em> 变换时鼠标向左移动，选中的顶点位于水平轴线下方，所以会向右移动。</p>
+<p>The three frames of the image above show the effects of shearing
+on the selected vertices when the pivot point is altered.
+In middle frame, the <a class="reference internal" href="../../../../scene_layout/object/editing/transform/control/pivot_point/index.html"><span class="doc">Pivot Point</span></a>
+is set to <em>Median Point</em>
+and the mouse was moved to the left during the transform.
+In right frame, the <em>Pivot Point</em> is set to the 3D cursor
+which is located above the mesh.
+When the mouse is moved to the left during a <em>Shear</em> transform,
+the selected vertices are moved to the right as they are below the horizontal axis.</p>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p class="first admonition-title">Tip</p>
 <p>切变变换程度</p>
-<p>选中元素 <em>切变</em> 变换的程度正比于到水平轴线的距离，也就是说，离轴线越远，移动量越大。</p>
+<p class="last">选中元素 <em>切变</em> 变换的程度正比于到水平轴线的距离，也就是说，离轴线越远，移动量越大。</p>
 </div>
-<div class="figure align-center" id="id3">
+<div class="figure" id="id3">
 <img alt="../../../../_images/modeling_meshes_editing_transform_shear_objects.png" src="../../../../_images/modeling_meshes_editing_transform_shear_objects.png" />
-<p class="caption"><span class="caption-text">不同轴心点下的对物体的切变效果。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">不同轴心点下的对物体的切变效果。</span></p>
 </div>
-<p>上图展示了不同 <em>轴心点</em> 下对选中物体切变后的效果。中间图中，设置 <em>轴心点</em> 为 <em>质心点</em> (用黄色线条表示)，变换时鼠标向左移动。右图中，设置 <em>轴心点</em> 为3D游标，置于网格上方(用黄色线条表示)，在 <em>切变</em> 变换时鼠标向左移动，选中的物体位于水平轴线下方，所以会向右移动。另外要注意的是，变换的程度正比于到水平轴线的距离。在该例子中，靠下的物体比靠上的物体移动的远。</p>
 </div>
 </div>
 

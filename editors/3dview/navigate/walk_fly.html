@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>行走/飞行 模式 &mdash; Blender Manual</title>
+  <title>Fly/Walk Mode &mdash; Blender Manual</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/deveditors/3dview/navigate/walk_fly.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/3dview/navigate/walk_fly.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="对齐" href="align.html" />
@@ -94,43 +113,62 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#general">常规</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../index.html">3D视图</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../startup_scene.html">启动场景</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../modes.html">物体模式</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="index.html">视图浏览</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d_cursor.html">3D游标</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../object/index.html">物体</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../properties/index.html">属性</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../ruler_protractor.html">3D量尺 &amp; 量角器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">3D视图</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../startup_scene.html">启动场景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modes.html">物体模式</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">视图浏览</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="navigation.html">视图浏览</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Fly/Walk Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="align.html">对齐</a></li>
+<li class="toctree-l4"><a class="reference internal" href="projections.html">投影</a></li>
+<li class="toctree-l4"><a class="reference internal" href="regions.html">Regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views.html">上下文视图</a></li>
+<li class="toctree-l4"><a class="reference internal" href="camera_view.html">相机视图</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../uv_image/index.html">UV/图像编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../node_editor/index.html">节点编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../vse/index.html">视频序列编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3d_cursor.html">3D游标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting.html">Selecting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../controls/index.html">Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolbar/index.html">Toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../viewport_render.html">Viewport Render</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../index.html#scripting">脚本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../index.html#data">数据</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../uv/index.html">UV编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shader_editor/index.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../compositing/index.html">Compositor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../video_editing/index.html">Video Sequencer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../outliner.html">大纲视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../properties_editor.html">属性编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_browser.html">文件浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -187,7 +225,7 @@
         
           <li><a href="index.html">视图浏览</a> &raquo;</li>
         
-      <li>行走/飞行 模式</li>
+      <li>Fly/Walk Mode</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -206,82 +244,125 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="walk-fly-mode">
-<span id="dview-walk-fly"></span><h1>行走/飞行 模式<a class="headerlink" href="#walk-fly-mode" title="Permalink to this headline">¶</a></h1>
-<p>当需要放置视图时, 通常可以按照前文所述.</p>
-<p>但是, 在某些情况下，用户只需要浏览模型，尤其是特别大的模型，比如环境或一些建筑模型。以透视模式查看模型存在局限性，例如，在缩放了大量的平移后，非常不舒服和困难， 或者显然不能移近相机。 举个例子, 在视图中试试使用传统方法浏览一个远处的模型 (如上文)，看看可以发现什么。</p>
-<p>有了行走/飞行模式， 就可以没有任何限制的移动, 平移, 倾斜和滑动相机。</p>
-<div class="figure align-center" id="id2">
+  <div class="section" id="fly-walk-mode">
+<span id="dview-fly-walk"></span><h1>Fly/Walk Mode<a class="headerlink" href="#fly-walk-mode" title="Permalink to this headline">¶</a></h1>
+<p>There are cases where it's preferable to navigate with first person controls,
+especially for large environments such as architectural models.
+In these cases orbiting around the view center is limiting.
+While zoom, pan &amp; dolly can be used, it's inconvenient.</p>
+<p>With walk/fly modes you can navigate around the scene where view rotation is
+performed from the cameras location.</p>
+<div class="figure" id="id2">
 <img alt="../../../_images/editors_3dview_navigate_walk-fly_view-navigation-panel.png" src="../../../_images/editors_3dview_navigate_walk-fly_view-navigation-panel.png" />
-<p class="caption"><span class="caption-text">视图浏览。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">视图浏览。</span></p>
 </div>
-<p>在 <a class="reference internal" href="../../../preferences/index.html"><span class="doc">用户设置编辑器</span></a> 中，选择希望在调用视图浏览操作时，使用的导航模式。 也可以从视图浏览菜单中调用各个模式。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>该模式实际上 <em>移动</em> 了视图使用的相机。这意味着，当处于相机视图时, 会移动活动相机, 这是另一种放置和瞄准的方式。</p>
-</div>
+<p>In the <a class="reference internal" href="../../preferences/index.html"><span class="doc">Preferences editor</span></a>
+select the navigation mode you want to use as default when invoking the View Navigation operator.
+Alternatively you can call the individual modes from the View Navigation menu.</p>
+<p>Common use cases for walk/fly include:</p>
+<dl class="docutils">
+<dt>Navigation</dt>
+<dd>This can be a quick way to navigate a large scene.</dd>
+<dt>Camera Placement</dt>
+<dd>When activated from a camera view, this will move the camera too.</dd>
+<dt>Recording Animation</dt>
+<dd>Running from a camera with auto-keyframe and playing animation
+will record the motion as you make it allowing you to record the walk-through.</dd>
+</dl>
 <div class="section" id="walk-mode">
 <span id="bpy-types-walknavigation"></span><h2>行走漫游模式<a class="headerlink" href="#walk-mode" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>所有模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">视图‣ 视图切换 ‣ 行走漫游模式</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-F</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">所有模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Hotkey:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Shift-AccentGrave</kbd></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">View ‣ Navigation ‣ Walk Navigation</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>在激活时，鼠标指针会移动到视图的中心， 并且会出现十字准星标记。</p>
-<p>该导航模式与当今大多数3D世界游戏中的第一人称漫游系统相似。它可以结合键盘键 <kbd class="kbd docutils literal notranslate">W</kbd>, <kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">S</kbd>, <kbd class="kbd docutils literal notranslate">D</kbd> 和移动鼠标使用。默认在 &quot;自由&quot; 模式下漫游，没有重力影响。 使用 <kbd class="kbd docutils literal notranslate">Tab</kbd> 在重力和自由模式之间切换。</p>
-<p>为了更快地移动到想要的地方，可以通过 <kbd class="kbd docutils literal notranslate">Spacebar</kbd> 传送到物体周围。如果在十字准星前方存在物体， 在这个方向移动至触及该点后停止(通过 <a class="reference internal" href="../../../preferences/index.html"><span class="doc">用户首选项</span></a> 设置的 <em>相机高度</em> 偏移值).</p>
+<p>This navigation mode behaves similar to the first person navigation system available in most 3D world games.
+It works with a combination of keyboard arrow keys and mouse movement.</p>
 <div class="section" id="shortcuts">
 <h3>快捷键<a class="headerlink" href="#shortcuts" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Move the mouse in the direction you want to look.</p>
+</li>
+<li><p class="first">Arrow keys or <kbd class="kbd docutils literal notranslate">W</kbd>, <kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">S</kbd>, <kbd class="kbd docutils literal notranslate">D</kbd> move forwards/backwards and strafe left/right.</p>
+</li>
+<li><p class="first">Teleport <kbd class="kbd docutils literal notranslate">Spacebar</kbd>.</p>
+<p>This moves you to the location at the cross-hair
+(offset by the <em>camera height</em> value set in the <a class="reference internal" href="../../preferences/index.html"><span class="doc">Preferences</span></a>).</p>
+</li>
+<li><p class="first">跳 <kbd class="kbd docutils literal notranslate">V</kbd> - 仅 <em>重力</em> 模式下。</p>
+</li>
+<li><p class="first">上下移动 <kbd class="kbd docutils literal notranslate">Q</kbd>, <kbd class="kbd docutils literal notranslate">E</kbd> - 仅 <em>自由</em> 模式下。</p>
+</li>
+<li><p class="first">使用 <kbd class="kbd docutils literal notranslate">Tab</kbd> 在 <em>自由</em> 和 <em>重力</em> 模式之间切换。</p>
+</li>
+<li><p class="first">Change the movement speed:</p>
 <ul class="simple">
-<li><p>左右移动鼠标，可以左右平移视图；上下移动鼠标可以上下倾斜视角。</p></li>
-<li><p>前后移动相机 <kbd class="kbd docutils literal notranslate">W</kbd>, <kbd class="kbd docutils literal notranslate">S</kbd>.</p></li>
-<li><p>左右移动相机 <kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">D</kbd>.</p></li>
-<li><p>跳 <kbd class="kbd docutils literal notranslate">V</kbd> - 仅 <em>重力</em> 模式下。</p></li>
-<li><p>上下移动 <kbd class="kbd docutils literal notranslate">Q</kbd>, <kbd class="kbd docutils literal notranslate">E</kbd> - 仅 <em>自由</em> 模式下。</p></li>
-<li><p>使用 <kbd class="kbd docutils literal notranslate">Tab</kbd> 在 <em>自由</em> 和 <em>重力</em> 模式之间切换。</p></li>
-<li><p>改变移动速度: - <kbd class="kbd docutils literal notranslate">WheelUp</kbd> 或 <kbd class="kbd docutils literal notranslate">NumpadPlus</kbd> 提高移动速度。 - <kbd class="kbd docutils literal notranslate">WheelDown</kbd> 或 <kbd class="kbd docutils literal notranslate">NumpadMinus</kbd> 降低移动速度。- <kbd class="kbd docutils literal notranslate">Shift</kbd> (按住) - 暂时加快移动. - <kbd class="kbd docutils literal notranslate">Alt</kbd> (按住) - 暂时减慢运动速度.</p></li>
+<li><kbd class="kbd docutils literal notranslate">WheelUp</kbd> or <kbd class="kbd docutils literal notranslate">NumpadPlus</kbd> to increase the movement speed for this open session.</li>
+<li><kbd class="kbd docutils literal notranslate">WheelDown</kbd> or <kbd class="kbd docutils literal notranslate">NumpadMinus</kbd> to decrease the movement speed for this open session.</li>
+<li><kbd class="kbd docutils literal notranslate">Shift</kbd> (hold) -- to speed up the movement temporarily.</li>
+<li><kbd class="kbd docutils literal notranslate">Alt</kbd> (hold) -- to slow down the movement temporarily.</li>
+</ul>
+</li>
 </ul>
 <p>当对新视图感到满意后，按 <kbd class="kbd docutils literal notranslate">LMB</kbd> 确认。按下 <kbd class="kbd docutils literal notranslate">Esc</kbd> 或 <kbd class="kbd docutils literal notranslate">RMB</kbd> ，返回初始位置。</p>
-<p>如果要为项目调整默认值(速度, 鼠标敏感性...)，可以到 <a class="reference internal" href="../../../preferences/index.html"><span class="doc">用户设置</span></a> 中调整相关选项：</p>
+<p>If the defaults values (speed, mouse sensitivity, ...) need adjustments for your project,
+in the <a class="reference internal" href="../../preferences/index.html"><span class="doc">Preferences</span></a> you can select a few options for the navigation system:</p>
 </div>
 </div>
 <div class="section" id="fly-mode">
 <h2>飞行漫游模式<a class="headerlink" href="#fly-mode" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>所有模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">视图 ‣ 视图切换 ‣ 飞行导航模式</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-F</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">所有模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Hotkey:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Shift-AccentGrave</kbd></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">View ‣ Navigation ‣ Fly Navigation</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>激活该模式后，鼠标指针会移动到视图的中心，并显示为一个矩形标记 – 一种HUD...</p>
-<p>飞行模式的一些选项受鼠标指针与视图中心相对位置影响，视图中心周围的矩形标记区起 &quot;安全区&quot; 作用，鼠标放置在该区域内，对视图没有任何影响。 鼠标指针离标记区域越远，平移或前进越多。</p>
+<p>On activation the cursor is centered inside a rectangle that defines a safe-region.
+When the cursor is outside this region the view will rotate/pan.</p>
 <div class="section" id="id1">
 <h3>快捷键<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul>
-<li><p>左右移动鼠标，可以左右平移视图；上下移动鼠标可以上下倾斜视角。</p></li>
-<li><p>前后移动视图: - <kbd class="kbd docutils literal notranslate">WheelUp</kbd> 或 <kbd class="kbd docutils literal notranslate">NumpadPlus</kbd> 加速向前移动. - <kbd class="kbd docutils literal notranslate">WheelDown</kbd> 或 <kbd class="kbd docutils literal notranslate">NumpadMinus</kbd> 以加速向后移动。</p>
-<blockquote>
-<div><p>因此，如果视图正在向前移动了, <kbd class="kbd docutils literal notranslate">WheelDown</kbd>, <kbd class="kbd docutils literal notranslate">NumpadMinus</kbd> 会将其停住，然后向后移动, 等等。</p>
-</div></blockquote>
+<li><p class="first">Move the mouse outside the safe-region in the direction you want to look.</p>
 </li>
-<li><p>拖动 <kbd class="kbd docutils literal notranslate">MMB</kbd> 进行滑移。在这种情况下，视图可以在你拖动鼠标的时候沿其自身轴向移动 – 很明显, 左/右/上/下拖动，左/右/上/下滑移视图。</p></li>
+<li><p class="first">Move the view forward/backward:</p>
+<ul>
+<li><p class="first"><kbd class="kbd docutils literal notranslate">WheelUp</kbd> or <kbd class="kbd docutils literal notranslate">NumpadPlus</kbd> to accelerate the movement forward.</p>
+</li>
+<li><p class="first"><kbd class="kbd docutils literal notranslate">WheelDown</kbd> or <kbd class="kbd docutils literal notranslate">NumpadMinus</kbd> to accelerate the movement backward.</p>
+<p>因此，如果视图正在向前移动了, <kbd class="kbd docutils literal notranslate">WheelDown</kbd>, <kbd class="kbd docutils literal notranslate">NumpadMinus</kbd> 会将其停住，然后向后移动, 等等。</p>
+</li>
+</ul>
+</li>
+<li><p class="first"><kbd class="kbd docutils literal notranslate">MMB</kbd> Drag to pan the view.</p>
+<p>In this case the view can move laterally on its local axis at the moment you drag the mouse.</p>
+</li>
+<li><p class="first"><kbd class="kbd docutils literal notranslate">Shift</kbd> precision (slow the momentum).</p>
+</li>
+<li><p class="first"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> disable rotation.</p>
+<p>While held, the view rotation doesn't influence the flight direction,
+this allows you to fly past an object, keeping it centered in the view,
+even as you fly away from it.</p>
+</li>
 </ul>
 <p>当对新视图感到满意后，按 <kbd class="kbd docutils literal notranslate">LMB</kbd> 确认。按下 <kbd class="kbd docutils literal notranslate">Esc</kbd> 或 <kbd class="kbd docutils literal notranslate">RMB</kbd> ，返回初始位置。</p>
 </div>

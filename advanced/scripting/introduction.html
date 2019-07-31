@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devadvanced/scripting/introduction.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/advanced/scripting/introduction.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="脚本与安全" href="security.html" />
@@ -94,15 +113,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">高级应用</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../command_line/index.html">命令行</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">脚本与扩展Blender</a><ul class="current">
@@ -117,13 +139,12 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../app_templates.html">应用模板</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../keymap_editing.html">Keymap Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../keymap_editing.html">键位映射自定义</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../limits.html">功能局限</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operators.html">操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_directory_layout.html">Blender目录布局</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -200,21 +221,21 @@
   <div class="section" id="introduction">
 <h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <p>Python是一门面向对象的、交互的解释型编程语言。它集成了模块、异常、动态类型、高水平的动态数据类型和类。Python兼具强大的功能和清晰的语法。</p>
-<p>Python脚本是一种强大而灵活的用于扩展Blender功能的方法。Blender的大部分功能都可以脚本化，包括动画、渲染、导入与导出、创建物体和重复操作的脚本。</p>
+<p>Python脚本是一种强大而灵活的用于扩展Blender功能的方法。Blender的大部分功能都可以脚本化，包括动画、渲染、导入与导出、创建物体和自动重复任务的脚本。</p>
 <p>脚本可以利用紧密集成的API(Application Programming Interface)与Blender进行交互。</p>
 <div class="section" id="general-information">
 <h2>常规资料<a class="headerlink" href="#general-information" title="Permalink to this headline">¶</a></h2>
 <p>对写脚本有帮助的链接:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.python.org/">Python.org</a> - 关于Python的基本信息。</p></li>
-<li><p><a class="reference external" href="https://www.blender.org/api/current/">Blender Python API</a> - 官方API文档，用作编写脚本时的参考。</p></li>
-<li><p><a class="reference external" href="https://www.blender.org/api/current/info_quickstart.html">API introduction</a> - API使用入门， 包含范例。</p></li>
+<li><a class="reference external" href="https://www.python.org/">Python.org</a> - 关于Python的基本信息。</li>
+<li><a class="reference external" href="https://www.blender.org/api/current/">Blender Python API</a> - 官方API文档，用作编写脚本时的参考。</li>
+<li><a class="reference external" href="https://www.blender.org/api/current/info_quickstart.html">API introduction</a> - API使用入门， 包含范例。</li>
 </ul>
 <p>用于发布脚本的链接:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://wiki.blender.org/wiki/Process/Addons">分享脚本</a> - 关于如何共享脚本与使脚本加入官方发布版Blender。</p></li>
-<li><p><a class="reference external" href="https://wiki.blender.org/wiki/Process/Addons/Guidelines">创建插件</a> - 封装和发布脚本。</p></li>
-<li><p><a class="reference external" href="https://developer.blender.org/project/profile/3/">插件项目</a> - 维护Blender核心扩展仓库的项目。</p></li>
+<li><a class="reference external" href="https://wiki.blender.org/wiki/Process/Addons">分享脚本</a> - 关于如何共享脚本与使脚本加入官方发布版Blender。</li>
+<li><a class="reference external" href="https://wiki.blender.org/wiki/Process/Addons/Guidelines">创建插件</a> - 封装和发布脚本。</li>
+<li><a class="reference external" href="https://developer.blender.org/project/profile/3/">插件项目</a> - 维护Blender核心扩展仓库的项目。</li>
 </ul>
 </div>
 <div class="section" id="getting-started">
@@ -222,18 +243,17 @@
 <p class="rubric">手册链接</p>
 <p>以下链接包含从基础到进阶的Blender Python脚本。</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../editors/text_editor.html"><span class="doc">文本编辑器</span></a></p></li>
-<li><p><a class="reference internal" href="../../editors/python_console.html"><span class="doc">Python控制台</span></a></p></li>
-<li><p>信息编辑器 <a class="reference internal" href="../../editors/info/introduction.html#info-report-console"><span class="std std-ref">控制台报告</span></a></p></li>
+<li><a class="reference internal" href="../../editors/text_editor.html"><span class="doc">文本编辑器</span></a></li>
+<li><a class="reference internal" href="../../editors/python_console.html"><span class="doc">Python控制台</span></a></li>
+<li><a class="reference internal" href="../../editors/info_editor.html"><span class="doc">文本编辑器</span></a></li>
 </ul>
 <p class="rubric">外部链接</p>
 <p>下面的外部链接包含了很多学习资料，包括如何开始编写Blender脚本：</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://sites.google.com/site/satishgoda/blender/learningblender25/introduction-to-blender-python-api">Satish Goda的入门教程</a> - 从入门开始教授如何进行基础API操作。</p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=vmhU_whC6zw">Ira Krakow的视频教程</a> - 最早的视频教程。</p></li>
-<li><p><a class="reference external" href="https://en.wikibooks.org/wiki/Blender_3D:_Blending_Into_Python/2.5_quickstart">快速入门指南</a> - 适用于对Python和Blender有所熟悉的用户的快速入门指南。</p></li>
-<li><p><a class="reference external" href="https://blenderartists.org/forum/showthread.php?t=164765">示例帖</a> - 包含很多简短脚本范例的帖子。</p></li>
-<li><p><a class="reference external" href="https://cgcookie.com/archive/introduction-to-scripting-with-python-in-blender/">Python入门</a> - 1小时的Python 和Blender API入门视频教程。</p></li>
+<li><a class="reference external" href="https://docs.blender.org/api/current/info_quickstart.html">Python API: 快速入门</a></li>
+<li><a class="reference external" href="https://cgcookie.com/articles/blender-2-8-python-scripting-superpowers-for-non-programmers">CG Cookie: Blender 2.8 Python编程: 非程序员的超能力</a></li>
+<li><a class="reference external" href="https://www.youtube.com/watch?v=rHzf3Dku_cE">Olav3D 教程: Python新手3D编程</a></li>
+<li><a class="reference external" href="https://blenderartists.org/c/coding/python-support">Blender Artists: Python支持论坛</a></li>
 </ul>
 </div>
 <div class="section" id="extending-blender">
@@ -243,31 +263,31 @@
 <p>插件是在Blender中用于扩展功能的脚本，可以在用户设置中启用。</p>
 <p>在Blender执行程序以外，还有很多人写的数以百计的插件:</p>
 <ul class="simple">
-<li><p>Blender会捆绑一些官方插件。</p></li>
-<li><p>开发版会包含一些其他 <strong>测试中</strong> 的插件，而官方正式版则不会有这些。这些插件中很多都可以可靠工作且非常有用，但无法保证在正式版中的稳定性。</p></li>
+<li>Blender会捆绑一些官方插件。</li>
+<li>开发版会包含一些其他 <strong>测试中</strong> 的插件，而官方正式版则不会有这些。这些插件中很多都可以可靠工作且非常有用，但无法保证在正式版中的稳定性。</li>
 </ul>
-<p>所有可用的插件概述，参见 <a class="reference external" href="https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts">脚本分类目录</a>。</p>
+<p>Blender内置插件见 <a class="reference internal" href="../../addons/index.html"><span class="doc">插件</span></a> 文档。</p>
 </div>
 <div class="section" id="scripts">
 <h3>脚本<a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h3>
 <p>除插件之外，还有其他可以用来扩展Blender功能的脚本:</p>
 <ul class="simple">
-<li><p>模块：用于导入其他脚本的实用工具库。</p></li>
-<li><p>预设：Blender工具和关键配置的设置。</p></li>
-<li><p>启动文件：启动Blender时载入的文件。这些文件定义了大多数 Blender 的用户界面和一些附带的核心操作。</p></li>
-<li><p>自定义脚本：与插件不同，这些往往是通过 <a class="reference internal" href="../../editors/text_editor.html"><span class="doc">文本编辑器</span></a> 编写的一次性脚本。</p></li>
+<li>模块：用于导入其他脚本的实用工具库。</li>
+<li>预设：Blender工具和关键配置的设置。</li>
+<li>启动文件：启动Blender时载入的文件。这些文件定义了大多数 Blender 的用户界面和一些附带的核心操作。</li>
+<li>自定义脚本：与插件不同，这些往往是通过 <a class="reference internal" href="../../editors/text_editor.html"><span class="doc">文本编辑器</span></a> 编写的一次性脚本。</li>
 </ul>
 </div>
 <div class="section" id="saving-your-own-scripts">
 <h3>保存你的脚本<a class="headerlink" href="#saving-your-own-scripts" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="file-location">
 <h4>文件位置<a class="headerlink" href="#file-location" title="Permalink to this headline">¶</a></h4>
-<p>所有脚本都从 <a class="reference internal" href="../../getting_started/installing/configuration/directories.html"><span class="doc">本地, 系统和用户路径</span></a> 下的 <code class="docutils literal notranslate"><span class="pre">scripts</span></code> 文件夹载入。</p>
-<p>你可以在 <a class="reference internal" href="../../preferences/file.html#prefs-file-paths"><span class="std std-ref">文件路径</span></a>  <span class="menuselection">用户设置 ‣ 文件路径</span>. 中设置额外的脚本搜索路径。</p>
+<p>所有脚本都从 <a class="reference internal" href="../blender_directory_layout.html#blender-directory-layout"><span class="std std-ref">本地, 系统和用户路径</span></a> 下的 <code class="docutils literal notranslate"><span class="pre">scripts</span></code> 文件夹载入。</p>
+<p>你可以在 <a class="reference internal" href="../../editors/preferences/file_paths.html#prefs-file-paths"><span class="std std-ref">File Paths</span></a> <span class="menuselection">用户设置 ‣ 文件路径</span> 中设置额外的脚本查找路径。</p>
 </div>
 <div class="section" id="installation">
 <h4>安装<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h4>
-<p>通过Blender <a class="reference internal" href="../../preferences/addons.html"><span class="doc">用户设置</span></a> 可以很方便地安装插件。单击 <span class="menuselection">从文件安装...</span> 按钮，并选择 <code class="docutils literal notranslate"><span class="pre">.py</span></code> 或 <code class="docutils literal notranslate"><span class="pre">.zip</span></code> 文件。</p>
+<p>通过Blender <a class="reference internal" href="../../editors/preferences/addons.html"><span class="doc">用户设置</span></a> 可以很方便地安装插件。单击 <span class="menuselection">安装...</span> 按钮，并选择 <code class="docutils literal notranslate"><span class="pre">.py</span></code> 或 <code class="docutils literal notranslate"><span class="pre">.zip</span></code> 文件。</p>
 <p>要手动安装脚本或插件，可视具体类型将其放置到 <code class="docutils literal notranslate"><span class="pre">add-ons</span></code>, <code class="docutils literal notranslate"><span class="pre">modules</span></code>, <code class="docutils literal notranslate"><span class="pre">presets</span></code> 或 <code class="docutils literal notranslate"><span class="pre">startup</span></code> 目录。参考上文所述。</p>
 <p>你还可以在 <a class="reference internal" href="../../editors/text_editor.html"><span class="doc">文本编辑器</span></a> 中载入并运行脚本。</p>
 </div>

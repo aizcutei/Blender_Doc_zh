@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/modifiers/modify/data_transfer.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/modify/data_transfer.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="网格缓存修改器" href="mesh_cache.html" />
-    <link rel="prev" title="简介" href="../introduction.html" /> 
+    <link rel="prev" title="常见的修改器选项" href="../common_options.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
@@ -105,6 +124,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common_options.html">常见的修改器选项</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html#modify">修改</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">数据传递修改器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mesh_cache.html">网格缓存修改器</a></li>
@@ -125,16 +145,17 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -210,144 +231,179 @@
             
   <div class="section" id="data-transfer-modifier">
 <span id="bpy-types-datatransfermodifier"></span><h1>数据传递修改器<a class="headerlink" href="#data-transfer-modifier" title="Permalink to this headline">¶</a></h1>
-<p>数据传输修改器将几种类型的数据从一个网格传输到另一个网格。 数据类型包括顶点组，UV贴图，顶点颜色，自定义法线...</p>
-<p>传递是通过在源网格与目标网格元素(顶点、边等)之间建立映射实现的，这可以是一一映射，或者通过插值实现的多对一映射。</p>
-<div class="figure align-center" id="id1">
+<p>The Data Transfer modifier transfers several types of data from one mesh to another.
+Data types include vertex groups, UV maps, vertex colors, custom normals...</p>
+<p>Transfer works by generating a mapping between source mesh's items (vertices, edges, etc.)
+and destination ones, either on a one-to-one basis, or mapping several source items
+to a single destination one, using interpolation.</p>
+<div class="figure" id="id1">
 <a class="reference internal image-reference" href="../../../_images/modeling_modifiers_modify_data-transfer_normals-example.jpg"><img alt="../../../_images/modeling_modifiers_modify_data-transfer_normals-example.jpg" src="../../../_images/modeling_modifiers_modify_data-transfer_normals-example.jpg" style="width: 680px;" /></a>
-<p class="caption"><span class="caption-text">物体间传输法线,  见 <a class="reference external" href="https://en.blender.org/uploads/a/ad/Data_Transfer_Normal_Torus.blend">样例 blend 文件</a>.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">物体间传输法线,  见 <a class="reference external" href="https://en.blender.org/uploads/a/ad/Data_Transfer_Normal_Torus.blend">样例 blend 文件</a>.</span></p>
 </div>
 <div class="section" id="options">
 <h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id2">
+<div class="figure align-right" id="id2">
 <img alt="../../../_images/modeling_modifiers_modify_data-transfer_panel.png" src="../../../_images/modeling_modifiers_modify_data-transfer_panel.png" />
-<p class="caption"><span class="caption-text">数据传递修改器.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">数据传递修改器.</span></p>
 </div>
-<dl>
-<dt>源物体</dt><dd><p>复制数据的网格物体。</p>
-<p>如果未设置字段右侧的按钮，则在生成映射时会在全局空间中考虑来源与目标几何体，否则将在局部空间中对它们进行求值（即，好像两个物体的原点位于同一位置）。</p>
+<dl class="docutils">
+<dt>源物体</dt>
+<dd><p class="first">复制数据的网格物体。</p>
+<p class="last">If the button to the right of the field is unset, the source and destination geometry
+are considered in global space when generating the mapping, otherwise they are evaluated
+in local space (i.e. as if both object's origins were at the same place).</p>
 </dd>
-<dt>最大距离</dt><dd><p>当启用右侧“蓝色线的手和凸起”图标按钮时，这是源和目标之间的最大距离，以获得成功的映射。 如果目标物体找不到该范围内的源物体，则它将不会传输任何数据.</p>
-<p>这样可以将一个小的细分的模型传递到更复杂的模型上（比如 将手部模型传递到整体模型上）。</p>
+<dt>最大距离</dt>
+<dd><p class="first">When the &quot;pressure stylus&quot; icon button to the right is enabled,
+this is the maximum distance between source and destination to get a successful mapping.
+If a destination item cannot find a source one within that range, then it will get no transferred data.</p>
+<p class="last">这样可以将一个小的细分的模型传递到更复杂的模型上（比如 将手部模型传递到整体模型上）。</p>
 </dd>
-<dt>光线半径</dt><dd><p>对于光线投射为基础的映射方式，光线投射的半径，对于1D和2D物体特别重要（比如顶点和边），没有一点宽度，就会没有匹配的光线。。。</p>
-</dd>
-<dt>混合节点</dt><dd><p>控制目标数据影响的程度：</p>
-<dl class="simple">
-<dt>全部</dt><dd><p>替换目标物体所有(注意: 仍然使用 <em>混合系数</em> )</p>
-</dd>
-<dt>上限阈值</dt><dd><p>如果超过给定阈值 <em>混合系数</em>，则仅替换目标值。 如何解释该阈值取决于数据类型，请注意，对于布尔值，此选项充当逻辑与。</p>
-</dd>
-<dt>下限阈值</dt><dd><p>仅在目标值低于给定阈值 <em>混合系数</em> 时才替换目标值。 如何解释该阈值取决于数据类型，请注意，对于布尔值，此选项充当逻辑或。</p>
-</dd>
-<dt>混合，添加，相减， 相乘</dt><dd><p>应用那个操作，使用混合系数来控制源物体或目标物体数值使用的程度。仅适用于几种元素类型(顶点组，顶点颜色)。</p>
-</dd>
+<dt>光线半径</dt>
+<dd>对于光线投射为基础的映射方式，光线投射的半径，对于1D和2D物体特别重要（比如顶点和边），没有一点宽度，就会没有匹配的光线。。。</dd>
+<dt>混合节点</dt>
+<dd><p class="first">控制目标数据影响的程度：</p>
+<dl class="last docutils">
+<dt>全部</dt>
+<dd>替换目标物体所有(注意: 仍然使用 <em>混合系数</em> )</dd>
+<dt>上限阈值</dt>
+<dd>Only replaces destination value if it's above given threshold <em>Mix Factor</em>.
+How that threshold is interpreted depends on the data type,
+note that for boolean values this option fakes a logical AND.</dd>
+<dt>下限阈值</dt>
+<dd>Only replaces destination value if it's below given threshold <em>Mix Factor</em>.
+How that threshold is interpreted depends on the data type,
+note that for boolean values this option fakes a logical OR.</dd>
+<dt>混合，添加，相减， 相乘</dt>
+<dd>应用那个操作，使用混合系数来控制源物体或目标物体数值使用的程度。仅适用于几种元素类型(顶点组，顶点颜色)。</dd>
 </dl>
 </dd>
-<dt>混合系数</dt><dd><p>传递的数据与现有数据的混合系数(不支持所有数据类型)。</p>
-</dd>
-<dt>顶点组</dt><dd><p>用于逐项精细控制混合系数。可以通过右侧的小“箭头”按钮反转顶点组的影响。</p>
-</dd>
-<dt>生成数据层</dt><dd><p>这个修改器不能自动生成所需数据层。一旦需要传递的数据源被选定，使用这个按钮生成匹配的目标层。</p>
-</dd>
+<dt>混合系数</dt>
+<dd>传递的数据与现有数据的混合系数(不支持所有数据类型)。</dd>
+<dt>顶点组</dt>
+<dd>用于逐项精细控制混合系数。可以通过右侧的小“箭头”按钮反转顶点组的影响。</dd>
+<dt>生成数据层</dt>
+<dd>This modifier cannot generate needed data layers itself. Once the set of source data to transfer is selected,
+this button shall be used to generate matching destination layers, if needed.</dd>
 </dl>
 <div class="section" id="selection-of-data-to-transfer">
 <h3>传递数据选取<a class="headerlink" href="#selection-of-data-to-transfer" title="Permalink to this headline">¶</a></h3>
 <p>为了保持修改器大小的合理，需要传递数据的物体必须先选择（顶点，边， 面，角和/或 面）</p>
-<dl class="simple">
-<dt>映射类型</dt><dd><p>源物体和目标物体之间如何映射。每种映射类型都有自身对应的选项。详情见下文 <a class="reference internal" href="#geometry-mapping">几何映射</a> 。</p>
-</dd>
-<dt>数据类型</dt><dd><p>左侧的复选框用于选择需要传递的数据类型。</p>
-</dd>
-<dt>多层数据类型选项</dt><dd><p>这些情况下（顶点组，顶点颜色，UVs）,可以选择源数据层来传递(一般是所有要不就是特定的一种)，以及目标物体的效果程度（可以是匹配名字，匹配次序/位置，或者，如果单一的数据源被选中，通过手动指定目标层）</p>
-</dd>
-<dt>UV孤岛处理精简</dt><dd><p>此设置仅影响当前的UV传递，用于避免给定的目标面从不同的源UV孤岛获得UV坐标。 维持数值为0.0意味着不处理孤岛。 通常情况下，像0.02这样的小值足以获得良好的结果，但是如果要从非常高的多边形源映射到非常低的多边形目标，则可能必须非常多地增大它.</p>
-</dd>
+<dl class="docutils">
+<dt>映射类型</dt>
+<dd>源物体和目标物体之间如何映射。每种映射类型都有自身对应的选项。详情见下文 <a class="reference internal" href="#geometry-mapping">几何映射</a> 。</dd>
+<dt>数据类型</dt>
+<dd>左侧的复选框用于选择需要传递的数据类型。</dd>
+<dt>多层数据类型选项</dt>
+<dd>In those cases (vertex groups, vertex colors, UVs), one can select which source layers to transfer
+(usually, either all of them, or a single specified one), and how to affect destination
+(either by matching names, matching order/position,
+or, if a single source is selected, by specifying manually the destination layer).</dd>
+<dt>UV孤岛处理精简</dt>
+<dd>此设置仅影响当前的UV传递，用于避免给定的目标面从不同的源UV孤岛获得UV坐标。 维持数值为0.0意味着不处理孤岛。 通常情况下，像0.02这样的小值足以获得良好的结果，但是如果要从非常高的多边形源映射到非常低的多边形目标，则可能必须非常多地增大它.</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="usage">
 <h2>使用<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<p>使用此修饰符时要记住的第一个关键事项是它 <strong>不会</strong> 创建目标数据层。 为了做到这一点,一旦选择了要传输的源数据集,总是要使用*生成数据层* 按钮。 还应该很好地理解，在目标网格上创建那些数据层 <strong>不是</strong> 修改器栈的一部分，这意味着例如一旦修改器被删除，或者修改了源数据选择项，它们将保持不变。</p>
+<p>First key thing to keep in mind when using this modifier is that it will <strong>not</strong> create destination data layers.
+<em>Generate Data Layers</em> button shall always be used for this purpose, once the set of source data to transfer
+has been selected. It should also be well understood that creating those data layers on destination mesh is <strong>not</strong>
+part of the modifier stack, which means e.g. that they will remain even once the modifier is deleted, or
+if the source data selection is modified.</p>
 <div class="section" id="geometry-mapping">
 <h3>几何映射<a class="headerlink" href="#geometry-mapping" title="Permalink to this headline">¶</a></h3>
-<p>几何映射是个过程一个赋予的目标顶点/边/... 清楚从位于源物体的哪个部分获取相应的数据。很好的了解这块内容对使用该修改器得到不错效果是很重要的。</p>
-<dl>
-<dt>拓扑</dt><dd><p>最简单的选项，期望两个物体有相同数量，并且按索引匹配他们。对于两个相同网格经不同变形后的副本很管用。</p>
+<p>Geometry mapping is how a given destination mesh relates to a source mesh.
+In this process a destination vertex/edge/...
+gets a part of the source mesh assigned with functions as its data source.
+It is crucial to understand this topic well to get good results with this modifier.</p>
+<dl class="docutils">
+<dt>拓扑</dt>
+<dd>最简单的选项，期望两个物体有相同数量，并且按索引匹配他们。对于两个相同网格经不同变形后的副本很管用。</dd>
+<dt>一对一映射</dt>
+<dd><p class="first">仅为目标网格元素选择一个源网格元素，通常基于最短距离。</p>
+<dl class="last docutils">
+<dt>顶点</dt>
+<dd><dl class="first last docutils">
+<dt>最近的点</dt>
+<dd>使用源物体最近的顶点数据。</dd>
+<dt>最近的边顶点</dt>
+<dd>使用源物体最近边的顶点数据。</dd>
+<dt>最近的面顶点</dt>
+<dd>使用源物体最近面的顶点数据。</dd>
+</dl>
 </dd>
-<dt>一对一映射</dt><dd><p>仅为目标网格元素选择一个源网格元素，通常基于最短距离。</p>
-<dl>
-<dt>顶点</dt><dd><dl class="simple">
-<dt>最近的点</dt><dd><p>使用源物体最近的顶点数据。</p>
+<dt>边</dt>
+<dd><dl class="first last docutils">
+<dt>最近的顶点</dt>
+<dd>使用源物体中距离目标边最近的顶点所在边的数据。</dd>
+<dt>最近的边</dt>
+<dd>用源物体中距离目标边最近的边线数据(使用边线的中点计算)。</dd>
+<dt>最近的面边</dt>
+<dd>用源物体中距离目标边最近的面的边线数据(使用边线的中点计算)。</dd>
+</dl>
 </dd>
-<dt>最近的边顶点</dt><dd><p>使用源物体最近边的顶点数据。</p>
+<dt>面拐</dt>
+<dd><p class="first">面拐不是真实的元素，类似连在特定表面的拆分顶点。因此会同时匹配顶点(位置)和面(法向...)数据。</p>
+<dl class="last docutils">
+<dt>最近的角和最佳匹配法线</dt>
+<dd>从最近的源拐点中，选取与目标拐点 <em>拆分</em> 法向最相近的源拐点数据。</dd>
+<dt>最近的角落和最佳匹配面法线</dt>
+<dd>从最近的源拐点中，选取与目标拐点 <em>面</em> 法向最相近的源拐点数据。</dd>
+<dt>最近面上的最近角落</dt>
+<dd>使用最近来源面的最近拐点数据。</dd>
+</dl>
 </dd>
-<dt>最近的面顶点</dt><dd><p>使用源物体最近面的顶点数据。</p>
+<dt>面</dt>
+<dd><dl class="first last docutils">
+<dt>最近的面</dt>
+<dd>使用最近的来源面数据。</dd>
+<dt>最佳法线匹配</dt>
+<dd>使用与目标法向最匹配的来源面数据。</dd>
+</dl>
 </dd>
 </dl>
 </dd>
-<dt>边</dt><dd><dl class="simple">
-<dt>最近的顶点</dt><dd><p>使用源物体中距离目标边最近的顶点所在边的数据。</p>
-</dd>
-<dt>最近的边</dt><dd><p>用源物体中距离目标边最近的边线数据(使用边线的中点计算)。</p>
-</dd>
-<dt>最近的面边</dt><dd><p>用源物体中距离目标边最近的面的边线数据(使用边线的中点计算)。</p>
-</dd>
+<dt>插值映射</dt>
+<dd><p class="first">为每个目标网格元素使用多个源网格元素，在传递的同时进行数据插值。</p>
+<dl class="last docutils">
+<dt>顶点</dt>
+<dd><dl class="first last docutils">
+<dt>最近边插值</dt>
+<dd>使用最近来源边的最近点数据，对来源边的两个顶点数据插值。</dd>
+<dt>最近面插值</dt>
+<dd>使用最近来源面的最近点数据，对来源面的所有顶点数据插值。</dd>
+<dt>投影面插值</dt>
+<dd>使用目标顶点沿自身法向投影到来源面的点数据，对该来源面的所有顶点数据插值。</dd>
 </dl>
 </dd>
-<dt>面拐</dt><dd><p>面拐不是真实的元素，类似连在特定表面的拆分顶点。因此会同时匹配顶点(位置)和面(法向...)数据。</p>
-<dl class="simple">
-<dt>最近的角和最佳匹配法线</dt><dd><p>从最近的源拐点中，选取与目标拐点 <em>拆分</em> 法向最相近的源拐点数据。</p>
-</dd>
-<dt>最近的角落和最佳匹配面法线</dt><dd><p>从最近的源拐点中，选取与目标拐点 <em>面</em> 法向最相近的源拐点数据。</p>
-</dd>
-<dt>最近面上的最近角落</dt><dd><p>使用最近来源面的最近拐点数据。</p>
-</dd>
+<dt>边</dt>
+<dd><dl class="first last docutils">
+<dt>投影边插值</dt>
+<dd>这是一个采样的过程。沿目标边(对边的两个顶点法向都进行插值)发射多条射线，如果足以击中来源边，则将所有被击中的来源边数据插值到目标。</dd>
 </dl>
 </dd>
-<dt>面</dt><dd><dl class="simple">
-<dt>最近的面</dt><dd><p>使用最近的来源面数据。</p>
-</dd>
-<dt>最佳法线匹配</dt><dd><p>使用与目标法向最匹配的来源面数据。</p>
-</dd>
+<dt>面拐</dt>
+<dd><p class="first">面拐不是真实的元素，类似连在特定表面的拆分顶点。因此会同时匹配顶点(位置)和面(法向...)数据。</p>
+<dl class="last docutils">
+<dt>最近面插值</dt>
+<dd>使用最近的来源面的最近点数据，对来源面的所有拐角插值。</dd>
+<dt>投影面插值</dt>
+<dd>使用目标拐角沿自身法向投影到来源面的点数据，对该来源面的拐角数据插值。</dd>
 </dl>
 </dd>
-</dl>
-</dd>
-<dt>插值映射</dt><dd><p>为每个目标网格元素使用多个源网格元素，在传递的同时进行数据插值。</p>
-<dl>
-<dt>顶点</dt><dd><dl class="simple">
-<dt>最近边插值</dt><dd><p>使用最近来源边的最近点数据，对来源边的两个顶点数据插值。</p>
-</dd>
-<dt>最近面插值</dt><dd><p>使用最近来源面的最近点数据，对来源面的所有顶点数据插值。</p>
-</dd>
-<dt>投影面插值</dt><dd><p>使用目标顶点沿自身法向投影到来源面的点数据，对该来源面的所有顶点数据插值。</p>
-</dd>
-</dl>
-</dd>
-<dt>边</dt><dd><dl class="simple">
-<dt>投影边插值</dt><dd><p>这是一个采样的过程。沿目标边(对边的两个顶点法向都进行插值)发射多条射线，如果足以击中来源边，则将所有被击中的来源边数据插值到目标。</p>
-</dd>
-</dl>
-</dd>
-<dt>面拐</dt><dd><p>面拐不是真实的元素，类似连在特定表面的拆分顶点。因此会同时匹配顶点(位置)和面(法向...)数据。</p>
-<dl class="simple">
-<dt>最近面插值</dt><dd><p>使用最近的来源面的最近点数据，对来源面的所有拐角插值。</p>
-</dd>
-<dt>投影面插值</dt><dd><p>使用目标拐角沿自身法向投影到来源面的点数据，对该来源面的拐角数据插值。</p>
-</dd>
-</dl>
-</dd>
-<dt>面</dt><dd><dl class="simple">
-<dt>投影面插值</dt><dd><p>这是一个采样的过程。从目标面(沿其自身法向)发射多条射线，如果足以击中来源面，则将所有被击中的来源面数据插值到目标。</p>
-</dd>
+<dt>面</dt>
+<dd><dl class="first last docutils">
+<dt>投影面插值</dt>
+<dd>这是一个采样的过程。从目标面(沿其自身法向)发射多条射线，如果足以击中来源面，则将所有被击中的来源面数据插值到目标。</dd>
 </dl>
 </dd>
 </dl>
 </dd>
 </dl>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="../../meshes/editing/data_transfer.html"><span class="doc">数据传递操作</span></a></p>
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../meshes/editing/data_transfer.html"><span class="doc">数据传递操作</span></a></p>
 </div>
 </div>
 </div>
@@ -364,7 +420,7 @@
         <a href="mesh_cache.html" class="btn btn-neutral float-right" title="网格缓存修改器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../common_options.html" class="btn btn-neutral float-left" title="常见的修改器选项" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

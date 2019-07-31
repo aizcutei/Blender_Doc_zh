@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/deveditors/index.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/index.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3D视图" href="3dview/index.html" />
-    <link rel="prev" title="标注工具" href="../interface/annotation_tool.html" /> 
+    <link rel="prev" title="选择" href="../interface/selecting.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,51 +113,41 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">编辑器</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#general">常规</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="3dview/index.html">3D视图</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uv_image/index.html">UV/图像编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="node_editor/index.html">节点编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="vse/index.html">视频序列编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3dview/index.html">3D视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uv/index.html">UV编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shader_editor/index.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compositing/index.html">Compositor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../video_editing/index.html">Video Sequencer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outliner.html">大纲视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="properties_editor.html">属性编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_browser.html">文件浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preferences/index.html">用户设置</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#animation">动画</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="dope_sheet/index.html">动画摄影表</a></li>
-<li class="toctree-l3"><a class="reference internal" href="timeline.html">时间轴编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="graph_editor/index.html">曲线编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nla/index.html">NLA编辑器</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#scripting">脚本</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="text_editor.html">文本编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="python_console.html">Python 控制台</a></li>
-<li class="toctree-l3"><a class="reference internal" href="info/index.html">信息编辑器</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#data">数据</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="outliner.html">大纲视图</a></li>
-<li class="toctree-l3"><a class="reference internal" href="properties_editor.html">属性编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="file_browser/index.html">文件浏览器</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#other">其他</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="file_browser/index.html">文件浏览器</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
 </ul>
@@ -210,63 +219,52 @@
             
   <div class="section" id="editors">
 <span id="bpy-types-space"></span><span id="editors-index"></span><h1>编辑器<a class="headerlink" href="#editors" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-center" id="id1">
-<img alt="../_images/editors_index_menu.png" src="../_images/editors_index_menu.png" />
-<p class="caption"><span class="caption-text">编辑器选择菜单。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
 <p>Blender提供了一系列不同类型的 <em>编辑器</em> 来显示和修改不同类型的数据。</p>
 <p><em>编辑器类型</em> 选择菜单位于标题栏最左侧，用于更改该 <a class="reference internal" href="../interface/window_system/areas.html"><span class="doc">区域</span></a> 的编辑器类型。Blender中的每个区域都包含了全部类型的编辑器，并且可以同时打开多个同种类型的编辑器。</p>
 <p>常规界面的文档位于 <a class="reference internal" href="../interface/index.html"><span class="doc">用户界面</span></a> 一章。</p>
-<div class="section" id="general">
-<h2>常规<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id1">
+<img alt="../_images/editors_index_menu.png" src="../_images/editors_index_menu.png" />
+<p class="caption"><span class="caption-text">编辑器选择菜单。</span></p>
+</div>
+<p class="rubric">常规</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="3dview/index.html">3D视图</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uv_image/index.html">UV/图像编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="node_editor/index.html">节点编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vse/index.html">视频序列编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image/index.html">图像编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uv/index.html">UV编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shader_editor/index.html">着色器编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">Compositor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">Video Sequencer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clip/index.html">影片剪辑编辑器</a></li>
 </ul>
 </div>
-</div>
-<div class="section" id="animation">
-<h2>动画<a class="headerlink" href="#animation" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">动画</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dope_sheet/index.html">动画摄影表</a></li>
-<li class="toctree-l1"><a class="reference internal" href="timeline.html">时间轴编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timeline.html">Timeline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graph_editor/index.html">曲线编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nla/index.html">NLA编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nla/index.html">非线性动画</a></li>
 </ul>
 </div>
-</div>
-<div class="section" id="scripting">
-<h2>脚本<a class="headerlink" href="#scripting" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">脚本</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="text_editor.html">文本编辑器</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_console.html">Python 控制台</a></li>
-<li class="toctree-l1"><a class="reference internal" href="info/index.html">信息编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info_editor.html">信息编辑器</a></li>
 </ul>
 </div>
-</div>
-<div class="section" id="data">
-<h2>数据<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">数据</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="outliner.html">大纲视图</a></li>
 <li class="toctree-l1"><a class="reference internal" href="properties_editor.html">属性编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="file_browser/index.html">文件浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file_browser.html">文件浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences/index.html">用户设置</a></li>
 </ul>
-</div>
-</div>
-<div class="section" id="other">
-<h2>其他<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="file_browser/index.html">文件浏览器</a></li>
-</ul>
-</div>
 </div>
 </div>
 
@@ -281,7 +279,7 @@
         <a href="3dview/index.html" class="btn btn-neutral float-right" title="3D视图" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../interface/annotation_tool.html" class="btn btn-neutral float-left" title="标注工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../interface/selecting.html" class="btn btn-neutral float-left" title="选择" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

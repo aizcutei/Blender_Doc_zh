@@ -1,0 +1,462 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>衰减编辑 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/scene_layout/object/editing/transform/control/proportional_edit.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="变换工具" href="../tools.html" />
+    <link rel="prev" title="活动元素" href="pivot_point/active_element.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">场景 &amp; 物体</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../scene/index.html">场景</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">物体</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../types.html">物体类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../origin.html">物体原点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selecting.html">选择</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">编辑</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../duplication.html">副本</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../toolbar/index.html">工具栏</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../collections/index.html">集合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../view_layers/index.html">视图层</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">场景 &amp; 物体</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">物体</a> &raquo;</li>
+        
+          <li><a href="../../index.html">编辑</a> &raquo;</li>
+        
+          <li><a href="../index.html">变换</a> &raquo;</li>
+        
+          <li><a href="index.html">变换控件</a> &raquo;</li>
+        
+      <li>衰减编辑</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../_sources/scene_layout/object/editing/transform/control/proportional_edit.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="proportional-edit">
+<h1>衰减编辑<a class="headerlink" href="#proportional-edit" title="Permalink to this headline">¶</a></h1>
+<p>衰减编辑是一种转换选定元素（如顶点）的方法，同时还会影响附近的其他元素。例如，单个顶点的移动导致未选顶点在给定范围内移动。更靠近所选顶点的未选顶点将移动的距离远远多于较远的顶点（即，它们将相对于所选元素的位置成比例地移动）。由于衰减编辑会影响附近的几何图形，因此当你需要使密集网格的表面平滑变形时将非常有用。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>雕刻</p>
+<p class="last">Blender还有 <a class="reference internal" href="../../../../../sculpt_paint/sculpting/index.html#painting-sculpting-index"><span class="std std-ref">雕刻</span></a>  包含用于编辑网格的衰减笔刷和工具, 而不是编辑单个顶点。</p>
+</div>
+<div class="section" id="object-mode">
+<h2>物体模式<a class="headerlink" href="#object-mode" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body">通过标题栏中的 <img alt="prop-edit-icon" src="../../../../../_images/editors_3dview_object_editing_transform_control_proportional-edit_header.png" /> 图标。</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">O</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>衰减编辑通常用在 <em>编辑模式</em>，但是，也可以在 <em>物体模式</em>。在 <em>物体模式</em> 下该工具作用于物体整体而非独立的网络元素。</p>
+<p>在下图中，沿Z轴缩放右侧的圆柱体。当开启 <em>衰减编辑</em> 时，邻近的圆柱体同样位于工具的影响半径内。</p>
+<div class="figure" id="id1">
+<img alt="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_object-mode.png" src="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_object-mode.png" />
+<p class="caption"><span class="caption-text">在物体模式的衰减编辑。</span></p>
+</div>
+</div>
+<div class="section" id="edit-mode">
+<h2>编辑模式<a class="headerlink" href="#edit-mode" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 衰减编辑</span> 并通过 <img alt="prop-edit-icon" src="../../../../../_images/editors_3dview_object_editing_transform_control_proportional-edit_header.png" /> 高亮图标</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">O</kbd>, <kbd class="kbd docutils literal notranslate">Alt-O</kbd>, <kbd class="kbd docutils literal notranslate">Shift-O</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>使用密集的几何图形时，可能很难做到在对顶点进行微妙的调整时不会在模型表面产生可见的块和折痕。当你遇到像这样的情况时衰减编辑工具可以用来使模型表面平滑地变形。这是通过工具在给定范围内自动修改未选定的顶点来完成的。</p>
+<div class="figure" id="id2">
+<img alt="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_edit-mode.png" src="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_edit-mode.png" />
+<p class="caption"><span class="caption-text">在编辑模式中的衰减编辑。</span></p>
+</div>
+<div class="section" id="influence">
+<h3>影响<a class="headerlink" href="#influence" title="Permalink to this headline">¶</a></h3>
+<p>您可以使用鼠标滚轮分别增加或减小衰减编辑工具影响的半径 <kbd class="kbd docutils literal notranslate">WheelUp</kbd>, <kbd class="kbd docutils literal notranslate">WheelDown</kbd> 或 <kbd class="kbd docutils literal notranslate">PageUp</kbd>, <kbd class="kbd docutils literal notranslate">PageDown</kbd> 。当你改变半径时，围绕你选择的点将相应地调整它们的位置。</p>
+<div class="figure" id="id3">
+<img alt="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_influence.png" src="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_influence.png" />
+<p class="caption"><span class="caption-text">影响圆环。</span></p>
+</div>
+</div>
+<div class="section" id="options">
+<h3>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_tool.png"><img alt="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_tool.png" src="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_tool.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">衰减编辑工具。</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p><em>衰减编辑</em> 模式菜单在3D视图*标题栏上。</p>
+<dl class="docutils">
+<dt>禁用 <kbd class="kbd docutils literal notranslate">O</kbd>, <kbd class="kbd docutils literal notranslate">Alt-O</kbd></dt>
+<dd>衰减编辑关闭，只有选定的顶点会受到影响。</dd>
+<dt>启用 <kbd class="kbd docutils literal notranslate">O</kbd>, <kbd class="kbd docutils literal notranslate">Alt-O</kbd></dt>
+<dd>所选顶点以外的顶点在定义的半径范围内受到影响。</dd>
+<dt>从试图投射</dt>
+<dd><p class="first">在应用半径时忽略沿视图的深度。</p>
+<div class="last figure" id="id5">
+<a class="reference internal image-reference" href="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_2d-compare.png"><img alt="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_2d-compare.png" src="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_2d-compare.png" style="width: 560px;" /></a>
+<p class="caption"><span class="caption-text">常规和投射式 (2D) 衰减选项 (右) 之间的差异。</span></p>
+</div>
+</dd>
+<dt>仅相连项</dt>
+<dd>衰减不是仅制可以使用半径，而是通过连接的几何体进行扩展。这意味着你可以按比例（衰减）编辑手指中的顶点而不影响其他手指。当其他顶点在物理上接近（在3D空间中）时，它们随着网格的拓扑连接边远离。 <em>连接</em> 有效时，图标将显示灰色中心。此模式仅适用于 <em>编辑模式</em> 。</dd>
+</dl>
+<dl class="docutils" id="dview-transform-control-proportional-edit-falloff">
+<dt>衰减</dt>
+<dd>编辑时，你可以使用标题栏图标 <em>衰减</em> 菜单，或按下 <kbd class="kbd docutils literal notranslate">Shift-O</kbd> 来切换不同的选项，调整曲线轮廓。</dd>
+</dl>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id6">
+<a class="reference internal image-reference" href="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-constant.png"><img alt="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-constant.png" src="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-constant.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">常量，不衰减。</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id7">
+<a class="reference internal image-reference" href="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-random.png"><img alt="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-random.png" src="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-random.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">随机化衰减。</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id8">
+<a class="reference internal image-reference" href="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-linear.png"><img alt="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-linear.png" src="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-linear.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">线性衰减。</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id9">
+<a class="reference internal image-reference" href="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-sharp.png"><img alt="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-sharp.png" src="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-sharp.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">尖锐衰减。</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last figure" id="id10">
+<a class="reference internal image-reference" href="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-root.png"><img alt="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-root.png" src="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-root.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">根部衰减。</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id11">
+<a class="reference internal image-reference" href="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-sphere.png"><img alt="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-sphere.png" src="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-sphere.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">球形化衰减。</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id12">
+<a class="reference internal image-reference" href="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-smooth.png"><img alt="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-smooth.png" src="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-smooth.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">平滑衰减。</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id13">
+<a class="reference internal image-reference" href="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-inverse-square.png"><img alt="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-inverse-square.png" src="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_falloff-inverse-square.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">线性衰减。</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h3>示例<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>下图是开启 <em>衰减编辑</em>，通过向上移动三角化网格的顶点形成的low-poly 地貌渲染结果。</p>
+<div class="figure" id="id14">
+<a class="reference internal image-reference" href="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_landscape.jpg"><img alt="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_landscape.jpg" src="../../../../../_images/scene-layout_object_editing_transform_control_proportional-edit_landscape.jpg" style="width: 620px;" /></a>
+<p class="caption"><span class="caption-text">通过衰减编辑获得的地貌。</span></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tools.html" class="btn btn-neutral float-right" title="变换工具" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pivot_point/active_element.html" class="btn btn-neutral float-left" title="活动元素" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

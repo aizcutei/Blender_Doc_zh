@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Industry Compatible Keymap &mdash; Blender Manual</title>
+  <title>工业兼容键位映射 &mdash; Blender Manual</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devinterface/keymap/industry_compatible.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/keymap/industry_compatible.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="按钮" href="../controls/buttons/buttons.html" />
-    <link rel="prev" title="Default Keymap" href="blender_default.html" /> 
+    <link rel="prev" title="默认快捷键" href="blender_default.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,9 +115,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../splash.html">启动画面</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#window-system">窗口系统</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#keymap">键位映射</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="blender_default.html">Default Keymap</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Industry Compatible Keymap</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">通用快捷键</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blender_default.html">默认快捷键</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">工业兼容键位映射</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">常规</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#viewport">视图</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#selection">选择</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tools">工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-mode-tools">编辑模式工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#animation">动画</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#platform-specific-keys">平台特别键</a></li>
 </ul>
 </li>
 </ul>
@@ -108,18 +134,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -172,7 +199,7 @@
         
           <li><a href="../index.html">用户界面</a> &raquo;</li>
         
-      <li>Industry Compatible Keymap</li>
+      <li>工业兼容键位映射</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -192,188 +219,203 @@
            <div itemprop="articleBody">
             
   <div class="section" id="industry-compatible-keymap">
-<h1>Industry Compatible Keymap<a class="headerlink" href="#industry-compatible-keymap" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
-<p>While this is not a comprehensive list,
-this page shows common keys used in the industry compatible keymap.</p>
-<p class="rubric">General</p>
-<table class="colwidths-given docutils align-center">
+<h1>工业兼容键位映射<a class="headerlink" href="#industry-compatible-keymap" title="Permalink to this headline">¶</a></h1>
+<p>以下并不是一份完整的快捷键列表，只是列出了一些常用的工业标准兼容的快捷键。</p>
+<div class="section" id="general">
+<h2>常规<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">1</kbd> - <kbd class="kbd docutils literal notranslate">9</kbd></p></td>
-<td><p>Mode/Element switching</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">1</kbd> - <kbd class="kbd docutils literal notranslate">9</kbd></td>
+<td>切换 模式/元素</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">RMB</kbd></p></td>
-<td><p>Context menu</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">RMB</kbd></td>
+<td>上下文菜单</td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Tab</kbd></p></td>
-<td><p>Operator Search.</p></td>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">Tab</kbd></td>
+<td>操作搜索。</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Shift-Tab</kbd></p></td>
-<td><p>Quick access (favorites)</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">Shift-Tab</kbd></td>
+<td>快速访问（收藏）</td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Ctrl-D</kbd> / <kbd class="kbd docutils literal notranslate">Cmd-D</kbd></p></td>
-<td><p>Duplicate</p></td>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">Ctrl-D</kbd></td>
+<td>复制</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">P</kbd></p></td>
-<td><p>Set Parent</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">P</kbd></td>
+<td>设置父级</td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Return</kbd></p></td>
-<td><p>Rename</p></td>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">Return</kbd></td>
+<td>重命名</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Ctrl-Return</kbd> / <kbd class="kbd docutils literal notranslate">Cmd-Return</kbd></p></td>
-<td><p>Render</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">Ctrl-Return</kbd></td>
+<td>渲染</td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">B</kbd></p></td>
-<td><p>Proportional Editing / Soft Selection</p></td>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">B</kbd></td>
+<td>衰减编辑/软选择</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Ctrl-[</kbd> / <kbd class="kbd docutils literal notranslate">Cmd-[</kbd></p></td>
-<td><p>Toggle Toolbar</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">Ctrl-[</kbd></td>
+<td>切换工具条</td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Ctrl-]</kbd> / <kbd class="kbd docutils literal notranslate">Cmd-]</kbd></p></td>
-<td><p>Toggle Sidebar</p></td>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">Ctrl-]</kbd></td>
+<td>切换侧栏</td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Viewport</p>
-<table class="colwidths-given docutils align-center">
+</div>
+<div class="section" id="viewport">
+<h2>视图<a class="headerlink" href="#viewport" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Alt-LMB</kbd></p></td>
-<td><p>Orbit View</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">Alt-LMB</kbd></td>
+<td>旋转视图</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Alt-MMB</kbd></p></td>
-<td><p>Pan View</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">Alt-MMB</kbd></td>
+<td>平移视图</td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Alt-RMB</kbd></p></td>
-<td><p>Zoom View</p></td>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">Alt-RMB</kbd></td>
+<td>缩放视图</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">F1</kbd> - <kbd class="kbd docutils literal notranslate">F4</kbd></p></td>
-<td><p>Front/Side/Top/Camera Viewpoints</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">F1</kbd> - <kbd class="kbd docutils literal notranslate">F4</kbd></td>
+<td>前/侧/顶/摄影机视图</td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">F</kbd></p></td>
-<td><p>Frame Selected</p></td>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">F</kbd></td>
+<td>显示选择</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">A</kbd></p></td>
-<td><p>Frame All</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">A</kbd></td>
+<td>显示全部</td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Selection</p>
-<table class="colwidths-given docutils align-center">
+</div>
+<div class="section" id="selection">
+<h2>选择<a class="headerlink" href="#selection" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">LMB</kbd></p></td>
-<td><p>Select</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">LMB</kbd></td>
+<td>选择</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Ctrl-A</kbd> / <kbd class="kbd docutils literal notranslate">Cmd-A</kbd></p></td>
-<td><p>Select All</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">Ctrl-A</kbd></td>
+<td>选择全部</td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Shift-Ctrl-A</kbd> / <kbd class="kbd docutils literal notranslate">Shift-Cmd-A</kbd></p></td>
-<td><p>Deselect All</p></td>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">Shift-Ctrl-A</kbd></td>
+<td>取消全部选择</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Ctrl-I</kbd> / <kbd class="kbd docutils literal notranslate">Cmd-I</kbd></p></td>
-<td><p>Select Inverse</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">Ctrl-I</kbd></td>
+<td>反选</td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Up</kbd></p></td>
-<td><p>Select More</p></td>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">Up</kbd></td>
+<td>扩选</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Down</kbd></p></td>
-<td><p>Select Less</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">Down</kbd></td>
+<td>减选</td>
 </tr>
-<tr class="row-odd"><td><p>Double <kbd class="kbd docutils literal notranslate">LMB</kbd></p></td>
-<td><p>Select Loop</p></td>
+<tr class="row-odd"><td>Double <kbd class="kbd docutils literal notranslate">LMB</kbd></td>
+<td>循环选择</td>
 </tr>
-<tr class="row-even"><td><p>Double <kbd class="kbd docutils literal notranslate">Alt-LMB</kbd></p></td>
-<td><p>Select Ring</p></td>
+<tr class="row-even"><td>Double <kbd class="kbd docutils literal notranslate">Alt-LMB</kbd></td>
+<td>并排选择</td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">]</kbd></p></td>
-<td><p>Select Linked</p></td>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">]</kbd></td>
+<td>选择链接</td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Tools</p>
-<table class="colwidths-given docutils align-center">
+</div>
+<div class="section" id="tools">
+<h2>工具<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">W</kbd>, <kbd class="kbd docutils literal notranslate">E</kbd>, <kbd class="kbd docutils literal notranslate">R</kbd></p></td>
-<td><p>Transform Tools</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">W</kbd>, <kbd class="kbd docutils literal notranslate">E</kbd>, <kbd class="kbd docutils literal notranslate">R</kbd></td>
+<td>变换工具</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Q</kbd></p></td>
-<td><p>Box Select</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">Q</kbd></td>
+<td>框选</td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">D</kbd></p></td>
-<td><p>Annotate</p></td>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">D</kbd></td>
+<td>标注</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">C</kbd></p></td>
-<td><p>Cursor Tool</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">C</kbd></td>
+<td>游标工具</td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Edit Mode Tools</p>
-<table class="colwidths-given docutils align-center">
+</div>
+<div class="section" id="edit-mode-tools">
+<h2>编辑模式工具<a class="headerlink" href="#edit-mode-tools" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Ctrl-E</kbd> / <kbd class="kbd docutils literal notranslate">Cmd-E</kbd></p></td>
-<td><p>Extrude</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">Ctrl-E</kbd></td>
+<td>拉伸</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Ctrl-B</kbd> / <kbd class="kbd docutils literal notranslate">Cmd-B</kbd></p></td>
-<td><p>Bevel</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">Ctrl-B</kbd></td>
+<td>倒角</td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">I</kbd></p></td>
-<td><p>Inset</p></td>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">I</kbd></td>
+<td>内切</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">K</kbd></p></td>
-<td><p>Knife</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">K</kbd></td>
+<td>切割</td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Alt-C</kbd></p></td>
-<td><p>Loop Cut</p></td>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">Alt-C</kbd></td>
+<td>循环分割</td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Animation</p>
-<table class="colwidths-given docutils align-center">
+</div>
+<div class="section" id="animation">
+<h2>动画<a class="headerlink" href="#animation" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Spacebar</kbd></p></td>
-<td><p>Play/Pause</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">Spacebar</kbd></td>
+<td>播放/暂停</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">S</kbd></p></td>
-<td><p>Set Location + Rotation + Scale keyframe</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">S</kbd></td>
+<td>设置位置+选择+缩放的关键帧</td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Shift-S</kbd></p></td>
-<td><p>Insert Keyframe menu</p></td>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">Shift-S</kbd></td>
+<td>插入关键帧菜单</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Shift-W</kbd></p></td>
-<td><p>Set Location Key</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">Shift-W</kbd></td>
+<td>设置位置关键帧</td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Shift-E</kbd></p></td>
-<td><p>Set Rotation Key</p></td>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">Shift-E</kbd></td>
+<td>设置旋转关键帧</td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Shift-R</kbd></p></td>
-<td><p>Set Scale Key</p></td>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">Shift-R</kbd></td>
+<td>设置缩放关键帧</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="platform-specific-keys">
+<h2>平台特别键<a class="headerlink" href="#platform-specific-keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="macos">
+<h3>macOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h3>
+<p>在macOS操作系统中 <kbd class="kbd docutils literal notranslate">Cmd</kbd> 代表 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> ，但是有一些异常及与系统冲突。</p>
+</div>
 </div>
 </div>
 
@@ -388,7 +430,7 @@ this page shows common keys used in the industry compatible keymap.</p>
         <a href="../controls/buttons/buttons.html" class="btn btn-neutral float-right" title="按钮" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="blender_default.html" class="btn btn-neutral float-left" title="Default Keymap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="blender_default.html" class="btn btn-neutral float-left" title="默认快捷键" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

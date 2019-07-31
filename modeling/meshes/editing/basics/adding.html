@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/editing/basics/adding.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/basics/adding.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="删除 &amp; 融并" href="deleting.html" />
-    <link rel="prev" title="平移, 旋转, 缩放" href="translation_rotation_scale.html" /> 
+    <link rel="prev" title="Move, Rotate, Scale" href="move_rotate_scale.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,14 +113,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l4 current"><a class="reference internal" href="index.html">基础</a></li>
@@ -109,6 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../edges.html">边工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../faces.html">面工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../uv/index.html">UV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../transform/index.html">变形</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../duplicating/index.html">复制</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">细分</a></li>
@@ -119,7 +140,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../mesh_display.html">网格显示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
 </ul>
 </li>
@@ -131,16 +151,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -222,47 +243,52 @@
 <h1>添加几何体<a class="headerlink" href="#adding-geometry" title="Permalink to this headline">¶</a></h1>
 <p>使用Blender建模时，有下面几种添加网格元素的方法。</p>
 <div class="section" id="duplicate-or-extrude-to-cursor">
-<h2>复制或挤出至光标<a class="headerlink" href="#duplicate-or-extrude-to-cursor" title="Permalink to this headline">¶</a></h2>
+<span id="tool-mesh-extrude-cursor"></span><h2>复制或挤出至光标<a class="headerlink" href="#duplicate-or-extrude-to-cursor" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">快捷键</dt>
-<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>使用 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 在光标位置添加新的顶点。</p>
 <div class="section" id="creating-vertices">
 <h3>创建顶点<a class="headerlink" href="#creating-vertices" title="Permalink to this headline">¶</a></h3>
 <p>在不选中其他顶点的情况下，使用 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 添加最基础网格元素，顶点。由于摄像头空间(电脑屏幕)是二维的，Blender无法根据确定鼠标单击产生的顶点坐标，所以新添加的顶点是放置在3D游标所确定的平面上的。</p>
 <p>要创建连续的顶点，可以在添加一个顶点后，保持该顶点的选中状态，然后继续执行 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 操作。这样，会生成一条边，连接新生成的和上一步选中的顶点(见图 <a class="reference internal" href="#fig-mesh-basics-add-one"><span class="std std-ref">逐个添加顶点。</span></a>)。如果继续重复操作的话，会继续连接新生成的顶点。</p>
-<div class="figure align-center" id="id1">
+<div class="figure" id="id1">
 <span id="fig-mesh-basics-add-one"></span><img alt="../../../../_images/modeling_meshes_editing_basics_adding_vertex.png" src="../../../../_images/modeling_meshes_editing_basics_adding_vertex.png" />
-<p class="caption"><span class="caption-text">逐个添加顶点。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">逐个添加顶点。</span></p>
 </div>
 </div>
 <div class="section" id="creating-faces">
 <h3>创建面<a class="headerlink" href="#creating-faces" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center" id="id2">
+<div class="figure" id="id2">
 <img alt="../../../../_images/modeling_meshes_editing_basics_adding_quad.png" src="../../../../_images/modeling_meshes_editing_basics_adding_quad.png" />
-<p class="caption"><span class="caption-text">从一条边创建的四边形，初始边经过了自动旋转。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">从一条边创建的四边形，初始边经过了自动旋转。</span></p>
 </div>
 <p>如果选中了一条边的两个顶点， <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 单击创建一个平坦的表面，也叫做四边形。Blender会按照鼠标指针位置，从视图的观察平面创建四边形。</p>
 <p>对于 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd>，如果创建的面超过一个，Blender会自动旋转最后选中的边(初始边)，以平分新创建边与之前两条边之间的夹角，产生平滑的夹角过渡。Blender会计算新添加边的 X 与 Y坐标与前一个未选中边的夹角。如果该角度超出限制 (遵守象限法则)，Blender会折叠该面。如果不想要 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 基础操作的自动旋转和平滑效果，可以使用快捷键 <kbd class="kbd docutils literal notranslate">Ctrl-Shift-LMB</kbd> 抑制旋转。 这种情况下，Blender在创建面时不会对初始边进行旋转。</p>
-<p>在这两种情况下，Blender都会告知用户在创建过程中是否进行了旋转。按下 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 后，看着网格工具底部，可以发现旋转源选项已经自动勾选；如果用的是 <kbd class="kbd docutils literal notranslate">Ctrl-Shift-LMB</kbd>，则会自动取消勾选。</p>
+<p>For both cases, Blender will inform the user about the source rotation during the creation process.
+If you look at the <a class="reference internal" href="../../../../interface/undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> Panel and press <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd>,
+you will see that the Rotate Source is automatically checked and if <kbd class="kbd docutils literal notranslate">Shift-Ctrl-LMB</kbd> is used,
+it will be automatically unchecked.</p>
 <p>如果选中三个或更多顶点，按下 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd>，同样可以创建平坦面，不过是沿着光标的方向挤出选中的顶点。该操作与挤出操作类似，详情见 <a class="reference internal" href="../duplicating/extrude.html"><span class="doc">挤出</span></a> 页面。</p>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>在使用 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 添加物体时，对选定元素顶点、边和面的基础操作是依赖视图的。这意味着，一旦视图发生变化，比如从顶视图切换到左视图，底视图或右视图，挤出方向也会沿着视图方向，与观察平面对齐。</p>
+<p class="first admonition-title">Tip</p>
+<p class="last">在使用 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd> 添加物体时，对选定元素顶点、边和面的基础操作是依赖视图的。这意味着，一旦视图发生变化，比如从顶视图切换到左视图，底视图或右视图，挤出方向也会沿着视图方向，与观察平面对齐。</p>
 </div>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="make_face_edge.html"><span class="doc">创建边/面</span></a></p></li>
-<li><p><a class="reference internal" href="../duplicating/index.html"><span class="doc">复制工具</span></a></p></li>
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="make_face_edge.html"><span class="doc">创建边/面</span></a></li>
+<li><a class="reference internal" href="../duplicating/index.html"><span class="doc">复制工具</span></a></li>
 </ul>
 </div>
 </div>
@@ -280,7 +306,7 @@
         <a href="deleting.html" class="btn btn-neutral float-right" title="删除 &amp; 融并" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="translation_rotation_scale.html" class="btn btn-neutral float-left" title="平移, 旋转, 缩放" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="move_rotate_scale.html" class="btn btn-neutral float-left" title="Move, Rotate, Scale" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

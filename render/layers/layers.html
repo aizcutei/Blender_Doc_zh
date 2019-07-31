@@ -1,0 +1,437 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>视图层 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/layers/layers.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="通道" href="passes.html" />
+    <link rel="prev" title="层 &amp; 通道" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cameras.html">相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lights/index.html">Lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials/index.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_nodes/index.html">着色器节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../color_management.html">色彩管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">层 &amp; 通道</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">视图层</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">视图层</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#view-layer-panel">视图层面板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">用法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#collections">集合</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cycles">Cycles</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="passes.html">通道</a></li>
+<li class="toctree-l3"><a class="reference internal" href="denoising.html">降噪</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="index.html">层 &amp; 通道</a> &raquo;</li>
+        
+      <li>视图层</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/render/layers/layers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="view-layers">
+<span id="render-layers"></span><span id="bpy-types-renderlayer"></span><span id="bpy-types-scenerenderlayer"></span><h1>视图层<a class="headerlink" href="#view-layers" title="Permalink to this headline">¶</a></h1>
+<p>渲染可以被分成不同的层，然后将它们重新组合在一起。</p>
+<p>一些示例用法是将合成效果分别应用于角色，或分别为模糊背景和前景层用于景深，或渲染同一场景的不同光照变化。</p>
+<p>使用视图层还可以避免每次更改时重新渲染整个图像，从而允许您仅重新渲染所需的图层。</p>
+<div class="section" id="id1">
+<h2>视图层<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id2">
+<img alt="../../_images/render_layers_layers_list.png" src="../../_images/render_layers_layers_list.png" />
+<p class="caption"><span class="caption-text">视图层。</span></p>
+</div>
+<p>在屏幕顶部，有一个激活的场景中所有视图层的列表。</p>
+<dl class="docutils">
+<dt>添加视图层</dt>
+<dd>将向激活的场景添加新视图层。</dd>
+<dt>删除视图层</dt>
+<dd><p class="first">将从激活的场景中删除选择的视图层。</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">一个场景必须至少具有一个视图层。</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="view-layer-panel">
+<h2>视图层面板<a class="headerlink" href="#view-layer-panel" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">属性编辑器 ‣ 场景 ‣ 视图层</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure" id="id3">
+<img alt="../../_images/render_layers_layers_panel.png" src="../../_images/render_layers_layers_panel.png" />
+<p class="caption"><span class="caption-text">视图层面板(这里显示的是Eevee渲染引擎)</span></p>
+</div>
+<p>视图层面板显示活动的视图层的设置。</p>
+<dl class="docutils">
+<dt>用于渲染</dt>
+<dd>渲染期间将使用活动的视图层。</dd>
+<dt>渲染单个层</dt>
+<dd><p class="first">仅渲染激活的视图层。</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">从命令行渲染时，将忽略此选项。</p>
+</div>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">此面板中显示的其他选项对于每个渲染引擎都是不同的。有关每个渲染引擎的选项，请参见 <a class="reference internal" href="passes.html"><span class="doc">通道</span></a> 。</p>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>每个视图层都有一组相关的 <a class="reference internal" href="../../scene_layout/collections/collections.html"><span class="doc">集合</span></a> 。只要该集合也可见，则该视图层中将显示其中一个关联集合上的对象。</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">仅渲染可见场景中的对象。因此，如果只有集合1可见并且您的渲染层集指定仅渲染集合2和3，则不会渲染任何内容。</p>
+</div>
+</div>
+<div class="section" id="collections">
+<h2>集合<a class="headerlink" href="#collections" title="Permalink to this headline">¶</a></h2>
+<p>每个集合都可以调整渲染引擎渲染内部对象的方式。基于渲染引擎，可以设置不同的选项。</p>
+<div class="figure" id="id4">
+<img alt="../../_images/render_layers_layers_viewlayer-collection.png" src="../../_images/render_layers_layers_viewlayer-collection.png" />
+<p class="caption"><span class="caption-text">集合/视图层设置</span></p>
+</div>
+<dl class="docutils">
+<dt>从视图层禁用</dt>
+<dd>从活动视图层中排除该集合。仅在该集合中的对象不会为活动视图层进行渲染。</dd>
+<dt>在视图层中启用</dt>
+<dd>将该集合加入活动视图层。集合中的对象将使用活动视图层进行渲染。</dd>
+<dt>设为仅间接作用</dt>
+<dd>改集合中的对象仅通过阴影和反射间接地对最终图像做出贡献。</dd>
+<dt>清除仅间接作用</dt>
+<dd>清除“设为仅间接作用”标志。该集合中的对象将对最终图像作出正常的贡献。</dd>
+<dt>设为阻隔</dt>
+<dd>该集合中的对象将在活动视图层中生成一个阻隔/遮罩。</dd>
+<dt>清除阻隔</dt>
+<dd>清除“设为阻隔”标志。</dd>
+</dl>
+</div>
+<div class="section" id="cycles">
+<h2>Cycles<a class="headerlink" href="#cycles" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">视图层 ‣ 层</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>本节仅介绍适用于Cycles渲染器的渲染层设置。有关与该引擎无关的设置，请参阅 <a class="reference internal" href="#render-layers"><span class="std std-ref">本节</span></a> 。</p>
+<div class="section" id="view-layer">
+<h3>视图层<a class="headerlink" href="#view-layer" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>排除</dt>
+<dd>场景图层在所有渲染层之间是通用的; 但是，有时省略特定渲染层的某些对象是有用的。</dd>
+</dl>
+</div>
+<div class="section" id="filter">
+<h3>滤镜(过滤)<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>启用环境</dt>
+<dd>启用在最终渲染中渲染 <em>环境</em> 。</dd>
+<dt>启用环境光这笔（AO）</dt>
+<dd>启用在最终渲染中渲染 <em>环境光遮蔽（AO）</em> 。</dd>
+<dt>启用面</dt>
+<dd>启用在最终渲染中渲染实体材质。</dd>
+<dt>启用毛发</dt>
+<dd>启用在最终渲染中渲染头毛发。</dd>
+<dt>启用Freestyle</dt>
+<dd>启用在最终渲染中渲染Freestyle。</dd>
+</dl>
+</div>
+<div class="section" id="override">
+<h3>覆盖<a class="headerlink" href="#override" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>材质覆盖</dt>
+<dd>覆盖该视图层中的所有材质。</dd>
+<dt>采样</dt>
+<dd>视图层采样次数覆盖场景采样次数。由采样面板中的 <a class="reference internal" href="../cycles/render_settings/sampling.html#render-cycles-integrator-layer-samples"><span class="std std-ref">图层采样</span></a> 控制。</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="passes.html" class="btn btn-neutral float-right" title="通道" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="层 &amp; 通道" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

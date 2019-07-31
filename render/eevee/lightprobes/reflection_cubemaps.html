@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>立方体反射 &mdash; Blender Manual</title>
+  <title>立方体（盒）反射 &mdash; Blender Manual</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devrender/eevee/lightprobes/reflection_cubemaps.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/eevee/lightprobes/reflection_cubemaps.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="反射平面" href="reflection_planes.html" />
@@ -94,52 +113,48 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../lighting/index.html">灯光</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Eevee 渲染器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Eevee</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../render_settings/index.html">渲染设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../materials/index.html">材质</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../world.html">世界</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lamps.html">灯光</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../shadows.html">阴影</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../volumetrics.html">Volumetrics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../screen_space_effects/index.html">屏幕空间效果</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../indirect_lighting.html">间接照明缓存</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../world.html">世界环境</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting.html">灯光设置</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">光照探头</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="irradiance_volumes.html">辐射体积</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">立方体反射</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">立方体（盒）反射</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reflection_planes.html">反射平面</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../motion_blur.html">运动模糊</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../bloom.html">泛光</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../depth_of_field.html">景深</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../limitations.html">限制</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../cycles/index.html">Cycles渲染引擎</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../workbench/index.html">Workbench Engine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染输出</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cycles/index.html">Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workbench/index.html">Workbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cameras.html">相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lights/index.html">Lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../materials/index.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shader_nodes/index.html">着色器节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../color_management.html">色彩管理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">工作流</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../opengl.html">OpenGL渲染</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../audio/index.html">音频渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染输出</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -192,11 +207,11 @@
         
           <li><a href="../../index.html">渲染</a> &raquo;</li>
         
-          <li><a href="../index.html">Eevee 渲染器</a> &raquo;</li>
+          <li><a href="../index.html">Eevee</a> &raquo;</li>
         
           <li><a href="index.html">光照探头</a> &raquo;</li>
         
-      <li>立方体反射</li>
+      <li>立方体（盒）反射</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -216,44 +231,49 @@
            <div itemprop="articleBody">
             
   <div class="section" id="reflection-cubemaps">
-<h1>立方体反射<a class="headerlink" href="#reflection-cubemaps" title="Permalink to this headline">¶</a></h1>
-<p>间接光高光存储至立方体阵列中。这些都是通过立方体反射物体定义的。它们指定了从何处对场景光照进行采样，然后在何处应用。</p>
+<h1>立方体（盒）反射<a class="headerlink" href="#reflection-cubemaps" title="Permalink to this headline">¶</a></h1>
+<p>间接反射被存储在立方体贴图阵列中。从哪里对场景光照进行采样，然后在哪里应用，这些属性都通过立方体反射物体来定义。</p>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="../indirect_lighting.html"><span class="doc">间接光</span></a>.</p>
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../render_settings/indirect_lighting.html"><span class="doc">间接光照明。</span></a></p>
 </div>
-<p><em>屏幕空间反射</em> 比立方体反射要精确更多。启用后，将优先应用屏幕空间反馈，只有在光线缺失时使用立方体反射替代。</p>
-<p>如果启用 <em>环境光遮蔽</em>，将以物理合理的方式应用于间接光高光。</p>
+<p><em>屏幕空间反射</em> 比立方体反射要精确更多。启用后，优先使用屏幕空间反射，只有在光线无法采样时则使用立方体反射作补充。</p>
+<p>如果启用 <em>环境光遮蔽</em>，将以物理合理的方式应用于间接光反射。</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>立方体探头被编码为四面体映射。Z向为负的半球可能会出现一些畸变，粗糙度越高越明显。</p>
+<p class="first admonition-title">Note</p>
+<p class="last">The cube probes are encoded into tetrahedral maps. Some distortions may occur on the negative Z hemisphere. Those are more visible with higher roughness values.（立方体探头被编码为四面体映射。Z向为负的半球可能会出现一些畸变，粗糙度越高越明显。）</p>
 </div>
 <div class="section" id="blending">
 <h2>混合<a class="headerlink" href="#blending" title="Permalink to this headline">¶</a></h2>
-<p>来自立方体反射的光照数值会向外逐渐衰弱，直到触及体积边界。它们会衰减至融入世界光照或另一个立方体反射光照。如果多个立方体光照重叠，体积较小的优先。如果物体不在任何立方体反射影响范围内，或者间接光没有烘焙，将使用世界立体对其进行着色。</p>
+<p>来自立方体反射的光照强度会向外逐渐衰弱，直到边界。它们会衰减至融入到场景光照或另一个立方体反射光照。如果多个立方体光照重叠，则优先考虑体积较小的立方体反射。如果物体不在任何立方体反射影响范围内，或者间接光没有烘焙，将使用场景立方体对其进行着色。</p>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">面板</dt>
-<dd class="field-odd"><p><span class="menuselection">物体数据 ‣ 探头</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">物体数据 ‣ 光照探头</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<dl>
-<dt>距离</dt><dd><p>探头物体仅影响其邻近表面的光照，其作用区域由距离参数与物体定义。各探头类型间有细微差别。</p>
-<p>对于立方体反射，受影响的体积可以是一个以探头原心为中心的盒形或球形。</p>
+<dl class="docutils">
+<dt>距离</dt>
+<dd><p class="first">探头物体仅影响其邻近表面的反射，由距离参数与探头大小决定影响区域。不同探头类型间有细微差别。</p>
+<p class="last">对于立方体反射，受影响的空间可以是一个以探头原心为中心的盒形或球形。</p>
 </dd>
-<dt>衰减</dt><dd><p>影响距离的百分比，探头的影响沿其线性衰减。</p>
-</dd>
-<dt>强度</dt><dd><p>被记录的光照的强度系数。将该参数值设为1.0之外的傎都不是物理正确的。用于微调或艺术目的。</p>
-</dd>
-<dt>范围限制</dt><dd><p>定义当捕捉屏幕时的近距与远距裁减。</p>
-</dd>
-<dt>可见性集合</dt><dd><p>有时，限制探头捕捉光照时出现物体很有用。比如，当一个物体距离捕捉点过近时，最好将其剔除。这就是可见性集合的用处。只有在该集合内的物体才会在探头捕捉场景时可见。</p>
-<p>另有一个选项可以反转该行为, 并有效地隐藏此集合中的物体。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>这仅仅是一个过滤选项。如果一个物体在渲染时不可见，它在探头渲染器中也是不可见的。</p>
+<dt>衰减</dt>
+<dd>影响距离的百分比，探头的作用将沿其线性衰减。</dd>
+<dt>强度</dt>
+<dd>被记录光照的强度系数。将该参数值设为1.0之外的值都不是物理正确的。可以将它调整达到艺术目的。</dd>
+<dt>剪裁范围</dt>
+<dd>定义探头探测场景来烘焙贴图的最小距离和最大距离范围。</dd>
+<dt>可见性集合</dt>
+<dd><p class="first">当物体距离探头过近时，会影响探头探测场景来烘焙光照贴图。可见性集合可以使仅该集合（群组）物体可被探头采集到光照信息。</p>
+<p>另有一个选项可以反转该集合, 并隐藏此集合中的物体，不会被探头采集光照信息烘焙到反射贴图中。</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">这只是一个过滤选项。如果一个物体在渲染时不可见，那么它在探头烘焙中也是不可见的。</p>
 </div>
 </dd>
 </dl>
@@ -261,24 +281,27 @@
 <div class="section" id="custom-parallax">
 <h2>自定义视差<a class="headerlink" href="#custom-parallax" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">面板</dt>
-<dd class="field-odd"><p><span class="menuselection">物体数据 ‣ 自定义视差</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">物体数据 ‣ 自定义视差</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>默认情况下, 影响体积也是视差体积。视差体积是记录的光照投射的体积。它应该大致适合周围。在某些情况下, 最好在不触及影响参数的情况下调整视差体积。在这种情况下, 只需启用 <em>自定义视差</em> 并单独修改视差体积的形状和距离。</p>
 </div>
 <div class="section" id="viewport-display">
 <h2>视图显示<a class="headerlink" href="#viewport-display" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>影响</dt><dd><p>在3D视图中显示影响边界。靠内的球体是衰减开始的地方。</p>
-</dd>
-<dt>范围限制</dt><dd><p>在3D 视图中显示裁减距离。</p>
-</dd>
-<dt>视差</dt><dd><p>在3D 视图中显示 <em>自定义视差</em> 外形。</p>
-</dd>
+<dl class="docutils">
+<dt>影响</dt>
+<dd>在3D视图中显示影响边界。靠内的边界是衰减开始的地方。</dd>
+<dt>剪裁范围</dt>
+<dd>在3D 视图中显示裁减距离。</dd>
+<dt>视差</dt>
+<dd>在3D 视图中显示 <em>自定义视差</em> 外形。</dd>
 </dl>
 </div>
 </div>

@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devtroubleshooting/recover.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/troubleshooting/recover.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="词汇表" href="../glossary/index.html" />
@@ -94,18 +113,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">问题排查</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="startup.html">启动</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3d_view.html">3D视图</a></li>
@@ -198,38 +218,40 @@
 <p>计算机崩溃，停电或者仅仅忘记保存可能会导致工作内容丢失或损坏。可以使用Blender的 <em>自动保存</em> 功能来减少发生此类事件时丢失文件的机会。</p>
 <p>保存文件备份有几个选择，如 <em>自动保存</em> 可按时间自动保存文件， <em>退出时保存</em> 会在退出Blender时自动保存blend文件。除了这些默认启用的功能之外， <em>退出时保存</em> 的功能无法禁用。</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>操作方面，有 <em>撤销</em>， <em>重做</em>，和 <em>撤消历史</em> 选项,用于回滚到错误操作之前，或返回到特定操作。见 <a class="reference internal" href="../interface/undo_redo.html"><span class="doc">撤销 &amp; 重做</span></a>。</p>
+<p class="first admonition-title">Note</p>
+<p class="last">操作方面，有 <em>撤销</em>， <em>重做</em>，和 <em>撤消历史</em> 选项,用于回滚到错误操作之前，或返回到特定操作。见 <a class="reference internal" href="../interface/undo_redo.html"><span class="doc">撤销 &amp; 重做</span></a>。</p>
 </div>
-<p><em>用户设置</em> 的 <em>文件</em> 选项卡提供了两种配置选择，用于回溯前期版本的工作。更多细节见 <a class="reference internal" href="../preferences/file.html#prefs-auto-save"><span class="std std-ref">自动保存设置</span></a>。</p>
+<p><em>设置</em> 的 <em>文件</em> 选项卡提供了两种配置选择，用于回溯前期版本的工作.更多细节见 <a class="reference internal" href="../editors/preferences/save_load.html#prefs-auto-save"><span class="std std-ref">自动保存设置</span></a> 。</p>
 <div class="section" id="recovering-auto-saves">
 <span id="troubleshooting-file-recovery"></span><h2>恢复自动保存<a class="headerlink" href="#recovering-auto-saves" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">文件 ‣ 恢复最近的一次工程</span></p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">文件‣ 恢复到自动存档文件...</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">文件 ‣ 恢复 ‣ 最近的对话</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">文件 ‣ 恢复 ‣ 自动保存...</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="recover-last-session">
 <h3>恢复最近的一次工程<a class="headerlink" href="#recover-last-session" title="Permalink to this headline">¶</a></h3>
-<p><em>恢复最近的一次工程</em> 会打开上一次正常操作退出Blender后保存至 <a class="reference internal" href="../getting_started/installing/configuration/directories.html#temp-dir"><span class="std std-ref">临时目录</span></a> 下的 <code class="docutils literal notranslate"><span class="pre">quit.blend</span></code>。要注意的是，这些保存在临时文件夹的文件可能会在重启电脑后被删除(取决于系统设置)。</p>
+<p><em>恢复最近的一次工程</em> 会打开上一次正常操作退出Blender后保存至 <a class="reference internal" href="../advanced/blender_directory_layout.html#temp-dir"><span class="std std-ref">临时目录</span></a> 下的 <code class="docutils literal notranslate"><span class="pre">quit.blend</span></code>。要注意的是，这些保存在临时文件夹的文件可能会在重启电脑后被删除(取决于系统设置)。</p>
 </div>
 <div class="section" id="recover-auto-save">
 <h3>恢复自动保存的工程<a class="headerlink" href="#recover-auto-save" title="Permalink to this headline">¶</a></h3>
-<p><em>恢复到自动存档文件</em> 用于打开 <em>自动保存</em> 的文件。用户需要浏览 <a class="reference internal" href="../getting_started/installing/configuration/directories.html#temp-dir"><span class="std std-ref">临时目录</span></a>。 <em>自动保存</em> 的文件会以随机数字命名，并且扩展名为blend。</p>
-<p>重要的是，在浏览时启用详细列表视图。否则，你将无法得知自动保存的blend文件的时间。见 Fig. <a class="reference internal" href="#fig-troubleshooting-file-browser"><span class="std std-ref">选择详细视图的文件浏览器。</span></a>。</p>
-<div class="figure align-center" id="id1">
+<p><em>恢复到自动存档文件</em> 用于打开 <em>自动保存</em> 的文件。用户需要浏览 <a class="reference internal" href="../advanced/blender_directory_layout.html#temp-dir"><span class="std std-ref">临时目录</span></a>。 <em>自动保存</em> 的文件会以随机数字命名，并且扩展名为blend。</p>
+<p>重要的是，在浏览时启用详细列表视图。否则，你将无法得知自动保存的blend文件的时间。见 Fig. <a class="reference internal" href="#fig-troubleshooting-file-browser"><span class="std std-ref">选择详细视图的文件浏览器</span></a></p>
+<div class="figure" id="id1">
 <span id="fig-troubleshooting-file-browser"></span><img alt="../_images/troubleshooting_recover_display-file-date.png" src="../_images/troubleshooting_recover_display-file-date.png" />
-<p class="caption"><span class="caption-text">选择详细视图的文件浏览器。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">选择详细视图的文件浏览器</span></p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>恢复 <em>自动保存</em> 的文件时，将失去自上次 <em>自动保存</em> 以来所做的所有更改。每个项目只有一个 <em>自动保存</em> 文件，即Blender不保留旧版本。因此，使用该工具将无法回滚至超过数分钟前的文件状态。</p>
+<p class="first admonition-title">Warning</p>
+<p class="last">恢复 <em>自动保存</em> 的文件时，将失去自上次 <em>自动保存</em> 以来所做的所有更改。每个项目只有一个 <em>自动保存</em> 文件，即Blender不保留旧版本。因此，使用该工具将无法回滚至超过数分钟前的文件状态。</p>
 </div>
 </div>
 </div>

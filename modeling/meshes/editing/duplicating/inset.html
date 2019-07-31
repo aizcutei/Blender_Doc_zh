@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/editing/duplicating/inset.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/duplicating/inset.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="旋绕" href="spin.html" />
@@ -94,14 +113,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/index.html">基础</a></li>
@@ -109,6 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../edges.html">边工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../faces.html">面工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../uv/index.html">UV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../transform/index.html">变形</a></li>
 <li class="toctree-l4 current"><a class="reference internal" href="index.html">复制</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">细分</a></li>
@@ -119,7 +140,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../mesh_display.html">网格显示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
 </ul>
 </li>
@@ -131,16 +151,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -219,40 +240,40 @@
            <div itemprop="articleBody">
             
   <div class="section" id="inset-faces">
-<h1>内插面<a class="headerlink" href="#inset-faces" title="Permalink to this headline">¶</a></h1>
+<span id="tool-mesh-inset-faces"></span><h1>内插面<a class="headerlink" href="#inset-faces" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 网格工具 ‣ 添加: 内插面</span></p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">网格 ‣ 面 ‣ 内插面</span></p>
-</dd>
-<dt class="field-even">快捷键</dt>
-<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">I</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ Mesh Tools ‣ Add: Inset Faces</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面 ‣ 内插面</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">I</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>该工具接受当前选中面，并创建其内插面，厚度和深度可调节。可以将其相像为创建一组循环边，但仅相对于选中连线，即使是在复杂的网格结构中。</p>
 <p>该工具是模态化的，在使用它时，可以通过鼠标位置调节插入的厚度。也可以在操作过程中按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 来调节插入的深度。</p>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_inset_before.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_inset_before.png" src="../../../../_images/modeling_meshes_editing_duplicating_inset_before.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">要执行内插面的选中项。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">要执行内插面的选中项。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id2">
+<td><div class="first last figure" id="id2">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_inset_after.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_inset_after.png" src="../../../../_images/modeling_meshes_editing_duplicating_inset_after.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">执行内插面后的选中项。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">执行内插面后的选中项。</span></p>
 </div>
 </td>
 </tr>
@@ -262,29 +283,29 @@
 <h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-right" id="id3">
 <img alt="../../../../_images/modeling_meshes_editing_duplicating_inset_options.png" src="../../../../_images/modeling_meshes_editing_duplicating_inset_options.png" />
-<p class="caption"><span class="caption-text">内插面操作选项。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">内插面操作选项。</span></p>
 </div>
-<dl class="simple">
-<dt>边界 <kbd class="kbd docutils literal notranslate">B</kbd></dt><dd><p>决定是否对开放边界线(仅有1个相邻面的边线)进行插入。</p>
-</dd>
-<dt>均等偏移</dt><dd><p>缩放偏移量以获得更均匀的厚度。</p>
-</dd>
-<dt>相对偏移</dt><dd><p>使用临近的几何体缩放偏移量。</p>
-</dd>
-<dt>并排边</dt><dd><p>沿内部几何体的原始边，而非其法向，滑动以创建顶点。</p>
-</dd>
-<dt>厚度</dt><dd><p>设置偏移量大小。</p>
-</dd>
-<dt>深度 <kbd class="kbd docutils literal notranslate">Ctrl</kbd></dt><dd><p>升高或降低新生成的内插面来增加层次感。</p>
-</dd>
-<dt>外插 <kbd class="kbd docutils literal notranslate">O</kbd></dt><dd><p>创建外插面，而非内插面。在选中项的四周(而非内侧)创建几何体。</p>
-</dd>
-<dt>选择外侧</dt><dd><p>切换内插面操作后内侧或外侧被选中。</p>
-</dd>
-<dt>各面 <kbd class="kbd docutils literal notranslate">I</kbd></dt><dd><p>内插面工具默认只操作选中面四周的区域，勾选该项后，会对每个选中面分别执行内插操作。</p>
-</dd>
-<dt>插值</dt><dd><p>对网格数据如：UV、顶点色、权重等进行插值。</p>
-</dd>
+<dl class="docutils">
+<dt>边界 <kbd class="kbd docutils literal notranslate">B</kbd></dt>
+<dd>决定是否对开放边界线(仅有1个相邻面的边线)进行插入。</dd>
+<dt>均等偏移</dt>
+<dd>缩放偏移量以获得更均匀的厚度。</dd>
+<dt>相对偏移</dt>
+<dd>使用临近的几何体缩放偏移量。</dd>
+<dt>并排边</dt>
+<dd>沿内部几何体的原始边，而非其法向，滑动以创建顶点。</dd>
+<dt>厚度</dt>
+<dd>设置偏移量大小。</dd>
+<dt>深度 <kbd class="kbd docutils literal notranslate">Ctrl</kbd></dt>
+<dd>升高或降低新生成的内插面来增加层次感。</dd>
+<dt>外插 <kbd class="kbd docutils literal notranslate">O</kbd></dt>
+<dd>创建外插面，而非内插面。在选中项的四周(而非内侧)创建几何体。</dd>
+<dt>选择外侧</dt>
+<dd>切换内插面操作后内侧或外侧被选中。</dd>
+<dt>各面 <kbd class="kbd docutils literal notranslate">I</kbd></dt>
+<dd>内插面工具默认只操作选中面四周的区域，勾选该项后，会对每个选中面分别执行内插操作。</dd>
+<dt>插值</dt>
+<dd>对网格数据如：UV、顶点色、权重等进行插值。</dd>
 </dl>
 </div>
 </div>

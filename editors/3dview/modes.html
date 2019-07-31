@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/deveditors/3dview/modes.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/3dview/modes.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="视图浏览" href="navigate/index.html" />
@@ -94,43 +113,57 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#general">常规</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">3D视图</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="startup_scene.html">启动场景</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">物体模式</a></li>
-<li class="toctree-l4"><a class="reference internal" href="navigate/index.html">视图浏览</a></li>
-<li class="toctree-l4"><a class="reference internal" href="3d_cursor.html">3D游标</a></li>
-<li class="toctree-l4"><a class="reference internal" href="object/index.html">物体</a></li>
-<li class="toctree-l4"><a class="reference internal" href="properties/index.html">属性</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ruler_protractor.html">3D量尺 &amp; 量角器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">3D视图</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="startup_scene.html">启动场景</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">物体模式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#object-mode-list">Object Mode List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multi-object-modes">Multi-Object Modes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../uv_image/index.html">UV/图像编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../node_editor/index.html">节点编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../vse/index.html">视频序列编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="navigate/index.html">视图浏览</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3d_cursor.html">3D游标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selecting.html">Selecting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controls/index.html">Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolbar/index.html">Toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viewport_render.html">Viewport Render</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#animation">动画</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#scripting">脚本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#data">数据</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uv/index.html">UV编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_editor/index.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compositing/index.html">Compositor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../video_editing/index.html">Video Sequencer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outliner.html">大纲视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../properties_editor.html">属性编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../file_browser.html">文件浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -206,131 +239,142 @@
             
   <div class="section" id="object-modes">
 <h1>物体模式<a class="headerlink" href="#object-modes" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-right" id="id11">
+<div class="figure align-right" id="id1">
 <span id="fig-view3d-mode-select"></span><img alt="../../_images/editors_3dview_modes_menu.png" src="../../_images/editors_3dview_modes_menu.png" />
-<p class="caption"><span class="caption-text">模式选择菜单。</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">模式选择菜单。</span></p>
 </div>
-<p><em>模式</em> 是一个Blender面向物体级别的功能，这意味着整个Blender应用程序总是处于在单一模式，而且模式根据所选激活物体的类型不同而有所不同 - 其中大多数只能启用默认的 <em>物体模式</em> （如相机，灯光等）。每种模式都是用来编辑所选物体的某个​​方面的。详情请参阅 <a class="reference internal" href="#tab-view3d-modes"><span class="std std-ref">Blender的模式</span></a>。</p>
-<p>你可以在 <em>3D视图</em> 的标题栏的 <em>Mode</em> 下拉列表设置当前的选择模式 (见图 <a class="reference internal" href="#fig-view3d-mode-select"><span class="std std-ref">模式选择菜单。</span></a>)。</p>
+<p><em>Modes</em> are an object-oriented feature, which means that the available modes vary
+depending on the selected active object's type -- most of them only enable
+the default <em>Object Mode</em> (like cameras, lights, etc.).</p>
+<p>Each mode is designed to edit an aspect of the selected object.
+See Tab. <a class="reference internal" href="#tab-view3d-modes"><span class="std std-ref">Blender的模式</span></a> below for details.</p>
+<p>You set the current mode in the <em>Mode</em> selector of 3D View header
+(see Fig. <a class="reference internal" href="#fig-view3d-mode-select"><span class="std std-ref">模式选择菜单。</span></a>).</p>
 <div class="lead docutils container">
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>用户仅可以在 <em>物体模式</em> 选择物体，在其它的模式下，当前物体的选择状态是被 &quot;锁定的&quot; (某种程度上说，骨架的 <em>姿态模式</em> 例外)。</p>
-</div>
-<p>在Blender中，模式可以影响许多事情:</p>
+<p>Modes can affect many things in Blender:</p>
 <ul class="simple">
-<li><p>它们会修改面板和/或某些属性编辑器选项卡中可用的控件。</p></li>
-<li><p>它们会修改整个编辑器的行为, 比如 <em>UV/图像编辑器</em> 和 <em>3D 视图</em>。</p></li>
-<li><p>它们会修改可用的标题栏工具 (菜单和/或菜单选项,以及其它的控件…)。例如,在 <em>3D 视图</em> 编辑器窗口, 在 <em>物体模式</em> 下的 <em>物体</em> 菜单， 在 <em>编辑模式</em> 下变成 <em>网格</em> 菜单 (用于编辑当前的活动网格物体)，在 <em>顶点绘制模式</em> 模式则是 <em>绘制</em> 菜单…</p></li>
+<li>它们会修改面板和/或某些属性编辑器选项卡中可用的控件。</li>
+<li>They can modify the behavior of the whole editor, like e.g. the UV Editor and 3D View.</li>
+<li>They can modify the available header tools (menus and/or menu entries, as well as other controls...).
+For example, in the 3D Viewport, the <em>Object</em> menu in Object Mode changes to a <em>Mesh</em> menu in Edit Mode
+(with an active mesh object!), and a <em>Paint</em> menu in Vertex Paint Mode...</li>
+<li>They can modify the available shortcuts.</li>
 </ul>
-<span id="tab-view3d-modes"></span><table class="colwidths-given valign docutils align-center" id="blender">
+<div class="section" id="object-mode-list">
+<h2>Object Mode List<a class="headerlink" href="#object-mode-list" title="Permalink to this headline">¶</a></h2>
+<span id="tab-view3d-modes"></span><table border="1" class="colwidths-given valign docutils" id="blender">
 <caption><span class="caption-text">Blender的模式</span><a class="headerlink" href="#blender" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 24%" />
-<col style="width: 16%" />
-<col style="width: 50%" />
+<col width="12%" />
+<col width="29%" />
+<col width="60%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>图标</p></th>
-<th class="head"><p>名称</p></th>
-<th class="head"><p>快捷键</p></th>
-<th class="head"><p>技术细节</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">图标</th>
+<th class="head">名称</th>
+<th class="head">技术细节</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><div class="figure align-center">
+<tbody valign="top">
+<tr class="row-even"><td><div class="first last figure">
 <img alt="../../_images/editors_3dview_modes_icons-object-mode.png" src="../../_images/editors_3dview_modes_icons-object-mode.png" />
 </div>
 </td>
-<td><p><a class="reference internal" href="object/index.html"><span class="doc">物体模式</span></a></p></td>
-<td><p><em>None</em> <a class="footnote-reference brackets" href="#id9" id="id1">1</a></p></td>
-<td><p>默认模式,，适用于所有的物体类型，专用于编辑 <em>物体</em> 数据块(比如位置/旋转/大小)。</p></td>
+<td><a class="reference internal" href="../../scene_layout/object/index.html"><span class="doc">Object Mode</span></a></td>
+<td>默认模式,，适用于所有的物体类型，专用于编辑 <em>物体</em> 数据块(比如位置/旋转/大小)。</td>
 </tr>
-<tr class="row-odd"><td><div class="figure align-center">
+<tr class="row-odd"><td><div class="first last figure">
 <img alt="../../_images/editors_3dview_modes_icons-edit-mode.png" src="../../_images/editors_3dview_modes_icons-edit-mode.png" />
 </div>
 </td>
-<td><p><a class="reference internal" href="../../modeling/index.html"><span class="doc">编辑模式</span></a></p></td>
-<td><p><kbd class="kbd docutils literal notranslate">Tab</kbd> <a class="footnote-reference brackets" href="#id9" id="id2">1</a></p></td>
-<td><p>该模式适用于所有的可渲染的物体类型, 它用于编辑物体的“形状” <em>物体数据</em> 数据块(比如网格的顶点/边/面, 曲线控制点/曲面等等)。</p></td>
+<td><a class="reference internal" href="../../modeling/index.html"><span class="doc">编辑模式</span></a></td>
+<td>A mode available for all renderable object types,
+as it is dedicated to their &quot;shape&quot; <em>Object Data</em> data-block editing
+(e.g. vertices/edges/faces for meshes, control points for curves/surfaces,
+strokes/points for Grease Pencil, etc.).</td>
 </tr>
-<tr class="row-even"><td><div class="figure align-center">
+<tr class="row-even"><td><div class="first last figure">
 <img alt="../../_images/editors_3dview_modes_icons-sculpt-mode.png" src="../../_images/editors_3dview_modes_icons-sculpt-mode.png" />
 </div>
 </td>
-<td><p><a class="reference internal" href="../../sculpt_paint/sculpting/index.html"><span class="doc">雕刻模式</span></a></p></td>
-<td><p><em>None</em> <a class="footnote-reference brackets" href="#id9" id="id3">1</a></p></td>
-<td><p>仅适用于网格，用于启用Blender的3D网格雕刻工具。</p></td>
+<td><a class="reference internal" href="../../sculpt_paint/sculpting/index.html"><span class="doc">雕刻模式</span></a></td>
+<td>仅适用于网格，用于启用Blender的3D网格雕刻工具。</td>
 </tr>
-<tr class="row-odd"><td><div class="figure align-center">
+<tr class="row-odd"><td><div class="first last figure">
 <img alt="../../_images/editors_3dview_modes_icons-vertex-paint.png" src="../../_images/editors_3dview_modes_icons-vertex-paint.png" />
 </div>
 </td>
-<td><p><a class="reference internal" href="../../sculpt_paint/painting/vertex_paint/index.html"><span class="doc">顶点绘制模式</span></a></p></td>
-<td><p><em>None</em> <a class="footnote-reference brackets" href="#id9" id="id4">1</a></p></td>
-<td><p>仅适用于网格，用于网格顶点着色 (即“绘制”它们)。</p></td>
+<td><a class="reference internal" href="../../sculpt_paint/vertex_paint/index.html"><span class="doc">Vertex Paint Mode</span></a></td>
+<td>仅适用于网格，用于网格顶点着色 (即“绘制”它们)。</td>
 </tr>
-<tr class="row-even"><td><div class="figure align-center">
+<tr class="row-even"><td><div class="first last figure">
 <img alt="../../_images/editors_3dview_modes_icons-weight-paint.png" src="../../_images/editors_3dview_modes_icons-weight-paint.png" />
 </div>
 </td>
-<td><p><a class="reference internal" href="../../sculpt_paint/painting/weight_paint/index.html"><span class="doc">权重绘制模式</span></a></p></td>
-<td><p><kbd class="kbd docutils literal notranslate">Ctrl-Tab</kbd> <a class="footnote-reference brackets" href="#id10" id="id5">2</a></p></td>
-<td><p>仅适用于网格，专用于编辑顶点组权重。</p></td>
+<td><a class="reference internal" href="../../sculpt_paint/weight_paint/index.html"><span class="doc">Weight Paint Mode</span></a></td>
+<td>仅适用于网格，专用于编辑顶点组权重。</td>
 </tr>
-<tr class="row-odd"><td><div class="figure align-center">
+<tr class="row-odd"><td><div class="first last figure">
 <img alt="../../_images/editors_3dview_modes_icons-texture-paint.png" src="../../_images/editors_3dview_modes_icons-texture-paint.png" />
 </div>
 </td>
-<td><p><a class="reference internal" href="../../sculpt_paint/painting/texture_paint/index.html"><span class="doc">纹理绘制模式</span></a></p></td>
-<td><p><em>None</em> <a class="footnote-reference brackets" href="#id9" id="id6">1</a></p></td>
-<td><p>仅适用于网格，用于直接在3D视图中模型上绘制纹理。</p></td>
+<td><a class="reference internal" href="../../sculpt_paint/texture_paint/index.html"><span class="doc">Texture Paint Mode</span></a></td>
+<td>仅适用于网格，用于直接在3D视图中模型上绘制纹理。</td>
 </tr>
-<tr class="row-even"><td><div class="figure align-center">
+<tr class="row-even"><td><div class="first last figure">
 <img alt="../../_images/editors_3dview_modes_icons-particle-edit.png" src="../../_images/editors_3dview_modes_icons-particle-edit.png" />
 </div>
 </td>
-<td><p><a class="reference internal" href="../../physics/particles/mode.html"><span class="doc">粒子编辑模式</span></a></p></td>
-<td><p><em>None</em> <a class="footnote-reference brackets" href="#id9" id="id7">1</a></p></td>
-<td><p>仅适用于网格，用于粒子系统, 与可编辑系统(毛发系统)。</p></td>
+<td><a class="reference internal" href="../../physics/particles/mode.html"><span class="doc">粒子编辑模式</span></a></td>
+<td>仅适用于网格，用于粒子系统, 与可编辑系统(毛发系统)。</td>
 </tr>
-<tr class="row-odd"><td><div class="figure align-center">
+<tr class="row-odd"><td><div class="first last figure">
 <img alt="../../_images/editors_3dview_modes_icons-pose-mode.png" src="../../_images/editors_3dview_modes_icons-pose-mode.png" />
 </div>
 </td>
-<td><p><a class="reference internal" href="../../rigging/armatures/posing/index.html"><span class="doc">姿态模式</span></a></p></td>
-<td><p><kbd class="kbd docutils literal notranslate">Ctrl-Tab</kbd> <a class="footnote-reference brackets" href="#id10" id="id8">2</a></p></td>
-<td><p>仅适用于骨架，用于编辑骨架姿势。</p></td>
+<td><a class="reference internal" href="../../animation/armatures/posing/index.html"><span class="doc">Pose Mode</span></a></td>
+<td>仅适用于骨架，用于编辑骨架姿势。</td>
 </tr>
-<tr class="row-even"><td><div class="figure align-center">
+<tr class="row-even"><td><div class="first last figure">
 <img alt="../../_images/editors_3dview_modes_icons-grease-pencil.png" src="../../_images/editors_3dview_modes_icons-grease-pencil.png" />
 </div>
 </td>
-<td><p><a class="reference internal" href="grease_pencil/stroke_edit.html"><span class="doc">编辑笔触模式</span></a></p></td>
-<td><p><kbd class="kbd docutils literal notranslate">D-Tab</kbd></p></td>
-<td><p>仅适用于蜡笔，用于编辑蜡笔笔画。</p></td>
+<td><a class="reference internal" href="../../grease_pencil/modes/draw/index.html"><span class="doc">Draw Mode</span></a></td>
+<td>A Grease Pencil only mode, dedicated to create Grease Pencil strokes.</td>
 </tr>
 </tbody>
 </table>
-<dl class="footnote brackets">
-<dt class="label" id="id9"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>,<a href="#id4">4</a>,<a href="#id6">5</a>,<a href="#id7">6</a>)</span></dt>
-<dd><p><kbd class="kbd docutils literal notranslate">Tab</kbd> 切换 <em>编辑模式</em>。</p>
-</dd>
-<dt class="label" id="id10"><span class="brackets">2</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id8">2</a>)</span></dt>
-<dd><p><kbd class="kbd docutils literal notranslate">Ctrl-Tab</kbd> 用于在 <em>权重绘制模式</em> (网格)/<em>姿势模式</em> (骨架) ，和其他当前模式(默认是 <em>物体模式</em>)之间切换。 然而，在某些模式下，该快捷键还有其他的内部用法 (比如在 <em>雕刻模式</em>， 它用于选择当前的笔刷)…</p>
-</dd>
-</dl>
-<p>正如你所看到的，使用快捷键在两个模式之间切换是非常棘手的。尤其对于网格来说。</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>游标在 <a class="reference internal" href="../../sculpt_paint/index.html"><span class="doc">绘制与雕刻模式</span></a> 会变成一个笔刷。</p>
+<p class="first admonition-title">Note</p>
+<p class="last">游标在 <a class="reference internal" href="../../sculpt_paint/index.html"><span class="doc">绘制与雕刻模式</span></a> 会变成一个笔刷。</p>
 </div>
-<p>在这里我们不再详细介绍模式的用法，因为大多数模式在对应章节都有介绍。</p>
+<p>We will not go into any more detail on mode usages here,
+because they are dealed with in their own sections.</p>
 <div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>如果在读这本手册时，提到的一些按钮和菜单选项没有出现在屏幕上, 可能是因为不在合适的模式下，该选项无效。</p>
+<p class="first admonition-title">Hint</p>
+<p class="last">如果在读这本手册时，提到的一些按钮和菜单选项没有出现在屏幕上, 可能是因为不在合适的模式下，该选项无效。</p>
+</div>
+</div>
+<div class="section" id="multi-object-modes">
+<span id="dview-multi-object-mode"></span><h2>Multi-Object Modes<a class="headerlink" href="#multi-object-modes" title="Permalink to this headline">¶</a></h2>
+<p>Edit and Pose mode support multiple objects at once.</p>
+<p>This is convenient if you want to perform the same edits on multiple objects
+or want to animate multiple characters at once.</p>
+<ul>
+<li><p class="first">To use edit multiple objects at once, simply select multiple objects and enter the mode.</p>
+</li>
+<li><p class="first">The Outliner can also be used to add/remove objects while you are in a mode,
+by setting or clearing the mode from the context menu, or <kbd class="kbd docutils literal notranslate">Shift-LMB</kbd> clicking on the objects data icon.</p>
+</li>
+<li><p class="first">Only the active object will be used to display properties such as shape keys, UV layers, etc.</p>
+</li>
+<li><p class="first">Selecting any element from an object will set this as the active object.</p>
+</li>
+<li><p class="first">There are limits to the kinds of operations that can run on multiple objects.</p>
+<p><em>You can't for example create an edge that has vertices from different objects.</em></p>
+</li>
+</ul>
 </div>
 </div>
 

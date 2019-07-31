@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devcompositing/types/converter/index.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/compositing/types/converter/index.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Alpha上叠节点" href="alpha_convert.html" />
+    <link rel="next" title="Alpha转换节点" href="alpha_convert.html" />
     <link rel="prev" title="Z通道合成节点" href="../color/z_combine.html" /> 
 </head>
 
@@ -94,11 +113,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">合成</a><ul class="current">
@@ -109,14 +128,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../output/index.html">输出类节点</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../color/index.html">颜色类节点</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">转换器类节点</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alpha_convert.html">Alpha上叠节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alpha_convert.html">Alpha转换节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="color_ramp.html">颜色渐变节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="combine_separate.html">合并/分离节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="id_mask.html">ID遮罩节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="math.html">运算节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="rgb_to_bw.html">RGB -&gt; BW节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="set_alpha.html">设置Alpha节点</a></li>
-<li class="toctree-l4"><a class="reference internal" href="switch_view.html">Switch View节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="switch_view.html">视图切换节点</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../filter/index.html">滤镜节点</a></li>
@@ -129,10 +148,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -183,6 +203,8 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
+          <li><a href="../../../editors/index.html">编辑器</a> &raquo;</li>
+        
           <li><a href="../../index.html">合成</a> &raquo;</li>
         
       <li>转换器类节点</li>
@@ -207,20 +229,17 @@
   <div class="section" id="converter-nodes">
 <span id="composite-nodes-converter-index"></span><h1>转换器类节点<a class="headerlink" href="#converter-nodes" title="Permalink to this headline">¶</a></h1>
 <p>就像其名字所体现的那样，此类节点将颜色或其他各种数据属性按照一定方式进行转换（比如透明度）。</p>
-<p>They also split out or re-combine the different color channels that make up an image,
-allowing you to work on each channel independently.
-Various color channel arrangements are supported, including traditional RGB, HSV
-and <abbr title="High Definition Media Interface">HDMI</abbr> formats.</p>
+<p>此类节点也可以对图像通道进行分离和重新合并从而合成一幅图像，允许用户单独在每个通道上操作。广泛支持像传统的RGB,HSV或高清晰度多媒体接口（HDMI)图像格式。</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="alpha_convert.html">Alpha上叠节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alpha_convert.html">Alpha转换节点</a></li>
 <li class="toctree-l1"><a class="reference internal" href="color_ramp.html">颜色渐变节点</a></li>
 <li class="toctree-l1"><a class="reference internal" href="combine_separate.html">合并/分离节点</a></li>
 <li class="toctree-l1"><a class="reference internal" href="id_mask.html">ID遮罩节点</a></li>
 <li class="toctree-l1"><a class="reference internal" href="math.html">运算节点</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rgb_to_bw.html">RGB -&gt; BW节点</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_alpha.html">设置Alpha节点</a></li>
-<li class="toctree-l1"><a class="reference internal" href="switch_view.html">Switch View节点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="switch_view.html">视图切换节点</a></li>
 </ul>
 </div>
 </div>
@@ -233,7 +252,7 @@ and <abbr title="High Definition Media Interface">HDMI</abbr> formats.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="alpha_convert.html" class="btn btn-neutral float-right" title="Alpha上叠节点" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="alpha_convert.html" class="btn btn-neutral float-right" title="Alpha转换节点" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../color/z_combine.html" class="btn btn-neutral float-left" title="Z通道合成节点" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

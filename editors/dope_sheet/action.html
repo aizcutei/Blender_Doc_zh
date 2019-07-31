@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/deveditors/dope_sheet/action.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/dope_sheet/action.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="蜡笔" href="grease_pencil.html" />
@@ -94,37 +113,50 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../index.html#general">常规</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#animation">动画</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">动画摄影表</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">动作编辑器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="grease_pencil.html">蜡笔</a></li>
-<li class="toctree-l4"><a class="reference internal" href="shape_key.html">形态键</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3dview/index.html">3D视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uv/index.html">UV编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_editor/index.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compositing/index.html">Compositor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../video_editing/index.html">Video Sequencer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">动画摄影表</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">动作编辑器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#header">标题栏</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../timeline.html">时间轴编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../graph_editor/index.html">曲线编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../nla/index.html">NLA编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grease_pencil.html">蜡笔</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shape_key.html">形态键</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#scripting">脚本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#data">数据</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outliner.html">大纲视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../properties_editor.html">属性编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../file_browser.html">文件浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -200,48 +232,58 @@
             
   <div class="section" id="action-editor">
 <h1>动作编辑器<a class="headerlink" href="#action-editor" title="Permalink to this headline">¶</a></h1>
-<p><em>动作编辑器</em> 是你可以定义和控制 <a class="reference internal" href="../../animation/actions.html"><span class="doc">动作</span></a> 的地方。它使你能够查看和编辑在 <em>函数曲线编辑器</em> 中定义为动作的F曲线数据块。因此它是介于低级 <a class="reference internal" href="../graph_editor/introduction.html"><span class="doc">函数曲线</span></a> 和高级 <a class="reference internal" href="../nla/index.html"><span class="doc">NLA编辑器</span></a> 之间。</p>
-<p>编辑器它给你一个略微简化的函数曲线数据块视图 (有点类似于没有手柄的函数曲线)。编辑器可以同时列出物体的所有动作数据块。</p>
-<p>每个动作数据块都形成一个顶级通道 (见下图)。请注意, 一个物体可以有几个 <em>约束</em> (每个动画一个约束) 和 <em>姿势</em> (对于骨架, 每个骨骼对应每个动画) F 曲线数据块, 因此一个动作可以有几个这些通道。</p>
-<div class="figure align-center" id="id1">
+<p>The <em>Action Editor</em> is where you can define and control <a class="reference internal" href="../../animation/actions.html"><span class="doc">actions</span></a>.
+It enables you to view and edit the F-curve data-blocks you defined as Actions in the <em>F-Curve editor</em>.
+So it takes place somewhere in between the low-level
+<a class="reference internal" href="../graph_editor/introduction.html"><span class="doc">F-Curves</span></a>, and the high-level <a class="reference internal" href="../nla/index.html"><span class="doc">NLA editor</span></a>.</p>
+<p>It gives you a slightly simplified view of the F-curve data-blocks
+(somewhat similar to F-curve shown without handles).
+The editor can list all Action data-blocks of an object at once.</p>
+<p>Each Action data-block forms a top-level channel (see below).
+Note that an object can have several <em>Constraint</em> (one per animated constraint)
+and <em>Pose</em> (for armatures, one per animated bone) F-curve data-blocks,
+and hence an action can have several of these channels.</p>
+<div class="figure" id="id1">
 <img alt="../../_images/editors_dope-sheet_action_editor.png" src="../../_images/editors_dope-sheet_action_editor.png" />
-<p class="caption"><span class="caption-text">动作编辑器。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">动作编辑器。</span></p>
 </div>
 <div class="section" id="header">
 <h2>标题栏<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
-<dl>
-<dt>上一个/下一个层（向下/向上箭头图标）</dt><dd><p>在NLA 堆栈中堆叠/暂存不同的动作之间切换，而不必去NLA编辑器并离开调整模式 重新进入另一个长条。</p>
+<dl class="docutils">
+<dt>上一个/下一个层（向下/向上箭头图标）</dt>
+<dd><p class="first">在NLA 堆栈中堆叠/暂存不同的动作之间切换，而不必去NLA编辑器并离开调整模式 重新进入另一个长条。</p>
 <p>点击向上/向下箭头按钮进入NLA轨道上方/NLA长条下方中的动作，该动作在动作编辑器中将被调整。</p>
 <p>如果同一图层/轨道上有多个动作/长条带，则只使用最接近当前帧的动作/条带。</p>
 <p>操作者将考虑帐户设置以单独查看/编辑动作（即Solo和NLA Muting ）。这样做是为了更容易预览不同的隐藏（暂存）动作。</p>
 <ul class="simple">
-<li><p>如果从单独（solo）的NLA轨道到活动动作，则NLA轨道将被静默（不可用），以便可以单独编辑动作。</p></li>
-<li><p>同样，如果NLA堆栈在编辑动作时被静默，下面的NLA轨道将在启用solo的情况下编辑。</p></li>
-<li><p>如果它的轨道之间切换，为以前的轨道的solo地位将转移到新的轨道。</p></li>
+<li>如果从单独（solo）的NLA轨道到活动动作，则NLA轨道将被静默（不可用），以便可以单独编辑动作。</li>
+<li>同样，如果NLA堆栈在编辑动作时被静默，下面的NLA轨道将在启用solo的情况下编辑。</li>
+<li>如果它的轨道之间切换，为以前的轨道的solo地位将转移到新的轨道。</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>当你不编辑NLA Strip使用的动作时，这些仍然有效。如果你只是通常为新动作制作动画，则可以使用“向下箭头”临时跳转到上一个动作，而不会丢失正在处理的新动作，然后使用“向上箭头”回到它，一旦你完成检查其他动作时。</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">当你不编辑NLA Strip使用的动作时，这些仍然有效。如果你只是通常为新动作制作动画，则可以使用“向下箭头”临时跳转到上一个动作，而不会丢失正在处理的新动作，然后使用“向上箭头”回到它，一旦你完成检查其他动作时。</p>
 </div>
 </dd>
 </dl>
-<dl id="dopesheet-action-action">
-<dt>动作</dt><dd><p><a class="reference internal" href="../../interface/controls/templates/data_block.html#ui-data-block"><span class="std std-ref">数据块菜单</span></a>.</p>
-<dl class="simple">
-<dt>添加 <code class="docutils literal notranslate"><span class="pre">+</span></code></dt><dd><p>当一个动作被创建时，它被存储在NLA动作存储（暂存）器中。</p>
-</dd>
-<dt>取消链接</dt><dd><p>当 <kbd class="kbd docutils literal notranslate">Shift-LMB</kbd> 点击它清除假用户并且也从NLA堆栈中移除暂存的动作。</p>
-</dd>
+<dl class="docutils" id="dopesheet-action-action">
+<dt>动作</dt>
+<dd><p class="first">A <a class="reference internal" href="../../interface/controls/templates/data_block.html#ui-data-block"><span class="std std-ref">data-block menu</span></a>.</p>
+<dl class="last docutils">
+<dt>添加 <code class="docutils literal notranslate"><span class="pre">+</span></code></dt>
+<dd>当一个动作被创建时，它被存储在NLA动作存储（暂存）器中。</dd>
+<dt>取消链接</dt>
+<dd>当 <kbd class="kbd docutils literal notranslate">Shift-LMB</kbd> 点击它清除假用户并且也从NLA堆栈中移除暂存的动作。</dd>
 </dl>
 </dd>
-<dt>按下（双向下箭头图标）</dt><dd><p>将活动动作添加到NLA堆栈作为作用长条带。这与在NLA编辑器中按下Push Down 按钮基本相同。</p>
-</dd>
-<dt>藏匿（雪花图标）</dt><dd><p>将活动动作暂存在NLA堆栈上。即它以与创建新动作相同的方式添加为非贡献（起作用）堆栈。</p>
-</dd>
+<dt>按下（双向下箭头图标）</dt>
+<dd>将活动动作添加到NLA堆栈作为作用长条带。这与在NLA编辑器中按下Push Down 按钮基本相同。</dd>
+<dt>藏匿（雪花图标）</dt>
+<dd>将活动动作暂存在NLA堆栈上。即它以与创建新动作相同的方式添加为非贡献（起作用）堆栈。</dd>
 </dl>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>在这两种情况下（按下和隐藏），一旦该动作被添加到NLA堆栈中，它就被清除/取消分配给活动动作槽（即不能从动作/图形编辑器中进行编辑，除非您输入稍后在相应条上的“调整模式”）。</p>
+<p class="first admonition-title">Note</p>
+<p class="last">在这两种情况下（按下和隐藏），一旦该动作被添加到NLA堆栈中，它就被清除/取消分配给活动动作槽（即不能从动作/图形编辑器中进行编辑，除非您输入稍后在相应条上的“调整模式”）。</p>
 </div>
 </div>
 </div>

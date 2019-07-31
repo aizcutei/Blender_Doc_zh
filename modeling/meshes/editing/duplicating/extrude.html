@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/editing/duplicating/extrude.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/duplicating/extrude.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="内插面" href="inset.html" />
@@ -94,14 +113,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/index.html">基础</a></li>
@@ -109,6 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../edges.html">边工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../faces.html">面工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../uv/index.html">UV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../transform/index.html">变形</a></li>
 <li class="toctree-l4 current"><a class="reference internal" href="index.html">复制</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">细分</a></li>
@@ -119,7 +140,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../mesh_display.html">网格显示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
 </ul>
 </li>
@@ -131,16 +151,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -218,71 +239,78 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <span class="target" id="bpy-ops-view3d-edit-mesh-extrude"></span><div class="section" id="extrude">
+  <span class="target" id="bpy-ops-mesh-extrude-region"><span id="bpy-ops-view3d-edit-mesh-extrude"></span></span><div class="section" id="extrude">
 <h1>挤出<a class="headerlink" href="#extrude" title="Permalink to this headline">¶</a></h1>
 <p>挤出工具会复制顶点，但保持新几何元素与原始顶点相连，原来的顶点变成边，而边变成面。</p>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_extrude_vert.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_extrude_vert.png" src="../../../../_images/modeling_meshes_editing_duplicating_extrude_vert.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">单个顶点挤出。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">单个顶点挤出。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id2">
+<td><div class="first last figure" id="id2">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_extrude_edge.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_extrude_edge.png" src="../../../../_images/modeling_meshes_editing_duplicating_extrude_edge.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">单条边挤出。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">单条边挤出。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 <p>该工具对于创建几何体极为重要，可以从矩形创建平行六面体，从圆环创建圆柱体，也能轻易地创建物体比如树枝。</p>
-<p>顶点和边线挤出的轴向可以交互设置。面的挤出方向默认为其平均法向。挤出方向可以限制为单一轴向; 参考 <a class="reference internal" href="../../../../editors/3dview/object/editing/transform/control/precision/axis_locking.html"><span class="doc">轴向锁定</span></a>。</p>
+<p>The axis on which vertices and edges are extruded along can be set interactively.
+Faces are extruded by default along their averaged normal.
+The extrusion can be limited to a single axis by specifying an axis;
+see <a class="reference internal" href="../../../../scene_layout/object/editing/transform/control/axis_locking.html"><span class="doc">轴向锁定</span></a>.</p>
 <p>不同挤出工具挤出的几何元素与初始元素的连接方式也不一样。</p>
-<div class="section" id="extrude-region">
-<h2>整体挤出<a class="headerlink" href="#extrude-region" title="Permalink to this headline">¶</a></h2>
-<div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 网格工具 ‣ 添加: 整体挤出</span></p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">网格 ‣ 挤出 ‣ 整体</span></p>
-</dd>
-<dt class="field-even">快捷键</dt>
-<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">E</kbd></p>
-</dd>
+<dl class="docutils">
+<dt>Flip Normals</dt>
+<dd>Reverses the <a class="reference internal" href="../../../../glossary/index.html#term-normal"><span class="xref std std-term">normal's</span></a> direction for any resulting geometry.</dd>
 </dl>
+<div class="section" id="extrude-region">
+<span id="tool-mesh-extrude-region"></span><h2>整体挤出<a class="headerlink" href="#extrude-region" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ Mesh Tools ‣ Add: Extrude Region</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 挤出 ‣ 整体</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">E</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>仅挤出边界环，内部区域随挤出一起移动。</p>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id3">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id3">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-before.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-before.png" src="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-before.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">选中面。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">选中面。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id4">
+<td><div class="first last figure" id="id4">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-after.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-after.png" src="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-after.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">挤出过程中。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">挤出过程中。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id5">
+<td><div class="first last figure" id="id5">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-after-zaxis.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-after-zaxis.png" src="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-after-zaxis.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">限定挤出方向为Z向。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">限定挤出方向为Z向。</span></p>
 </div>
 </td>
 </tr>
@@ -292,56 +320,56 @@
 <h3>详述<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h3>
 <p>虽然过程是相当直观的，<em>挤出</em> 背后的原理是相当复杂的，具体如下:</p>
 <ul class="simple">
-<li><p>首先，该算法确定挤出的外侧循环边，这些循环边将挤出成面。默认情况下(见下文)，该算法认为属于两个或两个以上选中面的边为内侧边，不作为边界环的一部分挤出。</p></li>
-<li><p>然后这些外侧循环边将挤出成面。</p></li>
-<li><p>如果这些循环边都只属于整个网格中的一个面，那么所有的选中面将被复制，并与到新创建的面连接。例如，矩形在这种情况下将变成平行六面体。</p></li>
-<li><p>在其他情况下，选择的面将与新创建的面连接，但不会被复制。这可以防止在网格的 “内部” 产生不想要的面。这种区别是非常重要的，这确保了 <em>挤出</em> 所产生的网格结构始终条理分明且保持封闭。</p></li>
-<li><p>当挤压完全闭合的结构时(比如六个面组成的立方体），挤出的结果仅仅是一个复制体，整个结构将被复制，没有任何地方和原本的结构相连。</p></li>
-<li><p>那些不构选中面的，且形成 <em>开放</em> 循环边的边线，在挤压时将被复制，并与原始边相连形成新的面。</p></li>
-<li><p>不属于选中边的孤立顶点，在挤压时将被复制，并与原顶点相连形成新的边。</p></li>
+<li>首先，该算法确定挤出的外侧循环边，这些循环边将挤出成面。默认情况下(见下文)，该算法认为属于两个或两个以上选中面的边为内侧边，不作为边界环的一部分挤出。</li>
+<li>然后这些外侧循环边将挤出成面。</li>
+<li>如果这些循环边都只属于整个网格中的一个面，那么所有的选中面将被复制，并与到新创建的面连接。例如，矩形在这种情况下将变成平行六面体。</li>
+<li>在其他情况下，选择的面将与新创建的面连接，但不会被复制。这可以防止在网格的 “内部” 产生不想要的面。这种区别是非常重要的，这确保了 <em>挤出</em> 所产生的网格结构始终条理分明且保持封闭。</li>
+<li>当挤压完全闭合的结构时(比如六个面组成的立方体），挤出的结果仅仅是一个复制体，整个结构将被复制，没有任何地方和原本的结构相连。</li>
+<li>那些不构选中面的，且形成 <em>开放</em> 循环边的边线，在挤压时将被复制，并与原始边相连形成新的面。</li>
+<li>不属于选中边的孤立顶点，在挤压时将被复制，并与原顶点相连形成新的边。</li>
 </ul>
 </div>
 </div>
 <div class="section" id="extrude-individual">
-<h2>各自挤出<a class="headerlink" href="#extrude-individual" title="Permalink to this headline">¶</a></h2>
+<span id="tool-mesh-extrude-individual"></span><h2>各自挤出<a class="headerlink" href="#extrude-individual" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 网格工具 ‣ 添加: 各自挤出l</span></p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">网格 ‣ 挤出 ‣ 各面</span></p>
-</dd>
-<dt class="field-even">快捷键</dt>
-<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Alt-E</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ Mesh Tools ‣ Add: Extrude Individual</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 挤出 ‣ 各面</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Alt-E</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p><em>各自挤出</em> 用于将选中面独立挤出，而非整体挤出。这些面将沿着它们各自的法线挤出，而非其平均法向。这有几个后果：一是 <em>内部</em> 边(即两个选中面之间的边)不再删除(原来的面会被删除)。</p>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id6">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id6">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-multi.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-multi.png" src="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-multi.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">选择多个面.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">选择多个面.</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id7">
+<td><div class="first last figure" id="id7">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-multi-region.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-multi-region.png" src="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-multi-region.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">整体挤出.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">整体挤出.</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id8">
+<td><div class="first last figure" id="id8">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-multi-individual.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-multi-individual.png" src="../../../../_images/modeling_meshes_editing_duplicating_extrude_face-multi-individual.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">各自挤出.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">各自挤出.</span></p>
 </div>
 </td>
 </tr>
@@ -351,50 +379,50 @@
 <div class="section" id="extrude-edges-and-vertices-only">
 <h2>仅挤出边和顶点<a class="headerlink" href="#extrude-edges-and-vertices-only" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式，点和边选择模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 网格工具 ‣ 添加: 挤出</span></p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">网格 ‣ 挤出 ‣ 仅顶点/边</span></p>
-</dd>
-<dt class="field-even">快捷键</dt>
-<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Alt-E</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式，点和边选择模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ Mesh Tools ‣ Add: Extrude</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 挤出 ‣ 仅顶点/边</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Alt-E</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>如果对选中的顶点进行挤出，而他们之间并没有形成边或面，那么他们将如预期那样挤出：构建出一个 <a class="reference internal" href="../../../../glossary/index.html#term-non-manifold"><span class="xref std std-term">非流形</span></a> 边。同样，如果选中的边无法构成面，将挤出以形成一个面。</p>
 <p>当选中顶点构成边或面，将与选中边一样挤出。对于形成了面的边的挤出也是同样的道理。</p>
 <p>要强制顶点或边选择仅作为点或边挤出，可使用 <kbd class="kbd docutils literal notranslate">Alt-E</kbd> 调用 <em>仅挤出边</em> 和 <em>仅挤出顶点</em>。</p>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id9">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id9">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_extrude_verts-before.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_extrude_verts-before.png" src="../../../../_images/modeling_meshes_editing_duplicating_extrude_verts-before.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">选中顶点。</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">选中顶点。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id10">
+<td><div class="first last figure" id="id10">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_extrude_verts-after.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_extrude_verts-after.png" src="../../../../_images/modeling_meshes_editing_duplicating_extrude_verts-after.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">仅挤出顶点。</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">仅挤出顶点。</span></p>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><div class="figure align-center" id="id11">
+<tr class="row-even"><td><div class="first last figure" id="id11">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_extrude_edges-before.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_extrude_edges-before.png" src="../../../../_images/modeling_meshes_editing_duplicating_extrude_edges-before.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">选中边。</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">选中边。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id12">
+<td><div class="first last figure" id="id12">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_extrude_edges-after.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_extrude_edges-after.png" src="../../../../_images/modeling_meshes_editing_duplicating_extrude_edges-after.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">仅挤出边。</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">仅挤出边。</span></p>
 </div>
 </td>
 </tr>
@@ -404,22 +432,24 @@
 <div class="section" id="extrude-repeat-mesh">
 <h2>重复挤出网格<a class="headerlink" href="#extrude-repeat-mesh" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">操作搜索 ‣ 重复挤出网格</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">操作搜索 ‣ 重复挤出网格</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>该工具必须从 <a class="reference internal" href="../../../../interface/controls/templates/operator_search.html"><span class="doc">操作搜索</span></a> 调用。如果选中项为非流形，将进行指定次数挤出，否则将与 <a class="reference internal" href="../../../modifiers/generate/array.html"><span class="doc">阵列修改器</span></a> 类似。挤出方向与视图Z轴方向一致(垂直于视图)。</p>
-<dl class="simple">
-<dt>偏移量</dt><dd><p>单次挤出的长度。</p>
-</dd>
-<dt>步数</dt><dd><p>挤出次数。</p>
-</dd>
+<dl class="docutils">
+<dt>偏移量</dt>
+<dd>单次挤出的长度。</dd>
+<dt>步数</dt>
+<dd>挤出次数。</dd>
 </dl>
 </div>
 </div>

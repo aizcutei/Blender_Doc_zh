@@ -1,0 +1,509 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>顶栏 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/window_system/topbar.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="工作区" href="workspaces.html" />
+    <link rel="prev" title="窗口系统介绍" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">用户界面</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../splash.html">启动画面</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#window-system">窗口系统</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">顶栏</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#menus">菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#workspaces">工作区</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scenes-layers">场景&amp;图层</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="workspaces.html">工作区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="status_bar.html">状态栏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="areas.html">区域-Areas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regions.html">区块-Regions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tabs_panels.html">选项卡 &amp; 面板</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#keymap">键位映射</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#interface-controls">界面控件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tools">工具</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">用户界面</a> &raquo;</li>
+        
+      <li>顶栏</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/interface/window_system/topbar.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="topbar">
+<h1>顶栏<a class="headerlink" href="#topbar" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="menus">
+<h2>菜单<a class="headerlink" href="#menus" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="app-menu">
+<span id="topbar-app-menu"></span><h3>程序菜单<a class="headerlink" href="#app-menu" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>启动画面</dt>
+<dd>打开 <a class="reference internal" href="../splash.html#splash"><span class="std std-ref">启动画面</span></a> 。</dd>
+<dt>捐助Blender</dt>
+<dd><dl class="first last docutils">
+<dt>开发基金</dt>
+<dd>开发组织官网。</dd>
+<dt>Blender商店</dt>
+<dd>打开Blender商店。</dd>
+</dl>
+</dd>
+<dt>关于</dt>
+<dd><dl class="first last docutils">
+<dt>发布信息</dt>
+<dd>打开最新发布信息。</dd>
+<dt>Blender官网</dt>
+<dd>打开Blender官网。</dd>
+<dt>积分</dt>
+<dd>打开积分官网。</dd>
+<dt>证书</dt>
+<dd>打开证书官网。</dd>
+</dl>
+</dd>
+<dt>安装应用模板</dt>
+<dd>安装一个新的 <a class="reference internal" href="../../advanced/app_templates.html#app-templates"><span class="std std-ref">应用模板</span></a>。</dd>
+</dl>
+</div>
+<div class="section" id="file-menu">
+<h3>文件菜单<a class="headerlink" href="#file-menu" title="Permalink to this headline">¶</a></h3>
+<p>以下是文件菜单的选项：</p>
+<dl class="docutils">
+<dt>新建 <kbd class="kbd docutils literal notranslate">Ctrl-N</kbd></dt>
+<dd>清除你目前的所有场景和元素，重新打开一个全新的场景。</dd>
+<dt>打开 <kbd class="kbd docutils literal notranslate">Ctrl-O</kbd></dt>
+<dd><a class="reference internal" href="../../files/blend/save_load.html#files-blend-open"><span class="std std-ref">打开</span></a> 一个 blend文件.</dd>
+<dt>打开最近 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-O</kbd></dt>
+<dd>显示 <a class="reference internal" href="../../files/blend/save_load.html#other-file-open-options"><span class="std std-ref">最近</span></a> 保存过的文件列表。</dd>
+<dt>还原</dt>
+<dd>重新打开当前文件最后保存的版本。</dd>
+<dt>恢复</dt>
+<dd><dl class="first last docutils">
+<dt>恢复最后一个场景</dt>
+<dd>恢复最后一个Blender自动保存的文件，这个选项 <a class="reference internal" href="../../troubleshooting/recover.html"><span class="doc">恢复</span></a> 可以让你在BLender程序意外关闭（断电，死机…）的时候，恢复之前的工作。</dd>
+<dt>恢复自动保存</dt>
+<dd>打开自动保存的文件并 <a class="reference internal" href="../../troubleshooting/recover.html"><span class="doc">恢复</span></a> 它。</dd>
+</dl>
+</dd>
+<dt>保存 <kbd class="kbd docutils literal notranslate">Ctrl-S</kbd></dt>
+<dd><a class="reference internal" href="../../files/blend/save_load.html#files-blend-save"><span class="std std-ref">保存</span></a> 当前文件。</dd>
+<dt>另存为... <kbd class="kbd docutils literal notranslate">Shift-Ctrl-S</kbd></dt>
+<dd>打开文件浏览器重新 <a class="reference internal" href="../../files/blend/save_load.html#files-blend-save"><span class="std std-ref">保存</span></a> 为其他指定的文件名和路径。</dd>
+<dt>保存副本…</dt>
+<dd><a class="reference internal" href="../../files/blend/save_load.html#files-blend-save"><span class="std std-ref">保存</span></a> 当前文件的一个副本。</dd>
+<dt>关联…</dt>
+<dd>从外部blend文件（库）中链接数据到当前场景，只有外部文件才能编辑导入的数据，<em>关联</em> 与 <em>追加</em> 是使用外部文件选择部分数据导入的操作。请查看 <a class="reference internal" href="../../files/linked_libraries.html"><span class="doc">关联库</span></a> 。</dd>
+<dt>追加…</dt>
+<dd>从外部文件追加数据到现场景，追加的数据是外部文件的完全复制，不再与外部文件关联。</dd>
+<dt>数据预览</dt>
+<dd><a class="reference internal" href="../../files/blend/previews.html"><span class="doc">数据预览</span></a> 的管理工具。</dd>
+<dt>导入</dt>
+<dd>Blender可以使用存储在由其他图形程序创建的各种格式文件中的数据。查看 <a class="reference internal" href="../../files/import_export.html"><span class="doc">导入/导出</span></a>。</dd>
+<dt>导出</dt>
+<dd>通常，您将工作保存在blend文件中，但您可以将部分或全部工作导出为可由其他图形程序处理的格式。查看 <a class="reference internal" href="../../files/import_export.html"><span class="doc">导入/导出</span></a>。</dd>
+<dt>外部数据</dt>
+<dd><p class="first">外部数据（如纹理图像和其他资源）可以存储在blend（打包）内或作为单独的文件（未打包）存储。 Blender通过相对或绝对路径跟踪所有打包的资源。 请参阅 <a class="reference internal" href="../../files/blend/packed_data.html#pack-unpack-data"><span class="std std-ref">打包或解压缩外部数据</span></a> 。</p>
+<dl class="last docutils">
+<dt>自动打包所有数据进blend文件</dt>
+<dd>如果这个选项勾选，将启用自动打包操作，所有外部数据导入或调用后都自动打包到blend文件中。</dd>
+<dt>打包所有数据至blend文件</dt>
+<dd>手动操作打包所有外部数据进blend 文件。</dd>
+<dt>全部解包到文件</dt>
+<dd>从blend文件中解包所有数据至外部文件。</dd>
+<dt>全部使用相对路径</dt>
+<dd>把当前blend文件的所有外部调用数据改为 <a class="reference internal" href="../../files/blend/save_load.html#files-blend-relative-paths"><span class="std std-ref">相对路径</span></a> 。</dd>
+<dt>全部使用绝对路径</dt>
+<dd>使所有外部数据调用改为系统绝对路径。</dd>
+<dt>报告缺失文件</dt>
+<dd>此选项对于检查是否存在不再存在的解压缩文件的链接非常有用。 选择此选项后，Info编辑器标题中将显示一条警告消息。 如果未显示警告，则不会丢失外部文件。</dd>
+<dt>查找缺失文件</dt>
+<dd><p class="first">如果您在混合文件中断开链接，这可以帮助您解决问题。 将显示文件浏览器。 选择所需的目录（或该目录中的文件），并在其中以递归方式在所有包含的目录中执行搜索。 搜索中找到的每个丢失文件都将被恢复。 这些恢复将作为绝对路径完成，因此如果您想要相对路径，则需要选择 <em>全部使用相对路径</em> 。</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">可能需要重新加载恢复的文件。 您可以逐个执行此操作，也可以保存混合文件并重新加载，以便立即重新加载所有外部文件。</p>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="docutils" id="startup-file">
+<dt>默认</dt>
+<dd><p class="first">此菜单管理启动文件，用于存储启动时以及打开创建新文件时显示的默认场景，工作区和界面。</p>
+<p>初始化它包含Blender附带的 <a class="reference internal" href="../../editors/3dview/startup_scene.html"><span class="doc">启动场景</span></a> 。 也可以自定义启动场景。</p>
+<dl class="docutils">
+<dt>保存启动文件</dt>
+<dd>保存当前文件最为启动文件。</dd>
+<dt>加载初始设置</dt>
+<dd>恢复默认出厂的设置。</dd>
+</dl>
+<div class="last admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../editors/preferences/introduction.html#prefs-menu"><span class="std std-ref">Managing Preferences</span></a>.</p>
+</div>
+</dd>
+<dt>退出 <kbd class="kbd docutils literal notranslate">Ctrl-Q</kbd></dt>
+<dd>关闭Blender，当前文件将保存到 <code class="docutils literal notranslate"><span class="pre">quit.blend</span></code> 。</dd>
+</dl>
+</div>
+<div class="section" id="edit-menu">
+<h3>编辑菜单<a class="headerlink" href="#edit-menu" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>撤销/重做/撤销历史</dt>
+<dd>查看 <a class="reference internal" href="../undo_redo.html"><span class="doc">撤销 &amp; 重做</span></a>。</dd>
+<dt>搜索操作</dt>
+<dd>根据搜索出来的的名称执行操作。</dd>
+<dt>重命名活动项</dt>
+<dd>重命名活动项或者节点项。</dd>
+<dt>锁定物体模式</dt>
+<dd>当前模式限制选择。</dd>
+<dt>设置</dt>
+<dd>打开设置窗口。</dd>
+</dl>
+</div>
+<div class="section" id="render-menu">
+<span id="topbar-render"></span><h3>渲染菜单<a class="headerlink" href="#render-menu" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>渲染图片 <kbd class="kbd docutils literal notranslate">F12</kbd></dt>
+<dd>渲染活动场景的当前帧。</dd>
+<dt>渲染动画 <kbd class="kbd docutils literal notranslate">Ctrl-F12</kbd></dt>
+<dd><p class="first">渲染活动场景的动画。</p>
+<div class="last admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="../../render/output/animation.html"><span class="doc">动画渲染</span></a> 的更多信息。</li>
+</ul>
+</div>
+</dd>
+<dt>渲染音频</dt>
+<dd><p class="first">混合场景中的音频文件。</p>
+<div class="last admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="../../render/output/audio/introduction.html"><span class="doc">渲染音频</span></a> 更多细节。</li>
+</ul>
+</div>
+</dd>
+<dt>查看渲染 <kbd class="kbd docutils literal notranslate">F11</kbd></dt>
+<dd>切换查看渲染窗口。</dd>
+</dl>
+<dl class="docutils" id="topbar-render-view-animation">
+<dt>查看渲染的动画 <kbd class="kbd docutils literal notranslate">Ctrl-F11</kbd></dt>
+<dd><p class="first">在单独窗口播放渲染出来的动画。</p>
+<div class="last admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="../../render/output/animation_player.html#render-output-animation-player"><span class="std std-ref">动画播放</span></a> 的更多细节。</li>
+<li><a class="reference internal" href="../../editors/preferences/file_paths.html#prefs-file-paths-animation-player"><span class="std std-ref">动画播放</span></a> 设置，选择不同的播放器。</li>
+</ul>
+</div>
+</dd>
+<dt>显示模式</dt>
+<dd><dl class="first last docutils">
+<dt>全屏</dt>
+<dd>在最大化的图片编辑器中渲染。</dd>
+<dt>图像编辑器</dt>
+<dd>在图像编辑器中渲染。</dd>
+<dt>新窗口</dt>
+<dd>在新窗口中渲染。</dd>
+<dt>保持用户界面</dt>
+<dd>不改变用户任何界面，静默在后台渲染，你可以打开图像编辑器找到渲染结果。</dd>
+</dl>
+</dd>
+<dt>锁定界面</dt>
+<dd>在渲染期间锁定界面，以便为渲染引擎提供更多内存。</dd>
+</dl>
+</div>
+<div class="section" id="window-menu">
+<span id="topbar-window"></span><h3>窗口菜单<a class="headerlink" href="#window-menu" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>新窗口</dt>
+<dd>复制当前创建一个新窗口。</dd>
+<dt>新建主窗口</dt>
+<dd>创建一个包含自身工作区与场景选择的新主窗口。</dd>
+<dt>切换全屏</dt>
+<dd>切换当前窗口全屏显示。</dd>
+<dt>下一个工作区</dt>
+<dd>切换到下一个工作区。</dd>
+<dt>上一个工作区</dt>
+<dd>切换到上一个工作区。</dd>
+<dt>显示状态栏</dt>
+<dd>选择是否在程序的最下端显示 <a class="reference internal" href="status_bar.html"><span class="doc">状态栏</span></a> 。</dd>
+<dt>保存截图</dt>
+<dd>在Blender窗口的全部工作区抓取一张图片。</dd>
+</dl>
+</div>
+<div class="section" id="help-menu">
+<h3>帮助菜单<a class="headerlink" href="#help-menu" title="Permalink to this headline">¶</a></h3>
+<p>查看 <a class="reference internal" href="../../getting_started/help.html"><span class="doc">帮助系统</span></a>.</p>
+</div>
+</div>
+<div class="section" id="workspaces">
+<h2>工作区<a class="headerlink" href="#workspaces" title="Permalink to this headline">¶</a></h2>
+<p>系统预制的一系列不同用途的 <a class="reference internal" href="workspaces.html"><span class="doc">工作区</span></a> 供用户选择使用。</p>
+</div>
+<div class="section" id="scenes-layers">
+<h2>场景&amp;图层<a class="headerlink" href="#scenes-layers" title="Permalink to this headline">¶</a></h2>
+<p>选择使用当前激活 <a class="reference internal" href="../../scene_layout/scene/index.html"><span class="doc">场景</span></a> 和 <a class="reference internal" href="../../scene_layout/view_layers/index.html"><span class="doc">视图层</span></a> 的 <a class="reference internal" href="../controls/templates/data_block.html#ui-data-block"><span class="std std-ref">数据块菜单</span></a> 。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="workspaces.html" class="btn btn-neutral float-right" title="工作区" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="窗口系统介绍" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

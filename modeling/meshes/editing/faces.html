@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/editing/faces.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/faces.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="法向" href="normals.html" />
@@ -94,14 +113,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting.html">Selecting</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="basics/index.html">基础</a></li>
@@ -109,6 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="edges.html">边工具</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">面工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="uv/index.html">UV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="transform/index.html">变形</a></li>
 <li class="toctree-l4"><a class="reference internal" href="duplicating/index.html">复制</a></li>
 <li class="toctree-l4"><a class="reference internal" href="subdividing/index.html">细分</a></li>
@@ -119,7 +140,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh_display.html">网格显示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">网格分析</a></li>
 </ul>
 </li>
@@ -131,16 +151,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -219,51 +240,53 @@
   <div class="section" id="face-tools">
 <h1>面工具<a class="headerlink" href="#face-tools" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 面</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Ctrl-F</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-F</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>这些工具用于操作面。</p>
 <div class="section" id="make-edge-face">
 <h2>创建边/面<a class="headerlink" href="#make-edge-face" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 面 ‣ 创建边/面</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">F</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面 ‣ 创建边/面</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">F</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>基于选中项的不同，创建一条边或一些面。更多详情参见 <a class="reference internal" href="basics/make_face_edge.html"><span class="doc">创建几何体</span></a>。</p>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_closed-perimeter.png"><img alt="../../../_images/modeling_meshes_editing_faces_closed-perimeter.png" src="../../../_images/modeling_meshes_editing_faces_closed-perimeter.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">闭合的边线。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">闭合的边线。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id2">
+<td><div class="first last figure" id="id2">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_closed-perimeter-filled.png"><img alt="../../../_images/modeling_meshes_editing_faces_closed-perimeter-filled.png" src="../../../_images/modeling_meshes_editing_faces_closed-perimeter-filled.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">使用填充工具填充后。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">使用填充工具填充后。</span></p>
 </div>
 </td>
 </tr>
@@ -273,43 +296,44 @@
 <div class="section" id="fill">
 <span id="modeling-meshes-editing-fill"></span><h2>填充<a class="headerlink" href="#fill" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 面 ‣ 填充</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Alt-F</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面 ‣ 填充</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Alt-F</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p><em>填充</em> 工具从任意选中的边或顶点创建 <em>三角</em> 面，只要它们可以组成一个或多个完整的线环。</p>
-<dl class="simple">
-<dt>布线优化</dt><dd><p>整理新生成的三角面。</p>
-</dd>
+<dl class="docutils">
+<dt>布线优化</dt>
+<dd>整理新生成的三角面。</dd>
 </dl>
-<div class="figure align-center" id="id3">
+<div class="figure" id="id3">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_fill.png"><img alt="../../../_images/modeling_meshes_editing_faces_fill.png" src="../../../_images/modeling_meshes_editing_faces_fill.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">使用填充工具填充后。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">使用填充工具填充后。</span></p>
 </div>
 <p>注意，与创建多边形不同的是， <em>填充</em> 支持孔洞。</p>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id4">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_holes.png"><img alt="../../../_images/modeling_meshes_editing_faces_holes.png" src="../../../_images/modeling_meshes_editing_faces_holes.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">带有孔洞的闭合线环。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">带有孔洞的闭合线环。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id5">
+<td><div class="first last figure" id="id5">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_holes-filled.png"><img alt="../../../_images/modeling_meshes_editing_faces_holes-filled.png" src="../../../_images/modeling_meshes_editing_faces_holes-filled.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">使用填充工具填充后。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">使用填充工具填充后。</span></p>
 </div>
 </td>
 </tr>
@@ -318,38 +342,39 @@
 <div class="section" id="beautify-faces">
 <h3>完美建面<a class="headerlink" href="#beautify-faces" title="Permalink to this headline">¶</a></h3>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 面 ‣ 完美建面</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-Alt-F</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面 ‣ 完美建面</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Shift-Alt-F</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p><em>完美建面</em> 仅作用于现有选中面，通过重新排布选中的三角面，获得更加 <em>平衡的</em> 三角面(即减少细长三角面)。</p>
-<dl class="simple">
-<dt>最大角度</dt><dd><p>限制边线旋转，获得平整表面。</p>
-</dd>
+<dl class="docutils">
+<dt>最大角度</dt>
+<dd>限制边线旋转，获得平整表面。</dd>
 </dl>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id6">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id6">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_beauty-fill-before.png"><img alt="../../../_images/modeling_meshes_editing_faces_beauty-fill-before.png" src="../../../_images/modeling_meshes_editing_faces_beauty-fill-before.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">转换为网格的文本。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">转换为网格的文本。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id7">
+<td><div class="first last figure" id="id7">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_beauty-fill-after.png"><img alt="../../../_images/modeling_meshes_editing_faces_beauty-fill-after.png" src="../../../_images/modeling_meshes_editing_faces_beauty-fill-after.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">完美建面结果。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">完美建面结果。</span></p>
 </div>
 </td>
 </tr>
@@ -359,40 +384,42 @@
 <div class="section" id="grid-fill">
 <span id="modeling-meshes-editing-grid-fill"></span><h3>栅格填充<a class="headerlink" href="#grid-fill" title="Permalink to this headline">¶</a></h3>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 面 ‣ 栅格填充</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面 ‣ 栅格填充</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p><em>栅格填充</em> 使用一对相连的循环边，或单个闭合的循环边，沿四周几何形状填充栅格。</p>
 <p>如果选择两组顶点数相同的相对的循环边可以获得最佳的预期结果。当选择单个闭合循环边时，跨分/偏移量选项用于调整从一组闭合循环边中侦测出两组相对循环边的方式。</p>
-<dl class="simple">
-<dt>跨分</dt><dd><p>指定栅格中的列数。</p>
-</dd>
-<dt>偏移量</dt><dd><p>定义被认为是网格的角点的顶点，默认情况下，它是活动顶点。偏移量可以旋转网格线.</p>
-</dd>
-<dt>简单混合</dt><dd><p>使用简单的插值算法从边界循环生成网格顶点，这不会尝试保持形状，对于平面或者保持形状给出奇数结果的情况非常有用。</p>
-</dd>
+<dl class="docutils">
+<dt>跨分</dt>
+<dd>指定栅格中的列数。</dd>
+<dt>偏移量</dt>
+<dd>定义被认为是网格的角点的顶点，默认情况下，它是活动顶点。偏移量可以旋转网格线.</dd>
+<dt>简单混合</dt>
+<dd>使用简单的插值算法从边界循环生成网格顶点，这不会尝试保持形状，对于平面或者保持形状给出奇数结果的情况非常有用。</dd>
 </dl>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id8">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id8">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_grid-fill-surface-before.png"><img alt="../../../_images/modeling_meshes_editing_faces_grid-fill-surface-before.png" src="../../../_images/modeling_meshes_editing_faces_grid-fill-surface-before.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">输入。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">输入。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id9">
+<td><div class="first last figure" id="id9">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_grid-fill-surface-after.png"><img alt="../../../_images/modeling_meshes_editing_faces_grid-fill-surface-after.png" src="../../../_images/modeling_meshes_editing_faces_grid-fill-surface-after.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">栅格填充结果。</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">栅格填充结果。</span></p>
 </div>
 </td>
 </tr>
@@ -403,41 +430,46 @@
 <div class="section" id="solidify">
 <h2>实体化<a class="headerlink" href="#solidify" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 面 ‣ 生成厚度</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面 ‣ 生成厚度</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>接受一组输入面，通过均匀基础，赋予 <a class="reference internal" href="../../../glossary/index.html#term-non-manifold"><span class="xref std std-term">非流形</span></a> 表面体积。也可以通过 <a class="reference internal" href="../../modifiers/generate/solidify.html"><span class="doc">修改器</span></a> 实现。使用此工具后，可以在操作面板设置偏移距离。</p>
-<dl class="simple">
-<dt>厚度</dt><dd><p>新生成面的偏移量。正值沿法线方向向内偏移挤出，负值向外挤出。</p>
-</dd>
+<p>This takes a selection of faces and solidifies them by extruding them
+uniformly to give volume to a <a class="reference internal" href="../../../glossary/index.html#term-non-manifold"><span class="xref std std-term">non-manifold</span></a> surface.
+This is also available as a <a class="reference internal" href="../../modifiers/generate/solidify.html"><span class="doc">Modifier</span></a>.
+After using the tool, you can set the offset distance in the <a class="reference internal" href="../../../interface/undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> panel.</p>
+<dl class="docutils">
+<dt>厚度</dt>
+<dd>新生成面的偏移量。正值沿法线方向向内偏移挤出，负值向外挤出。</dd>
 </dl>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id10">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id10">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_solidify-before.png"><img alt="../../../_images/modeling_meshes_editing_faces_solidify-before.png" src="../../../_images/modeling_meshes_editing_faces_solidify-before.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">实体化前网格。</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">实体化前网格。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id11">
+<td><div class="first last figure" id="id11">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_solidify-after.png"><img alt="../../../_images/modeling_meshes_editing_faces_solidify-after.png" src="../../../_images/modeling_meshes_editing_faces_solidify-after.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">正厚度值实体化。</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">正厚度值实体化。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id12">
+<td><div class="first last figure" id="id12">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_solidify-after2.png"><img alt="../../../_images/modeling_meshes_editing_faces_solidify-after2.png" src="../../../_images/modeling_meshes_editing_faces_solidify-after2.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">负厚度值实体化。</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">负厚度值实体化。</span></p>
 </div>
 </td>
 </tr>
@@ -449,61 +481,68 @@
 <div class="section" id="intersect-knife">
 <h3>交集(切割)<a class="headerlink" href="#intersect-knife" title="Permalink to this headline">¶</a></h3>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 面 ‣ 交集(切割)</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面 ‣ 交集(切割)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>相交工具用于将交叉部分切割为几何体。这有些类似布尔工具，不过无法计算内部/外部。沿交叉边缘分开表面，并选中新增的边。</p>
-<dl class="simple">
-<dt>源</dt><dd><dl class="simple">
-<dt>选中/非选中</dt><dd><p>操作选中与未选中几何体的相交部分。</p>
-</dd>
-<dt>自身交集</dt><dd><p>操作选中网格的重叠部分。</p>
-</dd>
+<dl class="docutils">
+<dt>源</dt>
+<dd><dl class="first last docutils">
+<dt>选中/非选中</dt>
+<dd>操作选中与未选中几何体的相交部分。</dd>
+<dt>自身交集</dt>
+<dd>操作选中网格的重叠部分。</dd>
 </dl>
 </dd>
-<dt>分离模式</dt><dd><dl class="simple">
-<dt>所有</dt><dd><p>沿新增边线分离几何体。</p>
-</dd>
-<dt>剪切</dt><dd><p>保持交集操作前的几何形状，不对面进行分离。</p>
-</dd>
-<dt>合并</dt><dd><p>合并所有参与交集操作的几何元素。</p>
-</dd>
+<dt>分离模式</dt>
+<dd><dl class="first last docutils">
+<dt>所有</dt>
+<dd>沿新增边线分离几何体。</dd>
+<dt>剪切</dt>
+<dd>保持交集操作前的几何形状，不对面进行分离。</dd>
+<dt>合并</dt>
+<dd>合并所有参与交集操作的几何元素。</dd>
 </dl>
 </dd>
-<dt>合并阈值</dt><dd><p>见交集(布尔)。</p>
-</dd>
+<dt>合并阈值</dt>
+<dd>见交集(布尔)。</dd>
 </dl>
 </div>
 <div class="section" id="intersect-boolean">
 <h3>交集(布尔)<a class="headerlink" href="#intersect-boolean" title="Permalink to this headline">¶</a></h3>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 面 ‣ 交集(布尔)</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面 ‣ 交集(布尔)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>使用选中部分对未选中几何元素执行布尔操作。尽管可以使用 <a class="reference internal" href="../../modifiers/generate/booleans.html"><span class="doc">布尔修改器</span></a> 进行非破坏性编辑，但在编辑模式访问布尔操作更加快捷。</p>
-<dl>
-<dt>布尔</dt><dd><p>差值、并集、交集</p>
-</dd>
-<dt>交换</dt><dd><p>改变操作顺序。</p>
-</dd>
-<dt>合并阈值</dt><dd><p>认定靠近的表面为接触的公差。可以通过调高该值，来解决实际的交叉部分未被侦测到，或者由于边线未被侦测为重叠而产生额外几何体的问题。</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>阈值接近面尺寸时，会导致解算变慢，所以通常保持该阈值为一个较小的值。</p>
+<dl class="docutils">
+<dt>布尔</dt>
+<dd>差值、并集、交集</dd>
+<dt>交换</dt>
+<dd>改变操作顺序。</dd>
+<dt>合并阈值</dt>
+<dd><p class="first">认定靠近的表面为接触的公差。可以通过调高该值，来解决实际的交叉部分未被侦测到，或者由于边线未被侦测为重叠而产生额外几何体的问题。</p>
+<div class="last admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">阈值接近面尺寸时，会导致解算变慢，所以通常保持该阈值为一个较小的值。</p>
 </div>
 </dd>
 </dl>
@@ -512,170 +551,185 @@
 <div class="section" id="wireframe">
 <h2>线框<a class="headerlink" href="#wireframe" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 面 ‣ 线框</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面 ‣ 线框</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>线框工具通过将边线变成线框管道，从面生成线框，与 <a class="reference internal" href="../../modifiers/generate/wireframe.html"><span class="doc">线框修改器</span></a> 类似。</p>
+<p>The Wireframe tool makes a wireframe from faces by turning edges into wireframe tubes,
+similar to the <a class="reference internal" href="../../modifiers/generate/wireframe.html"><span class="doc">线框修改器</span></a>.</p>
 </div>
 <div class="section" id="poke-faces">
 <h2>尖分面<a class="headerlink" href="#poke-faces" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 面 ‣ 尖分面</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Alt-P</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面 ‣ 尖分面</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Alt-P</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>将每个选中面都切分为扇形三角面，创建一个新的中心顶点，并使用原始边和新的中心顶点创建三角面。可使用 <em>偏移量</em> 来制作尖刺或凹坑。</p>
-<dl>
-<dt>尖分偏移</dt><dd><p>沿面的法向偏移新的中心顶点。</p>
-</dd>
-<dt>相对偏移</dt><dd><p>将偏移量乘以从中心到面顶点的平均长度。</p>
-</dd>
-<dt>尖分中心</dt><dd><p>计算面中心.</p>
-<dl class="simple">
-<dt>加权平均计算</dt><dd><p>使用边长加权平均值。</p>
-</dd>
-<dt>平均值</dt><dd><p>使用平均值.</p>
-</dd>
-<dt>边界范围</dt><dd><p>使用边界盒的中心.</p>
-</dd>
+<dl class="docutils">
+<dt>尖分偏移</dt>
+<dd>沿面的法向偏移新的中心顶点。</dd>
+<dt>相对偏移</dt>
+<dd>将偏移量乘以从中心到面顶点的平均长度。</dd>
+<dt>尖分中心</dt>
+<dd><p class="first">计算面中心.</p>
+<dl class="last docutils">
+<dt>加权平均计算</dt>
+<dd>使用边长加权平均值。</dd>
+<dt>平均值</dt>
+<dd>使用平均值.</dd>
+<dt>边界范围</dt>
+<dd>使用边界盒的中心.</dd>
 </dl>
 </dd>
 </dl>
 </div>
 <div class="section" id="triangulate-faces">
-<h2>面三角化<a class="headerlink" href="#triangulate-faces" title="Permalink to this headline">¶</a></h2>
+<span id="bpy-ops-mesh-quads-convert-to-tris"></span><h2>面三角化<a class="headerlink" href="#triangulate-faces" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 面 ‣ 面三角化</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Ctrl-T</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面 ‣ 面三角化</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-T</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>该工具会将每个选中的面(四边形或多边形)转换为三角形面, 见 <a class="reference internal" href="../../modifiers/generate/triangulate.html"><span class="doc">三角化修改器</span></a>.</p>
 </div>
 <div class="section" id="triangles-to-quads">
 <span id="mesh-faces-tristoquads"></span><h2>三角面 -&gt; 四边面<a class="headerlink" href="#triangles-to-quads" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 面 ‣ 三角面 -&gt; 四边面</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Alt-J</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面 ‣ 三角面 -&gt; 四边面</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Alt-J</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>此工具基于阈值，通过移除相邻两三角面的相邻边，创建四边面，将选中三角面转换为四边面。选中多个三角面后可调用该工具。</p>
 <p>这意味着可以选中整个网格，对已经构成四边形的三角面进行转换 - 在转换为四边面时无需顾虑单个的面。</p>
 <p>还可选中一对三角面，来强制执行该操作(其他合并方式见下文提示)。</p>
-<p>此工具需要至少两个相邻三角面，才能生成一个四边面。即使选中偶数个三角面，也可能无法获得全部的四边面。事实上，此工具会从现有的三角面尽可能创建 <em>最近似方形</em> 的四边面，这也意味着一些三角面会保留。</p>
-<table class="docutils align-center">
+<p>To create a quad, this tool needs at least two adjacent triangles.
+If you have an even number of selected triangles,
+it is also possible not to obtain only quads. In fact,
+this tool tries to create most even rectangular quads from the given triangles,
+which means some triangles could remain.</p>
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id13">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id13">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_tris-to-quad-before.png"><img alt="../../../_images/modeling_meshes_editing_faces_tris-to-quad-before.png" src="../../../_images/modeling_meshes_editing_faces_tris-to-quad-before.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">三角面转四边面之前。</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">三角面转四边面之前。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id14">
+<td><div class="first last figure" id="id14">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_tris-to-quad-after.png"><img alt="../../../_images/modeling_meshes_editing_faces_tris-to-quad-after.png" src="../../../_images/modeling_meshes_editing_faces_tris-to-quad-after.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">将三角到四边形后。</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">将三角到四边形后。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 <p>所有菜单和快捷键使用 <em>操作</em> 面板中定义的设定:</p>
-<dl class="simple">
-<dt>最大角度</dt><dd><p>用于控制该工具起作用的相邻三角面夹角阈值(介于0到180之间)。阈值设置为0.0时 ，仅合并构成完美矩形的相邻三角形(也就是共用斜边的直角三角形)。当两三角形的公共边较三角形其他边较短时，需调大阈值。</p>
-</dd>
-<dt>比较UV</dt><dd><p>启用后，将阻止UV映射中非相邻三角面的合并。</p>
-</dd>
-<dt>比较顶点色</dt><dd><p>启用后，将阻止顶点色不匹配的三角面的合并。</p>
-</dd>
-<dt>比较锐边</dt><dd><p>启用后，将阻止共用边为锐边的三角面的合并。</p>
-</dd>
-<dt>比较材质</dt><dd><p>启用后，将阻止使用非相同材质的三角面的合并。</p>
-</dd>
+<dl class="docutils">
+<dt>最大角度</dt>
+<dd>用于控制该工具起作用的相邻三角面夹角阈值(介于0到180之间)。阈值设置为0.0时 ，仅合并构成完美矩形的相邻三角形(也就是共用斜边的直角三角形)。当两三角形的公共边较三角形其他边较短时，需调大阈值。</dd>
+<dt>比较UV</dt>
+<dd>启用后，将阻止UV映射中非相邻三角面的合并。</dd>
+<dt>比较顶点色</dt>
+<dd>启用后，将阻止顶点色不匹配的三角面的合并。</dd>
+<dt>比较锐边</dt>
+<dd>启用后，将阻止共用边为锐边的三角面的合并。</dd>
+<dt>比较材质</dt>
+<dd>启用后，将阻止使用非相同材质的三角面的合并。</dd>
 </dl>
 <div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>当选中多个孤立的面组时，可以结合 <a class="reference internal" href="basics/make_face_edge.html#modeling-mesh-make-face-edge-dissolve"><span class="std std-ref">创建面</span></a> 或 <a class="reference internal" href="basics/deleting.html#modeling-mesh-deleting-dissolve-faces"><span class="std std-ref">融并面</span></a> 一起使用，这并不局限于四边面。</p>
+<p class="first admonition-title">Hint</p>
+<p class="last">当选中多个孤立的面组时，可以结合 <a class="reference internal" href="basics/make_face_edge.html#modeling-mesh-make-face-edge-dissolve"><span class="std std-ref">创建面</span></a> 或 <a class="reference internal" href="basics/deleting.html#modeling-mesh-deleting-dissolve-faces"><span class="std std-ref">融并面</span></a> 一起使用，这并不局限于四边面。</p>
 </div>
 </div>
 <div class="section" id="weld-edges-into-faces">
 <h2>焊接边线到面<a class="headerlink" href="#weld-edges-into-faces" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 面 ‣ 焊接边线到面</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面 ‣ 焊接边线到面</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>使用松散线框边来切割选中的面。该工具的用法与切割工具类似，不同的是可以先手动设置切割线。</p>
 </div>
 <div class="section" id="rotate-edges">
 <h2>旋转边<a class="headerlink" href="#rotate-edges" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">网格 ‣ 面 ‣ 顺时针旋转边</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 面 ‣ 顺时针旋转边</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>该工具于边模式下的旋转边作用相同，作用于两个面的公共边，选中后旋转该公共边。</p>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id15">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id15">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_rotate-edge-face-mode1.png"><img alt="../../../_images/modeling_meshes_editing_faces_rotate-edge-face-mode1.png" src="../../../_images/modeling_meshes_editing_faces_rotate-edge-face-mode1.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">选中两个相邻面。</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">选中两个相邻面。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id16">
+<td><div class="first last figure" id="id16">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_faces_rotate-edge-face-mode2.png"><img alt="../../../_images/modeling_meshes_editing_faces_rotate-edge-face-mode2.png" src="../../../_images/modeling_meshes_editing_faces_rotate-edge-face-mode2.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">旋转选中边后。</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">旋转选中边后。</span></p>
 </div>
 </td>
 </tr>
@@ -685,13 +739,13 @@
 </div>
 <div class="section" id="rotate-reverse">
 <h2>旋转 &amp; 翻转<a class="headerlink" href="#rotate-reverse" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>旋转/翻转UV</dt><dd><p>参考 <a class="reference internal" href="../../../editors/uv_image/uv/editing/layout.html#uv-image-rotate-reverse-uvs"><span class="std std-ref">面镜射和旋转UV</span></a>。</p>
-</dd>
-<dt>旋转顶点着色</dt><dd><p>旋转面内侧的顶点色为顺时针或逆时针.</p>
-</dd>
-<dt>反相颜色</dt><dd><p>翻转选中的面内的顶点颜色的方向.</p>
-</dd>
+<dl class="docutils">
+<dt>旋转/翻转UV</dt>
+<dd>参考 <a class="reference internal" href="uv/layout.html#uv-image-rotate-reverse-uvs"><span class="std std-ref">面镜射和旋转UV</span></a>。</dd>
+<dt>旋转顶点着色</dt>
+<dd>旋转面内侧的顶点色为顺时针或逆时针.</dd>
+<dt>反相颜色</dt>
+<dd>翻转选中的面内的顶点颜色的方向.</dd>
 </dl>
 <div class="section" id="normals">
 <h3>法线<a class="headerlink" href="#normals" title="Permalink to this headline">¶</a></h3>

@@ -1,0 +1,533 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>文件浏览器 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/file_browser.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="用户设置" href="preferences/index.html" />
+    <link rel="prev" title="属性编辑器" href="properties_editor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3dview/index.html">3D视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uv/index.html">UV编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shader_editor/index.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compositing/index.html">Compositor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../video_editing/index.html">Video Sequencer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outliner.html">大纲视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="properties_editor.html">属性编辑器</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">文件浏览器</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#header">标题栏</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#view-menu">视图菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-filtering">文件过滤</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#file-region">文件区域</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#toolbar">Toolbar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bookmarks">书签</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operator-panel">操作面板</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#main-region">主要区域</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#navigation">导航</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#selection">选择</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-management">文件管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#previews">预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="preferences/index.html">用户设置</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">编辑器</a> &raquo;</li>
+        
+      <li>文件浏览器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/editors/file_browser.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="file-browser">
+<h1>文件浏览器<a class="headerlink" href="#file-browser" title="Permalink to this headline">¶</a></h1>
+<div class="figure" id="id1">
+<img alt="../_images/editors_file-browser_editor.png" src="../_images/editors_file-browser_editor.png" />
+<p class="caption"><span class="caption-text">文件浏览器。</span></p>
+</div>
+<div class="section" id="introduction">
+<h2>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>文件浏览器用于所有与文件相关的操作。这些包括:</p>
+<ul class="simple">
+<li>打开和保存 blend文件。</li>
+<li>浏览其他 blend文件时，当附加或链接数据块时，见 <a class="reference internal" href="../files/linked_libraries.html"><span class="doc">关联库</span></a>.</li>
+<li>导入/导出其他文件格式。</li>
+<li>为现有的文件路径（图像，视频，字体...）选择新的位置。</li>
+</ul>
+<p>使用此编辑器最常见的方法是通过模态操作(如打开或保存一个blend文件)。它将显示最大化，等待操作完成，然后关闭并返回到以前的屏幕布局。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">您始终可以在文件浏览器中选择多个条目，最后选择的条目将被视为活动条目。如果调用操作需要一个单独的路径（例如 <em>打开</em> 一个主blend文件），它将获取活动项的路径，其他选定的路径将被忽略。</p>
+</div>
+<p>您还可以像任何其他编辑器类型一样保持文件浏览器打开，以便浏览文件系统。其主要目的是能够拖放媒体文件：</p>
+<ul class="simple">
+<li>将图像放入  <a class="reference internal" href="3dview/index.html#editors-3dview-index"><span class="std std-ref">3D视图</span></a> （设置为背景或应用为材质纹理）。</li>
+<li>媒体文件放入 <a class="reference internal" href="../video_editing/index.html#editors-sequencer-index"><span class="std std-ref">视频编辑</span></a>.</li>
+</ul>
+</div>
+<div class="section" id="header">
+<h2>标题栏<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>导航图标按钮</dt>
+<dd><p class="first">文件导航工具。</p>
+<dl class="last docutils">
+<dt>左箭头键 <kbd class="kbd docutils literal notranslate">Backspace</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Left</kbd></dt>
+<dd>移动到上一个文件夹。</dd>
+<dt>右箭头 <kbd class="kbd docutils literal notranslate">Shift-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Right</kbd></dt>
+<dd>移到到下一个文件夹。</dd>
+<dt>向上箭头 <kbd class="kbd docutils literal notranslate">P</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Up</kbd></dt>
+<dd>移动到父级目录。</dd>
+<dt>循环箭头 <kbd class="kbd docutils literal notranslate">R</kbd>, <kbd class="kbd docutils literal notranslate">NumpadPeriod</kbd></dt>
+<dd>刷新当前文件夹。</dd>
+</dl>
+</dd>
+<dt>创建新的文件夹 <kbd class="kbd docutils literal notranslate">I</kbd></dt>
+<dd>将要求您确认并在当前目录中创建一个新目录，在主视图中移动到它，并让您输入它的名称。</dd>
+<dt>显示类型</dt>
+<dd><p class="first">控制文件的显示方式。</p>
+<ul class="last simple">
+<li><em>短列表</em> 只显示文件名.</li>
+<li><em>详细列表</em> 添加日期/时间和大小信息。</li>
+<li><em>缩略图</em> 显示 <a class="reference internal" href="#file-browser-previews"><span class="std std-ref">预览</span></a>.</li>
+</ul>
+</dd>
+<dt>排序</dt>
+<dd>按四种建议方法之一(按字母顺序、按类型、按日期或按大小)对项目进行排序:</dd>
+<dt>显示隐藏 <kbd class="kbd docutils literal notranslate">H</kbd></dt>
+<dd>显示隐藏文件 (从 <code class="docutils literal notranslate"><span class="pre">.</span></code> 开始).</dd>
+</dl>
+<div class="section" id="view-menu">
+<h3>视图菜单<a class="headerlink" href="#view-menu" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>显示尺寸</dt>
+<dd>缩略图的大小，或列的宽度。</dd>
+<dt>递归</dt>
+<dd><p class="first">一次展开显示的目录级别数。</p>
+<ul class="simple">
+<li>无（默认情况下，仅显示当前目录内容）</li>
+<li>Blend 文件 (blend文件的全部内容，仅在链接或附加数据块时可用)</li>
+<li>一级</li>
+<li>二级</li>
+<li>三级</li>
+</ul>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>一次显示几个级别的目录非常方便，例如，可以看到你的全部纹理集合，即使你已经把它们排列在一组很好的目录中，以避免在一个地方有数百个文件。</p>
+<p class="last">在 <em>追加/关联</em> 的情况下，显示整个blend文件的内容将允许您在一个操作中关联不同类型的数据块。</p>
+</div>
+<div class="last admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">一次显示的级别越多，将需要的时间越多(通常是指数级的，一次显示三个级别可能需要三个数量级的时间完全列出)。</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="file-filtering">
+<h3>文件过滤<a class="headerlink" href="#file-filtering" title="Permalink to this headline">¶</a></h3>
+<p>标题栏的右边是过滤选项。</p>
+<p>第一个 &quot;漏斗&quot;按钮控制是否启用筛选。</p>
+<dl class="docutils">
+<dt>文件类型</dt>
+<dd>按分类过滤文件，如文件夹、blend文件、图像等。</dd>
+<dt>数据块类型</dt>
+<dd>在追加或关联时，还可以按数据块类别（如场景、动画、材质等）进行筛选。</dd>
+<dt>搜索栏</dt>
+<dd>按名称筛选项目。通配符  <code class="docutils literal notranslate"><span class="pre">*</span></code>  将匹配任何内容，例如 <code class="docutils literal notranslate"><span class="pre">bl*er</span></code> 将同时 <code class="docutils literal notranslate"><span class="pre">blender</span></code> 和 <code class="docutils literal notranslate"><span class="pre">blogger</span></code> 。搜索字符串的开始和结尾总是有一个隐式通配符，所以 <code class="docutils literal notranslate"><span class="pre">blender</span></code>  也将匹配  <code class="docutils literal notranslate"><span class="pre">test_blender_file.blend</span></code> 。该字段还可用于筛选某些特定的文件扩展名(例如  <code class="docutils literal notranslate"><span class="pre">.png</span></code>  将列出所有PNG文件)。</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="file-region">
+<h2>文件区域<a class="headerlink" href="#file-region" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>文件路径</dt>
+<dd>当前文件夹路径的文本字段。  <kbd class="kbd docutils literal notranslate">Tab</kbd> 将自动完成现有路径。 如果键入一个不存在的目录路径，系统将提示您创建该新目录。</dd>
+<dt>文件名</dt>
+<dd>编辑文件名和扩展名的文本字段。保存时，如果背景为红色，则文件夹中已经存在同名文件。 <kbd class="kbd docutils literal notranslate">Tab</kbd>  将自动完成到当前目录中的现有名称。</dd>
+<dt>增量文件名 <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code></dt>
+<dd>在文件名中添加/增加或删除/减少尾随号(例如用于存储文件的不同版本)。</dd>
+<dt>确认 <kbd class="kbd docutils literal notranslate">Return</kbd></dt>
+<dd>验证操作的主按钮，该按钮定义其名称。双击非目录项将产生同样的效果。</dd>
+<dt>取消 <kbd class="kbd docutils literal notranslate">Esc</kbd></dt>
+<dd>取消文件选择 (和基础操作)，并关闭文件浏览器。 在  <a class="reference internal" href="../interface/window_system/topbar.html"><span class="doc">标题栏</span></a>  使用 <em>返回前一视图</em>  按钮将产生同样的效果。</dd>
+</dl>
+</div>
+<div class="section" id="toolbar">
+<h2>Toolbar<a class="headerlink" href="#toolbar" title="Permalink to this headline">¶</a></h2>
+<p>左侧区域分为两个区域，顶部是书签，底部是操作面板。</p>
+<div class="section" id="bookmarks">
+<h3>书签<a class="headerlink" href="#bookmarks" title="Permalink to this headline">¶</a></h3>
+<p>上面的列表显示了四种  <a class="reference internal" href="../interface/controls/templates/list_presets.html#ui-list-view"><span class="std std-ref">列表视图</span></a> 访问某些目录的不同方法。单击其中一个快捷条目将立即导航到该文件夹。</p>
+<dl class="docutils">
+<dt>卷</dt>
+<dd>包含所有操作系统定义的可用卷，例如驱动器或网络位置。</dd>
+<dt>系统</dt>
+<dd>包含操作系统定义的通用目录，如主用户文件夹…</dd>
+<dt>收藏夹</dt>
+<dd>包含您希望能够经常访问的文件夹，而不需要在文件浏览器中找到它们。在列表的右边是一些按钮，用于对您的收藏夹进行基本的管理操作，例如添加/删除条目、在列表中向上或向下移动等。</dd>
+<dt>最近打开的文件</dt>
+<dd><p class="first">包含最近访问的文件夹。右边的 <code class="docutils literal notranslate"><span class="pre">X</span></code> 按钮允许您完全清除这个列表。</p>
+<p class="last">您可以使用设置中 <a class="reference internal" href="preferences/save_load.html#prefs-save-load"><span class="std std-ref">保存 &amp; 加载</span></a> 选项卡的  <em>最近打开的文件</em>  选项来控制此列表中显示的文件夹数。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="operator-panel">
+<h3>操作面板<a class="headerlink" href="#operator-panel" title="Permalink to this headline">¶</a></h3>
+<p>显示调用运算符的选项。 除了下面列出的常见操作之外，许多导入/导出 插件 也将在那里显示它们的选项。</p>
+<dl class="docutils">
+<dt>打开，保存，另存为Blender 文件</dt>
+<dd>见 <a class="reference internal" href="../files/blend/save_load.html"><span class="doc">Blend Files</span></a>.</dd>
+<dt>打开，替换，另存为图像</dt>
+<dd>见 <a class="reference internal" href="../files/media/image_formats.html"><span class="doc">支持的图像格式</span></a>.</dd>
+<dt>从库中链接/附加</dt>
+<dd>见 <a class="reference internal" href="../files/linked_libraries.html"><span class="doc">关联库</span></a>.</dd>
+</dl>
+<p>对于普通选项：</p>
+<dl class="docutils">
+<dt>相对路径</dt>
+<dd>见 <a class="reference internal" href="../files/blend/save_load.html#files-blend-relative-paths"><span class="std std-ref">相对路径</span></a>.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="main-region">
+<h2>主要区域<a class="headerlink" href="#main-region" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="navigation">
+<h3>导航<a class="headerlink" href="#navigation" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>输入目录</dt>
+<dd>在一个目录单击 <kbd class="kbd docutils literal notranslate">LMB</kbd> 进入该目录。</dd>
+<dt>父目录 <kbd class="kbd docutils literal notranslate">P</kbd></dt>
+<dd>让你到上一级目录。</dd>
+</dl>
+<div class="section" id="file-drop">
+<h4>文件拖拽<a class="headerlink" href="#file-drop" title="Permalink to this headline">¶</a></h4>
+<p>您还可以将文件或目录从本地文件资源管理器拖放到Blender文件浏览器中。 这会将其重定位到拖放文件的目录，并将选择该文件。</p>
+</div>
+</div>
+<div class="section" id="selection">
+<h3>选择<a class="headerlink" href="#selection" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>选择</dt>
+<dd><kbd class="kbd docutils literal notranslate">LMB</kbd> 和 <kbd class="kbd docutils literal notranslate">RMB</kbd> 点击都有效. 按着 <kbd class="kbd docutils literal notranslate">Shift</kbd> 将扩展选择项目。</dd>
+<dt>选择所有（取消选择） <kbd class="kbd docutils literal notranslate">A</kbd></dt>
+<dd>切换选择所有文件。</dd>
+<dt>拖拽</dt>
+<dd>按着 <kbd class="kbd docutils literal notranslate">LMB</kbd> 拖动将启动  <a class="reference internal" href="../interface/selecting.html#tool-select-box"><span class="std std-ref">框选</span></a>。</dd>
+</dl>
+<div class="section" id="arrow-keys">
+<h4>方向键<a class="headerlink" href="#arrow-keys" title="Permalink to this headline">¶</a></h4>
+<p>也可以通过使用方向键“走步”来选择/取消选择文件：</p>
+<ul class="simple">
+<li>只使用方向键，将选中所选方向的下一个文件，并取消选择所有其他文件。</li>
+<li>在执行此操作时按住 <kbd class="kbd docutils literal notranslate">Shift</kbd> 不会取消选择任何内容，因此它可以扩展到选择内容，并且允许通过导航到已经选择的文件块来取消选择文件（按顺序至少包含两个文件）。</li>
+<li>按住 <kbd class="kbd docutils literal notranslate">Shift-Ctrl</kbd> 进一步选择/取消选择中间的所有文件。</li>
+</ul>
+<p>如果未选择文件，方向键导航会根据箭头方向选择目录中的第一个或最后一个文件。</p>
+<p>如果你选择一个目录并点击 <kbd class="kbd docutils literal notranslate">Return</kbd> ，你将进入该目录（并高亮显示 '父级' <code class="docutils literal notranslate"><span class="pre">..</span></code> 条目会将你回到上一个级别）。</p>
+</div>
+</div>
+<div class="section" id="file-management">
+<h3>文件管理<a class="headerlink" href="#file-management" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>删除文件 <kbd class="kbd docutils literal notranslate">Delete</kbd>, <kbd class="kbd docutils literal notranslate">X</kbd></dt>
+<dd>删除当前选定的文件。</dd>
+<dt>重命名 <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd></dt>
+<dd>可以用于在文件或目录中给它重命名。</dd>
+</dl>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">小心，没有办法撤销这些操作!</p>
+</div>
+</div>
+<div class="section" id="previews">
+<span id="file-browser-previews"></span><h3>预览<a class="headerlink" href="#previews" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id2">
+<img alt="../_images/editors_file-browser_previews.png" src="../_images/editors_file-browser_previews.png" />
+<p class="caption"><span class="caption-text">文件浏览器处于 <em>缩略图</em> 模式。</span></p>
+</div>
+<p>在缩略图显示模式下，文件浏览器支持多种类型的预览。其中包括：</p>
+<ul class="simple">
+<li>图像和视频格式</li>
+<li>字体</li>
+<li>Blend文件</li>
+<li>内部 <a class="reference internal" href="../files/data_blocks.html"><span class="doc">数据块</span></a></li>
+</ul>
+<p>见 <a class="reference internal" href="../files/blend/previews.html"><span class="doc">Blend文件预览</span></a>  ， 有关如何管理blender数据预览的信息 。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="preferences/index.html" class="btn btn-neutral float-right" title="用户设置" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="properties_editor.html" class="btn btn-neutral float-left" title="属性编辑器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

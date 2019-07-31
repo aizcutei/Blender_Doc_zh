@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devsculpt_paint/sculpting/adaptive.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/sculpt_paint/sculpting/adaptive.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="隐藏 &amp; 遮罩" href="hide_mask.html" />
-    <link rel="prev" title="选项" href="options.html" /> 
+    <link rel="prev" title="选项" href="tool_settings/options.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,36 +113,38 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">绘制与雕刻</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">雕刻 &amp; 绘制</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">介绍</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../brush.html">笔刷</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../texture_tex_mask.html">纹理和纹理遮罩</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../stroke_curve.html">笔触和曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../brush/index.html">笔刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../navigation.html">Navigation</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#modes">模式</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../painting/index.html">绘制</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">雕刻</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tools.html">工具</a></li>
-<li class="toctree-l4"><a class="reference internal" href="options.html">选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tools.html">Sculpting Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tool_settings/index.html">Tool Settings</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">自适应雕刻</a></li>
 <li class="toctree-l4"><a class="reference internal" href="hide_mask.html">隐藏 &amp; 遮罩</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../texture_paint/index.html">纹理绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vertex_paint/index.html">顶点绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../weight_paint/index.html">权重绘制</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -174,7 +195,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">绘制与雕刻</a> &raquo;</li>
+          <li><a href="../index.html">雕刻 &amp; 绘制</a> &raquo;</li>
         
           <li><a href="index.html">雕刻</a> &raquo;</li>
         
@@ -199,76 +220,28 @@
             
   <div class="section" id="adaptive-sculpting">
 <h1>自适应雕刻<a class="headerlink" href="#adaptive-sculpting" title="Permalink to this headline">¶</a></h1>
+<p>为了在雕刻中得到准确和可预测的效果，Blender需要几何图形来进行处理。实现这一点的一种方法是从经过高度细分的网格开始进行雕刻。另一种方法是使用两种自适应雕刻方式中的任意一种来动态地增加几何图形。</p>
 <div class="section" id="dynamic-topology">
 <h2>动态拓扑<a class="headerlink" href="#dynamic-topology" title="Permalink to this headline">¶</a></h2>
-<div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>雕刻模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ Dyntopo</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Ctrl-D</kbd></p>
-</dd>
-</dl>
-</div>
-<p>动态拓扑（也称为dyntopo(动态拓扑)）是一种动态镶嵌的雕刻方法，可以在操作中添加和删除细节，而常规雕刻只影响网格的形状。</p>
+<p>动态拓扑（又称 dynotopo）是一种能够通过笔刷增添和减少细节的动态细分雕刻方式。这是通过首先对网格进行细分，然后在细分后的网格上应用雕刻笔触来实现的。</p>
 <p>这使得可以用简单的网格来雕刻复杂的形状，而不是仅仅将细节添加到建模的基本网格上。</p>
-<p>Dyntopo可以用标题中的复选框来切换，或者使用 <kbd class="kbd docutils literal notranslate">Ctrl-D</kbd> 。在动态拓扑激活的情况下，大多数笔刷会在笔迹中细分网格。</p>
-<dl>
-<dt>Detail Type 细节类型</dt><dd><p>Dyntopo使用三种不同的细节方法为对象创建动态细节。</p>
-<dl class="simple">
-<dt>Relative Detail 相对细节</dt><dd><p>该方法使用基于像素数的细节大小，并且依次将创建该尺寸的拓扑。缩小大细节，放大小细节。</p>
-</dd>
-<dt>Constant Detail 常数细节</dt><dd><p>为了保持整个对象的细节统一，可以使用常量细节。细节基于单个 <abbr title="Blender Unit">BU</abbr> 的百分比。</p>
-</dd>
-<dt>Brush Detail 笔刷细节</dt><dd><p>通过这种方法，你可以根据笔刷大小创建拓扑，更好地控制拓扑。你可以通过简单地调整笔刷本身的大小来增加和降低拓扑。细节尺寸基于笔刷本身的大小，其中100％将创建笔刷环本身的大小的拓扑。</p>
-</dd>
-</dl>
-</dd>
-<dt>Detail Size/Percentage, Resolution <kbd class="kbd docutils literal notranslate">Shift-D</kbd></dt><dd><p>每个细节类型的细节都在这里设置。根据使用的详细信息类型，此属性将显示为像素数（px）或百分比。</p>
-<dl class="simple">
-<dt>Sample Detail Size (pipette icon)</dt><dd><p>使用常数细节尺寸，可以通过单击旁边的吸管图标详细设置，然后单击该区域来对某个网格区域的细节值进行采样。</p>
-</dd>
-</dl>
-</dd>
-<dt>Detail Refine Method 细节细化方法</dt><dd><p>当使用动态拓扑时，将使用某种方法来说明如何处理拓扑。设置选项将决定在更改拓扑结构时将使用哪些方法。</p>
-<dl class="simple">
-<dt>细分边线</dt><dd><p>就像细分工具一样，这种方法只会细分拓扑，以匹配给定的细节。</p>
-</dd>
-<dt>折叠边线</dt><dd><p>当拓扑太密集且小于给定的细节时，边缘将被折叠以适合细节尺寸。</p>
-</dd>
-<dt>Subdivide Collapse 细分折叠</dt><dd><p>该方法结合了这两种方法，细分了细节尺寸的边缘和折叠拓扑。</p>
-</dd>
-</dl>
-</dd>
-<dt>Smooth Shading 平滑着色</dt><dd><p>切换网格面是平滑还是平坦的着色。在动态拓扑模式下，所有面都具有相同类型的着色。</p>
-</dd>
-<dt>Optimize  优化</dt><dd><p>如果在启用动态拓扑时雕刻开始变慢，请使用 <em>优化</em> 按钮重新计算雕刻BVH。</p>
-</dd>
-<dt>Detail Flood Fill</dt><dd><p>当使用常数细节模式时，此选项可用，允许您根据详细尺寸，使用统一的详细信息填充整个对象。</p>
-</dd>
-<dt>Direction 方向</dt><dd><p>确定模型对称的方向。</p>
-</dd>
-<dt>Symmetrize 对称</dt><dd><p>使用方向定向对称。由于Dyntopo添加细节动态可能会发生模型不对称，所以这是一个很好的工具。</p>
-</dd>
-</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">动态拓扑可以在 <a class="reference internal" href="tool_settings/dyntopo.html"><span class="doc">动态拓扑面板</span></a> 中启用。</p>
+</div>
 </div>
 <div class="section" id="multiresolution-modifier">
 <h2>Multi-Resolution Modifier 多级精度修改器<a class="headerlink" href="#multiresolution-modifier" title="Permalink to this headline">¶</a></h2>
-<p>需要多级精度修改器才能雕刻。该修改器将细分网格。细分越多，需要的计算越多。使用Blender堆栈不破坏数据，当你想有一个干净的拓扑基础网格时，多级精度修改器将有所帮助。</p>
-<p>当使用多级精度修改器雕刻时，我们可以在不同级别的细分中进行雕刻，这意味着我们可以在细分级别1中雕刻一些细节，并在细分2中添加更多细节，并返回到细分1纠正一些错误。虽然经常使用此工作流程，但多级精度修改器仍有一些限制。你可能会遇到一些网格失真问题。作为一个建议，添加更多细节之前添加更多的细分。黏土笔刷，绘画笔刷通过多级精度修改器雕刻更好地雕刻二次形式。</p>
+<p>多级精度修改器可用来动态地细分网格。细分地越多，需要的计算量也就越大。当您拥有干净拓扑的基础网格时，多级精度雕刻将有所帮助。</p>
+<p>当使用多级精度修改器雕刻时，我们可以在不同的细分级别中进行雕刻，这意味着我们可以在细分级别1中雕刻一些细节，并在细分级别2中添加更多细节，并返回到细分级别1纠正一些错误。虽然此工作流程经常被使用，但多级精度修改器仍有一些局限。你可能会遇到一些网格失真问题。作为建议，在增加更多细分之前添加尽可能多的细节。在多级精度雕刻中进行二次雕刻，Clay笔刷是更合适的选择。</p>
 <ul class="simple">
-<li><p>加强一个细分级别 <kbd class="kbd docutils literal notranslate">PageUp</kbd></p></li>
-<li><p>降低一个细分级别 <kbd class="kbd docutils literal notranslate">PageDown</kbd></p></li>
-<li><p>设置细分级别 <kbd class="kbd docutils literal notranslate">Ctrl-0</kbd> 至 <kbd class="kbd docutils literal notranslate">Ctrl-5</kbd></p></li>
+<li>增加一个细分级别 <kbd class="kbd docutils literal notranslate">PageUp</kbd></li>
+<li>降低一个细分级别 <kbd class="kbd docutils literal notranslate">PageDown</kbd></li>
+<li>设置细分级别 <kbd class="kbd docutils literal notranslate">Ctrl-0</kbd> 至 <kbd class="kbd docutils literal notranslate">Ctrl-5</kbd></li>
 </ul>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>阅读更多关于 <a class="reference internal" href="../../modeling/modifiers/generate/multiresolution.html"><span class="doc">多级精度修改器</span></a>.</p>
+<p class="first admonition-title">See also</p>
+<p class="last">阅读更多关于 <a class="reference internal" href="../../modeling/modifiers/generate/multiresolution.html"><span class="doc">多级精度修改器</span></a>.</p>
 </div>
 </div>
 </div>
@@ -284,7 +257,7 @@
         <a href="hide_mask.html" class="btn btn-neutral float-right" title="隐藏 &amp; 遮罩" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="options.html" class="btn btn-neutral float-left" title="选项" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tool_settings/options.html" class="btn btn-neutral float-left" title="选项" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

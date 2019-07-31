@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devanimation/keyframes/introduction.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/keyframes/introduction.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="编辑" href="editing.html" />
@@ -94,22 +113,26 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画 &amp; 绑定</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">关键帧</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#visualization">可视化</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#keyframe-types">关键帧类型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#handles-interpolation-display">Handles &amp; Interpolation Display</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keying_sets.html">插帧集</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/index.html">骨架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lattice.html">Lattice 晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../constraints/index.html">约束</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../actions.html">动作</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../drivers/index.html">驱动器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../markers.html">标记</a></li>
@@ -120,10 +143,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -174,7 +198,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">动画</a> &raquo;</li>
+          <li><a href="../index.html">动画 &amp; 绑定</a> &raquo;</li>
         
           <li><a href="index.html">关键帧</a> &raquo;</li>
         
@@ -205,27 +229,79 @@
 <div class="section" id="visualization">
 <h2>可视化<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h2>
 <p>3D视图中有几种实用的可视化功能，有助于制作动画。</p>
-<p>在当前帧为活动物体的关键帧时，物体的名称(位于3D视图左下角)会变为黄色。</p>
-<div class="figure align-center" id="id1">
+<p>When the current frame is a keyframe for the current active object, the name of this object
+(shown in the upper left corner of the 3D Views) turns yellow.</p>
+<div class="figure" id="id1">
 <img alt="../../_images/animation_keyframes_introduction_visualization.png" src="../../_images/animation_keyframes_introduction_visualization.png" />
-<p class="caption"><span class="caption-text">下图：当前帧为第0帧。上图：当前帧为立方体的关键帧。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Bottom: Current frame isn't a keyframe. Top: Current frame is a keyframe for Cube.</span></p>
 </div>
 </div>
 <div class="section" id="keyframe-types">
 <span id="keyframe-type"></span><h2>关键帧类型<a class="headerlink" href="#keyframe-types" title="Permalink to this headline">¶</a></h2>
-<p>Blender使用不同的颜色来区分常规关键帧和其他的动画事件或状态(极端点(extremes)，间断点(breakdowns)，或者其它中间状态)。</p>
-<dl class="simple">
-<dt>关键帧(黄色菱形)</dt><dd><p>常规关键帧。</p>
-</dd>
-<dt>间断点(breakdown，蓝绿色小方块)</dt><dd><p>断点状态，如不同关键姿态间的过渡。</p>
-</dd>
-<dt>Moving Hold（浅橘红色方块）</dt><dd><p>在holding pose上加入少量运动成分（motion）的关键帧。在Dope Sheet中会在它们之间画上一条竖线（bar）。</p>
-</dd>
-<dt>极端点（extreme，大的红色菱形）</dt><dd><p>极值状态，或者其他需要的用途。</p>
-</dd>
-<dt>抖动（jitter，小的绿色菱形）</dt><dd><p>用于记录关键帧的一个填充符或者烘焙关键帧，或者用于其它所需目的。</p>
-</dd>
+<p>For visually distinguishing regular keyframes from different animation events or
+states (extremes, breakdowns, or other in-betweens)
+there is the possibility of applying different colors on them for visualization.</p>
+<div class="figure" id="id2">
+<img alt="../../_images/animation_keyframes_introduction_types.png" src="../../_images/animation_keyframes_introduction_types.png" />
+<p class="caption"><span class="caption-text">Left: not selected; Right: selected.</span></p>
+</div>
+<dl class="docutils">
+<dt>Keyframe (white / yellow diamond)</dt>
+<dd>常规关键帧。</dd>
+<dt>Breakdown (small cyan diamond)</dt>
+<dd>断点状态，如不同关键姿态间的过渡。</dd>
+<dt>Moving Hold (dark gray / orange diamond)</dt>
+<dd>A keyframe that adds a small amount of motion around a holding pose.
+In the Dope Sheet it will also display a bar between them.</dd>
+<dt>Extreme (big pink diamond)</dt>
+<dd>极值状态，或者其他需要的用途。</dd>
+<dt>Jitter (tiny green diamond)</dt>
+<dd>用于记录关键帧的一个填充符或者烘焙关键帧，或者用于其它所需目的。</dd>
 </dl>
+</div>
+<div class="section" id="handles-interpolation-display">
+<span id="keyframe-handle-display"></span><h2>Handles &amp; Interpolation Display<a class="headerlink" href="#handles-interpolation-display" title="Permalink to this headline">¶</a></h2>
+<p>Dope Sheet can display the Bézier handle type associated with the keyframe,
+and mark segments with non-Bézier interpolation.
+This facilitates basic editing of interpolation without the use of the Graph Editor.</p>
+<div class="figure" id="id3">
+<img alt="../../_images/animation_keyframes_introduction_interpolation.png" src="../../_images/animation_keyframes_introduction_interpolation.png" />
+<p class="caption"><span class="caption-text">Top: summary; Middle: Bézier; Bottom: linear.</span></p>
+</div>
+<p>The icon shape represents the type of the <a class="reference internal" href="../../editors/graph_editor/fcurves/introduction.html#editors-graph-fcurves-settings-handles"><span class="std std-ref">Bézier Handles</span></a>
+belonging to the keyframe.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Circle</td>
+<td>Auto Clamped (default)</td>
+</tr>
+<tr class="row-even"><td>Circle With Dot</td>
+<td>Automatic</td>
+</tr>
+<tr class="row-odd"><td>Square</td>
+<td>Vector</td>
+</tr>
+<tr class="row-even"><td>Clipped Diamond</td>
+<td>Aligned</td>
+</tr>
+<tr class="row-odd"><td>Diamond</td>
+<td>Free</td>
+</tr>
+</tbody>
+</table>
+<p>If the handles of a keyframe have different types,
+or in case of summary rows representing multiple curves,
+out of the available choices the icon that is furthest down the list is used.
+This means that if a grouped row uses a circle icon,
+it is guaranteed that none of the grouped channels have a non-auto key.</p>
+<p>Horizontal green lines mark the use of non-Bézier <a class="reference internal" href="../../editors/graph_editor/fcurves/introduction.html#editors-graph-fcurves-settings-interpolation"><span class="std std-ref">Interpolation</span></a>.
+The line is dimmed in summary rows if not all grouped channels have the same interpolation.</p>
+<p>Display of this information can be disabled via the <em>Show Handles and Interpolation</em>
+option of the Dope Sheet`s <a class="reference internal" href="../../editors/dope_sheet/introduction.html#dope-sheet-view-menu"><span class="std std-ref">View Menu</span></a>.</p>
 </div>
 </div>
 

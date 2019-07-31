@@ -4,7 +4,7 @@
 Normalize Node
 **************
 
-.. figure:: /images/compositing_types_vector_normalize_node.png
+.. figure:: /images/compositing_node-types_CompositorNodeNormalize.png
    :align: right
 
    Normalize Node.
@@ -33,4 +33,4 @@ Outputs
 Value
    Standard value output.
 
-.. (TODO <2.8 add) more info and examples
+.. TODO2.8 Add more info and examples.

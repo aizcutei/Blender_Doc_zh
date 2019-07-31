@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Lighting &mdash; Blender Manual</title>
+  <title>光照 &mdash; Blender Manual</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devrender/workbench/lighting.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/workbench/lighting.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Color" href="color.html" />
-    <link rel="prev" title="Introduction" href="introduction.html" /> 
+    <link rel="next" title="颜色" href="color.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,39 +113,41 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lighting/index.html">灯光</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee 渲染器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles渲染引擎</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Workbench Engine</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Lighting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="color.html">Color</a></li>
-<li class="toctree-l3"><a class="reference internal" href="options.html">Options</a></li>
-<li class="toctree-l3"><a class="reference internal" href="display_settings.html">Viewport Display</a></li>
-<li class="toctree-l3"><a class="reference internal" href="quality.html">Render Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Workbench</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color.html">颜色</a></li>
+<li class="toctree-l3"><a class="reference internal" href="options.html">选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="display_settings.html">视图显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sampling.html">采样</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cameras.html">相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lights/index.html">Lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials/index.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_nodes/index.html">着色器节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../color_management.html">色彩管理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">工作流</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL渲染</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../audio/index.html">音频渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -179,9 +200,9 @@
         
           <li><a href="../index.html">渲染</a> &raquo;</li>
         
-          <li><a href="index.html">Workbench Engine</a> &raquo;</li>
+          <li><a href="index.html">Workbench</a> &raquo;</li>
         
-      <li>Lighting</li>
+      <li>光照</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -201,26 +222,37 @@
            <div itemprop="articleBody">
             
   <div class="section" id="lighting">
-<h1>Lighting<a class="headerlink" href="#lighting" title="Permalink to this headline">¶</a></h1>
-<p>The Workbench engine does not use the lights of the scene.
-The lighting conditions that will be used can be set in the Lighting panel.</p>
+<h1>光照<a class="headerlink" href="#lighting" title="Permalink to this headline">¶</a></h1>
+<p>Workbench引擎不适用场景灯光。所使用的光照条件将在“光照”面板中进行设置。</p>
 <div class="refbox admonition">
-<p class="admonition-title">Reference</p>
-<dl class="field-list simple">
-<dt class="field-odd">Panel</dt>
-<dd class="field-odd"><p><span class="menuselection">Render ‣ Lighting</span></p>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">属性 ‣ 渲染 ‣ 光照</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="docutils">
+<dt>平展</dt>
+<dd>不计算任何光照。将渲染场景的基础色。</dd>
+<dt>棚灯</dt>
+<dd><p class="first">使用棚灯照亮物体。棚灯可在 <a class="reference internal" href="../../editors/preferences/lights.html#prefs-lights-studio"><span class="std std-ref">首选项中配置</span></a> 。棚灯可跟随摄影机或固定位置。当固定时，灯光角度可以调整。</p>
+<dl class="last docutils">
+<dt>世界空间照明</dt>
+<dd>使用世界空间照明，灯光不会跟随摄像机。</dd>
+<dt>旋转</dt>
+<dd>棚灯在Z轴上的旋转。</dd>
+</dl>
 </dd>
 </dl>
-</div>
-<dl class="simple">
-<dt>Flat</dt><dd><p>Do not calculate any lighting. The base color of the scene will be rendered.</p>
-</dd>
-<dt>Studio</dt><dd><p>Use studio lights to light the objects. The studio lights can be configured in the preferences.
-Studio lights can follow the camera or be fixed. When fixed the angle of the lights can be adjusted.</p>
-</dd>
-<dt>MatCap</dt><dd><p>Use a material capture to light the objects in the scene.
-Custom MatCaps can be loaded in the preferences.
-The MatCaps can be flipped horizontally.</p>
+<dl class="docutils" id="render-workbench-matcap">
+<dt>快照材质</dt>
+<dd><p class="first">使用快照材质照亮场景中的对象。</p>
+<p>自定义快照材质可以 <a class="reference internal" href="../../editors/preferences/lights.html#prefs-lights-matcaps"><span class="std std-ref">在首选项中加载</span></a> 。</p>
+<p class="last">注意，快照材质可以进行水平翻转。</p>
 </dd>
 </dl>
 </div>
@@ -233,10 +265,10 @@ The MatCaps can be flipped horizontally.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="color.html" class="btn btn-neutral float-right" title="Color" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="color.html" class="btn btn-neutral float-right" title="颜色" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

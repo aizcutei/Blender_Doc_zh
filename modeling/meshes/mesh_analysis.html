@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/mesh_analysis.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/mesh_analysis.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="曲线" href="../curves/index.html" />
-    <link rel="prev" title="网格显示" href="mesh_display.html" /> 
+    <link rel="prev" title="自定义数据" href="properties/custom_data.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,23 +113,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selecting.html">Selecting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="editing/index.html">编辑</a></li>
 <li class="toctree-l3"><a class="reference internal" href="properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mesh_display.html">网格显示</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">网格分析</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#overhang">悬垂</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#thickness">厚度</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#intersections">交集</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#distortion">畸变</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sharp-edges">锐边</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#known-limitations">已知的局限</a></li>
 </ul>
 </li>
 </ul>
@@ -123,16 +143,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -207,70 +228,92 @@
            <div itemprop="articleBody">
             
   <div class="section" id="mesh-analysis">
-<span id="bpy-types-meshstatvis"></span><h1>网格分析<a class="headerlink" href="#mesh-analysis" title="Permalink to this headline">¶</a></h1>
+<span id="modeling-mesh-analysis"></span><span id="bpy-types-meshstatvis"></span><h1>网格分析<a class="headerlink" href="#mesh-analysis" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">属性栏 ‣ 网格分析</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">标题栏 ‣ 显示覆盖 ‣ 网格分析</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>网格分析用于显示网格的属性，可以用在特定的情形。</p>
-<p>网格分析适用于 <em>编辑模式</em> 下 <em>实体</em> 视图着色模式。数值较高的区域显示为红色，数值较低的区域显示为蓝色。超出范围的几何元素显示为灰色。</p>
-<p>目前，这些不同模式的主要用途定位为3D-打印。</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>网格分析存在一些已知局限：</p>
-<ul class="simple">
-<li><p>只能与形变类修改器一起使用。</p></li>
-<li><p>对于高精度网格，在编辑时会降低性能。</p></li>
-</ul>
-</div>
+<p>网格分析对于显示网格属性相当有用，尤其在某些特定的环境下。</p>
+<p>网格分析作用于 <em>编辑模式</em> 下 <em>实体</em> 视图着色方式。数值较高的区域显示为红色，数值较低的区域显示为蓝色。超出范围的几何元素显示为灰色。</p>
+<p>目前，不同的网格分析模式其用途主要针对3D打印。</p>
 <div class="section" id="overhang">
 <h2>悬垂<a class="headerlink" href="#overhang" title="Permalink to this headline">¶</a></h2>
-<p>挤出型3D 打印机对可打印的悬垂网格有物理限制，该显示模式用于显示悬垂，可调整角度范围和轴向。</p>
+<p>挤出型3D打印机对可打印的悬垂网格有物理限制，该显示模式用于显示悬垂的可调整角度范围和轴向选择。</p>
+<dl class="docutils">
+<dt>最小值、最大值</dt>
+<dd>显示可调整角度的最小值、最大值。</dd>
+<dt>轴向</dt>
+<dd>作为基坐标系用于计算角度及其显示的轴向和方向。</dd>
+</dl>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/modeling_meshes_mesh-analysis_overhang.png"><img alt="../../_images/modeling_meshes_mesh-analysis_overhang.png" src="../../_images/modeling_meshes_mesh-analysis_overhang.png" style="width: 350px;" /></a>
-<p class="caption"><span class="caption-text">悬垂。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">悬垂。</span></p>
 </div>
 </div>
 <div class="section" id="thickness">
 <h2>厚度<a class="headerlink" href="#thickness" title="Permalink to this headline">¶</a></h2>
-<p>打印机存在 <em>壁厚</em> 限制，过薄区域无法打印，使用光线投射和距离范围来测试几何厚度。</p>
+<p>打印机存在 <em>壁厚</em> 限制，过薄区域无法打印，该测试使用光线投射和距离范围来测量几何对象厚度。</p>
+<dl class="docutils">
+<dt>最小值、最大值</dt>
+<dd>显示厚度的最小和最大值。</dd>
+<dt>采样</dt>
+<dd>用于计算厚度的采样数量。</dd>
+</dl>
 <div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/modeling_meshes_mesh-analysis_thickness.png"><img alt="../../_images/modeling_meshes_mesh-analysis_thickness.png" src="../../_images/modeling_meshes_mesh-analysis_thickness.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">厚度。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">厚度。</span></p>
 </div>
 </div>
 <div class="section" id="intersections">
 <h2>交集<a class="headerlink" href="#intersections" title="Permalink to this headline">¶</a></h2>
-<p>打印问题的另一个常见原因是曲面之间的交叉，这些位置的模型的内侧/外侧无法被可靠地检测到。</p>
-<p>与其他显示模式不同的是，交集没有变量，只能打开或关闭。</p>
+<p>打印问题的另一个常见原因是曲面之间的交叉，这些位置的模型的内侧、外侧无法被可靠地检测到。</p>
+<p>与其他显示模式不同的是，交集没有各种选项，只能打开或关闭。</p>
 <div class="figure align-center" id="id3">
 <a class="reference internal image-reference" href="../../_images/modeling_meshes_mesh-analysis_intersections.png"><img alt="../../_images/modeling_meshes_mesh-analysis_intersections.png" src="../../_images/modeling_meshes_mesh-analysis_intersections.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">交叉的面。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">交叉的面。</span></p>
 </div>
 </div>
 <div class="section" id="distortion">
 <h2>畸变<a class="headerlink" href="#distortion" title="Permalink to this headline">¶</a></h2>
 <p>当一个畸变的多边形未被三角化时，畸变的几何结构会导致发生问题。</p>
-<p>畸变是通过不平坦来衡量的，面的部分区域指向多个不同的方向。</p>
+<p>畸变是通过面的不平坦程度来衡量的，面的部分区域指向多个不同的方向。</p>
+<dl class="docutils">
+<dt>最小值、最大值</dt>
+<dd>显示畸变的最小值、最大值。</dd>
+</dl>
 <div class="figure align-center" id="id4">
 <a class="reference internal image-reference" href="../../_images/modeling_meshes_mesh-analysis_distortion.png"><img alt="../../_images/modeling_meshes_mesh-analysis_distortion.png" src="../../_images/modeling_meshes_mesh-analysis_distortion.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">畸变的面。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">畸变的面。</span></p>
 </div>
 </div>
 <div class="section" id="sharp-edges">
 <h2>锐边<a class="headerlink" href="#sharp-edges" title="Permalink to this headline">¶</a></h2>
 <p>与壁厚相似，锐边会形成太薄而无法打印的形状。</p>
+<dl class="docutils">
+<dt>最小值、最大值</dt>
+<dd>显示可调整角度的最小值、最大值。</dd>
+</dl>
 <div class="figure align-center" id="id5">
 <a class="reference internal image-reference" href="../../_images/modeling_meshes_mesh-analysis_sharp-edges.png"><img alt="../../_images/modeling_meshes_mesh-analysis_sharp-edges.png" src="../../_images/modeling_meshes_mesh-analysis_sharp-edges.png" style="width: 350px;" /></a>
-<p class="caption"><span class="caption-text">锐边。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">锐边。</span></p>
 </div>
+</div>
+<div class="section" id="known-limitations">
+<h2>已知的局限<a class="headerlink" href="#known-limitations" title="Permalink to this headline">¶</a></h2>
+<p>网格分析存在一些已知局限：</p>
+<ul class="simple">
+<li>只能与形变类修改器一起使用。</li>
+<li>对于高精度多边形网格，在编辑时会降低性能。</li>
+</ul>
 </div>
 </div>
 
@@ -285,7 +328,7 @@
         <a href="../curves/index.html" class="btn btn-neutral float-right" title="曲线" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mesh_display.html" class="btn btn-neutral float-left" title="网格显示" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="properties/custom_data.html" class="btn btn-neutral float-left" title="自定义数据" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

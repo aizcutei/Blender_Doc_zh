@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introduction &mdash; Blender Manual</title>
+  <title>简介 &mdash; Blender Manual</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devphysics/rigid_body/introduction.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/rigid_body/introduction.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="刚体属性" href="properties.html" />
@@ -94,42 +113,42 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gravity.html">重力</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">刚体</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-rigid-body">创建一个刚体</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">刚体属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="world.html">Rigid Body World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="constraints/index.html">Rigid Body Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tips.html">提示</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../cloth/index.html">布料模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../particles/index.html">Particles System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fluid/index.html">流体模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../forces/index.html">Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collision.html">碰撞</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../baking.html">烘焙物理模拟</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#physics-types">物理类型</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../force_fields/index.html">力场</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../collision.html">碰撞</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../cloth/index.html">布料模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../fluid/index.html">流体模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">刚体</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="properties.html">刚体属性</a></li>
-<li class="toctree-l4"><a class="reference internal" href="world.html">Rigid Body World</a></li>
-<li class="toctree-l4"><a class="reference internal" href="constraints/index.html">Rigid Body Constraints</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tips.html">提示</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../particles/index.html">Particles System</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -184,7 +203,7 @@
         
           <li><a href="index.html">刚体</a> &raquo;</li>
         
-      <li>Introduction</li>
+      <li>简介</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -204,28 +223,16 @@
            <div itemprop="articleBody">
             
   <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>The rigid body simulation can be used to simulate the motion of solid objects.
-It affects the position and orientation of objects and does not deform them.</p>
-<p>Unlike the other simulations in Blender, the rigid body simulation works closer with the animation system.
-This means that rigid bodies can be used like regular objects and be part of parent-child relationships,
-animation constraints and drivers.</p>
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>刚体模拟可用于模拟固定的运动。它会影响物体的位置和方向，并且不会使物体变形。</p>
+<p>和Blender中的其它模拟不同，刚体模拟与动画系统的工作模式更接近。这意味着刚体可以像常规对象一样使用，并且可以是父子关系，动画约束和驱动程序的一部分。</p>
 <div class="section" id="creating-a-rigid-body">
-<h2>Creating a Rigid Body<a class="headerlink" href="#creating-a-rigid-body" title="Permalink to this headline">¶</a></h2>
-<p>Right now only mesh objects can participate in the rigid body simulation.
-To create rigid bodies, either click on <em>Rigid Body</em> button in the <em>Physics</em> tab of
-the Properties editor or use the <em>Add Active</em>/<em>Add Passive</em> buttons in the <em>Physics</em> tab of the <em>Tool Shelf</em>.</p>
-<p>There are two types of rigid body: active and passive. <em>Active</em> bodies are dynamically simulated, while <em>passive</em>
-bodies remain static. Both types can be driven by the animation system when using the <em>Animated</em> option.</p>
-<p>During the simulation,
-the rigid body system will override the position and orientation of dynamic rigid body objects.
-Note however, that the location and rotation of the objects are not changed,
-so the rigid body simulation acts similar to a constraint.
-To apply the rigid body transformations you can use
-the <em>Apply Transformation</em> button in the <em>Physics</em> tab of the <em>Tool Shelf</em>.</p>
-<p>The scale of the rigid body object also influences the simulation, but is always controlled by the animation system.</p>
-<p>Rigid body physics on the object can be <em>removed</em> with the <em>Rigid Body</em> button in the <em>Physics</em> tab or <em>Remove</em>
-button in the <em>Physics</em> tab of the <em>Tool Shelf</em>.</p>
+<h2>创建一个刚体<a class="headerlink" href="#creating-a-rigid-body" title="Permalink to this headline">¶</a></h2>
+<p>目前只有网格对象可以参与刚体模拟。要建立刚体，请单击属性编辑器的 <em>物理</em> 选项卡中的 <em>刚体</em> 按钮或使用 <em>工具栏</em> 中 <em>物理</em> 选项卡中的 <em>添加主动项</em> / <em>添加被动项</em> 按钮。</p>
+<p>刚体有2种：主动和被动。 <em>主动</em> 刚体模拟动态的，而 <em>被动</em> 刚体是模拟静态的。当使用 <em>动画</em> 选项时，2种类型都可以由动画系统驱动。</p>
+<p>在模拟过程中，刚体系统将覆盖动态刚体对象的位置和方向。但请注意，对象的位置和旋转不会更改，所以刚体模拟的行为类似于约束。要应用刚体变换，你可以使用 <em>应用对象转换</em> 运算符。</p>
+<p>刚体对象的比例也影响模拟，但是总是由动画系统控制。</p>
+<p>可以使用属性编辑器中的 <em>物理</em> 选项卡中的 <em>刚体</em> 按钮或 <span class="menuselection">物体 ‣ 刚体</span> 菜单来 <em>删除</em> 对象上的刚体物理属性。</p>
 </div>
 </div>
 

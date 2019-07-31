@@ -1,0 +1,371 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>跟随路径约束 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/constraints/relationship/follow_path.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Pivot Constraint 轴心约束" href="pivot.html" />
+    <link rel="prev" title="Floor Constraint 基面约束" href="floor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">动画 &amp; 绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../armatures/index.html">骨架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lattice.html">Lattice 晶格</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">约束</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#interface">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#motion-tracking">运动追踪</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#transform">变换</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#tracking">追踪</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#relationship">关系</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="action.html">Action Constraint  动作关系约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="armature.html">骨架约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="child_of.html">Child Of Constraint 子级约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="floor.html">Floor Constraint 基面约束</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">跟随路径约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pivot.html">Pivot Constraint 轴心约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shrinkwrap.html">Shrinkwrap Constraint 缩裹约束</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../actions.html">动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../drivers/index.html">驱动器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../markers.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shape_keys/index.html">形态键</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_paths.html">运动路径</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">动画 &amp; 绑定</a> &raquo;</li>
+        
+          <li><a href="../index.html">约束</a> &raquo;</li>
+        
+      <li>跟随路径约束</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/animation/constraints/relationship/follow_path.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="follow-path-constraint">
+<span id="bpy-types-followpathconstraint"></span><h1>跟随路径约束<a class="headerlink" href="#follow-path-constraint" title="Permalink to this headline">¶</a></h1>
+<p><em>Follow Path Constraint 跟随路径约束</em> 放置它自身到一个 <em>曲线</em> 目标物体，并使它沿着这个曲线 （或路径）移动。当 <em>跟随曲线(Follow Curve)</em> 选项启用，它也可以影响它的自身的旋转遵循曲线的弯曲。</p>
+<p>可以用于复杂的相机漫游，火车在轨道上和大多数其他车辆也可以使用“无形”轨道，自行车链等。</p>
+<p>自身总是在全局（世界）空间中进行计算：</p>
+<ul class="simple">
+<li>Its location (as shown in the <em>Transform</em> panel)
+is used as an offset from its normal position on the path. E.g.
+if you have an owner with the (1.0, 1.0, 0.0) location,
+it will be one unit away from its normal position on the curve, along the X and Y axis.
+Hence, if you want your owner <em>on</em> its target path, clear its location <kbd class="kbd docutils literal notranslate">Alt-G</kbd>!</li>
+<li>This location offset is also proportionally affected by the scale of the target curve.
+Taking the same (1.0, 1.0, 0.0) offset as above,
+if the curve has a scale of (2.0, 1.0, 1.0),
+the owner will be offset two units along the X axis (and one along the Y one)...</li>
+<li>当 <em>跟随曲线（Follow Curve）</em> 选项启用，其旋转也偏移到由曲线给出的旋转（即，如果想要你的物体的Y轴与曲线的方向对齐，它必须重置，非约束状态，与全局Y轴对齐）。再次  <kbd class="kbd docutils literal notranslate">Alt-R</kbd>  清除自身的旋转可能有用...</li>
+</ul>
+<p>可以以两种不同的方式来控制自身沿着目标曲线/路径的移动：</p>
+<ul class="simple">
+<li>The most simple is to define the number of frames of the movement,
+in the <a class="reference internal" href="../../../modeling/curves/properties/path_animation.html#curve-path-animation"><span class="std std-ref">Path Animation panel</span></a> of the Curve tab,
+via the <em>Frames</em> number field, and its start frame via the constraint's Offset option
+(by default, start frame: 1 [= offset of 0], duration: 100).</li>
+<li>The second way, much more precise and powerful,
+is to define an <em>Evaluation Time</em> interpolation curve for the <em>Target</em> path
+(in the <em>Graph Editor</em>). See the <a class="reference internal" href="../../../editors/graph_editor/fcurves/index.html"><span class="doc">Graph Editor chapter</span></a>
+to learn more about F-curves.</li>
+<li>If you do not want your owner to move along the path, you can give to the target curve a flat <em>Speed</em> F-curve
+(its value will control the position of the owner along the path).</li>
+</ul>
+<p><em>Follow Path跟随路径</em>  约束和另一个 <a class="reference internal" href="../tracking/locked_track.html"><span class="doc">锁定跟随</span></a> 约束可以很好的搭配一起工作。一个例子就是一个在路径飞行的相机。为了控制相机的滚动角度，当相机沿着路径飞行时，你可以使用 <em>Locked Track（锁定跟随)</em> 和目标对象指定向上的方向 。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><em>Follow Path（跟随路径）</em> 和 <em>Clamp To（轴向限定）</em></p>
+<p class="last">不要混淆这两个约束。两者都是沿着曲线限制其自身的位置，但是 <em>跟随路径</em> 是一个“仅限动画”的约束，因为是通过时间（即当前帧）确定自身沿曲线的位置，而轴向限定（ <a class="reference internal" href="../tracking/clamp_to.html"><span class="doc">Clamp To</span></a> ） <em>约束</em> 通过使用其位置属性的一个值确定自身沿曲线的位置。</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">请注意，您还需要路径的关键帧解算时间，选择path对象，转到属性面板曲线（curve）标签 <em>Path Animation（路径动画）</em> 栏，设置整个帧到路径的第一帧（例如帧1），设置解算时间的值到路径的第一帧（例如1），右键点击解算时间，选择创建关键帧（create keyframe）, 设置整个帧到路径的最后一帧（例如帧100），设置解算时间的值到路径的最后一帧（例如100），右键点击解算时间，选择创建关键帧（create keyframe）。</p>
+</div>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Target 目标</dt>
+<dd><a class="reference internal" href="../../../interface/controls/templates/data_block.html#ui-data-id"><span class="std std-ref">数据ID</span></a> 用于选择约束目标，目标 <em>必须</em> 是一个曲线对象，当它为无（none）时不起作用（红色状态）。</dd>
+<dt>Animate Path 动画路径</dt>
+<dd>Adds an F-curve with options for the start and end frame. ToDo: from above.</dd>
+<dt>Curve Radius  曲率半径</dt>
+<dd>通过曲率半径缩放对象。见 <a class="reference internal" href="../../../modeling/curves/properties/geometry.html"><span class="doc">曲线编辑</span></a>。</dd>
+<dt>Fixed Position 固定位置</dt>
+<dd>对象将保持锁定在曲线长度的某个地方，而不论时间如何变化。</dd>
+<dt>Offset 偏移量</dt>
+<dd>从路径定义的&quot;动画&quot; 偏移的帧数（默认情况下，从第 1 帧）。</dd>
+<dt>Follow Curve  跟随曲线</dt>
+<dd><p class="first">如果此选项未激活，则自身的旋转不会被曲线修改;否则会受到以下选项的影响：</p>
+<dl class="last docutils">
+<dt>Forward 前进</dt>
+<dd>物体的轴线必须与路径的前进方向对齐（即与自身位置处的曲线相切）。</dd>
+<dt>Up 向上</dt>
+<dd>物体的轴线必须（尽可能的）与世界Z轴对齐。事实上，这个选项激活，自身的行为与 <a class="reference internal" href="../tracking/locked_track.html"><span class="doc">锁定跟随约束</span></a> 共享一些属性，路径为“轴”，世界Z轴为“磁铁”。</dd>
+</dl>
+</dd>
+</dl>
+<iframe src="https://player.vimeo.com/video/171554266" style="border: 0; height: 345px; width: 560px">
+</iframe></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pivot.html" class="btn btn-neutral float-right" title="Pivot Constraint 轴心约束" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="floor.html" class="btn btn-neutral float-left" title="Floor Constraint 基面约束" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

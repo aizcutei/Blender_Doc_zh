@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/texts/selecting_editing.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/texts/selecting_editing.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="属性" href="properties.html" />
+    <link rel="next" title="Text Layout" href="layout.html" />
     <link rel="prev" title="简介" href="introduction.html" /> 
 </head>
 
@@ -94,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
@@ -108,6 +127,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#editing">编辑</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="layout.html">Text Layout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="properties.html">属性</a></li>
 </ul>
 </li>
@@ -115,16 +135,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -200,135 +221,223 @@
             
   <div class="section" id="selecting-editing">
 <h1>选择 &amp; 编辑<a class="headerlink" href="#selecting-editing" title="Permalink to this headline">¶</a></h1>
-<p>在 Blender 中编辑文本与别的物体相当不同, 主要是在两个位置. 首先, 在3D 视图中输入你的文本, 这里有几个快捷键, 例如应用样式 (见 <a class="reference internal" href="properties.html#modeling-text-character"><span class="std std-ref">字符</span></a>) -- 但要注意, 大多数你所知道的 Blender <em>编辑模式</em> 的热键都不适用于文本. 第二个地方时属性编辑器, 特别是 <em>字体</em> 标签.</p>
+<p>Editing text is quite different from other object types in Blender, and happens mainly in two areas.
+First, the 3D View, where you type your text, and have a few shortcuts, e.g. for applying
+styles (see <a class="reference internal" href="properties.html#modeling-text-character"><span class="std std-ref">字体</span></a>) -- note however, that most Blender hotkeys you know
+in Edit Mode do not exist for texts. The second place is the Properties editor, especially the <em>Font</em> tab.</p>
 <div class="section" id="selecting-cursor">
 <h2>选择和游标<a class="headerlink" href="#selecting-cursor" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id1">
+<div class="figure" id="id1">
 <a class="reference internal image-reference" href="../../_images/modeling_texts_selecting-editing_cursor.png"><img alt="../../_images/modeling_texts_selecting-editing_cursor.png" src="../../_images/modeling_texts_selecting-editing_cursor.png" style="width: 340px;" /></a>
-<p class="caption"><span class="caption-text">编辑模式中的文本.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Text in Edit mode.</span></p>
 </div>
-<p>在 <em>编辑模式</em> 中, 你的文本有一个白色的光标, 就像任何文本编辑器那样, 它确定了字符被插入的位置.</p>
-<dl class="simple">
-<dt>下一个/上一个字符</dt><dd><p>你可以移动光标, 通过方向键 <kbd class="kbd docutils literal notranslate">Left</kbd> 或 <kbd class="kbd docutils literal notranslate">Right</kbd>.</p>
-</dd>
-<dt>下一个/上一个词</dt><dd><p>为了在词的边界间移动光标, 使用 <kbd class="kbd docutils literal notranslate">Ctrl-Left</kbd> 或 <kbd class="kbd docutils literal notranslate">Ctrl-Right</kbd>.</p>
-</dd>
-<dt>行首/行尾</dt><dd><p><kbd class="kbd docutils literal notranslate">Home</kbd> 和 <kbd class="kbd docutils literal notranslate">End</kbd> 分别能移动光标到行的开始和结尾.</p>
-</dd>
-<dt>下一行/上一行</dt><dd><p>为了在行间跳转, 使用 <kbd class="kbd docutils literal notranslate">Up</kbd> 或 <kbd class="kbd docutils literal notranslate">Down</kbd>.</p>
-</dd>
-<dt>下一页/上一页</dt><dd><p>为了一次向前或向后跳转10行, 使用 <kbd class="kbd docutils literal notranslate">PageUp</kbd> 或 <kbd class="kbd docutils literal notranslate">PageDown</kbd>.</p>
-</dd>
+<p>In Edit Mode, your text has a white cursor, and as in any text editor,
+it determines where new chars will be inserted.</p>
+<dl class="docutils">
+<dt>Next/Previous Character <kbd class="kbd docutils literal notranslate">Left</kbd>/ <kbd class="kbd docutils literal notranslate">Right</kbd></dt>
+<dd>You can move the cursor with the arrow keys.</dd>
+<dt>Next/Previous Word <kbd class="kbd docutils literal notranslate">Ctrl-Left</kbd>/ <kbd class="kbd docutils literal notranslate">Ctrl-Right</kbd></dt>
+<dd>To move the cursor on a word's boundary.</dd>
+<dt>Line Begin/End <kbd class="kbd docutils literal notranslate">Home</kbd>/ <kbd class="kbd docutils literal notranslate">End</kbd></dt>
+<dd>Move the cursor to the beginning and end of a line respectively.</dd>
+<dt>Next/Previous Line <kbd class="kbd docutils literal notranslate">Up</kbd>/ <kbd class="kbd docutils literal notranslate">Down</kbd></dt>
+<dd>To jump between lines.</dd>
+<dt>Next/Previous Page <kbd class="kbd docutils literal notranslate">PageUp</kbd>/ <kbd class="kbd docutils literal notranslate">PageDown</kbd></dt>
+<dd>To jump back/forward ten lines at a time.</dd>
 </dl>
-<p>在使用方向键的同时按住 <kbd class="kbd docutils literal notranslate">Shift</kbd> 可以选择一部分文本. 你可以用它来指定不同的材质, 正常/粗体/斜体样式, 以及不太多的别的属性.</p>
+<p>Hold <kbd class="kbd docutils literal notranslate">Shift</kbd> while using the arrow keys to select a part of the text.
+You can use it to specify different materials, the normal/bold/italic style...</p>
 </div>
 <div class="section" id="editing">
 <h2>编辑<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h2>
-<p>3D 视图头的菜单提供了几个选项, 在这里没有 <em>专用项</em> 菜单. 你既没有变换也没有镜像等等. 但是, 你可以将和曲线的一样修改器应用到文本上.</p>
+<p>The menu of the 3D View header offers few options. You have no transform nor mirror tools, and so on.</p>
 <div class="section" id="basic">
 <h3>基本<a class="headerlink" href="#basic" title="Permalink to this headline">¶</a></h3>
 <p>编辑 <em>文笔</em> 与使用标准文本编辑器相似, 但是不具有全部的功能, 而且还有一些区别:</p>
-<dl class="simple">
-<dt>退出 <em>编辑模式</em></dt><dd><p><kbd class="kbd docutils literal notranslate">Tab</kbd> 不会在文本中插入一个制表符, 而是进入和退出 <em>编辑模式</em>, 就像别的物体类型那样.</p>
-</dd>
-<dt>复制</dt><dd><p>为了将文本复制进缓冲区, 使用 <kbd class="kbd docutils literal notranslate">Ctrl-C</kbd> 或者工具栏中的 <em>复制</em> 按钮.</p>
-</dd>
-<dt>剪切和复制</dt><dd><p>为了剪切和复制文本进缓冲区, 使用 <kbd class="kbd docutils literal notranslate">Ctrl-X</kbd> 或工具栏中的 <em>剪切</em> 按钮.</p>
-</dd>
-<dt>粘贴</dt><dd><p>为了将缓冲区中的文本粘贴出来, 使用 <kbd class="kbd docutils literal notranslate">Ctrl-V</kbd> 或者工具栏中的 <em>粘贴</em> 按钮.</p>
-</dd>
-<dt>删除所有文本</dt><dd><p>为了完全清除或删除所有文本, 使用 <kbd class="kbd docutils literal notranslate">Ctrl-Backspace</kbd>.</p>
-</dd>
+<dl class="docutils">
+<dt>Exit Edit Mode</dt>
+<dd><kbd class="kbd docutils literal notranslate">Tab</kbd> does not insert a tab character in the text,
+but rather enters and exits Edit Mode, as with other object types.</dd>
+<dt>Copy <kbd class="kbd docutils literal notranslate">Ctrl-C</kbd></dt>
+<dd>To copy text to the buffer, use the shortcut or the matching entry in the <em>Edit</em> menu.</dd>
+<dt>Cut and Copy <kbd class="kbd docutils literal notranslate">Ctrl-X</kbd></dt>
+<dd>To cut and copy text to the buffer, use the shortcut or the matching entry in the <em>Edit</em> menu.</dd>
+<dt>Paste <kbd class="kbd docutils literal notranslate">Ctrl-V</kbd></dt>
+<dd>To paste text from the buffer, use the shortcut or the matching entry in the <em>Edit</em> menu.</dd>
+<dt>Delete all text <kbd class="kbd docutils literal notranslate">Ctrl-Backspace</kbd></dt>
+<dd>Completely erase or delete all text.</dd>
 </dl>
 <p>文本缓冲区与桌面剪贴板是同步的. 但是如果它是在 Blender 内部使用, 文本格式也会一起复制. 对于其它的插入文本方式, 见后文的 <a class="reference internal" href="#inserting-text">Inserting Text</a> .</p>
 </div>
 <div class="section" id="special-characters">
 <h3>特殊字符<a class="headerlink" href="#special-characters" title="Permalink to this headline">¶</a></h3>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">文本 ‣ 特殊字符</span></p>
-</dd>
-</dl>
-</div>
-<p>如果你需要特殊字符 (例如音标字符, 这种不在你的键盘上的) 你可以将两个其它字符组合起来用以制作很多特殊字符. 为此, 输入主要的字符, 按下 <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, 然后按想要的 &quot;修改器&quot; 来制作特殊字符. 下面给出了一些例子:</p>
-<table class="colwidths-given docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>ã</p></td>
-<td><p><kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">~</kbd></p></td>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
 </tr>
-<tr class="row-even"><td><p>á</p></td>
-<td><p><kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">'</kbd></p></td>
-</tr>
-<tr class="row-odd"><td><p>à</p></td>
-<td><p><kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">\</kbd></p></td>
-</tr>
-<tr class="row-even"><td><p>å</p></td>
-<td><p><kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">O</kbd></p></td>
-</tr>
-<tr class="row-odd"><td><p>ë</p></td>
-<td><p><kbd class="kbd docutils literal notranslate">E</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">&quot;</kbd></p></td>
-</tr>
-<tr class="row-even"><td><p>ø</p></td>
-<td><p><kbd class="kbd docutils literal notranslate">O</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">/</kbd></p></td>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Edit ‣ Special Characters</span></td>
 </tr>
 </tbody>
 </table>
 </div>
+<p>This is a limited character map to insert characters which aren't available from the keyboard.
+Many other special characters can be &quot;composed&quot;, see <a class="reference internal" href="#accent-characters">Accent Characters</a> below.
+If you need others, you will have to copy-paste them from an external editor or charmap tool.</p>
+</div>
+<div class="section" id="accent-characters">
+<h3>Accent Characters<a class="headerlink" href="#accent-characters" title="Permalink to this headline">¶</a></h3>
+<p>Many special characters (such as accented chars, which are not directly available on your keyboard)
+can be &quot;composed&quot; using a combination of two other characters. To do so,
+type the main char, press <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>,
+and then press the desired &quot;modifier&quot; to produce the special character.
+Some examples are given below:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li>ã: <kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">~</kbd></li>
+<li>á: <kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">'</kbd></li>
+<li>à: <kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">Backslash</kbd></li>
+<li>â: <kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">^</kbd></li>
+<li>å: <kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">O</kbd></li>
+<li>æ: <kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">E</kbd></li>
+<li>ª: <kbd class="kbd docutils literal notranslate">A</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">Minus</kbd></li>
+<li>ë: <kbd class="kbd docutils literal notranslate">E</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">&quot;</kbd></li>
+<li>ç: <kbd class="kbd docutils literal notranslate">C</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">Comma</kbd></li>
+<li>¢: <kbd class="kbd docutils literal notranslate">C</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">|</kbd></li>
+</ul>
+</td><td><ul class="simple">
+<li>ø: <kbd class="kbd docutils literal notranslate">O</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">Slash</kbd></li>
+<li>§: <kbd class="kbd docutils literal notranslate">S</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">S</kbd></li>
+<li>†: <kbd class="kbd docutils literal notranslate">|</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">Minus</kbd></li>
+<li>‡: <kbd class="kbd docutils literal notranslate">|</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">=</kbd></li>
+<li>©: <kbd class="kbd docutils literal notranslate">O</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">C</kbd></li>
+<li>®: <kbd class="kbd docutils literal notranslate">O</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">R</kbd></li>
+<li>™: <kbd class="kbd docutils literal notranslate">T</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">M</kbd></li>
+<li>½: <kbd class="kbd docutils literal notranslate">1</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">2</kbd></li>
+<li>÷: <kbd class="kbd docutils literal notranslate">Minus</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">:</kbd></li>
+<li>±: <kbd class="kbd docutils literal notranslate">Minus</kbd>, <kbd class="kbd docutils literal notranslate">Alt-Backspace</kbd>, <kbd class="kbd docutils literal notranslate">Plus</kbd></li>
+</ul>
+</td></tr></table>
+</div>
 <div class="section" id="inserting-text">
-<h3>插入文本<a class="headerlink" href="#inserting-text" title="Permalink to this headline">¶</a></h3>
+<span id="bpy-ops-font-text-paste-from-file"></span><h3>插入文本<a class="headerlink" href="#inserting-text" title="Permalink to this headline">¶</a></h3>
 <p>你可以通过两种方式插入文本: 从内部文本缓冲区 (如上文所述), 或者从文本文件中.</p>
-<p>为了从文本文件中载入文本, 使用 <span class="menuselection">文本 ‣ 粘贴文件</span> 工具. 这会打开一个 <a class="reference internal" href="../../editors/file_browser/index.html"><span class="doc">文件浏览器</span></a> 用来定位一个有效的UTF-8文件. 如其它一样, 要当心文本不要有太多字符, 因为交互响应会变慢.</p>
+<p>To load text from a text file, use the <span class="menuselection">Text ‣ Paste File</span> tool.
+This will bring up a <a class="reference internal" href="../../editors/file_browser.html"><span class="doc">File Browser</span></a> for navigating to a valid UTF-8 file.
+As usual, be careful that the file does not have too many characters,
+as interactive response will slow down.</p>
+</div>
+<div class="section" id="setting-case">
+<h3>Setting Case<a class="headerlink" href="#setting-case" title="Permalink to this headline">¶</a></h3>
+<p>You can change the text case by selecting it then clicking the <em>To Upper</em> or
+<em>To Lower</em> in the Toolbar.</p>
+</div>
+<div class="section" id="font-style">
+<h3>Font Style<a class="headerlink" href="#font-style" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">3D View ‣ Font</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Properties ‣ Text ‣ Font</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>To apply the <em>Bold</em> / <em>Italics</em> / <em>Underline</em> / <em>Small Caps</em> attribute to a set of characters,
+you either turn on the related setting prior to typing characters,
+or highlight (select) some existing text, and then toggle desired style from the menu.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Blender's <em>Bold</em> and <em>Italic</em> buttons do not work the same way as in other applications,
+as they also serve as placeholders for you to load up other fonts manually,
+see <a class="reference internal" href="#loading-and-changing-fonts">Loading and Changing Fonts</a> below.</p>
+</div>
+</div>
+<div class="section" id="loading-and-changing-fonts">
+<h3>Loading and Changing Fonts<a class="headerlink" href="#loading-and-changing-fonts" title="Permalink to this headline">¶</a></h3>
+<p>Blender comes with a <em>built-in</em> font by default that is displayed in
+each of the four font style data-block menus.
+The <em>built-in</em> font is always present and shows in this list as &quot;Bfont&quot;.
+The data-block menu contains a list displaying the currently loaded fonts.
+Select one for each font style.</p>
+<p>To load a different <em>Font</em>, click one of the <em>Load</em> buttons
+in the <em>Font</em> panel and navigate to a font file.
+The <a class="reference internal" href="../../editors/file_browser.html"><span class="doc">File Browser</span></a> will give all valid fonts a capital &quot;F&quot; icon.</p>
+<p>If you select a font that is unsupported by Blender, you will get the error <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">a</span> <span class="pre">valid</span> <span class="pre">font</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Location of Fonts on Unix</p>
+<p class="last">Fonts are typically located under <code class="docutils literal notranslate"><span class="pre">/usr/lib/fonts</span></code>, or some variant like <code class="docutils literal notranslate"><span class="pre">/usr/lib/X11/fonts</span></code>,
+but not always. They may be in other locations as well,
+such as <code class="docutils literal notranslate"><span class="pre">/usr/share/local</span></code> or <code class="docutils literal notranslate"><span class="pre">/usr/local/share</span></code>, and possibly related sub-trees.</p>
+</div>
+<p>Remember that the same font will be applied to all chars with same style in a text,
+but that a separate font is required for each style.
+For example, you will need to load an <em>Italics</em> font in order to make characters or words italic.
+Once the font is loaded you can apply that font &quot;Style&quot; to the selected characters or the whole object.
+In all, you would need to load a minimum of four different types of fonts to represent each style
+(Normal, Italics, Bold, Bold &amp; Italics).</p>
+<p>It is important to understand, that Blender does not care what font
+you load for &quot;normal&quot;, &quot;bold&quot;, etc., styles.
+This is how you can have up to four different fonts in use in the same text,
+but you have to choose between different styles of a same font, or different fonts.
+Blender has a number of typographic controls for changing the style and layout of text,
+found in the <em>Font</em> panel.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">The <a class="reference internal" href="properties.html#modeling-text-character"><span class="std std-ref">Font panel</span></a> description.</p>
+</div>
 </div>
 <div class="section" id="converting-text-objects">
 <h3>转换文本物体<a class="headerlink" href="#converting-text-objects" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="converting-to-text-object">
 <h4>转换成文本物体<a class="headerlink" href="#converting-to-text-object" title="Permalink to this headline">¶</a></h4>
-<p>在文本编辑器标题栏选择 <span class="menuselection">编辑 ‣ 将文本转换为 3D 物体</span>，根据需要选择 <em>一个物体</em> 或 <em>每行生成一个物体</em>，可以将现有的文本数据块转换为物体。</p>
+<p>Using an existing text data-block, you can convert it to an object from the <em>Text</em> editor's header,
+select <span class="menuselection">Edit ‣ Text to 3D Object</span>,
+<em>One Object</em> or <em>One Object per Line</em> depending on your needs.</p>
 <p>在编辑3D文本时, 也可以从剪贴板粘贴文本或者在 <em>编辑</em> 菜单里选择从文件粘贴.</p>
 </div>
-<div class="section" id="converting-to-3d-mesh">
-<h4>转换成3D网格<a class="headerlink" href="#converting-to-3d-mesh" title="Permalink to this headline">¶</a></h4>
-<p>It is possible to convert a Text Object to a 3D Mesh object.
-This can be useful so that you may edit the vertices in <em>Edit Mode</em>,
-but you will lose the ability to edit the text itself.</p>
-<p>This can be done, using <a class="reference internal" href="../../editors/3dview/object/editing/introduction.html#object-convert-to"><span class="std std-ref">转换为</span></a> in <em>Object Mode</em>.
-Now you can return to <em>Edit Mode</em> and manually edit the vertices.</p>
+<div class="section" id="converting-to-a-mesh-or-curve">
+<h4>Converting to a Mesh or Curve<a class="headerlink" href="#converting-to-a-mesh-or-curve" title="Permalink to this headline">¶</a></h4>
+<p>In Object Mode, it is possible to convert a text object to a mesh or curve one, see <a class="reference internal" href="../../scene_layout/object/editing/introduction.html#object-convert-to"><span class="std std-ref">转换为</span></a>.</p>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>The result is usually a bit messy, so it may be useful to use a <em>Limited Dissolve</em> deletion or <em>Remesh</em> Object
-<a class="reference internal" href="../modifiers/index.html"><span class="doc">Modifier</span></a> at a low threshold to clean up your mesh.</p>
+<p class="first admonition-title">Tip</p>
+<p class="last">The topology of the result is usually a bit messy,
+so it may be useful to use a <em>Limited Dissolve</em> deletion,
+or apply a <a class="reference internal" href="../modifiers/generate/remesh.html"><span class="doc">Remesh modifier</span></a> at a low threshold, to clean up your mesh.</p>
 </div>
 </div>
 </div>
 <div class="section" id="assigning-materials">
 <h3>指定材质<a class="headerlink" href="#assigning-materials" title="Permalink to this headline">¶</a></h3>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">属性编辑器 ‣ 材质</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">Edit</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">属性编辑器 ‣ 材质</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>要使不同的字符获得不同的材质，每个字符都必须有一个不同的 <em>材质编号</em> 。</p>
-<p>你可以通过输入的方式制定材质编号，或先选择文本块，再点击材质面板上的 <em>指定</em> 按钮。</p>
-<div class="figure align-center" id="id2">
-<span id="fig-texts-edit-rgb"></span><img alt="../../_images/modeling_texts_selecting-editing_material-index-example.png" src="../../_images/modeling_texts_selecting-editing_material-index-example.png" />
-<p class="caption"><span class="caption-text">红 绿 蓝。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p>You can assign indices either as you type, or after by selecting blocks of text and
+clicking on the <em>Assign</em> button in the <em>Materials</em> panel.</p>
+<div class="figure" id="id2">
+<img alt="../../_images/modeling_texts_selecting-editing_material-index-example.png" src="../../_images/modeling_texts_selecting-editing_material-index-example.png" />
+<p class="caption"><span class="caption-text">Red Green Blue text example.</span></p>
 </div>
-<p>例如, 为了创建图 <a class="reference internal" href="#fig-texts-edit-rgb"><span class="std std-ref">红 绿 蓝。</span></a> 你需要分别创建三个材质和三个材质索引. 通过选择每个词的字符并点击 <em>指定</em> 按钮, 每个词会被分派一个 <em>材质索引</em>. 图 <a class="reference internal" href="#fig-texts-edit-rgb"><span class="std std-ref">红 绿 蓝。</span></a> 仍然是一个单个的 <em>文本</em> 物体.</p>
 </div>
 </div>
 </div>
@@ -341,7 +450,7 @@ Now you can return to <em>Edit Mode</em> and manually edit the vertices.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="properties.html" class="btn btn-neutral float-right" title="属性" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="layout.html" class="btn btn-neutral float-right" title="Text Layout" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

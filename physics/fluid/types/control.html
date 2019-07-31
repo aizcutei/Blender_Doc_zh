@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devphysics/fluid/types/control.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/fluid/types/control.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="烘焙" href="../baking.html" />
@@ -94,41 +113,47 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">物理</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gravity.html">重力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloth/index.html">布料模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particles/index.html">Particles System</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">流体模拟</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">流体类型</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="domain.html">流体域</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fluid_object.html">流体对象</a></li>
+<li class="toctree-l4"><a class="reference internal" href="obstacle.html">流体障碍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flow.html">流体流入/流出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particle.html">流体粒子</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">流体控制</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../baking.html">烘焙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendix.html">流体附录</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../forces/index.html">Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collision.html">碰撞</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../baking.html">烘焙物理模拟</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#physics-types">物理类型</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../../force_fields/index.html">力场</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../collision.html">碰撞</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../cloth/index.html">布料模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../soft_body/index.html">Soft Body</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../index.html">流体模拟</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="index.html">流体类型</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../baking.html">烘焙</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../appendix.html">流体附录</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../smoke/index.html">Smoke Simulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../rigid_body/index.html">刚体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../particles/index.html">Particles System</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -207,45 +232,45 @@
   <div class="section" id="fluid-control">
 <span id="bpy-types-controlfluidsettings"></span><h1>流体控制<a class="headerlink" href="#fluid-control" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">面板</dt>
-<dd class="field-odd"><p><span class="menuselection">物理 ‣ 流体</span></p>
-</dd>
-<dt class="field-even">类型</dt>
-<dd class="field-even"><p>控制</p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">物理 ‣ 流体</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">类型:</th><td class="field-body">控制</td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>使用波尔兹曼格子方法，流体受控于在局部力场和通过物理模拟或者目标形状序列定义的粒子。在同一时间，尽可能保留流体运动自然的细节。</p>
 <iframe src="https://www.youtube.com/embed/WruTNnF6Ztg" style="border: 0; height: 345px; width: 560px">
 </iframe><div class="section" id="options">
 <h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id1">
-<img alt="../../../_images/physics_fluid_types_control_panel.png" src="../../../_images/physics_fluid_types_control_panel.png" />
-<p class="caption"><span class="caption-text">流体控制选项。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<dl>
-<dt>启用</dt><dd><p>控制对象是否有助于流体系统。对于将流体控制对象进行动画时，这是非常有用的。</p>
-</dd>
-<dt>质量</dt><dd><p>更高质量将导致在流体控制对象上产生更多的控制粒子。</p>
-</dd>
-<dt>反向帧</dt><dd><p>反转控制对象的运动。</p>
-</dd>
-<dt>时间</dt><dd><p>指定时间间隔（开始和结束时间），在此期间流体控制对象是激活的。</p>
-</dd>
-<dt>吸引力</dt><dd><p>指定由流体控制对象释放的力。</p>
-<dl class="simple">
-<dt>强度</dt><dd><p>力的强度。正力吸引流体，负力排斥流体。</p>
-</dd>
+<dl class="docutils">
+<dt>启用</dt>
+<dd>控制对象是否有助于流体系统。对于将流体控制对象进行动画时，这是非常有用的。</dd>
+<dt>质量</dt>
+<dd>更高质量将导致在流体控制对象上产生更多的控制粒子。</dd>
+<dt>反向帧</dt>
+<dd>反转控制对象的运动。</dd>
+<dt>时间</dt>
+<dd>指定时间间隔（开始和结束时间），在此期间流体控制对象是激活的。</dd>
+<dt>吸引力</dt>
+<dd><p class="first">指定由流体控制对象释放的力。</p>
+<dl class="last docutils">
+<dt>强度</dt>
+<dd>力的强度。正力吸引流体，负力排斥流体。</dd>
 </dl>
 </dd>
-<dt>速度力</dt><dd><p>如果流体控制对象移动，所得到的速度还可以引入一个力给流体。</p>
-<dl class="simple">
-<dt>强度</dt><dd><p>效果的强度。</p>
-</dd>
-<dt>半径</dt><dd><p>作用力的半径。</p>
-</dd>
+<dt>速度力</dt>
+<dd><p class="first">如果流体控制对象移动，所得到的速度还可以引入一个力给流体。</p>
+<dl class="last docutils">
+<dt>强度</dt>
+<dd>效果的强度。</dd>
+<dt>半径</dt>
+<dd>作用力的半径。</dd>
 </dl>
 </dd>
 </dl>
@@ -253,13 +278,13 @@
 <div class="section" id="examples">
 <h2>例子<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>在这些例子中，流体控制用于控制流体的一部分，因此，它落入的流体的其余部分之前它具有确定的形状（球状滴或者茶盖状滴）：</p>
-<div class="figure align-center" id="id2">
+<div class="figure" id="id1">
 <img alt="../../../_images/physics_fluid_types_control_example1.jpg" src="../../../_images/physics_fluid_types_control_example1.jpg" />
-<p class="caption"><span class="caption-text">下落的液滴。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">下落的液滴。</span></p>
 </div>
-<div class="figure align-center" id="id3">
+<div class="figure" id="id2">
 <img alt="../../../_images/physics_fluid_types_control_example2.jpg" src="../../../_images/physics_fluid_types_control_example2.jpg" />
-<p class="caption"><span class="caption-text">“魔术流体控制”.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">“魔术流体控制”.</span></p>
 </div>
 </div>
 </div>

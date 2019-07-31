@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/editing/duplicating/spin.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/duplicating/spin.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="螺旋工具" href="screw.html" />
@@ -94,14 +113,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/index.html">基础</a></li>
@@ -109,6 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../edges.html">边工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../faces.html">面工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../uv/index.html">UV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../transform/index.html">变形</a></li>
 <li class="toctree-l4 current"><a class="reference internal" href="index.html">复制</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">细分</a></li>
@@ -119,7 +140,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../mesh_display.html">网格显示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
 </ul>
 </li>
@@ -131,16 +151,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -218,98 +239,104 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <span class="target" id="bpy-ops-mesh-spin"></span><div class="section" id="spin">
+  <span class="target" id="tool-mesh-spin"><span id="bpy-ops-mesh-spin"></span></span><div class="section" id="spin">
 <h1>旋绕<a class="headerlink" href="#spin" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 网格工具 ‣ 添加: 旋绕</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Alt-R</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ Mesh Tools ‣ Add: Spin</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Alt-R</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p><em>旋绕</em> 工具绕特定点和轴向旋转，挤出(当选中项为流形时复制)选中元素。</p>
 <p>使用 <em>旋绕</em> 工具来生成类似车床做出的结果(因为这个原因，该工具常被称做&quot;旋转&quot;或&quot;扫掠&quot; )。事实上，它确实是以3D游标为中心，并且围绕着垂直于工作视图的轴向，生成选中元素的某种环状挤出。</p>
 <ul class="simple">
-<li><p>观察点决定挤出围绕的轴向。</p></li>
-<li><p>3D游标的位置将是旋绕的中心。</p></li>
+<li>观察点决定挤出围绕的轴向。</li>
+<li>3D游标的位置将是旋绕的中心。</li>
 </ul>
 <div class="section" id="options">
 <h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>步数</dt><dd><p>指定&quot;扫掠&quot;后挤出的复制体数量。</p>
-</dd>
-<dt>复制</dt><dd><p>选中时，原始结构与旋绕结果是分开的独立结构(即与旋绕挤出的结果断开)。</p>
-</dd>
-<dt>角度</dt><dd><p>指定旋绕&quot;扫过&quot;的角度，单位度(比如，180表示半圈)。</p>
-</dd>
-<dt>中心</dt><dd><p>指定旋绕的中心，默认使用3D游标位置。</p>
-</dd>
-<dt>轴向</dt><dd><p>指定旋绕表示轴向的向量，默认使用当前视角轴向(视图)。</p>
-</dd>
+<dl class="docutils">
+<dt>步数</dt>
+<dd>指定&quot;扫掠&quot;后挤出的复制体数量。</dd>
+<dt>Duplicate</dt>
+<dd>选中时，原始结构与旋绕结果是分开的独立结构(即与旋绕挤出的结果断开)。</dd>
+<dt>角度</dt>
+<dd>指定旋绕&quot;扫过&quot;的角度，单位度(比如，180表示半圈)。</dd>
+<dt>Auto Merge</dt>
+<dd>Automatically merges the first a last duplicates,
+if they make a full revolution which results in overlapping geometry.</dd>
+<dt>Flip Normals</dt>
+<dd>Reverses the <a class="reference internal" href="../../../../glossary/index.html#term-normal"><span class="xref std std-term">normal's</span></a> direction for any resulting geometry.</dd>
+<dt>中心</dt>
+<dd>指定旋绕的中心，默认使用3D游标位置。</dd>
+<dt>轴向</dt>
+<dd>指定旋绕表示轴向的向量，默认使用当前视角轴向(视图)。</dd>
 </dl>
 </div>
 <div class="section" id="example">
 <h2>范例<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id1">
+<div class="figure" id="id1">
 <span id="fig-mesh-spin-glass"></span><a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_spin_glass-profile.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_spin_glass-profile.png" src="../../../../_images/modeling_meshes_editing_duplicating_spin_glass-profile.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">杯子轮廓。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">杯子轮廓。</span></p>
 </div>
 <p>首先，为物体创建表示轮廓的网格。如果需要建模的是中空物体，对轮廓线直接加厚也不错。图 <a class="reference internal" href="#fig-mesh-spin-glass"><span class="std std-ref">杯子轮廓。</span></a> 展示了我们即将演示建模过程的酒杯的轮廓。</p>
 <p>进入 <em>编辑模式</em>，按下 <kbd class="kbd docutils literal notranslate">A</kbd> 全选轮廓的所有顶点。</p>
 <p>我们将在顶视图围绕3D游标旋绕这个对象，因此按下 <kbd class="kbd docutils literal notranslate">Numpad7</kbd> 切换到顶视图。</p>
-<div class="figure align-center" id="id2">
+<div class="figure" id="id2">
 <span id="fig-mesh-spin-glass-top"></span><a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_spin_glass-profile-before.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_spin_glass-profile-before.png" src="../../../../_images/modeling_meshes_editing_duplicating_spin_glass-profile-before.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">旋绕之前，编辑模式下杯子轮廓的顶视图。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">旋绕之前，编辑模式下杯子轮廓的顶视图。</span></p>
 </div>
 <p>沿中心线选择一个顶点，再使用 <span class="menuselection">网格 ‣ 游标 ‣ 选中项</span> 将3D游标吸附到选中点的位置，这样将游标置于轮廓的中心。(图 <a class="reference internal" href="#fig-mesh-spin-glass-top"><span class="std std-ref">旋绕之前，编辑模式下杯子轮廓的顶视图。</span></a>)显示了顶视图下的酒杯轮廓，游标已放置到正确位置。</p>
 <p>点击 <em>旋绕</em> 按钮。若打开的3D视图不只1个，光标将变成带问号的箭头，需要在顶视图所在区域单击方可继续。若你只打开了1个3D视图，旋绕操作将立即进行。图 <a class="reference internal" href="#fig-mesh-spin-profile"><span class="std std-ref">旋绕后的轮廓。</span></a> 显示了成功旋绕的结果。</p>
 </div>
 <div class="section" id="angle">
 <h2>角度<a class="headerlink" href="#angle" title="Permalink to this headline">¶</a></h2>
-<span id="fig-mesh-spin-profile"></span><table class="docutils align-center" id="id3">
+<span id="fig-mesh-spin-profile"></span><table border="1" class="docutils" id="id3">
 <caption><span class="caption-text">旋绕后的轮廓。</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id4">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_spin_spun-profile360.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_spin_spun-profile360.png" src="../../../../_images/modeling_meshes_editing_duplicating_spin_spun-profile360.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">360度旋绕后的轮廓。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">360度旋绕后的轮廓。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id5">
+<td><div class="first last figure" id="id5">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_spin_spun-profile120.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_spin_spun-profile120.png" src="../../../../_images/modeling_meshes_editing_duplicating_spin_spun-profile120.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">120度旋绕后的轮廓。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">120度旋绕后的轮廓。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="dupli">
-<h2>复制<a class="headerlink" href="#dupli" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-center">
+<div class="section" id="duplicate">
+<h2>Duplicate<a class="headerlink" href="#duplicate" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id6">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id6">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_spin_result.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_spin_result.png" src="../../../../_images/modeling_meshes_editing_duplicating_spin_result.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">旋绕操作的结果。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">旋绕操作的结果。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id7">
+<td><div class="first last figure" id="id7">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_spin_dubli.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_spin_dubli.png" src="../../../../_images/modeling_meshes_editing_duplicating_spin_dubli.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">勾选复制的结果。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">勾选复制的结果。</span></p>
 </div>
 </td>
 </tr>
@@ -318,17 +345,28 @@
 </div>
 <div class="section" id="merge-duplicates">
 <h2>合并重叠点<a class="headerlink" href="#merge-duplicates" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id8">
+<div class="figure" id="id8">
 <span id="fig-mesh-screw-duplicate"></span><a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_duplicating_spin_dublicate-vertices.png"><img alt="../../../../_images/modeling_meshes_editing_duplicating_spin_dublicate-vertices.png" src="../../../../_images/modeling_meshes_editing_duplicating_spin_dublicate-vertices.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">重叠点。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">重叠点。</span></p>
 </div>
-<p>旋绕操作会留下重叠点。你可以用框选 <kbd class="kbd docutils literal notranslate">B</kbd> 来选择接缝处所有的顶点(如图 <a class="reference internal" href="#fig-mesh-screw-duplicate"><span class="std std-ref">重叠点。</span></a>)，然后执行 <em>移除重叠点</em> 操作。</p>
-<p>注意 <em>移除重叠点</em> 前后选中顶点的数目。若一切顺利，最终顶点数(本例中为38)应该与原始轮廓的顶点数量一致，顶点数量的查看方式在 <span class="menuselection">网格数据 ‣ 顶点与面数量</span> 已经介绍过了。如不一致，应该是遗漏了某些顶点，你需要手动焊接。如果太多的顶点需要合并，情况会更糟。</p>
+<p>The spin operation leaves duplicate vertices along the profile.
+You can select all vertices at the seam with Box select <kbd class="kbd docutils literal notranslate">B</kbd>
+(shown in Fig. <a class="reference internal" href="#fig-mesh-screw-duplicate"><span class="std std-ref">重叠点。</span></a>) and perform a <em>Merge by Distance</em> operation.</p>
+<p>Notice the selected vertex count before and after the <em>Merge by Distance</em> operation
+<code class="docutils literal notranslate"><span class="pre">Vertex</span> <span class="pre">count</span> <span class="pre">after</span> <span class="pre">removing</span> <span class="pre">doubles</span></code>. If all goes well, the final vertex count
+(38 in this example) should match the number of the original profile noted in
+<span class="menuselection">Mesh data ‣ Vertex and face numbers</span>.
+If not, some vertices were missed and you will need to weld them manually.
+Or, worse, too many vertices will have been merged.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="first admonition-title">Note</p>
 <p>合并两个顶点为一个</p>
-<p>要把两个顶点合并(焊接)到一起， <kbd class="kbd docutils literal notranslate">Shift-RMB</kbd> 点击同时选中两个顶点。按下 <kbd class="kbd docutils literal notranslate">S</kbd> 开始缩放，并在缩放时按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> ，沿X，Y，Z方向都缩放到0。 <kbd class="kbd docutils literal notranslate">LMB</kbd> 单击完成缩放操作，并点击工具栏中的 <em>移除重叠点</em> 按钮(也可以使用 <span class="menuselection">专用项 ‣ 移除重叠点</span>)。</p>
-<p>另外，还可以在专用项菜单选择 <span class="menuselection">专用项 ‣ 合并</span> (或快捷键 <kbd class="kbd docutils literal notranslate">Alt-M</kbd>)。然后，在弹出菜单中，选择合并的顶点位于选中点的中心还是在3D游标处。在本例中第一个选择更好！</p>
+<p>To merge (weld) two vertices together, select both of them by <kbd class="kbd docutils literal notranslate">Shift-RMB</kbd>
+clicking on them. Press <kbd class="kbd docutils literal notranslate">S</kbd> to start scaling and hold down <kbd class="kbd docutils literal notranslate">Ctrl</kbd>
+while scaling to scale the points down to 0 units in the X, Y and Z axis. <kbd class="kbd docutils literal notranslate">LMB</kbd>
+to complete the scaling operation and click the <em>Merge by Distance</em> button in
+the Toolbar in <em>Edit Mode</em> (also available with <span class="menuselection">Specials ‣ Merge by Distance</span>).</p>
+<p class="last">另外，还可以在专用项菜单选择 <span class="menuselection">专用项 ‣ 合并</span> (或快捷键 <kbd class="kbd docutils literal notranslate">Alt-M</kbd>)。然后，在弹出菜单中，选择合并的顶点位于选中点的中心还是在3D游标处。在本例中第一个选择更好！</p>
 </div>
 </div>
 <div class="section" id="recalculate-normals">

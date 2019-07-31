@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devphysics/cloth/examples.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/cloth/examples.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Dynamic Paint" href="../dynamic_paint/index.html" />
-    <link rel="prev" title="碰撞" href="settings/collisions.html" /> 
+    <link rel="next" title="Soft Body" href="../soft_body/index.html" />
+    <link rel="prev" title="Field Weights" href="settings/field_weights.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,40 +113,46 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gravity.html">重力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">布料模拟</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="settings/index.html">设置</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">例子</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#using-simulation-to-shape-sculpt-a-mesh">使用模拟来塑造/雕刻网格</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#smoothing-of-cloth">布料的平滑</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cloth-on-armature">骨架上的布料</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cloth-with-animated-vertex-groups">带动画顶点组的布料</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cloth-with-dynamic-paint">带动态绘画的布料</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-cloth-for-soft-bodies">给软体使用布料</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cloth-with-wind">带风力的布料</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../particles/index.html">Particles System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fluid/index.html">流体模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../forces/index.html">Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collision.html">碰撞</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../baking.html">烘焙物理模拟</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#physics-types">物理类型</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../force_fields/index.html">力场</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../collision.html">碰撞</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">布料模拟</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="settings/index.html">设置</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">例子</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../fluid/index.html">流体模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rigid_body/index.html">刚体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../particles/index.html">Particles System</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -203,54 +228,66 @@
             
   <div class="section" id="examples">
 <h1>例子<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
-<p>从制作布料开始，你需要的第一件事当然是建立一块布。 所以，让我们删除默认的立方体并添加一个平面。 为了获得更柔软和灵活的布，您需要多次细分这个平面，大约八次是比较合适的。 所以 <kbd class="kbd docutils literal notranslate">Tab`进入 *编辑模式*，然后按 :kbd:`W</kbd> <span class="menuselection">专用项 - &gt;细分</span>，并将其设置为8。</p>
-<p>现在，我们将通过转到物理选项卡来把这个平面变成布料。 滚动鼠标，直到看到 <em>布料</em> 面板，然后按 <em>布料</em> 按钮。现在，将出现很多设置项，其中大部分我们暂时不用管。</p>
-<p>这就是你制作布料动画所需的全部，但如果你按下 <kbd class="kbd docutils literal notranslate">Alt-A</kbd>，你可爱的布料将非常不起眼地不停往下掉。这就是我们将在接下来的两节要讲到的关于固定和碰撞的内容。</p>
+<p>从制作布料开始，你需要的第一件事当然是建立一块布。 所以，让我们删除默认的立方体并添加一个平面。 为了获得更柔软和灵活的布，您需要多次细分这个平面，大约八次是比较合适的。 所以 <kbd class="kbd docutils literal notranslate">Tab</kbd> 进入 <em>编辑模式</em> 并将这个网格细分几次。</p>
+<p>现在，我们将通过“物理”选项制作此布料。 向下滚动，直至看到 <em>布料</em> 面板，然后按 <em>布料</em> 按钮。 现在，将出现很多设置，其中大部分我们现在都会忽略。</p>
+<p>这是制作你的布料动画所需的全部，但是如果你回放动画，你新创建的面料的下落将是非常不引人注意的。 这就是我们将在接下来的两节中讨论钉固和碰撞的内容。</p>
 <div class="section" id="using-simulation-to-shape-sculpt-a-mesh">
-<h2>使用模拟来建造/雕刻网格<a class="headerlink" href="#using-simulation-to-shape-sculpt-a-mesh" title="Permalink to this headline">¶</a></h2>
-<p>您可以在任何时候应用 <em>布料</em> 修改器，将网格定格在当前帧的位置。然后，您可以重新启用布料，设置模拟的起始和结束帧。</p>
-<p>另一个随时间变化的例子是旗帜。将旗帜定义为简单的网格形状，并将其边缘固定在旗杆上。 模拟50帧左右，然后旗帜将下降到其 “静止” 位置。 应用 <em>布料</em> 修改器。如果您希望旗帜在场景中飘动或以其他方式移动，请在摄像机视图中并在指定的帧范围内重新开启布料即可。</p>
+<h2>使用模拟来塑造/雕刻网格<a class="headerlink" href="#using-simulation-to-shape-sculpt-a-mesh" title="Permalink to this headline">¶</a></h2>
+<p>您可以在任何时候应用 <em>布料</em> 修改器，将网格定格在当前帧的位置。然后，您可以重新启用布料，设置从中向前运行模拟的起始和结束帧。</p>
+<p>另一个随时间变化的例子是旗帜。 将旗帜定义为简单的网格形状，并将边缘固定在旗杆上。 模拟50帧左右，旗帜将下落到它“休息”位置。 应用 <em>布料</em> 修改器。 如果您希望旗帜在场景中拍打或以其他方式移动，请在相机视图中为帧范围重启它。</p>
 </div>
 <div class="section" id="smoothing-of-cloth">
 <h2>布料的平滑<a class="headerlink" href="#smoothing-of-cloth" title="Permalink to this headline">¶</a></h2>
-<p>现在，如果你从前一节中看到这里，你的布料很可能看起来有点粗糙。为了使它看起来像图片一样美观和平滑，您需要在 <em>修改器</em> 选项卡中应用表面细分修改器。然后，在工具栏中，找到 <em>编辑</em> 面板并选择 <em>光滑</em>。</p>
-<p>现在，如果按下 <kbd class="kbd docutils literal notranslate">Alt-A</kbd>，事情看起来美多了，你不觉得吗？</p>
+<p>Now, if you followed this from the previous section, your cloth is probably looking a little blocky.
+In order to make it look nice and smooth like the picture you need to apply
+a Smooth and/or Subdivision Surface Modifier in the <em>Modifiers</em> tab.
+Then, in the Toolbar, find the <em>Edit</em> panel and Press <em>Smooth</em>.</p>
 </div>
 <div class="section" id="cloth-on-armature">
 <h2>骨架上的布料<a class="headerlink" href="#cloth-on-armature" title="Permalink to this headline">¶</a></h2>
-<p>因骨架而变形并且还考虑到附加的碰撞物体的布料实例：<a class="reference external" href="https://wiki.blender.org/wiki/File:Cloth-regression-armature.blend">Regression blend-file</a>.</p>
+<p>服装可以模拟并固定在骨架上。 例如，一个角色可能会有一个宽松的长袍，用皮带固定在角色的腰部。</p>
+<p>钉固的典型工作流程：</p>
+<ol class="arabic simple">
+<li>将骨架设置为其绑定姿势。</li>
+<li>模型布料包围但不穿透角色的网格。</li>
+<li>将骨架指定为布料的父级。 现在，骨架将有几个绑定到它的子网格物体。</li>
+<li>在每个布料对象上为其固定的顶点创建新的顶点组。</li>
+<li>添加要固定到此顶点组的顶点，并为这些顶点赋予非零权重（您可能希望权重 = 1）。例如，外衣的腰带区域将在顶点组中并且具有权重1。</li>
+<li>在属性编辑器的“物理”选项中将布料对象指定为“布料”。确保布料修改器在修改器堆栈中骨架修改器的下面。</li>
+<li>在布料形状面板中选择顶点组。</li>
+<li>添加 <a class="reference internal" href="../collision.html"><span class="doc">物理碰撞</span></a> 到角色的网格.</li>
+<li>布料现在准备好了; 非固定顶点将受布料修改器的控制。 固定顶点将受到骨架修改器的控制。</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">当给角色做动画或者摆姿势时，必须从绑定姿势开始。 将角色移动到几个帧后的初始姿势，这样物理引擎就可以模拟衣服的移动。 非常快速的运动和传送跳跃可能会破坏物理模拟。</p>
+</div>
+<p><a class="reference external" href="https://wiki.blender.org/wiki/File:Cloth-regression-armature.blend">恢复blend文件</a>.</p>
 </div>
 <div class="section" id="cloth-with-animated-vertex-groups">
 <h2>带动画顶点组的布料<a class="headerlink" href="#cloth-with-animated-vertex-groups" title="Permalink to this headline">¶</a></h2>
-<p>Cloth with animated pinned vertices:
-<a class="reference external" href="https://wiki.blender.org/wiki/File:Cloth_anim_vertex.blend">Regression blend-file</a>.
-Unsupported: Starting with a goal of 0 and increasing it,
-but still having the vertex not pinned will <strong>not</strong> work (e.g. from goal = 0 to goal = 0.5).</p>
+<p>带动画固定顶点组的布料：<a class="reference external" href="https://wiki.blender.org/wiki/File:Cloth_anim_vertex.blend">Regression blend-file</a>.不支持：以0为目标并增加它，但仍然有未固定的顶点 <strong>不</strong> 起作用（例如，从目标=0到目标=0.5）。</p>
 </div>
 <div class="section" id="cloth-with-dynamic-paint">
 <h2>带动态绘画的布料<a class="headerlink" href="#cloth-with-dynamic-paint" title="Permalink to this headline">¶</a></h2>
-<p>Cloth with Dynamic Paint using animated vertex groups:
-<a class="reference external" href="https://wiki.blender.org/wiki/File:Cloth_dynamic_paint.blend">Regression blend-file</a>.
-Unsupported: Starting with a goal of 0 and increasing it, but still having the vertex not pinned will <strong>not</strong> work
-(e.g. from goal = 0 to goal = 0.5) because the necessary &quot;goal springs&quot; cannot be generated on-the-fly.</p>
+<p>使用动画顶点组动态绘画的布料：<a class="reference external" href="https://wiki.blender.org/wiki/File:Cloth_dynamic_paint.blendd">恢复blend文件</a>. 不支持：从0的目标开始并增加它，但仍然有没固定顶点将 <strong>不会</strong> 工作（例如从目标= 0到目标= 0.5），因为无法生成必要的“目标弹簧”在飞行中。</p>
 </div>
 <div class="section" id="using-cloth-for-soft-bodies">
 <h2>给软体使用布料<a class="headerlink" href="#using-cloth-for-soft-bodies" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id1">
+<div class="figure" id="id1">
 <a class="reference internal image-reference" href="../../_images/physics_cloth_examples_softbody1.jpg"><img alt="../../_images/physics_cloth_examples_softbody1.jpg" src="../../_images/physics_cloth_examples_softbody1.jpg" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">给软体使用布料。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">给软体使用布料。</span></p>
 </div>
-<p>布料也可以被用来模拟软体。当然这不是它的主要目的不过也可以奏效。例图使用了标准的 <em>橡胶</em> 材料，没有什么花哨的设置，直接按 <kbd class="kbd docutils literal notranslate">Alt-A</kbd>。</p>
-<p>例图的blend文件：<a class="reference external" href="https://wiki.blender.org/wiki/File:Cloth-sb1.blend">Using Cloth for softbodies</a>。</p>
+<p>布料也可用于模拟柔体。这肯定不是它的主要目的，但它仍然有效。 示例图像使用标准 <em>橡胶</em> 材质，没有花哨的设置，直接 <kbd class="kbd docutils literal notranslate">Alt-A</kbd>。</p>
+<p>例图的blend文件：<a class="reference external" href="https://wiki.blender.org/wiki/File:Cloth-sb1.blend">给软体使用布料</a>。</p>
 </div>
 <div class="section" id="cloth-with-wind">
 <h2>带风力的布料<a class="headerlink" href="#cloth-with-wind" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id2">
+<div class="figure" id="id2">
 <a class="reference internal image-reference" href="../../_images/physics_cloth_examples_flag2.jpg"><img alt="../../_images/physics_cloth_examples_flag2.jpg" src="../../_images/physics_cloth_examples_flag2.jpg" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">应用了风力的旗子。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">应用了风力的旗子。</span></p>
 </div>
-<p>Regression blend-file for Cloth with wind and self-collisions (also the blend for the image above):
-<a class="reference external" href="https://wiki.blender.org/wiki/File:Cloth-flag2.blend">Cloth flag with wind and self-collisions</a>.</p>
+<p>为带风力的布料和自碰撞恢复blend文件（也是以上图片的blend文件）: <a class="reference external" href="https://wiki.blender.org/wiki/File:Cloth-flag2.blend">带风力的布料和自碰撞</a>.</p>
 </div>
 </div>
 
@@ -262,10 +299,10 @@ Unsupported: Starting with a goal of 0 and increasing it, but still having the v
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../dynamic_paint/index.html" class="btn btn-neutral float-right" title="Dynamic Paint" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../soft_body/index.html" class="btn btn-neutral float-right" title="Soft Body" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="settings/collisions.html" class="btn btn-neutral float-left" title="碰撞" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="settings/field_weights.html" class="btn btn-neutral float-left" title="Field Weights" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

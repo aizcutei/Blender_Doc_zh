@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devphysics/introduction.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/introduction.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="重力" href="gravity.html" />
+    <link rel="next" title="刚体" href="rigid_body/index.html" />
     <link rel="prev" title="物理" href="index.html" /> 
 </head>
 
@@ -94,27 +113,35 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">物理</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">简介</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#quick-effects">快速效果</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="gravity.html">重力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloth/index.html">布料模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="particles/index.html">Particles System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluid/index.html">流体模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forces/index.html">Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collision.html">碰撞</a></li>
 <li class="toctree-l2"><a class="reference internal" href="baking.html">烘焙物理模拟</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#physics-types">物理类型</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
 </ul>
@@ -190,29 +217,30 @@
 <h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <p>Blender的物理系统用于模拟一些现实世界的不同物理现象。您可以使用这些系统创作各种静态和动态的特效，比如:</p>
 <ul class="simple">
-<li><p>毛发，草地和集群</p></li>
-<li><p>雨</p></li>
-<li><p>烟雾和灰尘</p></li>
-<li><p>水</p></li>
-<li><p>布料</p></li>
-<li><p>果冻</p></li>
-<li><p>等等。</p></li>
+<li>毛发，草地和集群</li>
+<li>雨</li>
+<li>烟雾和灰尘</li>
+<li>水</li>
+<li>布料</li>
+<li>果冻</li>
+<li>等等。</li>
 </ul>
 <div class="section" id="quick-effects">
 <span id="bpy-ops-object-quick"></span><h2>快速效果<a class="headerlink" href="#quick-effects" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">编辑器</dt>
-<dd class="field-odd"><p>3D视图</p>
-</dd>
-<dt class="field-even">模式</dt>
-<dd class="field-even"><p>物体模式。</p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">物体 ‣ 快速效果</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">编辑器:</th><td class="field-body">3D视图</td>
+</tr>
+<tr class="field-even field"><th class="field-name">模式:</th><td class="field-body">物体模式。</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">物体 ‣ 快速效果</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>建立包含选中物体的基础模拟场景或效果。该工具会使用预定义设定添加基本对象，如域或粒子系统，这样就可以立即看到结果。</p>
 </div>
@@ -226,7 +254,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="gravity.html" class="btn btn-neutral float-right" title="重力" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="rigid_body/index.html" class="btn btn-neutral float-right" title="刚体" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="物理" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

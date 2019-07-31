@@ -1,0 +1,466 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>驱动器编辑器 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/drivers_editor.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="非线性动画" href="nla/index.html" />
+    <link rel="prev" title="函数曲线修改器" href="graph_editor/fcurves/modifiers.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3dview/index.html">3D视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uv/index.html">UV编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shader_editor/index.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compositing/index.html">Compositor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../video_editing/index.html">Video Sequencer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">驱动器编辑器</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-region">主要区域</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#navigation">导航</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#header">标题栏</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#view-controls">视图控制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#curve-controls">曲线控制</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sidebar-region">侧栏区域</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#drivers-tab">驱动器选项卡</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modifiers-tab">修改器选项卡</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#view-properties-panel">视图属性面板</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outliner.html">大纲视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="properties_editor.html">属性编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_browser.html">文件浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preferences/index.html">用户设置</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">编辑器</a> &raquo;</li>
+        
+      <li>驱动器编辑器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/editors/drivers_editor.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="drivers-editor">
+<h1>驱动器编辑器<a class="headerlink" href="#drivers-editor" title="Permalink to this headline">¶</a></h1>
+<p>驱动编辑器允许用户使用另一个属性驱动一个属性。见 <a class="reference internal" href="../animation/drivers/index.html"><span class="doc">驱动器</span></a> 与 <a class="reference internal" href="graph_editor/fcurves/introduction.html"><span class="doc">函数曲线</span></a>.</p>
+<div class="figure" id="id1">
+<img alt="../_images/editors_graph-editor_introduction_example.png" src="../_images/editors_graph-editor_introduction_example.png" />
+<p class="caption"><span class="caption-text">驱动器编辑器。</span></p>
+</div>
+<div class="section" id="main-region">
+<h2>主要区域<a class="headerlink" href="#main-region" title="Permalink to this headline">¶</a></h2>
+<p>主视图允许您查看和编辑驱动程函数曲线。函数曲线有几个关键部分:</p>
+<dl class="docutils">
+<dt>轴</dt>
+<dd><p class="first">曲线定义了两个属性之间的关系：当前（驱动）属性（Y轴）和驱动（X轴）。</p>
+<p class="last">见 <a class="reference internal" href="graph_editor/fcurves/index.html"><span class="doc">函数曲线</span></a>.</p>
+</dd>
+<dt>控制柄</dt>
+<dd><p class="first">驱动曲线上的每个点都有一个控制柄，帮助确定两个值之间的关系。它们可以被选择和修改来改变曲线的形状。</p>
+<p class="last">见 <a class="reference internal" href="graph_editor/fcurves/introduction.html#editors-graph-fcurves-settings-handles"><span class="std std-ref">控制柄类型</span></a> 更多信息。</p>
+</dd>
+</dl>
+<div class="figure" id="id2">
+<img alt="../_images/editors_graph-editor_introduction_f-curve-example.png" src="../_images/editors_graph-editor_introduction_f-curve-example.png" />
+<p class="caption"><span class="caption-text">一个简单的驱动。</span></p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">见 <a class="reference internal" href="graph_editor/fcurves/introduction.html"><span class="doc">函数曲线</span></a> 更多信息。</p>
+</div>
+<div class="section" id="navigation">
+<h3>导航<a class="headerlink" href="#navigation" title="Permalink to this headline">¶</a></h3>
+<p>与大多数编辑器一样，您可以:</p>
+<dl class="docutils">
+<dt>平移 <kbd class="kbd docutils literal notranslate">MMB</kbd></dt>
+<dd>单击并拖动 <kbd class="kbd docutils literal notranslate">MMB</kbd> ，平移垂直视图 (值)或水平视图 (时间)，。</dd>
+<dt>缩放 <kbd class="kbd docutils literal notranslate">Wheel</kbd></dt>
+<dd>用鼠标滚轮放大和缩小.</dd>
+<dt>缩放视图 <kbd class="kbd docutils literal notranslate">Ctrl-MMB</kbd></dt>
+<dd>缩放垂直或水平视图。</dd>
+<dt>查看全部 (帧) <kbd class="kbd docutils literal notranslate">Home</kbd></dt>
+<dd>在可用的空间内适应曲线。</dd>
+</dl>
+<p>此外，还可以使用滚动条平移和缩放视图。</p>
+</div>
+</div>
+<div class="section" id="header">
+<h2>标题栏<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="view-controls">
+<h3>视图控制<a class="headerlink" href="#view-controls" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../_images/editors_graph-editor_introduction_header-view.png"><img alt="../_images/editors_graph-editor_introduction_header-view.png" src="../_images/editors_graph-editor_introduction_header-view.png" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">视图控制。</span></p>
+</div>
+<dl class="docutils">
+<dt>规格化</dt>
+<dd><p class="first">规格化曲线，使最大和最小点分别等于1.0和-1.0。</p>
+<dl class="last docutils">
+<dt>自动</dt>
+<dd>自动重新计算每条曲线编辑的曲线标准化。这对于防止曲线在调整后跳跃很有用。</dd>
+</dl>
+</dd>
+<dt>仅显示已选定（鼠标光标图标）</dt>
+<dd>只包含与所选物体和数据相关的曲线。</dd>
+<dt>显示隐藏（虚线图标）</dt>
+<dd>包含来自不可见的物体/骨骼的曲线。</dd>
+<dt>仅显示错误（警告三角图标）</dt>
+<dd>只包含被禁用或有错误的曲线和驱动程序。用于调试。</dd>
+<dt>创建幽灵曲线(带有曲线图标的正方形)</dt>
+<dd>在编辑器的背景中显示所选曲线的当前状态快照。这对于有一个比较的基础，在此基础上进行编辑很有用。</dd>
+<dt>过滤器（漏斗图标）</dt>
+<dd><dl class="first last docutils">
+<dt>过滤类型</dt>
+<dd>按属性类型过滤曲线。</dd>
+<dt>数据块排序（az图标）</dt>
+<dd><p class="first">物体数据块按字母顺序显示，以便更容易找到它们发生的位置（以及帮助将相关对象的动画在一起）。</p>
+<p class="last">此选项可能会影响重场景的回放速度。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="curve-controls">
+<h3>曲线控制<a class="headerlink" href="#curve-controls" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="../_images/editors_graph-editor_introduction_header-edit.png"><img alt="../_images/editors_graph-editor_introduction_header-edit.png" src="../_images/editors_graph-editor_introduction_header-edit.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">曲线控制。</span></p>
+</div>
+<dl class="docutils">
+<dt>轴心点</dt>
+<dd><p class="first">轴心点旋转。</p>
+<dl class="last docutils">
+<dt>边界框中心</dt>
+<dd>选定曲线控制柄的中心。</dd>
+<dt>2D 游标</dt>
+<dd><em>2D游标的中心</em>。<em>播放指针*+*游标</em>。</dd>
+<dt>各自中心</dt>
+<dd>旋转选定的曲线控制手柄。</dd>
+</dl>
+</dd>
+<dt>自动吸附</dt>
+<dd><p class="first">编辑时曲线控制柄自动吸附。</p>
+<ul class="last simple">
+<li>无自动吸附</li>
+<li>帧步长</li>
+<li>秒步长</li>
+<li>最近帧</li>
+<li>最近整秒</li>
+<li>最近标记</li>
+</ul>
+</dd>
+<dt>衰减编辑 <kbd class="kbd docutils literal notranslate">O</kbd></dt>
+<dd>见 <a class="reference internal" href="../scene_layout/object/editing/transform/control/proportional_edit.html"><span class="doc">衰减编辑</span></a>.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="sidebar-region">
+<h2>侧栏区域<a class="headerlink" href="#sidebar-region" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="drivers-tab">
+<h3>驱动器选项卡<a class="headerlink" href="#drivers-tab" title="Permalink to this headline">¶</a></h3>
+<p>见 <a class="reference internal" href="../animation/drivers/drivers_panel.html"><span class="doc">驱动器面板</span></a>.</p>
+</div>
+<div class="section" id="modifiers-tab">
+<h3>修改器选项卡<a class="headerlink" href="#modifiers-tab" title="Permalink to this headline">¶</a></h3>
+<p>见 <a class="reference internal" href="graph_editor/fcurves/modifiers.html"><span class="doc">函数曲线修改器</span></a>.</p>
+</div>
+<div class="section" id="view-properties-panel">
+<h3>视图属性面板<a class="headerlink" href="#view-properties-panel" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id5">
+<img alt="../_images/editors_graph-editor_fcurves_properties_view-panel.png" src="../_images/editors_graph-editor_fcurves_properties_view-panel.png" />
+<p class="caption"><span class="caption-text">视图属性面板。</span></p>
+</div>
+<dl class="docutils">
+<dt>显示游标</dt>
+<dd>显示垂直 <em>游标</em>。</dd>
+<dt>所选项的游标</dt>
+<dd>将2D游标设置为所选曲线控制柄的中心。</dd>
+<dt>游标X</dt>
+<dd><p class="first"><em>时间游标</em> X位置。</p>
+<dl class="last docutils">
+<dt>到关键帧</dt>
+<dd>将选定的曲线控制柄柄对齐到 <em>时间游标</em>。</dd>
+</dl>
+</dd>
+<dt>游标Y</dt>
+<dd><p class="first">垂直 <em>游标</em> Y位置。</p>
+<dl class="last docutils">
+<dt>到关键帧</dt>
+<dd>将选定的曲线控制柄对齐到到 <em>游标</em> 上。</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="nla/index.html" class="btn btn-neutral float-right" title="非线性动画" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="graph_editor/fcurves/modifiers.html" class="btn btn-neutral float-left" title="函数曲线修改器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

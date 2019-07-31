@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devanimation/introduction.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/introduction.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="关键帧" href="keyframes/index.html" />
-    <link rel="prev" title="动画" href="index.html" /> 
+    <link rel="prev" title="动画 &amp; 绑定" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,16 +113,26 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">动画</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">动画 &amp; 绑定</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">简介</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#state-colors">状态颜色</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#animation">动画</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#state-colors">状态颜色</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#rigging">绑定</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples">示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armatures/index.html">骨架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lattice.html">Lattice 晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints/index.html">约束</a></li>
 <li class="toctree-l2"><a class="reference internal" href="actions.html">动作</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drivers/index.html">驱动器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="markers.html">标记</a></li>
@@ -114,10 +143,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
 </ul>
@@ -168,7 +198,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">动画</a> &raquo;</li>
+          <li><a href="index.html">动画 &amp; 绑定</a> &raquo;</li>
         
       <li>简介</li>
     
@@ -191,49 +221,88 @@
             
   <div class="section" id="introduction">
 <h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="animation">
+<h2>动画<a class="headerlink" href="#animation" title="Permalink to this headline">¶</a></h2>
 <p>动画指的是物体的位置，形状随着时间的变化而变化。制作物体动画的方法有多种，比如：</p>
-<dl class="simple">
-<dt>作为一个整体移动</dt><dd><p>随时间变化，改变物体的位置，姿态，或尺寸;</p>
-</dd>
-<dt>形变动画</dt><dd><p>通过改变物体顶点或控制点来产生动画;</p>
-</dd>
-<dt>继承类动画</dt><dd><p>使一个物体随着另一个物体的移动而移动(例如，父物体，挂勾， 骨架，等等)。</p>
-</dd>
+<dl class="docutils">
+<dt>作为一个整体移动</dt>
+<dd>随时间变化，改变物体的位置，姿态，或尺寸;</dd>
+<dt>形变动画</dt>
+<dd>通过改变物体顶点或控制点来产生动画;</dd>
+<dt>继承类动画</dt>
+<dd>使一个物体随着另一个物体的移动而移动(例如，父物体，挂勾， 骨架，等等)。</dd>
 </dl>
 <p>本章节我们只涉及前两个动画类型，虽然基础，但对于理解后面章节的内容至关重要。</p>
 <p>动画通常是通过使用 <a class="reference internal" href="keyframes/introduction.html"><span class="doc">关键帧</span></a> 来实现的。</p>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
+<p class="first admonition-title">See also</p>
 <p>相关章节</p>
-<p><a class="reference internal" href="../rigging/index.html"><span class="doc">绑定</span></a>, <a class="reference internal" href="../physics/introduction.html"><span class="doc">物理模拟</span></a> 和 <a class="reference internal" href="../editors/movie_clip_editor/index.html"><span class="doc">运动跟踪</span></a>。</p>
+<ul class="last simple">
+<li><a class="reference internal" href="../physics/introduction.html"><span class="doc">物理模拟</span></a>.</li>
+<li><a class="reference internal" href="../movie_clip/index.html"><span class="doc">运动跟踪</span></a>.</li>
+</ul>
 </div>
 <div class="section" id="state-colors">
-<span id="animation-state-colors"></span><h2>状态颜色<a class="headerlink" href="#state-colors" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id1">
+<span id="animation-state-colors"></span><h3>状态颜色<a class="headerlink" href="#state-colors" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id1">
 <img alt="../_images/animation_introduction_state-colors.png" src="../_images/animation_introduction_state-colors.png" />
-<p class="caption"><span class="caption-text">属性的状态颜色。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">属性的状态颜色。</span></p>
 </div>
 <p>对于不同的状态，属性有不同的颜色和菜单项。</p>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p>灰色</p></td>
-<td><p>默认</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td>灰色</td>
+<td>Not animated</td>
 </tr>
-<tr class="row-even"><td><p>黄色</p></td>
-<td><p>关键帧</p></td>
+<tr class="row-even"><td>黄色</td>
+<td>Keyframed on the current frame</td>
 </tr>
-<tr class="row-odd"><td><p>绿色</p></td>
-<td><p>动画</p></td>
+<tr class="row-odd"><td>绿色</td>
+<td>Keyframed on a different frame</td>
 </tr>
-<tr class="row-even"><td><p>紫色</p></td>
-<td><p>驱动</p></td>
+<tr class="row-even"><td>Orange</td>
+<td>Changed from the keyframed value</td>
+</tr>
+<tr class="row-odd"><td>紫色</td>
+<td>Controlled by a driver</td>
 </tr>
 </tbody>
 </table>
+<p>The changed value highlight currently doesn't work with <a class="reference internal" href="../editors/nla/introduction.html"><span class="doc">NLA</span></a>.</p>
+</div>
+</div>
+<div class="section" id="rigging">
+<h2>绑定<a class="headerlink" href="#rigging" title="Permalink to this headline">¶</a></h2>
+<p>绑定是通常用于向物体添加控件的通用术语，通常用于动画。</p>
+<p>绑定经常涉及使用到以下一个或多个功能：</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="armatures/index.html#armatures-index"><span class="std std-ref">骨架</span></a></dt>
+<dd>这允许网格物体象具有柔性的关节，经常用于骨骼动画。</dd>
+<dt><a class="reference internal" href="constraints/index.html#constraints-index"><span class="std std-ref">约束</span></a></dt>
+<dd>控制各种有意义的运动类型并为绑定添加功能。</dd>
+<dt><a class="reference internal" href="../modeling/modifiers/index.html#modifiers-index"><span class="std std-ref">物体修改器</span></a></dt>
+<dd>网格形变可以相当复杂，有多个修改器可以帮助控制复杂度。</dd>
+<dt><a class="reference internal" href="shape_keys/index.html#animation-shape-keys-index"><span class="std std-ref">形变关键帧</span></a></dt>
+<dd>支持不同的目标形状 <em>（如面部表情）</em> 进行控制。</dd>
+<dt><a class="reference internal" href="drivers/index.html#animation-drivers-index"><span class="std std-ref">驱动器</span></a></dt>
+<dd>因此，你的绑定可以一次控制许多不同的值，并根据其他地方的变化自动更新一些属性。</dd>
+</dl>
+<p>绑定可以像你的项目所要求的那样先进, 绑定有效地定义自己的用户界面用于动画师使用 , 而不必担心基础机制。</p>
+<div class="section" id="examples">
+<h3>示例<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>骨架通常与修改器一起用于角色动画变形网格。</li>
+<li>可以使用摄像机绑定来代替动画摄像机物体来直接模拟真实世界的摄像机装备 (例如，悬臂装在旋转底座上，也可以添加摄像机抖动等效果)。</li>
+</ul>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">本章的内容是如何在Blender中完成绑定的简单的一个参考。应该搭配额外的资源，如Nathan Vegdahl优秀（免费！）的介绍角色绑定的基本概念， <a class="reference external" href="https://www.youtube.com/playlist?list=PL3wFcRXImVPOQpi-wi7uriXBkykXVUntv">人体绑定教程</a>。</p>
+</div>
+</div>
 </div>
 </div>
 
@@ -248,7 +317,7 @@
         <a href="keyframes/index.html" class="btn btn-neutral float-right" title="关键帧" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="动画" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="动画 &amp; 绑定" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

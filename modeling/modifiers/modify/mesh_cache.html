@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/modifiers/modify/mesh_cache.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/modify/mesh_cache.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="网格序列缓存编辑器" href="mesh_sequence_cache.html" />
@@ -94,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
@@ -105,6 +124,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common_options.html">常见的修改器选项</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html#modify">修改</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="data_transfer.html">数据传递修改器</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">网格缓存修改器</a></li>
@@ -125,16 +145,17 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -210,66 +231,73 @@
             
   <div class="section" id="mesh-cache-modifier">
 <span id="bpy-types-meshcachemodifier"></span><h1>网格缓存修改器<a class="headerlink" href="#mesh-cache-modifier" title="Permalink to this headline">¶</a></h1>
-<p>使用网格缓存修改器可以将动画网格数据应用于网格并进行回放，并使网格变形。</p>
-<p>这与形态键的工作方式类似，但旨在播放外部文件，通常用于应用程序之间的交换。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>当使用该修改器时，顶点的位置会被覆盖。</p>
-</div>
+<p>The Mesh Cache modifier main use is for animated mesh data to be applied to a mesh and
+played back, deforming the mesh.</p>
+<p>This works in a similar way to <a class="reference internal" href="../../../animation/shape_keys/introduction.html"><span class="doc">shape keys</span></a>,
+but is aimed at playing back external files and is often used for interchange between applications.</p>
 <div class="section" id="options">
 <h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id1">
+<div class="figure align-right" id="id1">
 <img alt="../../../_images/modeling_modifiers_modify_mesh-cache_panel.png" src="../../../_images/modeling_modifiers_modify_mesh-cache_panel.png" />
-<p class="caption"><span class="caption-text">网格缓存修改器.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">网格缓存修改器.</span></p>
 </div>
-<dl class="simple">
-<dt>格式</dt><dd><p>输入文件格式 (当前支持 <code class="docutils literal notranslate"><span class="pre">.mdd</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.pc2</span></code>).</p>
-</dd>
-<dt>文件路径</dt><dd><p>缓存文件的路径。</p>
-</dd>
+<dl class="docutils">
+<dt>格式</dt>
+<dd>输入文件格式 (当前支持 <code class="docutils literal notranslate"><span class="pre">.mdd</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.pc2</span></code>).</dd>
+<dt>文件路径</dt>
+<dd>缓存文件的路径。</dd>
 </dl>
 <div class="section" id="evaluation">
 <h3>解算<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h3>
-<dl>
-<dt>影响</dt><dd><p>用来调节修改器变形的影响程度因子，对于从缓存数据中混合输入/输出有用。</p>
-</dd>
-<dt>形变模式</dt><dd><p>此设置默认为“覆盖”，它将顶点位置替换为缓存文件中的顶点位置。 但是，您可能希望使用形态键，例如，将它们与网格缓存混合使用。 在这种情况下，您可以选择“变形”选项，该变量将整合变形与网格缓存的结果。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>此功能仅限于进行较小的隔离编辑，并且不适用于较大的更改，例如重新构建肢体。</p>
+<dl class="docutils">
+<dt>影响</dt>
+<dd>Factor to adjust the influence of the modifier's deformation, useful for blending in/out from the cache data.</dd>
+<dt>形变模式</dt>
+<dd><p class="first">This setting defaults to <em>Overwrite</em> which will replace the vertex locations with those in the cache file.
+However, you may want to use shape keys, for example, and mix them with the mesh cache.
+In this case you can select the <em>Deform</em> option which integrates deformations with the mesh cache result.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">此功能仅限于进行较小的隔离编辑，并且不适用于较大的更改，例如重新构建肢体。</p>
 </div>
 </dd>
-<dt>插值类型</dt><dd><p>在帧之间混合时使用无或线性类型; 当缓存文件中的帧与blend文件中的帧不完全匹配时，使用线性类型。</p>
-</dd>
+<dt>插值类型</dt>
+<dd><em>None</em>, or <em>Linear</em>, which will blend between frames.
+Use linear when the frames in the cache file do not match up exactly with the frames in the blend-file.</dd>
 </dl>
 </div>
 <div class="section" id="time-mapping">
 <h3>时间映射<a class="headerlink" href="#time-mapping" title="Permalink to this headline">¶</a></h3>
-<dl>
-<dt>时间模式</dt><dd><p>选择计算时间的方法。</p>
-<dl class="simple">
-<dt>帧</dt><dd><p>允许你控制帧，这将忽略文件中的计时数据，但往往显得有用，因为它提供了简单的控制。</p>
-</dd>
-<dt>时间</dt><dd><p>以秒评估时间，同时考虑到从文件（偏移和帧时间）中的计时信息。</p>
-</dd>
-<dt>系数</dt><dd><p>随着值从 (0 到1 )计算整个动画.</p>
-</dd>
+<dl class="docutils">
+<dt>时间模式</dt>
+<dd><p class="first">选择计算时间的方法。</p>
+<dl class="last docutils">
+<dt>帧</dt>
+<dd>允许你控制帧，这将忽略文件中的计时数据，但往往显得有用，因为它提供了简单的控制。</dd>
+<dt>时间</dt>
+<dd>以秒评估时间，同时考虑到从文件（偏移和帧时间）中的计时信息。</dd>
+<dt>系数</dt>
+<dd>Evaluates the entire animation as a value in the [0, 1] range.</dd>
 </dl>
 </dd>
-<dt>播放模式</dt><dd><p>选择如何操作回放</p>
-<dl>
-<dt>场景</dt><dd><p>使用场景中的当前帧来控制播放。</p>
-<dl class="simple">
-<dt>起始帧</dt><dd><p>从该帧开始播放缓存。</p>
-</dd>
-<dt>帧缩放</dt><dd><p>通过这个值缩放时间尺度（在帧开始值之后应用）。</p>
-</dd>
+<dt>播放模式</dt>
+<dd><p class="first">选择如何操作回放</p>
+<dl class="last docutils">
+<dt>场景</dt>
+<dd><p class="first">使用场景中的当前帧来控制播放。</p>
+<dl class="last docutils">
+<dt>起始帧</dt>
+<dd>从该帧开始播放缓存。</dd>
+<dt>帧缩放</dt>
+<dd>通过这个值缩放时间尺度（在帧开始值之后应用）。</dd>
 </dl>
 </dd>
-<dt>自定义</dt><dd><p>手动控制动画计时器。</p>
-<dl class="simple">
-<dt>评估值</dt><dd><p>用于动画时间的属性，这提供了更多的时间控制 -- 通常这个值将被动画化。</p>
-</dd>
+<dt>自定义</dt>
+<dd><p class="first">手动控制动画计时器。</p>
+<dl class="last docutils">
+<dt>评估值</dt>
+<dd>Property used for animation time,
+this gives more control of timing (typically this value will be animated).</dd>
 </dl>
 </dd>
 </dl>
@@ -278,15 +306,16 @@
 </div>
 <div class="section" id="axis-mapping">
 <h3>轴向映射<a class="headerlink" href="#axis-mapping" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt>朝前、朝上的轴</dt><dd><p>源文件中使用的朝前和朝上轴。</p>
-</dd>
-<dt>翻转轴向</dt><dd><p>你几乎不会用到反转一个轴上的坐标。</p>
-</dd>
+<dl class="docutils">
+<dt>朝前、朝上的轴</dt>
+<dd>源文件中使用的朝前和朝上轴。</dd>
+<dt>翻转轴向</dt>
+<dd>你几乎不会用到反转一个轴上的坐标。</dd>
 </dl>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>MDD 和 PC2 格式都依赖于网格上的顶点顺序保持不变，这个是受限于所用的方法，所以要小心不要在使用该修改器后添加或删除顶点。</p>
+<p class="first admonition-title">Tip</p>
+<p class="last">Both MDD and PC2 depend on the vertex order on the mesh remaining unchanged.
+This is a limitation of this method, so take care not to add/remove/reorder vertices once this modifier is used.</p>
 </div>
 </div>
 </div>

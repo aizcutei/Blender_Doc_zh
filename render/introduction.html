@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devrender/introduction.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/introduction.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="灯光" href="lighting/index.html" />
+    <link rel="next" title="Eevee" href="eevee/index.html" />
     <link rel="prev" title="渲染" href="index.html" /> 
 </head>
 
@@ -94,35 +113,33 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">渲染</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">简介</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#workflow">工作流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#render-engines">渲染引擎</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="lighting/index.html">灯光</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eevee/index.html">Eevee 渲染器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cycles/index.html">Cycles渲染引擎</a></li>
-<li class="toctree-l2"><a class="reference internal" href="workbench/index.html">Workbench Engine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="output/index.html">渲染输出</a></li>
-<li class="toctree-l2"><a class="reference internal" href="post_process/index.html">后期处理</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eevee/index.html">Eevee</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cycles/index.html">Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workbench/index.html">Workbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cameras.html">相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lights/index.html">Lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="materials/index.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shader_nodes/index.html">着色器节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="color_management.html">色彩管理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="freestyle/index.html">Freestyle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="workflows/index.html">工作流</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opengl.html">OpenGL渲染</a></li>
-<li class="toctree-l2"><a class="reference internal" href="audio/index.html">音频渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output/index.html">渲染输出</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
 </ul>
@@ -196,41 +213,26 @@
             
   <div class="section" id="introduction">
 <h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>渲染是从三维场景生成一个二维图像(或视频)的过程。图像生成的最终效果主要由用户控制的四个因素决定：</p>
+<p>Rendering is the process of turning a 3D scene into a 2D image.
+Blender includes three render engines with different strengths:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="cycles/camera.html"><span class="doc">相机</span></a></p></li>
-<li><p>场景中的 <a class="reference internal" href="lighting/introduction.html"><span class="doc">灯光</span></a></p></li>
-<li><p>每个物体的 <a class="reference internal" href="cycles/materials/introduction.html"><span class="doc">材质</span></a></p></li>
-<li><p>各种渲染设置(质量，图像大小，层等)</p></li>
+<li><a class="reference internal" href="eevee/index.html"><span class="doc">Eevee</span></a> is a physically based realtime renderer.</li>
+<li><a class="reference internal" href="cycles/index.html"><span class="doc">Cycles</span></a> is a physically based path tracer.</li>
+<li><a class="reference internal" href="workbench/index.html"><span class="doc">Workbench</span></a> is designed for layout, modeling and previews.</li>
 </ul>
-<p>计算机会基于以上几个因素进行各种复杂的计算，最后给出渲染后的图像。这个过程会需要一些时间，时间长短取决于场景的复杂度和硬件配置。</p>
-<p>当渲染完成后，可能还需要需要对图像进行一些操作，也就是 <a class="reference internal" href="post_process/index.html"><span class="doc">后期处理</span></a> 。</p>
-<p>最后, 这些输出可以设置 <a class="reference internal" href="output/output.html"><span class="doc">输出格式</span></a> ，保存为图像或者视频文件。</p>
-<div class="section" id="workflow">
-<h2>工作流程<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
-<p>通常来说，渲染过程是这样的：</p>
-<ol class="arabic simple">
-<li><p>摆放相机。</p></li>
-<li><p>点亮场景。</p></li>
-<li><p>设置材质。</p></li>
-<li><p>使用低质量设置来渲染测试图像。</p></li>
-<li><p>修改或修复在渲染中发现的问题。</p></li>
-<li><p>重复以上两个步骤，以获得满意结果。</p></li>
-<li><p>渲染高质量的图像，重复修改或修复以达到满意效果。</p></li>
-<li><p>保存图像到文件中，或者渲染动画到视频或图像序列中。</p></li>
-</ol>
-</div>
-<div class="section" id="render-engines">
-<span id="bpy-types-rendersettings-engine"></span><h2>渲染引擎<a class="headerlink" href="#render-engines" title="Permalink to this headline">¶</a></h2>
-<p>渲染引擎是将网格、材质和灯光转变为图像的程序。</p>
-<p>由于代码编写所遵循的数学原理或者核心原则不同，一些引擎可能在某些方面优于其他的引擎。</p>
-<p>Blender默认有两种渲染引擎：</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="eevee/index.html"><span class="doc">Eevee</span></a></p></li>
-<li><p><a class="reference internal" href="cycles/index.html"><span class="doc">Cycles</span></a></p></li>
-</ul>
-<p>使用 <a class="reference internal" href="../preferences/addons.html"><span class="doc">插件</span></a> 可以添加更多第三方渲染引擎.</p>
-</div>
+<p>More renderers from third-party developers are available as
+<a class="reference internal" href="../editors/preferences/addons.html"><span class="doc">add-ons</span></a>.
+Each renderer has its own render settings to control render quality and performance.</p>
+<p>What the render looks like is defined by <a class="reference internal" href="cameras.html"><span class="doc">cameras</span></a>,
+<a class="reference internal" href="lights/index.html"><span class="doc">lights</span></a> and <a class="reference internal" href="materials/index.html"><span class="doc">materials</span></a>.
+These are shared between Eevee and Cycles, however some features are only supported in one or the other.</p>
+<p>Renders can be split up into <a class="reference internal" href="layers/index.html"><span class="doc">layers and passes</span></a>, which can then
+be <a class="reference internal" href="../compositing/index.html"><span class="doc">composited</span></a> together for creative control, or to combine
+with real footage. <a class="reference internal" href="freestyle/index.html"><span class="doc">Freestyle</span></a> can be used to
+add non-photorealistic line rendering.</p>
+<p>Blender supports interactive 3D viewport rendering for all render engines, for quick iteration
+on lighting and shading. Once this is done, the final quality image or animation can
+be rendered and <a class="reference internal" href="output/index.html"><span class="doc">output</span></a> to disk.</p>
 </div>
 
 
@@ -241,7 +243,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="lighting/index.html" class="btn btn-neutral float-right" title="灯光" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="eevee/index.html" class="btn btn-neutral float-right" title="Eevee" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="渲染" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

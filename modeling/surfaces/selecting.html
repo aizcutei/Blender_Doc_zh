@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/surfaces/selecting.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/surfaces/selecting.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="编辑" href="editing.html" />
+    <link rel="next" title="Editing" href="editing/index.html" />
     <link rel="prev" title="基本体" href="primitives.html" /> 
 </head>
 
@@ -94,21 +113,28 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">曲面</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="primitives.html">基本体</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">选择</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#select-menu">选择菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-random">Select Random</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#checker-deselect">Checker Deselect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-linked">选择关联项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-similar">Select Similar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-control-point-row">Select Control Point Row</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-more-less">Select More/Less</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
-<li class="toctree-l3"><a class="reference internal" href="properties.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">Editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties/index.html">Properties</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../metas/index.html">融球</a></li>
@@ -117,16 +143,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -202,69 +229,217 @@
             
   <div class="section" id="selecting">
 <h1>选择<a class="headerlink" href="#selecting" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-right" id="id1">
-<img alt="../../_images/modeling_surfaces_selecting_menu.png" src="../../_images/modeling_surfaces_selecting_menu.png" />
-<p class="caption"><span class="caption-text">选择菜单。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<p><em>编制模式</em> 里的曲面选择与 <a class="reference internal" href="../curves/editing/introduction.html"><span class="doc">NURBS曲线选择</span></a> 非常像. 其基本操作与 <a class="reference internal" href="../meshes/selecting/introduction.html"><span class="doc">网格</span></a> 相同，你可以用 <kbd class="kbd docutils literal notranslate">LMB</kbd> 选择一个单一的控制点，按 <kbd class="kbd docutils literal notranslate">Shift-LMB</kbd> 追加控制点。 <kbd class="kbd docutils literal notranslate">B</kbd> 框选，等等。</p>
+<p>This page discusses specific selecting tools for surface objects in Edit Mode.
+The Surface Edit more also uses the general select tools used which are described
+in the <a class="reference internal" href="../../interface/selecting.html"><span class="doc">interface section</span></a>.</p>
+<p>Surface selection in <em>Edit Mode</em> is very similar to
+<a class="reference internal" href="../curves/selecting.html"><span class="doc">NURBS curve selection</span></a>.
+The basic tools are the same as with <a class="reference internal" href="../meshes/selecting.html"><span class="doc">meshes</span></a>,
+so you can select a simple control point with an <kbd class="kbd docutils literal notranslate">LMB</kbd>-click,
+add to current selection with <kbd class="kbd docutils literal notranslate">Shift-LMB</kbd> clicks, <kbd class="kbd docutils literal notranslate">B</kbd> order-select, and so on.</p>
 <div class="section" id="select-menu">
 <h2>选择菜单<a class="headerlink" href="#select-menu" title="Permalink to this headline">¶</a></h2>
-<p><em>选择</em> 菜单(3D 视图中的)比曲线的更简单...</p>
-<p>所有这些选项的含义和行为都和 <a class="reference internal" href="../../editors/3dview/object/selecting/index.html"><span class="doc">物体模式</span></a> 下相同（ <em>编辑模式</em> 下 <em>Border Select框选</em> 的特殊性已经在 <a class="reference internal" href="../meshes/selecting/introduction.html"><span class="doc">这里</span></a> 讨论过了）。</p>
-<div class="lead docutils container">
+<p>The <em>Select</em> menu (in the 3D Viewport header) is even simpler than for curves...</p>
+<p>All these options have the same meaning and behavior as in
+<a class="reference internal" href="../../scene_layout/object/selecting.html"><span class="doc">Object Mode</span></a>
+(and the specificities of <em>Box Select</em> in <em>Edit Mode</em> have already been discussed
+<a class="reference internal" href="../meshes/selecting.html"><span class="doc">here</span></a>).</p>
+<dl class="docutils">
+<dt>All <kbd class="kbd docutils literal notranslate">A</kbd></dt>
+<dd>Select all.</dd>
+<dt>None <kbd class="kbd docutils literal notranslate">Alt-A</kbd></dt>
+<dd>Select none.</dd>
+<dt>Inverse <kbd class="kbd docutils literal notranslate">Ctrl-I</kbd></dt>
+<dd>Selects all the geometry that are not selected, and deselect currently selected components.</dd>
+</dl>
+<hr class="docutils" />
+<dl class="docutils">
+<dt><a class="reference internal" href="../../interface/selecting.html#tool-select-box"><span class="std std-ref">Box Select</span></a> <kbd class="kbd docutils literal notranslate">B</kbd></dt>
+<dd>Interactive box selection.</dd>
+<dt><a class="reference internal" href="../../interface/selecting.html#tool-select-circle"><span class="std std-ref">Circle Select</span></a> <kbd class="kbd docutils literal notranslate">C</kbd></dt>
+<dd>Interactive circle selection.</dd>
+</dl>
+<hr class="docutils" />
+<dl class="docutils">
+<dt><a class="reference internal" href="#select-random">Select Random</a></dt>
+<dd>Select random control points.</dd>
+<dt><a class="reference internal" href="#checker-deselect">Checker Deselect</a></dt>
+<dd>Select every Nth control point.</dd>
+<dt><a class="reference internal" href="#select-linked">Select Linked</a> <kbd class="kbd docutils literal notranslate">Ctrl-L</kbd></dt>
+<dd>Select control points that are connected to the current selection.</dd>
+<dt><a class="reference internal" href="#select-similar">Select Similar</a> <kbd class="kbd docutils literal notranslate">Shift-G</kbd></dt>
+<dd>Select control points that have similar properties to the current selection.</dd>
+</dl>
+<hr class="docutils" />
+<dl class="docutils">
+<dt><a class="reference internal" href="#select-control-point-row">Select Control Point Row</a></dt>
+<dd>Select a whole <a class="reference internal" href="structure.html#modeling-surfaces-rows-grids"><span class="std std-ref">row</span></a> of control points.</dd>
+</dl>
+<hr class="docutils" />
+<dl class="docutils">
+<dt><a class="reference internal" href="#select-more-less">Select More/Less</a></dt>
+<dd>Select objects based on their parent child relationships.</dd>
+</dl>
+</div>
+<div class="section" id="select-random">
+<h2>Select Random<a class="headerlink" href="#select-random" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Select ‣ Select Random</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Select random control points.</p>
+<dl class="docutils">
+<dt>Percent</dt>
+<dd>Selects the defined percentage of control points.</dd>
+<dt>Random Seed</dt>
+<dd><a class="reference internal" href="../../glossary/index.html#term-seed"><span class="xref std std-term">Seed</span></a> used by the pseudo-random number generator.</dd>
+<dt>Action</dt>
+<dd>Controls whether the operator <em>Selects</em> or <em>Deselects</em> control points.</dd>
+</dl>
+</div>
+<div class="section" id="checker-deselect">
+<h2>Checker Deselect<a class="headerlink" href="#checker-deselect" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Select ‣ Checker Deselect</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This tool applies an alternating selected/deselected checker pattern.
+This only works if you already have more than one control point selected.</p>
+<p>It works by changing the current selection so that only every Nth
+control points will remain selected, starting from the active one.</p>
+<dl class="docutils">
+<dt>Nth Selection</dt>
+<dd>Skip every Nth element leaving it selected.</dd>
+<dt>Skip</dt>
+<dd>Number of consecutive elements to skip (keep selected) at once.</dd>
+<dt>Offset</dt>
+<dd>Offset from the starting point.</dd>
+</dl>
 </div>
 <div class="section" id="select-linked">
-<h3>选择关联项<a class="headerlink" href="#select-linked" title="Permalink to this headline">¶</a></h3>
-<p><kbd class="kbd docutils literal notranslate">L</kbd>, <kbd class="kbd docutils literal notranslate">Ctrl-L</kbd> 会添加鼠标光标最近的控制点和所有相连的点，即属于同一表面的所有点。</p>
-</div>
-<div class="section" id="control-point-row">
-<h3>控制点行<a class="headerlink" href="#control-point-row" title="Permalink to this headline">¶</a></h3>
+<h2>选择关联项<a class="headerlink" href="#select-linked" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Select ‣ Select Linked</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">L</kbd>, <kbd class="kbd docutils literal notranslate">Ctrl-L</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Select Linked</em> will add to the selection the mouse cursor's nearest control point,
+and all the linked ones, i.e. all points belonging to the same surface.</p>
+</div>
+<div class="section" id="select-similar">
+<h2>Select Similar<a class="headerlink" href="#select-similar" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Select ‣ Select Similar</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Shift-G</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Selects control points that have certain similar properties to the active one.
+The <a class="reference internal" href="../../interface/undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> panel provides several selection options:</p>
+<dl class="docutils">
+<dt>Type</dt>
+<dd><dl class="first last docutils">
+<dt>Type</dt>
+<dd>Selects splines that have the same spline Type i.e. Bézier, NURBS or Poly.</dd>
+<dt>Radius</dt>
+<dd>Selects control points that have a similar Radius value.</dd>
+<dt>Weight</dt>
+<dd>Selects all points that have a similar Weight value.</dd>
+<dt>Direction</dt>
+<dd>Selects control points that have a similar handles direction.</dd>
+</dl>
 </dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">选择 ‣ 控制点行</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Shift-R</kbd></p>
-</dd>
+<dt>Compare</dt>
+<dd>Equal, Greater, Less. (only for Radius, Weight) (ToDo 2.76)</dd>
+<dt>Threshold</dt>
+<dd>Precision (ToDo 2.76)</dd>
 </dl>
 </div>
-<p>这个选项在网格的 <a class="reference internal" href="../meshes/selecting/edges_faces.html#modeling-meshes-selecting-edge-loops"><span class="std std-ref">边环状选择</span></a> 里可用, 因为它选择一个整体的控制点 <a class="reference internal" href="structure.html#modeling-surfaces-rows-grids"><span class="std std-ref">行</span></a> , 基于激活的项(最后选择的). 你第一次按下 <kbd class="kbd docutils literal notranslate">Shift-R</kbd>, V行通过激活的点(含)将被添加到 <em>当前</em> 选择中. 如果你再次使用这个快捷方式，你会在这个点的U和V行间切换, 从选择中移除 <em>一切别的</em>。</p>
-</div>
-<div class="section" id="more-and-less">
-<h3>扩展/缩减<a class="headerlink" href="#more-and-less" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="select-control-point-row">
+<span id="bpy-ops-curve-select-row"></span><h2>Select Control Point Row<a class="headerlink" href="#select-control-point-row" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">选择 ‣ 扩展/缩减</span></p>
-</dd>
-<dt class="field-odd">快捷键</dt>
-<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Ctrl-NumpadPlus</kbd>, <kbd class="kbd docutils literal notranslate">Ctrl-NumpadMinus</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">选择 ‣ 控制点行</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Shift-R</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>这两个选项互补而且和 <a class="reference internal" href="../meshes/selecting/introduction.html"><span class="doc">网格里的这些</span></a> 非常相似. 基于当前所选的控制点，其目的在于缩小或扩大这种选择。</p>
-<p>算法和网格的一样:</p>
-<dl class="simple">
-<dt>扩展选择</dt><dd><p>对于每个选定的控制点, 选择和它相关联的 <strong>全部</strong> (即二三或四).。</p>
-</dd>
-<dt>缩减选择</dt><dd><p>对于每个选定的控制点, 如果和它相关联的 <strong>全部</strong> 点都被选中了, 那也选中它。对于所有其他被选的控制点，取消选择他们。</p>
-</dd>
+<p>这个选项在网格的 <a class="reference internal" href="../meshes/selecting.html#modeling-meshes-selecting-edge-loops"><span class="std std-ref">边环状选择</span></a> 里可用, 因为它选择一个整体的控制点 <a class="reference internal" href="structure.html#modeling-surfaces-rows-grids"><span class="std std-ref">行</span></a> , 基于激活的项(最后选择的). 你第一次按下 <kbd class="kbd docutils literal notranslate">Shift-R</kbd>, V行通过激活的点(含)将被添加到 <em>当前</em> 选择中. 如果你再次使用这个快捷方式，你会在这个点的U和V行间切换, 从选择中移除 <em>一切别的</em>。</p>
+</div>
+<div class="section" id="select-more-less">
+<h2>Select More/Less<a class="headerlink" href="#select-more-less" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">选择 ‣ 扩展/缩减</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-NumpadPlus</kbd>, <kbd class="kbd docutils literal notranslate">Ctrl-NumpadMinus</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Expand or contract the selection based on current selected control points.</p>
+<dl class="docutils">
+<dt>扩展选择</dt>
+<dd>对于每个选定的控制点, 选择和它相关联的 <strong>全部</strong> (即二三或四).。</dd>
+<dt>缩减选择</dt>
+<dd>对于每个选定的控制点, 如果和它相关联的 <strong>全部</strong> 点都被选中了, 那也选中它。对于所有其他被选的控制点，取消选择他们。</dd>
 </dl>
 <p>这意味着两点:</p>
 <ol class="arabic simple">
-<li><p>第一，当一个曲面上 <strong>全部</strong> 控制点都被选择了, 那么什么都不会发生的(对于 <em>缩减</em>，所有相连的点总是被选择的，当然，<em>扩展</em> 不添加任何点)。相反地，没有控制点被选时发生一样的事情。</p></li>
-<li><p>其次，这些工具不会“跳出”曲面，（它们不会跳到同一个物体的另一个面上）。</p></li>
+<li>第一，当一个曲面上 <strong>全部</strong> 控制点都被选择了, 那么什么都不会发生的(对于 <em>缩减</em>，所有相连的点总是被选择的，当然，<em>扩展</em> 不添加任何点)。相反地，没有控制点被选时发生一样的事情。</li>
+<li>其次，这些工具不会“跳出”曲面，（它们不会跳到同一个物体的另一个面上）。</li>
 </ol>
-</div>
 </div>
 </div>
 
@@ -276,7 +451,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="editing.html" class="btn btn-neutral float-right" title="编辑" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="editing/index.html" class="btn btn-neutral float-right" title="Editing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="primitives.html" class="btn btn-neutral float-left" title="基本体" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

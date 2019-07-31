@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>介绍 &mdash; Blender Manual</title>
+  <title>窗口系统介绍 &mdash; Blender Manual</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devinterface/window_system/introduction.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/window_system/introduction.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="工作空间" href="workspaces.html" />
+    <link rel="next" title="顶栏" href="topbar.html" />
     <link rel="prev" title="启动画面" href="../splash.html" /> 
 </head>
 
@@ -95,17 +114,15 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">用户界面</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../splash.html">启动画面</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#window-system">窗口系统</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">介绍</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#interface-elements">界面元素</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#the-layout-workspace">布局工作空间</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#components-of-an-editor">编辑器的组成部分</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#user-interface-principles">用户界面原则</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Introduction</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#customization">个性化定制</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="workspaces.html">工作空间</a></li>
-<li class="toctree-l3"><a class="reference internal" href="areas.html">区域</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regions.html">区块</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topbar.html">顶栏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workspaces.html">工作区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="status_bar.html">状态栏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="areas.html">区域-Areas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regions.html">区块-Regions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tabs_panels.html">选项卡 &amp; 面板</a></li>
 </ul>
 </li>
@@ -115,18 +132,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -179,7 +197,7 @@
         
           <li><a href="../index.html">用户界面</a> &raquo;</li>
         
-      <li>介绍</li>
+      <li>窗口系统介绍</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -198,66 +216,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="introduction">
-<h1>介绍<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>打开Blender并关闭了 <a class="reference internal" href="../splash.html#splash"><span class="std std-ref">启动画面</span></a> 之后，你会看到与下图相似的Blender窗口。Blender的用户界面在所有平台上都是一致的。</p>
+  <div class="section" id="window-system-introduction">
+<h1>窗口系统介绍<a class="headerlink" href="#window-system-introduction" title="Permalink to this headline">¶</a></h1>
+<p>当启动Blender并关闭 <a class="reference internal" href="../splash.html#splash"><span class="std std-ref">启动画面</span></a> 后，Blender窗口应该看起来像下面的图片一样，Blender的用户界面在所有操作系统上都是统一的。</p>
 <div class="figure align-center" id="id1">
 <img alt="../../_images/interface_window-system_introduction_default-startup.png" src="../../_images/interface_window-system_introduction_default-startup.png" />
-<p class="caption"><span class="caption-text">默认的Blender启动界面。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">默认的Blender启动界面。</span></p>
 </div>
-<div class="section" id="interface-elements">
-<h2>界面元素<a class="headerlink" href="#interface-elements" title="Permalink to this headline">¶</a></h2>
-<p>Blender界面分为以下四个界面元素：</p>
+<p>Blender界面分为以下三个部分：</p>
 <ul class="simple">
-<li><p>最顶部的顶部菜单。</p></li>
-<li><p>顶部菜单下方的工具设置。</p></li>
-<li><p>中间的编辑器区域。</p></li>
-<li><p>底部的状态条。</p></li>
+<li><a class="reference internal" href="topbar.html"><span class="doc">顶栏</span></a> 在最上面蓝色区域覆盖部分。</li>
+<li><a class="reference internal" href="areas.html"><span class="doc">工作区</span></a> 在中间绿色区域覆盖部分。</li>
+<li><a class="reference internal" href="status_bar.html"><span class="doc">状态栏</span></a> 在下面红色区域覆盖部分。</li>
 </ul>
-<p>大的编辑器区域进一步分为包含不同编辑器的 <a class="reference internal" href="areas.html"><span class="doc">区域</span></a>。可以自定义用户界面为 <a class="reference internal" href="workspaces.html"><span class="doc">工作空间</span></a> ，并命名和保存，以满足后续特定工作需要。布局空间将在下文介绍。</p>
-<div class="figure align-center" id="id2">
+<div class="figure" id="id2">
 <img alt="../../_images/interface_window-system_introduction_default-screen.png" src="../../_images/interface_window-system_introduction_default-screen.png" />
-<p class="caption"><span class="caption-text">Blender默认屏幕布局。顶部菜单(蓝色)，工具设置(黄色)，编辑器(绿色)和状态条(红色)。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="the-layout-workspace">
-<h2>布局工作空间<a class="headerlink" href="#the-layout-workspace" title="Permalink to this headline">¶</a></h2>
-<p>Blender默认的启动文件显示的是名为 &quot;Layout&quot; 的工作空间。该工作空间包含以下 <a class="reference internal" href="../../editors/index.html"><span class="doc">编辑器</span></a>:</p>
-<ul class="simple">
-<li><p>3D视图位于左上。</p></li>
-<li><p>大纲视图位于右上角。</p></li>
-<li><p>属性编辑器位于右下角。</p></li>
-<li><p>时间轴位于左下方。</p></li>
-</ul>
-</div>
-<div class="section" id="components-of-an-editor">
-<h2>编辑器的组成部分<a class="headerlink" href="#components-of-an-editor" title="Permalink to this headline">¶</a></h2>
-<p>总的来说，一种编辑器提供了使用Blender查看与修改作品的一种方式。</p>
-<p>编辑器由 <a class="reference internal" href="regions.html"><span class="doc">区块</span></a> 组成。而区块则由更小的结构元素构成，比如包含按钮，控制条和窗口小部件的 <a class="reference internal" href="tabs_panels.html"><span class="doc">选项卡和面板</span></a> 。</p>
-<div class="figure align-center" id="id3">
-<img alt="../../_images/interface_window-system_regions_3d-view.png" src="../../_images/interface_window-system_regions_3d-view.png" />
-<p class="caption"><span class="caption-text">3D视图编辑器。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-<div class="legend">
-<p>标题栏(绿色)，主区块(黄色)，工具栏(蓝色)，侧栏(红色)和操作面板(粉色)。</p>
-</div>
-</div>
-</div>
-<div class="section" id="user-interface-principles">
-<h2>用户界面原则<a class="headerlink" href="#user-interface-principles" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>没有重叠</dt><dd><p>UI的设计是为了让你能一目了然所有相关的选项和工具，而无需到处拖拽编辑器。</p>
-</dd>
-<dt>没有遮挡</dt><dd><p>工具和界面选项不会在用户使用任何Blender的其他功能时造成遮挡。Blender的特点是没有弹出式对话框（要求用户在进行操作之前输入数据）。</p>
-</dd>
-<dt>非模态工具</dt><dd><p>用户可以高效地访问工具而不需要花时间在不同工具之间选择。很多工具使用了一致的且可预知的鼠标和键盘操作来进行互动。</p>
-</dd>
-</dl>
+<p class="caption"><span class="caption-text">Blender窗口的默认布局。 顶栏(蓝色)，工作区(绿色)和状态栏(红色)。</span></p>
 </div>
 <div class="section" id="customization">
 <h2>个性化定制<a class="headerlink" href="#customization" title="Permalink to this headline">¶</a></h2>
-<p>Blender也大量地使用了快捷键来加速工作。这些快捷键也可以在 <a class="reference internal" href="../../preferences/input.html#prefs-input-keymap-editor"><span class="std std-ref">键盘映射编辑器</span></a> 中定制。</p>
+<p>Blender也大量地使用了快捷键来加速工作。这些快捷键也可以在 <a class="reference internal" href="../../editors/preferences/keymap.html#prefs-input-keymap-editor"><span class="std std-ref">键盘映射编辑器</span></a> 中定制。</p>
 <p class="rubric">主题色彩</p>
-<p>Blender允许用户按照需求来更改大多数用户界面的颜色。如果你发现屏幕上的颜色和手册里提到的那些不一样，那么有可能你的默认主题被人改了。选择 <a class="reference internal" href="../../preferences/index.html"><span class="doc">用户偏好</span></a> 编辑器并点击 <em>主题</em> 选项，即可创建一个新的主题或选择/更改一个现有的主题。</p>
+<p>Blender允许更改其大多数界面颜色设置以满足用户的需要。 如果您发现屏幕上显示的颜色与手册中提到的颜色不匹配，则可能是您的默认主题已被更改。 可以通过选择 <a class="reference internal" href="../../editors/preferences/index.html"><span class="doc">用户设置</span></a> 编辑器并点击 <em>主题</em> 选项，即可创建一个新的主题或选择/更改一个现有的主题。</p>
 </div>
 </div>
 
@@ -269,7 +249,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="workspaces.html" class="btn btn-neutral float-right" title="工作空间" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="topbar.html" class="btn btn-neutral float-right" title="顶栏" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../splash.html" class="btn btn-neutral float-left" title="启动画面" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

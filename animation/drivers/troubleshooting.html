@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devanimation/drivers/troubleshooting.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/drivers/troubleshooting.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="标记" href="../markers.html" />
@@ -94,22 +113,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画 &amp; 绑定</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/index.html">骨架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lattice.html">Lattice 晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../constraints/index.html">约束</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../actions.html">动作</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">驱动器</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html">Usage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="drivers_panel.html">驱动器面板</a></li>
 <li class="toctree-l3"><a class="reference internal" href="workflow_examples.html">工作流程 &amp; 范例</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">问题排查</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#scripted-expression">脚本表达式</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#rotational-properties-are-radians">旋转属性是弧度制</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#intra-armature-bone-drivers-can-misbehave">骨架内部骨骼驱动器会导致失常动作</a></li>
 </ul>
 </li>
 </ul>
@@ -122,10 +144,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -176,7 +199,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">动画</a> &raquo;</li>
+          <li><a href="../index.html">动画 &amp; 绑定</a> &raquo;</li>
         
           <li><a href="index.html">驱动器</a> &raquo;</li>
         
@@ -204,30 +227,33 @@
 <p>使用驱动器时可能遭遇一些常见问题。</p>
 <div class="section" id="scripted-expression">
 <h2>脚本表达式<a class="headerlink" href="#scripted-expression" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id1">
+<div class="figure" id="id1">
 <img alt="../../_images/animation_drivers_troubleshooting_autorun-graph-editor.png" src="../../_images/animation_drivers_troubleshooting_autorun-graph-editor.png" />
-<p class="caption"><span class="caption-text">驱动器面板中的自动执行警告。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">A security warning in the Drivers panel.</span></p>
 </div>
-<div class="figure align-center" id="id2">
-<img alt="../../_images/animation_drivers_troubleshooting_autorun-info-header.png" src="../../_images/animation_drivers_troubleshooting_autorun-info-header.png" />
-<p class="caption"><span class="caption-text">信息编辑器标题栏中的自动执行警告。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<div class="figure" id="id2">
+<img alt="../../_images/advanced_scripting_security_autorun-scripts-dialog.png" src="../../_images/advanced_scripting_security_autorun-scripts-dialog.png" />
+<p class="caption"><span class="caption-text">信息编辑器标题栏中的自动执行警告。</span></p>
 </div>
-<p>Blender默认禁用自动运行Python脚本。</p>
-<p>如果使用 <em>脚本表达式</em> 类型的驱动器，你需要勾选 <em>可信任源</em> 打开文件，或者在 <span class="menuselection">用户设置 ‣ 文件 ‣ 自动执行</span> 启用 <em>自动运行Python脚本</em> 。</p>
-<table class="colwidths-given docutils align-center">
+<p>By default Blender will restrict execution of Python scripts.</p>
+<p>If using a <em>Scripted Expression</em> Driver Type that doesn't follow
+the <a class="reference internal" href="drivers_panel.html#drivers-simple-expressions"><span class="std std-ref">Simple Expressions</span></a>
+subset, you will have to open the file as <em>Trusted Source</em>,
+or set <em>Auto Run Python Scripts</em> in <span class="menuselection">Preferences ‣ Save &amp; Load ‣ Blender Files</span>.</p>
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col style="width: 40%" />
-<col style="width: 60%" />
+<col width="40%" />
+<col width="60%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id3">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id3">
 <img alt="../../_images/animation_drivers_troubleshooting_autorun-file-browser.png" src="../../_images/animation_drivers_troubleshooting_autorun-file-browser.png" />
-<p class="caption"><span class="caption-text">文件浏览器中的受信任源复选框。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">文件浏览器中的受信任源复选框。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id4">
+<td><div class="first last figure" id="id4">
 <img alt="../../_images/animation_drivers_troubleshooting_autorun-user-preference.png" src="../../_images/animation_drivers_troubleshooting_autorun-user-preference.png" />
-<p class="caption"><span class="caption-text">用户设置中的自动执行Python脚本复选框。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">用户设置中的自动执行Python脚本复选框。</span></p>
 </div>
 </td>
 </tr>
@@ -237,10 +263,6 @@
 <div class="section" id="rotational-properties-are-radians">
 <h2>旋转属性是弧度制<a class="headerlink" href="#rotational-properties-are-radians" title="Permalink to this headline">¶</a></h2>
 <p>Blender的各个用户界面可能会对角度、旋转使用不同的度量单位。在曲线编辑器中，使用驱动器时，所有的角度都是弧度制。</p>
-</div>
-<div class="section" id="intra-armature-bone-drivers-can-misbehave">
-<h2>骨架内部骨骼驱动器会导致失常动作<a class="headerlink" href="#intra-armature-bone-drivers-can-misbehave" title="Permalink to this headline">¶</a></h2>
-<p>骨骼驱动器引用同一骨架内的另一骨骼，这是一个 <a class="reference external" href="https://developer.blender.org/T40301">众所周知的局限</a> 。驱动值可能出现计算错误，因为它是基于调整当前帧 <em>之前</em> 的另一骨骼位置计算出来的。在渲染帧存在跳帧时(blend文件目前位于一个不一样的帧数，或者直接跳过已渲染帧)，这会导致明显的形状瑕疵。</p>
 </div>
 </div>
 

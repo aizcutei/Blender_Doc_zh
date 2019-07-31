@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/curves/structure.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/curves/structure.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="基本体" href="primitives.html" />
-    <link rel="prev" title="简介" href="introduction.html" /> 
+    <link rel="prev" title="Toolbar" href="toolbar/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,15 +113,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">曲线</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">结构</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#bezier-curves">贝塞尔曲线</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#nurbs">NURBS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#splines">Splines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spline-types">Spline Types</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="primitives.html">基本体</a></li>
@@ -119,16 +139,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -204,36 +225,94 @@
             
   <div class="section" id="structure">
 <h1>结构<a class="headerlink" href="#structure" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="bezier-curves">
-<span id="curve-bezier"></span><h2>贝塞尔曲线<a class="headerlink" href="#bezier-curves" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="splines">
+<h2>Splines<a class="headerlink" href="#splines" title="Permalink to this headline">¶</a></h2>
+<p>Splines are a substructure of curves and are the individual elements that make curve objects.
+A curve object can be composed of several different splines,
+just like mesh objects can have different discontinuous meshes under the same object.
+A spline defines the shape of the curve and can be transformed by altering its <a class="reference internal" href="#control-points">Control Points</a>.
+Splines come in three distinct types, which are described in <a class="reference internal" href="#spline-types">Spline Types</a>.
+Each spline type has a slightly different algorithm for computing how bends in the spline are represented.</p>
+<p>Splines have there own separate properties than curves and can be altered
+by selecting the spline in Edit Mode and using
+the <a class="reference internal" href="properties/active_spline.html"><span class="doc">Active Spline</span></a> panel.</p>
+<div class="section" id="control-points">
+<h3>Control Points<a class="headerlink" href="#control-points" title="Permalink to this headline">¶</a></h3>
+<p>Similar to meshes splines have control points or vertices.
+Control points connect to other control points to form splines.
+Control points can be <a class="reference internal" href="selecting.html"><span class="doc">selected</span></a>
+and transformed to alter the resulting shape of the spline.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="editing/index.html"><span class="doc">Curve Editing</span></a></p>
+</div>
+</div>
+</div>
+<div class="section" id="spline-types">
+<h2>Spline Types<a class="headerlink" href="#spline-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="poly">
+<h3>Poly<a class="headerlink" href="#poly" title="Permalink to this headline">¶</a></h3>
+<p>Poly splines are the most simple spline type as they do not
+interpolate the shape of the curve between control points.</p>
+<p>Poly Curves are used when <a class="reference internal" href="../../scene_layout/object/editing/introduction.html#bpy-ops-object-convert"><span class="std std-ref">converting meshes to curves</span></a>.
+Because they do not interpolate the shape,
+Poly splines are able to give an accurate representation of the original mesh object.</p>
+<p>This is the primary use case of splines, most of the time <a class="reference internal" href="#bezier">Bézier</a> or <a class="reference internal" href="#nurbs">NURBS</a>
+splines are used instead; both of which interpolate the shape and give smooth results.</p>
+</div>
+<div class="section" id="bezier">
+<span id="curve-bezier"></span><h3>Bézier<a class="headerlink" href="#bezier" title="Permalink to this headline">¶</a></h3>
 <p>用于编辑贝塞尔曲线的主要元素是控制点和控制柄。两个控制点构成一条线段(实际是曲线)。控制柄用于定义线段的曲率。</p>
 <p>在下图中，在粉红色的线中间可以看到控制点，而控制柄则由控制点延伸出来。箭头表示曲线的法线，指示其方向和倾斜程度。</p>
 <div class="figure align-center" id="id1">
 <img alt="../../_images/modeling_curves_structure_control-points-handles.png" src="../../_images/modeling_curves_structure_control-points-handles.png" />
-<p class="caption"><span class="caption-text">编辑模式下的贝塞尔曲线。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">编辑模式下的贝塞尔曲线。</span></p>
 </div>
 <div class="section" id="handle-types">
-<span id="curve-bezier-handle-type"></span><h3>控制柄类型<a class="headerlink" href="#handle-types" title="Permalink to this headline">¶</a></h3>
+<span id="curve-bezier-handle-type"></span><h4>控制柄类型<a class="headerlink" href="#handle-types" title="Permalink to this headline">¶</a></h4>
 <p>贝塞尔曲线有四种控制柄类型。可以按下 <kbd class="kbd docutils literal notranslate">V</kbd> 并从弹出菜单中进行选择，或者按下相应的快捷键组合。</p>
 <div class="figure align-right" id="id2">
 <img alt="../../_images/modeling_curves_structure_bezier-handle-types.png" src="../../_images/modeling_curves_structure_bezier-handle-types.png" />
-<p class="caption"><span class="caption-text">贝塞尔曲线控制柄类型。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">贝塞尔曲线控制柄类型。</span></p>
 </div>
-<dl class="simple" id="curve-handle-type-auto">
-<dt>自动 <kbd class="kbd docutils literal notranslate">V A</kbd></dt><dd><p>该控制柄长度和方向完全由自动设置，以确保最平滑的结果。移动这些控制柄后，自动转换为 <em>对齐</em> 控制柄。(黄色控制柄)。</p>
-</dd>
-<dt>矢量 <kbd class="kbd docutils literal notranslate">V V</kbd></dt><dd><p>控制柄的两端总是指向前一个控制柄或下一个控制柄，用于创建由直线或尖角组成的曲线或线段。移动矢量控制柄，自动转换为 <em>自由</em> 控制柄。(绿色控制柄)。</p>
-</dd>
-<dt>对齐 <kbd class="kbd docutils literal notranslate">V L</kbd></dt><dd><p>该控制柄总是一条直线，组成一条没有尖角的连续曲线。(紫色控制柄)。</p>
-</dd>
-<dt>自由 <kbd class="kbd docutils literal notranslate">V F</kbd></dt><dd><p>该控制柄的两端互不相关。(黑色控制柄)。</p>
-</dd>
+<dl class="docutils" id="curve-handle-type-auto">
+<dt>Automatic (yellow handles)</dt>
+<dd>This handle has a completely automatic length and direction
+which is set by Blender to ensure the smoothest result.
+These handles convert to <em>Aligned</em> handles when moved.</dd>
+<dt>Vector (green handles)</dt>
+<dd>Both parts of a handle always point to the previous handle or the next handle which allows
+you to create curves or sections thereof made of straight lines or with sharp corners.
+Vector handles convert to <em>Free</em> handles when moved.</dd>
+<dt>Aligned (purple handles)</dt>
+<dd>These handles always lie in a straight line,
+and give a continuous curve without sharp angles.</dd>
+<dt>Free (black handles)</dt>
+<dd>The handles are independent of each other.</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="nurbs">
-<span id="curve-nurbs"></span><h2>NURBS<a class="headerlink" href="#nurbs" title="Permalink to this headline">¶</a></h2>
-<p>NURBS是Non-Uniform Rational B-Splines的缩写。 贝塞尔物体和NURBS物体之间的主要区别之一是，贝塞尔曲线是近似值。例如，一个贝塞尔圆是一个 <em>近似</em> 的圆，而一个NURBS圆是一个 <em>精确</em> 的圆。 NURBS理论可能是一个 <em>非常</em> 复杂的话题。相关介绍，请参阅 <a class="reference external" href="https://en.wikipedia.org/wiki/NURBS">维基百科页面</a>。</p>
+<span id="curve-nurbs"></span><h3>NURBS<a class="headerlink" href="#nurbs" title="Permalink to this headline">¶</a></h3>
+<p>N.U.R.B.S. is the abbreviation for Non-Uniform Rational B-Splines.
+One of the major differences between Bézier objects and NURBS objects is that Bézier curves
+are approximations. For example, a Bézier circle is an <em>approximation</em> of a circle,
+whereas a NURBS circle is an <em>exact</em> circle.
+NURBS theory can be a <em>very</em> complicated topic. For an introduction,
+please consult the <a class="reference external" href="https://en.wikipedia.org/wiki/NURBS">Wikipedia page</a>.</p>
+<p id="curves-structure-nurbs-weight">NURBS spline control points are different than other spline types because they have a special weight property.
+This weight property controls how much influence the control point has on the surface.
+This weight should not be confused with the <a class="reference internal" href="editing/transform_panel.html#curves-weight"><span class="std std-ref">Goal Weight</span></a>,
+which is used only for soft body simulations.
+The NURBS control point weight can be adjusted in the <em>W</em> number field of
+the <a class="reference internal" href="editing/transform_panel.html"><span class="doc">Transform panel</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If all the control points have the same <em>Weight</em> then each effectively cancels each other out.
+It is the difference in the weights that cause the curve to move
+towards or away from a control point.</p>
+</div>
+</div>
 </div>
 </div>
 
@@ -248,7 +327,7 @@
         <a href="primitives.html" class="btn btn-neutral float-right" title="基本体" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="toolbar/index.html" class="btn btn-neutral float-left" title="Toolbar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

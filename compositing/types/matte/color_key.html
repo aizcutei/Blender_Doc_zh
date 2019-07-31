@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devcompositing/types/matte/color_key.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/compositing/types/matte/color_key.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="色彩溢出节点" href="color_spill.html" />
@@ -94,11 +113,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">合成</a><ul class="current">
@@ -117,6 +136,7 @@
 <li class="toctree-l4"><a class="reference internal" href="chroma_key.html">色度抠像</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">色彩抠像节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="color_spill.html">色彩溢出节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cryptomatte.html">Cryptomatte</a></li>
 <li class="toctree-l4"><a class="reference internal" href="difference_key.html">色差抠像节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="distance_key.html">色距抠像节点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="double_edge_mask.html">双边遮罩节点</a></li>
@@ -133,10 +153,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -187,6 +208,8 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
+          <li><a href="../../../editors/index.html">编辑器</a> &raquo;</li>
+        
           <li><a href="../../index.html">合成</a> &raquo;</li>
         
           <li><a href="index.html">遮片类节点</a> &raquo;</li>
@@ -213,32 +236,33 @@
   <div class="section" id="color-key-node">
 <span id="bpy-types-compositornodecolormatte"></span><h1>色彩抠像节点<a class="headerlink" href="#color-key-node" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-right" id="id1">
-<img alt="../../../_images/compositing_types_matte_color-key_node.png" src="../../../_images/compositing_types_matte_color-key_node.png" />
-<p class="caption"><span class="caption-text">色彩抠像节点。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<img alt="../../../_images/compositing_node-types_CompositorNodeColorMatte.png" src="../../../_images/compositing_node-types_CompositorNodeColorMatte.png" />
+<p class="caption"><span class="caption-text">色彩抠像节点。</span></p>
 </div>
 <p>色彩抠像节点用指定颜色在输入图像上拾取颜色，创建一个基于此颜色形成的遮罩。</p>
 <div class="section" id="inputs">
 <h2>输入<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>图像</dt><dd><p>标准化图像输入。</p>
-</dd>
+<dl class="docutils">
+<dt>图像</dt>
+<dd>标准化图像输入。</dd>
 </dl>
 </div>
 <div class="section" id="properties">
 <h2>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
-<dl>
-<dt>关键色彩</dt><dd><p>滑块表明了可以扩展的阈值界限。在此节点较高的数值意味着较宽泛的颜色范围被添加到遮罩中。</p>
-<p>色相，饱和度，明度</p>
+<dl class="docutils">
+<dt>关键色彩</dt>
+<dd><p class="first">滑块表明了可以扩展的阈值界限。在此节点较高的数值意味着较宽泛的颜色范围被添加到遮罩中。</p>
+<p class="last">色相，饱和度，明度</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="outputs">
 <h2>输出<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>图像</dt><dd><p>依据选择的颜色生成带alpha通道遮罩的图像。</p>
-</dd>
-<dt>遮片</dt><dd><p>通过操作生成黑白alpha遮罩。</p>
-</dd>
+<dl class="docutils">
+<dt>图像</dt>
+<dd>依据选择的颜色生成带alpha通道遮罩的图像。</dd>
+<dt>遮片</dt>
+<dd>通过操作生成黑白alpha遮罩。</dd>
 </dl>
 </div>
 </div>

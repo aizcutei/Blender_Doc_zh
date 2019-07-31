@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devrender/cycles/baking.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/cycles/baking.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Optimizing Renders" href="optimizations/index.html" />
-    <link rel="prev" title="GPU渲染" href="gpu_rendering.html" /> 
+    <link rel="prev" title="试验特性" href="features.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,48 +113,49 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lighting/index.html">灯光</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee 渲染器</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cycles渲染引擎</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cycles</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="materials/index.html">材质</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lamps.html">灯光</a></li>
-<li class="toctree-l3"><a class="reference internal" href="world.html">世界</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nodes/index.html">节点</a></li>
-<li class="toctree-l3"><a class="reference internal" href="camera.html">Cameras</a></li>
-<li class="toctree-l3"><a class="reference internal" href="features.html">渲染功能特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="settings/index.html">Cycles Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="render_settings/index.html">Render Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="world_settings.html">World Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="object_settings/index.html">Object Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material_settings.html">材质设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="light_settings.html">Light Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gpu_rendering.html">GPU渲染</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features.html">试验特性</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">渲染烘焙</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#options">选项</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#additional-options">附加选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setup">建立</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#settings">设置</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="optimizations/index.html">Optimizing Renders</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">Workbench Engine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cameras.html">相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lights/index.html">Lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials/index.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_nodes/index.html">着色器节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../color_management.html">色彩管理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">工作流</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL渲染</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../audio/index.html">音频渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -188,7 +208,7 @@
         
           <li><a href="../index.html">渲染</a> &raquo;</li>
         
-          <li><a href="index.html">Cycles渲染引擎</a> &raquo;</li>
+          <li><a href="index.html">Cycles</a> &raquo;</li>
         
       <li>渲染烘焙</li>
     
@@ -212,129 +232,110 @@
   <div class="section" id="render-baking">
 <span id="bpy-types-bakesettings"></span><h1>渲染烘焙<a class="headerlink" href="#render-baking" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">面板</dt>
-<dd class="field-odd"><p><span class="menuselection">渲染 ‣ 烘培</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">渲染 ‣ 烘培</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>一般来说，烘焙是预先计算某些东西的行为，以便在以后的流程加速某些其他过程。从头开始渲染需要花费大量时间，具体取决于你的选项。因此，对于选择的物体，Blender允许你提前“烘焙”渲染的某些部分。然后，当你渲染时，使整个场景渲染得更快，因为不必重新计算这些物体的颜色。</p>
-<p>渲染烘焙创建网格物体渲染表面的2D位图图像。可以使用物体的UV坐标将这些图像重新映射到物体上。烘焙是针对每个单独的网格进行的，并且只有在该网格已经UV展开的情况下才能进行烘焙。虽然设置和执行需要时间，但它可以节省渲染时间。如果要渲染长动画，则烘焙所花费的时间可能远远少于渲染长动画的每帧所花费的时间。</p>
-<p>在强光/阴影解决方案中使用渲染烘焙，例如AO或来自平面光源的柔和阴影。如果为主要物体烘焙AO，则不必为完整渲染启用它，从而节省渲染时间。</p>
-<p>使用 <em>完全渲染</em> 或 <em>纹理</em> 创建图像纹理；烘焙的程序纹理可以用作进一步纹理绘制的起点。使用 <em>法线</em> 使低分辨率网格看起来像高分辨率网格。为此，UV会展开高分辨率、精细雕刻的网格并烘焙其法线。保存该法线贴图和 <em>贴图</em> （纹理设置）类似展开的低分辨率网格的UV。低分辨率网格看起来就像高分辨率网格，但面/多边形会少得多。</p>
-<p class="rubric">优点</p>
+<p>Cycles着色器和灯光照明可以烘焙到图像纹理。这有几个不同的用途，最常见的是：</p>
 <ul class="simple">
-<li><p>可以显著减少渲染时间。</p></li>
-<li><p>纹理绘制更容易。</p></li>
-<li><p>减少多边形数量。</p></li>
-<li><p>重复渲染速度更快，节省了时间。</p></li>
+<li>烘焙纹理,如基础颜色或法线贴图,用于导出到游戏引擎。</li>
+<li>烘焙环境光遮蔽或程序纹理，作为纹理绘制或进一步编辑的基础。</li>
+<li>创建光照贴图以提供全局照明或加快游戏中的渲染速度。</li>
 </ul>
-<p class="rubric">缺点</p>
-<ul class="simple">
-<li><p>物体必须展开UV。</p></li>
-<li><p>如果阴影被烘焙，则灯光和物体不能相对于彼此移动。</p></li>
-<li><p>大纹理（例如4096×4096）可能会占用大量内存，并且速度与渲染解决方案一样慢。</p></li>
-<li><p>必须花费人力（劳动力）时间来展开UV和烘焙并保存文件并将纹理应用于通道。</p></li>
-</ul>
+<div class="section" id="setup">
+<h2>建立<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>烘焙需要模型具有UV贴图,以及具有烘焙的图像的图像纹理节点。活动(最后选择)图像纹理节点作为烘焙目标。</p>
+<p>在强光/阴影解决方案中使用渲染烘焙，例如环境光遮蔽或来自平面光源的柔和阴影。如果为主要物体烘焙环境光遮蔽，则不必为完整渲染启用它，从而节省渲染时间。</p>
 <p>在Cycles中使用渲染设置（采样、反弹、……）进行烘焙。因此烘焙纹理的品质将会和场景的渲染一致。</p>
-<p>烘焙发生在物体材质的各自活动纹理上。活动纹理是指材质节点中最后选择的图像纹理。这意味着活动的物体必须要有一个材质（或是选择的物体，当不烘焙时“所选物体-&gt;活动物体”），而且材质中至少要有一个图像纹理节点，以用于烘焙图像。需要注意的是，该节点无需连接到其他的节点。活动的纹理只是做为一个常规的图像使用，好投射绘制以及查看预览。以此以来，烘焙完成后，你就可以在纹理模式下直接预览到烘焙的结果。</p>
-<div class="section" id="options">
-<h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id1">
-<img alt="../../_images/render_cycles_baking_ao.png" src="../../_images/render_cycles_baking_ao.png" />
-<p class="caption"><span class="caption-text">环境光遮蔽通道。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="bake-mode">
-<h3>烘焙模式<a class="headerlink" href="#bake-mode" title="Permalink to this headline">¶</a></h3>
-<dl>
-<dt>合成结果</dt><dd><p>烘焙SSS之外的所有材质、纹理和灯光，特殊效果。</p>
-<div class="figure align-center" id="id2">
-<img alt="../../_images/render_cycles_baking_combined.png" src="../../_images/render_cycles_baking_combined.png" />
-<p class="caption"><span class="caption-text">组合通道选项。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-<p>通过相应组合可以单独切换以形成最终地图。</p>
+<div class="section" id="settings">
+<h2>设置<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bake-types">
+<h3>烘焙类型<a class="headerlink" href="#bake-types" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>合成结果</dt>
+<dd><p class="first">烘焙SSS之外的所有材质、纹理和灯光，特殊效果。</p>
+<p class="last">通过相应组合可以单独切换以形成最终地图。</p>
 </dd>
-<dt>环境光遮蔽</dt><dd><p>烘焙世界面板中指定的环境光遮蔽，忽略场景中的其他灯光。</p>
-<div class="figure align-center">
-<img alt="../../_images/render_blender-render_bake_ambient-occlusion.png" src="../../_images/render_blender-render_bake_ambient-occlusion.png" />
-</div>
-<p>环境光遮蔽。</p>
-</dd>
-<dt>阴影</dt><dd><p>烘焙阴影及灯光。</p>
-</dd>
-<dt>法线</dt><dd><p>烘焙不同空间的法线。</p>
-<div class="figure align-center" id="id3">
-<img alt="../../_images/render_cycles_baking_normal.png" src="../../_images/render_cycles_baking_normal.png" />
-<p class="caption"><span class="caption-text">法线通道设置。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
-<dl>
-<dt>法线空间</dt><dd><p>法线可以在不同的空间中烘培：</p>
-<dl class="simple">
-<dt>对象空间</dt><dd><p>对象坐标中的法线，与对象变换无关，但取决于变形。</p>
-</dd>
-<dt>切线空间</dt><dd><p>切线空间坐标中的法线，与对象转换和变形无关。这是默认设置，在大多数情况下都是正确的选择，因为法线贴图也可以用于动画对象。</p>
-</dd>
+<dt>环境光遮蔽</dt>
+<dd>烘焙世界面板中指定的环境光遮蔽，忽略场景中的其他灯光。</dd>
+<dt>阴影</dt>
+<dd>烘焙阴影及灯光。</dd>
+<dt>法线</dt>
+<dd><p class="first">烘焙不同空间的法线。</p>
+<dl class="docutils">
+<dt>法线空间</dt>
+<dd><p class="first">法线可以在不同的空间中烘培：</p>
+<dl class="last docutils">
+<dt>对象空间</dt>
+<dd>对象坐标中的法线，与对象变换无关，但取决于变形。</dd>
+<dt>切线空间</dt>
+<dd>切线空间坐标中的法线，与对象转换和变形无关。这是默认设置，在大多数情况下都是正确的选择，因为法线贴图也可以用于动画对象。</dd>
 </dl>
 </dd>
-<dt>Swizzle</dt><dd><p>轴要烘培成红色，绿色和蓝色的通道。</p>
-</dd>
+<dt>Swizzle</dt>
+<dd>轴要烘培成红色，绿色和蓝色的通道。</dd>
 </dl>
-<div class="figure align-center" id="id4">
-<img alt="../../_images/render_blender-render_bake_normals.png" src="../../_images/render_blender-render_bake_normals.png" />
-<p class="caption"><span class="caption-text">法线。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
-</div>
-<p>在材质中你也可以选择相同的空间坐标，也就是图像纹理选项中，法线映射设置的下面。为了得到的正确的结果，这里的设置应该和烘焙中的设置相同。</p>
+<p class="last">在材质中你也可以选择相同的空间坐标，也就是图像纹理选项中， <em>法线贴图</em> 设置的下面。为了得到的正确的结果，这里的设置应该和烘焙中的设置相同。</p>
 </dd>
-<dt>UV</dt><dd><p>仅烘焙材质的颜色和纹理，不含有着色信息。</p>
-</dd>
-<dt>自发光</dt><dd><p>烘焙自发光，或是材质的辉光颜色。</p>
-</dd>
-<dt>环境光</dt><dd><p>烘焙从物体中心所观察到的环境。</p>
-</dd>
-<dt>漫射，光泽，传递，表面细分</dt><dd><p>烘培材质的漫射，光泽，传递和表面细分的通道。</p>
-<div class="figure align-center" id="id5">
-<img alt="../../_images/render_cycles_baking_diffuse.png" src="../../_images/render_cycles_baking_diffuse.png" />
-<p class="caption"><span class="caption-text">漫射传递选项。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</div>
-<ul class="simple">
-<li><p>如果只选择了颜色，则将获得颜色通道，该颜色是曲面的属性，与采样细化无关。</p></li>
-<li><p>如果未选择颜色，则会以灰度方式获得直接或间接贡献。</p></li>
-<li><p>如果选择了颜色和直接或间接的颜色，则可以获得直接和或间接贡献的颜色。</p></li>
+<dt>UV</dt>
+<dd>仅烘焙材质的颜色和纹理，不含有着色信息。</dd>
+<dt>自发光</dt>
+<dd>烘焙自发光，或是材质的辉光颜色。</dd>
+<dt>环境光</dt>
+<dd>烘焙从物体中心所观察到的环境。</dd>
+<dt>漫射，光泽，传递，表面细分</dt>
+<dd><p class="first">烘培材质的漫射，光泽，传递和表面细分的通道。</p>
+<ul class="last simple">
+<li>如果只选择了颜色，则将获得颜色通道，该颜色是曲面的属性，与采样细化无关。</li>
+<li>如果未选择颜色，则会以灰度方式获得直接或间接贡献。</li>
+<li>如果选择了颜色和直接或间接的颜色，则可以获得直接和或间接贡献的颜色。</li>
 </ul>
 </dd>
 </dl>
 </div>
-</div>
-<div class="section" id="additional-options">
-<h2>附加选项<a class="headerlink" href="#additional-options" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>边距</dt><dd><p>烘焙的结果将会超出每一个UV块的边界，以此来柔和纹理中的接缝。</p>
-</dd>
-<dt>清空</dt><dd><p>选择该项时，在渲染烘焙前会先清空图像。</p>
-</dd>
-<dt>所选物体&gt;主控物体</dt><dd><p>烘焙所选物体的着色到活动物体。光线会从外面的低模物体投射到内部的高模物体。倘若高模物体没能被低模物体完全包裹，你可以通过调节光线距离或是罩体挤出（取决于你是否使用罩体）来调节光线的起点。对于更多的控制，你可以通过指定罩体物体来实现。</p>
-</dd>
+<div class="section" id="selected-to-active">
+<h3>已选定为活动物体<a class="headerlink" href="#selected-to-active" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>选择为活动物体</dt>
+<dd>烘焙所选物体的着色到活动物体。光线会从外面的低模物体投射到内部的高模物体。倘若高模物体没能被低模物体完全包裹，你可以通过调节 <em>光线距离</em> 或是 <em>罩体挤出</em> （取决于你是否使用罩体）来调节光线的起点。对于更多的控制，你可以通过指定 <em>罩体物体</em> 来实现。</dd>
 </dl>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="first admonition-title">Note</p>
 <p>内存用量</p>
-<p>每一个用于烘培的物体都会占用一定的CPU和内存，为了避免内存不足而造成的崩溃，在烘焙之前，可以先将高模物体进行合并。渲染中的分块设置，也会影响到内存的使用。比如分的块越大，CPU占用的越少，而内存则会占用的更多（不管是CPU，还是GPU）。</p>
+<p class="last">每一个用于烘培的物体都会占用一定的CPU和内存，为了避免内存不足而造成的崩溃，在烘焙之前，可以先将高模物体进行合并。渲染中的分块设置，也会影响到内存的使用。比如分的块越大，CPU占用的越少，而内存则会占用的更多（不管是CPU，还是GPU）。</p>
 </div>
-<dl>
-<dt>罩体</dt><dd><p>光线会从罩体投射到活动的物体，罩体是指从低模通过手动（指定要用的物体）或自动（调整光线距离）创建出来的膨胀版本。如果不使用罩体，光线会依循网格的法线，这在边线的地方会产生一些小的瑕疵，为了避免这些瑕疵，可以围着边线添加额外的循环边，在烘焙平面时，这或许是一个不错的方法。</p>
-</dd>
-<dt>光线距离</dt><dd><p>在使用所选物体&gt;活动物体时，控制光线向内投射的距离。该项仅在不使用罩体时可用。</p>
-</dd>
-<dt>罩体偏移</dt><dd><p>在使用 <em>所选物体-&gt;活动物体</em> 时，控制光线向内投射的距离。向内投射的光线会由不含有边线分割修改器版本的活动物体发出。当然强制分割（如应用掉边线分割修改器）也不行。因为这些都会导致边线处的法线变得不为平滑。</p>
-</dd>
-<dt>罩体</dt><dd><p>指定作为 <em>罩体</em> 的物体，以此替代活动物体的罩体挤出。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>当挤出低模不能获得良好的结果时，你可以创建一个低模的副本，并将其做成 <em>罩体</em> 。而且两者要有相同的 <a class="reference internal" href="../../glossary/index.html#term-topology"><span class="xref std std-term">拓扑</span></a> 才行（相同的面数和面顺序）。</p>
+<dl class="docutils">
+<dt>罩体</dt>
+<dd>光线会从罩体投射到活动的物体，罩体是指从低模通过手动（指定要用的物体）或自动（调整光线距离）创建出来的膨胀版本。如果不使用罩体，光线会依循网格的法线，这在边线的地方会产生一些小的瑕疵，为了避免这些瑕疵，可以围着边线添加额外的循环边，在烘焙平面时，这或许是一个不错的方法。</dd>
+<dt>光线距离</dt>
+<dd>在使用所选物体&gt;活动物体时，控制光线向内投射的距离。该项仅在不使用 <em>罩体</em> 时可用。</dd>
+<dt>罩体偏移</dt>
+<dd>在使用 <em>所选物体-&gt;活动物体</em> 和 <em>罩体</em> 来控制光线向内投射的距离时。向内投射的光线会由不含有边线分割修改器版本的活动物体发出。当然强制分割（如应用掉边线分割修改器）也不行。因为这些都会导致边线处的法线变得不为平滑。</dd>
+<dt>罩体</dt>
+<dd><p class="first">指定作为 <em>罩体</em> 的物体，以此替代活动物体的罩体挤出。</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">当挤出低模不能获得良好的结果时，你可以创建一个低模的副本，并将其做成 <em>罩体</em> 。而且两者要有相同的 <a class="reference internal" href="../../glossary/index.html#term-topology"><span class="xref std std-term">拓扑</span></a> 才行（相同的面数和面顺序）。</p>
 </div>
 </dd>
 </dl>
+</div>
+<div class="section" id="output">
+<h3>输出<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>边距</dt>
+<dd>烘焙的结果将会超出每一个UV块的边界，以此来柔和纹理中的接缝。</dd>
+<dt>清空</dt>
+<dd>选择该项时，在渲染烘焙前会先清空图像。</dd>
+</dl>
+</div>
 </div>
 </div>
 
@@ -349,7 +350,7 @@
         <a href="optimizations/index.html" class="btn btn-neutral float-right" title="Optimizing Renders" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="gpu_rendering.html" class="btn btn-neutral float-left" title="GPU渲染" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="features.html" class="btn btn-neutral float-left" title="试验特性" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

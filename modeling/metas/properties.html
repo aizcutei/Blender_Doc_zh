@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/metas/properties.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/metas/properties.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="文本物体" href="../texts/index.html" />
@@ -94,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
@@ -102,12 +121,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">曲面</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">融球</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="primitives.html">基本体</a></li>
 <li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">属性</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#resolution">分辨率</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#threshold-influence">阈值(影响)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#influence-threshold">Influence Threshold</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#update">更新</a></li>
 </ul>
 </li>
@@ -118,16 +138,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -204,31 +225,35 @@
   <div class="section" id="properties">
 <h1>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>物体或编辑模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">属性编辑器 ‣ 融球</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">Object and Edit Mode</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">属性编辑器 ‣ 融球</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>所有场景中的元物体都与彼此相互作用. 在 <em>融球</em> 部分的选项适用于所有元物体. 在 <em>编辑模式</em> 中, <em>活动元素</em> 面板在编辑个别融球(元)元素时出现.</p>
-<table class="docutils align-center">
+<p>All <em>Meta</em> objects of a same <a class="reference internal" href="editing.html#meta-ball-object-families"><span class="std std-ref">family</span></a> in a scene interact with each other.
+The settings in the <em>Metaball</em> section apply to all meta objects of the active family.
+In Edit Mode, the <em>Active Element</em> panel appears for <a class="reference internal" href="editing.html#meta-ball-editing"><span class="std std-ref">editing</span></a> individual meta elements.</p>
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
 <img alt="../../_images/modeling_metas_properties_metaball-panel.png" src="../../_images/modeling_metas_properties_metaball-panel.png" />
-<p class="caption"><span class="caption-text">全局元物体属性</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Family meta properties.</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id2">
+<td><div class="first last figure" id="id2">
 <img alt="../../_images/modeling_metas_properties_active-element-panel.png" src="../../_images/modeling_metas_properties_active-element-panel.png" />
-<p class="caption"><span class="caption-text">个别元物体属性</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Individual meta properties.</span></p>
 </div>
 </td>
 </tr>
@@ -236,28 +261,32 @@
 </table>
 <div class="section" id="resolution">
 <h2>分辨率<a class="headerlink" href="#resolution" title="Permalink to this headline">¶</a></h2>
-<p><em>分辨率</em> 控制由元物体生成的网格的分辨率.</p>
-<dl class="simple">
-<dt>视图</dt><dd><p>所生成网格的3D视图的解析度范围从(0.05至1.0)(最平滑的到最粗糙的)。</p>
-</dd>
-<dt>渲染</dt><dd><p>所生成网格的渲染后解析度范围从(0.05至1.0)(最平滑的到最粗糙的)。</p>
-</dd>
+<p>The <em>Resolution</em> controls the resolution of the resultant mesh as generated by the <em>Meta</em> objects.</p>
+<dl class="docutils">
+<dt>Viewport</dt>
+<dd>The 3D Viewport resolution of the generated mesh; finest to coarsest.</dd>
+<dt>渲染</dt>
+<dd>The rendered resolution of the generated mesh; finest to coarsest.</dd>
 </dl>
-<p>一种看到的底层数学结构的方法是，降低 <em>分辨率</em>，增加 <em>阈值</em> 和设置 <em>刚度</em> (见下文)为*阈值*之上的一小点。图. <a class="reference internal" href="#fig-meta-intro-underlying"><span class="std std-ref">基础结构</span></a> 是一个 <em>元立方体</em> 在上述值设为: <em>分辨率</em> 为 0.410, <em>阈值</em> 为 5.0 以及 <em>刚度</em> 为 5.01(阈值之上一小点)时的情况.</p>
-<table class="docutils align-center">
+<p>One way to see the underlying mathematical structure is to lower the <em>Resolution</em>,
+increase the <em>Threshold</em> and set the <em>Stiffness</em> (see below)
+a fraction above the <em>Threshold</em>. Fig. <a class="reference internal" href="#fig-meta-intro-underlying"><span class="std std-ref">基础结构</span></a> is a meta cube
+with the above mentioned configuration applied as follows:
+<em>Resolution</em> of 0.410, <em>Threshold</em> of 5.0 and <em>Stiffness</em> a fraction above at 5.01.</p>
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id3">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id3">
 <span id="fig-meta-intro-underlying"></span><img alt="../../_images/modeling_metas_properties_underlying-structure.png" src="../../_images/modeling_metas_properties_underlying-structure.png" />
-<p class="caption"><span class="caption-text">基础结构</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">基础结构</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id4">
+<td><div class="first last figure" id="id4">
 <img alt="../../_images/modeling_metas_properties_underlying-structure-shape.png" src="../../_images/modeling_metas_properties_underlying-structure-shape.png" />
-<p class="caption"><span class="caption-text">元立方体形状.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">元立方体形状.</span></p>
 </div>
 </td>
 </tr>
@@ -265,29 +294,27 @@
 </table>
 <p>你可以清楚地看到的基本立方结构，这设置了元立方体为它这种形状。</p>
 </div>
-<div class="section" id="threshold-influence">
-<h2>阈值(影响)<a class="headerlink" href="#threshold-influence" title="Permalink to this headline">¶</a></h2>
-<p><em>阈值</em> 定义了元物体的表面如何影响其他的元物体. 它控制计算其表面时的 <em>场级别</em>.。这个设置是对于一组元物体全局有效的. 随着阈值增加,每一个元物体对其他元物体的影响也随之增加.</p>
-<p>有两种影响的类型:<em>正向*和*负向</em>. 类型可以在*编辑模式*的*活动元素*面板中使用*负向*按钮切换开启或关闭你可以认为对于网格之间,*正向*是吸引,*负向*是排斥. 一个负元物体会推开或排斥正元物体的网格.</p>
-<div class="figure align-center" id="id5">
-<span id="fig-meta-intro-positive"></span><a class="reference internal image-reference" href="../../_images/modeling_metas_editing_family.png"><img alt="../../_images/modeling_metas_editing_family.png" src="../../_images/modeling_metas_editing_family.png" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-text">三个元求之间的正向影响.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</div>
-<p><em>正</em> 影响被定义为吸引,这意味着网格会朝着彼此的*影响环*相交方向延伸. 图. <a class="reference internal" href="#fig-meta-intro-positive"><span class="std std-ref">三个元求之间的正向影响.</span></a> 展示了三个元球的 <em>影响环</em> 由正向影响相交.</p>
-<p>注意网格是如何朝着对方推过去的. 白色区域环展示了绿色的影响环相交情况.</p>
+<div class="section" id="influence-threshold">
+<h2>Influence Threshold<a class="headerlink" href="#influence-threshold" title="Permalink to this headline">¶</a></h2>
+<p><em>Influence Threshold</em> defines how much a meta's surface &quot;influences&quot; other metas.
+It controls the <em>field level</em> at which the surface is computed.
+The setting is global to a group of <em>Meta</em> objects.
+As the threshold increases, so does the influence that each meta has on each other.</p>
+<p>There are two types of <a class="reference internal" href="editing.html#meta-ball-editing-negative-influence"><span class="std std-ref">influence</span></a>: <em>positive</em> or <em>negative</em>.</p>
 </div>
 <div class="section" id="update">
 <h2>更新<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h2>
-<p>当变换元物体(抓取/移动,缩放,等)时,你有四个可视化模式,他们唯一*融球*面板的*更新*按钮组里.</p>
-<dl class="simple">
-<dt>总是</dt><dd><p>在变换时完全绘制元物体.</p>
-</dd>
-<dt>一半</dt><dd><p>在变换时,绘制元物体的线型分辨率.</p>
-</dd>
-<dt>快速</dt><dd><p>在变换时,不显示元物体网格.</p>
-</dd>
-<dt>从不</dt><dd><p>永不现实元物体网格(不推荐,由于元物体会只在渲染时可见).</p>
-</dd>
+<p>While transforming metas (move, scale, etc.), you have four &quot;modes&quot; of visualization,
+located in the <em>Update</em> buttons group of the <em>Metaball</em> panel:</p>
+<dl class="docutils">
+<dt>总是</dt>
+<dd>fully display the meta during transformations.</dd>
+<dt>一半</dt>
+<dd>During transformations, display the meta at half its <em>Wiresize</em> resolution.</dd>
+<dt>快速</dt>
+<dd>Do not display meta during transformations.</dd>
+<dt>从不</dt>
+<dd>永不现实元物体网格(不推荐,由于元物体会只在渲染时可见).</dd>
 </dl>
 <p>这应该会有帮助,如果你遇到的困难(元物体是相当密集的计算...)，但对于现代计算机，这不应该发生，除非你使用很多元物体，或非常高的分辨率...</p>
 </div>

@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/empties.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/empties.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="修改器" href="modifiers/index.html" />
@@ -94,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="meshes/index.html">网格</a></li>
@@ -111,16 +130,17 @@
 <li class="toctree-l2"><a class="reference internal" href="modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
 </ul>
@@ -197,42 +217,120 @@
 <p>“空物体”是一个没有附加任何几何体的单个坐标点。因为空物体没有体积和曲面，所以无法渲染。尽管如此，它却有可以用作许多用途的手柄。</p>
 <div class="section" id="selecting-editing">
 <h2>选择 &amp; 编辑<a class="headerlink" href="#selecting-editing" title="Permalink to this headline">¶</a></h2>
-<p>空物体只能在 <em>物体模式</em> 下进行编辑，包括修改其变换和父子属性。其他工具请参考 <a class="reference internal" href="../editors/3dview/object/index.html"><span class="doc">物体章节</span></a>。</p>
-<dl class="simple">
-<dt>应用缩放 <kbd class="kbd docutils literal notranslate">Ctrl-A</kbd></dt><dd><p>虽然空物体完全没有附加任何物体数据到其上的，可用于支持“真实”应用缩放（即非均匀缩放），它们具有显示的大小值，用于控制空物体显示的大小（缩放之前）。这可以通过在最大尺寸的轴上获取缩放因子，并将其与现有的空物体显示大小相结合，以在该轴上保持正确的尺寸。</p>
-</dd>
+<p>An Empty can only be edited in <em>Object Mode</em>, which includes its transformation and parenting properties.
+For other tools see the <a class="reference internal" href="../scene_layout/object/index.html"><span class="doc">Object section</span></a>.</p>
+<dl class="docutils">
+<dt>应用缩放 <kbd class="kbd docutils literal notranslate">Ctrl-A</kbd></dt>
+<dd>While Empties don't exactly have any object data attached to them which can be used for supporting
+&quot;true&quot; apply scale (i.e. with non-uniform scaling), they do have <em>Display Size</em> which controls how
+large the empties are displayed (before scaling). This works by taking the scale factor on the most-scaled axis,
+and combines this with the existing empty <em>Display Size</em> to maintain the correct dimensions on that axis.</dd>
 </dl>
 </div>
 <div class="section" id="properties">
 <h2>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-right" id="id1">
 <img alt="../_images/modeling_empties_draw-types.png" src="../_images/modeling_empties_draw-types.png" />
-<p class="caption"><span class="caption-text">空物体的显示类型。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Empty Display Types.</span></p>
 </div>
-<dl>
-<dt>显示</dt><dd><dl>
-<dt>纯轴</dt><dd><p>显示为六行，分别指向+ X，-X，+ Y，-Y，+ Z和-Z轴方向。</p>
+<dl class="docutils">
+<dt>显示</dt>
+<dd><dl class="first last docutils">
+<dt>纯轴</dt>
+<dd>Displays as six lines, initially with one pointing in each of the +X, -X, +Y, -Y, +Z, and -Z axis directions.</dd>
+<dt>Arrows 箭头</dt>
+<dd>Displays as arrows, initially pointing in the positive X, Y, and Z axis directions, each with a label.</dd>
+<dt>Single Arrow 单向箭头</dt>
+<dd>Displays as a single arrow, initially pointing in the +Z axis direction.</dd>
+<dt>Circle 圆形</dt>
+<dd>Displays as a circle initially in the XZ plane.</dd>
+<dt>Cube 立方体</dt>
+<dd>Displays as a cube, initially aligned to the XYZ axes.</dd>
+<dt>Sphere 球形</dt>
+<dd>Displays as an implied sphere defined by three circles.
+Initially, the circles are aligned, one each, to the X, Y, and Z axes.</dd>
+<dt>Cone 锥形</dt>
+<dd>Displays as a cone, initially pointing in the +Y axis direction.</dd>
+<dt>图像</dt>
+<dd><p class="first">Empties can display images. This can be used to create reference images,
+including blueprints or character sheets to model from.
+The image is displayed regardless of the 3D display mode.</p>
+<p>Empty Displays settings can be accessed from <span class="menuselection">Properties ‣ Object Data ‣ Empty</span> panel.</p>
+<dl class="last docutils">
+<dt>Use Alpha</dt>
+<dd>Use alpha blending instead of alpha-test
+<em>(blends with the background but can have depth sorting artifacts)</em>.</dd>
+<dt>Transparency</dt>
+<dd>Fade the images transparency
+<em>(uses the Object Color's Alpha component)</em>.</dd>
+<dt>Offset X, Y</dt>
+<dd><p class="first">Offset the image origin
+<em>(where 1.0 represents the width/height of the image)</em>.</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">X=0.5, Y=0.5:</th><td class="field-body">Object origin at image center.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">X=0.0, Y=0.0:</th><td class="field-body">Object origin at image bottom, left.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">X=1.0, Y=1.0:</th><td class="field-body">Object origin at image top, right.</td>
+</tr>
+</tbody>
+</table>
 </dd>
-<dt>Arrows 箭头</dt><dd><p>显示（绘制）为箭头，最初指向X，Y和Z轴正的方向，每个都有一个标签。</p>
-</dd>
-<dt>Single Arrow 单向箭头</dt><dd><p>显示（绘制)为单箭头，最初指向Z轴正方向。</p>
-</dd>
-<dt>Circle 圆形</dt><dd><p>在XZ平面上最初显示为一个圆圈。</p>
-</dd>
-<dt>Cube 立方体</dt><dd><p>显示（绘制）为立方体，最初与XYZ轴对齐。</p>
-</dd>
-<dt>Sphere 球形</dt><dd><p>显示（绘制）为由三个圆圈定义的球体。最初，圆圈分别与X，Y和Z轴对齐。</p>
-</dd>
-<dt>Cone 锥形</dt><dd><p>显示（绘制）为锥体，最初指向Y轴正方向。</p>
-</dd>
-<dt>图像</dt><dd><p>空物体可以显示图像。 这可以用于创建参考图像，包括从其中建模的蓝图或角色表，而不是使用背景图像。无论3D显示模式如何，都会显示图像。设置与 <a class="reference internal" href="../editors/3dview/properties/background_images.html"><span class="doc">背景图像设置</span></a> 内容相同。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>虽然可以使用alpha图像，但是有一个已知的物体绘制顺序的限制，其中当未选中时，alpha图像不会总是显示（绘制）在其他物体之上。</p>
+<dt>Depth</dt>
+<dd><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Default:</th><td class="field-body">Use normal depth behavior.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Front:</th><td class="field-body">Always display on top of other objects.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Back:</th><td class="field-body">Always display behind of other objects.</td>
+</tr>
+</tbody>
+</table>
+<div class="last admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">When using the image as a reference for modeling,
+it can be useful to set the depth to <em>Front</em>, with a low <em>Transparency</em>.</p>
 </div>
 </dd>
-<dt>尺寸</dt><dd><p>控制空物体可视化的大小。这不会改变它的缩放，而是作为一个偏移量起作用。</p>
+<dt>Side</dt>
+<dd><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Both:</th><td class="field-body">Display both the front &amp; back of the empty.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Front:</th><td class="field-body">Only display the front of the image.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Back:</th><td class="field-body">Only display the back of the image.</td>
+</tr>
+</tbody>
+</table>
+<div class="last admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">This is useful if you're using an image as a reference where you have photos from both the front and back,
+so two empty images can be set only to show when viewed from the correct side.</p>
+</div>
 </dd>
+<dt>Display Orthographic</dt>
+<dd>Show in orthographic view.</dd>
+<dt>Display Perspective</dt>
+<dd><p class="first">Show in perspective view.</p>
+<div class="last admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">It's often useful to disable this so reference images don't
+<em>get in the way</em> when viewing a model.</p>
+</div>
+</dd>
+</dl>
+</dd>
+<dt>尺寸</dt>
+<dd>控制空物体可视化的大小。这不会改变它的缩放，而是作为一个偏移量起作用。</dd>
 </dl>
 </dd>
 </dl>
@@ -246,20 +344,20 @@
 <p>空物体的也可以用作正常的目标，或骨骼约束。这给了用户更多的控制权; 例如，可以容易地设置绑定以使照相机能够使用 <em>标准跟随（Track to）</em> 约束指向空物体。</p>
 <p class="rubric">Array offset 阵列偏移</p>
 <p>可以使用空物体的方法来偏移阵列修改器，这意味着只需移动单个物体就可以实现复杂的变形。</p>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id2">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id2">
 <a class="reference internal image-reference" href="../_images/modeling_modifiers_generate_array_example-fractal-1.jpg"><img alt="../_images/modeling_modifiers_generate_array_example-fractal-1.jpg" src="../_images/modeling_modifiers_generate_array_example-fractal-1.jpg" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">用于控制阵列的空物体示例。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">用于控制阵列的空物体示例。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id3">
+<td><div class="first last figure" id="id3">
 <a class="reference internal image-reference" href="../_images/modeling_empties_example-track-to-simple.png"><img alt="../_images/modeling_empties_example-track-to-simple.png" src="../_images/modeling_empties_example-track-to-simple.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">空物体控制标准跟随（Track to）约束示例。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">空物体控制标准跟随（Track to）约束示例。</span></p>
 </div>
 </td>
 </tr>
@@ -267,10 +365,10 @@
 </table>
 <p class="rubric">其他常见用途：</p>
 <ul class="simple">
-<li><p>占位符</p></li>
-<li><p>绑定控制</p></li>
-<li><p>景深(DOF)距离</p></li>
-<li><p>参考图片</p></li>
+<li>占位符</li>
+<li>绑定控制</li>
+<li>景深(DOF)距离</li>
+<li>参考图片</li>
 </ul>
 </div>
 </div>

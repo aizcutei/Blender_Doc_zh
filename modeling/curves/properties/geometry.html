@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/curves/properties/geometry.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/curves/properties/geometry.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="曲线显示" href="../curve_display.html" />
-    <link rel="prev" title="物体数据" href="data.html" /> 
+    <link rel="next" title="Path Animation" href="path_animation.html" />
+    <link rel="prev" title="Shape" href="shape.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,20 +113,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">曲线</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../primitives.html">基本体</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../selecting.html">选择</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../editing/index.html">编辑</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">属性</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="data.html">物体数据</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shape.html">Shape</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">几何</a></li>
+<li class="toctree-l4"><a class="reference internal" href="path_animation.html">Path Animation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="active_spline.html">Active Spline</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../curve_display.html">曲线显示</a></li>
@@ -120,16 +141,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -207,240 +229,234 @@
             
   <div class="section" id="geometry">
 <h1>几何<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-center" id="id2">
+<div class="figure align-center" id="id1">
 <img alt="../../../_images/modeling_curves_properties_geometry_panel.png" src="../../../_images/modeling_curves_properties_geometry_panel.png" />
-<p class="caption"><span class="caption-text">曲线几何面板。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Geometry panel.</span></p>
 </div>
-<div class="section" id="modification">
-<h2>修改<a class="headerlink" href="#modification" title="Permalink to this headline">¶</a></h2>
-<dl>
-<dt>偏移量</dt><dd><p>将挤出结果沿平行于法向方向移动。</p>
-<div class="figure align-center" id="id3">
-<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_extrude-offset.png"><img alt="../../../_images/modeling_curves_properties_geometry_extrude-offset.png" src="../../../_images/modeling_curves_properties_geometry_extrude-offset.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">偏移量 -1, 挤出 0.5, 倒角深度 0.25, 倒角分辨率 10 的贝塞尔圆。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<dl class="docutils">
+<dt>偏移量</dt>
+<dd><p class="first">将挤出结果沿平行于法向方向移动。</p>
+<div class="last figure" id="id2">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_extrude-offset.png"><img alt="../../../_images/modeling_curves_properties_geometry_extrude-offset.png" src="../../../_images/modeling_curves_properties_geometry_extrude-offset.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-text">偏移量 -1, 挤出 0.5, 倒角深度 0.25, 倒角分辨率 10 的贝塞尔圆。</span></p>
 </div>
 </dd>
-<dt>挤出</dt><dd><p>将沿自身正负 Z 轴挤出曲线。通过赋予其高度, 将一维曲线变成二维曲线。挤出方向垂直于曲线法向，双向同时挤出。</p>
-<table class="docutils align-center">
+<dt>挤出</dt>
+<dd><p class="first">将沿自身正负 Z 轴挤出曲线。通过赋予其高度, 将一维曲线变成二维曲线。挤出方向垂直于曲线法向，双向同时挤出。</p>
+<table border="1" class="last docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id4">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id3">
 <a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_extrude-bezier-circle.png"><img alt="../../../_images/modeling_curves_properties_geometry_extrude-bezier-circle.png" src="../../../_images/modeling_curves_properties_geometry_extrude-bezier-circle.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">挤出0.0的贝塞尔圆 (编辑模式).</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">挤出0.0的贝塞尔圆 (编辑模式).</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id5">
+<td><div class="first last figure" id="id4">
 <a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_extrude-after.png"><img alt="../../../_images/modeling_curves_properties_geometry_extrude-after.png" src="../../../_images/modeling_curves_properties_geometry_extrude-after.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">挤出0.5 (物体模式).</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">挤出0.5 (物体模式).</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 </dd>
+<dt>锥化物体</dt>
+<dd><p class="first">锥化曲线沿自身X 轴进行估算, 使用自身Y 轴进行宽度控制。还要注意的是: 锥化曲线会使其朝向一端逐渐变细。也可以通过移动/缩放/旋转锥化物体的控制点来改变被锥化物体的锥化比例。锥度对象只能是另一条曲线。编辑锥化物体的的控制柄和控制点将导致原始物体形状发生变化。</p>
+<p>In order for this to work:</p>
+<ul class="last simple">
+<li>它必须是一条 <em>开放曲线</em>。</li>
+<li>锥化独立应用于被锥化物体的所有曲线。</li>
+<li>只计算 <em>锥化物体</em> 中的第一条曲线, 即使锥化物体包含多条断开的线段。</li>
+<li>缩放从左侧的第一个控制点开始, 并沿曲线向右侧的最后一个控制点移动。</li>
+<li>Negative scaling, (e.g. negative local Y on the taper curve) is possible as well.
+However, rendering artifacts may appear.</li>
+<li>可能需要提高曲线分辨率来查看锥化的更多细节。</li>
+<li>对于闭合曲线， <em>锥化物体</em> 中的锥化曲线会沿整个曲线 (绕物体一周)作用，而不仅仅是物体的长度范围，并改变挤出深度。在这些情况下, 需要 <em>锥化物体</em> 的锥化曲线两端的相对高度相同, 以便在闭合点 (曲线两端连接的位置) 实现平滑过渡。</li>
+</ul>
+</dd>
+<dt>映射锥化</dt>
+<dd>对于使用锥化物体并修改了 <em>倒角起点/终点系数</em> 的曲线， <em>映射锥化</em> 用于使锥化仅作用于曲线的被倒角范围 (而非整条曲线) 。</dd>
 </dl>
-<div class="section" id="examples">
-<h3>例子<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
-<p>下面是开放曲线、闭合曲线和3D曲线挤出的例子:</p>
-<dl>
-<dt>开放的2D曲线</dt><dd><p>挤出将沿曲线形状创建一面 &quot;墙&quot; 或一条 &quot;带子&quot;。如果使用了 <em>倒角深度</em> , 则墙将变得类似滑梯或者槽子。如果法线朝向错误，可以按照 <a class="reference internal" href="../editing/introduction.html#curve-switch-direction"><span class="std std-ref">这里</span></a> 的操作切换方向。</p>
-<div class="figure align-center" id="id6">
-<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_extrude-open-curve.png"><img alt="../../../_images/modeling_curves_properties_geometry_extrude-open-curve.png" src="../../../_images/modeling_curves_properties_geometry_extrude-open-curve.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text"><kbd class="kbd docutils literal notranslate">Alt-C</kbd> 打开2D 曲线, 填充设为无, 零偏移量, 挤出0.5, 倒角深度0.25, 倒角分辨率10。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
-</div>
-</dd>
-<dt>闭合的2D曲线</dt><dd><p>这可能是最有用的情形了, 因为这可以迅速创建一个体, (默认情况下) 两个平坦且平行的曲面填充在挤出的 &quot;墙&quot; 两侧。可以通过选择填充模式为两者、前、后或无，来删除其中的一个或两个都删除 。</p>
-<p>这时如果使用倒角深度选项，将总是创建90度倒角.</p>
-<div class="figure align-center" id="id7">
-<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_extrude-closed-curve.png"><img alt="../../../_images/modeling_curves_properties_geometry_extrude-closed-curve.png" src="../../../_images/modeling_curves_properties_geometry_extrude-closed-curve.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">闭合 2D 曲线，挤压 0.5 ,倒角深度 0.25 , 倒角分辨率10 , 填充: 两者。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
-</div>
-</dd>
-<dt>3D 曲线</dt><dd><p>这时的事实是, 曲线是否闭合并不重要 - 永远无法得到一个带体积的挤出的3D 曲线, 只有墙或带子, 就像开放的2D 曲线。</p>
-<p>但是, 3D 曲线还有一个特性: 控制点的 <em>倾斜</em> (见上文)。比如, 可以使带子绕曲线扭曲以创建一个莫比乌斯环。</p>
-</dd>
-</dl>
-</div>
-</div>
 <div class="section" id="bevel">
-<h2>倒角<a class="headerlink" href="#bevel" title="Permalink to this headline">¶</a></h2>
-<dl>
-<dt>深度</dt><dd><p>改变倒角的大小。</p>
-<table class="docutils align-center">
+<span id="modeling-curve-bevel"></span><h2>倒角<a class="headerlink" href="#bevel" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>深度</dt>
+<dd><p class="first">改变倒角的大小。</p>
+<table border="1" class="last docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id8">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id5">
 <a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_bevel-depth.png"><img alt="../../../_images/modeling_curves_properties_geometry_bevel-depth.png" src="../../../_images/modeling_curves_properties_geometry_bevel-depth.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">应用不同倒角深度的曲线 (深度 = 0.05)。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">应用不同倒角深度的曲线 (深度 = 0.05)。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id9">
+<td><div class="first last figure" id="id6">
 <a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_bevel.png"><img alt="../../../_images/modeling_curves_properties_geometry_bevel.png" src="../../../_images/modeling_curves_properties_geometry_bevel.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">应用不同倒角深度的曲线 (深度 = 0.25)。</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">应用不同倒角深度的曲线 (深度 = 0.25)。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt>分辨率</dt><dd><p>调整倒角的平滑度。</p>
-<table class="docutils align-center">
+<dt>分辨率</dt>
+<dd><p class="first">调整倒角的平滑度。</p>
+<table border="1" class="last docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id10">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id7">
 <a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_bevel-resolution.png"><img alt="../../../_images/modeling_curves_properties_geometry_bevel-resolution.png" src="../../../_images/modeling_curves_properties_geometry_bevel-resolution.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">应用不同分辨率的曲线 (分辨率 = 1)。</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">应用不同分辨率的曲线 (分辨率 = 1)。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id11">
+<td><div class="first last figure" id="id8">
 <a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_bevel.png"><img alt="../../../_images/modeling_curves_properties_geometry_bevel.png" src="../../../_images/modeling_curves_properties_geometry_bevel.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">应用不同分辨率的曲线 (分辨率 = 12)。</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">应用不同分辨率的曲线 (分辨率 = 12)。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt>倒角物体</dt><dd><p>倒角物体用于控制曲线挤出后的横截面。倒角物体只能是另一条2D 或3D 曲线，打开或闭合均可。编辑倒角物体的控制柄和控制点将导致原始物体形状发生变化。</p>
-<table class="docutils align-center">
+<dt>Object</dt>
+<dd><p class="first">Controls the cross section of the extruded curve.
+The Bevel Object can only be another curve both 2D or 3D, and opened or closed.
+Editing the handles and control points of the Bevel Object will cause the original Object to change shape.</p>
+<table border="1" class="last docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id12">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id9">
 <a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_bevel-object.png"><img alt="../../../_images/modeling_curves_properties_geometry_bevel-object.png" src="../../../_images/modeling_curves_properties_geometry_bevel-object.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">贝塞尔曲线作为曲线的倒角物体。</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">贝塞尔曲线作为曲线的倒角物体。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id13">
+<td><div class="first last figure" id="id10">
 <a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_extrude-bevel-object.png"><img alt="../../../_images/modeling_curves_properties_geometry_extrude-bevel-object.png" src="../../../_images/modeling_curves_properties_geometry_extrude-bevel-object.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">贝塞尔圆作为曲线的倒角物体。</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">贝塞尔圆作为曲线的倒角物体。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 </dd>
-</dl>
-<div class="section" id="bevel-factor">
-<h3>倒角系数<a class="headerlink" href="#bevel-factor" title="Permalink to this headline">¶</a></h3>
-<dl>
-<dt>映射</dt><dd><p>用于控制倒角系数(介于0和1之间) 与倒角样条线的渲染首末端点之间的关系。将倒角系数映射至:</p>
-<dl class="simple">
-<dt>分辨率</dt><dd><p>样条线的细分数量 (U分辨率).</p>
-</dd>
-<dt>段数</dt><dd><p>线段的长度。映射到段数将在曲线的每段中的细分段长度当作是长度一样的。</p>
-</dd>
-<dt>样条线</dt><dd><p>样条的长度。</p>
-</dd>
-</dl>
-</dd>
-<dt>起始,结束</dt><dd><p>这些选项决定了在曲线上开始/结束倒角操作的位置，用于创建曲线部分长度范围倒角的效果。</p>
+<dt>填充封盖</dt>
+<dd>封住倒角曲线两端。</dd>
+<dt>Bevel Start/End</dt>
+<dd><p class="first">这些选项决定了在曲线上开始/结束倒角操作的位置，用于创建曲线部分长度范围倒角的效果。</p>
 <p>将 <em>倒角起点系数</em> 改为0.5 ，将从距离曲线起点50% 的距离开始倒角 (实际上缩短曲线)。将 <em>倒角终点系数</em> 改为降低0.25，将从距离曲线终点25% 的距离开始倒角(再次缩短曲线)。</p>
-<table class="docutils align-center">
+<table border="1" class="last docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id14">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id11">
 <a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_bevel.png"><img alt="../../../_images/modeling_curves_properties_geometry_bevel.png" src="../../../_images/modeling_curves_properties_geometry_bevel.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">未应用倒角系数的曲线。</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">未应用倒角系数的曲线。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id15">
+<td><div class="first last figure" id="id12">
 <a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_bevel-start-end-factor.png"><img alt="../../../_images/modeling_curves_properties_geometry_bevel-start-end-factor.png" src="../../../_images/modeling_curves_properties_geometry_bevel-start-end-factor.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">倒角终点系数为0.6的曲线。</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">倒角终点系数为0.6的曲线。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 </dd>
+<dt>Bevel Mapping Start/End</dt>
+<dd><p class="first">用于控制倒角系数(介于0和1之间) 与倒角样条线的渲染首末端点之间的关系。将倒角系数映射至:</p>
+<dl class="last docutils">
+<dt>分辨率</dt>
+<dd>样条线的细分数量 (U分辨率).</dd>
+<dt>段数</dt>
+<dd>线段的长度。映射到段数将在曲线的每段中的细分段长度当作是长度一样的。</dd>
+<dt>样条线</dt>
+<dd>样条的长度。</dd>
 </dl>
-</div>
-<div class="section" id="caps">
-<h3>封盖<a class="headerlink" href="#caps" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt>填充封盖</dt><dd><p>封住倒角曲线两端。</p>
 </dd>
 </dl>
 </div>
+<div class="section" id="examples">
+<h2>例子<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="open-2d-curve">
+<h3>开放的2D曲线<a class="headerlink" href="#open-2d-curve" title="Permalink to this headline">¶</a></h3>
+<p>挤出将沿曲线形状创建一面 &quot;墙&quot; 或一条 &quot;带子&quot;。如果使用了 <em>倒角深度</em> , 则墙将变得类似滑梯或者槽子。如果法线朝向错误，可以按照 <a class="reference internal" href="../editing/segments.html#curve-switch-direction"><span class="std std-ref">这里</span></a> 的操作切换方向。</p>
+<div class="figure" id="id13">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_extrude-open-curve.png"><img alt="../../../_images/modeling_curves_properties_geometry_extrude-open-curve.png" src="../../../_images/modeling_curves_properties_geometry_extrude-open-curve.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text"><kbd class="kbd docutils literal notranslate">Alt-C</kbd> 打开2D 曲线, 填充设为无, 零偏移量, 挤出0.5, 倒角深度0.25, 倒角分辨率10。</span></p>
+</div>
+</div>
+<div class="section" id="closed-2d-curve">
+<h3>闭合的2D曲线<a class="headerlink" href="#closed-2d-curve" title="Permalink to this headline">¶</a></h3>
+<p>这可能是最有用的情形了, 因为这可以迅速创建一个体, (默认情况下) 两个平坦且平行的曲面填充在挤出的 &quot;墙&quot; 两侧。可以通过选择填充模式为两者、前、后或无，来删除其中的一个或两个都删除 。</p>
+<p>这时如果使用倒角深度选项，将总是创建90度倒角.</p>
+<div class="figure" id="id14">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_extrude-closed-curve.png"><img alt="../../../_images/modeling_curves_properties_geometry_extrude-closed-curve.png" src="../../../_images/modeling_curves_properties_geometry_extrude-closed-curve.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">闭合 2D 曲线，挤压 0.5 ,倒角深度 0.25 , 倒角分辨率10 , 填充: 两者。</span></p>
+</div>
+</div>
+<div class="section" id="d-curve">
+<h3>3D 曲线<a class="headerlink" href="#d-curve" title="Permalink to this headline">¶</a></h3>
+<p>这时的事实是, 曲线是否闭合并不重要 - 永远无法得到一个带体积的挤出的3D 曲线, 只有墙或带子, 就像开放的2D 曲线。</p>
+<p>However, there is one more feature with 3D curves: the <em>Tilt</em> of the control points (see above).
+It will make the ribbon twist around the curve to create a Möbius strip, for example.</p>
 </div>
 <div class="section" id="taper">
-<h2>锥化<a class="headerlink" href="#taper" title="Permalink to this headline">¶</a></h2>
-<dl>
-<dt>锥化物体</dt><dd><p>锥化曲线沿自身X 轴进行估算, 使用自身Y 轴进行宽度控制。还要注意的是: 锥化曲线会使其朝向一端逐渐变细。也可以通过移动/缩放/旋转锥化物体的控制点来改变被锥化物体的锥化比例。锥度对象只能是另一条曲线。编辑锥化物体的的控制柄和控制点将导致原始物体形状发生变化。</p>
-<p>见下文范例。</p>
-</dd>
-<dt>映射锥化</dt><dd><p>对于使用锥化物体并修改了 <em>倒角起点/终点系数</em> 的曲线， <em>映射锥化</em> 用于使锥化仅作用于曲线的被倒角范围 (而非整条曲线) 。</p>
-</dd>
-</dl>
-<div class="section" id="details">
-<h3>细节<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>它必须是一条 <em>开放曲线</em>。</p></li>
-<li><p>锥化独立应用于被锥化物体的所有曲线。</p></li>
-<li><p>只计算 <em>锥化物体</em> 中的第一条曲线, 即使锥化物体包含多条断开的线段。</p></li>
-<li><p>缩放从左侧的第一个控制点开始, 并沿曲线向右侧的最后一个控制点移动。</p></li>
-<li><p>负值缩放，(在锥化曲线上的自身坐标系负Y值) 也是可能存在的。但是, 可能会出现渲染瑕疵。</p></li>
-<li><p>可能需要提高曲线分辨率来查看锥化的更多细节。</p></li>
-<li><p>对于闭合曲线， <em>锥化物体</em> 中的锥化曲线会沿整个曲线 (绕物体一周)作用，而不仅仅是物体的长度范围，并改变挤出深度。在这些情况下, 需要 <em>锥化物体</em> 的锥化曲线两端的相对高度相同, 以便在闭合点 (曲线两端连接的位置) 实现平滑过渡。</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="id1">
-<h2>例子<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h3>锥化<a class="headerlink" href="#taper" title="Permalink to this headline">¶</a></h3>
 <p>下面我们用锥化曲线来锥化一个简单的曲线圆挤出物体。添加曲线，然后退出 <em>编辑模式</em>。添加另一个 (闭合的，比如圆)；将其命名为 &quot;BevelCurve&quot;, 并在第一条曲线 ( <em>曲线</em> 选项卡) 的 <em>倒角物体</em> 输入框中输入该名称。这样得到了一根管子。在 <em>物体模式</em> 中添加第三条曲线并称之为 &quot;TaperCurve&quot;。调整左侧控制点， 将其提高约5个单位。</p>
 <p>现在返回到物体选项卡, 并在几何面板中编辑第一条曲线的 <em>锥化物体</em> 输入框，引用前面命名为 &quot;TaperCurve&quot; 的新锥化曲线。按下回车后，将立即应用锥化，结果如图 <a class="reference internal" href="#fig-curves-extrude-taper-curve"><span class="std std-ref">设置倒角物体为闭合曲线。</span></a> 所示。</p>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id16">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id15">
 <span id="fig-curves-extrude-taper-curve"></span><a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_extrude-bevel-object.png"><img alt="../../../_images/modeling_curves_properties_geometry_extrude-bevel-object.png" src="../../../_images/modeling_curves_properties_geometry_extrude-bevel-object.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">设置倒角物体为闭合曲线。</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">设置倒角物体为闭合曲线。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id17">
+<td><div class="first last figure" id="id16">
 <a class="reference internal image-reference" href="../../../_images/modeling_curves_properties_geometry_extrude-taper-object.png"><img alt="../../../_images/modeling_curves_properties_geometry_extrude-taper-object.png" src="../../../_images/modeling_curves_properties_geometry_extrude-taper-object.png" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">锥度挤出后曲线。</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">锥度挤出后曲线。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 <p>可以看到 <em>锥化曲线</em> 被应用到 <em>挤出物体</em>。注意观察管道的粗细是如何随着锥化曲线从左至右逐渐缩小到0的。如果锥化曲线位于其自身Y轴下方, 则管道的内侧将变为外侧，这将导致渲染瑕疵。当然，作为一个艺术家，这可能是你所寻求的效果!</p>
-<div class="figure align-center" id="id18">
+<div class="figure" id="id17">
 <span id="fig-curves-extrude-taper1"></span><img alt="../../../_images/modeling_curves_properties_geometry_extrude-taper-curve-closer.png" src="../../../_images/modeling_curves_properties_geometry_extrude-taper-curve-closer.png" />
-<p class="caption"><span class="caption-text">锥化例子1.</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">锥化例子1.</span></p>
 </div>
 <p>在图 <a class="reference internal" href="#fig-curves-extrude-taper1"><span class="std std-ref">锥化例子1.</span></a> 中，可以清楚地看到左侧的锥化曲线如何影响右侧曲线物体象的。在这里, 锥度曲线右侧更靠近物体的水平轴，反映在右侧的物体是就是管道变细。</p>
-<div class="figure align-center" id="id19">
+<div class="figure" id="id18">
 <span id="fig-curves-extrude-taper2"></span><img alt="../../../_images/modeling_curves_properties_geometry_extrude-taper-curve-away.png" src="../../../_images/modeling_curves_properties_geometry_extrude-taper-curve-away.png" />
-<p class="caption"><span class="caption-text">锥化例子2.</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">锥化例子2.</span></p>
 </div>
 <p>在图 <a class="reference internal" href="#fig-curves-extrude-taper2"><span class="std std-ref">锥化例子2.</span></a> 中，左侧的锥化曲线上的控制点从原点移开，从而得到右侧的曲线物体加宽的结果。</p>
-<div class="figure align-center" id="id20">
+<div class="figure" id="id19">
 <span id="fig-curves-extrude-taper3"></span><img alt="../../../_images/modeling_curves_properties_geometry_extrude-taper-curve-irregular.png" src="../../../_images/modeling_curves_properties_geometry_extrude-taper-curve-irregular.png" />
-<p class="caption"><span class="caption-text">锥化例子3.</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">锥化例子3.</span></p>
 </div>
 <p>在图 <a class="reference internal" href="#fig-curves-extrude-taper3"><span class="std std-ref">锥化例子3.</span></a> 中对曲线圆应用了一条更不规则的锥化曲线。</p>
-<div class="figure align-center" id="id21">
+<div class="figure" id="id20">
 <img alt="../../../_images/modeling_curves_properties_geometry_extrude-bevel-curve-tilt.png" src="../../../_images/modeling_curves_properties_geometry_extrude-bevel-curve-tilt.png" />
-<p class="caption"><span class="caption-text">带有 <em>倾斜</em> 的倒角挤出范例。</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">带有 <em>倾斜</em> 的倒角挤出范例。</span></p>
+</div>
 </div>
 </div>
 </div>
@@ -453,10 +469,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../curve_display.html" class="btn btn-neutral float-right" title="曲线显示" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="path_animation.html" class="btn btn-neutral float-right" title="Path Animation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="data.html" class="btn btn-neutral float-left" title="物体数据" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="shape.html" class="btn btn-neutral float-left" title="Shape" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/deveditors/3dview/introduction.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/3dview/introduction.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="启动场景" href="startup_scene.html" />
@@ -94,43 +113,58 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#general">常规</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">3D视图</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="startup_scene.html">启动场景</a></li>
-<li class="toctree-l4"><a class="reference internal" href="modes.html">物体模式</a></li>
-<li class="toctree-l4"><a class="reference internal" href="navigate/index.html">视图浏览</a></li>
-<li class="toctree-l4"><a class="reference internal" href="3d_cursor.html">3D游标</a></li>
-<li class="toctree-l4"><a class="reference internal" href="object/index.html">物体</a></li>
-<li class="toctree-l4"><a class="reference internal" href="properties/index.html">属性</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ruler_protractor.html">3D量尺 &amp; 量角器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">3D视图</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#header-region">Header Region</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#toolbar-region">Toolbar Region</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sidebar-region">Sidebar Region</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../uv_image/index.html">UV/图像编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../node_editor/index.html">节点编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../vse/index.html">视频序列编辑器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../movie_clip_editor/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="startup_scene.html">启动场景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modes.html">物体模式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="navigate/index.html">视图浏览</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3d_cursor.html">3D游标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selecting.html">Selecting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controls/index.html">Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolbar/index.html">Toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viewport_render.html">Viewport Render</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#animation">动画</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#scripting">脚本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#data">数据</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uv/index.html">UV编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_editor/index.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compositing/index.html">Compositor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../video_editing/index.html">Video Sequencer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outliner.html">大纲视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../properties_editor.html">属性编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../file_browser.html">文件浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -206,96 +240,84 @@
             
   <div class="section" id="introduction">
 <h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>3D视图用于各种3D场景中各种操作的交互，如建模，动画，纹理绘制等。</p>
-<div class="section" id="header">
-<h2>标题栏<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
+<p>The 3D View is used to interact with the 3D scene for a variety of purposes,
+such as modeling, animating, texture painting, etc.</p>
+<div class="section" id="header-region">
+<h2>Header Region<a class="headerlink" href="#header-region" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<img alt="../../_images/editors_3dview_introduction_3d-view-header-object-mode.png" src="../../_images/editors_3dview_introduction_3d-view-header-object-mode.png" />
+<p class="caption"><span class="caption-text">Object Mode header.</span></p>
+</div>
 <p>标题栏包含当前 <a class="reference internal" href="modes.html"><span class="doc">模式</span></a> 的各种菜单和控件。</p>
-<div class="figure align-center" id="id1">
-<img alt="../../_images/editors_3dview_introduction_header.png" src="../../_images/editors_3dview_introduction_header.png" />
-<p class="caption"><span class="caption-text">3D视图标题栏。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="menus">
-<h3>菜单<a class="headerlink" href="#menus" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt>视图(View)</dt><dd><p>这个菜单提供在3D空间中 <a class="reference internal" href="navigate/index.html"><span class="doc">浏览</span></a> 的各种工具。</p>
-</dd>
-<dt>选择(Select)</dt><dd><p>包含 <a class="reference internal" href="object/selecting/index.html"><span class="doc">选取</span></a> 物体的各种工具。</p>
-</dd>
-<dt>添加(Add)</dt><dd><p>提供一个可以被加入到场景中的不同 <a class="reference internal" href="object/types.html#objects-types"><span class="std std-ref">物体类型</span></a> 的列表。</p>
-</dd>
-<dt>物体(Object)</dt><dd><p>这个菜单会在物体模式下显示。包含一系列编辑 <a class="reference internal" href="object/editing/transform/introduction.html"><span class="doc">物体</span></a> 的工具。在编辑模式下会被切换成相应的 <a class="reference internal" href="../../modeling/index.html"><span class="doc">编辑工具</span></a> 菜单。</p>
-</dd>
+<p>Tools and modes in the 3D View header are split in three groups of buttons:</p>
+<div class="section" id="mode-menus">
+<h3>Mode &amp; Menus<a class="headerlink" href="#mode-menus" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>模式(Modes)</dt>
+<dd>The 3D View has <a class="reference internal" href="modes.html"><span class="doc">several modes</span></a>
+used for editing different kinds of data.</dd>
+<dt>视图(View)</dt>
+<dd>这个菜单提供在3D空间中 <a class="reference internal" href="navigate/index.html"><span class="doc">浏览</span></a> 的各种工具。</dd>
+</dl>
+<p><em>Other menus depend on the current mode, object mode menus listed below.</em></p>
+<dl class="docutils">
+<dt>选择(Select)</dt>
+<dd>Contains tools for <a class="reference internal" href="../../scene_layout/object/selecting.html#object-select-menu"><span class="std std-ref">selecting</span></a> objects.</dd>
+<dt>添加(Add)</dt>
+<dd>提供一个可以被加入到场景中的不同 <a class="reference internal" href="../../scene_layout/object/types.html#objects-types"><span class="std std-ref">物体类型</span></a> 的列表。</dd>
+<dt>物体(Object)</dt>
+<dd>This menu appears when in Object Mode.
+it contains tools to edit <a class="reference internal" href="../../scene_layout/object/editing/transform/introduction.html"><span class="doc">objects</span></a>.
+In Edit Mode, it will change to the appropriate menu with <a class="reference internal" href="../../modeling/index.html"><span class="doc">editing tools</span></a>.</dd>
 </dl>
 </div>
-<div class="section" id="controls">
-<h3>控件<a class="headerlink" href="#controls" title="Permalink to this headline">¶</a></h3>
-<dl>
-<dt>模式(Modes)</dt><dd><p>3D视图有 <a class="reference internal" href="modes.html"><span class="doc">多种模式</span></a> 用于编辑不同数据：</p>
-<ul class="simple">
-<li><p>物体模式(Object Mode)</p></li>
-<li><p>编辑模式(Edit Mode)</p></li>
-<li><p>雕刻模式(Sculpt Mode)</p></li>
-<li><p>顶点绘制(Vertex Paint)</p></li>
-<li><p>权重绘制(Weight Paint)</p></li>
-<li><p>纹理绘制(Texture Paint)</p></li>
-<li><p>粒子编辑(Particle Edit)</p></li>
-<li><p>姿态模式(Pose Mode)</p></li>
-<li><p>编辑笔触模式</p></li>
-</ul>
+<div class="section" id="transform-controls">
+<h3>Transform Controls<a class="headerlink" href="#transform-controls" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Transform Orientations</dt>
+<dd>Use to select and modify the active <a class="reference internal" href="controls/orientation.html"><span class="doc">Transform Orientations</span></a>.</dd>
+<dt>轴心点(Pivot Point)</dt>
+<dd><p class="first">用来改变很多网格操作工具中用到的参考点(或 <a class="reference internal" href="../../glossary/index.html#term-pivot-point"><span class="xref std std-term">轴心点</span></a> )。</p>
+<p class="last">Read more about <a class="reference internal" href="../../scene_layout/object/editing/transform/control/pivot_point/index.html"><span class="doc">Pivot Points</span></a>.</p>
 </dd>
-<dt>视窗着色(View Shading)</dt><dd><p>用于改变物体在视窗中的显示方式。了解更多关于不同的 <a class="reference internal" href="properties/shading.html"><span class="doc">着色方式</span></a>。</p>
-</dd>
-<dt>轴心点(Pivot Point)</dt><dd><p>用来改变很多网格操作工具中用到的参考点(或 <a class="reference internal" href="../../glossary/index.html#term-pivot-point"><span class="xref std std-term">轴心点</span></a> )。</p>
-<p>更多内容请阅读 <a class="reference internal" href="object/editing/transform/control/pivot_point/index.html"><span class="doc">轴心点</span></a>。</p>
-</dd>
-<dt>变换操纵器(Transform Manipulator)</dt><dd><p>这些方便的选择器让你可以抓着(点击鼠标)它们的控件通过移动鼠标在相应的轴上移动或旋转物体。</p>
-<p>更多内容请阅读 <a class="reference internal" href="object/editing/transform/control/manipulators.html"><span class="doc">变换操作控制器章节</span></a>。</p>
-</dd>
-<dt>层(Layer)</dt><dd><p>层工具文档参见 <a class="reference internal" href="object/properties/relations/layers.html"><span class="doc">层</span></a>。</p>
-</dd>
-<dt>锁定到场景(Lock to Scene)</dt><dd><p>在层按钮右边的“锁定”按钮默认是开启的。这就意味着在这个视图中的活动层和摄像机是属于整个场景的(那些在渲染的时候使用到的)。因此，所有锁定的3D视图会共用同样的活动层和摄像机。当你在一个视图中改变它们的时候，这个变化会马上反应到所有锁定的视图。</p>
-<p>但是如果你关闭“锁定”按钮，你就可以针对这个视图指定不同的活动层和摄像机。如果你不愿意你的工作区(视图)被完整的场景弄乱，同时又想有一个完整场景的视图做参考的时候，这个功能有可能能帮上忙(比如同时显示所有的层)。或者开多个视图，每个都有不同的活动摄像机。你可以用 <kbd class="kbd docutils literal notranslate">Ctrl-Numpad0</kbd> 来使活动物体变成活动摄像机。</p>
-<p>阅读更多关于 <a class="reference internal" href="../../data_system/scenes/introduction.html"><span class="doc">场景</span></a>。</p>
-</dd>
-<dt>衰减编辑(Proportional Edit)</dt><dd><p><a class="reference internal" href="object/editing/transform/control/proportional_edit.html"><span class="doc">衰减编辑</span></a>。</p>
-</dd>
-<dt>吸附(Snap)</dt><dd><p>控制 <a class="reference internal" href="object/editing/transform/control/snap.html"><span class="doc">吸附工具</span></a> 辅助物体的变换和建模。</p>
-</dd>
-<dt>OpenGL渲染(OpenGL Render)</dt><dd><p>这个渲染按钮渲染一个3D视窗的OpenGL版。查看 <a class="reference internal" href="../../render/opengl.html"><span class="doc">OpenGL渲染</span></a> 获得更多信息。</p>
-</dd>
+<dt>Snapping</dt>
+<dd>Controls the <a class="reference internal" href="../../scene_layout/object/editing/transform/control/snap.html"><span class="doc">snapping tools</span></a>
+that help with transforming and modeling objects.</dd>
+<dt>衰减编辑(Proportional Edit)</dt>
+<dd><a class="reference internal" href="../../scene_layout/object/editing/transform/control/proportional_edit.html"><span class="doc">Proportional Edit</span></a>.</dd>
+</dl>
+</div>
+<div class="section" id="display-shading">
+<h3>Display &amp; Shading<a class="headerlink" href="#display-shading" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Object Type Visibility</dt>
+<dd>Change the <a class="reference internal" href="controls/visibility.html"><span class="doc">Object Type Visibility</span></a>
+and selectability of objects in the 3D View.</dd>
+<dt>Viewport Gizmos</dt>
+<dd>Change the way how <a class="reference internal" href="controls/gizmo.html"><span class="doc">gizmos</span></a> are
+displayed in the 3D View.</dd>
+<dt>X-Ray</dt>
+<dd>Show the whole scene transparent. This is a shortcut to
+the <a class="reference internal" href="controls/shading.html#dview-shading-xray"><span class="std std-ref">X-ray</span></a> option inside the shading control.</dd>
+<dt>Viewport Overlays</dt>
+<dd>Change the way how <a class="reference internal" href="controls/overlays.html"><span class="doc">overlays</span></a> are
+displayed in the 3D View.</dd>
+<dt>视窗着色(View Shading)</dt>
+<dd>Change the <a class="reference internal" href="controls/shading.html"><span class="doc">shading</span></a> of the 3D View.</dd>
 </dl>
 </div>
 </div>
-<div class="section" id="tool-shelf">
-<h2>工具栏<a class="headerlink" href="#tool-shelf" title="Permalink to this headline">¶</a></h2>
-<p>工具栏是一个上下文相关的面板，根据当前模式显示相关工具(如： <em>编辑模式</em> 中的建模工具， <em>雕刻模式</em> 中的笔刷工具)。</p>
-<p>更多具体工具的信息，详见：</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="object/editing/transform/index.html"><span class="doc">变换</span></a></p></li>
-<li><p><a class="reference internal" href="../../interface/undo_redo.html"><span class="doc">操作历史</span></a></p></li>
-<li><p><a class="reference internal" href="../../modeling/meshes/editing/basics/adding.html"><span class="doc">创建物体</span></a></p></li>
-<li><p><a class="reference internal" href="object/properties/relations/parents.html"><span class="doc">物体父子关系</span></a></p></li>
-<li><p><a class="reference internal" href="object/properties/relations/groups.html"><span class="doc">组</span></a></p></li>
-<li><p><a class="reference internal" href="../../animation/index.html#animation-index"><span class="std std-ref">动画</span></a></p></li>
-<li><p><a class="reference internal" href="../../physics/rigid_body/index.html#rigid-body-index"><span class="std std-ref">刚体</span></a></p></li>
-<li><p><a class="reference internal" href="grease_pencil/index.html#grease-pencil-index"><span class="std std-ref">蜡笔</span></a></p></li>
-<li><p><a class="reference internal" href="../../modeling/index.html#modeling-index"><span class="std std-ref">制作模型</span></a></p></li>
-<li><p><a class="reference internal" href="../../sculpt_paint/sculpting/index.html#painting-sculpting-index"><span class="std std-ref">雕刻</span></a></p></li>
-<li><p><a class="reference internal" href="../../sculpt_paint/painting/vertex_paint/index.html#painting-vertex-index"><span class="std std-ref">顶点绘制</span></a></p></li>
-<li><p><a class="reference internal" href="../../sculpt_paint/painting/weight_paint/index.html#painting-weight-index"><span class="std std-ref">权重绘制</span></a></p></li>
-<li><p><a class="reference internal" href="../../sculpt_paint/painting/texture_paint/index.html#painting-texture-index"><span class="std std-ref">纹理绘制</span></a></p></li>
-</ul>
+<div class="section" id="toolbar-region">
+<h2>Toolbar Region<a class="headerlink" href="#toolbar-region" title="Permalink to this headline">¶</a></h2>
+<p>The Toolbar is a context-sensitive region containing tools depending on the current mode
+(for example, modeling tools in <em>Edit Mode</em>, brush tools in <em>Sculpt Mode</em>...).</p>
+<p>See <a class="reference internal" href="toolbar/index.html"><span class="doc">Tools</span></a> for more information.</p>
 </div>
-<div class="section" id="properties-region">
-<h2>属性面板<a class="headerlink" href="#properties-region" title="Permalink to this headline">¶</a></h2>
-<p>属性面板包含活动物体和已选物体的属性(如位置)，也包含编辑器自身属性:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="object/editing/transform/introduction.html"><span class="doc">变换</span></a></p></li>
-<li><p><a class="reference internal" href="grease_pencil/introduction.html"><span class="doc">蜡笔</span></a></p></li>
-<li><p><a class="reference internal" href="properties/panels.html"><span class="doc">显示和视窗面板</span></a></p></li>
-<li><p><a class="reference internal" href="properties/background_images.html"><span class="doc">背景图像</span></a></p></li>
-<li><p><a class="reference internal" href="object/editing/transform/control/orientations.html"><span class="doc">变换参考坐标系</span></a></p></li>
-</ul>
+<div class="section" id="sidebar-region">
+<h2>Sidebar Region<a class="headerlink" href="#sidebar-region" title="Permalink to this headline">¶</a></h2>
+<p>The Sidebar region contains properties of the active object and selected objects (such as their locations),
+as well as properties of the editor itself.</p>
+<p>See <a class="reference internal" href="properties/sidebar.html"><span class="doc">Sidebar Panels</span></a> for more information.</p>
 </div>
 </div>
 

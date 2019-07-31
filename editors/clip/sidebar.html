@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>侧边栏区域 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/clip/sidebar.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="主视图" href="main_view.html" />
+    <link rel="prev" title="标题栏" href="header.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../movie_clip/tracking/index.html">运动跟踪，摄像机反求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../movie_clip/masking/index.html">制作遮罩</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">影片剪辑编辑器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="header.html">标题栏</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">侧边栏区域</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#proxy-timecode-panel">代理/时间码面板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#proxy">代理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#timecode">时间码</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="main_view.html">主视图</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="index.html">影片剪辑编辑器</a> &raquo;</li>
+        
+      <li>侧边栏区域</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/editors/clip/sidebar.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sidebar-region">
+<h1>侧边栏区域<a class="headerlink" href="#sidebar-region" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="proxy-timecode-panel">
+<h2>代理/时间码面板<a class="headerlink" href="#proxy-timecode-panel" title="Permalink to this headline">¶</a></h2>
+<p>当你选择了代理/时间码参数,你需要使用 <span class="menuselection">剪辑 ‣ 代理 ‣ 重建代理和时间码编号</span> 来生成代理剪辑，它将在Blender完成之后可用。</p>
+</div>
+<div class="section" id="proxy">
+<span id="bpy-types-movieclipproxy"></span><h2>代理<a class="headerlink" href="#proxy" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right">
+<img alt="../../_images/editors_clip_sidebar_proxy-panel.png" src="../../_images/editors_clip_sidebar_proxy-panel.png" />
+</div>
+<p>代理是代表主图像的较小图像（加载较快）。 当您重建代理时，Blender会为大图像计算小图像（如缩略图），并且可能需要一些时间。 但是，在计算它们之后，编辑功能（如擦洗和滚动）要快得多，但会产生低分辨率的结果。 确保在最终渲染之前禁用代理。</p>
+<dl class="docutils">
+<dt>建立原始项</dt>
+<dd>用于确定应构建代理图像的分辨率.</dd>
+<dt>建立移除畸变项</dt>
+<dd>根据上面设置的尺寸，从未畸变的原始图像构建图像.这有助于更快地回放未失真的素材.</dd>
+<dt>品质</dt>
+<dd>确定用于代理的JPEG图像的质量.</dd>
+<dt>代理自定目录</dt>
+<dd>默认情况下，所有生成的代理图像都会存储在 <code class="docutils literal notranslate"><span class="pre">&lt;原始素材的路径&gt;/BL_proxy/&lt;c剪辑名&gt;</span></code> 文件夹,但是可以使用此选项手动设置此位置.</dd>
+<dt>重建代理</dt>
+<dd>重新生成上面设置的所有尺寸的代理图像，并重新生成可以在以后使用的所有时间码.</dd>
+<dt>时间码</dt>
+<dd>见 <a class="reference internal" href="#timecode">时间码</a>.</dd>
+<dt>代理渲染尺寸</dt>
+<dd>确定用于显示的代理图像分辨率.如果设置了 <em>未畸变渲染</em> ，就会使用从未畸变的帧创建的图像.如果没有生成的代理，则渲染大小设置为“无代理，完全渲染”，如果启用渲染未畸变，则会在帧刷新时自动发生畸变.</dd>
+</dl>
+</div>
+<div class="section" id="timecode">
+<h2>时间码<a class="headerlink" href="#timecode" title="Permalink to this headline">¶</a></h2>
+<p>当你直接使用从相机复制的素材而不进行预处理时,可能有很多人工品，主要是因为按顺序寻找给定的帧。 发生这种情况是因为此类素材通常在其标题中没有正确的帧速率值。因此，对于Blender来说，计算流中所需帧的位置是不准确的，并且可能会产生错误的结果。 有两种方法可以避免这种情况：</p>
+<ol class="arabic simple">
+<li>预处理您的视频使用例如 MEncoder 修复文件头并插入正确的关键帧.</li>
+<li>在Blender中启用代理/时间码选项.</li>
+</ol>
+<p>支持以下时间码:</p>
+<ul class="simple">
+<li>没有使用TC -- 即不使用任何时间码</li>
+<li>记录运行</li>
+<li>自由运行</li>
+<li>自由运行 (记录日期)</li>
+<li>没有差距的记录运行</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">记录运行是通常最好使用的时间码，但是如果剪辑的文件完全损坏， <em>记录运行没有差距</em> 将是获得可接受结果的唯一机会。</p>
+</div>
+<div class="section" id="footage-settings">
+<h3>素材设置<a class="headerlink" href="#footage-settings" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>见 <a class="reference internal" href="../image/image_settings.html"><span class="doc">图像设置</span></a>.</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="main_view.html" class="btn btn-neutral float-right" title="主视图" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="header.html" class="btn btn-neutral float-left" title="标题栏" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

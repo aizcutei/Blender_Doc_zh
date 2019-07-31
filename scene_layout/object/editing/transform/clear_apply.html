@@ -1,0 +1,503 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>清除 &amp; 应用 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/scene_layout/object/editing/transform/clear_apply.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="副本" href="../duplication.html" />
+    <link rel="prev" title="镜像" href="mirror.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">场景 &amp; 物体</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../scene/index.html">场景</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">物体</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../types.html">物体类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../origin.html">物体原点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting.html">选择</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../duplication.html">副本</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">工具栏</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../collections/index.html">集合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../view_layers/index.html">视图层</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">场景 &amp; 物体</a> &raquo;</li>
+        
+          <li><a href="../../index.html">物体</a> &raquo;</li>
+        
+          <li><a href="../index.html">编辑</a> &raquo;</li>
+        
+          <li><a href="index.html">变换</a> &raquo;</li>
+        
+      <li>清除 &amp; 应用</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/scene_layout/object/editing/transform/clear_apply.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="clear-apply">
+<h1>清除 &amp; 应用<a class="headerlink" href="#clear-apply" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="clear">
+<span id="bpy-ops-object-clear"></span><h2>清除<a class="headerlink" href="#clear" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">物体 ‣ 清空 ‣ 位移 / 缩放 / 旋转 / 原点</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Alt-G</kbd>, <kbd class="kbd docutils literal notranslate">Alt-S</kbd>, <kbd class="kbd docutils literal notranslate">Alt-R</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>清除变换只是简单重置变换值。物体位置和旋转值返回到0，并且缩放返回到1。</p>
+<dl class="docutils">
+<dt>清除位置 <kbd class="kbd docutils literal notranslate">Alt-G</kbd></dt>
+<dd>清除（重置）选择物体的位置。这会将选择移回到坐标(0，0，0)。</dd>
+<dt>清除缩放 <kbd class="kbd docutils literal notranslate">Alt-S</kbd></dt>
+<dd>清除（重置）选择的缩放。这会将选择的物体大小重新调整到创建时的大小。</dd>
+<dt>清除旋转 <kbd class="kbd docutils literal notranslate">Alt-R</kbd></dt>
+<dd>清除（重置）选择的旋转。这将在每个平面上将选择旋转设置为0度。</dd>
+<dt>Clear Origin</dt>
+<dd>清除 (重置) 子物体原点的偏移量。这将导致子物体移到父级的原点。</dd>
+</dl>
+<div class="section" id="options">
+<h3>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>清除增量</dt>
+<dd>在清除常规变换的同时清除 <a class="reference internal" href="../../properties/transforms.html#transform-delta"><span class="std std-ref">增量变换</span></a>。(位于 <a class="reference internal" href="../../../../interface/undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> 面板)</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="apply">
+<h2>应用<a class="headerlink" href="#apply" title="Permalink to this headline">¶</a></h2>
+<p>这些操作允许你对选定物体应用多个变换。物体变换坐标转换到物体数据。如果物体具有层次的结构子级, 它也会将这些转换应用于其子级。</p>
+<div class="section" id="apply-object-transformations">
+<span id="bpy-ops-object-transform-apply"></span><h3>应用物体变换<a class="headerlink" href="#apply-object-transformations" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">物体 ‣ 应用 ‣ 位移 / 旋转 / 缩放 / 旋转 &amp; 缩放</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-A</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>应用变换值实质上是重置物体的位置、旋转或缩放值，物体仍位于原本位置。物体原点被移动到全局原点，清空旋转，缩放值重置为1。</p>
+<p>对于一些简单情况，3D视图或渲染结果是看不出差别的，但是一些修改器和约束可能是基于物体变换的。</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>骨架物体</p>
+<p class="last">虽然支持将变换应用到骨架，但是这 <strong>不会</strong> 适用于其姿势位置，动画曲线或约束。需在绑定与动画前使用该工具。</p>
+</div>
+<p>在使用 <em>应用变换</em> 工具时， <a class="reference internal" href="../../../../interface/undo_redo.html#ui-undo-redo-adjust-last-operation"><span class="std std-ref">调整上一步操作</span></a> 面板可以使你选择需要应用的变换组合。</p>
+<div class="section" id="id1">
+<h4>选项<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>位置</dt>
+<dd>应用（设置）选择的位置。这将使得Blender认为当前位置在每个平面上等于0，即选择不会移动，当前位置将被认为是“默认位置”。物体原点将设置为实际的（0，0，0）（其中着色的轴线在每个视图中相交）。</dd>
+<dt>旋转</dt>
+<dd>应用（设置）选择的旋转。这将使Blender考虑当前旋转在每个平面上相当于0度，即选择不旋转，当前旋转将被认为是“默认旋转”。</dd>
+<dt>缩放</dt>
+<dd>应用（设置）选择的比例。这将使Blender考虑当前比例在每个平面上等于0，即选择不会缩放，当前比例将被认为是“默认比例”。</dd>
+<dt>旋转和缩放</dt>
+<dd>应用（设置）选择的旋转和缩放。同时做上述两个应用的命令。</dd>
+<dt>应用属性</dt>
+<dd>根据应用的变换来修改类似于曲线顶点半径，字体大小和骨骼蒙皮之类的属性。</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="transforms-to-deltas">
+<span id="bpy-ops-object-anim-transforms-to-deltas"></span><span id="bpy-ops-object-transforms-to-deltas"></span><h3>变换为增量<a class="headerlink" href="#transforms-to-deltas" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">物体 ‣ 应用 ‣</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>将&quot;常规&quot;物体变换转化为 <a class="reference internal" href="../../properties/transforms.html#transform-delta"><span class="std std-ref">增量变换</span></a>，在现有增量变换量叠加。</p>
+<ul class="simple">
+<li>位置增量</li>
+<li>旋转增量</li>
+<li>缩放增量</li>
+</ul>
+<dl class="docutils">
+<dt>所有变换为增量</dt>
+<dd>将所有 &quot;正常&quot; 变换为增量变换。</dd>
+<dt>动画变换为增量</dt>
+<dd>将“正常”变换动画（对平移，缩放和旋转值所做的动画）转换为增量变换。</dd>
+</dl>
+<div class="section" id="id2">
+<h4>选项<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>重置值</dt>
+<dd>在传递至增量变换后清空 &quot;常规&quot;变换。</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="visual-transform">
+<span id="bpy-ops-object-visual-transform-apply"></span><h3>可视变换<a class="headerlink" href="#visual-transform" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">物体 ‣ 应用 ‣ 可视变换</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-A</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>应用（设置）约束结果并将其应用返回物体的位置，旋转和缩放。</p>
+</div>
+<div class="section" id="visual-geometry-as-mesh">
+<h3>可视几何 -&gt; 网格<a class="headerlink" href="#visual-geometry-as-mesh" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">物体‣ 应用 ‣ 可视几何到网格</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-A</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>将所有选定对象（修改器，形状键，挂钩等）的可视状态应用于物体数据。这是将所有物体数据冻结到静态网格中的一种方法，也可以将非网格类型转换为网格。</p>
+<p>详情见 <a class="reference internal" href="../introduction.html#object-convert-to"><span class="std std-ref">转换为</span></a> 网格。</p>
+</div>
+<div class="section" id="make-instances-real">
+<span id="bpy-ops-object-duplicates-make-real"></span><h3>实例独立化<a class="headerlink" href="#make-instances-real" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">物体 ‣ 应用 ‣ 实例独立化</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Shift-Ctrl-A</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Make Instances Real</em> 实例独立化未每个被选择的 <a class="reference internal" href="../../properties/instancing/index.html"><span class="doc">实例</span></a> 生成一个新物体，并移除它们身上所有的直接实例。</p>
+<p>最后，每个实例都成为了真正的物体。</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">此选项同时作用于直接（来自米顶点或面...）和间接（来自粒子系统...）的实例化。注意如果你直接在一些拥有大量实例的场景（例如粒子系统）中使用，Blender运行速度会迅速下降，毕竟同场景物体太多会很吃性能。</p>
+</div>
+<div class="section" id="id3">
+<h4>选项<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>默认情况下，新物体会加入到同一个包含了他们的实例器的集合中，而不保留任何层级关系。此行为可以在下列选项中更改。</p>
+<dl class="docutils">
+<dt>父级</dt>
+<dd><p class="first">如果未设定 <em>保留层级</em> ，将所有生成的物体父级关联到之前的实例器。</p>
+<p class="last">此外，将所有生成的（未被父级关联的）物体父级关联到各自的实例器，或者匹配新拷贝（这对于防止重复循环实例化很关键，见下文）</p>
+</dd>
+<dt>保持层级</dt>
+<dd>在新生成的物体中保留内置的层级（例如父子关系）。</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">通常，为了从实例化物体中获得一个尽可能一致的新层级，最好同时启用这些选项。</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>在循环实例化（实例器实例化其它实例器物体）保留关系目前仅适用于某些方面。</p>
+<p class="last">简单场景（例如一个空物体实例化一个包含了其它集合的实例的实例）通常管用，但一些更复杂的场景若不减少实例化层级的话将会不起作用。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../duplication.html" class="btn btn-neutral float-right" title="副本" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mirror.html" class="btn btn-neutral float-left" title="镜像" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

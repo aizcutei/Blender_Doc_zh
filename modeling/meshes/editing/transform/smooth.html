@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/editing/transform/smooth.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/transform/smooth.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="噪波" href="noise.html" />
@@ -94,14 +113,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/index.html">基础</a></li>
@@ -109,6 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../edges.html">边工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../faces.html">面工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../normals.html">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../uv/index.html">UV</a></li>
 <li class="toctree-l4 current"><a class="reference internal" href="index.html">变形</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../duplicating/index.html">复制</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">细分</a></li>
@@ -119,7 +140,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../mesh_display.html">网格显示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
 </ul>
 </li>
@@ -131,16 +151,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -219,87 +240,91 @@
            <div itemprop="articleBody">
             
   <div class="section" id="smooth">
-<span id="bpy-ops-mesh-vertices-smooth"></span><h1>平滑<a class="headerlink" href="#smooth" title="Permalink to this headline">¶</a></h1>
+<span id="tool-mesh-smooth"></span><span id="bpy-ops-mesh-vertices-smooth"></span><h1>平滑<a class="headerlink" href="#smooth" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="smooth-vertex">
 <h2>平滑顶点<a class="headerlink" href="#smooth-vertex" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 工具 ‣ 网格工具 ‣ 形变: 平滑顶点</span></p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">网格 ‣ 顶点 ‣ 平滑顶点</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Toolbar ‣ Tools ‣ Mesh Tools ‣ Deform: Smooth Vertex</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 顶点 ‣ 平滑顶点</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>该工具通过对拉平面之间的夹角，来平滑选中顶点。使用该工具后， <em>工具栏</em> 将显示下面的选项:</p>
-<dl class="simple">
-<dt>平滑</dt><dd><p>平滑系数。</p>
-</dd>
-<dt>重复</dt><dd><p>平滑的迭代次数。</p>
-</dd>
-<dt>轴</dt><dd><p>限制为仅作用于特定轴向。</p>
-</dd>
+<p>This tool smooths the selected vertices by averaging the angles between the faces.
+After using the tool, options appear in the <em>Toolbar</em>:</p>
+<dl class="docutils">
+<dt>平滑</dt>
+<dd>平滑系数。</dd>
+<dt>重复</dt>
+<dd>平滑的迭代次数。</dd>
+<dt>轴</dt>
+<dd>限制为仅作用于特定轴向。</dd>
 </dl>
-<table class="docutils align-center">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id1">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_smooth_mesh-before.png"><img alt="../../../../_images/modeling_meshes_editing_transform_smooth_mesh-before.png" src="../../../../_images/modeling_meshes_editing_transform_smooth_mesh-before.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">平滑前的网格。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">平滑前的网格。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id2">
+<td><div class="first last figure" id="id2">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_smooth_mesh-one-iteration.png"><img alt="../../../../_images/modeling_meshes_editing_transform_smooth_mesh-one-iteration.png" src="../../../../_images/modeling_meshes_editing_transform_smooth_mesh-one-iteration.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">一次平滑后的网格。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">一次平滑后的网格。</span></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id3">
+<td><div class="first last figure" id="id3">
 <a class="reference internal image-reference" href="../../../../_images/modeling_meshes_editing_transform_smooth_mesh-ten-iterations.png"><img alt="../../../../_images/modeling_meshes_editing_transform_smooth_mesh-ten-iterations.png" src="../../../../_images/modeling_meshes_editing_transform_smooth_mesh-ten-iterations.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">10次平滑迭代后的网格。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">10次平滑迭代后的网格。</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
+<p class="first admonition-title">See also</p>
 <p>细分</p>
-<p>在使用 <a class="reference internal" href="../subdividing/subdivide.html"><span class="doc">细分</span></a> 工具后调整 <em>光滑度</em> 选项可以获得更加圆润的形状。</p>
+<p class="last">在使用 <a class="reference internal" href="../subdividing/subdivide.html"><span class="doc">细分</span></a> 工具后调整 <em>光滑度</em> 选项可以获得更加圆润的形状。</p>
 </div>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
+<p class="first admonition-title">See also</p>
 <p>平滑修改器</p>
-<p><a class="reference internal" href="../../../modifiers/deform/smooth.html"><span class="doc">平滑修改器</span></a> 是另一种非破坏性的平滑工具，可以限制仅作用于单个 <em>顶点组</em>。</p>
+<p class="last"><a class="reference internal" href="../../../modifiers/deform/smooth.html"><span class="doc">平滑修改器</span></a> 是另一种非破坏性的平滑工具，可以限制仅作用于单个 <em>顶点组</em>。</p>
 </div>
 </div>
 <div class="section" id="laplacian-smooth">
 <h2>拉普拉斯平滑<a class="headerlink" href="#laplacian-smooth" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">专用项 ‣ 拉普拉斯平滑</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">专用项 ‣ 拉普拉斯平滑</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>详情可参考 <a class="reference internal" href="../../../modifiers/deform/laplacian_smooth.html"><span class="doc">拉普拉斯平滑修改器</span></a>。</p>
 <p>拉普拉斯平滑使用另一种平滑算法，可以更好地保留大的细节和网格的大致形状。拉普拉斯平滑除网格操作外，还有对应的非破坏性修改器。</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="first admonition-title">Note</p>
 <p>真实平滑 VS 着色平滑</p>
-<p>不要将此工具与 <a class="reference internal" href="../normals.html#modeling-meshes-editing-normals-shading"><span class="std std-ref">这个页面</span></a> 提到的着色平滑选项混淆，二者的原理并不相同！此工具通过修改网格本身来降低其尖锐程度，然而 <em>设置光滑</em> / <em>自动光滑</em> 只是通过控制网格的着色方式，来产生柔和的 <em>错觉</em>，但其实并没有修改网格。</p>
+<p class="last">不要将此工具与 <a class="reference internal" href="../normals.html#modeling-meshes-editing-normals-shading"><span class="std std-ref">这个页面</span></a> 提到的着色平滑选项混淆，二者的原理并不相同！此工具通过修改网格本身来降低其尖锐程度，然而 <em>设置光滑</em> / <em>自动光滑</em> 只是通过控制网格的着色方式，来产生柔和的 <em>错觉</em>，但其实并没有修改网格。</p>
 </div>
 </div>
 </div>

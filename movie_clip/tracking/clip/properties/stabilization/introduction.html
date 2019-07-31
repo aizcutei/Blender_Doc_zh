@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/movie_clip/tracking/clip/properties/stabilization/introduction.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="2D稳定面板" href="panel.html" />
+    <link rel="prev" title="2D稳像" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">跟踪 &amp; 遮罩</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">运动跟踪，摄像机反求</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">剪辑视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../marker.html">跟踪标记</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editing/index.html">编辑</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../header.html">标题栏</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">属性</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../graph.html">曲线视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dope_sheet.html">动画摄影表视图</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../masking/index.html">制作遮罩</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/clip/index.html">影片剪辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">跟踪 &amp; 遮罩</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">运动跟踪，摄像机反求</a> &raquo;</li>
+        
+          <li><a href="../../index.html">剪辑视图</a> &raquo;</li>
+        
+          <li><a href="../index.html">属性</a> &raquo;</li>
+        
+          <li><a href="index.html">2D稳像</a> &raquo;</li>
+        
+      <li>简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../_sources/movie_clip/tracking/clip/properties/stabilization/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>二维视频稳定是建立在blender图像特征跟踪能力之上的一项功能：您可以使用一些跟踪点来消除视频片段中的抖动、颠簸和抖动。通常，图像稳定是二维工作流程的一部分，用于在进一步处理或建模步骤之前的准备和改进影片的稳定性。本页有助于理解它的工作原理，介绍相关术语和概念，详细描述可用的接口控件，最后给出一些在实践中使用的提示。</p>
+<p>稳定器的典型使用场景：</p>
+<ul class="simple">
+<li>修复小的缺陷（抖动三脚架，相机移动混乱）。</li>
+<li>“穷人的稳定摄像机软件”（当真正的稳定摄像机不可用时，这个可以负担得起或适用的）。</li>
+<li>作为遮罩准备，匹配和对位。</li>
+</ul>
+<p>2D稳定必须处理一些不完美和有缺陷的镜头。</p>
+<div class="section" id="how-it-works">
+<h2>如何工作<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h2>
+<p>为了检测特定镜头中的虚假运动，我们将假设一个关于这个运动的简化模型。然后，我们尝试用这个简化的模型来拟合跟踪特征的运动，以获得补偿。当然，这只适用于我们的模型已经足够的程度 - 但实际上，即使是相当复杂的镜头，这种简化方法的效果也令人惊讶，其中我们的基本假设只是更近似的精细运动。</p>
+<p>此处实现的二维稳定的简化模型假设通过仿射线性变换移动：</p>
+<ul class="simple">
+<li>相机由某个平移组件向上/向下/侧推。</li>
+<li>然后图像围绕一个轴点（旋转中心）倾斜和缩放。</li>
+</ul>
+<p>为了根据这个简化模型补偿运动，二维稳定器分两步进行。首先，我们尝试从所有 <em>变换</em> 跟踪点的加权平均值中检测平移偏移。在补偿了这个平移组件之后，我们使用附加的 <em>旋转/缩放</em> 跟踪点来检测围绕给定轴点的旋转。再次，我们通过给定的所有旋转/缩放跟踪点的加权平均值检测旋转和缩放变化。</p>
+<p>在当前版本中，轴点锚定到平移跟踪点的权重中心。因此，有效地检测到的变换已经被解算出来了。在某些情况下，这不是最佳的，特别是当跟踪路径有间隙或不覆盖整个视频时——我们计划进一步的选项来更好地控制未来版本中的轴心点。</p>
+<div class="section" id="stabilization-tracks">
+<h3>稳定跟踪<a class="headerlink" href="#stabilization-tracks" title="Permalink to this headline">¶</a></h3>
+<p>因此，作为任何图像稳定的基础，我们需要跟踪图像特征来导出运动。这些跟踪点或“轨迹”可以使用Blender的 <a class="reference internal" href="../../introduction.html"><span class="doc">Image Feature Tracking Component</span></a> 来建立，正确选择要跟踪的点有些困难，但对于成功的图像稳定至关重要。通常，我们来这里是因为我们必须处理不完美的镜头。在这种情况下，跟踪的平均值有助于在某一点上处理图像或跟踪错误。此外，当影像包含透视视差运动时，可利用对称放置在视界上下的跟踪点来消除伪运动，并使视界之间的焦区稳定。</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../../../_images/movie-clip_tracking_clip_properties_stabilization_introduction_perspective.jpg"><img alt="../../../../../_images/movie-clip_tracking_clip_properties_stabilization_introduction_perspective.jpg" src="../../../../../_images/movie-clip_tracking_clip_properties_stabilization_introduction_perspective.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">透视造成的偏离运动。</span></p>
+</div>
+<p>跟踪可以分为两组添加：</p>
+<ol class="arabic simple">
+<li>首先是用于补偿相机位置跳跃的轨迹列表。从添加到该组的所有跟踪点中，我们计算加权平均值。然后我们尝试在整个拍摄过程中保持这个平均位置不变。因此，最好在最重要的主题附近和中心使用跟踪标记。</li>
+<li>第二个轨迹选择用于保持图像的旋转和比例恒定。两种选择可以使用相同的跟踪路径。但通常情况下，最好使用距图像中心较远且两侧对称的跟踪点来更精确地捕捉角运动。与“位置”情况类似，我们计算平均角度贡献，然后在整个拍摄过程中保持该值不变。</li>
+</ol>
+</div>
+<div class="section" id="footage-image-and-canvas">
+<h3>镜头，图像和画布<a class="headerlink" href="#footage-image-and-canvas" title="Permalink to this headline">¶</a></h3>
+<p>在谈到视频的运动稳定性时，我们必须区分几个参照系。影片中的图像元素在影片的原始图像边界内不规则地移动——这就是我们使用稳定器的原因。当我们的稳定尝试成功时，图像元素现在可以被认为是稳定的，而作为交换，镜头的图像边界发生了不规则的移动，并以相反的方式跳跃。这是稳定启用的直接后果。</p>
+<p>由于实际的图像元素，即我们镜头的主题现在可以被认为是稳定的，我们可以将它们作为一个新的参照系：我们认为它们附着在一个固定的背景上，我们称之为画布。引入“画布”的概念有助于处理相机的故意移动。除此之外，它还带来了一个额外的好处：视频片段的像素常常是非方形的。所以我们必须拉伸和扩展这些像素，然后才能执行任何合理的旋转稳定。因此，根据定义，画布成为图像内容未失真显示的参考。</p>
+<p>但是当相机被有意移动时，我们必须考虑画布之外的另一个参照系：即我们想要创建的最终图像的框架（或“cadre”）。为了理解这一区别，让我们考虑一个手持的、向右平移的镜头：由于我们的相机转向了右侧，实际图像内容在*原始图像帧内*向左侧移动。但是假设稳定器成功地“修复”了与画布相关的任何图像内容——这反过来意味着原始图像边界开始不规则地向右侧移动，图像内容将开始逐渐消失在左侧边界之后。原始图像的Y。经过一定量的平移，我们将丢失所有原始内容，只需看到一个空的黑色图像背景。解决这个问题的唯一方法是将最终的图像帧向右移动，从而跟随最初计划的平移移动。当然，这一次，我们希望以一种平滑和干净的方式执行这个新添加的平移操作。</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../../../_images/movie-clip_tracking_clip_properties_stabilization_introduction_panning.jpg"><img alt="../../../../../_images/movie-clip_tracking_clip_properties_stabilization_introduction_panning.jpg" src="../../../../../_images/movie-clip_tracking_clip_properties_stabilization_introduction_panning.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">稳定平移镜头。</span></p>
+</div>
+<div class="figure align-right" id="id3">
+<a class="reference internal image-reference" href="../../../../../_images/movie-clip_tracking_clip_properties_stabilization_introduction_canvas.jpg"><img alt="../../../../../_images/movie-clip_tracking_clip_properties_stabilization_introduction_canvas.jpg" src="../../../../../_images/movie-clip_tracking_clip_properties_stabilization_introduction_canvas.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">恢复预期的相机移动。</span></p>
+</div>
+<p>为了进行补偿并重新引入有意的平移或倾斜和缩放结果图像，稳定器提供一套专用的控制装置：<em>预期位置</em> 、 <em>预期旋转</em> 和 <em>预期比例</em>。这些功能就像是一个虚拟摄像机的控制，拍摄我们固定在画布上的内容。通过设置这些参数的动画，我们能够以一种平滑的方式执行各种有意识的相机动作。</p>
+<div class="lead docutils container">
+</div>
+</div>
+<div class="section" id="the-dancing-black-borders">
+<h3>“舞动的”黑色边框<a class="headerlink" href="#the-dancing-black-borders" title="Permalink to this headline">¶</a></h3>
+<p>如上所述，当我们成功地稳定图像内容时，原始胶片的边界开始向补偿运动的相反方向跳跃。这是不可避免的——但非常烦人，因为由于这些动作的不规则性质，这些“舞动的黑色边界”往往会分散实际主题的注意力，并引入烦人的不安。因此，我们的目标必须是尽可能地隐藏那些跳舞的边界。一个简单的解决方案是添加少量的缩放。有时我们还需要设置参数 <em>预期</em> 位置的动画，以便尽可能地保持图像居中--这有助于减少删除这些烦人边界所需的缩放量。</p>
+<p><em>自动缩放</em> 功能可用于查找最小的缩放量，以完全消除这些黑色边框。但是，如果相机跳跃过多，自动缩放功能通常会放大过多，特别是因为该计算旨在在整个镜头持续时间内找到单个静态缩放系数。当发生这种情况时，您通常会通过手动设置缩放系数和预期位置的动画来获得总体更好的结果。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="panel.html" class="btn btn-neutral float-right" title="2D稳定面板" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="2D稳像" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/controls/nodes/introduction.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="节点部件" href="parts.html" />
+    <link rel="prev" title="节点" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">用户界面</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../splash.html">启动画面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#window-system">窗口系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#keymap">键位映射</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#interface-controls">界面控件</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#buttons-and-controls">按钮与控件</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#extended-controls">扩展控件</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../templates/data_block.html">数据块菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/list_presets.html">列表视图 &amp; 预设</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/color_picker.html">拾色器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/color_ramp.html">颜色渐变部件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/curve.html">曲线部件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/operator_search.html">操作搜索</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">节点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#tools">工具</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">用户界面</a> &raquo;</li>
+        
+          <li><a href="index.html">节点</a> &raquo;</li>
+        
+      <li>简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/interface/controls/nodes/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>不同的节点编辑器可用于不同的工作流中使用，每个节点编辑器都有特别的用途。所以，这节只讲通用节点是如何工作的。在下面的列表中展示了不同类型的节点树与他们的文档的位置。</p>
+<div class="figure" id="id1">
+<img alt="../../../_images/interface_controls_nodes_introduction_example.jpg" src="../../../_images/interface_controls_nodes_introduction_example.jpg" />
+<p class="caption"><span class="caption-text">节点编辑器示例。</span></p>
+</div>
+<table border="1" class="colwidths-given valign docutils" id="tab-node-tree-types">
+<colgroup>
+<col width="10%" />
+<col width="30%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">图标</th>
+<th class="head">名称</th>
+<th class="head">文档</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><div class="first last figure">
+<img alt="../../../_images/interface_controls_nodes_introduction_icons-material.png" src="../../../_images/interface_controls_nodes_introduction_icons-material.png" />
+</div>
+</td>
+<td>着色节点</td>
+<td>文档在 <a class="reference internal" href="../../../render/shader_nodes/index.html"><span class="doc">渲染</span></a> 章节里.</td>
+</tr>
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="../../../_images/interface_controls_nodes_introduction_icons-render-layers.png" src="../../../_images/interface_controls_nodes_introduction_icons-render-layers.png" />
+</div>
+</td>
+<td>合成节点</td>
+<td>文档可以在 <a class="reference internal" href="../../../compositing/index.html"><span class="doc">合成</span></a> 章节里找到。</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure">
+<img alt="../../../_images/interface_controls_nodes_introduction_icons-texture.png" src="../../../_images/interface_controls_nodes_introduction_icons-texture.png" />
+</div>
+</td>
+<td>纹理节点</td>
+<td>纹理节点覆盖在 <a class="reference internal" href="../../../editors/texture_node/introduction.html"><span class="doc">UV编辑器</span></a> 的文档里。</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="editor-interface">
+<h2>编辑器界面<a class="headerlink" href="#editor-interface" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="header">
+<h3>标题栏<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h3>
+<p><em>标题栏</em> 包含一系列的菜单，按钮和选项，部分是基于当前节点树类型而定的。</p>
+<div class="figure" id="id2">
+<img alt="../../../_images/interface_controls_nodes_introduction_header.png" src="../../../_images/interface_controls_nodes_introduction_header.png" />
+<p class="caption"><span class="caption-text">常用节点编辑器标题栏选项。</span></p>
+</div>
+<dl class="docutils">
+<dt>视图</dt>
+<dd>这个菜单可以更改编辑器的视图。</dd>
+<dt>选择</dt>
+<dd>这个菜单可以选择或者成组一些节点。</dd>
+<dt>添加</dt>
+<dd>这个菜单用于添加节点。</dd>
+<dt>节点</dt>
+<dd>这个菜单用于操作选择的节点。</dd>
+<dt>使用节点</dt>
+<dd>当渲染引擎计算材质色和渲染最终图时，确定是否使用使用节点树。如果不勾选，将忽略节点材质。对于材质来说，这基本是遗留选项，因为在以前无法使用节点树合成材质。</dd>
+<dt>使用固定</dt>
+<dd>启用后，编辑器将保留材质或纹理编辑状态，即使用户选择其他对象也是如此。 然后可以独立于3D视图中的对象选择来编辑节点树。</dd>
+<dt>返回父节点按钮</dt>
+<dd>这个按钮可以返回父节点比如离开节点组时。</dd>
+<dt>吸附</dt>
+<dd>更改吸附节点位置的选项以实现更清晰的节点树布局。</dd>
+</dl>
+</div>
+<div class="section" id="toolbar">
+<h3>工具栏<a class="headerlink" href="#toolbar" title="Permalink to this headline">¶</a></h3>
+<p><em>工具栏</em> 包含使用节点的一些工具。</p>
+</div>
+<div class="section" id="sidebar">
+<h3>侧栏<a class="headerlink" href="#sidebar" title="Permalink to this headline">¶</a></h3>
+<p><em>侧栏</em> 区块包含当前选择节点在节点编辑器中尽可能有用的设置属性。</p>
+</div>
+</div>
+<div class="section" id="navigating">
+<h2>导航<a class="headerlink" href="#navigating" title="Permalink to this headline">¶</a></h2>
+<p>使用鼠标移动和键盘快捷键完成节点编辑器导航。</p>
+<dl class="docutils">
+<dt>平移 <kbd class="kbd docutils literal notranslate">MMB</kbd></dt>
+<dd>上下左右的平移视图。</dd>
+<dt>缩放视图 <kbd class="kbd docutils literal notranslate">Ctrl-MMB</kbd>, <kbd class="kbd docutils literal notranslate">Wheel</kbd></dt>
+<dd>前后移动摄影机位。</dd>
+<dt>查看选择</dt>
+<dd><kbd class="kbd docutils literal notranslate">NumpadPeriod</kbd></dd>
+<dt>查看全部</dt>
+<dd><kbd class="kbd docutils literal notranslate">Home</kbd></dd>
+</dl>
+</div>
+<div class="section" id="adding-nodes">
+<h2>添加节点<a class="headerlink" href="#adding-nodes" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">所有模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">工具栏</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Add</span></td>
+</tr>
+<tr class="field-even field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Shift-A</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>通过使用 <span class="menuselection">添加</span> 菜单，和快捷键 <kbd class="kbd docutils literal notranslate">Shift-A</kbd> 。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="parts.html" class="btn btn-neutral float-right" title="节点部件" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="节点" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

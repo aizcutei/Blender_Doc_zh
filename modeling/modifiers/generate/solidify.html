@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/modifiers/generate/solidify.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/solidify.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="表面细分修改器" href="subsurf.html" />
+    <link rel="next" title="表面细分修改器" href="subdivision_surface.html" />
     <link rel="prev" title="蒙皮修改器" href="skin.html" /> 
 </head>
 
@@ -94,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
@@ -105,6 +124,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common_options.html">常见的修改器选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html#generate">生成</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="array.html">阵列修改器</a></li>
@@ -120,7 +140,7 @@
 <li class="toctree-l4"><a class="reference internal" href="screw.html">螺旋修改器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="skin.html">蒙皮修改器</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">实体化修改器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="subsurf.html">表面细分修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subdivision_surface.html">表面细分修改器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="triangulate.html">三角化修改器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wireframe.html">线框修改器</a></li>
 </ul>
@@ -131,16 +151,17 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -216,92 +237,97 @@
             
   <div class="section" id="solidify-modifier">
 <span id="bpy-types-solidifymodifier"></span><h1>实体化修改器<a class="headerlink" href="#solidify-modifier" title="Permalink to this headline">¶</a></h1>
-<p>实体化修改器获取任意网格的表面，然后为之添加深度。</p>
+<p><em>实体化</em> 修改器获取任意网格的表面，然后为之添加深度，使之变厚。</p>
 <div class="section" id="options">
 <h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id1">
+<div class="figure align-right" id="id1">
 <img alt="../../../_images/modeling_modifiers_generate_solidify_panel.png" src="../../../_images/modeling_modifiers_generate_solidify_panel.png" />
-<p class="caption"><span class="caption-text">实体化修改器.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">实体化修改器。</span></p>
 </div>
-<dl>
-<dt>厚度</dt><dd><p>待加固的深度。</p>
-</dd>
-<dt>偏移量</dt><dd><p>(-1  到 1) 之间的值用以定位实体化输出在原网格的外侧还是内侧。设为 0.0 的话，实体化输出在原网格面的中央。</p>
-</dd>
-<dt>限定</dt><dd><p>(0到2) 之间的值用以限制偏移量，可以避免自相交。</p>
-<div class="figure align-center" id="id2">
+<dl class="docutils">
+<dt>厚度</dt>
+<dd>待实体化的深度。</dd>
+<dt>偏移量</dt>
+<dd>介于(-1到1)之间的值，用于定位原始网格内外的实体化输出。设置为0.0时，实体化后的输出将以原始网格为中心。</dd>
+<dt>钳制</dt>
+<dd><p class="first">用以限制偏移量的(0到2) 之间的值，可以避免自相交。</p>
+<div class="last figure" id="id2">
 <img alt="../../../_images/modeling_modifiers_generate_solidify_clamp.png" src="../../../_images/modeling_modifiers_generate_solidify_clamp.png" />
-<p class="caption"><span class="caption-text">限定偏移量.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">钳制偏移量。</span></p>
 </div>
 </dd>
-<dt>顶点组</dt><dd><p>仅该组的顶点进行实体化.权重系数会乘上厚度，这样低权重的顶点会更薄。</p>
-<dl class="simple">
-<dt>反转</dt><dd><p>反转顶点组，让 <strong>不</strong> 属于顶点组的顶点加固。</p>
-</dd>
-<dt>系数</dt><dd><p>顶点权重</p>
-<ul class="simple">
-<li><p>取 0.0 的话，权重为 0 的顶点将没有厚度。</p></li>
-<li><p>取 0.5 的话，权重为 0 的顶点的厚度是那些最大权重顶点厚度的一半。</p></li>
-<li><p>取 1.0 的话，权重被忽略，每个顶点都会使用 <em>厚度</em> 值。</p></li>
+<dt>顶点组</dt>
+<dd><p class="first">仅该组的顶点进行实体化.权重系数会乘上厚度，所以低权重的顶点会更薄。</p>
+<dl class="last docutils">
+<dt>反转</dt>
+<dd>反转顶点组，让 <strong>不</strong> 属于顶点组的顶点实体化。</dd>
+<dt>系数</dt>
+<dd><p class="first">有多少顶点权重会被考虑在内。</p>
+<ul class="last simple">
+<li>取 0.0 时，权重为 0 的顶点将没有厚度。</li>
+<li>取 0.5 时，权重为 0 的顶点的厚度是那些有最大权重顶点厚度的一半。</li>
+<li>取 1.0 时，权重被忽略，每个顶点都会使用 <em>厚度</em> 值。</li>
 </ul>
 </dd>
 </dl>
 </dd>
-<dt>折痕</dt><dd><p>这些选项是为了给同时使用 <a class="reference internal" href="subsurf.html"><span class="doc">表面细分修改器</span></a> 的.</p>
-<div class="figure align-center" id="id3">
+<dt>折痕</dt>
+<dd><p class="first">这些选项是为了给 <a class="reference internal" href="subdivision_surface.html"><span class="doc">表面细分修改器</span></a> 使用的。</p>
+<div class="figure" id="id3">
 <a class="reference internal image-reference" href="../../../_images/modeling_modifiers_generate_solidify_rims.png"><img alt="../../../_images/modeling_modifiers_generate_solidify_rims.png" src="../../../_images/modeling_modifiers_generate_solidify_rims.png" style="width: 350px;" /></a>
-<p class="caption"><span class="caption-text">边沿和棱。在这个例子里，物体被指定第二个之前用来给边沿上红色的材质</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">边沿和边。在这个例子里，物体被指定第二个之前用来给边沿上红色的材质</span></p>
 </div>
-<dl class="simple">
-<dt>内</dt><dd><p>为内部边设置折痕。</p>
-</dd>
-<dt>外表面</dt><dd><p>为外部边设置折痕。</p>
-</dd>
-<dt>框</dt><dd><p>为边沿边设置折痕。</p>
-</dd>
+<dl class="last docutils">
+<dt>内部</dt>
+<dd>为内部边设置折痕。</dd>
+<dt>外表面</dt>
+<dd>为外部边设置折痕。</dd>
+<dt>框</dt>
+<dd>为边沿边设置折痕。</dd>
 </dl>
 </dd>
-<dt>翻转法线</dt><dd><p>翻转所有几何形体的法线（包括内部和外部表面）。</p>
-</dd>
-<dt>均衡厚度</dt><dd><p>通过调整维持尖角的厚度。有时改善质量,但也会增加计算时间。</p>
-</dd>
-<dt>高品质法线</dt><dd><p>通过计算法线来获取更均匀的厚度。这样做有时可以提升质量，但也增加了计算时间。</p>
-</dd>
-<dt>填充边缘</dt><dd><p>填充内部和外部边之间的间隙。</p>
-</dd>
-<dt>仅边沿</dt><dd><p>不会有与原始平行的挤出表面，而是只有垂直边。</p>
-</dd>
+<dt>翻转法线</dt>
+<dd>翻转所有几何形体的法线（包括内部和外部表面）。</dd>
+<dt>均衡厚度</dt>
+<dd>过调整尖角来保持厚度。有时提高质量，但也增加了计算时间。</dd>
+<dt>高品质法线</dt>
+<dd>通过计算法线来获取更均匀的厚度。这样做有时可以提升质量，但也增加了计算时间。</dd>
+<dt>填充边缘</dt>
+<dd>填充内部和外部边之间的间隙。</dd>
+<dt>仅边沿</dt>
+<dd>不会有与原始平行地挤出表面，而是只会生成垂直的边沿。</dd>
 </dl>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><em>填充边沿</em> 和 <em>仅边沿</em> 仅在  <a class="reference internal" href="../../../glossary/index.html#term-non-manifold"><span class="xref std std-term">非流形</span></a> 物体上有区别，因为 <em>边沿</em> 是从原几何形体的边界产生的。</p>
+<p class="first admonition-title">Note</p>
+<p class="last"><em>填充边沿</em> 和 <em>仅边沿</em> 仅在 <a class="reference internal" href="../../../glossary/index.html#term-non-manifold"><span class="xref std std-term">非流形</span></a> 物体上有区别，因为 <em>边沿</em> 是从原几何形体的边界产生的。</p>
 </div>
-<dl>
-<dt>材质索引偏移量</dt><dd><p>对新的几何体选择不同的材质使用；这作为加固面原材质的偏移量而使用。</p>
+<dl class="docutils">
+<dt>材质编号偏移</dt>
+<dd><p class="first">对新的几何体选择不同的材质使用。这作为实体化面的原始材质的偏移量而使用。</p>
 <ul class="simple">
-<li><p>值为 0 则使用相同的材质。</p></li>
-<li><p>值为 1 则使用原始材料正下方的材质。</p></li>
-<li><p>值为 -2 则使用原始材料上方两个单位的材质。</p></li>
+<li>值为 0 则使用相同的材质。</li>
+<li>值为 1 则使用原始材料正下方的材质。</li>
+<li>值为 -2 则使用原始材料上方两个单位的材质。</li>
 </ul>
-<p>它们夹钳到最上和最下材质的材质槽里。</p>
-<dl class="simple">
-<dt>框</dt><dd><p>同样的，你也可以给另一个材质到边沿的面上。</p>
-</dd>
+<p>这些是夹在最顶部和底部材料槽。</p>
+<dl class="last docutils">
+<dt>框</dt>
+<dd>同样的，你也可以赋予边沿面另一个材质。</dd>
 </dl>
 </dd>
 </dl>
 <div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>修改器的厚度是用局部顶点坐标计算的。如果物体用了非均匀缩放，厚度在物体不同的边上会有所变化。</p>
-<p>为了修复这个问题，需要应用 <kbd class="kbd docutils literal notranslate">Ctrl-A</kbd> 或 清除 <kbd class="kbd docutils literal notranslate">Alt-S</kbd> 缩放。</p>
+<p class="first admonition-title">Important</p>
+<p>修改器的厚度是用局部顶点坐标计算的。如果物体用了非均匀缩放，厚度在物体不同的面上会有所变化。</p>
+<p class="last">要解决这个问题，可以使用 <a class="reference internal" href="../../../scene_layout/object/editing/transform/clear_apply.html#bpy-ops-object-transform-apply"><span class="std std-ref">应用缩放</span></a> 或 <a class="reference internal" href="../../../scene_layout/object/editing/transform/clear_apply.html#bpy-ops-object-clear"><span class="std std-ref">清除缩放</span></a> 。</p>
 </div>
 </div>
 <div class="section" id="known-limitations">
 <h2>已知局限<a class="headerlink" href="#known-limitations" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="even-thickness">
 <h3>均衡厚度<a class="headerlink" href="#even-thickness" title="Permalink to this headline">¶</a></h3>
-<p>实体化厚度是近似值。 虽然 <em>均匀厚度</em> 和 <em>高质量法线</em> 应该产生良好的结果，但最终的壁厚不能得到保证，并且可能根据网格拓扑而变化。</p>
-<p>为了在每种情况下都能维持精确的壁厚，可能需要添加或移除偏移外壳上的面,一些这个修改器不会做的事，因为这样会添加很多复杂性，让修改器变慢。</p>
+<p>实体化厚度是近似值。 虽然 <em>均匀厚度</em> 和 <em>高质量法线</em> 应该产生良好的结果，但最终的壁厚不能得到保证，并且可能根据网格拓扑结构而变化。</p>
+<p>为了在每种情况下都能维持精确的壁厚，可能需要添加或移除偏移外壳上的面，这是修改器不会做的事，因为这样会添加很多复杂性，让修改器变慢。</p>
 </div>
 </div>
 </div>
@@ -314,7 +340,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="subsurf.html" class="btn btn-neutral float-right" title="表面细分修改器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="subdivision_surface.html" class="btn btn-neutral float-right" title="表面细分修改器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="skin.html" class="btn btn-neutral float-left" title="蒙皮修改器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

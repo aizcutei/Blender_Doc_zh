@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devphysics/fluid/baking.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/fluid/baking.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="流体附录" href="appendix.html" />
@@ -94,41 +113,43 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gravity.html">重力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloth/index.html">布料模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../particles/index.html">Particles System</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">流体模拟</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/index.html">流体类型</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">烘焙</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bake-button">烘焙按钮</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bake-directory">烘焙目录</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#notes">注意事项</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html">流体附录</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../forces/index.html">Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collision.html">碰撞</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../baking.html">烘焙物理模拟</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#physics-types">物理类型</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../force_fields/index.html">力场</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../collision.html">碰撞</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../cloth/index.html">布料模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">流体模拟</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="types/index.html">流体类型</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">烘焙</a></li>
-<li class="toctree-l4"><a class="reference internal" href="appendix.html">流体附录</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rigid_body/index.html">刚体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../particles/index.html">Particles System</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -204,13 +225,14 @@
             
   <div class="section" id="baking">
 <span id="fluid-baking"></span><h1>烘焙<a class="headerlink" href="#baking" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-center" id="id1">
-<img alt="../../_images/physics_fluid_types_domain_panels.png" src="../../_images/physics_fluid_types_domain_panels.png" />
-<p class="caption"><span class="caption-text">选定流体域的流体模拟选项。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
 <div class="section" id="bake-button">
 <h2>烘焙按钮<a class="headerlink" href="#bake-button" title="Permalink to this headline">¶</a></h2>
-<p>执行真实的流体模拟。Blender将继续正常工作，但会出现在信息编辑器的头部一个进度条，靠近渲染下拉（render pulldown）。按Esc或旁边的状态栏的&quot;X&quot;将中止模拟。完成后2个.bobj.gz文件 （一个用于最终质量，一个用于预览质量），加上一个.bvel.gz文件 （用于最终质量）将在每一帧的选择的输出目录内生成。</p>
+<p>Perform the actual fluid simulation. Blender will continue to work normally,
+except the progress will be displayed in the statusbar.
+Pressing <kbd class="kbd docutils literal notranslate">Esc</kbd> or the &quot;X&quot; button next to the statusbar will abort the simulation.
+Afterwards two <code class="docutils literal notranslate"><span class="pre">.bobj.gz</span></code> (one for the <em>Final</em> quality, one for the <em>Preview</em> quality),
+plus one <code class="docutils literal notranslate"><span class="pre">.bvel.gz</span></code> (for the <em>Final</em> quality)
+will be in the selected output directory for each frame.</p>
 </div>
 <div class="section" id="bake-directory">
 <h2>烘焙目录<a class="headerlink" href="#bake-directory" title="Permalink to this headline">¶</a></h2>
@@ -219,21 +241,22 @@
 </div>
 <div class="section" id="notes">
 <h2>注意事项<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
-<dl>
-<dt>唯一的域（全局域domain）</dt><dd><p>由于存在场景之间的连接和跨越的可能性，整个blend-file中只存在一个流体域（全局域domain）。</p>
-</dd>
-<dt>选择烘焙域</dt><dd><p>当一个流体域被烘焙后，他的改变将映射到流体网格上。如要重新选择域，可以让您在进行了更改之后重新烘焙，只要选择任意帧并按住RMB选取流体网格即可。然后，你可以再次点击按钮烘焙（bake）来重新计算该流体域内的流体流动。</p>
-</dd>
-<dt>烘焙总是开始于帧＃1</dt><dd><p>流体仿真无视在动画面板1中的开始设置，它总是会从第1帧烘焙。如果你想模拟在第1帧之后开始，则必须控制您的流体域中的流体对象直到你的期望帧开始模拟之前都处于非活动状态。</p>
-</dd>
-<dt>烘焙总是在动画面板中设置的结束帧结束。</dt><dd><p>如果你的帧速率是每秒25帧，而结束时间为4.0秒时，那么你应该（如果你的起始时间为0）设置你的动画结束帧为 <code class="docutils literal notranslate"><span class="pre">4.0</span> <span class="pre">×</span> <span class="pre">25</span> <span class="pre">=</span> <span class="pre">100</span></code>。</p>
-</dd>
-<dt>释放以前的已应用烘焙方案</dt><dd><p>删除“烘焙”目录下的内容是一个破坏性的实现方式。要小心，如果超过一个以上的模拟使用相同的烘焙目录（确保它们使用不同的文件名，否则他们会互相覆盖的）！</p>
-</dd>
-<dt>烘焙重用</dt><dd><p>手动输入(或搜索)以前保存(已烘焙)的计算目录和文件名，可将流体流动和网格形变切换为使用之前的烘焙。这样，可以简单地通过在该文本框指定流体烘焙，实现重复使用。</p>
-</dd>
-<dt>烘焙过程处理时间</dt><dd><p>烘焙需要大量的计算能力（因此消耗时间）。根据场景的不同，可能最好是整夜进行烘焙过程。</p>
-<p>如果网格具有调整器，渲染设置可用于将网格导出到流体求解器内。根据设置的不同，计算时间和内存使用可能会成倍增加。例如，当使用具有细分曲面的动网格描述一个障碍时，可通过关闭，或降低细分级别以减少模拟时间。当安装/建立（setup/rig）正确时，你总是可以通过增加设置来产生更逼真的模拟结果。</p>
+<dl class="docutils">
+<dt>唯一的域（全局域domain）</dt>
+<dd>由于存在场景之间的连接和跨越的可能性，整个blend-file中只存在一个流体域（全局域domain）。</dd>
+<dt>选择烘焙域</dt>
+<dd>当一个流体域被烘焙后，他的改变将映射到流体网格上。如要重新选择域，可以让您在进行了更改之后重新烘焙，只要选择任意帧并按住RMB选取流体网格即可。然后，你可以再次点击按钮烘焙（bake）来重新计算该流体域内的流体流动。</dd>
+<dt>烘焙总是开始于帧＃1</dt>
+<dd>流体仿真无视在动画面板1中的开始设置，它总是会从第1帧烘焙。如果你想模拟在第1帧之后开始，则必须控制您的流体域中的流体对象直到你的期望帧开始模拟之前都处于非活动状态。</dd>
+<dt>烘焙总是在动画面板中设置的结束帧结束。</dt>
+<dd>如果你的帧速率是每秒25帧，而结束时间为4.0秒时，那么你应该（如果你的起始时间为0）设置你的动画结束帧为 <code class="docutils literal notranslate"><span class="pre">4.0</span> <span class="pre">×</span> <span class="pre">25</span> <span class="pre">=</span> <span class="pre">100</span></code>。</dd>
+<dt>释放以前的已应用烘焙方案</dt>
+<dd>删除“烘焙”目录下的内容是一个破坏性的实现方式。要小心，如果超过一个以上的模拟使用相同的烘焙目录（确保它们使用不同的文件名，否则他们会互相覆盖的）！</dd>
+<dt>烘焙重用</dt>
+<dd>手动输入(或搜索)以前保存(已烘焙)的计算目录和文件名，可将流体流动和网格形变切换为使用之前的烘焙。这样，可以简单地通过在该文本框指定流体烘焙，实现重复使用。</dd>
+<dt>烘焙过程处理时间</dt>
+<dd><p class="first">烘焙需要大量的计算能力（因此消耗时间）。根据场景的不同，可能最好是整夜进行烘焙过程。</p>
+<p class="last">如果网格具有调整器，渲染设置可用于将网格导出到流体求解器内。根据设置的不同，计算时间和内存使用可能会成倍增加。例如，当使用具有细分曲面的动网格描述一个障碍时，可通过关闭，或降低细分级别以减少模拟时间。当安装/建立（setup/rig）正确时，你总是可以通过增加设置来产生更逼真的模拟结果。</p>
 </dd>
 </dl>
 </div>

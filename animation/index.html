@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>动画 &mdash; Blender Manual</title>
+  <title>动画 &amp; 绑定 &mdash; Blender Manual</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devanimation/index.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/index.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="简介" href="introduction.html" />
-    <link rel="prev" title="Lattice 晶格" href="../rigging/lattice.html" /> 
+    <link rel="prev" title="Weights Menu" href="../grease_pencil/modes/weight_paint/weights_menu.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,13 +113,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">动画</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">动画 &amp; 绑定</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armatures/index.html">骨架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lattice.html">Lattice 晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints/index.html">约束</a></li>
 <li class="toctree-l2"><a class="reference internal" href="actions.html">动作</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drivers/index.html">驱动器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="markers.html">标记</a></li>
@@ -111,10 +133,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
 </ul>
@@ -165,7 +188,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>动画</li>
+      <li>动画 &amp; 绑定</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -184,18 +207,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="animation">
-<span id="bpy-ops-anim"></span><span id="animation-index"></span><h1>动画<a class="headerlink" href="#animation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="animation-rigging">
+<span id="bpy-ops-anim"></span><span id="animation-index"></span><h1>动画 &amp; 绑定<a class="headerlink" href="#animation-rigging" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">简介</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#state-colors">状态颜色</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#rigging">绑定</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="keyframes/index.html">关键帧</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="keyframes/introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="keyframes/editing.html">编辑</a></li>
 <li class="toctree-l2"><a class="reference internal" href="keyframes/keying_sets.html">插帧集</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="armatures/index.html">骨架</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="armatures/introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armatures/bones/index.html">骨骼</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armatures/properties/index.html">属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armatures/structure.html">结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armatures/skinning/index.html">蒙皮</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armatures/posing/index.html">姿态</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lattice.html">Lattice 晶格</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lattice.html#editing">编辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lattice.html#properties">属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lattice.html#usage">用法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="constraints/index.html">约束</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="constraints/introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints/index.html#interface">界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints/index.html#motion-tracking">运动追踪</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints/index.html#transform">变换</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints/index.html#tracking">追踪</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints/index.html#relationship">关系</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="actions.html">动作</a><ul>
@@ -205,6 +253,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="drivers/index.html">驱动器</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="drivers/introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drivers/usage.html">Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drivers/drivers_panel.html">驱动器面板</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drivers/workflow_examples.html">工作流程 &amp; 范例</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drivers/troubleshooting.html">问题排查</a></li>
@@ -245,7 +294,7 @@
         <a href="introduction.html" class="btn btn-neutral float-right" title="简介" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../rigging/lattice.html" class="btn btn-neutral float-left" title="Lattice 晶格" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../grease_pencil/modes/weight_paint/weights_menu.html" class="btn btn-neutral float-left" title="Weights Menu" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

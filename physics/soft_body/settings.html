@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devphysics/soft_body/settings.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/soft_body/settings.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Forces" href="forces/index.html" />
@@ -94,42 +113,47 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gravity.html">重力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloth/index.html">布料模拟</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Soft Body</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">设置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#soft-body">Soft Body</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#soft-body-cache">Soft Body Cache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#soft-body-goal">Soft Body Goal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#soft-body-edges">Soft Body Edges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#soft-body-self-collision">Soft Body Self Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#soft-body-solver">Soft Body Solver</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="forces/index.html">Forces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="collision.html">Collision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html">范例</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../particles/index.html">Particles System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fluid/index.html">流体模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../forces/index.html">Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collision.html">碰撞</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../baking.html">烘焙物理模拟</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#physics-types">物理类型</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../force_fields/index.html">力场</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../collision.html">碰撞</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../cloth/index.html">布料模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">Soft Body</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">设置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="forces/index.html">Forces</a></li>
-<li class="toctree-l4"><a class="reference internal" href="collision.html">Collision</a></li>
-<li class="toctree-l4"><a class="reference internal" href="examples.html">范例</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../fluid/index.html">流体模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rigid_body/index.html">刚体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../particles/index.html">Particles System</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -208,49 +232,57 @@
 <div class="section" id="soft-body">
 <h2>Soft Body<a class="headerlink" href="#soft-body" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">Reference</p>
-<dl class="field-list simple">
-<dt class="field-odd">Panel</dt>
-<dd class="field-odd"><p><span class="menuselection">Physics ‣ Soft Body</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">Reference</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Panel:</th><td class="field-body"><span class="menuselection">Physics ‣ Soft Body</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<dl class="simple">
-<dt>Object</dt><dd><dl class="simple">
-<dt>Friction</dt><dd><p>The friction of the surrounding medium. Generally friction dampens a movement.
+<dl class="docutils">
+<dt>Collision Collection</dt>
+<dd>If set, soft body collides with objects from the collection, instead of using objects that are on the same layer.</dd>
+<dt>Object</dt>
+<dd><dl class="first last docutils">
+<dt>Friction</dt>
+<dd>The friction of the surrounding medium. Generally friction dampens a movement.
 The larger the friction, the more viscous is the medium.
-Friction always appears when a vertex moves relative to its surround medium.</p>
-</dd>
-<dt>Mass</dt><dd><p>Mass value for vertices.
+Friction always appears when a vertex moves relative to its surround medium.</dd>
+<dt>Mass</dt>
+<dd>Mass value for vertices.
 Larger mass slows down acceleration, except for gravity where the motion is constant regardless of mass.
-Larger mass means larger inertia, so also braking a soft body is more difficult.</p>
-</dd>
-<dt>Mass Vertex Group</dt><dd><p>You can paint weights and use a specified vertex group for mass values.</p>
-</dd>
+Larger mass means larger inertia, so also braking a soft body is more difficult.</dd>
+<dt>Control Point</dt>
+<dd>You can paint weights and use a specified vertex group for mass values.</dd>
 </dl>
 </dd>
-<dt>Simulation</dt><dd><dl class="simple">
-<dt>Speed</dt><dd><p>You can control the internal timing of the soft body system with this value.
+<dt>Simulation</dt>
+<dd><dl class="first last docutils">
+<dt>Speed</dt>
+<dd>You can control the internal timing of the soft body system with this value.
 It sets the correlation between frame rate and tempo of the simulation.
-A free falling body should cover a distance of about five meters after one second.
+A free falling body should cover a distance of about ten meters after one second.
 You can adjust the scale of your scene and simulation with this correlation. If you
-render with 25 frames per second and 1 meter shall be 1 BU, you will have to set <em>Speed</em> to 1.3.</p>
-</dd>
+render with 25 frames per second, you will have to set <em>Speed</em> to 1.3.</dd>
 </dl>
-</dd>
-<dt>Collision Group</dt><dd><p>If set, soft body collides with objects from the group, instead of using objects that are on the same layer.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="soft-body-cache">
 <h2>Soft Body Cache<a class="headerlink" href="#soft-body-cache" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">Reference</p>
-<dl class="field-list simple">
-<dt class="field-odd">Panel</dt>
-<dd class="field-odd"><p><span class="menuselection">Physics ‣ Soft Body Cache</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">Reference</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Panel:</th><td class="field-body"><span class="menuselection">Physics ‣ Soft Body ‣ Cache</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>Soft Body physics simulations use a unified system for caching and baking.
 See <a class="reference internal" href="../particles/emitter/cache.html"><span class="doc">Particle Cache</span></a> and
@@ -259,38 +291,44 @@ See <a class="reference internal" href="../particles/emitter/cache.html"><span c
 <div class="section" id="soft-body-goal">
 <span id="physics-softbody-settings-goal"></span><h2>Soft Body Goal<a class="headerlink" href="#soft-body-goal" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">Reference</p>
-<dl class="field-list simple">
-<dt class="field-odd">Panel</dt>
-<dd class="field-odd"><p><span class="menuselection">Physics ‣ Soft Body Goal</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">Reference</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Panel:</th><td class="field-body"><span class="menuselection">Physics ‣ Soft Body ‣ Goal</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<dl>
-<dt>Use Goal</dt><dd><p>Enabling this tells Blender to use the motion from animations
+<dl class="docutils">
+<dt>Use Goal</dt>
+<dd><p class="first">Enabling this tells Blender to use the motion from animations
 (F-curves, armatures, parents, lattices, etc.) in the simulation.
 The &quot;goal&quot; is the desired end position for vertices based on this animation.</p>
-<p>See <a class="reference internal" href="forces/exterior.html#physics-softbody-forces-exterior-goal"><span class="std std-ref">exterior forces</span></a> for details.</p>
+<p class="last">See <a class="reference internal" href="forces/exterior.html#physics-softbody-forces-exterior-goal"><span class="std std-ref">exterior forces</span></a> for details.</p>
 </dd>
-<dt>Goal Strength</dt><dd><dl class="simple">
-<dt>Default</dt><dd><p>Goal weight/strength for all vertices when no <em>Vertex Group</em> is assigned.
-If you use a vertex group the weight of a vertex defines its goal.</p>
-</dd>
-<dt>Minimum/Maximum</dt><dd><p>When you use a vertex group, you can use the <em>Minimum</em> and <em>Maximum</em> to fine-tune (clamp) the weight values.
-The lowest vertex weight will become <em>Minimum</em>, the highest value becomes <em>Maximum</em>.</p>
-</dd>
-<dt>Vertex Group</dt><dd><p>Use a vertex group to allow per-vertex goal weights (multiplied by the <em>Default</em> goal).</p>
-</dd>
+<dt>Vertex Group</dt>
+<dd>Use a vertex group to allow per-vertex goal weights (multiplied by the <em>Default</em> goal).</dd>
+<dt>Goal Settings</dt>
+<dd><dl class="first last docutils">
+<dt>Stiffness</dt>
+<dd>The spring stiffness for <em>Goal</em>. A low value creates very weak springs
+(more flexible &quot;attachment&quot; to the goal), a high value creates a strong spring
+(a stiffer &quot;attachment&quot; to the goal).</dd>
+<dt>Damping</dt>
+<dd>The friction coefficient for <em>Goal</em>. Higher values give damping of the spring effect (little jiggle),
+and the movement will soon come to an end.</dd>
 </dl>
 </dd>
-<dt>Goal Settings</dt><dd><dl class="simple">
-<dt>Stiffness</dt><dd><p>The spring stiffness for <em>Goal</em>. A low value creates very weak springs
-(more flexible &quot;attachment&quot; to the goal), a high value creates a strong spring
-(a stiffer &quot;attachment&quot; to the goal).</p>
-</dd>
-<dt>Damping</dt><dd><p>The friction coefficient for <em>Goal</em>. Higher values give damping of the spring effect (little jiggle),
-and the movement will soon come to an end.</p>
-</dd>
+<dt>Goal Strength</dt>
+<dd><dl class="first last docutils">
+<dt>Default</dt>
+<dd>Goal weight/strength for all vertices when no <em>Vertex Group</em> is assigned.
+If you use a vertex group the weight of a vertex defines its goal.</dd>
+<dt>Minimum/Maximum</dt>
+<dd>When you use a vertex group, you can use the <em>Minimum</em> and <em>Maximum</em> to fine-tune (clamp) the weight values.
+The lowest vertex weight will become <em>Minimum</em>, the highest value becomes <em>Maximum</em>.</dd>
 </dl>
 </dd>
 </dl>
@@ -298,77 +336,86 @@ and the movement will soon come to an end.</p>
 <div class="section" id="soft-body-edges">
 <span id="physics-softbody-settings-edges"></span><h2>Soft Body Edges<a class="headerlink" href="#soft-body-edges" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">Reference</p>
-<dl class="field-list simple">
-<dt class="field-odd">Panel</dt>
-<dd class="field-odd"><p><span class="menuselection">Physics ‣ Soft Body Edges</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">Reference</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Panel:</th><td class="field-body"><span class="menuselection">Physics ‣ Soft Body ‣ Edges</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<dl>
-<dt>Use Edges</dt><dd><p>Allow the edges in a mesh object to act like springs.
-See <a class="reference internal" href="forces/interior.html"><span class="doc">interior forces</span></a>.</p>
-</dd>
-<dt>Springs</dt><dd><dl>
-<dt>Pull</dt><dd><p>The spring stiffness for edges (how much the edges are allowed to stretch).
+<dl class="docutils">
+<dt>Use Edges</dt>
+<dd>Allow the edges in a mesh object to act like springs.
+See <a class="reference internal" href="forces/interior.html"><span class="doc">interior forces</span></a>.</dd>
+<dt>Springs</dt>
+<dd><dl class="first last docutils">
+<dt>Springs</dt>
+<dd>Use a specified vertex group for spring strength values.</dd>
+<dt>Pull</dt>
+<dd><p class="first">The spring stiffness for edges (how much the edges are allowed to stretch).
 A low value means very weak springs (a very elastic material),
 a high value is a strong spring (a stiffer material) that resists being pulled apart.</p>
-<p>A value of 0.5 is latex, 0.9 is like a sweater, 0.999 is a highly-starched napkin or leather.
+<p class="last">A value of 0.5 is latex, 0.9 is like a sweater, 0.999 is a highly-starched napkin or leather.
 The soft body simulation tends to get unstable if you use a value of 0.999,
 so you should lower this value a bit if that happens.</p>
 </dd>
-<dt>Push</dt><dd><p>How much the soft body resists being scrunched together, like a compression spring.
-Low values for fabric, high values for inflated objects and stiff material.</p>
-</dd>
-<dt>Damp</dt><dd><p>The friction for edge springs. High values (max of 50) dampen the <em>Push</em>/<em>Pull</em> effect and calm down the cloth.</p>
-</dd>
-<dt>Plasticity</dt><dd><p>Permanent deformation of the object after a collision.
-The vertices take a new position without applying the modifier.</p>
-</dd>
-<dt>Bending</dt><dd><p>This option creates virtual connections between a vertex and the vertices connected to its neighbors.
-This includes diagonal edges. Damping also applies to these connections.</p>
-</dd>
-<dt>Length</dt><dd><p>The edges can shrink or be blown up. This value is given in percent,
-0 disables this function. 100% means no change, the body keeps 100% of his size.</p>
-</dd>
-<dt>Springs</dt><dd><p>Use a specified vertex group for spring strength values.</p>
-</dd>
+<dt>Push</dt>
+<dd>How much the soft body resists being scrunched together, like a compression spring.
+Low values for fabric, high values for inflated objects and stiff material.</dd>
+<dt>Damp</dt>
+<dd>The friction for edge springs. High values (max of 50) dampen the <em>Push</em>/<em>Pull</em> effect and calm down the cloth.</dd>
+<dt>Plasticity</dt>
+<dd>Permanent deformation of the object after a collision.
+The vertices take a new position without applying the modifier.</dd>
+<dt>Bending</dt>
+<dd>This option creates virtual connections between a vertex and the vertices connected to its neighbors.
+This includes diagonal edges. Damping also applies to these connections.</dd>
+<dt>Length</dt>
+<dd>The edges can shrink or be blown up. This value is given in percent,
+0 disables this function. 100% means no change, the body keeps 100% of his size.</dd>
 </dl>
 </dd>
-<dt>Stiff Quads</dt><dd><dl class="simple">
-<dt>Use Stiff Quads</dt><dd><p>For quad faces, the diagonal edges are used as springs.
-This stops quad faces to collapse completely on collisions (what they would do otherwise).</p>
-</dd>
-<dt>Shear</dt><dd><p>Stiffness of the virtual springs created for quad faces.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<dl id="physics-softbody-settings-aerodynamics">
-<dt>Aerodynamics</dt><dd><p>Force from surrounding media.
-See <a class="reference internal" href="forces/exterior.html#physics-softbody-forces-exterior-aerodynamics"><span class="std std-ref">exterior forces</span></a> for details.</p>
-<dl class="simple">
-<dt>Type</dt><dd><dl class="simple">
-<dt>Simple</dt><dd><p>Edges receive a drag force from the surrounding media.</p>
-</dd>
-<dt>Lift Force</dt><dd><p>Edges receive a lift force when passing through the surrounding media.</p>
-</dd>
-</dl>
-</dd>
-<dt>Factor</dt><dd><p>How much aerodynamic force to use. Try a value of 30 at first.</p>
-</dd>
-</dl>
-</dd>
-<dt>Collision</dt><dd><dl class="simple">
-<dt>Edge</dt><dd><p>Checks for edges of the soft body mesh colliding.</p>
-</dd>
-<dt>Face</dt><dd><p>Checks for any portion of the face of the soft body mesh colliding (computationally intensive!).
+<dt>Collision</dt>
+<dd><dl class="first last docutils">
+<dt>Edge</dt>
+<dd>Checks for edges of the soft body mesh colliding.</dd>
+<dt>Face</dt>
+<dd>Checks for any portion of the face of the soft body mesh colliding (computationally intensive!).
 While <em>Face</em> enabled is great, and solves lots of collision errors,
 there does not seem to be any dampening settings for it,
 so parts of the soft body object near a collision mesh tend to &quot;jitter&quot; as they bounce off and fall back,
 even when there is no motion of any meshes. Edge collision has dampening, so that can be controlled,
-but Deflection dampening value on a collision object does not seem to affect the face collision.</p>
+but Deflection dampening value on a collision object does not seem to affect the face collision.</dd>
+</dl>
 </dd>
+</dl>
+<dl class="docutils" id="physics-softbody-settings-aerodynamics">
+<dt>Aerodynamics</dt>
+<dd><p class="first">Force from surrounding media.
+See <a class="reference internal" href="forces/exterior.html#physics-softbody-forces-exterior-aerodynamics"><span class="std std-ref">exterior forces</span></a> for details.</p>
+<dl class="last docutils">
+<dt>Type</dt>
+<dd><dl class="first last docutils">
+<dt>Simple</dt>
+<dd>Edges receive a drag force from the surrounding media.</dd>
+<dt>Lift Force</dt>
+<dd>Edges receive a lift force when passing through the surrounding media.</dd>
+</dl>
+</dd>
+<dt>Factor</dt>
+<dd>How much aerodynamic force to use. Try a value of 30 at first.</dd>
+</dl>
+</dd>
+<dt>Stiff Quads</dt>
+<dd><dl class="first last docutils">
+<dt>Use Stiff Quads</dt>
+<dd>For quad faces, the diagonal edges are used as springs.
+This stops quad faces to collapse completely on collisions (what they would do otherwise).</dd>
+<dt>Shear</dt>
+<dd>Stiffness of the virtual springs created for quad faces.</dd>
 </dl>
 </dd>
 </dl>
@@ -376,53 +423,56 @@ but Deflection dampening value on a collision object does not seem to affect the
 <div class="section" id="soft-body-self-collision">
 <span id="physics-softbody-settings-self-collision"></span><h2>Soft Body Self Collision<a class="headerlink" href="#soft-body-self-collision" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">Reference</p>
-<dl class="field-list simple">
-<dt class="field-odd">Panel</dt>
-<dd class="field-odd"><p><span class="menuselection">Physics ‣ Soft Body Self Collision</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">Reference</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Panel:</th><td class="field-body"><span class="menuselection">Physics ‣ Soft Body ‣ Self Collision</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><em>Self-Collision</em> is working only if you have activated <em>Use Edges</em>.</p>
+<p class="first admonition-title">Note</p>
+<p class="last"><em>Self-Collision</em> is working only if you have activated <em>Use Edges</em>.</p>
 </div>
-<dl class="simple">
-<dt>Self Collision</dt><dd><p>When enabled, allows you to control how Blender will prevent the soft body from intersecting with itself.
+<dl class="docutils">
+<dt>Self Collision</dt>
+<dd>When enabled, allows you to control how Blender will prevent the soft body from intersecting with itself.
 Every vertex is surrounded with an elastic virtual ball.
 Vertices may not penetrate the balls of other vertices.
 If you want a good result you may have to adjust the size of these balls.
-Normally it works pretty well with the default options.</p>
-</dd>
-<dt>Collision Type</dt><dd><dl class="simple">
-<dt>Manual</dt><dd><p>The <em>Ball Size</em> directly sets the ball size (in BU).</p>
-</dd>
-<dt>Average</dt><dd><p>The average length of all edges attached to the vertex is calculated and then multiplied
-with the <em>Ball Size</em> setting. Works well with evenly distributed vertices.</p>
-</dd>
-<dt>Minimal/Maximal</dt><dd><p>The ball size is as large as the smallest/largest spring length of the vertex multiplied with the <em>Ball Size</em>.</p>
-</dd>
-<dt>Average Min Max</dt><dd><p>Size = ((Min + Max)/2) × <em>Ball Size</em>.</p>
-</dd>
+Normally it works pretty well with the default options.</dd>
+<dt>Calculation Type</dt>
+<dd><dl class="first last docutils">
+<dt>Manual</dt>
+<dd>The <em>Ball Size</em> directly sets the ball size.</dd>
+<dt>Average</dt>
+<dd>The average length of all edges attached to the vertex is calculated and then multiplied
+with the <em>Ball Size</em> setting. Works well with evenly distributed vertices.</dd>
+<dt>Minimal/Maximal</dt>
+<dd>The ball size is as large as the smallest/largest spring length of the vertex multiplied with the <em>Ball Size</em>.</dd>
+<dt>Average Min Max</dt>
+<dd>Size = ((Min + Max)/2) × <em>Ball Size</em>.</dd>
 </dl>
 </dd>
-<dt>Size</dt><dd><p>Fraction of the length of attached edges.
-The edge length is computed based on the algorithm you choose.
-You know how when someone stands too close to you, and feel uncomfortable?
-We call that our &quot;personal space&quot;, and this setting is the factor that is multiplied by the spring length.
+<dt>Ball Size</dt>
+<dd>Fraction of the length of attached edges.
+The edge length is computed based on the choosen algorithm.
+This setting is the factor that is multiplied by the spring length.
 It is a spherical distance (radius) within which, if another vertex of the same mesh enters,
 the vertex starts to deflect in order to avoid a self-collision.
 Set this value to the fractional distance between vertices that you want them to have their own &quot;space&quot;.
 Too high of a value will include too many vertices all the time and slow down the calculation.
 Too low of a level will let other vertices get too close and thus possibly intersect because
-there will not be enough time to slow them down.</p>
-</dd>
-<dt>Stiffness</dt><dd><p>How elastic that ball of personal space is.
-A high stiffness means that the vertex reacts immediately to another vertex enters their space.</p>
-</dd>
-<dt>Dampening</dt><dd><p>How the vertex reacts.
-A low value just slows down the vertex as it gets too close. A high value repulses it.</p>
-</dd>
+there will not be enough time to slow them down.</dd>
+<dt>Stiffness</dt>
+<dd>How elastic that ball of personal space is.
+A high stiffness means that the vertex reacts immediately to another vertex enters their space.</dd>
+<dt>Dampening</dt>
+<dd>How the vertex reacts.
+A low value just slows down the vertex as it gets too close. A high value repulses it.</dd>
 </dl>
 <p>Collisions with other objects are set in the (other) <a class="reference internal" href="../collision.html"><span class="doc">Collision panel</span></a>.
 To collide with another object they have to share at least one common layer.</p>
@@ -430,49 +480,57 @@ To collide with another object they have to share at least one common layer.</p>
 <div class="section" id="soft-body-solver">
 <span id="physics-softbody-settings-solver"></span><h2>Soft Body Solver<a class="headerlink" href="#soft-body-solver" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">Reference</p>
-<dl class="field-list simple">
-<dt class="field-odd">Panel</dt>
-<dd class="field-odd"><p><span class="menuselection">Physics ‣ Soft Body Solver</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">Reference</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Panel:</th><td class="field-body"><span class="menuselection">Physics ‣ Soft Body ‣ Solver</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>The settings in the <em>Soft Body Solver</em> panel determine the accuracy of the simulation.</p>
-<dl>
-<dt>Step Size</dt><dd><dl class="simple">
-<dt>Min Step</dt><dd><p>Minimum simulation steps per frame. Increase this value, if the soft body misses fast-moving collision objects.</p>
-</dd>
-<dt>Max Step</dt><dd><p>Maximum simulation steps per frame.
+<dl class="docutils">
+<dt>Step Size</dt>
+<dd><dl class="first last docutils">
+<dt>Min Step</dt>
+<dd>Minimum simulation steps per frame. Increase this value, if the soft body misses fast-moving collision objects.</dd>
+<dt>Max Step</dt>
+<dd>Maximum simulation steps per frame.
 Normally the number of simulation steps is set dynamically
-(with the <em>Error Limit</em>) but you have probably a good reason to change it.</p>
-</dd>
-<dt>Auto-Step</dt><dd><p>Use velocities for automatic step sizes.
-Helps the Solver figure out how much work it needs to do based on how fast things are moving.</p>
-</dd>
+(with the <em>Error Limit</em>) but you have probably a good reason to change it.</dd>
+<dt>Auto-Step</dt>
+<dd>Use velocities for automatic step sizes.
+Helps the Solver figure out how much work it needs to do based on how fast things are moving.</dd>
 </dl>
 </dd>
-<dt>Error Limit</dt><dd><p>Rules the overall quality of the solution delivered. Default 0.1.
-The most critical setting that says how precise the solver should check for collisions.
+<dt>Error Limit</dt>
+<dd>Rules the overall quality of the solution delivered. Default 0.1.
+The most critical setting that defines how precise the solver should check for collisions.
 Start with a value that is half the average edge length.
 If there are visible errors, jitter, or over-exaggerated responses, decrease the value.
 The solver keeps track of how &quot;bad&quot; it is doing and the <em>Error Limit</em> causes the solver to
-do some &quot;adaptive step sizing&quot;.</p>
-</dd>
-<dt>Helpers</dt><dd><p>These settings allow you to control how Blender will react (deform) the soft body
-once it either gets close to or actually intersects (cuts into) another collision object on the same layer.</p>
-<dl class="simple">
-<dt>Choke</dt><dd><p>Calms down (reduces the exit velocity of) a vertex or edge once it penetrates a collision mesh.</p>
-</dd>
-<dt>Fuzzy</dt><dd><p>Fuzziness while on collision, high values make collision handling faster but less stable.
-Simulation is faster, but less accurate.</p>
-</dd>
+do some &quot;adaptive step sizing&quot;.</dd>
+<dt>Diagnostics</dt>
+<dd><dl class="first last docutils">
+<dt>Print Performance to Console</dt>
+<dd>Prints on the console how the solver is doing.</dd>
+<dt>Estimate Matrix</dt>
+<dd>Estimate matrix, split to <code class="docutils literal notranslate"><span class="pre">COM</span></code>, <code class="docutils literal notranslate"><span class="pre">ROT</span></code>, <code class="docutils literal notranslate"><span class="pre">SCALE</span></code>.</dd>
 </dl>
 </dd>
-<dt>Diagnostics</dt><dd><dl class="simple">
-<dt>Print Performance to Console</dt><dd><p>Prints on the console how the solver is doing.</p>
-</dd>
-<dt>Estimate Matrix</dt><dd><p>Estimate matrix, split to <code class="docutils literal notranslate"><span class="pre">COM</span></code>, <code class="docutils literal notranslate"><span class="pre">ROT</span></code>, <code class="docutils literal notranslate"><span class="pre">SCALE</span></code>.</p>
-</dd>
+</dl>
+<dl class="docutils">
+<dt>Helpers</dt>
+<dd><p class="first">These settings allow you to control how Blender will react (deform) the soft body
+once it either gets close to or actually intersects (cuts into) another collision object on the same layer.</p>
+<dl class="last docutils">
+<dt>Choke</dt>
+<dd>Calms down (reduces the exit velocity of) a vertex or edge once it penetrates a collision mesh.</dd>
+<dt>Fuzzy</dt>
+<dd>Fuzziness while on collision, high values make collision handling faster but less stable.
+Simulation is faster, but less accurate.</dd>
 </dl>
 </dd>
 </dl>

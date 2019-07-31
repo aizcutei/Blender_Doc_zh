@@ -1,0 +1,460 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-hans" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hans" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>合并/分离着色器节点 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/shader_nodes/converter/combine_separate.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/js/version_switch.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="相加着色器节点" href="math.html" />
+    <link rel="prev" title="颜色渐变着色器节点" href="color_ramp.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.80 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../eevee/index.html">Eevee</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cycles/index.html">Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workbench/index.html">Workbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cameras.html">相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lights/index.html">Lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../materials/index.html">Materials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">着色器节点</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../input/index.html">输入节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../output/index.html">输出节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shader/index.html">着色器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../textures/index.html">纹理节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color/index.html">颜色节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/index.html">矢量着色器节点</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">转换器节点</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="blackbody.html">黑体着色器节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_ramp.html">颜色渐变着色器节点</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">合并/分离着色器节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="math.html">相加着色器节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rgb_to_bw.html">RGB -&gt; BW 着色器节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shader_to_rgb.html">Shader --&gt; RGB着色器节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vector_math.html">矢量运算节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wavelength.html">波长着色器节点</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../groups.html">节点组</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../osl.html">开放式着色语言 (OSL)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../color_management.html">色彩管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染输出</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.80 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">渲染</a> &raquo;</li>
+        
+          <li><a href="../index.html">着色器节点</a> &raquo;</li>
+        
+          <li><a href="index.html">转换器节点</a> &raquo;</li>
+        
+      <li>合并/分离着色器节点</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/render/shader_nodes/converter/combine_separate.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="bpy-types-shadernodeseparate"><span id="bpy-types-shadernodecombine"></span></span><div class="section" id="combine-separate-nodes">
+<h1>合并/分离着色器节点<a class="headerlink" href="#combine-separate-nodes" title="Permalink to this headline">¶</a></h1>
+<p>所有这些节点基本上都是一样的：</p>
+<ul class="simple">
+<li>分离：从复合颜色通道将图像拆分出来。</li>
+<li>合并：将复合颜色通道的图像重新组合。</li>
+</ul>
+<p>这些节点可用于独立处理每个颜色通道。每种类型都可以在 <a class="reference internal" href="../../../glossary/index.html#term-color-space"><span class="xref std std-term">色彩空间</span></a> 中区分。</p>
+<p>在合成和纹理制作时，每个节点都支持Alpha通道。在制作纹理时，只有RGB颜色空间可用。在Blender内置引擎着色时添加HSV，在Cycles引擎下，着色提供了另外一对节点来组合/分离向量(XYZ)。</p>
+<p>合并 节点也可用于输入单个颜色值。对于RGBA和HSVA颜色空间，建议使用 <a class="reference internal" href="../../../compositing/types/input/rgb.html"><span class="doc">RGB节点</span></a>。使用 <a class="reference internal" href="../../../compositing/types/color/index.html"><span class="doc">颜色类节点</span></a> 可以更轻松地执行一些常见操作。</p>
+<div class="section" id="separate-combine-rgba-nodes">
+<h2>合并/分离 RGBA着色器节点<a class="headerlink" href="#separate-combine-rgba-nodes" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id8">
+<img alt="../../../_images/compositing_node-types_CompositorNodeCombRGBA.png" src="../../../_images/compositing_node-types_CompositorNodeCombRGBA.png" />
+<p class="caption"><span class="caption-text">合并 RGBA 节点。</span></p>
+</div>
+<div class="figure align-right" id="id9">
+<img alt="../../../_images/compositing_node-types_CompositorNodeSepRGBA.png" src="../../../_images/compositing_node-types_CompositorNodeSepRGBA.png" />
+<p class="caption"><span class="caption-text">分离 RGBA 节点。</span></p>
+</div>
+<div class="section" id="input-output">
+<h3>输入 / 输出选项<a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>图像</dt>
+<dd>标准图像输入 / 输出。</dd>
+</dl>
+<ul class="simple">
+<li>R (红色)</li>
+<li>G (绿色)</li>
+<li>B (蓝色)</li>
+<li>A (Alpha)</li>
+</ul>
+</div>
+<div class="section" id="properties">
+<h3>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h3>
+<p>该节点没有属性选项。</p>
+</div>
+<div class="section" id="examples">
+<h3>举例<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id10">
+<a class="reference internal image-reference" href="../../../_images/compositing_types_converter_combine-separate_example-combine-rgba.png"><img alt="../../../_images/compositing_types_converter_combine-separate_example-combine-rgba.png" src="../../../_images/compositing_types_converter_combine-separate_example-combine-rgba.png" style="width: 640px;" /></a>
+<p class="caption"><span class="caption-text">模糊Alpha通道示例效果。</span></p>
+</div>
+<p>在第一个例子中，我们采用Alpha通道并将其模糊，然后将其与颜色组合。当放置在场景中时，它的边缘将融入场景，而不会具有非常硬的边缘。这几乎就和抗锯齿的功能相似，但却是在三维意义上的抗锯齿。将CG元素添加到实时操作以删除任何硬边时，请使用此节点设置十分有效。在更大范围内激活此效果将使对象看起来 相位 进出，作为 异相 时间传播同步效果。</p>
+</div>
+</div>
+<div class="section" id="separate-combine-hsva-nodes">
+<h2>分离 / 合并 HSVA 节点<a class="headerlink" href="#separate-combine-hsva-nodes" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id11">
+<img alt="../../../_images/compositing_node-types_CompositorNodeCombHSVA.png" src="../../../_images/compositing_node-types_CompositorNodeCombHSVA.png" />
+<p class="caption"><span class="caption-text">合并 HSVA 节点。</span></p>
+</div>
+<div class="figure align-right" id="id12">
+<img alt="../../../_images/compositing_node-types_CompositorNodeSepHSVA.png" src="../../../_images/compositing_node-types_CompositorNodeSepHSVA.png" />
+<p class="caption"><span class="caption-text">分离 HSVA 节点。</span></p>
+</div>
+<div class="section" id="id1">
+<h3>输入 / 输出选项<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>图像</dt>
+<dd>标准图像输入 / 输出。</dd>
+</dl>
+<ul class="simple">
+<li>H (色相)</li>
+<li>S (饱和度)</li>
+<li>V (值)</li>
+<li>A (Alpha)</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>属性<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>该节点没有属性选项。</p>
+</div>
+</div>
+<div class="section" id="separate-combine-yuva-nodes">
+<h2>分离 / 合并 YUVA 节点<a class="headerlink" href="#separate-combine-yuva-nodes" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id13">
+<img alt="../../../_images/compositing_node-types_CompositorNodeCombYUVA.png" src="../../../_images/compositing_node-types_CompositorNodeCombYUVA.png" />
+<p class="caption"><span class="caption-text">合并 YUVA 节点。</span></p>
+</div>
+<div class="figure align-right" id="id14">
+<img alt="../../../_images/compositing_node-types_CompositorNodeSepYUVA.png" src="../../../_images/compositing_node-types_CompositorNodeSepYUVA.png" />
+<p class="caption"><span class="caption-text">分离 YUVA 节点。</span></p>
+</div>
+<div class="section" id="id3">
+<h3>输入 / 输出选项<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>图像</dt>
+<dd>标准图像输入 / 输出。</dd>
+</dl>
+<ul class="simple">
+<li>Y (亮度)</li>
+<li>U (U 亮度)</li>
+<li>V (V 亮度)</li>
+<li>A (Alpha)</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>属性<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>该节点没有属性选项。</p>
+</div>
+</div>
+<div class="section" id="separate-combine-ycbcra-node">
+<h2>分离 / 合并 YCbCrA 节点<a class="headerlink" href="#separate-combine-ycbcra-node" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id15">
+<img alt="../../../_images/compositing_node-types_CompositorNodeCombYCCA.png" src="../../../_images/compositing_node-types_CompositorNodeCombYCCA.png" />
+<p class="caption"><span class="caption-text">合并 YCbCrA 节点。</span></p>
+</div>
+<div class="figure align-right" id="id16">
+<img alt="../../../_images/compositing_node-types_CompositorNodeSepYCCA.png" src="../../../_images/compositing_node-types_CompositorNodeSepYCCA.png" />
+<p class="caption"><span class="caption-text">分离 YCbCrA 节点。</span></p>
+</div>
+<div class="section" id="id5">
+<h3>输入 / 输出选项<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>图像</dt>
+<dd>标准图像输入 / 输出。</dd>
+</dl>
+<ul class="simple">
+<li>Y (亮度)</li>
+<li>Cb (色度蓝)</li>
+<li>Cr (色度红)</li>
+<li>A (Alpha)</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>属性<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>模式</dt>
+<dd>ITU 601, ITU 709, Jpeg</dd>
+</dl>
+</div>
+<div class="section" id="id7">
+<h3>举例<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id17">
+<img alt="../../../_images/compositing_types_converter_math_multiply.png" src="../../../_images/compositing_types_converter_math_multiply.png" />
+<p class="caption"><span class="caption-text">缩放亮度通道的示例效果。</span></p>
+</div>
+<p>上例具有 <em>相加(正片叠底)</em> 节点，增加图像的亮度通道 (Y) 以使其更亮。</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">如果通过 <em>颜色渐变</em> 节点运行这些通道来调整，可使用深红色进行精确显示。在亮度通道上使用指数刻度可以产生高对比度效果。</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="math.html" class="btn btn-neutral float-right" title="相加着色器节点" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="color_ramp.html" class="btn btn-neutral float-left" title="颜色渐变着色器节点" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Int. License
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.80 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/surfaces/structure.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/surfaces/structure.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="基本体" href="primitives.html" />
-    <link rel="prev" title="简介" href="introduction.html" /> 
+    <link rel="prev" title="Toolbar" href="toolbar/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,13 +113,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">曲面</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">结构</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#control-points-rows-and-grid">控制点，行和栅格</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#weight">权重</a></li>
@@ -108,8 +128,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="primitives.html">基本体</a></li>
 <li class="toctree-l3"><a class="reference internal" href="selecting.html">选择</a></li>
-<li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
-<li class="toctree-l3"><a class="reference internal" href="properties.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">Editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties/index.html">Properties</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../metas/index.html">融球</a></li>
@@ -118,16 +138,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -211,26 +232,37 @@
 <span id="modeling-surfaces-rows-grids"></span><h2>控制点，行和栅格<a class="headerlink" href="#control-points-rows-and-grid" title="Permalink to this headline">¶</a></h2>
 <p>NURBS曲面的控制点和NURBS曲线的一样。然而, 他们的布局相当受限(受到类型不同的约束而导致布局也不同)。&quot;线段&quot;概念消失，取而代之的是&quot;行&quot;和整体的&quot;栅格&quot;。</p>
 <p>&quot;行&quot;是指在一个插值方向形成的一条&quot;线&quot;的一组控制点(有点类似于网格的 <a class="reference internal" href="../meshes/structure.html#modeling-mesh-structure-edge-loops"><span class="std std-ref">循环边</span></a> )。所以在一个NURBS曲面里有&quot;U行&quot;和&quot;V行&quot;。关键是给定类型(U或V)的 <em>所有行</em> 都有相同的控制点数量。每个控制点属于一个U行和一个V行。</p>
-<p>所有这一切形成一个&quot;网格&quot;，或&quot;笼子&quot;，其形状控制了NURBS曲面的形状。有点像 <a class="reference internal" href="../../rigging/lattice.html"><span class="doc">晶格</span></a>...</p>
+<p>All this forms a &quot;grid&quot;, or &quot;cage&quot;, the shape of which controls the shape of the NURBS surface.
+A bit like a <a class="reference internal" href="../../animation/lattice.html"><span class="doc">lattice</span></a>...</p>
 <p>重要的是要知道: 不能在NURBS曲面上只添加一个单个的控制点，必须一次添加一整行U或者V行控制点(实际操作中，通常会使用挤出工具或者复制一个, 来添加这些点), 这些点的数量和其他行一样。这也意味着你将只能够&quot;合并&quot;至少有一行点数匹配的不同曲面。</p>
 </div>
 <div class="section" id="weight">
 <span id="modeling-surfaces-weight"></span><h2>权重<a class="headerlink" href="#weight" title="Permalink to this headline">¶</a></h2>
-<p>你猜怎么着？是的, 它和 <a class="reference internal" href="../curves/editing/introduction.html#modeling-curve-weight"><span class="std std-ref">NURBS 曲线</span></a> 的原理完全一样! <em>权重</em> 指定每个控制点对曲线的&quot;拉伸量&quot;。</p>
+<p>Similar to <a class="reference internal" href="../curves/structure.html#curve-nurbs"><span class="std std-ref">NURBS Splines</span></a> NURBS Surface control points have a weight property.
+This weight property controls how much influence the control point has on the surface.
+This weight should not be confused with the <a class="reference internal" href="editing/transform_panel.html#surface-goal-weight"><span class="std std-ref">Goal Weight</span></a>,
+which is used only for soft body simulations.
+The NURBS control point weight can be adjusted in the <em>W</em> number field of
+the <a class="reference internal" href="../curves/editing/transform_panel.html"><span class="doc">Transform panel</span></a>.</p>
 <p>在图 <a class="reference internal" href="#fig-surface-intro-weight"><span class="std std-ref">一个权重为5的控制点.</span></a> 中, 一个的控制点, 标记为&quot;C&quot;, 其 <em>权重</em> 设为5.0, 而别的点是默认值1.0。如你所见, 控制点将曲面向着它&quot;拉&quot;过去。</p>
-<div class="figure align-center" id="id1">
+<div class="figure" id="id1">
 <span id="fig-surface-intro-weight"></span><img alt="../../_images/modeling_surfaces_structure_weight.png" src="../../_images/modeling_surfaces_structure_weight.png" />
-<p class="caption"><span class="caption-text">一个权重为5的控制点.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">一个权重为5的控制点.</span></p>
 </div>
-<p>如果所有的控制点都具有相同 <em>权重</em>，然后每个点都有效地相互抵消。权重导致曲面朝向或背离控制点移动，这是曲线与曲面权重上的区别。</p>
-<p>可以在 <a class="reference internal" href="../../editors/3dview/object/properties/transforms.html"><span class="doc">变换属性</span></a> <kbd class="kbd docutils literal notranslate">N</kbd> <em>W</em> 数值框 (而不是 <em>权重</em> 数值框...)里查看任何特定控制点的权重。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">如果所有的控制点都具有相同 <em>权重</em>，然后每个点都有效地相互抵消。权重导致曲面朝向或背离控制点移动，这是曲线与曲面权重上的区别。</p>
+</div>
 <div class="section" id="preset-weights">
 <h3>预设权重<a class="headerlink" href="#preset-weights" title="Permalink to this headline">¶</a></h3>
-<p>NURBS能够创建纯粹的形状，比如圆环,圆柱和球(注意贝塞尔圆环不是纯粹的圆形)。为了创建纯粹的圆环、圆球或圆柱, 必须设置具体的控制点的权重值。其中一些已作为预设的形式存在于 <em>曲线工具</em> 面板(右下角)里。这不是很直观，所以可以在尝试之前对NURBS多做了解。</p>
+<p>NURBS can create pure shapes such as circles, cylinders, and spheres
+(note that a Bézier circle is not a pure circle). To create pure circles, spheres,
+or cylinders, you must set to specific values the weights of the control points.
+This is not intuitive, and you should read more on NURBS before trying this.</p>
 <p>要使用2D曲面创建一个球体，其原理与2D圆环相同。你可以注意到，创建球体所用到的四个不同的权重值(1.0, 0.707=sqrt(0.5), 0.354=sqrt(2)/4, 和0.25)。</p>
-<div class="figure align-center" id="id2">
+<div class="figure" id="id2">
 <img alt="../../_images/modeling_surfaces_structure_weight-sphere.png" src="../../_images/modeling_surfaces_structure_weight-sphere.png" />
-<p class="caption"><span class="caption-text">一个曲面球。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">一个曲面球。</span></p>
 </div>
 </div>
 </div>
@@ -247,7 +279,7 @@
         <a href="primitives.html" class="btn btn-neutral float-right" title="基本体" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="toolbar/index.html" class="btn btn-neutral float-left" title="Toolbar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

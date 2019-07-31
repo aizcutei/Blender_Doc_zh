@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/meshes/editing/normals.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/normals.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="变形" href="transform/index.html" />
+    <link rel="next" title="UV" href="uv/index.html" />
     <link rel="prev" title="面工具" href="faces.html" /> 
 </head>
 
@@ -94,14 +113,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../primitives.html">基本体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting.html">Selecting</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="basics/index.html">基础</a></li>
@@ -109,6 +129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="edges.html">边工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="faces.html">面工具</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">法向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="uv/index.html">UV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="transform/index.html">变形</a></li>
 <li class="toctree-l4"><a class="reference internal" href="duplicating/index.html">复制</a></li>
 <li class="toctree-l4"><a class="reference internal" href="subdividing/index.html">细分</a></li>
@@ -119,7 +140,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh_display.html">网格显示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">网格分析</a></li>
 </ul>
 </li>
@@ -131,16 +151,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -217,57 +238,58 @@
            <div itemprop="articleBody">
             
   <div class="section" id="normals">
-<h1>法向<a class="headerlink" href="#normals" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>在几何中，法向是指垂直于某种元素(通常是一个三角面或一个曲面) 的方向或直线，但也可以是相对于一条直线、曲线上一点的切线或曲面上一点的相切面。</p>
-<div class="figure align-center" id="id1">
-<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_normals_viewport.png"><img alt="../../../_images/modeling_meshes_editing_normals_viewport.png" src="../../../_images/modeling_meshes_editing_normals_viewport.png" style="width: 350px;" /></a>
-<p class="caption"><span class="caption-text">环体面法向可视化。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<p>在上图中，每条蓝线都表示环体上一个面的法向。这些直线都是垂直于其所在面的。可以在 <a class="reference internal" href="../mesh_display.html#mesh-display-normals"><span class="std std-ref">网格显示面板</span></a> 启用显示法线。</p>
+<span id="bpy-ops-mesh-normals-tools"></span><span id="modeling-meshes-editing-normals-editing"></span><h1>法向<a class="headerlink" href="#normals" title="Permalink to this headline">¶</a></h1>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>The <a class="reference internal" href="../../modifiers/modify/normal_edit.html"><span class="doc">法线编辑修改器</span></a> can be used to edit normals.</p>
+<p>The <a class="reference internal" href="../../modifiers/modify/weighted_normal.html"><span class="doc">Weighted Normal Modifier</span></a> can be used to affect normals by various methods,
+including <em>Face Strength</em> (see below).</p>
+<p class="last">也可以用数据传递 (<a class="reference internal" href="data_transfer.html"><span class="doc">操作</span></a> 或 <a class="reference internal" href="../../modifiers/modify/data_transfer.html"><span class="doc">修改器</span></a>) 从另一个网格复制法线.</p>
 </div>
 <div class="section" id="shading">
 <span id="modeling-meshes-editing-normals-shading"></span><h2>着色<a class="headerlink" href="#shading" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>物体模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">Object ‣ Shade Smooth / Shade Flat</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Object ‣ Shade Smooth / Shade Flat</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">菜单</dt>
-<dd class="field-even"><p><span class="menuselection">Mesh ‣ Shading</span></p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">Face ‣ Shade Smooth / Shade Flat</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Mesh ‣ Shading</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Face ‣ Shade Smooth / Shade Flat</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="flat">
 <span id="bpy-ops-object-shade-flat"></span><h3>平直<a class="headerlink" href="#flat" title="Permalink to this headline">¶</a></h3>
-<table class="docutils align-center" id="blend">
+<table border="1" class="docutils" id="blend">
 <caption><span class="caption-text">平直(左)与光滑(右)着色范例。 <a class="reference external" href="https://wiki.blender.org/wiki/File:25-manual-meshsmooth-example.blend">blend文件范例</a>。</span><a class="headerlink" href="#blend" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_normals_example-flat.png"><img alt="../../../_images/modeling_meshes_editing_normals_example-flat.png" src="../../../_images/modeling_meshes_editing_normals_example-flat.png" style="width: 200px;" /></a>
 </div>
 </td>
-<td><div class="figure align-center">
+<td><div class="first last figure">
 <a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_normals_example-smooth.png"><img alt="../../../_images/modeling_meshes_editing_normals_example-smooth.png" src="../../../_images/modeling_meshes_editing_normals_example-smooth.png" style="width: 200px;" /></a>
 </div>
 </td>
@@ -291,138 +313,309 @@ to that shown in the first image above.</p>
 <p>Alternatively, you can choose which faces to smooth by entering <em>Edit Mode</em>,
 then selecting some faces and picking <em>Shade Smooth</em> from the <em>Face Menu</em>.</p>
 <p>When the mesh is in <em>Edit Mode</em>,
-only the selected faces will receive the &quot;smoothing&quot; attribute. You can set faces as flat
-(removing the &quot;smoothing&quot; attribute)
+only the selected faces will receive the &quot;smoothing&quot; attribute.
+You can set faces as flat (removing the &quot;smoothing&quot; attribute)
 in the same way by selecting edges and picking the <em>Shade Flat</em> from the <em>Face Menu</em>.</p>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>The <a class="reference internal" href="#auto-smooth"><span class="std std-ref">Auto Smooth</span></a> option is a quick and easy way to combine smooth and
+<p class="first admonition-title">See also</p>
+<p class="last">The <a class="reference internal" href="../structure.html#auto-smooth"><span class="std std-ref">Auto Smooth</span></a> option is a quick and easy way to combine smooth and
 faceted faces in the same object.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="properties">
-<span id="modeling-meshes-editing-normals-properties"></span><h2>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
-<div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">面板</dt>
-<dd class="field-odd"><p><span class="menuselection">属性编辑器 ‣ 物体数据 ‣ 法线</span></p>
-</dd>
-</dl>
-</div>
-<div class="figure align-center" id="id2">
-<img alt="../../../_images/modeling_meshes_properties_object-data_normals-panel.png" src="../../../_images/modeling_meshes_properties_object-data_normals-panel.png" />
-<p class="caption"><span class="caption-text">法线面板.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-<dl id="auto-smooth">
-<dt>自动光滑</dt><dd><p>当网格的这些部分的着色设置为平滑时，将平滑面之间的角度小于*角度*按钮中指定的边缘的边缘。 这是一种结合光滑和锐利边缘的简单方法。</p>
-<dl class="simple">
-<dt>角度</dt><dd><p>角度数值按钮。</p>
-</dd>
-</dl>
-</dd>
-<dt>双面</dt><dd><p>在视口（OpenGL）中在网格的背面上使用正法线进行照明。</p>
-</dd>
-</dl>
-<div class="section" id="example">
-<h3>范例<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center" id="id3">
-<a class="reference internal image-reference" href="../../../_images/modeling_meshes_properties_object-data_example-auto-smooth.png"><img alt="../../../_images/modeling_meshes_properties_object-data_example-auto-smooth.png" src="../../../_images/modeling_meshes_properties_object-data_example-auto-smooth.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">启用 <em>自动光滑</em> 时的网格例子.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>拆边修改器</p>
-<p>用 <a class="reference internal" href="../../modifiers/generate/edge_split.html"><span class="doc">拆边修改器</span></a> 的结果类似于 <em>自动光滑</em> , 可以根据角度选择应分割哪些边缘来实现.</p>
+<div class="section" id="face-strength">
+<span id="bpy-ops-mesh-flip-normals"></span><h3>Face Strength<a class="headerlink" href="#face-strength" title="Permalink to this headline">¶</a></h3>
+<p>Another way to affect normals is to set a <em>Face Strength</em> on the faces of the model.
+The Face Strength can be either <em>Weak</em>, <em>Medium</em>, or <em>Strong</em>.
+The idea is that the <a class="reference internal" href="../../modifiers/modify/weighted_normal.html"><span class="doc">Weighted Normal Modifier</span></a> can
+be set to pay attention to the Face Strength as follows:
+when combining the normals that meet at a vertex, only the faces
+with the strongest Face Strength will contribute to the final value.</p>
+<p>For example, if three faces meet at a vertex and have the face weights weak, medium, and strong,
+then only the normal associated with the strong face will be used to set the final result.</p>
 </div>
 </div>
-</div>
-<div class="section" id="editing">
-<span id="modeling-meshes-editing-normals-editing"></span><h2>编辑<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="flip-direction">
 <h3>反转方向<a class="headerlink" href="#flip-direction" title="Permalink to this headline">¶</a></h3>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 着色/UV ‣ 着色 ‣ 法向: 反转方向</span></p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">网格 ‣ 法向 ‣ 翻转法线</span> 或 <span class="menuselection">专用项 ‣ 翻转法线</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Mesh ‣ Normals ‣ Flip</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>好吧，该工具仅用于反转选中面的法线方向。注：由于只有选中面的法线方向会被翻转，故可用于精准调整法线方向(<strong>不是朝向</strong> ，法线总是垂直于面的)。</p>
+<p>This will reverse the normals direction of all selected faces.
+Note that this allows you to precisely control the direction
+(<strong>not</strong> the orientation, which is always perpendicular to the face) of your normals,
+as only selected ones are flipped.</p>
 </div>
 <div class="section" id="recalculate-normals">
-<h3>重算法线方向<a class="headerlink" href="#recalculate-normals" title="Permalink to this headline">¶</a></h3>
+<span id="bpy-ops-mesh-normals-make-consistent"></span><h3>重算法线方向<a class="headerlink" href="#recalculate-normals" title="Permalink to this headline">¶</a></h3>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">网格 ‣ 法向 ‣ 向外重算法线方向</span> 和 <span class="menuselection">网格 ‣ 法向 ‣ 向内重算法线方向</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Ctrl-N</kbd> 和 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-N</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>These tools will recalculate the normals of selected faces so that they point outside
+(respectively inside) the volume that the face belongs to.
+The volume does not need to be closed; inside and outside are determined by the angles with adjacent faces.
+This means that the face of interest must be adjacent to at least one non-coplanar other face.
+For example, with a <em>Grid</em> primitive, recalculating normals does not have a meaningful result.</p>
+</div>
+<div class="section" id="set-from-faces">
+<span id="bpy-ops-mesh-set-normals-from-faces"></span><h3>Set From Faces<a class="headerlink" href="#set-from-faces" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Mesh ‣ Normals ‣ Set from Faces</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Set the custom normals at corners to be the same as the face normal that the corner is part of.</p>
+</div>
+<div class="section" id="rotate">
+<span id="bpy-ops-transform-rotate-normal"></span><h3>Rotate<a class="headerlink" href="#rotate" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Mesh ‣ Normals ‣ Rotate</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">R N</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This is an interactive tool. As you move the mouse around, the selected normals are rotated.
+You can also invoke the Rotate Normals tool by typing the Rotate transform key, <kbd class="kbd docutils literal notranslate">R</kbd>
+followed by <kbd class="kbd docutils literal notranslate">N</kbd>.</p>
+</div>
+<div class="section" id="point-to-target">
+<span id="bpy-ops-mesh-point-normals"></span><h3>Point to Target<a class="headerlink" href="#point-to-target" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Mesh ‣ Normals ‣ Point to Target</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Alt-L</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>All selected normals are set to point from their vertex to the target
+after confirmed by <kbd class="kbd docutils literal notranslate">Return</kbd> or <kbd class="kbd docutils literal notranslate">LMB</kbd>.</p>
+<p>A target is set by the keys:</p>
+<ul class="simple">
+<li>The mouse cursor <kbd class="kbd docutils literal notranslate">M</kbd></li>
+<li>The pivot <kbd class="kbd docutils literal notranslate">L</kbd></li>
+<li>The object origin <kbd class="kbd docutils literal notranslate">O</kbd></li>
+<li>The cursor (set at this click) <kbd class="kbd docutils literal notranslate">Ctrl-LMB</kbd></li>
+<li>A mesh item selection (set by this click) <kbd class="kbd docutils literal notranslate">Ctrl-RMB</kbd>.</li>
+</ul>
+<dl class="docutils">
+<dt>模式</dt>
+<dd><p class="first">The tool operation can be modified; if one of the following keys has been previously pressed:</p>
+<dl class="last docutils">
+<dt>Align <kbd class="kbd docutils literal notranslate">A</kbd></dt>
+<dd>Then all normals will point in the same direction: from the center of selected points to the target.</dd>
+<dt>Spherize <kbd class="kbd docutils literal notranslate">S</kbd></dt>
+<dd>Then each normal will be an interpolation between its original value and the direction to the target.</dd>
+<dt>Invert <kbd class="kbd docutils literal notranslate">I</kbd></dt>
+<dd>Then the normal directions are reversed from what was specified above.</dd>
+</dl>
 </dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 着色/UV ‣ 着色 ‣ 法向: 重计算</span></p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">网格 ‣ 法向 ‣ 向外重算法线方向</span> 和 <span class="menuselection">网格 ‣ 法向 ‣ 向内重算法线方向</span></p>
-</dd>
-<dt class="field-even">快捷键</dt>
-<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Ctrl-N</kbd> 和 <kbd class="kbd docutils literal notranslate">Shift-Ctrl-N</kbd></p>
-</dd>
+<dt>Reset <kbd class="kbd docutils literal notranslate">R</kbd></dt>
+<dd>Will reset the custom normals back to what they were when the operation started.</dd>
 </dl>
 </div>
-<p>该工具用于重新计算选中面的法线方向，使其指向面所属物体的外侧(或内侧)。物体无需闭合。实际上，这意味着选中面必须与至少一个不共面的面相邻。例如，对于 <em>栅格</em> 物体，重算法线方向不存在有意义的结果。</p>
-</div>
-<div class="section" id="set-from-face">
-<h3>Set from Face<a class="headerlink" href="#set-from-face" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="merge">
+<span id="bpy-ops-mesh-merge-normals"></span><h3>Merge<a class="headerlink" href="#merge" title="Permalink to this headline">¶</a></h3>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>编辑模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 着色/UV ‣ 着色 ‣ 法向: Set from Face</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Mesh ‣ Normals ‣ Merge</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>从选中的面的法线设置定义节点法线.</p>
+<p>Merge all of the normals at selected vertices, making one average normal for all of the faces.</p>
 </div>
+<div class="section" id="split">
+<span id="bpy-ops-mesh-split-normals"></span><h3>Split<a class="headerlink" href="#split" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Mesh ‣ Normals ‣ Split</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="section" id="custom-split-normals">
-<span id="modeling-meshes-normals-custom"></span><h2>自定义拆分法线<a class="headerlink" href="#custom-split-normals" title="Permalink to this headline">¶</a></h2>
-<p><em>自定义拆分法线</em> 是一种通过将它们指向除默认自动计算方向之外的其他方向来调整/伪造着色的方法。 它主要用于游戏开发，它可以抵消由低多边形物体产生的一些问题（最常见的例子是低多边树/灌木丛/草坪等，以及'圆角'转角）。</p>
-<p>Blender支持“平滑扇形”基础上的自定义法线，定义为一组共享相同顶点并通过平滑边缘“链接”的相邻面角。 这意味着每个面角，每个相邻面角或每个顶点都可以有法线。</p>
-<div class="section" id="enabling-custom-split-normals-support">
-<h3>启用自定义拆分法线支持<a class="headerlink" href="#enabling-custom-split-normals-support" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple">
-<li><p>启用自定义拆分法线支持,通过 <a class="reference internal" href="../properties/custom_data.html#modeling-meshes-properties-custom-data"><span class="std std-ref">添加自定义拆分法线数据</span></a>.</p></li>
-<li><p>确定已经打开了 <a class="reference internal" href="#modeling-meshes-editing-normals-properties"><span class="std std-ref">自动光滑</span></a>.</p></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>一旦你有自定义法线，<em>自动光滑</em> 行为的角度阈值被禁用 - 所有非锐化标记的边将被视为光滑的，忽略它们的面之间的角度。</p>
+<p>Split the normals at all selected vertices so that there are separate normals for each face,
+pointing in the same direction as those faces.</p>
 </div>
+<div class="section" id="average">
+<span id="bpy-ops-mesh-average-normals"></span><h3>Average<a class="headerlink" href="#average" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Mesh ‣ Normals ‣ Average</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="section" id="creating-editing-custom-split-normals">
-<h3>创建/编辑自定义拆分法线<a class="headerlink" href="#creating-editing-custom-split-normals" title="Permalink to this headline">¶</a></h3>
-<p>目前只能用 <a class="reference internal" href="../../modifiers/modify/normal_edit.html"><span class="doc">法线编辑修改器</span></a> 编辑.</p>
-<p>也可以用数据传递 (<a class="reference internal" href="data_transfer.html"><span class="doc">操作</span></a> 或 <a class="reference internal" href="../../modifiers/modify/data_transfer.html"><span class="doc">修改器</span></a>) 从另一个网格复制法线.</p>
+<p>Average all of the normals in each fan of faces between sharp edges at a vertex.</p>
 </div>
-<div class="section" id="importing-custom-split-normals">
-<h3>导入自定义拆分法线<a class="headerlink" href="#importing-custom-split-normals" title="Permalink to this headline">¶</a></h3>
-<p>一些工具,特别是 <abbr title="Computer-Aided Design">CAD</abbr> , 在将对象细分为网格（非常细长的三角形等）时，往往会产生不规则的几何体。 这种几何体上的自动计算法线通常会产生不良伪影，因此能够导入和使用CAD工具本身生成的法线非常重要。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>当前,只有FBX导入能够导入自定义法线.</p>
+<div class="section" id="copy-vectors">
+<h3>Copy Vectors<a class="headerlink" href="#copy-vectors" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Mesh ‣ Normals ‣ Copy Vectors</span></td>
+</tr>
+</tbody>
+</table>
 </div>
+<p>If a single normal is selected, copy it to an internal vector buffer.</p>
+</div>
+<div class="section" id="paste-vectors">
+<h3>Paste Vectors<a class="headerlink" href="#paste-vectors" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Mesh ‣ Normals ‣ Paste Vectors</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Replace the selected normals with the one in the internal vector buffer.</p>
+</div>
+<div class="section" id="smoothen-vectors">
+<span id="bpy-ops-mesh-smoothen-normals"></span><h3>Smoothen Vectors<a class="headerlink" href="#smoothen-vectors" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Mesh ‣ Normals ‣ Smoothen Vectors</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Adjust the normals to bring them closer to their adjacent vertex normals.</p>
+</div>
+<div class="section" id="reset-vectors">
+<h3>Reset Vectors<a class="headerlink" href="#reset-vectors" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Mesh ‣ Normals ‣ Reset Vectors</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Put normals back the to default calculation of the normals.</p>
+</div>
+<div class="section" id="select-by-face-strength">
+<h3>Select by Face Strength<a class="headerlink" href="#select-by-face-strength" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Mesh ‣ Normals ‣ Select by Face Strength</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Use the submenu to pick one of <em>Weak</em>, <em>Medium</em>, or <em>Strong</em>.
+Then this tool selects those faces that have the chosen face strength.</p>
+</div>
+<div class="section" id="set-face-strength">
+<h3>Set Face Strength<a class="headerlink" href="#set-face-strength" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Mesh ‣ Normals ‣ Set Face Strength</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Use the submenu to pick one of <em>Weak</em>, <em>Medium</em>, or <em>Strong</em>.
+Then this tool changes the Face Strength of currently selected faces to the chosen face strength.</p>
 </div>
 </div>
 </div>
@@ -435,7 +628,7 @@ faceted faces in the same object.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="transform/index.html" class="btn btn-neutral float-right" title="变形" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="uv/index.html" class="btn btn-neutral float-right" title="UV" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="faces.html" class="btn btn-neutral float-left" title="面工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

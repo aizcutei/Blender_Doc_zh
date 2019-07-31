@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Options &mdash; Blender Manual</title>
+  <title>选项 &mdash; Blender Manual</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devrender/workbench/options.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/workbench/options.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Viewport Display" href="display_settings.html" />
-    <link rel="prev" title="Color" href="color.html" /> 
+    <link rel="next" title="视图显示" href="display_settings.html" />
+    <link rel="prev" title="颜色" href="color.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,39 +113,41 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lighting/index.html">灯光</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee 渲染器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles渲染引擎</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Workbench Engine</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lighting.html">Lighting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="color.html">Color</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Options</a></li>
-<li class="toctree-l3"><a class="reference internal" href="display_settings.html">Viewport Display</a></li>
-<li class="toctree-l3"><a class="reference internal" href="quality.html">Render Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">Eevee</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Workbench</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lighting.html">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color.html">颜色</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="display_settings.html">视图显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sampling.html">采样</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">后期处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cameras.html">相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lights/index.html">Lights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials/index.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_nodes/index.html">着色器节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../color_management.html">色彩管理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">工作流</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL渲染</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../audio/index.html">音频渲染</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -179,9 +200,9 @@
         
           <li><a href="../index.html">渲染</a> &raquo;</li>
         
-          <li><a href="index.html">Workbench Engine</a> &raquo;</li>
+          <li><a href="index.html">Workbench</a> &raquo;</li>
         
-      <li>Options</li>
+      <li>选项</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -201,55 +222,67 @@
            <div itemprop="articleBody">
             
   <div class="section" id="options">
-<h1>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h1>
-<p>Shading options can be set in the <span class="menuselection">Properties ‣ Render ‣ Options</span> panel.</p>
-<dl>
-<dt>Backface Culling</dt><dd><p>Use backface culling to hide backsides of faces.</p>
-</dd>
-<dt>X-Ray</dt><dd><p>Render the scene transparent. With the slider you can control how
-transparent the scene should appear.</p>
-</dd>
-<dt>Shadow</dt><dd><p>Renders a sharp shadow in the scene.</p>
-<dl class="simple">
-<dt>Darkness</dt><dd><p>Defines how dark the shadow should be rendered. This slider can be adjusted
-between 0 (shadow not visible) and 1 (shadow is black).</p>
-</dd>
-<dt>Light Direction</dt><dd><p>Controls the direction of the light source that casts the shadows.</p>
-</dd>
-<dt>Shadow Shift</dt><dd><p>Controls the Shadow termination angle. It can be used to limit self shadowing artifacts.</p>
-</dd>
-<dt>Shadow Focus</dt><dd><p>Controls the falloff near the edge of the shadow.</p>
-</dd>
+<h1>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">属性 ‣ 渲染 ‣ 选项</span> 面板。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="docutils">
+<dt>双面/背面剔除</dt>
+<dd>使用背面提出来隐藏曲面的背面。</dd>
+<dt>透视模式</dt>
+<dd>渲染场景透明度。 使用滑块控制场景的透明度。</dd>
+<dt>阴影</dt>
+<dd><p class="first">在场景中渲染一个锐利的阴影。</p>
+<dl class="last docutils">
+<dt>暗度</dt>
+<dd>定义阴影应该渲染的暗度。 此滑块可在0（阴影不可见）和1（阴影为黑色）之间调整。</dd>
+<dt>光照方向</dt>
+<dd>控制投射阴影的光源的方向。</dd>
+<dt>阴影偏移</dt>
+<dd>控制阴影终止的角度。 它可以用于限制自我阴影伪像。</dd>
+<dt>阴影焦点</dt>
+<dd>控制阴影边缘附近的衰减。</dd>
 </dl>
 </dd>
-<dt>Cavity</dt><dd><p>Highlight ridges and valleys in the scene geometry.</p>
-<dl>
-<dt>Type</dt><dd><p>Method how to calculate the cavity.</p>
-<dl class="simple">
-<dt>World</dt><dd><p>The World method is more precise but is slower to calculate.</p>
-</dd>
-<dt>Screen</dt><dd><p>The Screen method is fast but does not take the size of the ridges and valleys into account.</p>
-</dd>
-<dt>Both</dt><dd><p>Both will use both methods.</p>
-</dd>
+<dt>腔体</dt>
+<dd><p class="first">突出显示场景几何体中的脊和谷。</p>
+<dl class="last docutils">
+<dt>类型</dt>
+<dd><p class="first">计算腔体的方法</p>
+<dl class="last docutils">
+<dt>世界</dt>
+<dd>世界方法更精确，但计算速度较慢。</dd>
+<dt>滤色</dt>
+<dd>滤色的方法很快，但不考虑脊和谷的大小。</dd>
+<dt>两者</dt>
+<dd>两者选项会同事采用两个方法。</dd>
 </dl>
 </dd>
-<dt>Ridge</dt><dd><p>Control the visibility of ridges.</p>
-</dd>
-<dt>Valley</dt><dd><p>Control the visibility of valleys.</p>
-</dd>
+<dt>脊线</dt>
+<dd>控制脊线的可见性。</dd>
+<dt>谷线</dt>
+<dd>控制谷线的可见性。</dd>
 </dl>
 </dd>
-<dt>Depth of Field</dt><dd><p>Use the Depth of Field settings of the active camera in the viewport.
-Only visible when looking through the camera.</p>
-<p>The settings are located on <span class="menuselection">Properties ‣ Camera ‣ Depth of Field</span> panel.</p>
+<dt>景深</dt>
+<dd><p class="first">在视图中使用活动相机的“景深”设置。 仅在通过该相机查看时可见。</p>
+<p class="last">该设置位于 <span class="menuselection">属性 ‣ 相机 ‣ 景深</span> 面板。</p>
 </dd>
-<dt>Outline</dt><dd><p>Render the outline of objects in the viewport. The color of the outline can be adjusted.</p>
-</dd>
-<dt>Specular Highlighting</dt><dd><p>Render specular highlights.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Only available when Lighting is set to <em>Studio</em> lighting.</p>
+<dt>轮廓</dt>
+<dd>在视图中渲染物体的轮廓。轮廓的颜色可以调整。</dd>
+<dt>高光光照</dt>
+<dd><p class="first">渲染高光光照</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">仅在光照设置为 <em>棚灯</em> 时可用。</p>
 </div>
 </dd>
 </dl>
@@ -263,10 +296,10 @@ Only visible when looking through the camera.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="display_settings.html" class="btn btn-neutral float-right" title="Viewport Display" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="display_settings.html" class="btn btn-neutral float-right" title="视图显示" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="color.html" class="btn btn-neutral float-left" title="Color" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="color.html" class="btn btn-neutral float-left" title="颜色" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Keymap Customization &mdash; Blender Manual</title>
+  <title>键位映射自定义 &mdash; Blender Manual</title>
   
 
   
@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devadvanced/keymap_editing.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/advanced/keymap_editing.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="功能局限" href="limits.html" />
@@ -94,38 +113,40 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">高级应用</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="command_line/index.html">命令行</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scripting/index.html">脚本与扩展Blender</a></li>
 <li class="toctree-l2"><a class="reference internal" href="app_templates.html">应用模板</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Keymap Customization</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#available-keys">Available Keys</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#multi-action-keys">Multi-Action Keys</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">键位映射自定义</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#keys">按键</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#available-keys">可用按键</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multi-action-keys">多动作按键</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#common-operations">Common Operations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#key-bindings-for-pop-ups">Key Bindings for Pop-Ups</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#key-bindings-for-properties">Key Bindings for Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#common-operations">通用操作</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#key-bindings-for-pop-ups">弹出菜单按键绑定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#key-bindings-for-properties">属性按键绑定</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="limits.html">功能局限</a></li>
 <li class="toctree-l2"><a class="reference internal" href="operators.html">操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blender_directory_layout.html">Blender目录布局</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
 </ul>
@@ -178,7 +199,7 @@
         
           <li><a href="index.html">高级应用</a> &raquo;</li>
         
-      <li>Keymap Customization</li>
+      <li>键位映射自定义</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -198,103 +219,83 @@
            <div itemprop="articleBody">
             
   <div class="section" id="keymap-customization">
-<h1>Keymap Customization<a class="headerlink" href="#keymap-customization" title="Permalink to this headline">¶</a></h1>
+<span id="keymap-customize"></span><h1>键位映射自定义<a class="headerlink" href="#keymap-customization" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2>按键<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="available-keys">
-<h3>Available Keys<a class="headerlink" href="#available-keys" title="Permalink to this headline">¶</a></h3>
-<p>When customizing keymaps its useful to use keys which won't conflict with Blender's default keymap.</p>
-<p>Here are keys which aren't used and aren't likely to be used in the future.</p>
-<dl>
-<dt>F-Keys (<kbd class="kbd docutils literal notranslate">F5</kbd> - <kbd class="kbd docutils literal notranslate">F8</kbd>)</dt><dd><p>These F-Keys (including modifier combination)
-have been intentionally kept free for users to bind their own keys to.</p>
+<h3>可用按键<a class="headerlink" href="#available-keys" title="Permalink to this headline">¶</a></h3>
+<p>在自定义键位映射时，应尽量使用不会与Blender默认键位映射相冲突的按键。</p>
+<p>下面这些是尚未用到的，且将来不大可能用到的按键。</p>
+<dl class="docutils">
+<dt>功能键 (<kbd class="kbd docutils literal notranslate">F5</kbd> - <kbd class="kbd docutils literal notranslate">F8</kbd>)</dt>
+<dd>这些功能键 (包括与辅助按键组合) 是有意保留下来供用户绑定自己的快捷键的。</dd>
+<dt><kbd class="kbd docutils literal notranslate">OSKey</kbd> (也称之为 <code class="docutils literal notranslate"><span class="pre">Windows键</span></code>, <code class="docutils literal notranslate"><span class="pre">Cmd</span></code> 或 <code class="docutils literal notranslate"><span class="pre">Super</span></code>)</dt>
+<dd><p class="first">Blender不使用这个按键来绑定操作。</p>
+<p class="last"><em>macOS</em> 是例外， <kbd class="kbd docutils literal notranslate">Cmd</kbd> 替代 <kbd class="kbd docutils literal notranslate">Ctrl</kbd>，与系统按键绑定冲突的情形除外。</p>
 </dd>
-<dt><kbd class="kbd docutils literal notranslate">OS-Key</kbd> (also known as the <code class="docutils literal notranslate"><span class="pre">Windows-Key</span></code>, <code class="docutils literal notranslate"><span class="pre">Cmd</span></code> or <code class="docutils literal notranslate"><span class="pre">Super</span></code>)</dt><dd><p>Blender doesn't use this key for any bindings.</p>
-<p><em>macOS</em> is an exception, where a few macOS shortcuts are bound to <kbd class="kbd docutils literal notranslate">Cmd</kbd> (cut/copy/paste/preferences).</p>
-</dd>
-<dt>Modifier Double Click</dt><dd><p>Binding modifier keys as primary keys is supported,
-to avoid conflicts with regular usage you can bind them to double click.</p>
-</dd>
+<dt>与辅助键组合</dt>
+<dd>Blender支持与辅助键组合绑定作为快捷键，以避免与常规用法冲突。</dd>
 </dl>
 </div>
 <div class="section" id="multi-action-keys">
-<h3>Multi-Action Keys<a class="headerlink" href="#multi-action-keys" title="Permalink to this headline">¶</a></h3>
+<h3>多动作按键<a class="headerlink" href="#multi-action-keys" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="click-drag">
-<h4>Click/Drag<a class="headerlink" href="#click-drag" title="Permalink to this headline">¶</a></h4>
-<p>It's possible to configure a single key to perform multiple operations
-using <em>Click</em> event instead of <em>Press</em>, Then you may bind <em>Drag</em> to a separate action.</p>
-<p>This is useful for mixing actions where one uses a drag event, e.g:
-Toggle a setting using with tab, drag to open a pie menu showing all options related to the setting.</p>
+<h4>单击/拖动<a class="headerlink" href="#click-drag" title="Permalink to this headline">¶</a></h4>
+<p>使用 <em>单击</em> 事件替代 <em>按压</em> 来配置单个按键执行多个操作是可能的，而后你可以将另外的动作与 <em>拖动</em> 绑定。</p>
+<p>拖动事件配合组合混合动作是非常有用的，比如，使用Tab键切换设置，并拖动开启一组与该设置相关的全部选项的饼菜单。</p>
 </div>
 <div class="section" id="click-tweak">
-<h4>Click/Tweak<a class="headerlink" href="#click-tweak" title="Permalink to this headline">¶</a></h4>
-<p>Unlike click/drag, this only works for the mouse buttons,
-but has the advantage that tweak events can be directional.</p>
-<p>To use this, events in this key-map must use <em>Click</em> instead of <em>Press</em>,
-then you can bind <em>Tweak</em> actions to the mouse buttons.</p>
-<p>This is used in the default key-map in the 3D Viewport,
-<kbd class="kbd docutils literal notranslate">Alt-MMB</kbd> dragging in different directions rotates the view.</p>
+<h4>单击/调整<a class="headerlink" href="#click-tweak" title="Permalink to this headline">¶</a></h4>
+<p>与单击/拖动不同，这仅适用于鼠标按键，但具有调整事件的好处是可以带方向的。</p>
+<p>要使用该组合键，该键位映射中必须使用 <em>单击</em> 而非 <em>按压</em>，然后可以将 <em>调整</em> 动作绑定至鼠标按键。</p>
+<p>3D视图中的默认键位映射用到了该组合， <kbd class="kbd docutils literal notranslate">Alt-MMB</kbd> 向不同方向拖动来旋转视图。</p>
 </div>
 </div>
 </div>
 <div class="section" id="common-operations">
-<h2>Common Operations<a class="headerlink" href="#common-operations" title="Permalink to this headline">¶</a></h2>
-<p>This section lists useful generic operations which can be used.</p>
+<h2>通用操作<a class="headerlink" href="#common-operations" title="Permalink to this headline">¶</a></h2>
+<p>本节列出一些可供使用的通用实用操作。</p>
 <div class="section" id="key-bindings-for-pop-ups">
-<h3>Key Bindings for Pop-Ups<a class="headerlink" href="#key-bindings-for-pop-ups" title="Permalink to this headline">¶</a></h3>
-<p>Menus and panels can be assigned key shortcuts,
-even if they're only accessible from sub-menus elsewhere.</p>
-<dl class="simple">
-<dt>Open a Pop-up Menu (<code class="docutils literal notranslate"><span class="pre">wm.call_menu</span></code>)</dt><dd><p>Open any menu on key press.</p>
-</dd>
-<dt>Open a Pie Menu (<code class="docutils literal notranslate"><span class="pre">wm.call_menu_pie</span></code>)</dt><dd><p>Open any pie menu on key press.</p>
-</dd>
-<dt>Open a Panel (<code class="docutils literal notranslate"><span class="pre">wm.call_panel</span></code>)</dt><dd><p>Open a pop-up panel (also known as a pop-over).</p>
-</dd>
+<h3>弹出菜单按键绑定<a class="headerlink" href="#key-bindings-for-pop-ups" title="Permalink to this headline">¶</a></h3>
+<p>尽管一些菜单与面板只能通过子菜单访问，但是可以为其指定快捷键。</p>
+<dl class="docutils">
+<dt>打开一组弹出菜单 (<code class="docutils literal notranslate"><span class="pre">wm.call_menu</span></code>)</dt>
+<dd>通过按键打开任意菜单。</dd>
+<dt>打开一组饼菜单 (<code class="docutils literal notranslate"><span class="pre">wm.call_menu_pie</span></code>)</dt>
+<dd>通过按键打开任意饼菜单。</dd>
+<dt>打开面板 (<code class="docutils literal notranslate"><span class="pre">wm.call_panel</span></code>)</dt>
+<dd>打开弹出面板 (也称之为弹窗)。</dd>
 </dl>
-<div class="section" id="menu-identifier">
-<h4>Menu Identifier<a class="headerlink" href="#menu-identifier" title="Permalink to this headline">¶</a></h4>
-<p>To find the <code class="docutils literal notranslate"><span class="pre">name</span></code> of a menu,
-enable the preference <span class="menuselection">Interface ‣ Display ‣ Python Tooltips</span>.</p>
-<p>Then hover the cursor over the menu item, for sub-menus you will need to use the back arrow
-to prevent the sub-menu from opening and gaining focus.</p>
-</div>
-<div class="section" id="panel-identifier">
-<h4>Panel Identifier<a class="headerlink" href="#panel-identifier" title="Permalink to this headline">¶</a></h4>
-<p>Currently there is no way to find a panel identifier,
-besides looking into the Python source code, search for the panel title,
-the identifier will use the convention <code class="docutils literal notranslate"><span class="pre">{CATEGORY}_PT_{name}</span></code>.</p>
+<div class="section" id="menu-panel-identifiers">
+<h4>菜单 &amp; 面板标识符<a class="headerlink" href="#menu-panel-identifiers" title="Permalink to this headline">¶</a></h4>
+<p>在用户设置中启用 <span class="menuselection">界面 ‣ 显示 ‣ Python工具提示</span>，可以获得菜单的 <code class="docutils literal notranslate"><span class="pre">名称</span></code>。</p>
+<p>然后在弹出按钮或菜单条目上悬停，存在子菜单的情况下需要使用左方向(←)键来阻止子菜单打开以及获得焦点。</p>
 </div>
 </div>
 <div class="section" id="key-bindings-for-properties">
-<h3>Key Bindings for Properties<a class="headerlink" href="#key-bindings-for-properties" title="Permalink to this headline">¶</a></h3>
-<p>There are many properties you might want to bind a keys with.
-To avoid having to define operators for each property,
-there are generic operators for this purpose:</p>
-<p>Operators for adjusting properties begin with <code class="docutils literal notranslate"><span class="pre">wm.context_</span></code>.</p>
-<p>Some of these include:</p>
+<h3>属性按键绑定<a class="headerlink" href="#key-bindings-for-properties" title="Permalink to this headline">¶</a></h3>
+<p>用户可能想将很多属性与按键绑定。为了避免需要对每个属性定义操作器，有几个作此用途的通用操作器:</p>
+<p>用于调整属性的操作器以 <code class="docutils literal notranslate"><span class="pre">wm.context_</span></code> 开头。</p>
+<p>其中包括:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">wm.context_toggle</span></code> toggle a boolean property.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">wm.context_cycle_enum</span></code> cycle an <abbr title="enumeration">enum</abbr> property forwards or backwards.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">wm.context_menu_enum</span></code> show a pop-up menu for an enum property.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">wm.context_pie_enum</span></code> show a pie menu for an enum property.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">wm.context_scale_float</span></code> scale a number (use for increasing / decreasing brush size for example).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">wm.context_toggle_enum</span></code> toggle between two options of an enum.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">wm.context_modal_mouse</span></code> moving the cursor to interactively change a value.</p></li>
+<li><code class="docutils literal notranslate"><span class="pre">wm.context_toggle</span></code> 切换布尔属性。</li>
+<li><code class="docutils literal notranslate"><span class="pre">wm.context_cycle_enum</span></code> 用于 <abbr title="枚举">enum</abbr> 属性前后循环。</li>
+<li><code class="docutils literal notranslate"><span class="pre">wm.context_menu_enum</span></code> 用于为枚举属性弹出菜单。</li>
+<li><code class="docutils literal notranslate"><span class="pre">wm.context_pie_enum</span></code> 显示枚举属性为饼菜单。</li>
+<li><code class="docutils literal notranslate"><span class="pre">wm.context_scale_float</span></code> 缩放数值 (比如用于增大/减小笔刷大小)。</li>
+<li><code class="docutils literal notranslate"><span class="pre">wm.context_toggle_enum</span></code> 用于在枚举的两个选项之间切换。</li>
+<li><code class="docutils literal notranslate"><span class="pre">wm.context_modal_mouse</span></code> 用于移动游标交互修改数值。</li>
 </ul>
-<p>See <a class="reference external" href="https://docs.blender.org/api/current/bpy.ops.wm.html">bpy.ops.wm</a> for a complete list.</p>
-<p>Each of these operators has a <code class="docutils literal notranslate"><span class="pre">data_path</span></code> setting to reference the property to change.</p>
-<p>To find the <code class="docutils literal notranslate"><span class="pre">data_path</span></code> basic Python knowledge is needed.</p>
-<p>For example, you can use the Python Console to access a boolean property you wish to map to a key:</p>
+<p>完整列表见 <a class="reference external" href="https://docs.blender.org/api/current/bpy.ops.wm.html">bpy.ops.wm</a>。</p>
+<p>每个操作器都有一个 <code class="docutils literal notranslate"><span class="pre">data_path</span></code> 设置，用于引用所调整的数值。</p>
+<p>找到 <code class="docutils literal notranslate"><span class="pre">data_path</span></code> 需要一些基础的 Python知识。</p>
+<p>比如，可以使用Python控制台访问所要映射键位的布尔属性:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">show_name</span>
 </pre></div>
 </div>
-<p>To bind this to a key, add a new keymap item using the operator <code class="docutils literal notranslate"><span class="pre">wm.context_toggle</span></code>
-with <code class="docutils literal notranslate"><span class="pre">data_path</span></code> set to <code class="docutils literal notranslate"><span class="pre">object.show_name</span></code> (notice the <code class="docutils literal notranslate"><span class="pre">bpy.context</span></code> prefix is implicit).</p>
-<p>See <a class="reference external" href="https://docs.blender.org/api/current/bpy.context.html">bpy.context</a>
-for other context attributes.</p>
-<p>The Python API documentation can be used to find properties
-or you may use the Python Console's auto-complete to inspect available properties.</p>
+<p>使用操作器 <code class="docutils literal notranslate"><span class="pre">wm.context_toggle</span></code> 配合以设置为 <code class="docutils literal notranslate"><span class="pre">object.show_name</span></code> 的 <code class="docutils literal notranslate"><span class="pre">data_path``(注意</span> <span class="pre">``bpy.context</span></code> 前缀是隐式的)，来为其绑定按键。</p>
+<p>其他上下文属性见 <a class="reference external" href="https://docs.blender.org/api/current/bpy.context.html">bpy.context</a>。</p>
+<p>可使用Python API文档查找属性， 或者使用Python 控制台的自动补全功能来查看可用的属性。</p>
 </div>
 </div>
 </div>

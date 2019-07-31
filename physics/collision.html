@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devphysics/collision.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/collision.html"/>
   
 
   
@@ -43,10 +43,29 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="布料模拟" href="cloth/index.html" />
-    <link rel="prev" title="烟流" href="force_fields/types/smoke_flow.html" /> 
+    <link rel="next" title="烘焙物理模拟" href="baking.html" />
+    <link rel="prev" title="烟流" href="forces/force_fields/types/smoke_flow.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,40 +113,42 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">物理</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gravity.html">重力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloth/index.html">布料模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="particles/index.html">Particles System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluid/index.html">流体模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forces/index.html">Forces</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">碰撞</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#options">选项</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#force-field">力场</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#particle">粒子</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#soft-body-and-cloth">Soft Body and Cloth</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#examples">例子</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hints">提示</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="baking.html">烘焙物理模拟</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#physics-types">物理类型</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="force_fields/index.html">力场</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">碰撞</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#options">选项</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#examples">例子</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#hints">提示</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="cloth/index.html">布料模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="soft_body/index.html">Soft Body</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fluid/index.html">流体模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="smoke/index.html">Smoke Simulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rigid_body/index.html">刚体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="particles/index.html">Particles System</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
 </ul>
@@ -202,100 +223,134 @@
   <div class="section" id="collisions">
 <span id="bpy-types-collisionsettings"></span><span id="bpy-types-collisionmodifier"></span><h1>碰撞<a class="headerlink" href="#collisions" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>物体模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">物理 ‣ 碰撞</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">物理 ‣ 碰撞</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p><a class="reference internal" href="particles/index.html"><span class="doc">粒子</span></a>, <a class="reference internal" href="soft_body/index.html"><span class="doc">软体</span></a> 和 <a class="reference internal" href="cloth/index.html"><span class="doc">布料</span></a> 可以与网格物体碰撞。 <a class="reference internal" href="particles/emitter/physics/boids.html"><span class="doc">群体</span></a> 尝试避免 <em>碰撞</em> 物体。</p>
 <ul class="simple">
-<li><p>对象需要共享至少一个公共层才能生效。</p></li>
-<li><p>您可以将粒子的影响限制为一组物体（在 <a class="reference internal" href="particles/emitter/physics/index.html"><span class="doc">力场权重面板</span></a>).</p></li>
-<li><p>软体物体的 <em>偏转</em> 是困难的，它们经常穿透碰撞物体。</p></li>
-<li><p>头发颗粒忽略偏转物体（但您可以将它们作为软体进行动画化，软体可以实现偏转）。</p></li>
+<li>可以限制粒子的影响至一组物体（在 <a class="reference internal" href="particles/emitter/force_field.html"><span class="doc">力场权重面板</span></a>).</li>
+<li>软体物体的 <em>偏转</em> 是困难的，它们经常穿透碰撞物体。</li>
+<li>头发颗粒忽略偏转物体（但您可以将它们作为软体进行动画化，软体可以实现偏转）。</li>
 </ul>
-<p>如果您更改对象的偏转设置，则必须通过 <em>清除缓存</em> 重新计算粒子、软体或布料系统，但这并不是自动完成的。您可以使用 <kbd class="kbd docutils literal notranslate">Ctrl-B</kbd> <span class="menuselection">‣ 清除所选缓存</span> 来清除所有选定对象的缓存。</p>
+<p>如果更改对象的偏转设置，则必须通过 <em>清除缓存</em> 重新计算粒子、软体或布料系统，但这并不是自动完成的。</p>
 <div class="section" id="options">
 <h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id1">
+<div class="figure" id="id1">
 <img alt="../_images/physics_collision_panel.png" src="../_images/physics_collision_panel.png" />
-<p class="caption"><span class="caption-text">碰撞面板。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">碰撞面板。</span></p>
+</div>
+<div class="section" id="force-field">
+<h3>力场<a class="headerlink" href="#force-field" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>场吸收</dt>
+<dd>A deflector can also deflect effectors. You can specify some collision/deflector objects which deflect a specific
+portion of the effector force using the <em>Field Absorption</em> value. 100% absorption results in no force getting
+through the collision/deflector object at all. If you have three collision object behind each other with e.g.
+10%, 43% and 3%, the absorption ends up at around 50% <span class="math notranslate nohighlight">\(100 × (1 - 0.1) × (1 - 0.43) × (1 - 0.03)\)</span>.</dd>
+</dl>
 </div>
 <div class="section" id="particle">
 <h3>粒子<a class="headerlink" href="#particle" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt>渗透率</dt><dd><p>粒子穿透网格的比率。</p>
+<dl class="docutils">
+<dt>渗透率</dt>
+<dd>粒子穿透网格的比率。</dd>
+<dt>粘度</dt>
+<dd>多少颗粒粘在物体上。</dd>
+<dt>消除粒子</dt>
+<dd>影响后删除粒子。</dd>
+<dt>阻尼</dt>
+<dd><p class="first">碰撞期间的阻尼（与颗粒的速度无关）。</p>
+<dl class="last docutils">
+<dt>Randomize</dt>
+<dd>阻尼随机变化。</dd>
+</dl>
 </dd>
-<dt>粘度</dt><dd><p>多少颗粒粘在物体上。</p>
-</dd>
-<dt>消除粒子</dt><dd><p>影响后删除粒子。</p>
-</dd>
-<dt>阻尼系数</dt><dd><p>碰撞期间的阻尼（与颗粒的速度无关）。</p>
-</dd>
-<dt>随机阻尼</dt><dd><p>阻尼随机变化。</p>
-</dd>
-<dt>摩擦系数</dt><dd><p>沿着表面运动时的摩擦。</p>
-</dd>
-<dt>随机摩擦</dt><dd><p>摩擦随机变化。</p>
+<dt>Friction</dt>
+<dd><p class="first">沿着表面运动时的摩擦。</p>
+<dl class="last docutils">
+<dt>Randomize</dt>
+<dd>摩擦随机变化。</dd>
+</dl>
 </dd>
 </dl>
 </div>
 <div class="section" id="soft-body-and-cloth">
-<h3>软体和布料<a class="headerlink" href="#soft-body-and-cloth" title="Permalink to this headline">¶</a></h3>
-<p>A padding distance is added to the inside and outside of each face, to help to prevent intersections.
-The soft body will come to rest at this distance away from the face of the colliding object.</p>
-<dl class="simple">
-<dt>外表面</dt><dd><p>外表面厚度。</p>
-</dd>
-<dt>内部面</dt><dd><p>内部面厚度（仅软体使用）。</p>
-</dd>
-</dl>
-<div class="figure align-center" id="id2">
-<span id="fig-collision-soft-plane"></span><a class="reference internal image-reference" href="../_images/physics_collision_outer-inner.png"><img alt="../_images/physics_collision_outer-inner.png" src="../_images/physics_collision_outer-inner.png" style="width: 380px;" /></a>
-<p class="caption"><span class="caption-text">软体顶点与平面相撞。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<span id="physics-collision-soft-bodt-cloth"></span><h3>Soft Body and Cloth<a class="headerlink" href="#soft-body-and-cloth" title="Permalink to this headline">¶</a></h3>
+<p>It is also important to note that this collision panel is used to tell
+all simulations that this object is to participate in colliding/deflecting other objects
+on a shared layer (particles, soft bodies, and cloth).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The object's shape deforms the cloth,
+so the cloth simulation must be inputted the &quot;true&quot; shape of that mesh object at that frame.
+This true shape is the basis shape as modified by shape keys or armatures. Therefore,
+the Collision Modifier must be <strong>after</strong> any of those.
+The image to the right shows the <em>Modifiers</em> panel for the Character mesh object
+(not the cloth object).</p>
 </div>
-<p>外部和内部由面的法线定义，在上图被描绘为蓝色箭头. <a class="reference internal" href="#fig-collision-soft-plane"><span class="std std-ref">软体顶点与平面相撞。</span></a>.</p>
-</div>
-<div class="section" id="soft-body-damping">
-<h3>软体阻尼<a class="headerlink" href="#soft-body-damping" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt>阻尼系数</dt><dd><p>Damping during a collision.
-The amount of bounce that surfaces will have.</p>
-<ul class="simple">
-<li><p>0.0 - No damping, soft bodies will have a maximum bounciness.</p></li>
-<li><p>1.0 - Maximum damping, soft bodies will not bounce at all.</p></li>
+<dl class="docutils">
+<dt>阻尼</dt>
+<dd><p class="first">Damping during a collision.
+The amount of bounce that the surfaces will have.</p>
+<ul class="last simple">
+<li>0.0 - No damping, soft bodies will have a maximum bounciness.</li>
+<li>1.0 - Maximum damping, soft bodies will not bounce at all.</li>
 </ul>
 </dd>
+<dt>Thickness</dt>
+<dd><p class="first">A padding distance is added to the inside and outside of each face, to help to prevent intersections.
+The soft body will come to rest at this distance away from the face of the colliding object.
+Outside and inside is defined by the face normal, depicted as blue arrow in Fig. <a class="reference internal" href="#fig-collision-soft-plane"><span class="std std-ref">软体顶点与平面相撞。</span></a>.</p>
+<dl class="last docutils">
+<dt>外表面</dt>
+<dd>外表面厚度。</dd>
+<dt>内部面</dt>
+<dd>内部面厚度（仅软体使用）。</dd>
 </dl>
-<p><em>软体</em> 碰撞难以完美。如果其中一个物体移动得太快，则软体将穿透网格。另见关于 <a class="reference internal" href="soft_body/index.html"><span class="doc">软体</span></a> 。</p>
-</div>
-<div class="section" id="force-field">
-<h3>力场<a class="headerlink" href="#force-field" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt>吸收</dt><dd><p>偏转器也可以偏转效应器。您可以使用 <em>吸收</em> 值指定给一些碰撞/偏转器物体，该物体则偏转特定量的效应器的力。100％的吸收导致没有力量通过碰撞/偏转器物体。如果您有三个碰撞对象，分别有三个值，例如10％，43％和3％，则吸收最终达到50％ <span class="math notranslate nohighlight">\(100 × (1 - 0.1) × (1 - 0.43) × (1 - 0.03)\)</span>.</p>
 </dd>
 </dl>
+<div class="figure" id="id2">
+<span id="fig-collision-soft-plane"></span><a class="reference internal image-reference" href="../_images/physics_collision_outer-inner.png"><img alt="../_images/physics_collision_outer-inner.png" src="../_images/physics_collision_outer-inner.png" style="width: 380px;" /></a>
+<p class="caption"><span class="caption-text">软体顶点与平面相撞。</span></p>
+</div>
+<dl class="docutils">
+<dt>Friction</dt>
+<dd>A coefficient for how slippery the cloth is when it collides with itself.
+For example, silk has a lower coefficient of friction than cotton.</dd>
+<dt>Single Sided</dt>
+<dd>When enabled, cloth collisions are only performed on the normal side of the collider plane.</dd>
+<dt>Override Normals</dt>
+<dd>When enabled, cloth collision impulses act in the direction of the collider normals.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><em>软体</em> 碰撞难以完美。如果其中一个物体移动得太快，则软体将穿透网格。另见关于 <a class="reference internal" href="soft_body/index.html"><span class="doc">软体</span></a> 。</p>
+</div>
 </div>
 </div>
 <div class="section" id="examples">
 <h2>例子<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id3">
+<div class="figure" id="id3">
 <img alt="../_images/physics_collision_defected-particles.png" src="../_images/physics_collision_defected-particles.png" />
-<p class="caption"><span class="caption-text">偏转粒子。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">偏转粒子。</span></p>
 </div>
-<p>这是一个 <em>融球</em> 对象，被双向传输到向下发射并被网格立方体偏转的粒子系统。</p>
+<p>Here is a <em>Meta</em> object, using instancing verts to a particle system emitting downwards, and deflected by a mesh cube.</p>
 </div>
 <div class="section" id="hints">
 <h2>提示<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>确保网格表面的法线面向颗粒/点以进行正确的偏转。</p></li>
-<li><p>毛发粒子直接反应力场，所以如果你使用一个短距离的力场，你不一定需要碰撞。</p></li>
-<li><p>如果您在 <em>粒子编辑模式</em> 中进行编辑，则头发颗粒可以避免其发射网格。所以你至少可以制作头发碰撞。</p></li>
+<li>确保网格表面的法线面向颗粒/点以进行正确的偏转。</li>
+<li>毛发粒子直接反应力场，所以如果你使用一个短距离的力场，你不一定需要碰撞。</li>
+<li>如果您在 <em>粒子编辑模式</em> 中进行编辑，则头发颗粒可以避免其发射网格。所以你至少可以制作头发碰撞。</li>
 </ul>
 </div>
 </div>
@@ -308,10 +363,10 @@ The amount of bounce that surfaces will have.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cloth/index.html" class="btn btn-neutral float-right" title="布料模拟" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="baking.html" class="btn btn-neutral float-right" title="烘焙物理模拟" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="force_fields/types/smoke_flow.html" class="btn btn-neutral float-left" title="烟流" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="forces/force_fields/types/smoke_flow.html" class="btn btn-neutral float-left" title="烟流" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

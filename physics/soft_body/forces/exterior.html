@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devphysics/soft_body/forces/exterior.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/soft_body/forces/exterior.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Interior" href="interior.html" />
@@ -94,42 +113,43 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">物理</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gravity.html">重力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloth/index.html">布料模拟</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Soft Body</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../settings.html">设置</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Forces</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Exterior</a></li>
+<li class="toctree-l4"><a class="reference internal" href="interior.html">Interior</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../collision.html">Collision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples.html">范例</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../particles/index.html">Particles System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fluid/index.html">流体模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../forces/index.html">Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collision.html">碰撞</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../baking.html">烘焙物理模拟</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#physics-types">物理类型</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../../force_fields/index.html">力场</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../collision.html">碰撞</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../cloth/index.html">布料模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Soft Body</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../settings.html">设置</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="index.html">Forces</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../collision.html">Collision</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../examples.html">范例</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../fluid/index.html">流体模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../smoke/index.html">Smoke Simulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../rigid_body/index.html">刚体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../particles/index.html">Particles System</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -210,10 +230,10 @@
 <p>Exterior forces are applied to the vertices (and nearly exclusively to the vertices)
 of soft body objects. This is done using Newton's Laws of Physics:</p>
 <ul class="simple">
-<li><p>If there is no force on a vertex, it stays either unmoved or moves with constant speed in a straight line.</p></li>
-<li><p>The acceleration of a vertex depends on its mass and the force.
-The heavier the mass of a vertex the slower the acceleration. The larger the force the greater the acceleration.</p></li>
-<li><p>For every action there is an equal and opposite reaction.</p></li>
+<li>If there is no force on a vertex, it stays either unmoved or moves with constant speed in a straight line.</li>
+<li>The acceleration of a vertex depends on its mass and the force.
+The heavier the mass of a vertex the slower the acceleration. The larger the force the greater the acceleration.</li>
+<li>For every action there is an equal and opposite reaction.</li>
 </ul>
 <p>Well, this is done only in the range of computing accurateness,
 there is always a little damping to avoid overshoot of the calculation.</p>
@@ -221,9 +241,9 @@ there is always a little damping to avoid overshoot of the calculation.</p>
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <p>We will begin with a very simple example: the default cube.</p>
 <ul class="simple">
-<li><p>To judge the effect of the external forces you should at first turn off the <em>Goal</em>,
-so that the vertices are not retracted to their original position.</p></li>
-<li><p>Press <kbd class="kbd docutils literal notranslate">Alt-A</kbd> to run the simulation.</p></li>
+<li>To judge the effect of the external forces you should at first turn off the <em>Goal</em>,
+so that the vertices are not retracted to their original position.</li>
+<li>Start playback to run the simulation.</li>
 </ul>
 <p>What happens? The cube moves in negative Z direction.
 Each of its eight vertices is affected by a global, constant force -- the gravitation.
@@ -233,28 +253,31 @@ The object does not deform, because every vertex moves with the same speed in th
 </div>
 <div class="section" id="force-fields">
 <h2>Force Fields<a class="headerlink" href="#force-fields" title="Permalink to this headline">¶</a></h2>
-<p>Soft body vertices interact with all the <a class="reference internal" href="../../force_fields/index.html"><span class="doc">Force Fields</span></a>
+<p>Soft body vertices interact with all the <a class="reference internal" href="../../forces/force_fields/index.html"><span class="doc">Force Fields</span></a>
 applied (usually to particles) in the layer, such as wind, force fields,
 and what ever physics field effect is on a common layer.</p>
 <div class="section" id="soft-body-field-weights">
 <h3>Soft Body Field Weights<a class="headerlink" href="#soft-body-field-weights" title="Permalink to this headline">¶</a></h3>
 <div class="refbox admonition">
-<p class="admonition-title">Reference</p>
-<dl class="field-list simple">
-<dt class="field-odd">Panel</dt>
-<dd class="field-odd"><p><span class="menuselection">Physics ‣ Soft Body Field Weights</span></p>
-</dd>
-</dl>
+<p class="first admonition-title">Reference</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Panel:</th><td class="field-body"><span class="menuselection">Physics ‣ Soft Body ‣ Field Weights</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p>The <em>Soft Body Field Weights</em> panel allows you to control how much influence
 each type of external force field has on the soft body system.</p>
-<dl class="simple">
-<dt>Effector Group</dt><dd><p>Limit effectors to a specified group. Only effectors in this group will have an effect on the current system.</p>
-</dd>
-<dt>Gravity</dt><dd><p>Control how much the Global Gravity has an effect on the system.</p>
-</dd>
-<dt>All</dt><dd><p>Scale all of the effector weights.</p>
-</dd>
+<dl class="docutils">
+<dt>Effector Collection</dt>
+<dd>Limit effectors to a specified group. Only effectors in this group will have an effect on the current system.</dd>
+<dt>Gravity</dt>
+<dd>Control how much the Global Gravity has an effect on the system.</dd>
+<dt>All</dt>
+<dd>Scale all of the effector weights.</dd>
 </dl>
 </div>
 </div>
@@ -287,7 +310,7 @@ How a soft body tries to achieve this goal can be defined using stiffness forces
 <h3>Goal Strength<a class="headerlink" href="#goal-strength" title="Permalink to this headline">¶</a></h3>
 <p>The <em>Goal Strength</em> defines how much motion from an animation system gets applied.</p>
 <p>A <em>Goal</em> value of 1.0 means no soft body simulation,
-the object act like any regular animated object, (the vertex keeps at its original position).
+the object act like any regular animated object (i.e. the vertex is kept at its original position).
 When setting <em>Goal</em> to 0.0 (or no goal), the vertex is only influenced by physical laws
 according to soft body simulation.</p>
 <p>By setting goal values between 0.0 and 1.0,
@@ -297,9 +320,9 @@ and having the object affected only by the soft body effect.</p>
 ending up in the non-soft animated shape. Using the <em>Vertex Group</em> weight system,
 you can define a <em>Goal</em> weight per vertex. To make this look more natural,
 spring forces can be defined to control how far vertices can move from their original position.</p>
-<p>Often <a class="reference internal" href="../../../sculpt_paint/painting/weight_paint/index.html#painting-weight-index"><span class="std std-ref">权重绘制</span></a> is used to adjust the weight comfortably.
+<p>Often <a class="reference internal" href="../../../sculpt_paint/weight_paint/index.html#painting-weight-index"><span class="std std-ref">权重绘制</span></a> is used to adjust the weight comfortably.
 For non-mesh objects the <em>Weight</em> parameter of their vertices/control points
-is used instead; <em>Specials</em> menu <kbd class="kbd docutils literal notranslate">W</kbd> in <em>Edit Mode</em> or use the <em>Transform</em> panel in the Properties region.
+is used instead; <em>Specials</em> menu <kbd class="kbd docutils literal notranslate">W</kbd> in <em>Edit Mode</em> or use the <em>Transform</em> panel in the Sidebar region.
 The weight of <em>Hair</em> particles can also be painted in <a class="reference internal" href="../../particles/mode.html"><span class="doc">Particle Edit Mode</span></a>.</p>
 </div>
 </div>
@@ -310,10 +333,10 @@ Their movement is determined by the forces affecting them. Beside other forces
 the individual particles can interact with another along edges using a physical model
 which is very close to shock absorbers used in cars. The working parts are:</p>
 <ul class="simple">
-<li><p>A spring trying to keep the particles at a certain distance.
-How hard the spring tries to do that is controlled by the soft body parameter <em>Stiffness</em>.</p></li>
-<li><p>A damping element to calm the movement down.
-The resistance the element builds up against motion is controlled by the soft body parameter <em>Damping</em>.</p></li>
+<li>A spring trying to keep the particles at a certain distance.
+How hard the spring tries to do that is controlled by the soft body parameter <em>Stiffness</em>.</li>
+<li>A damping element to calm the movement down.
+The resistance the element builds up against motion is controlled by the soft body parameter <em>Damping</em>.</li>
 </ul>
 </div>
 </div>

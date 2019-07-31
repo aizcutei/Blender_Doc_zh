@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/curves/editing/index.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/curves/editing/index.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="简介" href="introduction.html" />
+    <link rel="next" title="Transform Panel" href="transform_panel.html" />
     <link rel="prev" title="选择" href="../selecting.html" /> 
 </head>
 
@@ -94,18 +113,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">曲线</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../primitives.html">基本体</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../selecting.html">选择</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">编辑</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="draw.html">绘制曲线</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transform_panel.html">Transform Panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curve.html">Curve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control_points.html">Control Points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="segments.html">Segments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="other.html">Other</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
@@ -119,16 +142,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -206,27 +230,46 @@
 <span id="modeling-curves-editing-index"></span><h1>编辑<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">简介</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#transform">变换</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#mirror">镜像</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#snap">吸附</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#extrude-curve-and-move">挤出曲线并移动</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#duplicate-or-extrude-to-cursor">复制或挤出到 3D 游标</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#add-duplicate">新增副本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#separate">分离</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#make-segment">创建线段</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#toggle-cyclic">切换循环</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#delete">删除</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#control-points">控制点</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#segments">段数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#show-hide">显示 / 隐藏</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#set-spline-type">设置样条类型</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#curve-parenting">曲线父子化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transform_panel.html">Transform Panel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="curve.html">Curve</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="curve.html#transform">Transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="curve.html#mirror">Mirror</a></li>
+<li class="toctree-l2"><a class="reference internal" href="curve.html#snap">Snap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="curve.html#spin">Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="curve.html#add-duplicate">Add Duplicate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="curve.html#split">Split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="curve.html#separate">Separate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="curve.html#toggle-cyclic">Toggle Cyclic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="curve.html#set-spline-type">Set Spline Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="curve.html#show-hide">Show/Hide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="curve.html#cleanup">Cleanup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="curve.html#delete">Delete</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="draw.html">绘制曲线</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="draw.html#stroke-options">笔触选项</a></li>
-<li class="toctree-l2"><a class="reference internal" href="draw.html#draw-options">绘制选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="control_points.html">Control Points</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="control_points.html#extrude-curve-and-move">Extrude Curve and Move</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_points.html#make-segment">Make Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_points.html#tilt">Tilt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_points.html#clear-tilt">Clear Tilt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_points.html#set-handle-type">Set Handle Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_points.html#recalc-normals">Recalc Normals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_points.html#smooth">Smooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_points.html#smooth-curve-tilt">Smooth Curve Tilt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_points.html#smooth-curve-radius">Smooth Curve Radius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_points.html#smooth-curve-weight">Smooth Curve Weight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_points.html#hooks">Hooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_points.html#make-vertex-parent">Make Vertex Parent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="segments.html">Segments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="segments.html#subdivide">Subdivide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="segments.html#switch-direction">Switch Direction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Other</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="other.html#draw-curve">Draw Curve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other.html#set-goal-weight">Set Goal Weight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other.html#add-vertex">Add Vertex</a></li>
 </ul>
 </li>
 </ul>
@@ -241,7 +284,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="introduction.html" class="btn btn-neutral float-right" title="简介" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="transform_panel.html" class="btn btn-neutral float-right" title="Transform Panel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../selecting.html" class="btn btn-neutral float-left" title="选择" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

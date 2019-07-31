@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devanimation/shape_keys/shape_keys_panel.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/shape_keys/shape_keys_panel.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="工作流程" href="workflow.html" />
@@ -94,13 +113,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画 &amp; 绑定</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/index.html">骨架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lattice.html">Lattice 晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../constraints/index.html">约束</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../actions.html">动作</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../drivers/index.html">驱动器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../markers.html">标记</a></li>
@@ -108,7 +130,6 @@
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">形态键面板</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#settings">设置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#examples">例子</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="workflow.html">工作流程</a></li>
@@ -120,10 +141,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -174,7 +196,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">动画</a> &raquo;</li>
+          <li><a href="../index.html">动画 &amp; 绑定</a> &raquo;</li>
         
           <li><a href="index.html">形态键</a> &raquo;</li>
         
@@ -198,134 +220,139 @@
            <div itemprop="articleBody">
             
   <div class="section" id="shape-keys-panel">
-<span id="bpy-ops-object-join-shapes"></span><h1>形态键面板<a class="headerlink" href="#shape-keys-panel" title="Permalink to this headline">¶</a></h1>
-<div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">编辑器</dt>
-<dd class="field-odd"><p>属性编辑器</p>
-</dd>
-<dt class="field-even">模式</dt>
-<dd class="field-even"><p>所有模式</p>
-</dd>
-<dt class="field-odd">面板</dt>
-<dd class="field-odd"><p><span class="menuselection">Object Data ‣ Shape Keys</span></p>
-</dd>
-</dl>
-</div>
-<div class="figure align-center" id="id1">
+<h1>形态键面板<a class="headerlink" href="#shape-keys-panel" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id1">
 <img alt="../../_images/animation_shape-keys_shape-keys-panel_basis.png" src="../../_images/animation_shape-keys_shape-keys-panel_basis.png" />
-<p class="caption"><span class="caption-text">形态键面板。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">形态键面板。</span></p>
 </div>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">编辑器:</th><td class="field-body">属性编辑器</td>
+</tr>
+<tr class="field-even field"><th class="field-name">模式:</th><td class="field-body">所有模式</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">面板:</th><td class="field-body"><span class="menuselection">Object Data ‣ Shape Keys</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The Shape Keys panel is used for authoring shape keys.</p>
 <div class="section" id="settings">
 <h2>设置<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
-<dl>
-<dt>活动的形态键索引</dt><dd><p>一个  <a class="reference internal" href="../../interface/controls/templates/list_presets.html#ui-list-view"><span class="std std-ref">列表视图</span></a> 。</p>
-<dl class="simple">
-<dt>值</dt><dd><p>当前形态键的值（0.0到1.0）。</p>
+<dl class="docutils">
+<dt>活动的形态键索引</dt>
+<dd><p class="first">A <a class="reference internal" href="../../interface/controls/templates/list_presets.html#ui-list-view"><span class="std std-ref">列表视图</span></a>.</p>
+<dl class="last docutils">
+<dt>Value (number)</dt>
+<dd><p class="first">In Relative mode: Value is the current influence of the shape key used for blending between
+the shape (value=1.0) and its reference key (value=0.0). The reference key is usually the Basis shape.
+The weight of the blend can be extrapolated above 1.0 and below 0.0.</p>
+<p class="last">In Absolute mode: Value is the <em>Evaluation Time</em> at which the shape will have maximum influence.</p>
 </dd>
-<dt>哑的（眼睛的图标）</dt><dd><p>是形态键在3D View中不可见。</p>
+<dt>Mute (check mark)</dt>
+<dd>If unchecked, the shape key will not be taken into consideration when
+mixing the shape key stack into the result visible in the 3D Viewport.</dd>
+<dt>特殊的</dt>
+<dd><dl class="first last docutils">
+<dt>创建新的形态键</dt>
+<dd>Add a new shape key with the current deformed shape of the object.
+This differs from the <code class="docutils literal notranslate"><span class="pre">+</span></code> button of the list, as that one always copies
+the Basis shape independently of the current mix.</dd>
+<dt>镜像形态键</dt>
+<dd>If your mesh is symmetrical, in <em>Object Mode</em>, you can mirror the shape keys on the X axis.
+This will not work unless the mesh vertices are perfectly symmetrical.
+Use the <span class="menuselection">Mesh ‣ Symmetrize</span> tool in <em>Edit Mode</em>.</dd>
+<dt>镜像形态键（拓扑）</dt>
+<dd>Same as <em>Mirror Shape Key</em> though it detects the mirrored vertices based on the topology of the mesh.
+The mesh vertices do not have to be perfectly symmetrical for this action to work.</dd>
+<dt>Join as Shapes (Transfer Mix)</dt>
+<dd><p class="first">Transfer the current resulting shape from a different object.</p>
+<p class="last">Select the object to copy, then the object to copy into.
+Use this action and a new shape key will be added to the active object
+with the current mix of the first object.</p>
 </dd>
-<dt>特殊的</dt><dd><dl class="simple">
-<dt>迁移形态键</dt><dd><p>迁移活动的形态键到另一个物体上。选择两个物体，把活动的形态键拷贝到活动物体上。</p>
-</dd>
-<dt>连接为形状</dt><dd><p>从另一个物体迁移 <em>当前形状</em> 。选择两个物体，把形状拷贝到活动物体上。</p>
-</dd>
-<dt>镜像形态键</dt><dd><p>如果网格均匀且对称，在 <em>物体模式</em> 下，可以沿X轴镜像形态键。除非网格是对称的，否则不能使用这种方法。如果使用，可以在编辑模式下选择  <span class="menuselection">Mesh ‣ Symmetrize</span> 。</p>
-</dd>
-<dt>镜像形态键（拓扑）</dt><dd><p>同 <em>镜像形态键</em> 类似，但是它根据网格的拓扑检测镜像顶点。这种情况下，网格的顶点不用完全对称也可以。</p>
-</dd>
-<dt>创建新的形态键</dt><dd><p>用当前变形物体的添加新的形态键。</p>
-</dd>
-<dt>删除所有形态键</dt><dd><p>删除所有的形态键。</p>
+<dt>迁移形态键</dt>
+<dd><p class="first">Transfer the active shape key from a different object
+regardless of its current influence.</p>
+<p class="last">Select the object to copy, then the object to copy into.
+Use this action and a new shape key will be added to the active object
+with the active shape of the first object.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 </dd>
-<dt>相对的</dt><dd><p>设置形态键为 <em>相对的</em> 或 <em>绝对的</em> 。</p>
-</dd>
-<dt>仅显示（别针形的图标）</dt><dd><p>在3D View中显示形态键但不进行插值。在编辑模式下，仅显示选项自动勾选，除非下面的设置项被打开。</p>
-</dd>
-<dt>编辑模式</dt><dd><p>在 <em>编辑模式</em> 下更改形态键。</p>
-</dd>
+<dt>相对的</dt>
+<dd>Set the shape keys to <em>Relative</em> or <em>Absolute</em>.
+See <a class="reference internal" href="introduction.html#animation-shapekeys-relative-vs-absolute"><span class="std std-ref">Relative or Absolute Shape Keys</span></a>.</dd>
+<dt>Shape Key Lock (pin icon)</dt>
+<dd>Show the active shape in the 3D Viewport without blending.
+<em>Shape Key Lock</em> gets automatically enabled while the object is in <em>Edit Mode</em>.</dd>
+<dt>Shape Key Edit Mode (edit mode icon)</dt>
+<dd>If enabled, when entering <em>Edit Mode</em> the active shape key will <strong>not</strong> take maximum influence as is default.
+Instead, the current blend of shape keys will be visible and can be edited from that state.</dd>
 </dl>
 <div class="section" id="relative-shape-keys">
 <h3>相对形态键<a class="headerlink" href="#relative-shape-keys" title="Permalink to this headline">¶</a></h3>
-<p>相对形态键从已选的形态键变形而来。默认情况下，从第一个形态键变形而来的所有的相对形态键称为基础形态键（basis shape key）。</p>
-<div class="figure align-center" id="id2">
+<p>See <a class="reference internal" href="introduction.html#animation-shapekeys-relative-vs-absolute"><span class="std std-ref">Relative or Absolute Shape Keys</span></a>.</p>
+<p>With absolute shape keys, the value shown for each shape in the list represents
+the current weight or influence of that shape in the current <em>Mix</em>.</p>
+<div class="figure" id="id2">
 <img alt="../../_images/animation_shape-keys_shape-keys-panel_relative.png" src="../../_images/animation_shape-keys_shape-keys-panel_relative.png" />
-<p class="caption"><span class="caption-text">相对形态键选项。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">相对形态键选项。</span></p>
 </div>
-<dl class="simple">
-<dt>清除权重 <code class="docutils literal notranslate"><span class="pre">X</span></code></dt><dd><p>设置所有值为0.</p>
-</dd>
+<dl class="docutils">
+<dt>Clear Shape Keys <code class="docutils literal notranslate"><span class="pre">X</span></code></dt>
+<dd>Set all influence values, or weights, to zero.
+Useful to quickly guarantee that the result shown in the 3D Viewport is not affected by shapes.</dd>
 </dl>
-<dl class="simple" id="animation-shapekey-relative-value">
-<dt>值</dt><dd><p>活动形态键的值。</p>
+<dl class="docutils" id="animation-shapekey-relative-value">
+<dt>值</dt>
+<dd><p class="first">The weight of the blend between the shape key and its reference key (usually the Basis shape).</p>
+<p class="last">A value of 0.0 denotes 100% influence of the reference key and 1.0 of the shape key.</p>
 </dd>
-<dt>范围</dt><dd><p>活动形态键范围的最大最小值。</p>
-</dd>
-<dt>融合</dt><dd><dl class="simple">
-<dt>顶点组</dt><dd><p>限定活动形态键的变形到一个顶点组。</p>
-</dd>
-<dt>相对的</dt><dd><p>选择形态键来进行变形。</p>
-</dd>
-</dl>
-</dd>
+<dt>范围</dt>
+<dd>Minimum and maximum range for the influence value of the active shape key.
+Blender can extrapolate results when the <em>Value</em> goes lower than 0.0 or above 1.0.</dd>
+<dt>顶点组</dt>
+<dd>Limit the active shape key deformation to a vertex group.
+Useful to break down a complex shape into components by assigning temporary vertex groups
+to the complex shape and copying the result into new simpler shapes.</dd>
+<dt>Relative To</dt>
+<dd>Select the shape key to deform from. This is called the <em>Reference Key</em> for that shape.</dd>
 </dl>
 </div>
 <div class="section" id="absolute-shape-keys">
 <h3>绝对形态键<a class="headerlink" href="#absolute-shape-keys" title="Permalink to this headline">¶</a></h3>
-<p>绝对形态键从前一个到下一个形态键变形。它们主要用于将物体随时间变形到不同的形状。</p>
-<div class="figure align-center" id="id3">
+<p>See <a class="reference internal" href="introduction.html#animation-shapekeys-relative-vs-absolute"><span class="std std-ref">Relative or Absolute Shape Keys</span></a>.</p>
+<p>With absolute shape keys, the value shown for each shape in the list represents
+the <em>Evaluation Time</em> at which that shape key will be active.</p>
+<div class="figure" id="id3">
 <img alt="../../_images/animation_shape-keys_shape-keys-panel_absolute.png" src="../../_images/animation_shape-keys_shape-keys-panel_absolute.png" />
-<p class="caption"><span class="caption-text">绝对形态键选项。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">绝对形态键选项。</span></p>
 </div>
-<dl>
-<dt>重设时间 （时钟形图标）</dt><dd><p>重设绝对形态键的时间。</p>
-</dd>
-<dt>插值</dt><dd><p>控制形态键间的插值。</p>
+<dl class="docutils">
+<dt>Re-Time Shape Keys (clock icon)</dt>
+<dd>Absolute shape keys are timed, by order in the list, at a constant interval.
+This button resets the timing for the keys. Useful if keys were removed or re-ordered.</dd>
+<dt>插值</dt>
+<dd><p class="first">Controls the interpolation between shape keys.</p>
 <p>线性（linear），基准的（cardial），Catmull-Rom, B样条曲线（B-Spline）</p>
-<div class="figure align-center" id="id4">
+<div class="last figure" id="id4">
 <span id="fig-interpolation-type"></span><img alt="../../_images/animation_shape-keys_shape-keys-panel_interpolation-types.png" src="../../_images/animation_shape-keys_shape-keys-panel_interpolation-types.png" />
-<p class="caption"><span class="caption-text">不同类型的插值。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">不同类型的插值。</span></p>
 <div class="legend">
-<p>红色线表示键（黑色点）间的插值。</p>
-</div>
+红色线表示键（黑色点）间的插值。</div>
 </div>
 </dd>
-<dt>求值时间</dt><dd><p>用于控制形态键的影响。</p>
-</dd>
+<dt>求值时间</dt>
+<dd>Controls the shape key influence. Scrub to see the effect of the current configuration.
+Typically, this property is keyed for animation or rigged with a driver.</dd>
 </dl>
-</div>
-</div>
-<div class="section" id="examples">
-<h2>例子<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="reset-timing">
-<h3>重设时间<a class="headerlink" href="#reset-timing" title="Permalink to this headline">¶</a></h3>
-<p>例如，如果你按顺序有形态键，Basis，Key_1，Key_2。</p>
-<p>重设时间将使形态键循环，并设置形态帧到 +0.1:</p>
-<ul class="simple">
-<li><p>Basis 0.1</p></li>
-<li><p>Key_1 0.2</p></li>
-<li><p>Key_2 0.3</p></li>
-</ul>
-<p>求值时间将显示其为帧100：</p>
-<ul class="simple">
-<li><p>Basis 10.0</p></li>
-<li><p>Key_1 20.0</p></li>
-<li><p>Key_2 30.0</p></li>
-</ul>
-</div>
-<div class="section" id="evaluation-time">
-<h3>求值时间<a class="headerlink" href="#evaluation-time" title="Permalink to this headline">¶</a></h3>
-<p>例如，如果你按顺序有形态键，Basis，Key_1，Key_2，并且重设时间：</p>
-<ul class="simple">
-<li><p>Basis 10.0</p></li>
-<li><p>Key_1 20.0</p></li>
-<li><p>Key_2 30.0</p></li>
-</ul>
 </div>
 </div>
 </div>

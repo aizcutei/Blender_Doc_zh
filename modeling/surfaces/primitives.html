@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/surfaces/primitives.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/surfaces/primitives.html"/>
   
 
   
@@ -43,6 +43,25 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="选择" href="selecting.html" />
@@ -94,21 +113,27 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">曲面</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html">结构</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">基本体</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#common-options">通用选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nurbs-curve">NURBS Curve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nurbs-circle">NURBS Circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nurbs-surface">NURBS Surface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nurbs-cylinder">NURBS Cylinder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nurbs-sphere">NURBS Sphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nurbs-torus">NURBS Torus</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="selecting.html">选择</a></li>
-<li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
-<li class="toctree-l3"><a class="reference internal" href="properties.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">Editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties/index.html">Properties</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../metas/index.html">融球</a></li>
@@ -117,16 +142,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -201,41 +227,72 @@
            <div itemprop="articleBody">
             
   <div class="section" id="primitives">
-<h1>基本体<a class="headerlink" href="#primitives" title="Permalink to this headline">¶</a></h1>
+<span id="bpy-ops-surface-primitive-add"></span><h1>基本体<a class="headerlink" href="#primitives" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
-<p class="admonition-title">参考</p>
-<dl class="field-list simple">
-<dt class="field-odd">模式</dt>
-<dd class="field-odd"><p>物体模式 和 编辑模式</p>
-</dd>
-<dt class="field-even">面板</dt>
-<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 创建 ‣ 添加基本体/曲面</span></p>
-</dd>
-<dt class="field-odd">菜单</dt>
-<dd class="field-odd"><p><span class="menuselection">添加 ‣ 曲面</span></p>
-</dd>
-<dt class="field-even">快捷键</dt>
-<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Shift-A</kbd></p>
-</dd>
-</dl>
+<p class="first admonition-title">参考</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">模式:</th><td class="field-body">物体模式 和 编辑模式</td>
+</tr>
+<tr class="field-even field"><th class="field-name">菜单:</th><td class="field-body"><span class="menuselection">Add ‣ Curve</span></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">快捷键:</th><td class="field-body"><kbd class="kbd docutils literal notranslate">Shift-A</kbd></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p><span class="menuselection">添加 ‣ 曲面 ‣ NURBS曲面</span>, <span class="menuselection">NURBS 圆柱</span>, <span class="menuselection">NURBS 球体</span> and <span class="menuselection">NURBS 环体</span> 菜单可分别用于创建四种预设 <a class="reference internal" href="../../glossary/index.html#term-nurbs"><span class="xref std std-term">NURBS</span></a> 曲面。</p>
-<div class="figure align-center" id="id1">
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">When adding curves there are some common options like other <a class="reference internal" href="../../scene_layout/object/types.html#object-common-options"><span class="std std-ref">Objects</span></a>.</p>
+</div>
+<p>In Object/Edit Mode, the <em>Add Surface</em> menu, provides six different surface primitives:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
 <img alt="../../_images/modeling_surfaces_primitives_surface.png" src="../../_images/modeling_surfaces_primitives_surface.png" />
-<p class="caption"><span class="caption-text">NURBS曲面基本体。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">NURBS曲面基本体。</span></p>
 </div>
-<p>还有两种预设的NURBS曲面曲线(在V行仅有一个控制点): <em>NURBS 曲线</em> 和 <em>NURBS 圆环</em>.</p>
-<div class="figure align-center" id="id2">
+</td>
+<td><div class="first last figure" id="id2">
 <img alt="../../_images/modeling_surfaces_primitives_curve.png" src="../../_images/modeling_surfaces_primitives_curve.png" />
-<p class="caption"><span class="caption-text">NURBS曲线基本体.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">NURBS曲线基本体.</span></p>
 </div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="nurbs-curve">
+<h2>NURBS Curve<a class="headerlink" href="#nurbs-curve" title="Permalink to this headline">¶</a></h2>
+<p><em>NURBS Curve</em> only have one control point on each V row.</p>
+<p>TODO.</p>
+</div>
+<div class="section" id="nurbs-circle">
+<h2>NURBS Circle<a class="headerlink" href="#nurbs-circle" title="Permalink to this headline">¶</a></h2>
+<p><em>NURBS Circle</em> only have one control point on each V row.</p>
+<p>TODO.</p>
 <p>注意 <a class="reference internal" href="../../glossary/index.html#term-nurbs"><span class="xref std std-term">NURBS</span></a> 曲面圆环是不会填充的, 跟其对应的 &quot;真正的&quot;曲线不一样...</p>
-<div class="section" id="common-options">
-<h2>通用选项<a class="headerlink" href="#common-options" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>半径，对齐到屏幕，位置，旋转</dt><dd><p>参考 <a class="reference internal" href="../../editors/3dview/object/types.html#object-common-options"><span class="std std-ref">通用物体选项</span></a>。</p>
-</dd>
-</dl>
+</div>
+<div class="section" id="nurbs-surface">
+<h2>NURBS Surface<a class="headerlink" href="#nurbs-surface" title="Permalink to this headline">¶</a></h2>
+<p>TODO.</p>
+</div>
+<div class="section" id="nurbs-cylinder">
+<h2>NURBS Cylinder<a class="headerlink" href="#nurbs-cylinder" title="Permalink to this headline">¶</a></h2>
+<p>TODO.</p>
+</div>
+<div class="section" id="nurbs-sphere">
+<h2>NURBS Sphere<a class="headerlink" href="#nurbs-sphere" title="Permalink to this headline">¶</a></h2>
+<p>TODO.</p>
+</div>
+<div class="section" id="nurbs-torus">
+<h2>NURBS Torus<a class="headerlink" href="#nurbs-torus" title="Permalink to this headline">¶</a></h2>
+<p>TODO.</p>
 </div>
 </div>
 

@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devmodeling/surfaces/introduction.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/surfaces/introduction.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="结构" href="structure.html" />
+    <link rel="next" title="Toolbar" href="toolbar/index.html" />
     <link rel="prev" title="曲面" href="index.html" /> 
 </head>
 
@@ -94,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
@@ -104,11 +123,12 @@
 <li class="toctree-l4"><a class="reference internal" href="#visualization">可视化</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html">结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="primitives.html">基本体</a></li>
 <li class="toctree-l3"><a class="reference internal" href="selecting.html">选择</a></li>
-<li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
-<li class="toctree-l3"><a class="reference internal" href="properties.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">Editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties/index.html">Properties</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../metas/index.html">融球</a></li>
@@ -117,16 +137,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -203,17 +224,25 @@
   <div class="section" id="introduction">
 <h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <p>曲线是2D物体，而曲面是其三维上的扩展。但是请注意，在Blender中，只能创建NURBS曲面，没有贝塞尔曲面(但是有 <em>贝塞尔</em> 结点类型，见下文)，也没有多边形曲面(但是对于这些，可以使用网格)。虽然曲线和曲面共用同一物体类型(一样的还有文本...)，但它们并不是同一回事；例如，不能使同一个物体里既包含曲线又包含曲面。</p>
-<div class="figure align-center" id="id1">
+<div class="figure" id="id1">
 <span id="fig-surface-intro-surface"></span><img alt="../../_images/modeling_surfaces_introduction_nurbs-surface.png" src="../../_images/modeling_surfaces_introduction_nurbs-surface.png" />
-<p class="caption"><span class="caption-text">编辑模式下的NURBS曲面。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">编辑模式下的NURBS曲面。</span></p>
 </div>
 <p>由于曲面是2D的，所以它有两个插值坐标轴，U(类似于曲线中的)和V坐标轴。重要的是要知道，两个维度的插值规则(节点，阶数，分辨率)可以是独立的(当然，对于所有包含U和V的设置项都适用)。</p>
-<p>你也许会问, &quot;但是曲面似乎是三维的, 为什么只有二维?&quot; 要成为三维, 物体需要有 &quot;体积&quot;，但是表面，即使是密闭的的，也没有体积；它是无限薄的。曲面需要有厚度(也就是第三个维度)，才会有体积。因此，它只是一个二维物体，并且只有两个插值维度或轴向或坐标(如果你知道一点数学，想想非欧几何-很好，曲面都是非欧2D平面...)。举几个&quot;现实生活&quot;的例子，你可以卷起一张纸，来创建一个圆柱；然而，即使它&quot;产生&quot;了体积，纸片本身仍是一个(几乎...)二维物体！</p>
+<p>You may ask yourself &quot;but the surface appears to be 3D, why is it only 2D?&quot;.
+In order to be 3D, the object needs to have &quot;Volume&quot;, and a surface, even when it is closed,
+does not have volume; it is infinitely thin.
+If it had a volume the surface would have a thickness (its third dimension). Hence,
+it is only a 2D object, and has only two interpolation dimensions or axes or coordinates
+(if you know a bit of math, think of non-Euclidean geometry -- well,
+surfaces are just non-Euclidean 2D planes...). To take a more &quot;real-world&quot; example,
+you can roll a sheet of paper to create a cylinder; well, even if it becomes a &quot;volume&quot;,
+the sheet itself will remain a (nearly...) 2D object!</p>
 <p>事实上，曲面与 <a class="reference internal" href="../curves/properties/geometry.html"><span class="doc">挤出曲线</span></a> 的结果非常相似。</p>
 <div class="section" id="visualization">
 <h2>可视化<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h2>
 <p>正如图 <a class="reference internal" href="#fig-surface-intro-surface"><span class="std std-ref">编辑模式下的NURBS曲面。</span></a> 中看到的，除了U向坐标是用黄色的网格线，V向坐标是由粉红网格线标识出来之外，曲面跟NURBS曲线几乎没有区别。</p>
-<p>控制点可以 <a class="reference internal" href="../curves/editing/introduction.html#curves-show-hide"><span class="std std-ref">隐藏与显示</span></a>，这和曲线一样。</p>
+<p>控制点可以 <a class="reference internal" href="../curves/editing/curve.html#curves-show-hide"><span class="std std-ref">隐藏与显示</span></a>，这和曲线一样。</p>
 </div>
 </div>
 
@@ -225,7 +254,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="structure.html" class="btn btn-neutral float-right" title="结构" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="toolbar/index.html" class="btn btn-neutral float-right" title="Toolbar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="曲面" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

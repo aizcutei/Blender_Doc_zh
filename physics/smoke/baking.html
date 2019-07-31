@@ -17,7 +17,7 @@
   
   
   
-    <link rel="canonical" href="https://docs.blender.org/manual/en/devphysics/smoke/baking.html"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/smoke/baking.html"/>
   
 
   
@@ -43,9 +43,28 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/">
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/">
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/">
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/">
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/">
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/">
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/">
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/">
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/">
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/">
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/">
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/">
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/">
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/">
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/">
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/">
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="刚体" href="../rigid_body/index.html" />
+    <link rel="next" title="Dynamic Paint" href="../dynamic_paint/index.html" />
     <link rel="prev" title="烟雾材质" href="material.html" /> 
 </head>
 
@@ -94,41 +113,41 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">绑定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gravity.html">重力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloth/index.html">布料模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../particles/index.html">Particles System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fluid/index.html">流体模拟</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Smoke Simulation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/index.html">Smoke Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material.html">烟雾材质</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Baking Smoke Simulations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#file-format">File Format</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../forces/index.html">Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collision.html">碰撞</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../baking.html">烘焙物理模拟</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#physics-types">物理类型</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../force_fields/index.html">力场</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../collision.html">碰撞</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../cloth/index.html">布料模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../fluid/index.html">流体模拟</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">Smoke Simulation</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="types/index.html">Smoke Types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="material.html">烟雾材质</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Baking Smoke Simulations</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../rigid_body/index.html">刚体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../particles/index.html">Particles System</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户设置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">文件 &amp;数据系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pipeline/index.html">管线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
 </ul>
@@ -204,12 +223,8 @@
             
   <div class="section" id="baking-smoke-simulations">
 <h1>Baking Smoke Simulations<a class="headerlink" href="#baking-smoke-simulations" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-right" id="id1">
-<img alt="../../_images/physics_smoke_baking_interface.png" src="../../_images/physics_smoke_baking_interface.png" />
-<p class="caption"><span class="caption-text"><em>Smoke Cache</em> options.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
 <p><a class="reference internal" href="../../glossary/index.html#term-baking"><span class="xref std std-term">Baking</span></a> is used to store the outcome of a simulation so it does not need to be recalculated.</p>
-<p>Smoke baking settings are in <span class="menuselection">Properties ‣ Physics ‣ Smoke ‣ Smoke Cache</span>.
+<p>Smoke baking settings are in <span class="menuselection">Properties ‣ Physics ‣ Smoke ‣ Cache</span>.
 Unlike most physics simulations smoke physics has some settings that are specific to smoke.</p>
 <div class="section" id="file-format">
 <h2>File Format<a class="headerlink" href="#file-format" title="Permalink to this headline">¶</a></h2>
@@ -224,44 +239,46 @@ Unlike most physics simulations smoke physics has some settings that are specifi
 <a class="reference external" href="http://www.dreamworksanimation.com/">DreamWorks Animation</a>.</p>
 <p>The simulation fields can be found in the <code class="docutils literal notranslate"><span class="pre">.vdb</span></code> files under the following names:</p>
 <ul class="simple">
-<li><p>&quot;color&quot;</p></li>
-<li><p>&quot;density&quot;</p></li>
-<li><p>&quot;heat&quot;</p></li>
-<li><p>&quot;heat old&quot; (the temperature at the previous frame)</p></li>
-<li><p>&quot;flame&quot;</p></li>
-<li><p>&quot;fuel&quot;</p></li>
-<li><p>&quot;react&quot; (reaction coordinates, used for fire)</p></li>
-<li><p>&quot;velocity&quot;</p></li>
-<li><p>&quot;shadow&quot; (the shadows of the volume computed for viewport rendering)</p></li>
-<li><p>&quot;texture coordinates&quot; (used for turbulence)</p></li>
+<li>&quot;color&quot;</li>
+<li>&quot;density&quot;</li>
+<li>&quot;heat&quot;</li>
+<li>&quot;heat old&quot; (the temperature at the previous frame)</li>
+<li>&quot;flame&quot;</li>
+<li>&quot;fuel&quot;</li>
+<li>&quot;react&quot; (reaction coordinates, used for fire)</li>
+<li>&quot;velocity&quot;</li>
+<li>&quot;shadow&quot; (the shadows of the volume computed for viewport rendering)</li>
+<li>&quot;texture coordinates&quot; (used for turbulence)</li>
 </ul>
-<dl>
-<dt>Compression</dt><dd><p>Method of data compression.</p>
-<dl class="simple">
-<dt>Zip</dt><dd><p>Efficient but slower compression method.</p>
-</dd>
-<dt>Blosc</dt><dd><p>Multi-threaded compression with about the same quality and size as <code class="docutils literal notranslate"><span class="pre">Zip</span></code>.</p>
-</dd>
-<dt>None</dt><dd><p>Do not compress the data.</p>
-</dd>
+<dl class="docutils">
+<dt>Compression</dt>
+<dd><p class="first">Method of data compression.</p>
+<dl class="last docutils">
+<dt>Zip</dt>
+<dd>Efficient but slower compression method.</dd>
+<dt>Blosc</dt>
+<dd>Multi-threaded compression with about the same quality and size as <code class="docutils literal notranslate"><span class="pre">Zip</span></code>.</dd>
+<dt>None</dt>
+<dd>Do not compress the data.</dd>
 </dl>
 </dd>
-<dt>Data Depth</dt><dd><p>Bit depth for writing all scalar (including vectors), lower values reduce the file size of the cache.</p>
-<dl class="simple">
-<dt>Float (Half)</dt><dd><p>Half float (16 bit data). Gives less data with the benefit of smaller file sizes.</p>
-</dd>
-<dt>Float (Full)</dt><dd><p>Full float (32 bit data). Gives more data at the cost of larger file sizes.</p>
-</dd>
+<dt>Data Depth</dt>
+<dd><p class="first">Bit depth for writing all scalar (including vectors), lower values reduce the file size of the cache.</p>
+<dl class="last docutils">
+<dt>Float (Half)</dt>
+<dd>Half float (16 bit data). Gives less data with the benefit of smaller file sizes.</dd>
+<dt>Float (Full)</dt>
+<dd>Full float (32 bit data). Gives more data at the cost of larger file sizes.</dd>
 </dl>
 </dd>
 </dl>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>For other options see the <a class="reference internal" href="../baking.html"><span class="doc">General Baking</span></a> docs for more information.</p>
+<p class="first admonition-title">See also</p>
+<p class="last">For other options see the <a class="reference internal" href="../baking.html"><span class="doc">General Baking</span></a> docs for more information.</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Baking can only been done once your blend-file is saved.
+<p class="first admonition-title">Note</p>
+<p class="last">Baking can only been done once your blend-file is saved.
 If your blend-file has not been saved, the <em>Smoke Cache</em> panel will be disabled.</p>
 </div>
 </div>
@@ -276,7 +293,7 @@ If your blend-file has not been saved, the <em>Smoke Cache</em> panel will be di
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../rigid_body/index.html" class="btn btn-neutral float-right" title="刚体" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../dynamic_paint/index.html" class="btn btn-neutral float-right" title="Dynamic Paint" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="material.html" class="btn btn-neutral float-left" title="烟雾材质" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
